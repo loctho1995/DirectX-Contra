@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="40" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="block2" tilewidth="32" tileheight="32">
+  <image source="block2.png" trans="ff00ff" width="68" height="34"/>
+  <tile id="0">
+   <properties>
+    <property name="passable" value="false"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="breakable" value="false"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="3" name="terrain32" tilewidth="32" tileheight="32">
+  <image source="terrain32.png" trans="ff00ff" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="259" name="boom_man_stage1" tilewidth="32" tileheight="32">
+  <image source="boom_man_stage1.bmp" trans="ff00ff" width="960" height="960"/>
+ </tileset>
+ <layer name="BackGroundLayer" width="100" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1TEKwkAYROFNoYWtsof0Op5GTyFpYu1JREwwLMYksMmM7iteEYSA8/FrHUKojbsWlnpvPPBwTr03Hng4p94bDzycU++NBx7OqffGAw/n1HvjgYdz6r3xwMM59d544OGcem888HBOvTceeDin3hsPPJxT740HHs6l3/9cvbpUegs8Qmiqt4mDjXofhUe6fZN0K9BjP9AaHt3u6V043EiJHv3fqqFUN1Kyh1u7ia3tcWz7F49o4nEaSHWTCo+pFur7mOP5qx6576I0jziy4djnfYO5Ft1z7g0PbUv45Hj3kh79z6fYPbsnz46b/aJHDJ895vx/4JHHI4bvHnNMHDdb8t1bsmpDVj0Avaa/hg==
+  </data>
+ </layer>
+ <layer name="CollisionLayer" width="100" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1tEKgCAMBVD9/5/uvdAU00meA6PHpZcxUwIAAAAAAAAAAACA8+RCEUMee5HHU+lOVtxRrdffsmk9y+w8zEDfeSPno0V0/1Ffz0X0fazu/9av5X/y7Tvac9SKnTPLaB477sBT8yi9SaIzOTGP2hsxOpPd8+jdnUqdVBcl4QFQ
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,38 @@
+﻿Build started 9/27/2015 11:58:45 PM.
+     1>Project "C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Release\MyFrameWork.exe" /INCREMENTAL:NO /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Release\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Release\MyFrameWork.lib" /MACHINE:X86 /SAFESEH Release\base64.obj
+         Release\EnermyCreator.obj
+         Release\EnermyInkJumpingState.obj
+         Release\EnermyInkSprite.obj
+         Release\EnermyInkStandingState.obj
+         Release\Game.obj
+         Release\Graphics.obj
+         Release\KeyBoard.obj
+         Release\Map.obj
+         Release\PlayerJumpingState.obj
+         Release\PlayerRunningState.obj
+         Release\PlayerSprite.obj
+         Release\PlayerStandingState.obj
+         Release\PlayScene.obj
+         Release\RockMansBullet.obj
+         Release\SceneManager.obj
+         Release\Texture.obj
+         Release\TextureArray.obj
+         Release\TileLayer.obj
+         Release\TileTmx.obj
+         Release\tinystr.obj
+         Release\tinyxml.obj
+         Release\tinyxmlerror.obj
+         Release\tinyxmlparser.obj
+         Release\ViewPort.obj
+         Release\WindowInit.obj
+         Generating code
+     1>c:\users\sky\documents\visual studio 2012\projects\myframework\myframework\tilelayer.cpp(84): warning C4715: 'TileLayer::getTileSet' : not all control paths return a value
+         Finished generating code
+         MyFrameWork.vcxproj -> C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Release\MyFrameWork.exe
+     1>Done Building Project "C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.25

@@ -1,0 +1,44 @@
+﻿Build started 10/1/2015 10:38:18 PM.
+     1>Project "C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PlayerSwimmingState.cpp
+         PlayerSwimmingState.cpp
+     1>c:\users\sky\documents\visual studio 2012\projects\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\visual studio 2012\projects\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\base64.obj
+         Debug\EnermyCreator.obj
+         Debug\EnermyInkJumpingState.obj
+         Debug\EnermyInkSprite.obj
+         Debug\EnermyInkStandingState.obj
+         Debug\Game.obj
+         Debug\Graphics.obj
+         Debug\KeyBoard.obj
+         Debug\Map.obj
+         Debug\PlayerClimbingState.obj
+         Debug\PlayerDeadState.obj
+         Debug\PlayerDivingState.obj
+         Debug\PlayerJumpingState.obj
+         Debug\PlayerRunningState.obj
+         Debug\PlayerSprite.obj
+         Debug\PlayerStandingState.obj
+         Debug\PlayerSwimmingState.obj
+         Debug\PlayScene.obj
+         Debug\RockMansBullet.obj
+         Debug\SceneManager.obj
+         Debug\Texture.obj
+         Debug\TextureArray.obj
+         Debug\TileLayer.obj
+         Debug\TileTmx.obj
+         Debug\tinystr.obj
+         Debug\tinyxml.obj
+         Debug\tinyxmlerror.obj
+         Debug\tinyxmlparser.obj
+         Debug\ViewPort.obj
+         Debug\WindowInit.obj
+         MyFrameWork.vcxproj -> C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\Debug\MyFrameWork.exe
+     1>Done Building Project "C:\Users\Sky\Documents\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.59
