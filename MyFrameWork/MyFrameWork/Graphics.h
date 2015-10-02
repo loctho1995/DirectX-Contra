@@ -8,7 +8,8 @@
 
 
 class TextureHolder;
-
+extern const unsigned int SCWIDTH;
+extern const unsigned int SCHEIGHT;
 class Graphics
 {
 private:

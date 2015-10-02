@@ -1,7 +1,11 @@
 
 #include "Graphics.h"
 
+
+
 Graphics*  Graphics :: instance = nullptr;
+const unsigned int SCWIDTH = 240;
+const unsigned int SCHEIGHT = 240;
 Graphics :: Graphics(HWND hWnd)
 {
 	pD3D9 = Direct3DCreate9( D3D_SDK_VERSION );
@@ -12,8 +16,8 @@ Graphics :: Graphics(HWND hWnd)
     d3dpp.Windowed			= TRUE;
 	d3dpp.BackBufferCount	= 1;
 	d3dpp.BackBufferFormat	= D3DFMT_UNKNOWN;
-	d3dpp.BackBufferHeight	= 600;
-	d3dpp.BackBufferWidth	= 800;
+	d3dpp.BackBufferHeight	= SCHEIGHT;
+	d3dpp.BackBufferWidth	= SCWIDTH;
 	d3dpp.hDeviceWindow		= hWnd;
 	d3dpp.SwapEffect		= D3DSWAPEFFECT_DISCARD;
 

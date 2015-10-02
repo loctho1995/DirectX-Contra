@@ -14,8 +14,6 @@
 *	Have to pass all the parameters in case they can be used
 *	@return Pointer to function to process the msg
 */
-#define SCWIDTH 800
-#define SCHEIGHT 600
 #define FPS 60
 #define MSPF 1000.0f/ 60
 

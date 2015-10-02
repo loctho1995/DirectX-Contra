@@ -6,7 +6,7 @@ PlayScene :: PlayScene( int mapID )
 	std:: string mapName = "stage" + std::to_string(mapID);;
 	pMap  = new Map(mapName);
 	int viewPortSize = pMap ->getMapRect().width < pMap ->getMapRect().height ?pMap ->getMapRect().width:pMap ->getMapRect().height;
-	viewPort = new ViewPort(RectI(800 / 2 - viewPortSize /2 , 600 / 2 -  viewPortSize /2,viewPortSize , viewPortSize ));
+	viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize /2 , SCHEIGHT / 2 -  viewPortSize /2,viewPortSize , viewPortSize ));
 	cam = new Camera(viewPort, pMap->getMapRect() );
 }
 
