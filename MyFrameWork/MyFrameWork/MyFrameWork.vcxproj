@@ -87,9 +87,9 @@
     <ClCompile Include="EnermyInkJumpingState.cpp" />
     <ClCompile Include="EnermyInkSprite.cpp" />
     <ClCompile Include="EnermyInkStandingState.cpp" />
-    <ClCompile Include="EnermySoldierRun.cpp" />
-    <ClCompile Include="EnermySoldierRunData.cpp" />
-    <ClCompile Include="EnermySoldierRunRunningState.cpp" />
+    <ClCompile Include="EnermySoldier.cpp" />
+    <ClCompile Include="EnermySoldierData.cpp" />
+    <ClCompile Include="EnermySoldierRunningState.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
@@ -128,9 +128,9 @@
     <ClInclude Include="EnermyData.h" />
     <ClInclude Include="EnermyInkJumpingState.h" />
     <ClInclude Include="EnermyInkStandingState.h" />
-    <ClInclude Include="EnermySoldierRun.h" />
-    <ClInclude Include="EnermySoldierRunData.h" />
-    <ClInclude Include="EnermySoldierRunRunningState.h" />
+    <ClInclude Include="EnermySoldier.h" />
+    <ClInclude Include="EnermySoldierData.h" />
+    <ClInclude Include="EnermySoldierRunningState.h" />
     <ClInclude Include="EnermySprite.h" />
     <ClInclude Include="EnermyState.h" />
     <ClInclude Include="Game.h" />

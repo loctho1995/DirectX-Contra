@@ -126,15 +126,6 @@
     <ClCompile Include="PlayScene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="EnermySoldierRunRunningState.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldierRun.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldierRunData.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
-    </ClCompile>
     <ClCompile Include="EnermyInkJumpingState.cpp">
       <Filter>Source Files\Enermy\Test-Ink</Filter>
     </ClCompile>
@@ -143,6 +134,15 @@
     </ClCompile>
     <ClCompile Include="EnermyInkSprite.cpp">
       <Filter>Source Files\Enermy\Test-Ink</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldier.cpp">
+      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierData.cpp">
+      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierRunningState.cpp">
+      <Filter>Source Files\Enermy\SoldierRun</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -290,15 +290,6 @@
     <ClInclude Include="EnermyState.h">
       <Filter>Header Files\EnermyState</Filter>
     </ClInclude>
-    <ClInclude Include="EnermySoldierRunRunningState.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldierRun.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldierRunData.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
-    </ClInclude>
     <ClInclude Include="EnermyInkJumpingState.h">
       <Filter>Source Files\Enermy\Test-Ink</Filter>
     </ClInclude>
@@ -308,5 +299,17 @@
     <ClInclude Include="EnermyInkSprite.h">
       <Filter>Source Files\Enermy\Test-Ink</Filter>
     </ClInclude>
+    <ClInclude Include="EnermySoldier.h">
+      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierData.h">
+      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierRunningState.h">
+      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

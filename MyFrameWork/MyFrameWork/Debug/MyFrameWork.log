@@ -1,18 +1,28 @@
-﻿Build started 10/4/2015 2:38:51 PM.
+﻿Build started 10/4/2015 7:13:37 PM.
      1>Project "F:\Github\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt EnermySoldierRunRunningState.cpp
-         EnermySoldierRunRunningState.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt PlayScene.cpp
+         PlayScene.cpp
      1>f:\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>f:\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(42): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>f:\github\directx-contra\myframework\myframework\playscene.cpp(10): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\base64.obj
          Debug\EnermyCreator.obj
          Debug\EnermyInkJumpingState.obj
          Debug\EnermyInkSprite.obj
          Debug\EnermyInkStandingState.obj
-         Debug\EnermySoldierRun.obj
-         Debug\EnermySoldierRunData.obj
-         Debug\EnermySoldierRunRunningState.obj
+         Debug\EnermySoldier.obj
+         Debug\EnermySoldierData.obj
+         Debug\EnermySoldierRunningState.obj
          Debug\Game.obj
          Debug\Graphics.obj
          Debug\KeyBoard.obj
@@ -43,4 +53,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.64
+Time Elapsed 00:00:08.55

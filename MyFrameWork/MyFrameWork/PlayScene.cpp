@@ -3,7 +3,7 @@
 PlayScene :: PlayScene( int mapID )
 {
 	pPlayer = new PlayerSprite ();
-    mSoldier = new EnermySoldierRun(200, 200);
+    mSoldier = new EnermySoldier(200, 200);
 
 	std:: string mapName = "stage" + std::to_string(mapID);;
 	pMap  = new Map(mapName);
