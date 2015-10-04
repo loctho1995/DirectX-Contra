@@ -41,6 +41,5 @@ public:
 	std::vector<BulletSprite *> Bullets;
 	int nFiringHoldFrames;
 	int count;
-	RectF cameraRect;
-	
+	RectF cameraRect;	
 };

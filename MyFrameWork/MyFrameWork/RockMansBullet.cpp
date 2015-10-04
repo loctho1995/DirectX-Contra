@@ -9,7 +9,7 @@ RockMansBullet :: RockMansBullet(float x, float y, Direction dir)
 
 	pData ->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\RockMan\\Original\\", "bullet","", 1, 60);
 
-	pData -> ppTextureArrays[0] ->setAnchorPoint( 0.5f,0.5f );
+	pData -> ppTextureArrays[0] ->setAnchorPoint( 0.5f, 0.5f );
 
 	pData -> x = x;
 	
@@ -26,6 +26,7 @@ void RockMansBullet :: draw(Camera* cam)
 {
 	pData ->ppTextureArrays[0] ->draw(pData -> x, pData -> y, cam );
 }
+
 void RockMansBullet :: update()
 {
 	pData ->pState ->onUpdate();

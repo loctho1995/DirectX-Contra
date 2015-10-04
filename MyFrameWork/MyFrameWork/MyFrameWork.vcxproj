@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -87,6 +87,9 @@
     <ClCompile Include="EnermyInkJumpingState.cpp" />
     <ClCompile Include="EnermyInkSprite.cpp" />
     <ClCompile Include="EnermyInkStandingState.cpp" />
+    <ClCompile Include="EnermySoldierRun.cpp" />
+    <ClCompile Include="EnermySoldierRunData.cpp" />
+    <ClCompile Include="EnermySoldierRunRunningState.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
@@ -125,6 +128,9 @@
     <ClInclude Include="EnermyData.h" />
     <ClInclude Include="EnermyInkJumpingState.h" />
     <ClInclude Include="EnermyInkStandingState.h" />
+    <ClInclude Include="EnermySoldierRun.h" />
+    <ClInclude Include="EnermySoldierRunData.h" />
+    <ClInclude Include="EnermySoldierRunRunningState.h" />
     <ClInclude Include="EnermySprite.h" />
     <ClInclude Include="EnermyState.h" />
     <ClInclude Include="Game.h" />
@@ -165,6 +171,9 @@
     <ClInclude Include="ViewPort.h" />
     <ClInclude Include="zconf.h" />
     <ClInclude Include="zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

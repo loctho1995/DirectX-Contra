@@ -24,6 +24,7 @@ EnermyInkSprite :: EnermyInkSprite( int respawnX, int respawnY)
 
 	pData ->body = RectF( -11.0f, -62.0f, 22.0f, 62.0f);
 }
+
 void EnermyInkSprite :: draw( Camera* cam) 
 {
 	if( pData -> dir.isRight())
@@ -31,6 +32,7 @@ void EnermyInkSprite :: draw( Camera* cam)
 	else if( pData -> dir.isLeft())
 		pData->ppTextureArrays[ pData->iCurrentArr ] -> drawFlipX(pData -> x, pData -> y , cam);
 }
+
 void EnermyInkSprite :: update() 
 {
 	pData ->pState ->onUpdate(); 

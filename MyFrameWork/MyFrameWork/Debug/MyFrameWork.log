@@ -1,44 +1,18 @@
-﻿Build started 10/2/2015 7:29:16 PM.
-     1>Project "C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
+﻿Build started 10/4/2015 2:38:51 PM.
+     1>Project "F:\Github\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Graphics.cpp
-         Graphics.cpp
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(131): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(132): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(133): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(134): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(141): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(145): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(148): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(175): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(176): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(183): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(184): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(189): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(193): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(196): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(222): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(223): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(224): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(225): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(229): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(233): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(236): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(242): warning C4244: 'argument' : conversion from 'LONG' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(264): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(265): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(266): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(267): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(271): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(275): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(278): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\graphics.cpp(284): warning C4244: 'argument' : conversion from 'LONG' to 'FLOAT', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt EnermySoldierRunRunningState.cpp
+         EnermySoldierRunRunningState.cpp
+     1>f:\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\base64.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\base64.obj
          Debug\EnermyCreator.obj
          Debug\EnermyInkJumpingState.obj
          Debug\EnermyInkSprite.obj
          Debug\EnermyInkStandingState.obj
+         Debug\EnermySoldierRun.obj
+         Debug\EnermySoldierRunData.obj
+         Debug\EnermySoldierRunRunningState.obj
          Debug\Game.obj
          Debug\Graphics.obj
          Debug\KeyBoard.obj
@@ -64,9 +38,9 @@
          Debug\tinyxmlparser.obj
          Debug\ViewPort.obj
          Debug\WindowInit.obj
-         MyFrameWork.vcxproj -> C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe
-     1>Done Building Project "C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
+         MyFrameWork.vcxproj -> F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe
+     1>Done Building Project "F:\Github\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.93
+Time Elapsed 00:00:01.64

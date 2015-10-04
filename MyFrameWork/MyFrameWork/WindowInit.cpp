@@ -139,7 +139,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 		else 
 		{
 			timeCount += delta;
-	}	
+	    }	
 		nFrameCount ++;
 		if(timeCount >= 1000.0f)
 		{

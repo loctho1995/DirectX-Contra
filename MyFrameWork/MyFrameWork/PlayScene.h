@@ -5,12 +5,15 @@
 #include "QuadTree.h"
 #include "Map.h"
 #include "KeyBoard.h"
+#include "EnermySoldierRun.h"
+
 class PlayScene : public Scene
 {
 public:
 	PlayScene(int mapID);
 	PlayScene() {}
 	virtual ~PlayScene() {}
+
 	virtual void go()
 	{
 		handleInput();
@@ -18,12 +21,15 @@ public:
 		onCollision();
 		render();
 	}
+
 	virtual void onCollision();
 	virtual void handleInput();
 	virtual void render();
 	virtual void onUpdate();
+
 private:
 	PlayerSprite* pPlayer;
+    EnermySoldierRun *mSoldier;
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;

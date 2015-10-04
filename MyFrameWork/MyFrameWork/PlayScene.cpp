@@ -3,6 +3,8 @@
 PlayScene :: PlayScene( int mapID )
 {
 	pPlayer = new PlayerSprite ();
+    mSoldier = new EnermySoldierRun(200, 200);
+
 	std:: string mapName = "stage" + std::to_string(mapID);;
 	pMap  = new Map(mapName);
 	int viewPortSize = pMap ->getMapRect().width < pMap ->getMapRect().height ?pMap ->getMapRect().width:pMap ->getMapRect().height;
@@ -17,6 +19,7 @@ void PlayScene :: onCollision()
 	pPlayer -> updateThroughRect();
 	pPlayer -> setCameraRect(cam ->getRect());
 }
+
 void PlayScene ::  handleInput()
 {
 	while(!KeyBoard::getInstace()->isEmpty())
@@ -88,6 +91,7 @@ void PlayScene :: onUpdate()
 {
 	pMap ->onUpdate(pPlayer, cam);
 	pMap -> onSupportSprite( pPlayer);
+    mSoldier->update();
 	pPlayer -> update();
 }
 void PlayScene ::  render()
@@ -95,6 +99,7 @@ void PlayScene ::  render()
 	Graphics::getInstance() ->beginRender();
 
 	pMap ->draw(cam);
+    mSoldier->draw(cam);
 	pPlayer -> draw(cam);
 
 	//Graphics::getInstance() ->drawText("TEST", RectI(200,220,50,50));

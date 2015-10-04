@@ -3,7 +3,6 @@
 
 PlayerSprite::PlayerSprite()
 {
-
 	// Set up PlayerData
 	pData = new PlayerData();
 
@@ -14,6 +13,7 @@ PlayerSprite::PlayerSprite()
 	pData -> ppTextureArrays = new TextureArray* [PlayerData::COUNT];
 
 	pData->ppTextureArrays[PlayerData:: STAND ] = new TextureArray("Resources\\Sprites", "player", "stand", 1, 60  ); 
+    //pData->ppTextureArrays[PlayerData::STAND] = new TextureArray("Resources\\Sprites", "runningsoldier", "run", 1, 60);
 
 	pData->ppTextureArrays[PlayerData:: STAND ] -> setAnchorPoint(0.5f, 1.0f );
 
@@ -99,8 +99,6 @@ PlayerSprite::PlayerSprite()
 	pData ->body = RectF( -8.0f, -27.0f, 16.0f, 27.0f);
 
 	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);
-	
-
 }
 
 PlayerSprite:: ~PlayerSprite()
@@ -110,6 +108,7 @@ PlayerSprite:: ~PlayerSprite()
 		if(pData -> ppTextureArrays[i] != NULL )
 			delete pData -> ppTextureArrays[i];
 	}
+
 	delete[] pData->ppTextureArrays;
 }
 
@@ -129,6 +128,7 @@ void PlayerSprite::draw(Camera* cam)
 void PlayerSprite::update( )
 {
 	pData -> pState -> onUpdate();
+
 	for (int i = 0; i < pData ->Bullets.size(); i++)
 	{
 		pData ->Bullets[i] ->update();

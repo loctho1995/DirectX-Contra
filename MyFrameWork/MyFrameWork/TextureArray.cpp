@@ -5,7 +5,8 @@
 #include <iomanip>
 
 
-TextureArray :: TextureArray(std::string fileName, std::string name, std :: string state, const unsigned int nTextures, const unsigned int nFrames, D3DCOLOR colorKey )
+TextureArray :: TextureArray(std::string fileName, std::string name, std :: string state, const unsigned int nTextures, const unsigned int 
+    nFrames, D3DCOLOR colorKey)
 							:
 							nTextures(nTextures),
 							nFrames(nFrames),
