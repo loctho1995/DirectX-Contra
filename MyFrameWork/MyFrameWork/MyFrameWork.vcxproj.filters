@@ -43,6 +43,24 @@
     <Filter Include="Source Files\OpenSource">
       <UniqueIdentifier>{c0a72015-e61b-45fe-9d63-59791e265655}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\EnermySprite">
+      <UniqueIdentifier>{c937d7b9-7109-42c0-8677-a9f72579efbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BulletSprite">
+      <UniqueIdentifier>{0bcd505f-b60f-4607-a2d5-d9e64fa2d39e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BulletSprite">
+      <UniqueIdentifier>{f3c3247b-678f-4111-aa9d-dbf693311e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EnermyState">
+      <UniqueIdentifier>{90af1356-ff4b-4b75-a686-5579ca463b4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BulletState">
+      <UniqueIdentifier>{a9a84666-bca3-44f1-88fb-243644908d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BulletState">
+      <UniqueIdentifier>{b107e181-c56c-4574-b176-377768bd50e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowInit.cpp">
@@ -135,14 +153,50 @@
     <ClCompile Include="EnermyInkSprite.cpp">
       <Filter>Source Files\Enermy\Test-Ink</Filter>
     </ClCompile>
-    <ClCompile Include="EnermySoldier.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    <ClCompile Include="EnermyGunBoss1Sprite.cpp">
+      <Filter>Source Files\EnermySprite</Filter>
     </ClCompile>
-    <ClCompile Include="EnermySoldierData.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    <ClCompile Include="EnermyFinnalBoss1Sprite.cpp">
+      <Filter>Source Files\EnermySprite</Filter>
     </ClCompile>
-    <ClCompile Include="EnermySoldierRunningState.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    <ClCompile Include="GunBoss1Bullet.cpp">
+      <Filter>Source Files\BulletSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerFBullet.cpp">
+      <Filter>Source Files\BulletSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMBullet.cpp">
+      <Filter>Source Files\BulletSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerLBullet.cpp">
+      <Filter>Source Files\BulletSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss1DeadState.cpp">
+      <Filter>Source Files\EnermyState</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss1StandingState.cpp">
+      <Filter>Source Files\EnermyState</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunBoss1FiringState.cpp">
+      <Filter>Source Files\EnermyState</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunBoss1DeadState.cpp">
+      <Filter>Source Files\EnermyState</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunBoss1StandingState.cpp">
+      <Filter>Source Files\EnermyState</Filter>
+    </ClCompile>
+    <ClCompile Include="GunBoss1BulletExploringState.cpp">
+      <Filter>Source Files\BulletState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.cpp">
+      <Filter>Source Files\BulletState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.cpp">
+      <Filter>Source Files\BulletSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.cpp">
+      <Filter>Source Files\BulletSprite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -299,17 +353,50 @@
     <ClInclude Include="EnermyInkSprite.h">
       <Filter>Source Files\Enermy\Test-Ink</Filter>
     </ClInclude>
-    <ClInclude Include="EnermySoldier.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    <ClInclude Include="EnermyGunBoss1Sprite.h">
+      <Filter>Header Files\EnermySprite</Filter>
     </ClInclude>
-    <ClInclude Include="EnermySoldierData.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    <ClInclude Include="EnermyFinalBoss1DeadState.h">
+      <Filter>Header Files\EnermyState</Filter>
     </ClInclude>
-    <ClInclude Include="EnermySoldierRunningState.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+    <ClInclude Include="EnermyFinalBoss1StandingState.h">
+      <Filter>Header Files\EnermyState</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="EnermyGunBoss1DeadState.h">
+      <Filter>Header Files\EnermyState</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunBoss1FiringState.h">
+      <Filter>Header Files\EnermyState</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunBoss1StandingState.h">
+      <Filter>Header Files\EnermyState</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss1Sprite.h">
+      <Filter>Header Files\EnermySprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.h">
+      <Filter>Header Files\BulletSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.h">
+      <Filter>Header Files\BulletSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMBullet.h">
+      <Filter>Header Files\BulletSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss1Bullet.h">
+      <Filter>Header Files\BulletSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerMBulletMovingState.h">
+      <Filter>Header Files\BulletState</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBulletMovingState.h">
+      <Filter>Header Files\BulletState</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss1BulletExploringState.h">
+      <Filter>Header Files\BulletState</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.h">
+      <Filter>Header Files\BulletState</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

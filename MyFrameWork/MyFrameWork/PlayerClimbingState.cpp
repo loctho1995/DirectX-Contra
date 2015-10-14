@@ -14,6 +14,7 @@ PlayerClimbingState :: PlayerClimbingState(PlayerData* data, bool isMoving )
 }
 void PlayerClimbingState :: onUpdate()
 {
+	hittableCalculation();
 	count ++;
 	if( count == nHoldFrames )
 	{

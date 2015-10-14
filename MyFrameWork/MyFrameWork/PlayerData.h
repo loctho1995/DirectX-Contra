@@ -1,14 +1,17 @@
 #pragma once
 
 #include "SpriteData.h"
-#include "RockMansBullet.h"
+#include "PlayerMBullet.h"
+#include "PlayerFBullet.h"
+#include "PlayerLBullet.h"
 #include "CollisionRect.h"
 class PlayerData : public SpriteData
 {
 public:
 	PlayerData() 
 	{
-		
+		hittableCounter = 0;
+		nonHittableFrames = 300;
 		nFiringHoldFrames = 15;
 		
 	}
@@ -37,9 +40,20 @@ public:
 		LIE,
 		COUNT
 	};
+	enum BulletType
+	{
+		F,
+		L,
+		M,
+		R,
+		S
+	};
 	bool isFiring;
 	std::vector<BulletSprite *> Bullets;
 	int nFiringHoldFrames;
 	int count;
-	RectF cameraRect;	
+	RectF cameraRect;
+	BulletType bulletType;
+	int hittableCounter;
+	int nonHittableFrames;
 };

@@ -13,11 +13,13 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	nHoldFrames = 150;
 	isMoving = false;
 	pData -> vx = -pData->transform(speedX);
+	pData ->isHittable = false;
 	
 }
 
 void PlayerDeadState :: onUpdate()
 {
+	hittableCalculation();
 	pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 
 	pData -> vy  += acceleration;
@@ -211,4 +213,9 @@ void PlayerDeadState ::  onCameraCollision( RectF cameraRect)
 		acceleration = 0.0f;
 		pData ->iCurrentArr = PlayerData::LIE;
 	}
+}
+
+void PlayerDeadState :: onVeticalDirectionReleased()
+{
+	pData -> verticalDir = Direction::createNone();
 }

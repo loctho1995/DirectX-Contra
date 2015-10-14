@@ -31,6 +31,7 @@ void PlayerDivingState::onMovePressed(Direction d)
 
 void PlayerDivingState:: onUpdate()
 {
+	hittableCalculation();
 	pData -> ppTextureArrays[ pData ->iCurrentArr ] -> update();
 	if( pData ->isFiring )
 	{
@@ -59,14 +60,55 @@ void PlayerDivingState:: onFirePressed()
 	
 	pData ->isFiring = true;
 	pData ->count = 0;
+
+	float bulletX;
+	float bulletY;
+	float angle;
+
 	if(pData -> dir.isRight())
 	{
-		//pData ->Bullets.push_back(new RockMansBullet(pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x,  pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 , pData -> dir));
+		bulletX = pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x;
 	}
 	else
 	{
-		//pData ->Bullets.push_back(new RockMansBullet( - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x,  pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 , pData -> dir));
+		bulletX = -pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x;
+		
 	}
+
+	if( pData -> verticalDir.isNone())
+	{
+		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2;
+	}
+	else if ( pData -> verticalDir.isUp())
+	{
+		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight();
+		bulletX = pData -> x;
+	}
+
+	if(pData -> dir.isRight())
+	{
+		if( pData -> verticalDir.isNone())
+		{
+			angle = 0.0f;
+		}
+		else if( pData -> verticalDir.isUp())
+			angle = M_PI_2;
+	}
+	else
+	{
+		if( pData -> verticalDir.isNone())
+		{
+			angle = M_PI;
+		}
+		else
+		{
+			angle = M_PI_2;
+		}
+
+	}
+
+	if( !pData -> verticalDir.isDown())
+		createBullet(bulletX, bulletY, angle );
 }
 
 void PlayerDivingState :: onVeticalDirectionPressed(Direction d)

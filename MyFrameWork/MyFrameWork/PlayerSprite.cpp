@@ -3,17 +3,17 @@
 
 PlayerSprite::PlayerSprite()
 {
+
 	// Set up PlayerData
 	pData = new PlayerData();
 
-	pData->x  = 100;
+	pData->x  = 3040;
 
 	pData->y  = 50;
 
 	pData -> ppTextureArrays = new TextureArray* [PlayerData::COUNT];
 
 	pData->ppTextureArrays[PlayerData:: STAND ] = new TextureArray("Resources\\Sprites", "player", "stand", 1, 60  ); 
-    //pData->ppTextureArrays[PlayerData::STAND] = new TextureArray("Resources\\Sprites", "runningsoldier", "run", 1, 60);
 
 	pData->ppTextureArrays[PlayerData:: STAND ] -> setAnchorPoint(0.5f, 1.0f );
 
@@ -98,7 +98,13 @@ PlayerSprite::PlayerSprite()
 
 	pData ->body = RectF( -8.0f, -27.0f, 16.0f, 27.0f);
 
+	pData ->bulletType = PlayerData::BulletType::F;
+
 	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);
+
+	
+	
+
 }
 
 PlayerSprite:: ~PlayerSprite()
@@ -108,27 +114,34 @@ PlayerSprite:: ~PlayerSprite()
 		if(pData -> ppTextureArrays[i] != NULL )
 			delete pData -> ppTextureArrays[i];
 	}
-
 	delete[] pData->ppTextureArrays;
 }
 
 void PlayerSprite::draw(Camera* cam)
 {
-	if( pData -> dir.isRight())
-		pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam);
-	else if( pData -> dir.isLeft())
-		pData->ppTextureArrays[ pData->iCurrentArr ] -> drawFlipX(pData -> x, pData -> y , cam);
-
-	for (int i = 0; i < pData ->Bullets.size(); i++)
+	int isDraw  = 0;
+	if( !pData ->isHittable)
 	{
-		pData ->Bullets[i] ->draw(cam);
+		isDraw = rand()% 2;
 	}
+	if (isDraw == 0)
+	{
+		if( pData -> dir.isRight())
+		pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam);
+		else if( pData -> dir.isLeft())
+			pData->ppTextureArrays[ pData->iCurrentArr ] -> drawFlipX(pData -> x, pData -> y , cam);
+
+		for (int i = 0; i < pData ->Bullets.size(); i++)
+		{
+			pData ->Bullets[i] ->draw(cam);
+		}
+	}
+	
 }
 
 void PlayerSprite::update( )
 {
 	pData -> pState -> onUpdate();
-
 	for (int i = 0; i < pData ->Bullets.size(); i++)
 	{
 		pData ->Bullets[i] ->update();
@@ -173,4 +186,26 @@ void PlayerSprite :: onCameraCollision(RectF cameraRect)
 void PlayerSprite ::  setCameraRect( RectF cameraRect)
 {
 	pData ->cameraRect = cameraRect;
+}
+
+int PlayerSprite ::  getDamage()
+{
+	
+	switch (pData ->bulletType)
+	{
+	case PlayerData::F:
+		return 1;
+		break;
+	case PlayerData::L:
+		return 1;
+		break;
+	case PlayerData::M:
+		return 1;
+		break;
+	case PlayerData::S:
+		return 1;
+		break;
+	default:
+		break;
+	}
 }

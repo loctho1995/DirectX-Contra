@@ -1,8 +1,6 @@
 #pragma once
 
-
-#include "EnermyInkSprite.h"
-
+#include "EnermySprite.h"
 
 class EnermyCreator
 {

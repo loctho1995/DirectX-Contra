@@ -42,6 +42,8 @@ void PlayerJumpingState :: onMoveReleased(Direction dir )
 
 void PlayerJumpingState :: onUpdate()
 {
+
+	hittableCalculation();
 	pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 
 
@@ -53,9 +55,9 @@ void PlayerJumpingState :: onUpdate()
 	{
 		pData -> vx = 0.0f;
 	}
-	if(!isJumpingPress)
+	/*if(!isJumpingPress)
 		if(pData -> vy < 0)
-			pData -> vy = 0;
+			pData -> vy = 0;*/
 		pData -> vy  += acceleration;
 
 		pData -> x += pData -> vx;
@@ -393,14 +395,108 @@ void PlayerJumpingState:: onFirePressed()
 	//pData ->iCurrentArr = PlayerData::JUMPNFIRE;
 	pData ->isFiring = true;
 	pData ->count = 0;
-	if(pData -> dir.isRight())
+	float bulletX;
+	float bulletY;
+	float angle;
+
+	if( !isMoving )
 	{
-		//pData ->Bullets.push_back(new RockMansBullet(pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x,  pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 , pData -> dir));
+		bulletX = pData -> x;
 	}
 	else
 	{
-		//pData ->Bullets.push_back(new RockMansBullet( - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x,  pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 , pData -> dir));
+		if(pData -> dir.isRight())
+		{
+			bulletX = pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x;
+		}
+		else
+		{
+			bulletX = -pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x;
+		
+		}
 	}
+	
+	
+
+		if( pData -> verticalDir.isDown() )
+		{
+			bulletY = pData -> y ;//;- pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2;
+		}
+		else if ( pData -> verticalDir.isUp())
+		{
+			bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight();
+		}
+		else
+		{
+			bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2;
+		}
+
+	
+
+
+
+	if(pData -> dir.isRight())
+	{
+		if( pData -> verticalDir.isDown() )
+		{
+			if(isMoving)
+			{
+				angle = M_PI_4;
+			}
+			else
+			{
+				angle = M_PI_2;
+			}
+
+		}
+		else if ( pData -> verticalDir.isUp() )
+		{
+			if(isMoving)
+			{
+				angle = -M_PI_4;
+			}
+			else
+			{
+				angle = -M_PI_2;
+			}
+		}
+		else
+		{
+			angle = 0.0f;
+		}
+	}
+	else
+	{
+		if( pData -> verticalDir.isDown() )
+		{
+			if(isMoving)
+			{
+				angle = M_PI_4 + M_PI_2;
+			}
+			else
+			{
+				angle = M_PI_2;
+			}
+		}
+		else if ( pData -> verticalDir.isUp() )
+		{
+			if(isMoving)
+			{
+				angle = -M_PI_4 - M_PI_2;
+			}
+			else
+			{
+				angle = -M_PI_2;
+			}
+		}
+		else
+		{
+			angle = M_PI;
+		}
+
+	}
+	createBullet(bulletX, bulletY, angle);
+	
 }
 
 

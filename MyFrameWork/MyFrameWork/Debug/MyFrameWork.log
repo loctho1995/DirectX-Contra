@@ -1,36 +1,183 @@
-﻿Build started 10/4/2015 7:13:37 PM.
-     1>Project "F:\Github\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
+﻿Build started 10/14/2015 3:04:37 PM.
+     1>Project "C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt PlayScene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Map.cpp PlayScene.cpp PlayerClimbingState.cpp PlayerDeadState.cpp PlayerDivingState.cpp PlayerJumpingState.cpp PlayerRunningState.cpp PlayerSprite.cpp PlayerStandingState.cpp PlayerSwimmingState.cpp SceneManager.cpp WindowInit.cpp
+         WindowInit.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\windowinit.cpp(136): warning C4244: 'argument' : conversion from 'float' to 'DWORD', possible loss of data
+         SceneManager.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         PlayerSwimmingState.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerswimmingstate.cpp(140): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerswimmingstate.cpp(152): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerswimmingstate.cpp(156): warning C4305: '=' : truncation from 'double' to 'float'
+         PlayerStandingState.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstandingstate.cpp(112): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstandingstate.cpp(118): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstandingstate.cpp(122): warning C4305: '=' : truncation from 'double' to 'float'
+         PlayerSprite.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playersprite.cpp(130): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playersprite.cpp(132): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playersprite.cpp(134): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playersprite.cpp(145): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playersprite.cpp(168): warning C4018: '<' : signed/unsigned mismatch
+         PlayerRunningState.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerrunningstate.cpp(146): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerrunningstate.cpp(150): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerrunningstate.cpp(161): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerrunningstate.cpp(165): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerrunningstate.cpp(169): warning C4305: '=' : truncation from 'double' to 'float'
+         PlayerJumpingState.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(444): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(448): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(456): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(460): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(474): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(478): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(485): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(489): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerjumpingstate.cpp(494): warning C4305: '=' : truncation from 'double' to 'float'
+         PlayerDivingState.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerdivingstate.cpp(95): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerdivingstate.cpp(101): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerdivingstate.cpp(105): warning C4305: '=' : truncation from 'double' to 'float'
+         PlayerDeadState.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         PlayerClimbingState.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
          PlayScene.cpp
-     1>f:\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(42): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\playscene.cpp(10): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playscene.cpp(9): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         Map.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(37): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(213): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(202): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(220): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(226): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(260): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(277): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(296): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(306): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(330): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(351): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(361): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(396): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(424): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(438): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(469): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(479): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(510): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.cpp(511): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Game.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\playersprite.cpp(211): warning C4715: 'PlayerSprite::getDamage' : not all control paths return a value
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\base64.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\GunBoss1BulletMovingState.obj
+         Debug\PlayerFBullet.obj
+         Debug\PlayerLBullet.obj
+         Debug\base64.obj
          Debug\EnermyCreator.obj
+         Debug\EnermyFinalBoss1DeadState.obj
+         Debug\EnermyFinalBoss1StandingState.obj
+         Debug\EnermyFinnalBoss1Sprite.obj
+         Debug\EnermyGunBoss1DeadState.obj
+         Debug\EnermyGunBoss1FiringState.obj
+         Debug\EnermyGunBoss1Sprite.obj
+         Debug\EnermyGunBoss1StandingState.obj
          Debug\EnermyInkJumpingState.obj
          Debug\EnermyInkSprite.obj
          Debug\EnermyInkStandingState.obj
-         Debug\EnermySoldier.obj
-         Debug\EnermySoldierData.obj
-         Debug\EnermySoldierRunningState.obj
          Debug\Game.obj
          Debug\Graphics.obj
+         Debug\GunBoss1Bullet.obj
+         Debug\GunBoss1BulletExploringState.obj
          Debug\KeyBoard.obj
          Debug\Map.obj
          Debug\PlayerClimbingState.obj
          Debug\PlayerDeadState.obj
          Debug\PlayerDivingState.obj
+         Debug\PlayerFBullet.obj
          Debug\PlayerJumpingState.obj
+         Debug\PlayerLBullet.obj
+         Debug\PlayerMBullet.obj
          Debug\PlayerRunningState.obj
          Debug\PlayerSprite.obj
          Debug\PlayerStandingState.obj
@@ -48,9 +195,11 @@
          Debug\tinyxmlparser.obj
          Debug\ViewPort.obj
          Debug\WindowInit.obj
-         MyFrameWork.vcxproj -> F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe
-     1>Done Building Project "F:\Github\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
+     1>Debug\PlayerFBullet.obj : warning LNK4042: object specified more than once; extras ignored
+     1>Debug\PlayerLBullet.obj : warning LNK4042: object specified more than once; extras ignored
+         MyFrameWork.vcxproj -> C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe
+     1>Done Building Project "C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:08.55
+Time Elapsed 00:00:16.42

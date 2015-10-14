@@ -21,6 +21,10 @@ public:
 	{
 		return dir == Down;
 	}
+	bool isNone()
+	{
+		return dir == None;
+	}
 
 	void reverse()
 	{

@@ -5,7 +5,6 @@
 #include "QuadTree.h"
 #include "Map.h"
 #include "KeyBoard.h"
-#include "EnermySoldier.h"
 
 class PlayScene : public Scene
 {
@@ -29,7 +28,6 @@ public:
 
 private:
 	PlayerSprite* pPlayer;
-    EnermySoldier *mSoldier;
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
