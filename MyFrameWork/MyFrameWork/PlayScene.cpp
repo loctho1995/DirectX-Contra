@@ -2,7 +2,7 @@
 
 PlayScene :: PlayScene( int mapID )
 {
-	pPlayer = new PlayerSprite ();
+	pPlayer = new PlayerSprite ();    
     mSoldier = new EnermySoldier(200, 200);
     bridge = new EnermyBridge(0, 0, 2);
 
@@ -98,6 +98,7 @@ void PlayScene :: onUpdate()
 	pPlayer -> update();
     bridge->setPlayerPosition(pPlayer->getX(), pPlayer->getY());
     bridge->update();
+    mSoldier->update();
 }
 void PlayScene ::  render()
 {

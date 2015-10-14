@@ -82,9 +82,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.cpp" />
-    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.cpp" />
-    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.cpp" />
     <ClCompile Include="base64.cpp" />
     <ClCompile Include="EnermyBridge.cpp" />
     <ClCompile Include="EnermyBridgeAliveState.cpp" />
@@ -114,6 +111,7 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="GunBoss1Bullet.cpp" />
     <ClCompile Include="GunBoss1BulletExploringState.cpp" />
+    <ClCompile Include="GunBoss1BulletMovingState.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="PlayerClimbingState.cpp" />
@@ -142,11 +140,6 @@
     <ClCompile Include="WindowInit.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.h" />
-    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.h" />
-    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBulletMovingState.h" />
-    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.h" />
-    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerMBulletMovingState.h" />
     <ClInclude Include="base64.h" />
     <ClInclude Include="BulletMovingState.h" />
     <ClInclude Include="BulletSprite.h" />
@@ -185,6 +178,7 @@
     <ClInclude Include="EnermyInkSprite.h" />
     <ClInclude Include="GunBoss1Bullet.h" />
     <ClInclude Include="GunBoss1BulletExploringState.h" />
+    <ClInclude Include="GunBoss1BulletMovingState.h" />
     <ClInclude Include="KeyBoard.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="Map.h" />
