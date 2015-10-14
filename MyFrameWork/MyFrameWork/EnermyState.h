@@ -6,7 +6,7 @@
 class EnermyState : public SpriteState
 {
 public:
-	EnermyState () {}
+    EnermyState() {}
 
     virtual void onUpdate() 
     {

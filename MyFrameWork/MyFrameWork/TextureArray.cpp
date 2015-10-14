@@ -49,9 +49,7 @@ void TextureArray :: update()
 	{
 		iCurrentTexture++;
 		iCurrentTexture %= nTextures;
-	}
-		
-
+	}		
 }
 
 void TextureArray :: setAnchorPoint(float xRatio, float yRatio )
@@ -62,6 +60,10 @@ void TextureArray :: setAnchorPoint(float xRatio, float yRatio )
 	}
 }
 
+bool TextureArray::isLastTexture()
+{
+    return (iCurrentTexture == nTextures - 1) && (count == nFrames - 1);
+}
 
 int TextureArray :: getWidth()
 {

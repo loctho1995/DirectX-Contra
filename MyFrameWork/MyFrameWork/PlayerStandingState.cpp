@@ -3,24 +3,21 @@
 #include "PlayerRunningState.h"
 #include "PlayerDeadState.h"
 
-PlayerStandingState :: PlayerStandingState(PlayerData* data)
+PlayerStandingState::PlayerStandingState(PlayerData* data)
 {
-		this->pData = data;
-		if( pData -> verticalDir.isDown())
-		{
-			pData -> iCurrentArr = PlayerData :: STANDDOWN;
-		}
-		
-		else if( pData -> verticalDir.isUp())
-		{
-			pData -> iCurrentArr = PlayerData :: STANDUP;
-		}
-		else
-			pData -> iCurrentArr = PlayerData :: STAND;
-		pData -> vy = 0.0f;
+    this->pData = data;
+    if (pData->verticalDir.isDown())
+    {
+        pData->iCurrentArr = PlayerData::STANDDOWN;
+    }
 
-		
-		
+    else if (pData->verticalDir.isUp())
+    {
+        pData->iCurrentArr = PlayerData::STANDUP;
+    }
+    else
+        pData->iCurrentArr = PlayerData::STAND;
+    pData->vy = 0.0f;
 }
 
 void PlayerStandingState::onMovePressed(Direction d)

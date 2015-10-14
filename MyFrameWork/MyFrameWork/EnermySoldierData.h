@@ -7,12 +7,13 @@ public:
     EnermySoldierData();
     ~EnermySoldierData();
 
-    enum SoldierRunArrayIndex
+    enum SoldierArrayIndex
     {
         RUN,
         JUMP,
         SHOT,
         DIE,
+        DESTROY,
         COUNT
     };
 };

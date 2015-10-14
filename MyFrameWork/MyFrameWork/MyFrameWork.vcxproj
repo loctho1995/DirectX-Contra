@@ -83,12 +83,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="base64.cpp" />
+    <ClCompile Include="EnermyBridge.cpp" />
+    <ClCompile Include="EnermyBridgeAliveState.cpp" />
+    <ClCompile Include="EnermyBridgeBody.cpp" />
+    <ClCompile Include="EnermyBridgeData.cpp" />
+    <ClCompile Include="EnermyBridgeExplosionState.cpp" />
+    <ClCompile Include="EnermyBridgeHead.cpp" />
+    <ClCompile Include="EnermyBridgeTail.cpp" />
     <ClCompile Include="EnermyCreator.cpp" />
     <ClCompile Include="EnermyInkJumpingState.cpp" />
     <ClCompile Include="EnermyInkSprite.cpp" />
     <ClCompile Include="EnermyInkStandingState.cpp" />
     <ClCompile Include="EnermySoldier.cpp" />
     <ClCompile Include="EnermySoldierData.cpp" />
+    <ClCompile Include="EnermySoldierDestroyState.cpp" />
+    <ClCompile Include="EnermySoldierDieState.cpp" />
+    <ClCompile Include="EnermySoldierJumpingState.cpp" />
     <ClCompile Include="EnermySoldierRunningState.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graphics.cpp" />
@@ -124,12 +134,22 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CollisionRect.h" />
     <ClInclude Include="Direction.h" />
+    <ClInclude Include="EnermyBridge.h" />
+    <ClInclude Include="EnermyBridgeAliveState.h" />
+    <ClInclude Include="EnermyBridgeBody.h" />
+    <ClInclude Include="EnermyBridgeData.h" />
+    <ClInclude Include="EnermyBridgeExplosionState.h" />
+    <ClInclude Include="EnermyBridgeHead.h" />
+    <ClInclude Include="EnermyBridgeTail.h" />
     <ClInclude Include="EnermyCreator.h" />
     <ClInclude Include="EnermyData.h" />
     <ClInclude Include="EnermyInkJumpingState.h" />
     <ClInclude Include="EnermyInkStandingState.h" />
     <ClInclude Include="EnermySoldier.h" />
     <ClInclude Include="EnermySoldierData.h" />
+    <ClInclude Include="EnermySoldierDestroyState.h" />
+    <ClInclude Include="EnermySoldierDieState.h" />
+    <ClInclude Include="EnermySoldierJumpingState.h" />
     <ClInclude Include="EnermySoldierRunningState.h" />
     <ClInclude Include="EnermySprite.h" />
     <ClInclude Include="EnermyState.h" />

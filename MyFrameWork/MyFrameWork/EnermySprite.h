@@ -16,7 +16,7 @@ public:
     virtual void setPlayerX(int x) { pData->playerX = x; } //add new code - Tho
     virtual void setPlayerY(int y) { pData->playerY = y; } //add new code
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
-    
+    virtual SpriteState* getState(){ return this->pData->pState; } //phai them doan doan nay de goi pData cua EnermySprite chu ko phai thang cha
     virtual void initTextureArrays(int count)
     {
         pData->ppTextureArrays = new TextureArray * [count];

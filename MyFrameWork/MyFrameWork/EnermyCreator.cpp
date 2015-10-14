@@ -17,5 +17,26 @@ EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int re
 	{
 		return new EnermyInkSprite ( respawnX, respawnY);
 	}
+
+    if (enermyName == "soldier")
+    {
+        return new EnermySoldier(respawnX, respawnY);
+    }
+
+    if (enermyName == "bridgehead")
+    {
+        return new EnermyBridgeHead(respawnX, respawnY);
+    }
+
+    if (enermyName == "bridgebody")
+    {
+        return new EnermyBridgeBody(respawnX, respawnY);
+    }
+
+    if (enermyName == "bridgetail")
+    {
+        return new EnermyBridgeTail(respawnX, respawnY);
+    }
+
 	return nullptr;
 }

@@ -6,6 +6,7 @@
 #include "Map.h"
 #include "KeyBoard.h"
 #include "EnermySoldier.h"
+#include "EnermyBridge.h"
 
 class PlayScene : public Scene
 {
@@ -29,6 +30,7 @@ public:
 
 private:
 	PlayerSprite* pPlayer;
+    EnermyBridge *bridge;
     EnermySoldier *mSoldier;
 	ViewPort* viewPort;
 	Camera* cam;

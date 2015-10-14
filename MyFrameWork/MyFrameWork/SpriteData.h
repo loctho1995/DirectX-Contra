@@ -10,7 +10,7 @@ public:
 	{
 		RectF r;
 		r = body;
-		r.translate(x, y);
+		r.translate(x, y);        
 		return r;
 	}
 	/*RectF getLastFrameBody()

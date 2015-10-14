@@ -2,6 +2,10 @@
 
 
 #include "EnermyInkSprite.h"
+#include "EnermySoldier.h"
+#include "EnermyBridgeHead.h"
+#include "EnermyBridgeBody.h"
+#include "EnermyBridgeTail.h"
 
 
 class EnermyCreator

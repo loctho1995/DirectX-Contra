@@ -4,12 +4,15 @@ PlayScene :: PlayScene( int mapID )
 {
 	pPlayer = new PlayerSprite ();
     mSoldier = new EnermySoldier(200, 200);
+    bridge = new EnermyBridge(0, 0, 2);
 
+    //bridge->destroy();
 	std:: string mapName = "stage" + std::to_string(mapID);;
 	pMap  = new Map(mapName);
-	int viewPortSize = pMap ->getMapRect().width < pMap ->getMapRect().height ?pMap ->getMapRect().width:pMap ->getMapRect().height;
+	int viewPortSize = pMap ->getMapRect().width < pMap ->getMapRect().height ? pMap ->getMapRect().width:pMap ->getMapRect().height;
 	viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize /2 , SCHEIGHT / 2 -  viewPortSize /2,viewPortSize , viewPortSize ));
 	cam = new Camera(viewPort, pMap->getMapRect() );
+
 }
 
 void PlayScene :: onCollision()
@@ -83,6 +86,7 @@ void PlayScene ::  handleInput()
 				pPlayer -> getState() -> onFirePressed();
 			}		
 			break;
+            
 			//break;
 		}
 	}
@@ -93,6 +97,8 @@ void PlayScene :: onUpdate()
 	pMap -> onSupportSprite( pPlayer);
     mSoldier->update();
 	pPlayer -> update();
+    bridge->setPlayerPosition(pPlayer->getX(), pPlayer->getY());
+    bridge->update();
 }
 void PlayScene ::  render()
 {
@@ -100,6 +106,7 @@ void PlayScene ::  render()
 
 	pMap ->draw(cam);
     mSoldier->draw(cam);
+    bridge->draw(cam);
 	pPlayer -> draw(cam);
 
 	//Graphics::getInstance() ->drawText("TEST", RectI(200,220,50,50));

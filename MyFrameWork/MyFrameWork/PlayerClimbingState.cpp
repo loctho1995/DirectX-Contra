@@ -12,6 +12,7 @@ PlayerClimbingState :: PlayerClimbingState(PlayerData* data, bool isMoving )
 	nHoldFrames = 10;
 	this -> isMoving = isMoving;
 }
+
 void PlayerClimbingState :: onUpdate()
 {
 	count ++;

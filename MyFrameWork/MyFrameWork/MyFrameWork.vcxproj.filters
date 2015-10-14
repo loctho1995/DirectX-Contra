@@ -25,23 +25,35 @@
     <Filter Include="Header Files\PlayerState">
       <UniqueIdentifier>{f3d43938-803c-477e-969d-abd241ad6276}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\PlayerState">
-      <UniqueIdentifier>{89305dc8-4c15-4eaa-b06f-4537291fd88e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Scenes">
       <UniqueIdentifier>{b6b1576f-f31d-499b-86d8-c516cff9e500}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Enermy">
       <UniqueIdentifier>{a4af12bb-62dc-4c08-a4b5-d7b89263443c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Enermy\SoldierRun">
-      <UniqueIdentifier>{efb1235f-7c80-4e92-b101-0ff59f0a2973}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Enermy\Test-Ink">
       <UniqueIdentifier>{6175302f-4c31-4484-a882-832dfb4392ae}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\OpenSource">
       <UniqueIdentifier>{c0a72015-e61b-45fe-9d63-59791e265655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enermy\Soldier">
+      <UniqueIdentifier>{efb1235f-7c80-4e92-b101-0ff59f0a2973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{89305dc8-4c15-4eaa-b06f-4537291fd88e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enermy\Bridge">
+      <UniqueIdentifier>{f572aff9-2f53-456e-b52e-a20c5ebd2691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enermy\Bridge\Head">
+      <UniqueIdentifier>{8c3d3948-d2a3-46de-bac5-868145289bb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enermy\Bridge\Body">
+      <UniqueIdentifier>{a8bf28b2-ae12-438a-8776-8310c8941708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enermy\Bridge\Tail">
+      <UniqueIdentifier>{2ccbb19c-74c5-4fe4-855c-b6537034479a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -58,9 +70,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TextureArray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerSprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="KeyBoard.cpp">
@@ -97,13 +106,13 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PlayerJumpingState.cpp">
-      <Filter>Source Files\PlayerState</Filter>
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
     <ClCompile Include="PlayerRunningState.cpp">
-      <Filter>Source Files\PlayerState</Filter>
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
     <ClCompile Include="PlayerStandingState.cpp">
-      <Filter>Source Files\PlayerState</Filter>
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
     <ClCompile Include="RockMansBullet.cpp">
       <Filter>Source Files</Filter>
@@ -112,16 +121,16 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PlayerDivingState.cpp">
-      <Filter>Source Files\PlayerState</Filter>
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
     <ClCompile Include="PlayerSwimmingState.cpp">
-      <Filter>Source Files\PlayerState</Filter>
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
     <ClCompile Include="PlayerClimbingState.cpp">
-      <Filter>Source Files\PlayerState</Filter>
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
     <ClCompile Include="PlayerDeadState.cpp">
-      <Filter>Source Files\PlayerState</Filter>
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
     <ClCompile Include="PlayScene.cpp">
       <Filter>Source Files\Scenes</Filter>
@@ -136,13 +145,46 @@
       <Filter>Source Files\Enermy\Test-Ink</Filter>
     </ClCompile>
     <ClCompile Include="EnermySoldier.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+      <Filter>Source Files\Enermy\Soldier</Filter>
     </ClCompile>
     <ClCompile Include="EnermySoldierData.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+      <Filter>Source Files\Enermy\Soldier</Filter>
     </ClCompile>
     <ClCompile Include="EnermySoldierRunningState.cpp">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierJumpingState.cpp">
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSprite.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierDieState.cpp">
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierDestroyState.cpp">
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyBridgeData.cpp">
+      <Filter>Source Files\Enermy\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyBridgeHead.cpp">
+      <Filter>Source Files\Enermy\Bridge\Head</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyBridgeAliveState.cpp">
+      <Filter>Source Files\Enermy\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyBridgeExplosionState.cpp">
+      <Filter>Source Files\Enermy\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyBridgeBody.cpp">
+      <Filter>Source Files\Enermy\Bridge\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyBridgeTail.cpp">
+      <Filter>Source Files\Enermy\Bridge\Tail</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyBridge.cpp">
+      <Filter>Source Files\Enermy\Bridge</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -156,9 +198,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TextureArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SpriteData.h">
@@ -213,9 +252,6 @@
       <Filter>Header Files\OpenSource</Filter>
     </ClInclude>
     <ClInclude Include="TileTmx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
@@ -300,13 +336,49 @@
       <Filter>Source Files\Enermy\Test-Ink</Filter>
     </ClInclude>
     <ClInclude Include="EnermySoldier.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+      <Filter>Source Files\Enermy\Soldier</Filter>
     </ClInclude>
     <ClInclude Include="EnermySoldierData.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+      <Filter>Source Files\Enermy\Soldier</Filter>
     </ClInclude>
     <ClInclude Include="EnermySoldierRunningState.h">
-      <Filter>Source Files\Enermy\SoldierRun</Filter>
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierJumpingState.h">
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>Source Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSprite.h">
+      <Filter>Source Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierDieState.h">
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierDestroyState.h">
+      <Filter>Source Files\Enermy\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyBridgeData.h">
+      <Filter>Source Files\Enermy\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyBridgeHead.h">
+      <Filter>Source Files\Enermy\Bridge\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyBridgeAliveState.h">
+      <Filter>Source Files\Enermy\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyBridgeExplosionState.h">
+      <Filter>Source Files\Enermy\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyBridgeBody.h">
+      <Filter>Source Files\Enermy\Bridge\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyBridgeTail.h">
+      <Filter>Source Files\Enermy\Bridge\Tail</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyBridge.h">
+      <Filter>Source Files\Enermy\Bridge</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

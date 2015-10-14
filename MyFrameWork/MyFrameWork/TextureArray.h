@@ -14,6 +14,8 @@ public:
 	void setAnchorPoint(float xRatio, float yRatio);
 	int getWidth();
 	int getHeight();
+    bool isLastTexture();
+
 private:
 	const unsigned int nTextures;
 	const unsigned int nFrames;
