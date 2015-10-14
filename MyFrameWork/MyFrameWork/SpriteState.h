@@ -20,6 +20,7 @@ public:
 	virtual void onFirePressed() {}
 	virtual void onDead() {}
 	virtual void onCameraCollision(RectF cameraRect) {}
+	virtual void createBullet(float x, float y, float angle) {}
 	
 protected:
 	virtual void transition(SpriteState* state) 

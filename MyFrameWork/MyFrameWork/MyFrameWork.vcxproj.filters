@@ -1,387 +1,144 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Header Files\OpenSource">
-      <UniqueIdentifier>{77195fc9-ee78-46ee-9012-49d53e81aa8d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\EnermySprite">
-      <UniqueIdentifier>{19ee1ab4-48ff-45fa-96f8-ccdcb05e78db}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\EnermyState">
-      <UniqueIdentifier>{86b86484-3671-4377-b4c4-d1c907532f97}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\PlayerState">
-      <UniqueIdentifier>{f3d43938-803c-477e-969d-abd241ad6276}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Scenes">
-      <UniqueIdentifier>{b6b1576f-f31d-499b-86d8-c516cff9e500}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enermy">
-      <UniqueIdentifier>{a4af12bb-62dc-4c08-a4b5-d7b89263443c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enermy\Test-Ink">
-      <UniqueIdentifier>{6175302f-4c31-4484-a882-832dfb4392ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\OpenSource">
-      <UniqueIdentifier>{c0a72015-e61b-45fe-9d63-59791e265655}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enermy\Soldier">
-      <UniqueIdentifier>{efb1235f-7c80-4e92-b101-0ff59f0a2973}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Player">
-      <UniqueIdentifier>{89305dc8-4c15-4eaa-b06f-4537291fd88e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enermy\Bridge">
-      <UniqueIdentifier>{f572aff9-2f53-456e-b52e-a20c5ebd2691}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enermy\Bridge\Head">
-      <UniqueIdentifier>{8c3d3948-d2a3-46de-bac5-868145289bb4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enermy\Bridge\Body">
-      <UniqueIdentifier>{a8bf28b2-ae12-438a-8776-8310c8941708}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enermy\Bridge\Tail">
-      <UniqueIdentifier>{2ccbb19c-74c5-4fe4-855c-b6537034479a}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.cpp" />
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.cpp" />
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.cpp" />
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="EnermyBridge.cpp" />
+    <ClCompile Include="EnermyBridgeAliveState.cpp" />
+    <ClCompile Include="EnermyBridgeBody.cpp" />
+    <ClCompile Include="EnermyBridgeData.cpp" />
+    <ClCompile Include="EnermyBridgeExplosionState.cpp" />
+    <ClCompile Include="EnermyBridgeHead.cpp" />
+    <ClCompile Include="EnermyBridgeTail.cpp" />
+    <ClCompile Include="EnermyCreator.cpp" />
+    <ClCompile Include="EnermyFinalBoss1DeadState.cpp" />
+    <ClCompile Include="EnermyFinalBoss1StandingState.cpp" />
+    <ClCompile Include="EnermyFinnalBoss1Sprite.cpp" />
+    <ClCompile Include="EnermyGunBoss1DeadState.cpp" />
+    <ClCompile Include="EnermyGunBoss1FiringState.cpp" />
+    <ClCompile Include="EnermyGunBoss1Sprite.cpp" />
+    <ClCompile Include="EnermyGunBoss1StandingState.cpp" />
+    <ClCompile Include="EnermyInkJumpingState.cpp" />
+    <ClCompile Include="EnermyInkSprite.cpp" />
+    <ClCompile Include="EnermyInkStandingState.cpp" />
+    <ClCompile Include="EnermySoldier.cpp" />
+    <ClCompile Include="EnermySoldierData.cpp" />
+    <ClCompile Include="EnermySoldierDestroyState.cpp" />
+    <ClCompile Include="EnermySoldierDieState.cpp" />
+    <ClCompile Include="EnermySoldierJumpingState.cpp" />
+    <ClCompile Include="EnermySoldierRunningState.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GunBoss1Bullet.cpp" />
+    <ClCompile Include="GunBoss1BulletExploringState.cpp" />
+    <ClCompile Include="KeyBoard.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="PlayerClimbingState.cpp" />
+    <ClCompile Include="PlayerDeadState.cpp" />
+    <ClCompile Include="PlayerDivingState.cpp" />
+    <ClCompile Include="PlayerFBullet.cpp" />
+    <ClCompile Include="PlayerJumpingState.cpp" />
+    <ClCompile Include="PlayerLBullet.cpp" />
+    <ClCompile Include="PlayerMBullet.cpp" />
+    <ClCompile Include="PlayerRunningState.cpp" />
+    <ClCompile Include="PlayerSprite.cpp" />
+    <ClCompile Include="PlayerStandingState.cpp" />
+    <ClCompile Include="PlayerSwimmingState.cpp" />
+    <ClCompile Include="PlayScene.cpp" />
+    <ClCompile Include="RockMansBullet.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureArray.cpp" />
+    <ClCompile Include="TileLayer.cpp" />
+    <ClCompile Include="TileTmx.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
+    <ClCompile Include="ViewPort.cpp" />
+    <ClCompile Include="WindowInit.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WindowInit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureArray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyBoard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ViewPort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyxml.cpp">
-      <Filter>Source Files\OpenSource</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyxmlerror.cpp">
-      <Filter>Source Files\OpenSource</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyxmlparser.cpp">
-      <Filter>Source Files\OpenSource</Filter>
-    </ClCompile>
-    <ClCompile Include="tinystr.cpp">
-      <Filter>Source Files\OpenSource</Filter>
-    </ClCompile>
-    <ClCompile Include="base64.cpp">
-      <Filter>Source Files\OpenSource</Filter>
-    </ClCompile>
-    <ClCompile Include="TileTmx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TileLayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyCreator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerJumpingState.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerRunningState.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStandingState.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="RockMansBullet.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerDivingState.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerSwimmingState.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerClimbingState.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerDeadState.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayScene.cpp">
-      <Filter>Source Files\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyInkJumpingState.cpp">
-      <Filter>Source Files\Enermy\Test-Ink</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyInkStandingState.cpp">
-      <Filter>Source Files\Enermy\Test-Ink</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyInkSprite.cpp">
-      <Filter>Source Files\Enermy\Test-Ink</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldier.cpp">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldierData.cpp">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldierRunningState.cpp">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldierJumpingState.cpp">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerSprite.cpp">
-      <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldierDieState.cpp">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermySoldierDestroyState.cpp">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyBridgeData.cpp">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyBridgeHead.cpp">
-      <Filter>Source Files\Enermy\Bridge\Head</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyBridgeAliveState.cpp">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyBridgeExplosionState.cpp">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyBridgeBody.cpp">
-      <Filter>Source Files\Enermy\Bridge\Body</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyBridgeTail.cpp">
-      <Filter>Source Files\Enermy\Bridge\Tail</Filter>
-    </ClCompile>
-    <ClCompile Include="EnermyBridge.cpp">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Graphics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyBoard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Direction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewPort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="QuadTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tinystr.h">
-      <Filter>Header Files\OpenSource</Filter>
-    </ClInclude>
-    <ClInclude Include="tinyxml.h">
-      <Filter>Header Files\OpenSource</Filter>
-    </ClInclude>
-    <ClInclude Include="TileSet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Layer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TileLayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zconf.h">
-      <Filter>Header Files\OpenSource</Filter>
-    </ClInclude>
-    <ClInclude Include="zlib.h">
-      <Filter>Header Files\OpenSource</Filter>
-    </ClInclude>
-    <ClInclude Include="base64.h">
-      <Filter>Header Files\OpenSource</Filter>
-    </ClInclude>
-    <ClInclude Include="TileTmx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyCreator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySprite.h">
-      <Filter>Header Files\EnermySprite</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerClimbingState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerJumpingState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerRunningState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="BulletSprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RockMansBullet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RockMansBulletMoving.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BulletState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BulletMovingState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CollisionRect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStandingState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerDivingState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerSwimmingState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerDeadState.h">
-      <Filter>Header Files\PlayerState</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayScene.h">
-      <Filter>Source Files\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyState.h">
-      <Filter>Header Files\EnermyState</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyInkJumpingState.h">
-      <Filter>Source Files\Enermy\Test-Ink</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyInkStandingState.h">
-      <Filter>Source Files\Enermy\Test-Ink</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyInkSprite.h">
-      <Filter>Source Files\Enermy\Test-Ink</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldier.h">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldierData.h">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldierRunningState.h">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldierJumpingState.h">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerData.h">
-      <Filter>Source Files\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerSprite.h">
-      <Filter>Source Files\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldierDieState.h">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermySoldierDestroyState.h">
-      <Filter>Source Files\Enermy\Soldier</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyBridgeData.h">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyBridgeHead.h">
-      <Filter>Source Files\Enermy\Bridge\Head</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyBridgeAliveState.h">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyBridgeExplosionState.h">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyBridgeBody.h">
-      <Filter>Source Files\Enermy\Bridge\Body</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyBridgeTail.h">
-      <Filter>Source Files\Enermy\Bridge\Tail</Filter>
-    </ClInclude>
-    <ClInclude Include="EnermyBridge.h">
-      <Filter>Source Files\Enermy\Bridge</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBulletMovingState.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerMBulletMovingState.h" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="BulletMovingState.h" />
+    <ClInclude Include="BulletSprite.h" />
+    <ClInclude Include="BulletState.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CollisionRect.h" />
+    <ClInclude Include="Direction.h" />
+    <ClInclude Include="EnermyBridge.h" />
+    <ClInclude Include="EnermyBridgeAliveState.h" />
+    <ClInclude Include="EnermyBridgeBody.h" />
+    <ClInclude Include="EnermyBridgeData.h" />
+    <ClInclude Include="EnermyBridgeExplosionState.h" />
+    <ClInclude Include="EnermyBridgeHead.h" />
+    <ClInclude Include="EnermyBridgeTail.h" />
+    <ClInclude Include="EnermyCreator.h" />
+    <ClInclude Include="EnermyData.h" />
+    <ClInclude Include="EnermyFinalBoss1Sprite.h" />
+    <ClInclude Include="EnermyFinalBoss1DeadState.h" />
+    <ClInclude Include="EnermyFinalBoss1StandingState.h" />
+    <ClInclude Include="EnermyGunBoss1DeadState.h" />
+    <ClInclude Include="EnermyGunBoss1FiringState.h" />
+    <ClInclude Include="EnermyGunBoss1Sprite.h" />
+    <ClInclude Include="EnermyGunBoss1StandingState.h" />
+    <ClInclude Include="EnermyInkJumpingState.h" />
+    <ClInclude Include="EnermyInkStandingState.h" />
+    <ClInclude Include="EnermySoldier.h" />
+    <ClInclude Include="EnermySoldierData.h" />
+    <ClInclude Include="EnermySoldierDestroyState.h" />
+    <ClInclude Include="EnermySoldierDieState.h" />
+    <ClInclude Include="EnermySoldierJumpingState.h" />
+    <ClInclude Include="EnermySoldierRunningState.h" />
+    <ClInclude Include="EnermySprite.h" />
+    <ClInclude Include="EnermyState.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="EnermyInkSprite.h" />
+    <ClInclude Include="GunBoss1Bullet.h" />
+    <ClInclude Include="GunBoss1BulletExploringState.h" />
+    <ClInclude Include="KeyBoard.h" />
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MenuScene.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="PlayerClimbingState.h" />
+    <ClInclude Include="PlayerData.h" />
+    <ClInclude Include="PlayerDeadState.h" />
+    <ClInclude Include="PlayerDivingState.h" />
+    <ClInclude Include="PlayerJumpingState.h" />
+    <ClInclude Include="PlayerMBullet.h" />
+    <ClInclude Include="PlayerRunningState.h" />
+    <ClInclude Include="PlayerSprite.h" />
+    <ClInclude Include="PlayerStandingState.h" />
+    <ClInclude Include="PlayerState.h" />
+    <ClInclude Include="PlayerSwimmingState.h" />
+    <ClInclude Include="PlayScene.h" />
+    <ClInclude Include="QuadTree.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="RockMansBullet.h" />
+    <ClInclude Include="RockMansBulletMoving.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteData.h" />
+    <ClInclude Include="SpriteState.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureArray.h" />
+    <ClInclude Include="TileLayer.h" />
+    <ClInclude Include="TileSet.h" />
+    <ClInclude Include="TileTmx.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
+    <ClInclude Include="ViewPort.h" />
+    <ClInclude Include="zconf.h" />
+    <ClInclude Include="zlib.h" />
   </ItemGroup>
 </Project>

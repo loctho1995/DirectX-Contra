@@ -82,6 +82,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.cpp" />
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.cpp" />
+    <ClCompile Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.cpp" />
     <ClCompile Include="base64.cpp" />
     <ClCompile Include="EnermyBridge.cpp" />
     <ClCompile Include="EnermyBridgeAliveState.cpp" />
@@ -91,6 +94,13 @@
     <ClCompile Include="EnermyBridgeHead.cpp" />
     <ClCompile Include="EnermyBridgeTail.cpp" />
     <ClCompile Include="EnermyCreator.cpp" />
+    <ClCompile Include="EnermyFinalBoss1DeadState.cpp" />
+    <ClCompile Include="EnermyFinalBoss1StandingState.cpp" />
+    <ClCompile Include="EnermyFinnalBoss1Sprite.cpp" />
+    <ClCompile Include="EnermyGunBoss1DeadState.cpp" />
+    <ClCompile Include="EnermyGunBoss1FiringState.cpp" />
+    <ClCompile Include="EnermyGunBoss1Sprite.cpp" />
+    <ClCompile Include="EnermyGunBoss1StandingState.cpp" />
     <ClCompile Include="EnermyInkJumpingState.cpp" />
     <ClCompile Include="EnermyInkSprite.cpp" />
     <ClCompile Include="EnermyInkStandingState.cpp" />
@@ -102,12 +112,17 @@
     <ClCompile Include="EnermySoldierRunningState.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GunBoss1Bullet.cpp" />
+    <ClCompile Include="GunBoss1BulletExploringState.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="PlayerClimbingState.cpp" />
     <ClCompile Include="PlayerDeadState.cpp" />
     <ClCompile Include="PlayerDivingState.cpp" />
+    <ClCompile Include="PlayerFBullet.cpp" />
     <ClCompile Include="PlayerJumpingState.cpp" />
+    <ClCompile Include="PlayerLBullet.cpp" />
+    <ClCompile Include="PlayerMBullet.cpp" />
     <ClCompile Include="PlayerRunningState.cpp" />
     <ClCompile Include="PlayerSprite.cpp" />
     <ClCompile Include="PlayerStandingState.cpp" />
@@ -127,6 +142,11 @@
     <ClCompile Include="WindowInit.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\GunBoss1BulletMovingState.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBullet.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerFBulletMovingState.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerLBullet.h" />
+    <ClInclude Include="..\..\..\..\Visual Studio 2012\Projects\MyFrameWork\MyFrameWork\PlayerMBulletMovingState.h" />
     <ClInclude Include="base64.h" />
     <ClInclude Include="BulletMovingState.h" />
     <ClInclude Include="BulletSprite.h" />
@@ -143,6 +163,13 @@
     <ClInclude Include="EnermyBridgeTail.h" />
     <ClInclude Include="EnermyCreator.h" />
     <ClInclude Include="EnermyData.h" />
+    <ClInclude Include="EnermyFinalBoss1Sprite.h" />
+    <ClInclude Include="EnermyFinalBoss1DeadState.h" />
+    <ClInclude Include="EnermyFinalBoss1StandingState.h" />
+    <ClInclude Include="EnermyGunBoss1DeadState.h" />
+    <ClInclude Include="EnermyGunBoss1FiringState.h" />
+    <ClInclude Include="EnermyGunBoss1Sprite.h" />
+    <ClInclude Include="EnermyGunBoss1StandingState.h" />
     <ClInclude Include="EnermyInkJumpingState.h" />
     <ClInclude Include="EnermyInkStandingState.h" />
     <ClInclude Include="EnermySoldier.h" />
@@ -156,6 +183,8 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="EnermyInkSprite.h" />
+    <ClInclude Include="GunBoss1Bullet.h" />
+    <ClInclude Include="GunBoss1BulletExploringState.h" />
     <ClInclude Include="KeyBoard.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="Map.h" />
@@ -166,6 +195,7 @@
     <ClInclude Include="PlayerDeadState.h" />
     <ClInclude Include="PlayerDivingState.h" />
     <ClInclude Include="PlayerJumpingState.h" />
+    <ClInclude Include="PlayerMBullet.h" />
     <ClInclude Include="PlayerRunningState.h" />
     <ClInclude Include="PlayerSprite.h" />
     <ClInclude Include="PlayerStandingState.h" />
@@ -191,9 +221,6 @@
     <ClInclude Include="ViewPort.h" />
     <ClInclude Include="zconf.h" />
     <ClInclude Include="zlib.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

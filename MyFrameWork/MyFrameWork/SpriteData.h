@@ -28,11 +28,21 @@ public:
 	}
 	float transform( float val)
 	{
-		if ( dir.isLeft() || dir.isUp() )
+		if ( dir.isLeft()  )
 		{
 			return val * -1;
 		}
-		else if( dir.isRight() || dir.isDown() )
+		else if( dir.isRight()  )
+			return val;
+		else return 0;
+	}
+	float verticalTransform( float val)
+	{
+		if ( verticalDir.isUp()  )
+		{
+			return val * -1;
+		}
+		else if( verticalDir.isDown()  )
 			return val;
 		else return 0;
 	}
@@ -50,4 +60,6 @@ public:
 	CollisionRectF cSupportRect;
 	std::vector< CollisionRectF > cThroughRect;
 	class SpriteState* pState;
+	bool isDesTroyed;
+	bool isHittable;
 };

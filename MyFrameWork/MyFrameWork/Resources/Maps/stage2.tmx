@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="22">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="34">
  <tileset firstgid="1" name="ContraMapStage1BG" tilewidth="16" tileheight="16">
   <image source="ContraMapStage1BG.png" width="3328" height="240"/>
  </tileset>
@@ -15,5 +15,13 @@
   <object id="8" type="throughable" x="324" y="113" width="3019" height="11"/>
   <object id="10" type="water" x="38" y="220" width="248" height="12"/>
   <object id="21" type="throughable" x="290" y="209" width="60" height="15"/>
+  <object id="22" type="throughable" x="204" y="113" width="168" height="14"/>
+  <object id="27" type="nonthroughable" x="3010" y="215" width="318" height="25.3333"/>
+ </objectgroup>
+ <objectgroup name="ObjectLayer">
+  <object id="23" name="gunboss1" x="3219.31" y="129.129" width="12" height="6"/>
+  <object id="25" name="gunboss1" x="326.875" y="73.7083" width="12.25" height="5.25"/>
+  <object id="26" name="gunboss1" x="3241.09" y="129.182" width="12" height="6"/>
+  <object id="33" name="finalboss1" type="&quot;&quot;" x="3228.73" y="162.909" width="13" height="13"/>
  </objectgroup>
 </map>

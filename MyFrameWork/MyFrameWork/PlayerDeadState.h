@@ -12,6 +12,7 @@ public:
 	void onMovePressed(Direction dir);
 	void onMoveReleased( Direction dir);
 	void onCameraCollision( RectF cameraRect);
+	void onVeticalDirectionReleased();
 
 
 private:

@@ -1,4 +1,7 @@
 #include "EnermyCreator.h"
+#include "EnermyInkSprite.h"
+#include "EnermyGunBoss1Sprite.h"
+#include "EnermyFinalBoss1Sprite.h"
 
 EnermyCreator* EnermyCreator:: instance = nullptr;
 EnermyCreator* EnermyCreator :: getInstance()
@@ -12,7 +15,6 @@ EnermyCreator* EnermyCreator :: getInstance()
 
 EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int respawnX, int respawnY )
 {
-	// cant not use switch statement
 	if(enermyName == "ink")
 	{
 		return new EnermyInkSprite ( respawnX, respawnY);
@@ -38,5 +40,13 @@ EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int re
         return new EnermyBridgeTail(respawnX, respawnY);
     }
 
+	if( enermyName == "gunboss1" )
+	{
+		return new EnermyGunBoss1Sprite ( respawnX, respawnY);
+	}
+	if(enermyName == "finalboss1")
+	{
+		return new EnermyFinalBoss1Sprite( respawnX, respawnY );
+	}
 	return nullptr;
 }

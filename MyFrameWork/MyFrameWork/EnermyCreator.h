@@ -6,7 +6,7 @@
 #include "EnermyBridgeHead.h"
 #include "EnermyBridgeBody.h"
 #include "EnermyBridgeTail.h"
-
+#include "EnermySprite.h"
 
 class EnermyCreator
 {

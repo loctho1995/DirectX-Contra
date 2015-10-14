@@ -95,7 +95,6 @@ void PlayScene :: onUpdate()
 {
 	pMap ->onUpdate(pPlayer, cam);
 	pMap -> onSupportSprite( pPlayer);
-    mSoldier->update();
 	pPlayer -> update();
     bridge->setPlayerPosition(pPlayer->getX(), pPlayer->getY());
     bridge->update();

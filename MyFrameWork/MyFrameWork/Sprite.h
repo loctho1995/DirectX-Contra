@@ -8,7 +8,7 @@ public:
 	Sprite() {}
 	virtual ~Sprite() {}
 	virtual void draw(Camera* cam) = 0 ;
-    virtual void update(){}
+	virtual void update() = 0;  
 	virtual SpriteState* getState()
 	{
 		return pData -> pState;
@@ -44,7 +44,8 @@ public:
 		}
 	}
 	virtual void die() {}
-
+	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
+	virtual bool isHittable() {return pData -> isHittable;}
 protected:
-    SpriteData* pData;
+	SpriteData* pData;
 };

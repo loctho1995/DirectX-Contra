@@ -47,7 +47,7 @@ private:
 	void loadTileSet(TiXmlElement* e);
 	void loadLayer(TiXmlElement* pTileElement);
 	void loadCollisionRect(TiXmlElement* pElement);
-	void  createMapCollsionTree();
+	void createMapCollsionTree();
 	void loadObject(TiXmlElement* pElement);
 	void cleanMap(Camera* cam, PlayerSprite* sprite);
 	void addEToMap( Camera* cam );

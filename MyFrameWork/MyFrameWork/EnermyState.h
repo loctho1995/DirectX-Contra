@@ -20,7 +20,6 @@ public:
 	}
 
 	virtual void onCollision() {}
-
 protected:
 	EnermyData* pData;
 };
