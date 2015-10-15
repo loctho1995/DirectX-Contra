@@ -6,7 +6,7 @@ EnermyFinalBoss1Sprite:: EnermyFinalBoss1Sprite(int respawnX, int respawnY)
 	
 	pData = new EnermyData();
 
-	pData -> name = "finalboss1";
+	pData -> botName = "finalboss1";
 
 	pData-> x  = respawnX;
 

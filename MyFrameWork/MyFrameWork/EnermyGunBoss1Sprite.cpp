@@ -5,7 +5,7 @@ EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY)
 {
 	pData = new EnermyData();
 
-	pData -> name = "gunboss1";
+	pData -> botName = "gunboss1";
 
 	pData->x  = respawnX;
 

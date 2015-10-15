@@ -1,23 +1,35 @@
-﻿Build started 10/14/2015 5:37:14 PM.
-     1>Project "F:\Github\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
+﻿Build started 10/15/2015 9:36:06 PM.
+     1>Project "C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" on node 2 (Build target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt PlayScene.cpp
-         PlayScene.cpp
-     1>f:\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\playerstate.h(34): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>f:\github\directx-contra\myframework\myframework\playerstate.h(36): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\quadtree.h(180): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\quadtree.h(308): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\quadtree.h(434): warning C4018: '<' : signed/unsigned mismatch
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\enermysprite.h(42): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\map.h(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>f:\github\directx-contra\myframework\myframework\playscene.cpp(12): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt EnermyFinnalBoss1Sprite.cpp EnermyGunBoss1Sprite.cpp
+         EnermyGunBoss1Sprite.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(42): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermygunboss1sprite.cpp(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermygunboss1sprite.cpp(12): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermygunboss1sprite.cpp(39): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermygunboss1sprite.cpp(41): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermygunboss1sprite.cpp(43): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermygunboss1sprite.cpp(52): warning C4018: '<' : signed/unsigned mismatch
+         EnermyFinnalBoss1Sprite.cpp
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\camera.h(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\sprite.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(16): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(17): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermysprite.h(42): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermyfinnalboss1sprite.cpp(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermyfinnalboss1sprite.cpp(13): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermyfinnalboss1sprite.cpp(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\sky\documents\github\directx-contra\myframework\myframework\enermyfinnalboss1sprite.cpp(42): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\base64.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib winmm.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.lib" /MACHINE:X86 Debug\base64.obj
          Debug\EnermyBridge.obj
          Debug\EnermyBridgeAliveState.obj
          Debug\EnermyBridgeBody.obj
@@ -73,9 +85,9 @@
          Debug\tinyxmlparser.obj
          Debug\ViewPort.obj
          Debug\WindowInit.obj
-         MyFrameWork.vcxproj -> F:\Github\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe
-     1>Done Building Project "F:\Github\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
+         MyFrameWork.vcxproj -> C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\Debug\MyFrameWork.exe
+     1>Done Building Project "C:\Users\Sky\Documents\GitHub\DirectX-Contra\MyFrameWork\MyFrameWork\MyFrameWork.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.93
+Time Elapsed 00:00:03.94

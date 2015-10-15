@@ -17,5 +17,4 @@ public :
     bool isHittable; //co hiep dc con enermy nay khong ?
 	int HP;
 	std:: vector < BulletSprite* > Bullets;
-	std::string name;
 };

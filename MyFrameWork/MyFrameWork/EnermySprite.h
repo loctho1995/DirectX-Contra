@@ -47,7 +47,7 @@ public:
 	virtual void die() { pData ->pState -> onDead();}
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
-	virtual std::string getName() {return pData ->name;} 
+	virtual std::string getName() {return pData ->botName;} 
 	virtual void beShooted( int damage) 
 	{
 		pData -> HP -= damage;
