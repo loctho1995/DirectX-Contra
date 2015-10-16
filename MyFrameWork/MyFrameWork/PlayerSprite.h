@@ -20,7 +20,7 @@ public:
 	virtual float getX() {return pData -> x; }
 	virtual float getY() { return pData -> y;}
 	virtual float getCenterX() {return pData -> x;}
-	virtual float getCenterY() {return pData -> y - pData ->ppTextureArrays[ pData ->iCurrentArr ] -> getHeight / 2;}
+	virtual float getCenterY() {return pData -> y - pData ->ppTextureArrays[ pData ->iCurrentArr ] -> getHeight() / 2;}
 	virtual void onUnsupported() { pData -> pState -> onFall();}
 	/*virtual void updateLastFrame() 
 	{
