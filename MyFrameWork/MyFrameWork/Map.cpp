@@ -507,8 +507,8 @@ void Map :: onUpdate(PlayerSprite* sprite, Camera* cam)
 	// update enermy
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)
 	{
-		it ->second ->setPlayerX(sprite -> getX());
-		it ->second ->setPlayerY(sprite -> getY());
+		it ->second ->setPlayerX(sprite -> getCenterX());
+		it ->second ->setPlayerY(sprite -> getCenterY());
 		it ->second ->update();
 	}
 

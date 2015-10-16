@@ -17,8 +17,10 @@ public:
 	/*virtual RectF getLastFrameBody() {return pData ->getLastFrameBody();}*/
 	virtual float getVx() {return pData -> vx;} 
 	virtual float getVy() {return pData -> vy;}
-	virtual float getX() {return pData ->x; }
+	virtual float getX() {return pData -> x; }
 	virtual float getY() { return pData -> y;}
+	virtual float getCenterX() {return pData -> x;}
+	virtual float getCenterY() {return pData -> y - pData ->ppTextureArrays[ pData ->iCurrentArr ] -> getHeight / 2;}
 	virtual void onUnsupported() { pData -> pState -> onFall();}
 	/*virtual void updateLastFrame() 
 	{
