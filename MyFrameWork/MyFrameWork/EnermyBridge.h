@@ -5,7 +5,7 @@
 #include "EnermyBridgeAliveState.h"
 
 
-class EnermyBridge
+class EnermyBridge : public EnermySprite
 {
 public:
     EnermyBridge(float x, float y, int numBody);

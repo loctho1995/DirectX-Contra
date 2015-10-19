@@ -17,7 +17,7 @@ EnermyBridgeHead::EnermyBridgeHead(float x, float y)
 
     this->pData->ppTextureArrays[EnermyBridgeData::ALIVE]->setAnchorPoint(0.0, 0.0);
     this->pData->ppTextureArrays[EnermyBridgeData::EXPLOSION]->setAnchorPoint(0.0, 0.0);
-    this->pData->body = RectF(0, 0, 64.0f, 62.0f);
+    this->pData->body = RectF(0, 0, 32.0f, 32.0f);
     this->pData->pState = new EnermyBridgeAliveState(this->pData);
     //this->pData->pState = new EnermyBridgeExplosionState(this->pData);
 }

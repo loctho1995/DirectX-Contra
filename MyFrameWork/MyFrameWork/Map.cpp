@@ -308,7 +308,6 @@ void Map ::addEToMap ( Camera* cam )
 		RectF body = returnList[i] -> body;
 		if(camRect.checkCollision( body ))
 		{
-
 			if(
 				( ( body.x >= camRect.x - body.width ) && (body.x <= camRect.x - body.width / 2) )
 				||

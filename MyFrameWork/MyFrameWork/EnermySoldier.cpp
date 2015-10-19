@@ -18,10 +18,10 @@ EnermySoldier::EnermySoldier(float x, float y)
     pData->dir = Direction::createLeft();
     pData->body = RectF(-8.5f, -32.0f, 17.0f, 32.0f);
     pData->vx = pData->vy = 0;
-    //pData->pState = new EnermySoldierRunningState(pData);
+    pData->pState = new EnermySoldierRunningState(pData);
     //pData->pState = new EnermySoldierJumpingState(pData);
     //pData->pState = new EnermySoldierDestroyState(pData);
-    pData->pState = new EnermySoldierDieState(pData);
+    //pData->pState = new EnermySoldierDieState(pData);
 }
 
 EnermySoldier::~EnermySoldier()

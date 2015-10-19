@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="56">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="tileset.png" width="176" height="192"/>
+ </tileset>
+ <layer name="BackGroundLayer" width="208" height="15">
+  <data encoding="base64" compression="zlib">
+   eJztmGeP1DAQhmf3OHrvvffee68SC3ygHb3DAUc7ivgI4pfcT+VdKdZagyczdrLJIuXDo/ecZGbs3Nivsi0iajU0NCTR9hhif08Cw9lzk9m4lY15vBYXO3Z1+Hyl+eetK3Q/770MCfVC6/TfR/feFDAVTGv0v9TpJPeGT7dfhzNts/EMMBPMArMDY/582xgXO/b719WT5p+3rrw8offSFupJ6/TrzAFzwbxGTTofLBggXQgWkb5/+LnsWAyWgKVgGVjOxiuEfFpc7NjVkXzG6qeS36T6E18nn+dKsKpRs66mwfAdrmvAWrAOrAcbwEYPfi47NoHNYAvYmo23eWOpr7S42LHmMzF+GvKbVH/i6+Rx28GOGtXat2Xni63nru8Eu6h+H+S6G+wBe8E+sB8c8HD/94PgUMbhTI+w6/449DxXHh+6rz2nxWs+ap2n5tOWPH6+o+BYjWrt57Lzxdar2/csehycoN7+Oenh+uMUOA3OgLPgHDjvXedj/jxX/rx0X3tOi+c+wvveOk9t/2h5eL4L4GKNavUVaz7NP6y+U3beov5nqXsJXAZXSN4/dZ+Xqfod/KBwz/+MzCPtnZg8kl4FnQq0wPwmOjla1D+kelX7UorPXgPXwQ2S90/d52Wq/gK/Kdz3fyLzSPsnJo+kN8GtCrRf8yvqH1I96X6/vu+svu3nuQ3ugLv07/4ZyUg911LPxbLO2xGFqvPU6B9F6wd9R6tn9Q/N17R6Jfqe6f37ee6B++ABeAgeebj+SD3XUs9Fa5z0/tx9re+tdcrKk7qufvtH6vy0elb/kPK7+Nj1W3/XC807b5+GfOgxeAKeUth/nlHx89J6PVafgxcBdfdfktzzMesqK0/quqrys5zrE/68tO+hWP/gca6O5k9aXc3/Ut+/n+cVeA3eUHj/jIK34J2g70n3Fen6mBA/FllHiv9Act9r6/I1Jk/MPGPW04+8km+U5V9W/7DGW1XzGT9vJ0F9H/oIPoHPJH//5KH14Rfq7Vd3BoxTry9D8aF+HQ3kczpuiK8K674MrSNvPTHvuazf1SKUfycFv3+0PNLvb9Y4q89I14v8jtr99vlK8fsnpZ+K9HfZ+QZxn6Wsx8/3jQbjdz9+/lv9MNZ/tO8g7h/S9SK/o3Lv6fIXvTZmyg==
+  </data>
+ </layer>
+ <objectgroup name="CollisionRect">
+  <object id="15" type="throughable" x="33" y="115" width="732" height="10"/>
+  <object id="18" type="throughable" x="161" y="147" width="93" height="10"/>
+  <object id="26" type="throughable" x="256.167" y="179" width="32.3333" height="10"/>
+  <object id="27" type="throughable" x="289.333" y="213" width="62.1667" height="10"/>
+  <object id="28" type="throughable" x="352.333" y="180" width="32.3333" height="10"/>
+  <object id="29" type="throughable" x="416.833" y="147.5" width="61.6667" height="11"/>
+  <object id="30" type="throughable" x="609.333" y="212.5" width="60.6667" height="10"/>
+  <object id="31" type="throughable" x="641.167" y="163.5" width="94.3333" height="10"/>
+ </objectgroup>
+ <objectgroup name="ObjectLayer">
+  <object id="37" name="bridge" x="702.667" y="85.9167" width="130" height="28.5833"/>
+  <object id="38" name="soldier" x="257" y="82" width="16" height="32"/>
+  <object id="42" name="bridge" x="992" y="84.7083" width="130" height="28.5833"/>
+  <object id="43" name="soldier" x="304" y="82" width="16" height="32"/>
+  <object id="44" name="soldier" x="368" y="82" width="16.333" height="33"/>
+  <object id="45" name="soldier" x="510" y="82" width="16.333" height="33"/>
+  <object id="46" name="soldier" x="820" y="82" width="16.333" height="33"/>
+  <object id="47" name="soldier" x="975" y="82" width="16.333" height="33"/>
+  <object id="48" name="soldier" x="1350" y="82" width="16.333" height="33"/>
+  <object id="49" name="soldier" x="1677" y="115" width="16.333" height="33"/>
+  <object id="50" name="soldier" x="1761" y="178.5" width="16.333" height="33"/>
+  <object id="51" name="soldier" x="2250" y="114.5" width="16.333" height="33"/>
+  <object id="52" name="soldier" x="2383" y="115" width="16.333" height="33"/>
+  <object id="53" name="soldier" x="3030" y="179.5" width="16.333" height="33"/>
+  <object id="54" name="soldier" x="3060" y="179" width="16.333" height="33"/>
+  <object id="55" name="soldier" x="3090" y="179" width="16.333" height="33"/>
+ </objectgroup>
+</map>

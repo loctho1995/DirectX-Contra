@@ -30,8 +30,6 @@ public:
 
 private:
 	PlayerSprite* pPlayer;
-    EnermyBridge *bridge;
-    EnermySoldier *mSoldier;
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;

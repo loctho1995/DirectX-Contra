@@ -2,6 +2,7 @@
 #include "EnermyInkSprite.h"
 #include "EnermyGunBoss1Sprite.h"
 #include "EnermyFinalBoss1Sprite.h"
+#include "EnermyBridge.h"
 
 EnermyCreator* EnermyCreator:: instance = nullptr;
 EnermyCreator* EnermyCreator :: getInstance()
@@ -25,19 +26,9 @@ EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int re
         return new EnermySoldier(respawnX, respawnY);
     }
 
-    if (enermyName == "bridgehead")
+    if (enermyName == "bridge")
     {
-        return new EnermyBridgeHead(respawnX, respawnY);
-    }
-
-    if (enermyName == "bridgebody")
-    {
-        return new EnermyBridgeBody(respawnX, respawnY);
-    }
-
-    if (enermyName == "bridgetail")
-    {
-        return new EnermyBridgeTail(respawnX, respawnY);
+        return new EnermyBridge(respawnX, respawnY, 2);
     }
 
 	if( enermyName == "gunboss1" )

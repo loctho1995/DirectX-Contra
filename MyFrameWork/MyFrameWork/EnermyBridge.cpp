@@ -3,6 +3,8 @@
 
 EnermyBridge::EnermyBridge(float x, float y, int numBody)
 {
+    //pData->pState = new EnermyBridgeAliveState(this->pData);
+
     bridgeBodies = new EnermyBridgeBody * [numBody];
     bridgeHead = new EnermyBridgeHead(x, y);
     this->numBody = numBody;
@@ -15,6 +17,13 @@ EnermyBridge::EnermyBridge(float x, float y, int numBody)
 
     bridgeTail = new EnermyBridgeTail(bridgeBodies[numBody - 1]->getBody().x + 
                                         bridgeBodies[numBody - 1]->getBody().width, y);
+
+    pData = new EnermyBridgeData();
+    pData->x = x;
+    pData->y = y;
+    pData->vx = pData->vy = 0;
+    pData->body = RectF(0, 0, bridgeHead->getBody().width + bridgeTail->getBody().width + 
+                                bridgeBodies[0]->getBody().width * numBody, bridgeHead->getBody().height);
 }
 
 EnermyBridge::~EnermyBridge()
@@ -27,7 +36,7 @@ void EnermyBridge::update()
     //std::cout << "playerX: " << playerX;
     if (!isDestroy)
     {
-        if (playerX > 150)
+        if (playerX > bridgeHead->getBody().x)
         {
             destroy();
         }
