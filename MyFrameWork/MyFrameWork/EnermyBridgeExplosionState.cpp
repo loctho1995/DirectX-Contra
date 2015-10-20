@@ -15,7 +15,11 @@ void EnermyBridgeExplosionState::onUpdate()
     EnermyState::onUpdate();
 
     if (this->pData->ppTextureArrays[EnermyBridgeData::EXPLOSION]->isLastTexture())
+    {
         this->pData->isDone = true;
+        this->pData->pState->onDead();
+    }
+        
 }
 
 EnermyBridgeExplosionState::~EnermyBridgeExplosionState()

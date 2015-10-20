@@ -36,7 +36,7 @@ void EnermyBridge::update()
     //std::cout << "playerX: " << playerX;
     if (!isDestroy)
     {
-        if (playerX > bridgeHead->getBody().x)
+        if (this->pData->playerX > bridgeHead->getBody().x)
         {
             destroy();
         }
@@ -87,10 +87,4 @@ void EnermyBridge::destroy()
 bool EnermyBridge::isDestroying()
 {
     return this->isDestroy;
-}
-
-void EnermyBridge::setPlayerPosition(float x, float y)
-{
-    playerX = x;
-    playerY = y;
 }

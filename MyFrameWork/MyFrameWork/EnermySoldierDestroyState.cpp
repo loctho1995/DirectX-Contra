@@ -18,7 +18,11 @@ void EnermySoldierDestroyState::onUpdate()
         return;
 
     if (this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->isLastTexture())
+    {
         this->pData->isDone = true;
+        this->pData->pState->onDead();
+    }
+        
 
     EnermyState::onUpdate();
 }

@@ -13,7 +13,6 @@ public:
     void draw(Camera *cam);
     void destroy();
     bool isDestroying();
-    void setPlayerPosition(float x,float y);
     ~EnermyBridge();
 
 private:
@@ -22,6 +21,5 @@ private:
     EnermyBridgeTail *bridgeTail;
     int numBody;
     bool isDestroy;
-    float playerX, playerY;
 };
 
