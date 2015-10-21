@@ -57,6 +57,10 @@
     <ClCompile Include="ViewPort.cpp" />
     <ClCompile Include="WindowInit.cpp" />
     <ClCompile Include="GunBoss1BulletMovingState.cpp" />
+    <ClCompile Include="ObjectStaticWeapon.cpp" />
+    <ClCompile Include="ObjectStaticWeaponCloseState.cpp" />
+    <ClCompile Include="ObjectStaticWeaponOpenState.cpp" />
+    <ClCompile Include="ObjectStaticWeaponOutState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -134,5 +138,9 @@
     <ClInclude Include="zconf.h" />
     <ClInclude Include="zlib.h" />
     <ClInclude Include="GunBoss1BulletMovingState.h" />
+    <ClInclude Include="ObjectStaticWeapon.h" />
+    <ClInclude Include="ObjectStaticWeaponCloseState.h" />
+    <ClInclude Include="ObjectStaticWeaponOpenState.h" />
+    <ClInclude Include="ObjectStaticWeaponOutState.h" />
   </ItemGroup>
 </Project>
