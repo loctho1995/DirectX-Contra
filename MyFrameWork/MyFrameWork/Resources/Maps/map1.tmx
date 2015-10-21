@@ -9,7 +9,7 @@
   </data>
  </layer>
  <objectgroup name="CollisionRect">
-  <object id="15" type="throughable" x="33" y="115" width="732" height="10"/>
+  <object id="15" type="throughable" x="34" y="115" width="732" height="10"/>
   <object id="18" type="throughable" x="161" y="147" width="93" height="10"/>
   <object id="26" type="throughable" x="256.167" y="179" width="32.3333" height="10"/>
   <object id="27" type="throughable" x="289.333" y="213" width="62.1667" height="10"/>
@@ -19,21 +19,21 @@
   <object id="31" type="throughable" x="641.167" y="163.5" width="94.3333" height="10"/>
  </objectgroup>
  <objectgroup name="ObjectLayer">
-  <object id="37" name="bridge" x="702.667" y="85.9167" width="130" height="28.5833"/>
-  <object id="38" name="soldier" x="257" y="82" width="16" height="32"/>
-  <object id="42" name="bridge" x="992" y="84.7083" width="130" height="28.5833"/>
-  <object id="43" name="soldier" x="304" y="82" width="16" height="32"/>
-  <object id="44" name="soldier" x="368" y="82" width="16.333" height="33"/>
-  <object id="45" name="soldier" x="510" y="82" width="16.333" height="33"/>
-  <object id="46" name="soldier" x="820" y="82" width="16.333" height="33"/>
-  <object id="47" name="soldier" x="975" y="82" width="16.333" height="33"/>
-  <object id="48" name="soldier" x="1350" y="82" width="16.333" height="33"/>
-  <object id="49" name="soldier" x="1677" y="115" width="16.333" height="33"/>
-  <object id="50" name="soldier" x="1761" y="178.5" width="16.333" height="33"/>
-  <object id="51" name="soldier" x="2250" y="114.5" width="16.333" height="33"/>
-  <object id="52" name="soldier" x="2383" y="115" width="16.333" height="33"/>
-  <object id="53" name="soldier" x="3030" y="179.5" width="16.333" height="33"/>
-  <object id="54" name="soldier" x="3060" y="179" width="16.333" height="33"/>
-  <object id="55" name="soldier" x="3090" y="179" width="16.333" height="33"/>
+  <object id="37" name="bridge" type="&quot;&quot;" x="702.667" y="85.9167" width="130" height="28.5833"/>
+  <object id="38" name="soldier" type="&quot;&quot;" x="257" y="82" width="16" height="32"/>
+  <object id="42" name="bridge" type="&quot;&quot;" x="992" y="84.7083" width="130" height="28.5833"/>
+  <object id="43" name="soldier" type="&quot;&quot;" x="304" y="82" width="16" height="32"/>
+  <object id="44" name="soldier" type="&quot;&quot;" x="368" y="82" width="16.333" height="33"/>
+  <object id="45" name="soldier" type="&quot;&quot;" x="510" y="82" width="16.333" height="33"/>
+  <object id="46" name="soldier" type="&quot;&quot;" x="820" y="82" width="16.333" height="33"/>
+  <object id="47" name="soldier" type="&quot;&quot;" x="975" y="82" width="16.333" height="33"/>
+  <object id="48" name="soldier" type="&quot;&quot;" x="1350" y="82" width="16.333" height="33"/>
+  <object id="49" name="soldier" type="&quot;&quot;" x="1677" y="115" width="16.333" height="33"/>
+  <object id="50" name="soldier" type="&quot;&quot;" x="1761" y="178.5" width="16.333" height="33"/>
+  <object id="51" name="soldier" type="&quot;&quot;" x="2250" y="114.5" width="16.333" height="33"/>
+  <object id="52" name="soldier" type="&quot;&quot;" x="2383" y="115" width="16.333" height="33"/>
+  <object id="53" name="soldier" type="&quot;&quot;" x="3030" y="179.5" width="16.333" height="33"/>
+  <object id="54" name="soldier" type="&quot;&quot;" x="3060" y="179" width="16.333" height="33"/>
+  <object id="55" name="soldier" type="&quot;&quot;" x="3090" y="179" width="16.333" height="33"/>
  </objectgroup>
 </map>

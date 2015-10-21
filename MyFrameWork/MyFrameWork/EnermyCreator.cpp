@@ -41,3 +41,7 @@ EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int re
 	}
 	return nullptr;
 }
+ObjectSprite* EnermyCreator :: createObjectSprite(std::string name, int respawnX, int respawnY )
+{
+	return nullptr;
+}

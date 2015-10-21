@@ -57,6 +57,10 @@
     <ClCompile Include="ViewPort.cpp" />
     <ClCompile Include="WindowInit.cpp" />
     <ClCompile Include="GunBoss1BulletMovingState.cpp" />
+    <ClCompile Include="ObjectSprite.cpp" />
+    <ClCompile Include="ObjectData.cpp" />
+    <ClCompile Include="ObjectState.cpp" />
+    <ClCompile Include="ObjectSpriteCreator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -134,5 +138,9 @@
     <ClInclude Include="zconf.h" />
     <ClInclude Include="zlib.h" />
     <ClInclude Include="GunBoss1BulletMovingState.h" />
+    <ClInclude Include="ObjectSprite.h" />
+    <ClInclude Include="ObjectData.h" />
+    <ClInclude Include="ObjectState.h" />
+    <ClInclude Include="ObjectSpriteCreator.h" />
   </ItemGroup>
 </Project>

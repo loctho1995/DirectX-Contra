@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -114,6 +114,10 @@
     <ClCompile Include="GunBoss1BulletMovingState.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="ObjectData.cpp" />
+    <ClCompile Include="ObjectSprite.cpp" />
+    <ClCompile Include="ObjectSpriteCreator.cpp" />
+    <ClCompile Include="ObjectState.cpp" />
     <ClCompile Include="PlayerClimbingState.cpp" />
     <ClCompile Include="PlayerDeadState.cpp" />
     <ClCompile Include="PlayerDivingState.cpp" />
@@ -184,6 +188,10 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MenuScene.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectData.h" />
+    <ClInclude Include="ObjectSprite.h" />
+    <ClInclude Include="ObjectSpriteCreator.h" />
+    <ClInclude Include="ObjectState.h" />
     <ClInclude Include="PlayerClimbingState.h" />
     <ClInclude Include="PlayerData.h" />
     <ClInclude Include="PlayerDeadState.h" />

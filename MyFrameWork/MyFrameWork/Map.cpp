@@ -195,22 +195,19 @@ void Map :: loadObject(TiXmlElement* pElement)
 	for (TiXmlElement* e = pElement -> FirstChildElement(); e != NULL ; e = e -> NextSiblingElement())
 	{
 		name = e -> Attribute("name");
-		try
-		{
-			//type = e -> Attribute("type");
-		}
-		catch (std::exception& e)
-		{
-			//type = "";
-		}
+		type = e -> Attribute("type");
 		e -> Attribute("id",&id);
 		e -> Attribute("x",&x);
 		e -> Attribute("y",&y);
 		e -> Attribute("width",&width);
 		e -> Attribute("height",&height);
 
-				
-		Object* object = new Object(name, x + width / 2, y + height, id , width, height, RectF(x , y , width, height));
+		if(type == "object")
+		{
+			x += width / 2;
+			y += height;
+		}
+		Object* object = new Object(name, type, x , y , id , width, height, RectF(x , y , width, height));
 		Objects.push_back(object);
 	}
 }
@@ -222,16 +219,13 @@ void Map :: createMapCollsionTree()
 
 void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 {
+	// clean Enermy
 	bool isOver = false;
 	RectF camRect(cam ->getX(), cam ->getY(), cam -> getWidth(), cam -> getHeight());
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); )
 	{
 		EnermySprite* temp = it -> second;
 		RectF SpriteRect(temp ->getBody());
-		if(it -> second ->getName().find("final") != std::string::npos)
-		{
-			//std ::cout << "final";
-		}
 		if (!camRect.checkCollision(SpriteRect) || it ->second ->isDesTroyed())
 		{
 			if(it -> second ->getName().find("final") != std::string::npos)
@@ -245,6 +239,40 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 		it++;
 	}
 
+	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it ++)
+	{
+		std::vector < BulletSprite* > & enermyBullets = it ->second ->getBullets();
+		for (int i = 0; i < enermyBullets.size(); i++)
+		{
+			Sprite* temp = enermyBullets[i];
+			if(!camRect.checkCollision(temp  ->getBody()) )
+			{
+				delete temp;
+				enermyBullets.erase(enermyBullets.begin() + i);
+			}
+		}
+	}
+
+	// clean ObjectSprite
+
+	for (std :: map < int , ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); )
+	{
+		ObjectSprite* temp = it -> second;
+		RectF SpriteRect(temp ->getBody());
+
+		if (!camRect.checkCollision(SpriteRect) || it ->second ->isDesTroyed())
+		{
+			
+			delete temp;
+			it = objectMap.erase(it);
+		}
+		else
+		it++;
+	}
+
+	
+
+
 	if(isOver )
 	{
 		for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it ++)
@@ -252,25 +280,6 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 			it ->second ->die();
 		}
 	}
-	else // clear  enermy bullet
-	{
-		for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it ++)
-		{
-			std::vector < BulletSprite* > & enermyBullets = it ->second ->getBullets();
-			for (int i = 0; i < enermyBullets.size(); i++)
-			{
-				Sprite* temp = enermyBullets[i];
-				if(!camRect.checkCollision(temp  ->getBody()) )
-				{
-					delete temp;
-					enermyBullets.erase(enermyBullets.begin() + i);
-				}
-			}
-		}
-	}
-
-	// clear playerbullet
-
 
 	std::vector<BulletSprite* >& playerBullets = sprite ->getBullets();
 
@@ -306,6 +315,7 @@ void Map ::addEToMap ( Camera* cam )
 	for (int i = 0; i < returnList.size(); i++)
 	{
 		RectF body = returnList[i] -> body;
+		std::string type  = returnList[i] -> type;
 		if(camRect.checkCollision( body ))
 		{
 			if(
@@ -314,7 +324,15 @@ void Map ::addEToMap ( Camera* cam )
 				( (body.x + body.width <= camRect.x +camRect.width + body.width) && ( body.x + body.width >= camRect.x +camRect.width + body.width / 2))
 				)
 			{
-				enermyMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );	
+				if(type == "object")
+				{
+					objectMap[returnList[i] ->id ] = EnermyCreator :: getInstance() ->createObjectSprite( returnList[i] ->name, returnList[i]->x, returnList[i] -> y);
+				}
+				else
+				{
+					enermyMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );	
+				}
+				
 			}
 			
 		}
@@ -324,6 +342,8 @@ void Map ::addEToMap ( Camera* cam )
 #pragma endregion helperFunction
 
 #pragma region
+
+
 void Map :: draw(Camera* cam)
 {
 	for (int i = 0; i < layers.size(); i++)
@@ -344,15 +364,15 @@ void Map :: draw(Camera* cam)
 void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 {
 	// map collision vs Player
-#pragma region
 	mapCollisionTree -> clear();
 	
 	for (int i = 0; i < collisionRectFs.size(); i++)
 	{
 		mapCollisionTree -> insert( collisionRectFs[i] );
   	}
-
-
+#pragma region
+	
+	// player vs Collision Rect
 	std:: vector < CollisionRectF > returnList;
 	mapCollisionTree -> getObjectlist (returnList, sprite -> getBody());
 
@@ -360,11 +380,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	for (int i = 0; i < returnList.size(); i++)
 	{
 		std:: vector < CollisionRectF > throughRectVector = sprite ->getThroughRect();
-		if(std::find(throughRectVector.begin(), throughRectVector.end(), returnList[i]) != throughRectVector.end())
-		{
-			
-		}
-		else
+		if(std::find(throughRectVector.begin(), throughRectVector.end(), returnList[i]) == throughRectVector.end())
 		{
 			if( sprite ->getBody().checkCollision( returnList[i].rect) )
 			{
@@ -374,18 +390,39 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		
 	}
 
+	// player vs ObjectSprite
+
+
+	for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
+	{
+		if(objectIt ->second ->isPlayerCollisionable())
+		{
+			CollisionRectF r = objectIt ->second ->getCollisionRect();
+			if( sprite ->getBody().checkCollision(r.rect)  )
+			{
+				
+				if( objectIt ->second ->isAffectble() )
+							sprite -> onCollision( r );
+				else
+				{
+					// Object dan vs cau ... :D
+				}
+			}
+		}	
+		
+	}
+
 #pragma endregion mapvsPlayer
 
 #pragma region
-	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end();)
+	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++ )
 	{
 		RectF r = it ->second ->getBody();
 		if(sprite ->isHittable() && r.checkCollision(sprite ->getBody()) )
 		{
 			sprite ->die();
 		}
-		else
-			it++;
+			
 	}
 #pragma endregion EnermyvsPlayer
 
@@ -422,11 +459,36 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 
 		for (int i = 0; i < returnLists.size(); i++)
 		{
-			if( enermyIt -> second ->getBody().checkCollision( returnLists[i].rect) )
+
+			std:: vector < CollisionRectF > throughRectVector = enermyIt ->second ->getThroughRect();
+			if(std::find(throughRectVector.begin(), throughRectVector.end(), returnLists[i]) == throughRectVector.end())
 			{
-				enermyIt -> second -> onCollision( returnLists[i].rect );
+				if( enermyIt -> second ->getBody().checkCollision( returnLists[i].rect) )
+				{
+					enermyIt -> second -> onCollision( returnLists[i] );
+				}
 			}
-		}		
+			
+		}
+
+
+		for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
+		{
+			if(objectIt ->second ->isEnemyCollisionable())
+			{
+				CollisionRectF r = objectIt ->second ->getCollisionRect();
+				if( sprite ->getBody().checkCollision(r.rect)  )
+				{
+				
+					if( objectIt ->second ->isAffectble() )
+								enermyIt -> second -> onCollision( r );
+				}
+			}	
+		
+		}
+
+
+
 	}
 #pragma endregion EnermyvsMap
 
@@ -451,7 +513,36 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	sprite -> onCameraCollision(r);
 #pragma endregion playervsCamera
 
-	// Player collide with camera
+#pragma region 
+
+	for (int bulletIt  = 0; bulletIt < bullets.size();  bulletIt++)
+	{
+		for (std::map < int, ObjectSprite* > ::iterator objectIt = objectMap.begin(); objectIt != objectMap.end();)
+		{
+			Sprite* tempB = bullets[bulletIt];
+			ObjectSprite* tempE = objectIt ->second;
+			RectF rB = tempB ->getBody();
+			RectF rE = tempE ->getBody();
+			if( rE.checkCollision(rB ) && objectIt ->second ->isHittable() )
+			{
+				tempE -> beShooted( sprite ->getDamage() );
+				delete tempB;
+				bullets.erase(bullets.begin() + bulletIt);
+				break;
+			}
+			objectIt++;
+		}
+	}
+
+#pragma endregion playerBulletvsObjetSprite
+
+	// update through rect list of player
+	sprite ->updateThroughRect();
+	// update through rect list of enermy
+	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)
+	{
+		it -> second -> updateThroughRect();
+	}
 
 
 
@@ -459,42 +550,120 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 
 void Map :: onSupportSprite( PlayerSprite* sprite)
 {
-	RectF r = sprite ->getBody();
-	//r.height += 1;
-	r.y += r.height;
-	r.height = 1;
-
 	mapCollisionTree -> clear();
 	for (int i = 0; i < collisionRectFs.size(); i++)
 	{
 		mapCollisionTree -> insert( collisionRectFs[i] );
   	}
 
+	
+#pragma region
 
- 	std:: vector < CollisionRectF > returnList;
+	// player vs CollisionRects
+	RectF r = sprite ->getBody();
+	//r.height += 1;
+	r.y += r.height;
+	r.height = 1;
+	std:: vector < CollisionRectF > returnList;
 	mapCollisionTree -> getObjectlist (returnList, r);
 
-
+	bool isSupported = false;
 	for (int i = 0; i < returnList.size(); i++)
 	{
 		if( r.checkCollision( returnList[i].rect) )
 		{
 			sprite -> setSupportCollisionRect(returnList[i]);
-			return;
+			isSupported = true;
+			break;
 		}
 	}
+	// player vs object Map
+	if(!isSupported)
+	{
+		for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
+		{
+			if(objectIt ->second ->isPlayerCollisionable())
+			{
+				CollisionRectF collisionRect = objectIt ->second ->getCollisionRect();
+				if( r.checkCollision(collisionRect.rect)  )
+				{
+				
+					if( objectIt ->second ->isAffectble() )
+							sprite -> setSupportCollisionRect(collisionRect);
+							isSupported = true;
+							break;	
+				}
+			}	
+		
+		}
+	}
+	
 
-	sprite -> onUnsupported();
-	sprite -> setSupportCollisionRect(CollisionRectF());
+	if(!isSupported)
+	{
+		sprite -> onUnsupported();
+		sprite -> setSupportCollisionRect(CollisionRectF());
+	}
+	
+#pragma endregion mapvsPlayer
 
-	//
-	//for (int i = 0; i < collisionRects.size(); i++)
-	//{
-	//	if( r.checkCollision(collisionRects[i]) )
-	//	{
-	//		return;
-	//	}
-	//}
+#pragma region
+
+ 	for (std::map < int, EnermySprite* > ::iterator enermyIt = enermyMap.begin(); enermyIt != enermyMap.end(); enermyIt++)
+	{
+		RectF r = enermyIt ->second ->getBody();
+		//r.height += 1;
+		r.y += r.height;
+		r.height = 1;
+		std:: vector < CollisionRectF > returnLists;
+		mapCollisionTree -> getObjectlist (returnLists, enermyIt -> second ->getBody());
+
+		bool isSupported = false;
+
+		for (int i = 0; i < returnLists.size(); i++)
+		{
+
+			if( r.checkCollision( returnLists[i].rect) )
+			{
+				enermyIt -> second -> setSupportCollisionRect(returnLists[i]);
+				isSupported = true;
+				break;
+			}
+			
+		}
+
+		if(!isSupported )
+		{
+			for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
+			{
+				if(objectIt ->second ->isEnemyCollisionable())
+				{
+					CollisionRectF collisionRect = objectIt ->second ->getCollisionRect();
+					if( r.checkCollision(collisionRect.rect)  )
+					{
+				
+						if( objectIt ->second ->isAffectble() )
+								sprite -> setSupportCollisionRect(collisionRect);
+								isSupported = true;
+								break;	
+					}
+				}	
+		
+			}
+		}
+		
+
+
+		if(!isSupported)
+		{
+			enermyIt -> second -> onUnsupported();
+			enermyIt -> second -> setSupportCollisionRect(CollisionRectF());
+		}
+
+
+	}
+
+#pragma endregion EnermyvsMap
 	
 }
 

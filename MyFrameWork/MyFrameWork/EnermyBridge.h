@@ -14,7 +14,7 @@ public:
     void destroy();
     bool isDestroying();
     ~EnermyBridge();
-
+	virtual void onUnsupported() {}
 private:
     EnermyBridgeHead *bridgeHead;
     EnermyBridgeBody **bridgeBodies;

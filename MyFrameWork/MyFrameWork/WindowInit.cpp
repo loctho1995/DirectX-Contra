@@ -143,7 +143,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 		nFrameCount ++;
 		if(timeCount >= 1000.0f)
 		{
-			//std::cout << "FPS : "<<nFrameCount <<"\n";
+			std::cout << "FPS : "<<nFrameCount <<"\n";
 			nFrameCount = 0;
 			timeCount = 0;
 		}

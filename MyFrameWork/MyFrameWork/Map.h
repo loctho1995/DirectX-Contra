@@ -11,6 +11,7 @@
 #include "QuadTree.h"
 #include "PlayerSprite.h"
 #include "EnermyCreator.h"
+#include "ObjectSprite.h"
 class Map
 {
 
@@ -39,6 +40,7 @@ private:
 	std :: vector < CollisionRectF > collisionRectFs;
 	std::vector < Object*> Objects;
 	std :: map < int , EnermySprite* > enermyMap;
+	std :: map < int , ObjectSprite* > objectMap;
 	int tileSize;
     int width; // number of tile in row
     int height; // number of tile in col
