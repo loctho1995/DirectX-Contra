@@ -71,7 +71,7 @@ public:
 	{
 		return pData -> isAffectble;
 	} 
-private:
+protected:
 	ObjectData* pData;
 };
 
