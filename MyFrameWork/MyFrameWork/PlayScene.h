@@ -7,6 +7,7 @@
 #include "KeyBoard.h"
 #include "EnermySoldier.h"
 #include "ObjectBridge.h"
+#include "ObjectStaticWeapon.h"
 
 class PlayScene : public Scene
 {
@@ -33,5 +34,6 @@ private:
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
+    ObjectStaticWeapon *staticWeapon;
 };
 

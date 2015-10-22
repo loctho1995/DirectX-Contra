@@ -65,6 +65,8 @@
     <ClCompile Include="ObjectBridgeExplosionState.cpp" />
     <ClCompile Include="ObjectBridgeHead.cpp" />
     <ClCompile Include="ObjectBridgeTail.cpp" />
+    <ClCompile Include="ObjectStaticWeaponData.cpp" />
+    <ClCompile Include="ObjectStaticWeaponPreparingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -150,5 +152,7 @@
     <ClInclude Include="ObjectBridgeExplosionState.h" />
     <ClInclude Include="ObjectBridgeHead.h" />
     <ClInclude Include="ObjectBridgeTail.h" />
+    <ClInclude Include="ObjectStaticWeaponData.h" />
+    <ClInclude Include="ObjectStaticWeaponPreparingState.h" />
   </ItemGroup>
 </Project>

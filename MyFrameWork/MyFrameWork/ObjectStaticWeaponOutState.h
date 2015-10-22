@@ -1,8 +1,16 @@
 #pragma once
-class ObjectStaticWeaponOutState
+#include "ObjectState.h"
+#include "ObjectStaticWeaponData.h"
+
+class ObjectStaticWeaponOutState : public ObjectState
 {
 public:
-    ObjectStaticWeaponOutState();
+    ObjectStaticWeaponOutState(ObjectData *pData);
     ~ObjectStaticWeaponOutState();
+
+    void onUpdate();
+
+private:
+    float accelemeter;
 };
 

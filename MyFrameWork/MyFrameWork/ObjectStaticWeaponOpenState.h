@@ -1,8 +1,17 @@
 #pragma once
-class ObjectStaticWeaponOpenState
+#include "ObjectState.h"
+#include "ObjectStaticWeaponData.h"
+#include "ObjectStaticWeaponPreparingState.h"
+
+class ObjectStaticWeaponOpenState : public ObjectState
 {
 public:
-    ObjectStaticWeaponOpenState();
+    ObjectStaticWeaponOpenState(ObjectData *pData);
     ~ObjectStaticWeaponOpenState();
+
+    void onUpdate();
+
+private:
+    int frameDelay, frameCurrentCount;
 };
 
