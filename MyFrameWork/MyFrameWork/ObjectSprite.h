@@ -77,10 +77,7 @@ public:
 	{
 		return pData -> isAffectble;
 	} 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 protected:
 	ObjectData* pData;
 };
