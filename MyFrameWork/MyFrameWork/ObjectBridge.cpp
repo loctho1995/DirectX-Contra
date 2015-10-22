@@ -25,7 +25,7 @@ ObjectBridge::ObjectBridge(float x, float y, int numBody)
     pData->body = RectF(0, 0, bridgeHead->getBody().width + bridgeTail->getBody().width + 
                                 bridgeBodies[0]->getBody().width * numBody, bridgeHead->getBody().height);
 
-    pData->isAffectble = false;
+    pData->isAffectble = true;
     pData->isEnemyCollisionable = true;
     pData->isPlayerCollisionable = true;
     pData->isHittable = false;

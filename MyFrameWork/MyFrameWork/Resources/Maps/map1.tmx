@@ -19,7 +19,7 @@
   <object id="31" type="throughable" x="641.167" y="163.5" width="94.3333" height="10"/>
  </objectgroup>
  <objectgroup name="ObjectLayer">
-  <object id="37" name="bridge" type="object" x="767.667" y="115.917" width="130" height="28.5833"/>
+  <object id="37" name="bridge" type="object" x="767.667" y="115.917" width="130" height="30.083"/>
   <object id="38" name="soldier" type="enemy" x="257" y="82" width="16" height="32"/>
   <object id="42" name="bridge" type="object" x="1057" y="115.708" width="130" height="28.5833"/>
   <object id="43" name="soldier" type="enemy" x="304" y="82" width="16" height="32"/>

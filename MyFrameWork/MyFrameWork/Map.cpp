@@ -305,7 +305,7 @@ void Map ::addEToMap ( Camera* cam )
 	for (int i = 0; i < Objects.size(); i++)
 	{
 
-			if( enermyMap.find(Objects[i] ->id) == enermyMap.end())
+			if( enermyMap.find(Objects[i] ->id) == enermyMap.end()  && objectMap.find(Objects[i] ->id) == objectMap.end())
 				mapCollisionTree -> insert( Objects[i] );
 		 
   	}
@@ -318,22 +318,30 @@ void Map ::addEToMap ( Camera* cam )
 		std::string type  = returnList[i] -> type;
 		if(camRect.checkCollision( body ))
 		{
-			if(
-				( ( body.x >= camRect.x - body.width ) && (body.x <= camRect.x - body.width / 2) )
-				||
-				( (body.x + body.width <= camRect.x +camRect.width + body.width) && ( body.x + body.width >= camRect.x +camRect.width + body.width / 2))
-				)
+			if(type != "object")
 			{
-				if(type == "object")
+				if(
+					( ( body.x  >= camRect.x - body.width ) && (body.x <= camRect.x - body.width / 2) )
+					||
+					( (body.x  <= camRect.x +camRect.width ) && ( body.x + body.width >= camRect.x +camRect.width + body.width / 2))
+					)
 				{
-					objectMap[returnList[i] ->id ] = EnermyCreator :: getInstance() ->createObjectSprite( returnList[i] ->name, returnList[i]->x, returnList[i] -> y);
+						enermyMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );	
 				}
-				else
-				{
-					enermyMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );	
-				}
-				
 			}
+			else
+			{
+				if(
+					( ( body.x >= camRect.x - body.width ) && (body.x <= camRect.x - 20) )
+					||
+					( (body.x  <= camRect.x +camRect.width ) && ( body.x + body.width >= camRect.x +camRect.width - 20))
+					)
+				{
+					objectMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+				}
+			}
+
+			
 			
 		}
 	}
@@ -680,6 +688,13 @@ void Map :: onUpdate(PlayerSprite* sprite, Camera* cam)
 
 	// update enermy
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)
+	{
+		it ->second ->setPlayerX(sprite -> getCenterX());
+		it ->second ->setPlayerY(sprite -> getCenterY());
+		it ->second ->update();
+	}
+
+	for (std::map < int, ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); it++)
 	{
 		it ->second ->setPlayerX(sprite -> getCenterX());
 		it ->second ->setPlayerY(sprite -> getCenterY());

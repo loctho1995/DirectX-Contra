@@ -21,7 +21,6 @@ void PlayScene::onCollision()
 {
     pMap->onCollision(pPlayer, cam);
     pPlayer->setCameraTo(cam);
-    pPlayer->updateThroughRect();
     pPlayer->setCameraRect(cam->getRect());
 }
 
