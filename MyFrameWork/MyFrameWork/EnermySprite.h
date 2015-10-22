@@ -16,6 +16,7 @@ public:
 	virtual void setPlayerX(int x) {pData ->playerX = x;}
 	virtual void setPlayerY( int y ) {pData ->playerY = y;}
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
+	virtual void onCollision(CollisionRectF r)	{ pData ->pState ->onCollision(r); }
     virtual SpriteState* getState(){ return this->pData->pState; } //phai them doan doan nay de goi pData cua EnermySprite chu ko phai thang cha
     virtual void initTextureArrays(int count)
     {
@@ -48,6 +49,24 @@ public:
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
 	virtual std::string getName() {return pData ->botName;} 
+	virtual void setSupportCollisionRect(CollisionRectF rect)
+	{
+		pData ->cSupportRect = rect;
+	}
+	virtual std::vector< CollisionRectF >&  getThroughRect()
+	{
+		return pData ->cThroughRect;
+	}
+	virtual void updateThroughRect()
+	{
+		for (int i = 0; i < pData->cThroughRect.size(); i++)
+		{
+			if(!pData ->getBody().checkCollision( pData ->cThroughRect[i].rect))
+			{
+				pData->cThroughRect.erase( pData->cThroughRect.begin() + i );
+			}
+		}
+	}
 	virtual void beShooted( int damage) 
 	{
 		pData -> HP -= damage;
@@ -56,6 +75,7 @@ public:
 			die();
 		}
 	}
+
 
 protected:
 	EnermyData* pData;

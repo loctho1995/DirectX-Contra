@@ -6,7 +6,7 @@
 #include "Map.h"
 #include "KeyBoard.h"
 #include "EnermySoldier.h"
-#include "EnermyBridge.h"
+#include "ObjectBridge.h"
 
 class PlayScene : public Scene
 {

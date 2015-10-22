@@ -13,7 +13,6 @@ public :
 	float playerX;
 	float playerY;
     std::string botName; //add by Tho
-    bool isDone; //enermy da chet cmn chua ?
     bool isHittable; //co hiep dc con enermy nay khong ?
 	int HP;
 	std:: vector < BulletSprite* > Bullets;

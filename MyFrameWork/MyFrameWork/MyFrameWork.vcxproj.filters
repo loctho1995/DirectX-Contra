@@ -2,13 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="base64.cpp" />
-    <ClCompile Include="EnermyBridge.cpp" />
-    <ClCompile Include="EnermyBridgeAliveState.cpp" />
-    <ClCompile Include="EnermyBridgeBody.cpp" />
-    <ClCompile Include="EnermyBridgeData.cpp" />
-    <ClCompile Include="EnermyBridgeExplosionState.cpp" />
-    <ClCompile Include="EnermyBridgeHead.cpp" />
-    <ClCompile Include="EnermyBridgeTail.cpp" />
     <ClCompile Include="EnermyCreator.cpp" />
     <ClCompile Include="EnermyFinalBoss1DeadState.cpp" />
     <ClCompile Include="EnermyFinalBoss1StandingState.cpp" />
@@ -30,8 +23,17 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="GunBoss1Bullet.cpp" />
     <ClCompile Include="GunBoss1BulletExploringState.cpp" />
+    <ClCompile Include="GunBoss1BulletMovingState.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="ObjectStaticWeapon.cpp" />
+    <ClCompile Include="ObjectStaticWeaponCloseState.cpp" />
+    <ClCompile Include="ObjectStaticWeaponOpenState.cpp" />
+    <ClCompile Include="ObjectStaticWeaponOutState.cpp" />
+    <ClCompile Include="ObjectData.cpp" />
+    <ClCompile Include="ObjectSprite.cpp" />
+    <ClCompile Include="ObjectSpriteCreator.cpp" />
+    <ClCompile Include="ObjectState.cpp" />
     <ClCompile Include="PlayerClimbingState.cpp" />
     <ClCompile Include="PlayerDeadState.cpp" />
     <ClCompile Include="PlayerDivingState.cpp" />
@@ -56,11 +58,13 @@
     <ClCompile Include="tinyxmlparser.cpp" />
     <ClCompile Include="ViewPort.cpp" />
     <ClCompile Include="WindowInit.cpp" />
-    <ClCompile Include="GunBoss1BulletMovingState.cpp" />
-    <ClCompile Include="ObjectStaticWeapon.cpp" />
-    <ClCompile Include="ObjectStaticWeaponCloseState.cpp" />
-    <ClCompile Include="ObjectStaticWeaponOpenState.cpp" />
-    <ClCompile Include="ObjectStaticWeaponOutState.cpp" />
+    <ClCompile Include="ObjectBridge.cpp" />
+    <ClCompile Include="ObjectBridgeAliveState.cpp" />
+    <ClCompile Include="ObjectBridgeBody.cpp" />
+    <ClCompile Include="ObjectBridgeData.cpp" />
+    <ClCompile Include="ObjectBridgeExplosionState.cpp" />
+    <ClCompile Include="ObjectBridgeHead.cpp" />
+    <ClCompile Include="ObjectBridgeTail.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -70,13 +74,6 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CollisionRect.h" />
     <ClInclude Include="Direction.h" />
-    <ClInclude Include="EnermyBridge.h" />
-    <ClInclude Include="EnermyBridgeAliveState.h" />
-    <ClInclude Include="EnermyBridgeBody.h" />
-    <ClInclude Include="EnermyBridgeData.h" />
-    <ClInclude Include="EnermyBridgeExplosionState.h" />
-    <ClInclude Include="EnermyBridgeHead.h" />
-    <ClInclude Include="EnermyBridgeTail.h" />
     <ClInclude Include="EnermyCreator.h" />
     <ClInclude Include="EnermyData.h" />
     <ClInclude Include="EnermyFinalBoss1Sprite.h" />
@@ -101,11 +98,20 @@
     <ClInclude Include="EnermyInkSprite.h" />
     <ClInclude Include="GunBoss1Bullet.h" />
     <ClInclude Include="GunBoss1BulletExploringState.h" />
+    <ClInclude Include="GunBoss1BulletMovingState.h" />
     <ClInclude Include="KeyBoard.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MenuScene.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectStaticWeapon.h" />
+    <ClInclude Include="ObjectStaticWeaponCloseState.h" />
+    <ClInclude Include="ObjectStaticWeaponOpenState.h" />
+    <ClInclude Include="ObjectStaticWeaponOutState.h" />
+    <ClInclude Include="ObjectData.h" />
+    <ClInclude Include="ObjectSprite.h" />
+    <ClInclude Include="ObjectSpriteCreator.h" />
+    <ClInclude Include="ObjectState.h" />
     <ClInclude Include="PlayerClimbingState.h" />
     <ClInclude Include="PlayerData.h" />
     <ClInclude Include="PlayerDeadState.h" />
@@ -137,10 +143,12 @@
     <ClInclude Include="ViewPort.h" />
     <ClInclude Include="zconf.h" />
     <ClInclude Include="zlib.h" />
-    <ClInclude Include="GunBoss1BulletMovingState.h" />
-    <ClInclude Include="ObjectStaticWeapon.h" />
-    <ClInclude Include="ObjectStaticWeaponCloseState.h" />
-    <ClInclude Include="ObjectStaticWeaponOpenState.h" />
-    <ClInclude Include="ObjectStaticWeaponOutState.h" />
+    <ClInclude Include="ObjectBridge.h" />
+    <ClInclude Include="ObjectBridgeAliveState.h" />
+    <ClInclude Include="ObjectBridgeBody.h" />
+    <ClInclude Include="ObjectBridgeData.h" />
+    <ClInclude Include="ObjectBridgeExplosionState.h" />
+    <ClInclude Include="ObjectBridgeHead.h" />
+    <ClInclude Include="ObjectBridgeTail.h" />
   </ItemGroup>
 </Project>

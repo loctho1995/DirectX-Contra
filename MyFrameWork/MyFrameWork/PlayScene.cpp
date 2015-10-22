@@ -103,9 +103,9 @@ void PlayScene::render()
 {
     Graphics::getInstance()->beginRender();
 
+
     pMap->draw(cam);
     pPlayer->draw(cam);
-
     //Graphics::getInstance() ->drawText("TEST", RectI(200,220,50,50));
 
 

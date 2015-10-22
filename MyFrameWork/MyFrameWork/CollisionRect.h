@@ -7,6 +7,8 @@ class CollisionRect
 public:
 	Rect<T> rect;
 	std:: string type;
+	float vx;
+	float vy;
 
 	CollisionRect() 
 	{
@@ -15,11 +17,15 @@ public:
 		rect.width = (T)0;
 		rect.height = (T)0;
 		type = "";
+		vx = 0.0f;
+		vy = 0.0f;
 	}
-	CollisionRect( Rect<T> rect, std::string type)
+	CollisionRect( Rect<T> rect, std::string type, float vx = 0.0f, float vy = 0.0f)
 		:
 		rect(rect),
-		type(type)
+		type(type),
+		vx(vx),
+		vy(vy)
 	{
 		
 	}

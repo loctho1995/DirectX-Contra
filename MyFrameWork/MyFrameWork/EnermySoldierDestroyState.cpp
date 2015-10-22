@@ -14,12 +14,12 @@ EnermySoldierDestroyState::~EnermySoldierDestroyState()
 
 void EnermySoldierDestroyState::onUpdate()
 {
-    if (this->pData->isDone)
+    if (this->pData->isDesTroyed)
         return;
 
     if (this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->isLastTexture())
     {
-        this->pData->isDone = true;
+        this->pData->isDesTroyed = true;
         this->pData->pState->onDead();
     }
         
