@@ -202,7 +202,7 @@ void Map :: loadObject(TiXmlElement* pElement)
 		e -> Attribute("width",&width);
 		e -> Attribute("height",&height);
 
-		if(type == "object")
+		if(type != "object")
 		{
 			x += width / 2;
 			y += height;
@@ -351,11 +351,17 @@ void Map :: draw(Camera* cam)
 		if(layers[i] ->getName() == "BackGroundLayer")
 			layers[i] ->draw(cam);
 	}
-	int fuck = enermyMap.size();
+	
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); ++it)
 	{
 		it ->second ->draw(cam);
 	}
+
+	for (std::map < int, ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); ++it)
+	{
+		it ->second ->draw(cam);
+	}
+
 
 }
 

@@ -57,3 +57,7 @@ Temporary Items
 *.ilk
 *.pdb
 *.sdf
+*.sdf
+*.pdb
+*.ilk
+*.exe
