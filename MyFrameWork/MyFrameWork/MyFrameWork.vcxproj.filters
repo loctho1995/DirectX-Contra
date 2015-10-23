@@ -67,6 +67,12 @@
     <ClCompile Include="ObjectBridgeTail.cpp" />
     <ClCompile Include="ObjectStaticWeaponData.cpp" />
     <ClCompile Include="ObjectStaticWeaponPreparingState.cpp" />
+    <ClCompile Include="EnermyCannon.cpp" />
+    <ClCompile Include="EnermyCannonAppearingState.cpp" />
+    <ClCompile Include="EnermyCannonData.cpp" />
+    <ClCompile Include="EnermyCannonDeadState.cpp" />
+    <ClCompile Include="EnermyCannonFiringState.cpp" />
+    <ClCompile Include="EnermyCannonTurningState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -154,5 +160,11 @@
     <ClInclude Include="ObjectBridgeTail.h" />
     <ClInclude Include="ObjectStaticWeaponData.h" />
     <ClInclude Include="ObjectStaticWeaponPreparingState.h" />
+    <ClInclude Include="EnermyCannon.h" />
+    <ClInclude Include="EnermyCannonAppearingState.h" />
+    <ClInclude Include="EnermyCannonData.h" />
+    <ClInclude Include="EnermyCannonDeadState.h" />
+    <ClInclude Include="EnermyCannonFiringState.h" />
+    <ClInclude Include="EnermyCannonTurningState.h" />
   </ItemGroup>
 </Project>

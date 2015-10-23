@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="90">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="91">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
@@ -66,5 +66,6 @@
   <object id="53" name="soldier" type="&quot;&quot;" x="3030" y="179.5" width="16.333" height="33"/>
   <object id="54" name="soldier" type="&quot;&quot;" x="3060" y="179" width="16.333" height="33"/>
   <object id="55" name="soldier" type="&quot;&quot;" x="3090" y="179" width="16.333" height="33"/>
+  <object id="90" name="cannon" type="enemy" x="256" y="144" width="32" height="32"/>
  </objectgroup>
 </map>
