@@ -188,6 +188,8 @@ void Map :: loadObject(TiXmlElement* pElement)
 	int id;
 	int x;
 	int y;
+	int rectX;
+	int rectY;
 	int width;
 	int height;
 	std:: string name;
@@ -197,17 +199,20 @@ void Map :: loadObject(TiXmlElement* pElement)
 		name = e -> Attribute("name");
 		type = e -> Attribute("type");
 		e -> Attribute("id",&id);
-		e -> Attribute("x",&x);
-		e -> Attribute("y",&y);
+		e -> Attribute("x",&rectX);
+		e -> Attribute("y",&rectY);
 		e -> Attribute("width",&width);
 		e -> Attribute("height",&height);
 
+		x = rectX;
+		y = rectY;
+
 		if(type != "object")
 		{
-			x += width / 2;
-			y += height;
+			x = rectX + width / 2;
+			y = rectY + height;
 		}
-		Object* object = new Object(name, type, x , y , id , width, height, RectF(x , y , width, height));
+		Object* object = new Object(name, type, x , y , id , width, height, RectF(rectX , rectY , width, height));
 		Objects.push_back(object);
 	}
 }
@@ -321,9 +326,9 @@ void Map ::addEToMap ( Camera* cam )
 			if(type != "object")
 			{
 				if(
-					( ( body.x  >= camRect.x - body.width ) && (body.x <= camRect.x - body.width / 2) )
-					||
-					( (body.x  <= camRect.x +camRect.width ) && ( body.x + body.width >= camRect.x +camRect.width + body.width / 2))
+					//( ( body.x + body.width >= camRect.x  ) && (body.x + body.width  <= camRect.x + body.width / 2) )
+					//||
+					( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - body.width / 2))
 					)
 				{
 						enermyMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );	
@@ -332,9 +337,9 @@ void Map ::addEToMap ( Camera* cam )
 			else
 			{
 				if(
-					( ( body.x >= camRect.x - body.width ) && (body.x <= camRect.x - 20) )
-					||
-					( (body.x  <= camRect.x +camRect.width ) && ( body.x + body.width >= camRect.x +camRect.width - 20))
+					//( ( body.x >= camRect.x - body.width ) && (body.x <= camRect.x + 20) )
+					//||
+					( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - 20))
 					)
 				{
 					objectMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
