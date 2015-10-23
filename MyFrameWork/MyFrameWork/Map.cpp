@@ -437,7 +437,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++ )
 	{
 		RectF r = it ->second ->getBody();
-		if(sprite ->isHittable() && r.checkCollision(sprite ->getBody()) )
+		if(sprite ->isHittable() && r.checkCollision(sprite ->getBody()) && !it -> second ->isThroughable())
 		{
 			sprite ->die();
 		}

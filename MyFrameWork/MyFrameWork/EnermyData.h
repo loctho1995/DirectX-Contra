@@ -15,5 +15,6 @@ public :
     std::string botName; //add by Tho
     bool isHittable; //co hiep dc con enermy nay khong ?
 	int HP;
+	bool isThrougable;
 	std:: vector < BulletSprite* > Bullets;
 };
