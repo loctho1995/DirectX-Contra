@@ -33,31 +33,31 @@ PlayerSprite::PlayerSprite()
 
 	pData->ppTextureArrays[PlayerData:: STANDNFIRE ] -> setAnchorPoint(0.5f, 1.0f );
 
-	pData->ppTextureArrays[PlayerData:: RUN ] = new TextureArray("Resources\\Sprites", "player", "run", 6, 8  ); 
+	pData->ppTextureArrays[PlayerData:: RUN ] = new TextureArray("Resources\\Sprites", "player", "run", 5, 8  ); 
 
 	pData->ppTextureArrays[PlayerData:: RUN ] -> setAnchorPoint(0.5f, 1.0f );
 
-	pData->ppTextureArrays[PlayerData:: RUNNFIRE ] = new TextureArray("Resources\\Sprites", "player", "runnfire", 6, 8, D3DCOLOR_XRGB( 255, 255, 255 )  );
+	pData->ppTextureArrays[PlayerData::RUNNFIRE] = new TextureArray("Resources\\Sprites", "player", "runnfire", 6, 8, D3DCOLOR_XRGB(255, 255, 255));
 
 	pData->ppTextureArrays[PlayerData:: RUNNFIRE ] -> setAnchorPoint(0.5f, 1.0f );
 
 
-	pData->ppTextureArrays[PlayerData:: RUNDOWN ] = new TextureArray("Resources\\Sprites", "player", "rundown", 3, 8, D3DCOLOR_XRGB( 255, 255, 255 )  );
+	pData->ppTextureArrays[PlayerData:: RUNDOWN ] = new TextureArray("Resources\\Sprites", "player", "rundown", 3, 8);
 
 	pData->ppTextureArrays[PlayerData:: RUNDOWN ] -> setAnchorPoint(0.5f, 1.0f );
 
 
-	pData->ppTextureArrays[PlayerData:: RUNUP ] = new TextureArray("Resources\\Sprites", "player", "runup", 3, 8, D3DCOLOR_XRGB( 255, 255, 255 )  );
+	pData->ppTextureArrays[PlayerData:: RUNUP ] = new TextureArray("Resources\\Sprites", "player", "runup", 3, 8);
 
 	pData->ppTextureArrays[PlayerData:: RUNUP ] -> setAnchorPoint(0.5f, 1.0f );
 
 
-	pData->ppTextureArrays[PlayerData:: JUMP ] = new TextureArray("Resources\\Sprites", "player", "jump", 4, 4  ); 
+	pData->ppTextureArrays[PlayerData:: JUMP ] = new TextureArray("Resources\\Sprites", "player", "jump", 4, 4); 
 
 	pData->ppTextureArrays[PlayerData:: JUMP ] -> setAnchorPoint(0.5f, 1.0f );
 
 
-	pData->ppTextureArrays[PlayerData:: FALL ] = new TextureArray("Resources\\Sprites", "player", "fall", 1, 60  ); 
+	pData->ppTextureArrays[PlayerData:: FALL ] = new TextureArray("Resources\\Sprites", "player", "fall", 1, 60); 
 
 	pData->ppTextureArrays[PlayerData:: FALL ] -> setAnchorPoint(0.5f, 1.0f );
 

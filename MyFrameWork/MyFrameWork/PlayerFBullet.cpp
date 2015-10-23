@@ -7,7 +7,7 @@ PlayerFBullet :: PlayerFBullet(float x, float y, bool  isBoosting, float angle)
 	
 	pData ->ppTextureArrays = new TextureArray*[1];
 
-	pData ->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\Bullets", "fbullet","", 4, 4, D3DCOLOR_XRGB(255,255,255));
+	pData ->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\Bullets", "fbullet","", 1, 4);
 
 	pData -> ppTextureArrays[0] ->setAnchorPoint( 0.5f,0.5f );
 
