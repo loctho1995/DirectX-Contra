@@ -493,7 +493,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			if(objectIt ->second ->isEnemyCollisionable())
 			{
 				CollisionRectF r = objectIt ->second ->getCollisionRect();
-				if( sprite ->getBody().checkCollision(r.rect)  )
+				if( enermyIt -> second ->getBody().checkCollision(r.rect)  )
 				{
 				
 					if( objectIt ->second ->isAffectble() )
@@ -525,11 +525,6 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	}
 #pragma endregion EnermyBulletvsPlayer
 
-#pragma region
-	RectF r = cam ->getRect();
-	sprite -> onCameraCollision(r);
-#pragma endregion playervsCamera
-
 #pragma region 
 
 	for (int bulletIt  = 0; bulletIt < bullets.size();  bulletIt++)
@@ -550,6 +545,13 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	}
 
 #pragma endregion playerBulletvsObjetSprite
+
+#pragma region
+	RectF r = cam ->getRect();
+	sprite -> onCameraCollision(r);
+#pragma endregion playervsCamera
+
+
 
 	// update through rect list of player
 	sprite ->updateThroughRect();
