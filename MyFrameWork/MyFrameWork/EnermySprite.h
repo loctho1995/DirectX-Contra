@@ -75,6 +75,10 @@ public:
 			die();
 		}
 	}
+	virtual bool isThroughable()
+	{
+		return pData -> isThrougable;
+	}
 
 
 protected:
