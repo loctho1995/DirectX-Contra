@@ -33,7 +33,7 @@ PlayerSprite::PlayerSprite()
 
 	pData->ppTextureArrays[PlayerData:: STANDNFIRE ] -> setAnchorPoint(0.5f, 1.0f );
 
-	pData->ppTextureArrays[PlayerData:: RUN ] = new TextureArray("Resources\\Sprites", "player", "run", 5, 8  ); 
+	pData->ppTextureArrays[PlayerData:: RUN ] = new TextureArray("Resources\\Sprites", "player", "run", 6, 8  ); 
 
 	pData->ppTextureArrays[PlayerData:: RUN ] -> setAnchorPoint(0.5f, 1.0f );
 

@@ -245,7 +245,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 		for (int i = 0; i < enermyBullets.size(); i++)
 		{
 			Sprite* temp = enermyBullets[i];
-			if(!camRect.checkCollision(temp  ->getBody()) )
+			if(!camRect.checkCollision(temp  ->getBody()) || temp ->isDesTroyed())
 			{
 				delete temp;
 				enermyBullets.erase(enermyBullets.begin() + i);
@@ -286,7 +286,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 	for (int i = 0; i < playerBullets.size(); i++)
 	{
 		Sprite* temp = playerBullets[i];
-		if(!camRect.checkCollision(temp  ->getBody()) )
+		if(!camRect.checkCollision(temp  ->getBody()) || temp ->isDesTroyed())
 		{
 			delete temp;
 			playerBullets.erase(playerBullets.begin() + i);
@@ -445,20 +445,17 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	std :: vector < BulletSprite* >& bullets = sprite ->getBullets();
 	for (int bulletIt  = 0; bulletIt < bullets.size();  bulletIt++)
 	{
-		for (std::map < int, EnermySprite* > ::iterator enermyIt = enermyMap.begin(); enermyIt != enermyMap.end();)
+		for (std::map < int, EnermySprite* > ::iterator enermyIt = enermyMap.begin(); enermyIt != enermyMap.end();enermyIt++)
 		{
-			Sprite* tempB = bullets[bulletIt];
+			BulletSprite* tempB = bullets[bulletIt];
 			EnermySprite* tempE = enermyIt ->second;
 			RectF rB = tempB ->getBody();
 			RectF rE = tempE ->getBody();
 			if( rE.checkCollision(rB ) && enermyIt ->second ->isHittable() )
 			{
 				tempE -> beShooted( sprite ->getDamage() );
-				delete tempB;
-				bullets.erase(bullets.begin() + bulletIt);
-				break;
+				tempB ->die();
 			}
-			enermyIt++;
 		}
 	}
 
@@ -517,6 +514,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			{
 				sprite -> die();
 				bulletE -> die();
+				break;
 			}
 		}		
 	}
@@ -531,20 +529,18 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 
 	for (int bulletIt  = 0; bulletIt < bullets.size();  bulletIt++)
 	{
-		for (std::map < int, ObjectSprite* > ::iterator objectIt = objectMap.begin(); objectIt != objectMap.end();)
+		for (std::map < int, ObjectSprite* > ::iterator objectIt = objectMap.begin(); objectIt != objectMap.end();objectIt++)
 		{
-			Sprite* tempB = bullets[bulletIt];
+			BulletSprite* tempB = bullets[bulletIt];
 			ObjectSprite* tempE = objectIt ->second;
 			RectF rB = tempB ->getBody();
 			RectF rE = tempE ->getBody();
 			if( rE.checkCollision(rB ) && objectIt ->second ->isHittable() )
 			{
 				tempE -> beShooted( sprite ->getDamage() );
-				delete tempB;
-				bullets.erase(bullets.begin() + bulletIt);
+				tempB -> die();
 				break;
 			}
-			objectIt++;
 		}
 	}
 

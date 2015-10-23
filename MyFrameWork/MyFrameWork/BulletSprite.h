@@ -11,4 +11,5 @@ public:
 	virtual void update() = 0;
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
+	virtual void die() { pData -> isDesTroyed = true;}
 };

@@ -4,6 +4,8 @@
 PlayerMBullet :: PlayerMBullet(float x, float y, bool  isBoosting, float angle)
 {
 	pData = new SpriteData();
+
+	pData ->isDesTroyed = false;
 	
 	pData ->ppTextureArrays = new TextureArray*[1];
 
