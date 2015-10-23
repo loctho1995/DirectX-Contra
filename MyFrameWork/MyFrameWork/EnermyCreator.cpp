@@ -3,6 +3,7 @@
 #include "EnermyGunBoss1Sprite.h"
 #include "EnermyFinalBoss1Sprite.h"
 #include "ObjectBridge.h"
+#include "EnermyCannon.h"
 
 EnermyCreator* EnermyCreator:: instance = nullptr;
 EnermyCreator* EnermyCreator :: getInstance()
@@ -20,7 +21,10 @@ EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int re
 	{
 		return new EnermyInkSprite ( respawnX, respawnY);
 	}
-
+	if (enermyName == "cannon")
+	{
+		return new EnermyCannon(respawnX, respawnY);
+	}
     if (enermyName == "soldier")
     {
         return new EnermySoldier(respawnX, respawnY);

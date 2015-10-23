@@ -10,5 +10,7 @@ class ObjectBridgeTail : public ObjectSprite
 public:
     ObjectBridgeTail(float x, float y);
     ~ObjectBridgeTail();
+    bool isDestroying();
+    void draw(Camera *cam);
 };
 

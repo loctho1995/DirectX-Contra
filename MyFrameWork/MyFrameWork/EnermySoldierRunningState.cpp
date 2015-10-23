@@ -39,8 +39,6 @@ void EnermySoldierRunningState::onUpdate()
 void EnermySoldierRunningState::onCollision(CollisionRectF rect)
 {
     
-    std::cout << "x: " << rect.rect.x << "\n";
-
     if (abs(this->pData->getBody().x - rect.rect.x) <= SOLDIER_RANGE_TO_JUMP)
     {
         this->pData->pState = new EnermySoldierJumpingState(this->pData);

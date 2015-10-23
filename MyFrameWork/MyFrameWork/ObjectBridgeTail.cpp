@@ -9,11 +9,6 @@ ObjectBridgeTail::ObjectBridgeTail(float x, float y)
     pData->dir = Direction::createRight();
     pData->vx = pData->vy = 0;
 
-    pData->isAffectble = false;
-    pData->isEnemyCollisionable = true;
-    pData->isPlayerCollisionable = true;
-    pData->isHittable = false;
-
     this->initTextureArrays(ObjectBridgeData::COUNT);
     this->addTextureArray(ObjectBridgeData::ALIVE, "tail", 3, 10);
     this->addTextureArray(ObjectBridgeData::EXPLOSION, "explosion", ObjectBridgeData::EXPLOSION_TEXTURE_COUNT, ObjectBridgeData::EXPLOSION_FRAMES_TIME);
@@ -28,4 +23,15 @@ ObjectBridgeTail::ObjectBridgeTail(float x, float y)
 
 ObjectBridgeTail::~ObjectBridgeTail()
 {
+}
+
+bool ObjectBridgeTail::isDestroying()
+{
+    return ((ObjectBridgeData*)pData)->isDestroying;
+}
+
+void ObjectBridgeTail::draw(Camera *cam)
+{
+    if (!pData->isDesTroyed)
+        ObjectSprite::draw(cam);
 }

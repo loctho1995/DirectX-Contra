@@ -3,10 +3,10 @@
 
 ObjectBridge::ObjectBridge(float x, float y, int numBody)
 {
-    //pData->pState = new ObjectBridgeAliveState(this->pData);
-
     bridgeBodies = new ObjectBridgeBody * [numBody];
     bridgeHead = new ObjectBridgeHead(x, y);
+    isCheck = false;
+
     this->numBody = numBody;
     isDestroy = false;
 
@@ -24,16 +24,17 @@ ObjectBridge::ObjectBridge(float x, float y, int numBody)
     pData->vx = pData->vy = 0;
     pData->body = RectF(0, 0, bridgeHead->getBody().width + bridgeTail->getBody().width + 
                                 bridgeBodies[0]->getBody().width * numBody, bridgeHead->getBody().height);
-
-    pData->isAffectble = true;
-    pData->isEnemyCollisionable = true;
-    pData->isPlayerCollisionable = true;
-    pData->isHittable = false;
 }
 
 ObjectBridge::~ObjectBridge()
 {
+    delete bridgeHead;
+    delete bridgeTail;
+    delete[] bridgeBodies;
 
+    bridgeHead = nullptr;
+    bridgeTail = nullptr;
+    bridgeBodies = nullptr;
 }
 
 void ObjectBridge::update()
@@ -48,16 +49,39 @@ void ObjectBridge::update()
     }
 
     if (bridgeHead != nullptr)
+    {
         bridgeHead->update();
+
+        if (bridgeHead->isDestroying())
+        {
+            this->setBody(RectF(0, 0, this->getBody().width - bridgeHead->getBody().width, this->getBody().height));
+            this->pData->x = bridgeHead->getBody().x + bridgeHead->getBody().width;
+        }
+    }        
 
     for (size_t i = 0; i < numBody; i++)
     {
         if (bridgeBodies[i] != nullptr)
+        {
             bridgeBodies[i]->update();
+
+            if (bridgeBodies[i]->isDestroying())
+            {
+                this->setBody(RectF(0, 0, this->getBody().width - bridgeBodies[i]->getBody().width, this->getBody().height));
+                this->pData->x = bridgeBodies[i]->getBody().x + bridgeBodies[i]->getBody().width;
+            }
+        }            
     }
 
     if (bridgeTail != nullptr)
+    {
         bridgeTail->update();
+    }
+    
+    if (bridgeTail->isDesTroyed())
+    {
+        this->pData->isDesTroyed = true;
+    }        
 }
 
 void ObjectBridge::draw(Camera *cam)
@@ -92,4 +116,9 @@ void ObjectBridge::destroy()
 bool ObjectBridge::isDestroying()
 {
     return this->isDestroy;
+}
+
+bool ObjectBridge::isDesTroyed()
+{
+    return this->pData->isDesTroyed;
 }

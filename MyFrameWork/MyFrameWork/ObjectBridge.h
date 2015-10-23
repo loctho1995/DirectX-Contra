@@ -13,6 +13,7 @@ public:
     void draw(Camera *cam);
     void destroy();
     bool isDestroying();
+    bool isDesTroyed();
     ~ObjectBridge();
 	virtual void onUnsupported() {}
 private:
@@ -21,5 +22,7 @@ private:
     ObjectBridgeTail *bridgeTail;
     int numBody;
     bool isDestroy;
+    
+    bool isCheck;
 };
 

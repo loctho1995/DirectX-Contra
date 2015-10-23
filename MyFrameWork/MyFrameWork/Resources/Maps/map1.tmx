@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="90">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="91">
  <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <objectgroup name="CollisionRect">
@@ -56,7 +56,7 @@
   <object id="43" name="soldier" type="enemy" x="304" y="81" width="16" height="32"/>
   <object id="44" name="soldier" type="enemy" x="368" y="80" width="16.333" height="33"/>
   <object id="45" name="soldier" type="enemy" x="460.917" y="114.75" width="16.333" height="33"/>
-  <object id="46" name="soldier" type="&quot;&quot;" x="850.667" y="81.6667" width="16.333" height="33"/>
+  <object id="46" name="soldier" type="&quot;&quot;" x="828.667" y="81.6667" width="16.333" height="33"/>
   <object id="47" name="soldier" type="&quot;&quot;" x="975" y="82" width="16.333" height="33"/>
   <object id="48" name="soldier" type="&quot;&quot;" x="1350" y="82" width="16.333" height="33"/>
   <object id="49" name="soldier" type="&quot;&quot;" x="1677" y="112" width="16.333" height="33"/>
@@ -66,5 +66,6 @@
   <object id="53" name="soldier" type="&quot;&quot;" x="3030" y="179.5" width="16.333" height="33"/>
   <object id="54" name="soldier" type="&quot;&quot;" x="3060" y="179" width="16.333" height="33"/>
   <object id="55" name="soldier" type="&quot;&quot;" x="3090" y="179" width="16.333" height="33"/>
+  <object id="90" name="cannon" type="enemy" x="256" y="144" width="32" height="32"/>
  </objectgroup>
 </map>

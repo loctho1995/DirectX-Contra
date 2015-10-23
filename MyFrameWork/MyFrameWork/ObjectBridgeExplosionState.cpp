@@ -5,6 +5,7 @@ ObjectBridgeExplosionState::ObjectBridgeExplosionState(ObjectData *pData)
 {
     this->pData = pData;
     this->pData->iCurrentArr = ObjectBridgeData::EXPLOSION;
+    ((ObjectBridgeData*)this->pData)->isDestroying = true;
 }
 
 void ObjectBridgeExplosionState::onUpdate()
@@ -19,7 +20,8 @@ void ObjectBridgeExplosionState::onUpdate()
         this->pData->isDesTroyed = true;
         this->pData->pState->onDead();
     }
-        
+
+    ((ObjectBridgeData*)this->pData)->isDestroying = false;
 }
 
 ObjectBridgeExplosionState::~ObjectBridgeExplosionState()

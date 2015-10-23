@@ -9,5 +9,7 @@ class ObjectBridgeHead : public ObjectSprite
 public:
     ObjectBridgeHead(float x, float y);
     ~ObjectBridgeHead();
+    bool isDestroying();
+    void draw(Camera *cam);
 };
 

@@ -18,5 +18,6 @@ public:
     };
 
     bool isAllowDestroy;
+    bool isDestroying;
 };
 

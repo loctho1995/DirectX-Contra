@@ -8,6 +8,7 @@ ObjectBridgeData::ObjectBridgeData()
     this->isAffectble = true;
     this->isEnemyCollisionable = true;
     isAllowDestroy = false;
+    isDestroying = false;
 }
 
 
