@@ -4,10 +4,12 @@
 PlayerLBullet :: PlayerLBullet(float x, float y, bool  isBoosting, float angle)
 {
 	pData = new SpriteData();
+
+	pData ->isDesTroyed = false;
 	
 	pData ->ppTextureArrays = new TextureArray*[1];
 
-	pData ->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\Bullets", "lbullet","", 4, 4, D3DCOLOR_XRGB(255,255,255));
+	pData ->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\Bullets", "lbullet","", 1, 4);
 
 	pData -> ppTextureArrays[0] ->setAnchorPoint( 0.5f,0.5f );
 
