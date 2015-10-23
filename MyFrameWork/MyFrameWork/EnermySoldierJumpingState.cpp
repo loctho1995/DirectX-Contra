@@ -7,7 +7,7 @@ EnermySoldierJumpingState::EnermySoldierJumpingState(EnermyData *pData)
     this->pData->iCurrentArr = EnermySoldierData::JUMP;
     acceleration = 0.2f;
     pData->vy = -4.2f;
-    pData->vx = 1.3f;
+    pData->vx = 1.0f;
 }
 
 
@@ -35,13 +35,16 @@ void EnermySoldierJumpingState::onUpdate()
 
 void EnermySoldierJumpingState::onCollision(RectF rect)
 {
-    if (pData->vy > 0)
-    {
-        pData->pState = new EnermySoldierRunningState(pData);
-    }
+
 }
 
 void EnermySoldierJumpingState::onCollision(CollisionRectF rect)
 {
-
+    if (pData->vy > 0)
+    {
+        if (this->pData->y - rect.rect.y <= 10)
+        {
+            pData->pState = new EnermySoldierRunningState(pData);
+        }        
+    }
 }

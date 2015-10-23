@@ -13,10 +13,10 @@ EnermySoldier::EnermySoldier(float x, float y)
     this->addTextureArray(EnermySoldierData::JUMP, "jump", 1, 60);
     this->addTextureArray(EnermySoldierData::DIE, "jump", 1, 60);
     this->pData->ppTextureArrays[EnermySoldierData::DESTROY] = new TextureArray("Resources\\Sprites", "explosion", "", 3, 10);
-    this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->setAnchorPoint(0.5f, 0.5f);
+    //this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->setAnchorPoint(0.5f, 0.5f);
 
     pData->dir = Direction::createLeft();
-    pData->body = RectF(-8.5f, -32.0f, 17.0f, 32.0f);
+    pData->body = RectF(-9.0f, -33.0f, 18.0f, 33.0f);
     pData->vx = pData->vy = 0;
 
     pData->pState = new EnermySoldierRunningState(pData);

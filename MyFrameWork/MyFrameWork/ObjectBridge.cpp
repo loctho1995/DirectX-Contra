@@ -43,7 +43,7 @@ void ObjectBridge::update()
     {
         if (this->pData->playerX > bridgeHead->getBody().x)
         {
-            //destroy();
+            destroy();
         }
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="56">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="90">
  <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
@@ -12,23 +12,54 @@
   <object id="15" type="throughable" x="34" y="115" width="732" height="10"/>
   <object id="18" type="throughable" x="161" y="147" width="93" height="10"/>
   <object id="26" type="throughable" x="256.167" y="179" width="32.3333" height="10"/>
-  <object id="27" type="throughable" x="289.333" y="213" width="62.1667" height="10"/>
+  <object id="27" type="&quot;&quot;" x="289.333" y="213" width="62.1667" height="10"/>
   <object id="28" type="throughable" x="352.333" y="180" width="32.3333" height="10"/>
   <object id="29" type="throughable" x="416.833" y="147.5" width="61.6667" height="11"/>
-  <object id="30" type="throughable" x="609.333" y="212.5" width="60.6667" height="10"/>
+  <object id="30" type="&quot;&quot;" x="609.333" y="212.5" width="60.6667" height="10"/>
   <object id="31" type="throughable" x="641.167" y="163.5" width="94.3333" height="10"/>
+  <object id="56" type="throughable" x="898" y="114.333" width="158" height="10.6667"/>
+  <object id="57" type="throughable" x="1185.67" y="114" width="253.333" height="12.3333"/>
+  <object id="58" type="&quot;&quot;" x="1408.67" y="208" width="96" height="16.6667"/>
+  <object id="59" type="&quot;&quot;" x="1505.33" y="161.333" width="62" height="12.6664"/>
+  <object id="60" type="throughable" x="1376" y="82" width="509" height="13"/>
+  <object id="61" type="throughable" x="1601" y="146.667" width="222" height="11.3333"/>
+  <object id="62" type="&quot;&quot;" x="1729.5" y="211.5" width="191" height="12.5"/>
+  <object id="63" type="&quot;&quot;" x="1920.5" y="179.5" width="63" height="12.5"/>
+  <object id="65" type="throughable" x="1856.5" y="115" width="222" height="10.5"/>
+  <object id="67" type="&quot;&quot;" x="2018" y="179" width="60.5" height="12.5"/>
+  <object id="68" type="&quot;&quot;" x="2144.5" y="163.5" width="30" height="11"/>
+  <object id="69" type="throughable" x="2049" y="82.5" width="158" height="13.5"/>
+  <object id="70" type="&quot;&quot;" x="2177.5" y="148" width="93.5" height="12"/>
+  <object id="71" type="throughable" x="2241.5" y="115" width="61.5" height="11.5"/>
+  <object id="72" type="throughable" x="2336.5" y="148" width="62" height="11.5"/>
+  <object id="73" type="&quot;&quot;" x="2336" y="211.5" width="31.5" height="10.5"/>
+  <object id="74" type="&quot;&quot;" x="2368.5" y="179.5" width="96.5" height="12.5"/>
+  <object id="75" type="throughable" x="2464.5" y="116.5" width="63" height="11"/>
+  <object id="76" type="throughable" x="2496.5" y="83" width="62.5" height="11"/>
+  <object id="77" type="&quot;&quot;" x="2528.5" y="163.5" width="31" height="11.5"/>
+  <object id="78" type="&quot;&quot;" x="2496.5" y="211.5" width="32" height="11.5"/>
+  <object id="79" type="throughable" x="2592" y="115" width="63" height="12"/>
+  <object id="80" type="throughable" x="2624" y="146.5" width="159.5" height="12"/>
+  <object id="81" type="&quot;&quot;" x="2721" y="211" width="96" height="12.5"/>
+  <object id="82" type="&quot;&quot;" x="2848.5" y="179" width="62.5" height="10.5"/>
+  <object id="83" type="&quot;&quot;" x="2944" y="148" width="64.5" height="11.5"/>
+  <object id="84" type="throughable" x="3008.5" y="115.5" width="127" height="10"/>
+  <object id="85" type="throughable" x="3040.5" y="163" width="94.5" height="10.5"/>
+  <object id="87" type="throughable" x="3136" y="147.5" width="31" height="10"/>
+  <object id="88" type="throughable" x="3169" y="181" width="29.5" height="9"/>
+  <object id="89" type="&quot;&quot;" x="3009" y="211.5" width="239.5" height="12"/>
  </objectgroup>
  <objectgroup name="ObjectLayer">
   <object id="37" name="bridge" type="object" x="767.667" y="115.917" width="130" height="30.083"/>
-  <object id="38" name="soldier" type="enemy" x="257" y="82" width="16" height="32"/>
+  <object id="38" name="soldier" type="enemy" x="257" y="81" width="16" height="32"/>
   <object id="42" name="bridge" type="object" x="1057" y="115.708" width="130" height="28.5833"/>
-  <object id="43" name="soldier" type="enemy" x="304" y="82" width="16" height="32"/>
-  <object id="44" name="soldier" type="enemy" x="368" y="82" width="16.333" height="33"/>
-  <object id="45" name="soldier" type="enemy" x="510" y="82" width="16.333" height="33"/>
+  <object id="43" name="soldier" type="enemy" x="304" y="81" width="16" height="32"/>
+  <object id="44" name="soldier" type="enemy" x="368" y="80" width="16.333" height="33"/>
+  <object id="45" name="soldier" type="enemy" x="460.917" y="114.75" width="16.333" height="33"/>
   <object id="46" name="soldier" type="&quot;&quot;" x="820" y="82" width="16.333" height="33"/>
   <object id="47" name="soldier" type="&quot;&quot;" x="975" y="82" width="16.333" height="33"/>
   <object id="48" name="soldier" type="&quot;&quot;" x="1350" y="82" width="16.333" height="33"/>
-  <object id="49" name="soldier" type="&quot;&quot;" x="1677" y="115" width="16.333" height="33"/>
+  <object id="49" name="soldier" type="&quot;&quot;" x="1677" y="112" width="16.333" height="33"/>
   <object id="50" name="soldier" type="&quot;&quot;" x="1761" y="178.5" width="16.333" height="33"/>
   <object id="51" name="soldier" type="&quot;&quot;" x="2250" y="114.5" width="16.333" height="33"/>
   <object id="52" name="soldier" type="&quot;&quot;" x="2383" y="115" width="16.333" height="33"/>

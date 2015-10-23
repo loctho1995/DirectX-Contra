@@ -3,7 +3,7 @@
 #include "EnermyData.h"
 #include "EnermySoldierJumpingState.h"
 
-const float SOLDIER_RANGE_TO_JUMP = 20.0f
+const float SOLDIER_RANGE_TO_JUMP = 3.0f
 ;
 class EnermySoldierRunningState : public EnermyState
 {
@@ -12,7 +12,7 @@ public:
     ~EnermySoldierRunningState();
 
     void onUpdate();
-    void onCollision(RectF rect);
+    //void onCollision(RectF rect);
     void onCollision(CollisionRectF rect);
 private:
     float acceleration;
