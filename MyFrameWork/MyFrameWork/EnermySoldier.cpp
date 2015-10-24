@@ -29,3 +29,8 @@ EnermySoldier::~EnermySoldier()
 {
 
 }
+
+void EnermySoldier::setSupportCollisionRect(CollisionRectF rect)
+{
+    this->pData->cSupportRect = rect;
+}

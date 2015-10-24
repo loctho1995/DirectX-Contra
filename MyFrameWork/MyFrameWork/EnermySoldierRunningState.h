@@ -16,5 +16,6 @@ public:
     void onCollision(CollisionRectF rect);
 private:
     float acceleration;
+    bool isFallDown;
 };
 

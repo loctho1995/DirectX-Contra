@@ -659,7 +659,7 @@ void Map :: onSupportSprite( PlayerSprite* sprite)
 					{
 				
 						if( objectIt ->second ->isAffectble() )
-								sprite -> setSupportCollisionRect(collisionRect);
+                            enermyIt->second->setSupportCollisionRect(collisionRect);
 								isSupported = true;
 								break;	
 					}

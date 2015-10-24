@@ -14,6 +14,8 @@ public:
     EnermySoldier(float x, float y);
     ~EnermySoldier();
 
+    void setSupportCollisionRect(CollisionRectF rect);
+
     //void update();
     //void draw(Camera *cam);
 

@@ -7,6 +7,8 @@ EnermySoldierRunningState::EnermySoldierRunningState(EnermyData *pData)
     this->pData->iCurrentArr = EnermySoldierData::RUN;
     this->pData->vx = 1.0f;
     this->pData->vy = 1.0f;
+    acceleration = 1.5f;
+    isFallDown = false;
 }
 
 
@@ -17,7 +19,14 @@ EnermySoldierRunningState::~EnermySoldierRunningState()
 
 void EnermySoldierRunningState::onUpdate()
 {
-    EnermyState::onUpdate();
+    //std::cout << "is fall down: " << isFallDown <<"\n";
+    if (!isFallDown)
+        EnermyState::onUpdate();
+    else
+    {
+        //luc nay enemy dang bi roi xuong
+        this->pData->vy += acceleration;
+    }
 
     if (pData->dir.isLeft())
     {
@@ -26,6 +35,19 @@ void EnermySoldierRunningState::onUpdate()
     else if (pData->dir.isRight())
     {
         pData->x += pData->vx;
+    }
+
+    if (pData->cSupportRect == CollisionRectF())
+    {
+        pData->vy = 1.0f;
+        pData->vx = 0.0f;
+        isFallDown = true;
+    }
+    else
+    {
+        this->pData->vx = 1.0f;
+        this->pData->vy = 0.0f;
+        isFallDown = false;
     }
 
     pData->y += pData->vy;
