@@ -103,16 +103,21 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 
 	float secsPerCnt = 1.0f / (float)cntsPerSec;
 
-	float delta;
+	float delta = 0.0f;
 
 	unsigned int nFrameCount = 0;
 
 	float timeCount = 0;
 
+	__int64 currTimeStamp = 0; 
+
+	__int64 prevTimeStamp = 0; 
+
+	QueryPerformanceCounter((LARGE_INTEGER*)&prevTimeStamp);
+
 	while ( msg.message != WM_QUIT) // the main game loop 
 	{
-		__int64 prevTimeStamp = 0; 
-		QueryPerformanceCounter((LARGE_INTEGER*)&prevTimeStamp);
+		
 		if(  PeekMessage(&msg, NULL, 0, 0, PM_REMOVE ) )// Have to process all the windows event
 														// peek all the message int queue then remove it and process it
 														// hWnd is NULL handle any event in current thread
@@ -124,29 +129,34 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 		}
 		else
 		{
+			
 			// Game Loop here
-			game.go();
+
+			QueryPerformanceCounter((LARGE_INTEGER*)&currTimeStamp);
+			
+			double deltaTimeInMiliSecond = (double)(currTimeStamp - prevTimeStamp) * secsPerCnt * 1000.0f;
+			prevTimeStamp = currTimeStamp;
+			
+			delta += deltaTimeInMiliSecond; 
+			timeCount += deltaTimeInMiliSecond;
+			if( timeCount >= (double)1000.0f)
+			{
+				std::cout << "FPS : "<<nFrameCount <<"\n";
+				nFrameCount = 0;
+				timeCount = 0;
+
+			}
+			
+			if(delta >= MSPF)
+			{
+				delta = 0.0f;
+				nFrameCount++;
+				game.go();
+				
+			}
+
 		}
-		__int64 currTimeStamp = 0; 
-		QueryPerformanceCounter((LARGE_INTEGER*)&currTimeStamp);
-		float dt = (float)(currTimeStamp - prevTimeStamp) * secsPerCnt;
-		delta = dt * 1000.0f;
-		if(delta <  MSPF )
-		{
-			 Sleep(delta);
-			 timeCount += MSPF;
-		}
-		else 
-		{
-			timeCount += delta;
-	    }	
-		nFrameCount ++;
-		if(timeCount >= 1000.0f)
-		{
-			std::cout << "FPS : "<<nFrameCount <<"\n";
-			nFrameCount = 0;
-			timeCount = 0;
-		}
+		
 		
 		
 

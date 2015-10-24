@@ -30,6 +30,8 @@ EnermyFinalBoss1Sprite:: EnermyFinalBoss1Sprite(int respawnX, int respawnY)
 
 	pData -> isHittable = true;
 
+	pData -> isThrougable = true;
+
 	pData -> HP = 3;
 
 	pData ->body = RectF( -6.5f, -6.5f, 13.0f, 13.0f);
