@@ -625,7 +625,7 @@ void Map :: onSupportSprite( PlayerSprite* sprite)
 
 #pragma region
 
- 	for (std::map < int, EnermySprite* > ::iterator enermyIt = enermyMap.begin(); enermyIt != enermyMap.end(); enermyIt++)
+	for (std::map < int, EnermySprite* > ::iterator enermyIt = enermyMap.begin(); enermyIt != enermyMap.end(); enermyIt++)
 	{
 		RectF r = enermyIt ->second ->getBody();
 		//r.height += 1;
@@ -645,7 +645,7 @@ void Map :: onSupportSprite( PlayerSprite* sprite)
 				isSupported = true;
 				break;
 			}
-			
+
 		}
 
 		if(!isSupported )
@@ -657,17 +657,17 @@ void Map :: onSupportSprite( PlayerSprite* sprite)
 					CollisionRectF collisionRect = objectIt ->second ->getCollisionRect();
 					if( r.checkCollision(collisionRect.rect)  )
 					{
-				
+
 						if( objectIt ->second ->isAffectble() )
-								sprite -> setSupportCollisionRect(collisionRect);
-								isSupported = true;
-								break;	
+							enermyIt -> second -> setSupportCollisionRect(collisionRect);
+						isSupported = true;
+						break;	
 					}
 				}	
-		
+
 			}
 		}
-		
+
 
 
 		if(!isSupported)
