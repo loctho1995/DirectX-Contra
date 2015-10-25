@@ -56,7 +56,7 @@
   <object id="43" name="soldier" type="enemy" x="304" y="81" width="16" height="32"/>
   <object id="44" name="soldier" type="enemy" x="368" y="80" width="16.333" height="33"/>
   <object id="45" name="soldier" type="enemy" x="460.917" y="114.75" width="16.333" height="33"/>
-  <object id="46" name="soldier" type="&quot;&quot;" x="828.667" y="81.6667" width="16.333" height="33"/>
+  <object id="46" name="soldier" type="&quot;&quot;" x="828.667" y="83.6667" width="16.333" height="33"/>
   <object id="47" name="soldier" type="&quot;&quot;" x="975" y="82" width="16.333" height="33"/>
   <object id="48" name="soldier" type="&quot;&quot;" x="1350" y="82" width="16.333" height="33"/>
   <object id="49" name="soldier" type="&quot;&quot;" x="1677" y="112" width="16.333" height="33"/>

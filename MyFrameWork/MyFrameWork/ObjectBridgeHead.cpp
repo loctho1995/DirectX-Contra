@@ -12,7 +12,7 @@ ObjectBridgeHead::ObjectBridgeHead(float x, float y)
 
     this->initTextureArrays(ObjectBridgeData::COUNT);
     this->addTextureArray(ObjectBridgeData::ALIVE, "head", 3, 10);
-    this->addTextureArray(ObjectBridgeData::EXPLOSION, "explosion", ObjectBridgeData::EXPLOSION_TEXTURE_COUNT, ObjectBridgeData::EXPLOSION_FRAMES_TIME);
+    this->addTextureArray(ObjectBridgeData::EXPLOSION, "explosion", EXPLOSION_TEXTURE_COUNT, EXPLOSION_FRAMES_TIME);
 
     this->pData->ppTextureArrays[ObjectBridgeData::ALIVE]->setAnchorPoint(0.0, 0.0);
     this->pData->ppTextureArrays[ObjectBridgeData::EXPLOSION]->setAnchorPoint(0.0, 0.0);

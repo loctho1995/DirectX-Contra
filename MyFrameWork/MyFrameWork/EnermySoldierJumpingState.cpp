@@ -13,6 +13,7 @@ EnermySoldierJumpingState::EnermySoldierJumpingState(EnermyData *pData)
 
 EnermySoldierJumpingState::~EnermySoldierJumpingState()
 {
+
 }
 
 

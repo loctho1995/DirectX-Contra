@@ -11,7 +11,7 @@ ObjectBridgeTail::ObjectBridgeTail(float x, float y)
 
     this->initTextureArrays(ObjectBridgeData::COUNT);
     this->addTextureArray(ObjectBridgeData::ALIVE, "tail", 3, 10);
-    this->addTextureArray(ObjectBridgeData::EXPLOSION, "explosion", ObjectBridgeData::EXPLOSION_TEXTURE_COUNT, ObjectBridgeData::EXPLOSION_FRAMES_TIME);
+    this->addTextureArray(ObjectBridgeData::EXPLOSION, "explosion", EXPLOSION_TEXTURE_COUNT, EXPLOSION_FRAMES_TIME);
     //this->pData->ppTextureArrays[ObjectBridgeData::EXPLOSION] = new TextureArray("Resources\\Sprites", "explosion", "", 3, 10);
 
     this->pData->ppTextureArrays[ObjectBridgeData::ALIVE]->setAnchorPoint(0.0, 0.0);

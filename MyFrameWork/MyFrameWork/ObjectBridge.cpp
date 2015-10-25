@@ -76,6 +76,12 @@ void ObjectBridge::update()
     if (bridgeTail != nullptr)
     {
         bridgeTail->update();
+
+        if (bridgeTail->isDestroying())
+        {
+            this->setBody(RectF(0, 0, 0, 0));
+            this->pData->x = bridgeTail->getBody().x + bridgeTail->getBody().width;
+        }
     }
     
     if (bridgeTail->isDesTroyed())
@@ -107,10 +113,10 @@ void ObjectBridge::destroy()
 
     for (size_t i = 0; i < numBody; i++)
     {
-        ((ObjectBridgeAliveState*)bridgeBodies[i]->getState())->destroy((i + 1) * ObjectBridgeData::EXPLOSION_FRAMES_TIME * ObjectBridgeData::EXPLOSION_TEXTURE_COUNT);
+        ((ObjectBridgeAliveState*)bridgeBodies[i]->getState())->destroy((i + 1) * EXPLOSION_FRAMES_TIME * EXPLOSION_TEXTURE_COUNT);
     }
 
-    ((ObjectBridgeAliveState*)bridgeTail->getState())->destroy(ObjectBridgeData::EXPLOSION_FRAMES_TIME * (numBody + 1) * ObjectBridgeData::EXPLOSION_TEXTURE_COUNT);
+    ((ObjectBridgeAliveState*)bridgeTail->getState())->destroy(EXPLOSION_FRAMES_TIME * (numBody + 1) * EXPLOSION_TEXTURE_COUNT);
 }
 
 bool ObjectBridge::isDestroying()

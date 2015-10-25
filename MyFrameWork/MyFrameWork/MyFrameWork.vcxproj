@@ -89,6 +89,7 @@
     <ClCompile Include="EnermyCannonDeadState.cpp" />
     <ClCompile Include="EnermyCannonFiringState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
+    <ClCompile Include="EnermySoldierFallingState.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
     <ClCompile Include="ObjectBridgeAliveState.cpp" />
     <ClCompile Include="ObjectBridgeBody.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="EnermyCannonDeadState.h" />
     <ClInclude Include="EnermyCannonFiringState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
+    <ClInclude Include="EnermySoldierFallingState.h" />
     <ClInclude Include="ObjectBridge.h" />
     <ClInclude Include="ObjectBridgeAliveState.h" />
     <ClInclude Include="ObjectBridgeBody.h" />

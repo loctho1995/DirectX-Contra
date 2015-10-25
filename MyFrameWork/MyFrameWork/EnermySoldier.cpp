@@ -12,6 +12,7 @@ EnermySoldier::EnermySoldier(float x, float y)
     this->addTextureArray(EnermySoldierData::RUN, "run", 3, 6); // them 1 state voi animation
     this->addTextureArray(EnermySoldierData::JUMP, "jump", 1, 60);
     this->addTextureArray(EnermySoldierData::DIE, "jump", 1, 60);
+    this->addTextureArray(EnermySoldierData::FALL, "jump", 1, 60);
     this->pData->ppTextureArrays[EnermySoldierData::DESTROY] = new TextureArray("Resources\\Sprites", "explosion", "", 3, 10);
     //this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->setAnchorPoint(0.5f, 0.5f);
 

@@ -39,15 +39,7 @@ void EnermySoldierRunningState::onUpdate()
 
     if (pData->cSupportRect == CollisionRectF())
     {
-        pData->vy = 1.0f;
-        pData->vx = 0.0f;
-        isFallDown = true;
-    }
-    else
-    {
-        this->pData->vx = 1.0f;
-        this->pData->vy = 0.0f;
-        isFallDown = false;
+        this->pData->pState = new EnermySoldierFallingState(this->pData);
     }
 
     pData->y += pData->vy;
@@ -60,10 +52,24 @@ void EnermySoldierRunningState::onUpdate()
 
 void EnermySoldierRunningState::onCollision(CollisionRectF rect)
 {
-    
     if (abs(this->pData->getBody().x - rect.rect.x) <= SOLDIER_RANGE_TO_JUMP)
     {
-        this->pData->pState = new EnermySoldierJumpingState(this->pData);
+        //neu dang chay sang ben phai thi quay dau lai chu khong nhay
+        if (this->pData->dir.isRight())
+        {
+            this->pData->dir = Direction::createLeft();
+        }
+        else
+        {
+            //neu chay sang ben trai thi random 1 la nhay 2 la quay dau lai
+
+            if (rand() % 3 == 0)
+                this->pData->pState = new EnermySoldierJumpingState(this->pData);
+            else
+            {
+                this->pData->dir = Direction::createRight();
+            }
+        }
     }
 
     //xac dinh vi tri va cham

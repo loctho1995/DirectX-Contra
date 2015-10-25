@@ -37,7 +37,19 @@ void EnermyCannonFiringState::onUpdate()
 {
 	if (count == 0)
 	{
-		pData->Bullets.push_back(new PlayerMBullet(pData->x, pData->y - pData->body.height / 2, true, angle));
+		switch (this->pData->iCurrentArr)
+		{
+		case 1:
+			pData->Bullets.push_back(new PlayerMBullet(pData->x - pData->body.width / 2, pData->y - pData->body.height / 2, true, angle));
+			break;
+		case 2:
+			pData->Bullets.push_back(new PlayerMBullet(pData->x - pData->body.width / 2, pData->y - pData->body.height * 3 / 4, true, angle));
+			break;
+		case 3:
+			pData->Bullets.push_back(new PlayerMBullet(pData->x - pData->body.width * 1 / 4, pData->y - pData->body.height, true, angle));
+		default:
+			break;
+		}
 	}
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
 	count++;

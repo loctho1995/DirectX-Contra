@@ -10,6 +10,8 @@ EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY)
 	pData->x  = respawnX;
 
 	pData->y  = respawnY;
+	
+	pData -> isThrougable = false;
 
 	pData->ppTextureArrays = new TextureArray* [ 3 ];
 

@@ -146,3 +146,8 @@ void PlayerStandingState :: onDead()
 {
 	transition(new PlayerDeadState(pData));
 }
+
+void PlayerStandingState :: onFall()
+{
+	transition(new PlayerJumpingState(pData, false,0.0f));
+}

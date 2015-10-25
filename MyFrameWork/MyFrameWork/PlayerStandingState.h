@@ -14,5 +14,6 @@ public:
 	void onVeticalDirectionPressed(Direction d);
 	void onVeticalDirectionReleased();
 	void onFirePressed();
+	void onFall();
 	virtual void onDead();
 };

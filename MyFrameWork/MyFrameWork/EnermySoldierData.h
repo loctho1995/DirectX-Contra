@@ -14,6 +14,7 @@ public:
         SHOT,
         DIE,
         DESTROY,
+        FALL,
         COUNT
     };
 
