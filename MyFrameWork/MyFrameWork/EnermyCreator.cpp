@@ -4,6 +4,7 @@
 #include "EnermyFinalBoss1Sprite.h"
 #include "ObjectBridge.h"
 #include "EnermyCannon.h"
+#include"EnermyGunRotating.h"
 
 EnermyCreator* EnermyCreator:: instance = nullptr;
 EnermyCreator* EnermyCreator :: getInstance()
@@ -20,7 +21,13 @@ EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int re
 	if(enermyName == "ink")
 	{
 		return new EnermyInkSprite ( respawnX, respawnY);
+
 	}
+	if (enermyName == "gunrotating")
+	{
+		return new EnermyGunRotating(respawnX, respawnY);
+	}
+
 	if (enermyName == "cannon")
 	{
 		return new EnermyCannon(respawnX, respawnY);
@@ -38,6 +45,7 @@ EnermySprite* EnermyCreator :: createEnermySprite(std::string enermyName, int re
 	{
 		return new EnermyFinalBoss1Sprite( respawnX, respawnY );
 	}
+	
 	return nullptr;
 }
 ObjectSprite* EnermyCreator :: createObjectSprite(std::string name, int respawnX, int respawnY )
