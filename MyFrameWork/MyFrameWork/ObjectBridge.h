@@ -22,7 +22,7 @@ private:
     ObjectBridgeTail *bridgeTail;
     int numBody;
     bool isDestroy;
-    const float PLAYER_DISTANCE = 0.0f;
+    //const float PLAYER_DISTANCE = 0.0f;
     bool isCheck;
 };
 

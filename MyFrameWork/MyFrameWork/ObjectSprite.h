@@ -11,7 +11,7 @@ public:
 	//EnermySprite(std::string mapName){}
 
 	virtual RectF getBody() { return pData ->getBody(); }
-	virtual CollisionRectF getCollisionRect() { return CollisionRectF(getBody(),"throughable", pData ->vx, pData -> vy); }
+	virtual CollisionRectF getCollisionRect() { return CollisionRectF(getBody(),"throughable", this -> pData ->vx, this -> pData -> vy); }
 	virtual void setBody(RectF r ) { pData ->body =  r;} 
 	/*virtual RectF getLastFrameBody() {return pData ->getLastFrameBody();}*/
 	virtual float getVx() {return pData -> vx;} 
@@ -20,6 +20,7 @@ public:
 	virtual void setPlayerX(int x) {pData ->playerX = x;}
 	virtual void setPlayerY( int y ) {pData ->playerY = y;}
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
+	virtual void onCollision(CollisionRectF r)	{ pData ->pState ->onCollision(r); }
     virtual SpriteState* getState(){ return this->pData->pState; } //phai them doan doan nay de goi pData cua EnermySprite chu ko phai thang cha
     virtual void initTextureArrays(int count)
     {
