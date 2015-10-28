@@ -416,14 +416,18 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		if(objectIt ->second ->isPlayerCollisionable())
 		{
 			CollisionRectF r = objectIt ->second ->getCollisionRect();
-			if( sprite ->getBody().checkCollision(r.rect)  )
+			std:: vector < CollisionRectF > throughRectVector = sprite ->getThroughRect();
+			if(std::find(throughRectVector.begin(), throughRectVector.end(), r ) == throughRectVector.end())
 			{
-				
-				if( objectIt ->second ->isAffectble() )
-							sprite -> onCollision( r );
-				else
+				if( sprite ->getBody().checkCollision(r.rect)  )
 				{
-					// Object dan vs cau ... :D
+
+					if( objectIt ->second ->isAffectble() )
+						sprite -> onCollision( r );
+					else
+					{
+						// Object dan vs cau ... :D
+					}
 				}
 			}
 		}	

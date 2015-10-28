@@ -49,7 +49,7 @@ public:
 	
 	virtual void onUpdate() {}
 
-	virtual void die() { pData ->pState -> onDead();}
+	virtual void die() { this ->pData ->pState -> onDead();}
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
 

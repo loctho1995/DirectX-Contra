@@ -7,7 +7,7 @@ PlayerSprite::PlayerSprite()
 	// Set up PlayerData
 	pData = new PlayerData();
 
-	pData->x  = 650;
+	pData->x  = 50;
 
 	pData->y  = 50;
 
@@ -98,7 +98,7 @@ PlayerSprite::PlayerSprite()
 
 	pData ->body = RectF( -8.0f, -27.0f, 16.0f, 27.0f);
 
-	pData ->bulletType = PlayerData::BulletType::F;
+	pData ->bulletType = PlayerData::BulletType::S;
 
 	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);
 
