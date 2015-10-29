@@ -7,7 +7,7 @@ PlayerSprite::PlayerSprite()
 	// Set up PlayerData
 	pData = new PlayerData();
 
-	pData->x  = 650;
+	pData->x  = 50;
 
 	pData->y  = 50;
 

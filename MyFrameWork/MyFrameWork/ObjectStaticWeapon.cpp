@@ -15,9 +15,10 @@ ObjectStaticWeapon::ObjectStaticWeapon(float x, float y)
     this->addTextureArray(ObjectStaticWeaponData::PREAPRING, "preparing", 3, 2);
     //this->addTextureArray(ObjectStaticWeaponData::OUTX, "out", 3, 2);
     this->pData->ppTextureArrays[ObjectStaticWeaponData::OUTX] = new TextureArray("Resources\\Sprites", "bulletimages", "m", 1, 10);
+
     this->pData->body = RectF(0, 0, 32, 32);
-    this->pData->pState = new ObjectStaticWeaponCloseState(this->pData);
-    //this->pData->pState = new ObjectStaticWeaponOutState(this->pData);
+    //this->pData->pState = new ObjectStaticWeaponCloseState(this->pData);
+    this->pData->pState = new ObjectStaticWeaponOutState(this->pData);
 }
 
 

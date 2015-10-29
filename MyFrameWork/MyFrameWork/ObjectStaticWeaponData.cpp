@@ -5,9 +5,10 @@ ObjectStaticWeaponData::ObjectStaticWeaponData()
 {
     this->objectName = "staticweapon";
 
-    this->isPlayerCollisionable = false;
+    this->isDesTroyed = false;
+    this->isAffectble = true;
     this->isEnemyCollisionable = false;
-    this->isAffectble = false;
+    this->isPlayerCollisionable = false;
 }
 
 

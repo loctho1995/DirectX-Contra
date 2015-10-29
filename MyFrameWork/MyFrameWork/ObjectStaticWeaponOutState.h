@@ -9,6 +9,7 @@ public:
     ~ObjectStaticWeaponOutState();
 
     void onUpdate();
+    void onCollision(CollisionRectF rect);
 
 private:
     float accelemeter;
