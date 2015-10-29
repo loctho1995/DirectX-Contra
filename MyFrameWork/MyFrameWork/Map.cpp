@@ -562,11 +562,11 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			for (int i = 0; i < objectCollisionReturnList.size(); i++)
 			{
 				CollisionRectF cRect = objectCollisionReturnList[i];
-				if(objectIt ->second ->isAffectble())
+				if(!objectIt ->second ->isAffectble())
 				{
 					if( objectIt -> second ->getBody().checkCollision(cRect.rect)  )
 					{
-									objectIt -> second -> onCollision( cRect );
+						objectIt -> second -> onCollision( cRect );
 					}
 				}
 			}
@@ -586,9 +586,9 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 				RectF iBody = iobjectIt ->second ->getBody();
 				RectF jBody = jobjectIt ->second ->getBody();
 
-				if(iobjectIt ->second ->isAffectble())
+				if(!iobjectIt ->second ->isAffectble())
 				{
-					if( !jobjectIt -> second -> isAffectble() && iBody.checkCollision(jBody))
+					if( jobjectIt -> second -> isAffectble() && iBody.checkCollision(jBody))
 					{
 						iobjectIt -> second -> onCollision ( jobjectIt -> second ->getCollisionRect() );
 					}

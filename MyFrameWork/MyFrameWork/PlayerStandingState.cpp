@@ -30,7 +30,7 @@ void PlayerStandingState:: onJumpPressed()
 {
 	if(!pData -> verticalDir.isDown() || pData ->cSupportRect.type != "throughable")
 	{
-		transition(new PlayerJumpingState(pData));
+		//transition(new PlayerJumpingState(pData));
 	}
 	else
 	{
