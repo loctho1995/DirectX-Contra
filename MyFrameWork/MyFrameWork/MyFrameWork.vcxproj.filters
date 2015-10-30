@@ -46,7 +46,6 @@
     <ClCompile Include="PlayerStandingState.cpp" />
     <ClCompile Include="PlayerSwimmingState.cpp" />
     <ClCompile Include="PlayScene.cpp" />
-    <ClCompile Include="RockMansBullet.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureArray.cpp" />
@@ -74,6 +73,12 @@
     <ClCompile Include="EnermyCannonFiringState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
     <ClCompile Include="EnermySoldierFallingState.cpp" />
+    <ClCompile Include="EnermyGunRotating.cpp" />
+    <ClCompile Include="EnermyGunRotatingClosingState.cpp" />
+    <ClCompile Include="EnermyGunRotatingData.cpp" />
+    <ClCompile Include="EnermyGunRotatingDieState.cpp" />
+    <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
+    <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -135,8 +140,6 @@
     <ClInclude Include="PlayScene.h" />
     <ClInclude Include="QuadTree.h" />
     <ClInclude Include="Rect.h" />
-    <ClInclude Include="RockMansBullet.h" />
-    <ClInclude Include="RockMansBulletMoving.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Sprite.h" />
@@ -168,5 +171,11 @@
     <ClInclude Include="EnermyCannonFiringState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
     <ClInclude Include="EnermySoldierFallingState.h" />
+    <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
+    <ClInclude Include="EnermyGunRotating.h" />
+    <ClInclude Include="EnermyGunRotatingClosingState.h" />
+    <ClInclude Include="EnermyGunRotatingData.h" />
+    <ClInclude Include="EnermyGunRotatingDieState.h" />
+    <ClInclude Include="EnermyGunRotatingOpeningState.h" />
   </ItemGroup>
 </Project>

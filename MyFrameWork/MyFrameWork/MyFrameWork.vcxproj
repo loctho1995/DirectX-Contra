@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -89,6 +89,12 @@
     <ClCompile Include="EnermyCannonDeadState.cpp" />
     <ClCompile Include="EnermyCannonFiringState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
+    <ClCompile Include="EnermyGunRotating.cpp" />
+    <ClCompile Include="EnermyGunRotatingClosingState.cpp" />
+    <ClCompile Include="EnermyGunRotatingData.cpp" />
+    <ClCompile Include="EnermyGunRotatingDieState.cpp" />
+    <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
+    <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
     <ClCompile Include="EnermySoldierFallingState.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
     <ClCompile Include="ObjectBridgeAliveState.cpp" />
@@ -143,7 +149,6 @@
     <ClCompile Include="PlayerStandingState.cpp" />
     <ClCompile Include="PlayerSwimmingState.cpp" />
     <ClCompile Include="PlayScene.cpp" />
-    <ClCompile Include="RockMansBullet.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureArray.cpp" />
@@ -170,6 +175,12 @@
     <ClInclude Include="EnermyCannonDeadState.h" />
     <ClInclude Include="EnermyCannonFiringState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
+    <ClInclude Include="EnermyGunRotating.h" />
+    <ClInclude Include="EnermyGunRotatingClosingState.h" />
+    <ClInclude Include="EnermyGunRotatingData.h" />
+    <ClInclude Include="EnermyGunRotatingDieState.h" />
+    <ClInclude Include="EnermyGunRotatingOpeningState.h" />
+    <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
     <ClInclude Include="EnermySoldierFallingState.h" />
     <ClInclude Include="ObjectBridge.h" />
     <ClInclude Include="ObjectBridgeAliveState.h" />
@@ -232,8 +243,6 @@
     <ClInclude Include="PlayScene.h" />
     <ClInclude Include="QuadTree.h" />
     <ClInclude Include="Rect.h" />
-    <ClInclude Include="RockMansBullet.h" />
-    <ClInclude Include="RockMansBulletMoving.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Sprite.h" />

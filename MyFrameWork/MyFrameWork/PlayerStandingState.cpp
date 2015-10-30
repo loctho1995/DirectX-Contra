@@ -28,16 +28,21 @@ void PlayerStandingState::onMovePressed(Direction d)
 
 void PlayerStandingState:: onJumpPressed()
 {
-	if(!pData -> verticalDir.isDown() || pData ->cSupportRect.type != "throughable")
-	{
-		//transition(new PlayerJumpingState(pData));
-	}
-	else
+	if(pData -> verticalDir.isDown() && pData ->cSupportRect.type == "throughable")
 	{
 		pData ->cThroughRect.push_back( pData ->cSupportRect );
 		pData -> y += 1;
 		//pData -> ly += 1;
 		transition( new PlayerJumpingState(pData, false, 0.0f));
+	}
+	else
+	if( pData -> verticalDir.isDown() && pData ->cSupportRect.type != "throughable")
+	{
+		
+	}
+	else
+	{
+		transition(new PlayerJumpingState(pData));
 	}
 	
 }
