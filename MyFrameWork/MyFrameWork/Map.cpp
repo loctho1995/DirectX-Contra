@@ -416,14 +416,18 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		if(objectIt ->second ->isPlayerCollisionable())
 		{
 			CollisionRectF r = objectIt ->second ->getCollisionRect();
-			if( sprite ->getBody().checkCollision(r.rect)  )
+			std:: vector < CollisionRectF > throughRectVector = sprite ->getThroughRect();
+			if(std::find(throughRectVector.begin(), throughRectVector.end(), r ) == throughRectVector.end())
 			{
-				
-				if( objectIt ->second ->isAffectble() )
-							sprite -> onCollision( r );
-				else
+				if( sprite ->getBody().checkCollision(r.rect)  )
 				{
-					// Object dan vs cau ... :D
+
+					if( objectIt ->second ->isAffectble() )
+						sprite -> onCollision( r );
+					else
+					{
+						// Object dan vs cau ... :D
+					}
 				}
 			}
 		}	
@@ -546,11 +550,63 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 #pragma endregion playerBulletvsObjetSprite
 
 #pragma region
+		
+
+		
+		for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
+		{
+			std:: vector < CollisionRectF > objectCollisionReturnList;
+
+			mapCollisionTree -> getObjectlist (objectCollisionReturnList, objectIt -> second -> getBody());
+
+			for (int i = 0; i < objectCollisionReturnList.size(); i++)
+			{
+				CollisionRectF cRect = objectCollisionReturnList[i];
+				if(objectIt ->second ->isAffectble())
+				{
+					if( objectIt -> second ->getBody().checkCollision(cRect.rect)  )
+					{
+									objectIt -> second -> onCollision( cRect );
+					}
+				}
+			}
+		
+		}
+
+
+
+
+
+		for (std:: map < int ,ObjectSprite* > :: iterator iobjectIt = objectMap.begin() ; iobjectIt != objectMap.end(); iobjectIt++)
+		{
+			for (std:: map < int ,ObjectSprite* > :: iterator jobjectIt = objectMap.begin() ; jobjectIt != objectMap.end(); jobjectIt++)
+			{
+				//CollisionRectF cRect = objectCollisionReturnList[i];
+
+				RectF iBody = iobjectIt ->second ->getBody();
+				RectF jBody = jobjectIt ->second ->getBody();
+
+				if(iobjectIt ->second ->isAffectble())
+				{
+					if( !jobjectIt -> second -> isAffectble() && iBody.checkCollision(jBody))
+					{
+						iobjectIt -> second -> onCollision ( jobjectIt -> second ->getCollisionRect() );
+					}
+				}
+				else
+				{
+					break;
+				}
+			}
+		
+		}
+
+#pragma endregion ObjectvsMap
+
+#pragma region
 	RectF r = cam ->getRect();
 	sprite -> onCameraCollision(r);
 #pragma endregion playervsCamera
-
-
 
 	// update through rect list of player
 	sprite ->updateThroughRect();

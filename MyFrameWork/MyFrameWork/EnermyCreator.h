@@ -8,6 +8,7 @@
 #include "ObjectBridgeTail.h"
 #include "EnermySprite.h"
 #include "ObjectSprite.h"
+#include "ObjectStaticWeapon.h"
 
 class EnermyCreator
 {

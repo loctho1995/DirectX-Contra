@@ -15,7 +15,7 @@ public:
     ~EnermySoldier();
 
     void setSupportCollisionRect(CollisionRectF rect);
-
+    void die();
     //void update();
     //void draw(Camera *cam);
 

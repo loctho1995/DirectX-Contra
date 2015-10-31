@@ -7,6 +7,7 @@ ObjectStaticWeaponData::ObjectStaticWeaponData()
 
     this->isDesTroyed = false;
     this->isAffectble = true;
+    this->isHittable = true;      
     this->isEnemyCollisionable = false;
     this->isPlayerCollisionable = false;
 }

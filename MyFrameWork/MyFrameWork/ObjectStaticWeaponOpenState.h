@@ -8,7 +8,7 @@ class ObjectStaticWeaponOpenState : public ObjectState
 public:
     ObjectStaticWeaponOpenState(ObjectData *pData);
     ~ObjectStaticWeaponOpenState();
-
+    
     void onUpdate();
 
 private:

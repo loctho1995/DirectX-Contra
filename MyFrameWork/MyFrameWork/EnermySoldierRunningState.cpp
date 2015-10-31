@@ -52,24 +52,22 @@ void EnermySoldierRunningState::onUpdate()
 
 void EnermySoldierRunningState::onCollision(CollisionRectF rect)
 {
-    if (abs(this->pData->getBody().x - rect.rect.x) <= SOLDIER_RANGE_TO_JUMP)
+    float distanceLeft = this->pData->getBody().x - rect.rect.x;
+    float distanceRight = this->pData->getBody().x - (rect.rect.x + rect.rect.width);
+
+    if (distanceLeft <= SOLDIER_RANGE_TO_JUMP)
     {
-        //neu dang chay sang ben phai thi quay dau lai chu khong nhay
-        if (this->pData->dir.isRight())
-        {
-            this->pData->dir = Direction::createLeft();
-        }
+        if (rand() % 2 == 0)
+            this->pData->pState = new EnermySoldierJumpingState(this->pData);
         else
         {
-            //neu chay sang ben trai thi random 1 la nhay 2 la quay dau lai
-
-            if (rand() % 3 == 0)
-                this->pData->pState = new EnermySoldierJumpingState(this->pData);
-            else
-            {
-                this->pData->dir = Direction::createRight();
-            }
+            this->pData->dir = Direction::createRight();
         }
+    }
+
+    if (-distanceRight <= SOLDIER_RANGE_TO_JUMP)
+    {
+        this->pData->dir = Direction::createLeft();
     }
 
     //xac dinh vi tri va cham

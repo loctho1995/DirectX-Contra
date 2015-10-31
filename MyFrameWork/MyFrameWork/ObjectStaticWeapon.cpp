@@ -24,6 +24,7 @@ ObjectStaticWeapon::ObjectStaticWeapon(float x, float y)
 
 ObjectStaticWeapon::~ObjectStaticWeapon()
 {
+     
 }
 
 void ObjectStaticWeapon::beShooted(int damage)

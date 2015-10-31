@@ -7,6 +7,7 @@ ObjectStaticWeaponOutState::ObjectStaticWeaponOutState(ObjectData *pData)
     this->pData->iCurrentArr = ObjectStaticWeaponData::OUTX;
     this->pData->isPlayerCollisionable = true;
     this->pData->isAffectble = true;
+    this->pData->isHittable = false;
     this->pData->vx = 0.8f;
     this->pData->vy = -3.1f;
     accelemeter = 0.1f;

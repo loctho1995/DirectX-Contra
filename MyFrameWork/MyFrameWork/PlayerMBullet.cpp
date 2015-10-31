@@ -1,5 +1,5 @@
 #include "PlayerMBullet.h"
-#include "PlayerMBulletMovingState.h"
+#include "BulletMovingState.h"
 
 PlayerMBullet :: PlayerMBullet(float x, float y, bool  isBoosting, float angle)
 {
@@ -19,7 +19,7 @@ PlayerMBullet :: PlayerMBullet(float x, float y, bool  isBoosting, float angle)
 
 	pData -> body = RectF(- pData ->ppTextureArrays[0] ->getWidth() / 2, -pData ->ppTextureArrays[0] ->getHeight(),pData -> ppTextureArrays[0] ->getWidth() , pData ->ppTextureArrays[0] ->getHeight());
 	
-	pData -> pState = new PlayerMBulletMovingState(pData, angle);
+	pData -> pState = new BulletMovingState(pData, 3.0f, angle,0 ) ;
 }
 
 void PlayerMBullet :: draw(Camera* cam)

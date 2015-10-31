@@ -6,6 +6,8 @@ ObjectStaticWeaponPreparingState::ObjectStaticWeaponPreparingState(ObjectData *p
     this->pData = pData;
     this->pData->iCurrentArr = ObjectStaticWeaponData::PREAPRING;
     this->isNextOpen = isNextOpen;
+    this->pData->isHittable = false;
+    this->pData->isPlayerCollisionable = false;
     framCurrentCount = 0;
     frameDelay = 0;
 }

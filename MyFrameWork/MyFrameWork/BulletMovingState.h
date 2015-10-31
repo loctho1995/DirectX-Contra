@@ -5,17 +5,17 @@
 class BulletMovingState : public BulletState
 {
 private:
-	int speedX;
-	int speedY;
+	float speed;
 public:
-	BulletMovingState( SpriteData * data )
+	BulletMovingState( SpriteData * data , float speed, float angle , int iCurrentArray)
 	{
 		pData = data;
-		pData -> iCurrentArr = 0;
-		speedY = 0;
-		speedX = 10;
-		pData -> vx = pData ->transform( speedX );
-		pData -> vy = pData ->transform( speedY );
+		pData -> iCurrentArr = iCurrentArray;
+		this -> speed = speed;
+		
+		pData -> vy = sin(angle) * speed;
+		pData -> vx = cos(angle) * speed;
+		
 	}
 	virtual void onUpdate()
 	{

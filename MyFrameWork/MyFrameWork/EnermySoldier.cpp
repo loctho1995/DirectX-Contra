@@ -13,8 +13,8 @@ EnermySoldier::EnermySoldier(float x, float y)
     this->addTextureArray(EnermySoldierData::JUMP, "jump", 1, 60);
     this->addTextureArray(EnermySoldierData::DIE, "jump", 1, 60);
     this->addTextureArray(EnermySoldierData::FALL, "jump", 1, 60);
-    this->pData->ppTextureArrays[EnermySoldierData::DESTROY] = new TextureArray("Resources\\Sprites", "explosion", "", 3, 10);
-    //this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->setAnchorPoint(0.5f, 0.5f);
+    this->pData->ppTextureArrays[EnermySoldierData::DESTROY] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 3, 10);
+    this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->setAnchorPoint(0.5f, 0.5f);
 
     pData->dir = Direction::createLeft();
     pData->body = RectF(-9.0f, -33.0f, 18.0f, 33.0f);
@@ -34,4 +34,9 @@ EnermySoldier::~EnermySoldier()
 void EnermySoldier::setSupportCollisionRect(CollisionRectF rect)
 {
     this->pData->cSupportRect = rect;
+}
+
+void EnermySoldier::die()
+{
+    this->pData->pState = new EnermySoldierDieState(this->pData);
 }
