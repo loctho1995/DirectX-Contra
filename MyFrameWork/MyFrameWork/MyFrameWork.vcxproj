@@ -168,6 +168,7 @@
     <ClInclude Include="BulletState.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CollisionRect.h" />
+    <ClInclude Include="Define.h" />
     <ClInclude Include="Direction.h" />
     <ClInclude Include="EnermyCannon.h" />
     <ClInclude Include="EnermyCannonAppearingState.h" />

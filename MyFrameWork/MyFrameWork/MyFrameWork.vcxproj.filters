@@ -177,5 +177,6 @@
     <ClInclude Include="EnermyGunRotatingDieState.h" />
     <ClInclude Include="EnermyGunRotatingOpeningState.h" />
     <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
+    <ClInclude Include="Define.h" />
   </ItemGroup>
 </Project>

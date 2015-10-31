@@ -34,6 +34,5 @@ private:
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
-    ObjectStaticWeapon *staticWeapon;
 };
 

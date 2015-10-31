@@ -11,5 +11,6 @@ public:
     ~ObjectBridgeHead();
     bool isDestroying();
     void draw(Camera *cam);
+
 };
 

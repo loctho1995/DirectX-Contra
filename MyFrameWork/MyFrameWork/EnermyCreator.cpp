@@ -56,9 +56,34 @@ ObjectSprite* EnermyCreator :: createObjectSprite(std::string name, int respawnX
         return new ObjectBridge(respawnX, respawnY, 2);
     }
 
-    if (name == "staticweapon")
+    if (name == "staticweapons")
     {
-        return new ObjectStaticWeapon(respawnX, respawnY);
+        return new ObjectStaticWeapon(respawnX, respawnY,BulletTypes::S);
+    }
+
+    if (name == "staticweaponm")
+    {
+        return new ObjectStaticWeapon(respawnX, respawnY, BulletTypes::M);
+    }
+
+    if (name == "staticweaponf")
+    {
+        return new ObjectStaticWeapon(respawnX, respawnY, BulletTypes::F);
+    }
+
+    if (name == "staticweaponb")
+    {
+        return new ObjectStaticWeapon(respawnX, respawnY, BulletTypes::B);
+    }
+
+    if (name == "staticweaponr")
+    {
+        return new ObjectStaticWeapon(respawnX, respawnY, BulletTypes::R);
+    }
+
+    if (name == "staticweaponl")
+    {
+        return new ObjectStaticWeapon(respawnX, respawnY, BulletTypes::L);
     }
 
 	return nullptr;

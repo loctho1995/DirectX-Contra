@@ -5,7 +5,6 @@ PlayScene ::PlayScene(int mapID)
 {
 
     pPlayer = new PlayerSprite();
-    staticWeapon = new ObjectStaticWeapon(30, 60);
     //bridge->destroy();
 
     //std:: string mapName = "stage" + std::to_string(mapID);;
@@ -97,7 +96,6 @@ void PlayScene::onUpdate()
     pMap->onUpdate(pPlayer, cam);
     pMap->onSupportSprite(pPlayer);
     pPlayer->update();
-    staticWeapon->update();
 }
 void PlayScene::render()
 {
@@ -105,7 +103,6 @@ void PlayScene::render()
     
     pMap->draw(cam);
     pPlayer->draw(cam);
-    staticWeapon->draw(cam);
     //Graphics::getInstance() ->drawText("TEST", RectI(200,220,50,50));
 
 

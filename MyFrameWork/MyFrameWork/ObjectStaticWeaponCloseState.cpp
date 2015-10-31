@@ -5,9 +5,9 @@ ObjectStaticWeaponCloseState::ObjectStaticWeaponCloseState(ObjectData *pData)
 {
     this->pData = pData;
     this->pData->iCurrentArr = ObjectStaticWeaponData::CLOSED;
-    this->pData->isHittable = false;
+    this->pData->isHittable = true;
     this->pData->isPlayerCollisionable = false;
-    frameDelay = 55;
+    frameDelay = 85;
     currentFramecount = 0;
 }
 

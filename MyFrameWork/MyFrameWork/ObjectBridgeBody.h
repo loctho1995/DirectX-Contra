@@ -11,7 +11,6 @@ public:
     ObjectBridgeBody(float x, float y);
     void draw(Camera *cam);
     bool isDestroying();
-    
     ~ObjectBridgeBody();
 };
 

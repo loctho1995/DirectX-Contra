@@ -6,7 +6,8 @@ ObjectBridgeData::ObjectBridgeData()
     this->objectName = "bridge";
     this->isDesTroyed = false;
     this->isAffectble = true;
-    this->isEnemyCollisionable = true;
+    this->isHittable = false;
+    isEnemyCollisionable = true;
     isAllowDestroy = false;
     isDestroying = false;
 }

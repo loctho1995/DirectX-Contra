@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="96">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="98">
  <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
@@ -55,7 +55,6 @@
   <object id="42" name="bridge" type="object" x="1057" y="115.708" width="130" height="28.5833"/>
   <object id="43" name="soldier" type="enemy" x="304" y="83" width="16" height="32"/>
   <object id="44" name="soldier" type="enemy" x="368" y="82" width="16.333" height="33"/>
-  <object id="45" name="soldier" type="enemy" x="460.917" y="114.75" width="16.333" height="33"/>
   <object id="46" name="soldier" type="&quot;&quot;" x="828.667" y="83.6667" width="16.333" height="33"/>
   <object id="47" name="soldier" type="&quot;&quot;" x="975" y="82" width="16.333" height="33"/>
   <object id="48" name="soldier" type="&quot;&quot;" x="1350" y="82" width="16.333" height="33"/>
@@ -66,8 +65,8 @@
   <object id="53" name="soldier" type="&quot;&quot;" x="3030" y="179.5" width="16.333" height="33"/>
   <object id="54" name="soldier" type="&quot;&quot;" x="3060" y="179" width="16.333" height="33"/>
   <object id="55" name="soldier" type="&quot;&quot;" x="3090" y="179" width="16.333" height="33"/>
-  <object id="90" name="cannon" type="enemy" x="256" y="144" width="32" height="32"/>
-  <object id="91" name="gunrotating" type="enemy" x="224" y="200" width="32" height="32"/>
-  <object id="95" name="staticweapon" type="object" x="169" y="82" width="32" height="32"/>
+  <object id="95" name="staticweaponm" type="object" x="317" y="144" width="32" height="32"/>
+  <object id="96" name="staticweaponf" type="object" x="1567" y="144" width="32" height="32"/>
+  <object id="97" name="staticweapons" type="object" x="2272" y="176" width="32" height="32"/>
  </objectgroup>
 </map>

@@ -16,6 +16,7 @@ public:
     bool isDesTroyed();
     ~ObjectBridge();
 	virtual void onUnsupported() {}
+
 private:
     ObjectBridgeHead *bridgeHead;
     ObjectBridgeBody **bridgeBodies;

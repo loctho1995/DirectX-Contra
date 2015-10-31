@@ -6,13 +6,16 @@
 #include "ObjectStaticWeaponPreparingState.h"
 #include "ObjectStaticWeaponOutState.h"
 #include "ObjectSprite.h"
+#include "Define.h"
 
 class ObjectStaticWeapon : public ObjectSprite
 {
 public:
-    ObjectStaticWeapon(float x, float y);
+    ObjectStaticWeapon(float x, float y, BulletTypes bulletType);
     ~ObjectStaticWeapon();
 
     void beShooted(int damage);
+    BulletTypes getBulletType();
+
 };
 
