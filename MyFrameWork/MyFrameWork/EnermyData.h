@@ -9,6 +9,7 @@ public :
 	{
 		isDesTroyed = false;
 		isHittable  = true;
+		appearDir = Direction::createRight();
 	}
 	float playerX;
 	float playerY;
@@ -17,4 +18,5 @@ public :
 	int HP;
 	bool isThrougable;
 	std:: vector < BulletSprite* > Bullets;
+	Direction appearDir;
 };

@@ -1,5 +1,6 @@
 #pragma once
 #include "PlayerState.h"
+
 class PlayerSprite : public Sprite
 {
 public:
@@ -38,10 +39,10 @@ public:
 	std::vector<BulletSprite* >& getBullets();
 	virtual void die();
 	virtual void onCameraCollision(RectF cameraRect);
-	virtual void setCameraRect( RectF cameraRect);
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
 	virtual int getDamage();
+	void setCameraRect(RectF r);
 	
 private:
 	PlayerData* pData;

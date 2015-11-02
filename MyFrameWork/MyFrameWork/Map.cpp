@@ -1,5 +1,7 @@
 #include "Map.h"
 #include <algorithm> 
+#include <typeinfo>
+
 
 Map :: Map(std::string mapName)
 	:
@@ -231,7 +233,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 	{
 		EnermySprite* temp = it -> second;
 		RectF SpriteRect(temp ->getBody());
-		if (!camRect.checkCollision(SpriteRect) || it ->second ->isDesTroyed())
+		if (it ->second ->isDesTroyed())
 		{
 			if(it -> second ->getName().find("final") != std::string::npos)
 			{
@@ -252,6 +254,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 			Sprite* temp = enermyBullets[i];
 			if(!camRect.checkCollision(temp  ->getBody()) || temp ->isDesTroyed())
 			{
+				
 				delete temp;
 				enermyBullets.erase(enermyBullets.begin() + i);
 			}
@@ -265,7 +268,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 		ObjectSprite* temp = it -> second;
 		RectF SpriteRect(temp ->getBody());
 
-		if (!camRect.checkCollision(SpriteRect) || it ->second ->isDesTroyed())
+		if (it ->second ->isDesTroyed())
 		{
 			delete temp;
 			it = objectMap.erase(it);
@@ -322,30 +325,68 @@ void Map ::addEToMap ( Camera* cam )
 		std::string type  = returnList[i] -> type;
 		if(camRect.checkCollision( body ))
 		{
-			if(type != "object")
+			Direction appearDir = EnermyCreator :: getInstance() ->getAppearDir( returnList[i] -> name );
+			if( appearDir.isRight())
 			{
-				if(
-					//( ( body.x + body.width >= camRect.x  ) && (body.x + body.width  <= camRect.x + body.width / 2) )
-					//||
-					( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - body.width / 2))
-					)
+				if( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - 10) )
 				{
-						enermyMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );	
+					if(type == "enemy")
+					{
+						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						if(enermySprite != nullptr )
+						enermyMap[returnList[i] ->id] = enermySprite;
+					}	
+					else
+					{
+						ObjectSprite* objectSprite = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						if( objectSprite != nullptr )
+						objectMap[returnList[i] ->id] =  objectSprite;
+					}
 				}
 			}
-			else
+
+			if ( appearDir.isLeft() )
 			{
 				if(
-					//( ( body.x >= camRect.x - body.width ) && (body.x <= camRect.x + 20) )
-					//||
-					( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - 20))
+					( ( body.x + body.width >= camRect.x ) && (body.x + body.width <= camRect.x + 10) )
 					)
 				{
-					objectMap[returnList[i] ->id] = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+					if(type == "enemy")
+					{
+						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						if(enermySprite != nullptr )
+						enermyMap[returnList[i] ->id] = enermySprite;
+					}	
+					else
+					{
+						ObjectSprite* objectSprite = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						if( objectSprite != nullptr )
+						objectMap[returnList[i] ->id] =  objectSprite;
+					}
+				}
+			}
+			
+			if( appearDir.isUp())
+			{
+				if( (body.y + body.height  >= camRect.y ) && ( body.y + body.height  <= camRect.y - 20) )
+				{
+					if(type == "enemy")
+					{
+						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						if(enermySprite != nullptr )
+						enermyMap[returnList[i] ->id] = enermySprite;
+					}	
+					else
+					{
+						ObjectSprite* objectSprite = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						if( objectSprite != nullptr )
+						objectMap[returnList[i] ->id] =  objectSprite;
+					}
 				}
 			}
 
 			
+				
 			
 		}
 	}
@@ -426,7 +467,11 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 						sprite -> onCollision( r );
 					else
 					{
-						// Object dan vs cau ... :D
+						if ( objectIt -> second ->getName().find("weapon") != std::string::npos )
+						{	
+							/*std::string s = typeid(objectIt -> second).name();
+							std::cout << s;*/
+						}
 					}
 				}
 			}
@@ -603,15 +648,37 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 
 #pragma endregion ObjectvsMap
 
+		RectF cameraRect = cam ->getRect();
+
 #pragma region
-	RectF r = cam ->getRect();
-	sprite -> onCameraCollision(r);
+		sprite ->getBody();
+	sprite -> onCameraCollision(cameraRect);
 #pragma endregion playervsCamera
+
+
+#pragma region
+	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)
+	{
+		it -> second -> onCameraCollision(cameraRect);
+	}
+	// update through rect list of object
+	for (std::map < int, ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); it++)
+	{
+		it -> second -> onCameraCollision(cameraRect);
+	}
+
+#pragma endregion EnemyObjectvsCamera
+
 
 	// update through rect list of player
 	sprite ->updateThroughRect();
 	// update through rect list of enermy
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)
+	{
+		it -> second -> updateThroughRect();
+	}
+	// update through rect list of object
+	for (std::map < int, ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); it++)
 	{
 		it -> second -> updateThroughRect();
 	}

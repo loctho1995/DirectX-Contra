@@ -7,6 +7,17 @@
 #include "EnermyGunRotating.h"
 
 EnermyCreator* EnermyCreator:: instance = nullptr;
+
+EnermyCreator::EnermyCreator() 
+{
+	// set up the map direction by function addAppearDirection(std::string name , Direction dir )
+}
+
+void EnermyCreator:: addAppearDirection(std::string name , Direction dir )
+{
+	appearDirections[name] = dir;
+}
+
 EnermyCreator* EnermyCreator :: getInstance()
 {
 	if(instance == nullptr)
@@ -87,4 +98,69 @@ ObjectSprite* EnermyCreator :: createObjectSprite(std::string name, int respawnX
     }
 
 	return nullptr;
+}
+
+
+Direction EnermyCreator :: getAppearDir(std:: string name )
+{
+	if (name == "bridge")
+    {
+		return ( new ObjectBridge(-100, -100, 2) )->getAppearDir();
+    }
+
+    if (name == "staticweapons")
+    {
+        return ( new ObjectStaticWeapon(-100, -100,BulletTypes::S) ) ->getAppearDir();
+    }
+
+    if (name == "staticweaponm")
+    {
+        return ( new ObjectStaticWeapon(-100, -100, BulletTypes::M) ) ->getAppearDir();
+    }
+
+    if (name == "staticweaponf")
+    {
+        return ( new ObjectStaticWeapon(-100, -100, BulletTypes::F) ) ->getAppearDir();
+    }
+
+    if (name == "staticweaponb")
+    {
+        return ( new ObjectStaticWeapon(-100, -100, BulletTypes::B)) ->getAppearDir();
+    }
+
+    if (name == "staticweaponr")
+    {
+        return ( new ObjectStaticWeapon(-100, -100, BulletTypes::R)) ->getAppearDir();
+    }
+
+    if (name == "staticweaponl")
+    {
+        return (new ObjectStaticWeapon(-100, -100, BulletTypes::L)) ->getAppearDir();
+    }
+
+	if (name == "gunrotating")
+	{
+		return ( new EnermyGunRotating(-100, -100) ) ->getAppearDir();
+	}
+
+	if (name == "cannon")
+	{
+		return ( new EnermyCannon(-100, -100) ) ->getAppearDir() ;
+	}
+    if (name == "soldier")
+    {
+        return ( new EnermySoldier(-100, -100) ) ->getAppearDir();
+    }
+
+	if( name == "gunboss1" )
+	{
+		return ( new EnermyGunBoss1Sprite ( -100, -100)) ->getAppearDir();
+	}
+	if(name == "finalboss1")
+	{
+		return ( new EnermyFinalBoss1Sprite( -100, -100 )) ->getAppearDir();
+	}
+
+
+	return Direction::createNone();
 }

@@ -9,6 +9,7 @@ EnermySoldierDieState::EnermySoldierDieState(EnermyData *pData)
     this->pData->vx = 0;
     this->pData->vy = -3.0f;
     this->pData->isHittable = false;
+    this->pData->isThrougable = true;
 
     acceleration = 0.1f;
 }

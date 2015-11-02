@@ -4,7 +4,10 @@
 class EnermySprite : public Sprite
 {
 public:
-	EnermySprite() {}
+	EnermySprite() 
+	{
+		pData = new EnermyData();
+	}
 	//EnermySprite(std::string mapName){}
 	virtual ~EnermySprite() {}
 	virtual RectF getBody() { return pData ->getBody(); }
@@ -79,7 +82,16 @@ public:
 	{
 		return pData -> isThrougable;
 	}
+	virtual void onCameraCollision(RectF cameraRect) 
+	{
+		if( !pData -> getBody().checkCollision(cameraRect) )
+			pData -> isDesTroyed = true;
+	}
 
+	virtual Direction getAppearDir() 
+	{
+		return pData -> appearDir;
+	}
 
 protected:
 	EnermyData* pData;
