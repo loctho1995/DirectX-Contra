@@ -5,7 +5,10 @@
 class Sprite
 {
 public:
-	Sprite() {}
+	Sprite() 
+	{
+		pData = new SpriteData();
+	}
 	virtual ~Sprite() {}
 	virtual void draw(Camera* cam) = 0 ;
 	virtual void update() = 0;  
@@ -46,6 +49,11 @@ public:
 	virtual void die() {}
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
+	virtual void onCameraCollision(RectF cameraRect) 
+	{
+		if( !pData -> getBody ().checkCollision(cameraRect) )
+			pData -> isDesTroyed = true;
+	}
 protected:
 	SpriteData* pData;
 };

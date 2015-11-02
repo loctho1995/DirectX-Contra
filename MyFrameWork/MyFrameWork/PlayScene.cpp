@@ -19,8 +19,6 @@ PlayScene ::PlayScene(int mapID)
 void PlayScene::onCollision()
 {
     pMap->onCollision(pPlayer, cam);
-    pPlayer->setCameraTo(cam);
-    pPlayer->setCameraRect(cam->getRect());
 }
 
 void PlayScene::handleInput()
@@ -96,6 +94,8 @@ void PlayScene::onUpdate()
     pMap->onUpdate(pPlayer, cam);
     pMap->onSupportSprite(pPlayer);
     pPlayer->update();
+	cam ->setPosition( pPlayer->getX(), pPlayer->getY() );
+	pPlayer -> setCameraRect (cam ->getRect());
 }
 void PlayScene::render()
 {

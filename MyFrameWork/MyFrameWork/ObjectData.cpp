@@ -1,10 +1,11 @@
 #include "ObjectData.h"
 
-ObjectData::ObjectData(void)
+ObjectData::ObjectData()
 {
+	appearDir = Direction ::createRight();
 }
 
 
-ObjectData::~ObjectData(void)
+ObjectData::~ObjectData()
 {
 }

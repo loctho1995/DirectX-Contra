@@ -26,10 +26,10 @@ public:
 	{
 		switch (pData ->bulletType)
 		{
-		case PlayerData::BulletType::M :
+		case BulletTypes::M :
 			pData ->Bullets.push_back(new PlayerMBullet( x ,   y , false, angle));
 			break;
-		case PlayerData::BulletType::S :
+		case BulletTypes::S :
 		{
 			float offset = M_PI / 18;
 				
@@ -41,12 +41,12 @@ public:
 			}
 		};
 		break;
-		case PlayerData::BulletType::F :
+		case BulletTypes::F :
 		{
 			pData ->Bullets.push_back(new PlayerFBullet( x ,   y , false, angle));
 		}
 		break;
-		case PlayerData::BulletType :: L :
+		case BulletTypes :: L :
 		{
 			pData ->Bullets.clear();
 			pData ->Bullets.push_back(new PlayerLBullet( x ,   y , false, angle));

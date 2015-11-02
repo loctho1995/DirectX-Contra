@@ -3,8 +3,8 @@
 class ObjectData : public SpriteData 
 {
 public:
-	ObjectData(void);
-	virtual ~ObjectData(void);
+	ObjectData();
+	virtual ~ObjectData();
 	float playerX;
 	float playerY;
 	std :: string objectName;
@@ -12,5 +12,6 @@ public:
 	bool isEnemyCollisionable;
 	bool isAffectble;
 	int HP;
+	Direction appearDir;
 };
 

@@ -1,12 +1,12 @@
 #include "ObjectSprite.h"
 
 
-ObjectSprite::ObjectSprite(void)
+ObjectSprite::ObjectSprite()
 {
-
+	pData = new ObjectData();
 }
 
 
-ObjectSprite::~ObjectSprite(void)
+ObjectSprite::~ObjectSprite()
 {
 }

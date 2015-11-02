@@ -6,6 +6,11 @@
 class SpriteData
 {
 public:
+	SpriteData() 
+	{
+		isDesTroyed = false;
+		isHittable = true;
+	}
 	RectF getBody()
 	{
 		RectF r;
@@ -23,9 +28,6 @@ public:
 	
 	
 public:
-	SpriteData()	
-	{
-	}
 	float transform( float val)
 	{
 		if ( dir.isLeft()  )

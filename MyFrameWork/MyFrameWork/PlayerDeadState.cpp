@@ -14,6 +14,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	isMoving = false;
 	pData -> vx = -pData->transform(speedX);
 	pData ->isHittable = false;
+	pData -> hittableCounter = 0;
 	
 }
 

@@ -5,6 +5,7 @@
 #include "PlayerFBullet.h"
 #include "PlayerLBullet.h"
 #include "CollisionRect.h"
+#include "Define.h"
 class PlayerData : public SpriteData
 {
 public:
@@ -40,20 +41,20 @@ public:
 		LIE,
 		COUNT
 	};
-	enum BulletType
+	/*enum BulletType
 	{
 		F,
 		L,
 		M,
 		R,
 		S
-	};
+	};*/
 	bool isFiring;
 	std::vector<BulletSprite *> Bullets;
 	int nFiringHoldFrames;
 	int count;
 	RectF cameraRect;
-	BulletType bulletType;
+	BulletTypes bulletType;
 	int hittableCounter;
 	int nonHittableFrames;
 };

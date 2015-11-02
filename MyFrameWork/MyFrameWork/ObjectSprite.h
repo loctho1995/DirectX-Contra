@@ -5,8 +5,8 @@
 class ObjectSprite : public Sprite
 {
 public:
-	ObjectSprite(void);
-	virtual ~ObjectSprite(void);
+	ObjectSprite();
+	virtual ~ObjectSprite();
 
 	//EnermySprite(std::string mapName){}
 
@@ -54,7 +54,11 @@ public:
 	virtual bool isHittable() {return pData -> isHittable;}
 
 	virtual std::string getName() {return pData ->objectName;} 
-
+	virtual void onCameraCollision(RectF cameraRect) 
+	{
+		if( !this -> pData -> getBody ().checkCollision(cameraRect) )
+			this -> pData -> isDesTroyed = true;
+	}
 
 
 	virtual void beShooted( int damage) 
@@ -78,7 +82,10 @@ public:
 	{
 		return pData -> isAffectble;
 	} 
-
+	virtual Direction getAppearDir() 
+	{
+		return pData -> appearDir;
+	}
 protected:
 	ObjectData* pData;
 };

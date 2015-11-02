@@ -9,15 +9,19 @@
 #include "EnermySprite.h"
 #include "ObjectSprite.h"
 #include "ObjectStaticWeapon.h"
-
+#include <map>
 class EnermyCreator
 {
 private:
 	static EnermyCreator* instance;
-	EnermyCreator() {}
+	EnermyCreator();
+	void addAppearDirection(std::string name , Direction dir );
 public:
 	static EnermyCreator* getInstance();
 	EnermySprite * createEnermySprite(std::string enermyName, int respawnX, int respawnY );
 	ObjectSprite* createObjectSprite(std::string name, int respawnX, int respawnY );
+	Direction getAppearDir(std:: string name );
+	std::map < std::string , Direction > appearDirections;
+	
 
 };

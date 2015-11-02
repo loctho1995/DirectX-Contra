@@ -7,23 +7,23 @@ class Direction
 public:
 	bool isRight()
 	{
-		return dir == Right;
+		return dir & Right;
 	}
 	bool isLeft()
 	{
-		return dir == Left;
+		return dir & Left;
 	}
 	bool isUp()
 	{
-		return dir == Up;
+		return dir & Up;
 	}
 	bool isDown()
 	{
-		return dir == Down;
+		return dir & Down;
 	}
 	bool isNone()
 	{
-		return dir == None;
+		return dir & None;
 	}
 
 	void reverse()
@@ -74,11 +74,11 @@ public:
 private:
 	enum DIR
 	{
-		Left ,
-		Right  ,
-		Up ,
-		Down,
-		None
+		Left = 0x001,
+		Right  = 0x002,
+		Up = 0x004,
+		Down = 0x008,
+		None = 0x0010
 	};
 	DIR dir;
 };

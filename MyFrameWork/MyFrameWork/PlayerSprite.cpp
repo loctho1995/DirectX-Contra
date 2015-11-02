@@ -98,12 +98,9 @@ PlayerSprite::PlayerSprite()
 
 	pData ->body = RectF( -8.0f, -27.0f, 16.0f, 27.0f);
 
-	pData ->bulletType = PlayerData::BulletType::S;
+	pData ->bulletType = BulletTypes::S;
 
-	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);
-
-	
-	
+	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);	
 
 }
 
@@ -193,19 +190,15 @@ int PlayerSprite ::  getDamage()
 	
 	switch (pData ->bulletType)
 	{
-	case PlayerData::F:
+	case BulletTypes::F:
 		return 1;
-		break;
-	case PlayerData::L:
+	case BulletTypes::L:
+		return 1;	
+	case BulletTypes::M:
 		return 1;
-		break;
-	case PlayerData::M:
+	case BulletTypes::S:
 		return 1;
-		break;
-	case PlayerData::S:
-		return 1;
-		break;
 	default:
-		break;
+		return 1;
 	}
 }
