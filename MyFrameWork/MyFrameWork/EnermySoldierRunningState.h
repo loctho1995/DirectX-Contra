@@ -4,8 +4,6 @@
 #include "EnermySoldierJumpingState.h"
 #include "EnermySoldierFallingState.h"
 
-const float SOLDIER_RANGE_TO_JUMP = 5.0f;
-
 class EnermySoldierRunningState : public EnermyState
 {
 public:
@@ -15,7 +13,6 @@ public:
     void onUpdate();
     //void onCollision(RectF rect);
     void onCollision(CollisionRectF rect);
-
 private:
     float acceleration;
     bool isFallDown;

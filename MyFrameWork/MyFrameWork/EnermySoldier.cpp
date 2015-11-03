@@ -40,3 +40,13 @@ void EnermySoldier::die()
 {
     this->pData->pState = new EnermySoldierDieState(this->pData);
 }
+
+
+void EnermySoldier::onCameraCollision(RectF cameraRect)
+{
+    if (this->pData->x - (cameraRect.x + cameraRect.width) >= -SOLDIER_RANGE_TO_TURN)
+    {
+        if (this->pData->dir.isRight())
+            this->pData->dir = Direction::createLeft();
+    }
+}

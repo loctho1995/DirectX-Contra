@@ -22,7 +22,10 @@ void ObjectStaticWeaponCloseState::onUpdate()
 
     if (currentFramecount >= frameDelay)
     {
-        this->pData->pState = new ObjectStaticWeaponPreparingState(this->pData, true);
+        if (this->pData->playerX - this->pData->x >= -OBJECT_STATIC_WEAPON_RANGE_OPEN)
+        {
+            this->pData->pState = new ObjectStaticWeaponPreparingState(this->pData, true);
+        }        
     }
     else
     {

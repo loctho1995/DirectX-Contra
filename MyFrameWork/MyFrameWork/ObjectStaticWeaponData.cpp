@@ -8,7 +8,7 @@ ObjectStaticWeaponData::ObjectStaticWeaponData()
     this->isDesTroyed = false;
     this->isAffectble = false;
     this->isHittable = true;      
-    this->isEnemyCollisionable = true;
+    this->isEnemyCollisionable = false;
     this->isPlayerCollisionable = true;
     bulletType = BulletTypes::N;
 }

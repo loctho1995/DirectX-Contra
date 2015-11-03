@@ -79,3 +79,8 @@ BulletTypes ObjectStaticWeapon::getBulletType()
 {
     return ((ObjectStaticWeaponData*)(this->pData))->bulletType;
 }
+
+void ObjectStaticWeapon::onCameraCollision(RectF rect)
+{
+    this->pData->pState->onCameraCollision(rect);
+}
