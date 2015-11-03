@@ -43,6 +43,12 @@ public:
 	virtual bool isHittable() {return pData -> isHittable;}
 	virtual int getDamage();
 	void setCameraRect(RectF r);
+	void setBulletType (BulletTypes type)
+	{
+		if( type != BulletTypes::R )
+			pData -> bulletType = type;
+	}
+	
 	
 private:
 	PlayerData* pData;

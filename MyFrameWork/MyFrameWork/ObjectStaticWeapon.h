@@ -16,6 +16,7 @@ public:
 
     void beShooted(int damage);
     BulletTypes getBulletType();
+	void die();
 
     void onCameraCollision(RectF rect);
 };

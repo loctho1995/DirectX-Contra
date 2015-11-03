@@ -84,3 +84,8 @@ void ObjectStaticWeapon::onCameraCollision(RectF rect)
 {
     this->pData->pState->onCameraCollision(rect);
 }
+
+void ObjectStaticWeapon::die()
+{
+	pData ->isDesTroyed = true;
+}

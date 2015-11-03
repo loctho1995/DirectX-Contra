@@ -469,8 +469,12 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 					{
 						if ( objectIt -> second ->getName().find("weapon") != std::string::npos )
 						{	
-							/*std::string s = typeid(objectIt -> second).name();
-							std::cout << s;*/
+							ObjectStaticWeapon * weapon = dynamic_cast< ObjectStaticWeapon *> (objectIt -> second);
+							if(weapon)
+							{
+								sprite ->setBulletType (weapon ->getBulletType());
+								objectIt -> second ->die();
+							}
 						}
 					}
 				}
@@ -607,12 +611,9 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			for (int i = 0; i < objectCollisionReturnList.size(); i++)
 			{
 				CollisionRectF cRect = objectCollisionReturnList[i];
-				if(objectIt ->second ->isAffectble())
+				if( objectIt -> second ->getBody().checkCollision(cRect.rect)  )
 				{
-					if( objectIt -> second ->getBody().checkCollision(cRect.rect)  )
-					{
-									objectIt -> second -> onCollision( cRect );
-					}
+								objectIt -> second -> onCollision( cRect );
 				}
 			}
 		
@@ -626,14 +627,13 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		{
 			for (std:: map < int ,ObjectSprite* > :: iterator jobjectIt = objectMap.begin() ; jobjectIt != objectMap.end(); jobjectIt++)
 			{
-				//CollisionRectF cRect = objectCollisionReturnList[i];
 
 				RectF iBody = iobjectIt ->second ->getBody();
 				RectF jBody = jobjectIt ->second ->getBody();
 
 				if(iobjectIt ->second ->isAffectble())
 				{
-					if( !jobjectIt -> second -> isAffectble() && iBody.checkCollision(jBody))
+					if( iBody.checkCollision(jBody) && iobjectIt != jobjectIt)
 					{
 						iobjectIt -> second -> onCollision ( jobjectIt -> second ->getCollisionRect() );
 					}
