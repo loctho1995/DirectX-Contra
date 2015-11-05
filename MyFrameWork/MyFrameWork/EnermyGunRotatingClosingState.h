@@ -9,6 +9,5 @@ public:
 
 	void onUpdate();
 private:
-	float iDistance;
 	int iFrame;
 };

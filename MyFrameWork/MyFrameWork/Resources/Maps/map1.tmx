@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="104">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="119">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
   <data encoding="base64" compression="zlib">
-   eJztmNdvFEEMxp0Loffee++99yoR4IEWeocAoYUiHkH85Xwn7SgjM17bs3u3h3QPP5mZXXvGiz1f5gaIaKBPnz5ZtCIG2b8ngaHivclsPFCMub/m5x2Hdfh+pf2X5ZV6XvZdBoX1UnnG36P9bAqYCqb17X9pp5NcGzHteh0qbIuNZ4CZYBaYnRjz91tGP+84rt+wnrT/srzK4qS+S0tYT8ozXmcOmAvm9a3JzgcLesguBItI7x9+LgcWgyVgKVgGlrPxCiGe5ucdh3UknbHqqaQ3ufrE8+T7XAlW9a3Zrqbe0B1u14C1YB1YDzaAjRH8XA5sApvBFrC1GG+LxlJdaX7esaYzHj1N6U2uPvE8ud92sKNBa63buuN51wvzO8Eual4Hud0N9oC9YB/YDw5EhP/3g+BQweHCHmHz8Tj1PrfcP/Vce0/z13TUuk9Npy1x4nhHwbEGrbWe647nXa9p3bPY4+AETfTPyYhQH6fAaXAGnAXnwPlono/5+9zy96Xn2nuaP9cRXvfWfWr9o8Xh8S6Aiw1aq65Y42n6YdWduuNW1T/LupfAZXCF5P5p+rzMtd/BD0rX/E9nHKl3PHEkexUMd8F2an9V9UNar9u6lKOz18B1cIPk/mn6vMy1v8BvStf9H2ccqX88cSR7E9zqgu3U/qrqh7Se9LxT9zurbsdxboM74C792z8jBbnnWu65WNd5O6LQ7Ti9qh9178erH5quefOvqntavnGce+A+eAAegkcRoT5yz7Xcc9HqJ32/8Fyre+s6dcXJzavT+pG7P209q35I8YO/N3/r73qpfZf1aUqHHoMn4Cml9ecZVT+frPNe+xy8SNjw/CXJNe/Jq644uXl1Sz+0ee9+rPoh5a/pk7aupn+Sf6ov4/k4zivwGryhdP+MgrfgnWDfk64r0vyY4D/mXEfy/0By3Wt5xdYTx7NPTz6diCvpRl36ZdUPq7/VajoTxx1OWK0/Yx36CD6BzyTff8rQ6vALTfRrOAPGaaIuU/6peh1NxAt23ODfLax9mcqjLB/Pd276XiTdf7x/r1j1R7sHabpY9X7Ztu27z1fy909OPVWp77rj9WKf5eQTx/tGvfG7Hz//rXro1R/tHsT1RZqv8jsq1542fwGKTEld
+   eJztmNeP1EAMxmf3OHrvvffeOxwdifZAO3qHA452FPEI4i/ni5TRjsw4tifZZJHy8JOZTGyPg2e+m+045zotLS1JdAOGyL8ngeH8vclk3MnH1F/ys459Hrpebv1FdcXmi77LEJMvVmf4PbK5KWAqmNba/9JOd3xvhGT9OpzbLhnPADPBLDA7Mqbvd5V+1nHYvz4ft/6iuorixL5Ll8nH1RnmmQPmgnmtVdn5YMEA2YVgkZP3Dz2XPYvBErAULAPLyXgFE0/ys459Hk5ntHrK6U2qPtE66TpXglWtVdvVbjB0h9o1YC1YB9aDDWBjAD2XPZvAZrAFbM3H24Ix11eSn3Us6YxFT2N6k6pPtE7qtx3saNBq+7bqeNZ8/vlOsMs1r4PU7gZ7wF6wD+wHBwL8//tBcCjncG6PkOfhOPY+tdQ/Ni+9J/lLOqpdp6TTmjhhvKPgWINW289Vx7Pma1r3NPY4OOF6++dkgO+PU+A0GAFnwFlwLnhOx/R9aun73Lz0nuRPdYT2vXad0v6R4tB458GFBq1WV7TxJP3Q6k7VccvqnybvRXAJXHb8/mn6vEy138EPF+/5n8Y43N6xxOHsFXC1Btuv9ZXVDy5f3bqUorPXwHVww/H7p+nzMtX+Ar9dvO//GONw+8cSh7M3wa0abL/WV1Y/uHzcfL/ud1rdDuPcBnfAXffv/hnNST3XUs/Fqs7bUYG64wyqflS9Hqt+SLpmrb+s7kn1hnHugfvgAXgIHgX4/kg911LPRa0f9/38vNT32jxVxUmtq9/6kbo+KZ9WP7j43t9av/Z3PW7dXF/FdOgxeAKeurj+PHPlzyftc6t9Dl5ErJ9/6fiet9RVVZzUuurSD+m5dT1a/eDql/RJyivpX9nvlsV5BV6DNy6+f8bAW/COse+drCvc83HGf9yYh/P/4Pi+l+oKrSWOZZ2WevoRlzt/q9IvrX5o/bVW0pnUuLSOLM9H8Al8dvz9pwipD7+43n71Z8CE6/VlzD/Wr2OReN5OKPzrQrsvY3UU1WP5zk3fi7j7j/XvFa1OSPcgSRfL3i8zm919vjr7/knppzL9XXW8QdxnKfWE8b65wfjdj57/2nPdqj/SPUira2V+R6Xak/EXPNtKDg==
   </data>
  </layer>
  <objectgroup name="CollisionRect">
@@ -71,5 +71,10 @@
   <object id="98" name="gunboss1" type="enemy" x="3219" y="127" width="12" height="8"/>
   <object id="100" name="gunboss1" type="enemy" x="3241" y="127.333" width="12" height="8"/>
   <object id="103" name="finalboss1" type="enemy" x="3228.67" y="163" width="9.33333" height="12.6667"/>
+  <object id="104" name="gunrotating" type="enemy" x="1248" y="144" width="32" height="32"/>
+  <object id="105" name="gunrotating" type="enemy" x="1632" y="112" width="32" height="32"/>
+  <object id="106" name="gunrotating" type="enemy" x="1824" y="112" width="32" height="32"/>
+  <object id="107" name="gunrotating" type="enemy" x="2976" y="176" width="32" height="32"/>
+  <object id="108" name="gunrotating" type="enemy" x="3104" y="176" width="32" height="32"/>
  </objectgroup>
 </map>

@@ -5,6 +5,7 @@ EnermyGunRotatingOpeningState::EnermyGunRotatingOpeningState(EnermyData *pData)
 {
 	this->pData = pData;
 	this->pData->iCurrentArr = EnermyGunRotatingData::OPEN;
+	this->pData->isHittable = true;
 	iFrame = 0;
 }
 

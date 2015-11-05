@@ -8,8 +8,6 @@ EnermyGunRotating::EnermyGunRotating(float respawnX, float respawnY)
 	pData->x = respawnX;
 	pData->y = respawnY;
 
-	pData->HP = 1;
-
 	this->initTextureArrays(EnermyGunRotatingData::COUNT);
 	this->addTextureArray(EnermyGunRotatingData::CLOSE, "close",1,6);
 	this->addTextureArray(EnermyGunRotatingData::OPEN, "open", 1, 6);
@@ -29,9 +27,11 @@ EnermyGunRotating::EnermyGunRotating(float respawnX, float respawnY)
 	pData->ppTextureArrays[EnermyGunRotatingData::DIE]->setAnchorPoint(0.5f, 0.5f);
 
 	pData->dir = Direction::createRight();
-	pData->body = RectF(0.0f, 0.0f, 32.0f, 32.0f);
+	pData->body = RectF(-16.0f, -32.0f, 32.0f, 32.0f);
 	pData->vx = pData->vy = 0;
 	pData->pState = new EnermyGunRotatingClosingState(pData);
+	// phai xet anchorPoint cho tat ca array luon
+	//body cua ban hinh nhu chua dung roi.
 }
 
 EnermyGunRotating::~EnermyGunRotating()

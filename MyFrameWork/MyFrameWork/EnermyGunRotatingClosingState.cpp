@@ -15,9 +15,11 @@ void EnermyGunRotatingClosingState::onUpdate()
 {
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
 	
-	iFrame++;
-	if (iFrame == 2)
+	
+	if (pData->x - pData->playerX < 95)
 	{
+		iFrame++;
+		if (iFrame == 2)
 		transition(new EnermyGunRotatingOpeningState(pData));
 	}
 
