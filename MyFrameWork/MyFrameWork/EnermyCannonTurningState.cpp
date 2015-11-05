@@ -1,21 +1,17 @@
 #include "EnermyCannonTurningState.h"
-#include "EnermyCannonFiringState.h"
-#include "EnermyCannonDeadState.h"
-#include "EnermyCannonData.h"
-#include "PlayerMBullet.h"
 
 
 EnermyCannonTurningState::EnermyCannonTurningState(EnermyData* pData)
 {
 	this->pData = pData;
-	float tanalpha = 0;
+	tanalpha = 0;
 	if (this->pData->x == this->pData->playerX)
 	{
 		tanalpha = 2.0f;
 	}
 	else
 	{
-		tanalpha = (float)(this->pData->y - this->pData->body.height / 2 - this->pData->playerY) / (this->pData->x - this->pData->playerX);
+		tanalpha = (float)((this->pData->y-this->pData->body.height/2) - this->pData->body.height / 2 - this->pData->playerY) / (this->pData->x - this->pData->playerX);
 	}
   	if (tanalpha < 0.24f)
 	{

@@ -15,6 +15,7 @@ public:
 		TURN60,
 		FIRE,
 		DEAD,
+		PREPARE,
 		COUNT
 	};
 };

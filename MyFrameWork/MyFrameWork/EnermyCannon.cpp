@@ -1,6 +1,4 @@
 #include "EnermyCannon.h"
-#include "EnermyCannonAppearingState.h"
-#include "EnermyCannonTurningState.h"
 
 EnermyCannon::EnermyCannon(int respawnX, int respawnY)
 {
@@ -11,17 +9,22 @@ EnermyCannon::EnermyCannon(int respawnX, int respawnY)
 
 	this->initTextureArrays(EnermyCannonData::COUNT);
 	this->addTextureArray(EnermyCannonData::APPEAR, "appear", 6, 4);
+	pData->ppTextureArrays[EnermyCannonData::APPEAR]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::TURN0, "standzero", 3, 6);
+	pData->ppTextureArrays[EnermyCannonData::TURN0]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::TURN30, "standthirty", 3, 6);
+	pData->ppTextureArrays[EnermyCannonData::TURN30]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::TURN60, "standsixty", 3, 6);
+	pData->ppTextureArrays[EnermyCannonData::TURN60]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::FIRE, "standzero", 3, 6);
+	pData->ppTextureArrays[EnermyCannonData::FIRE]->setAnchorPoint(0.5f, 1.0f);
 	pData->ppTextureArrays[EnermyCannonData::DEAD] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 4);
-	pData->ppTextureArrays[EnermyCannonData::DEAD]->setAnchorPoint(0.5f, 0.5f);
+	pData->ppTextureArrays[EnermyCannonData::DEAD]->setAnchorPoint(0.5f, 1.0f);
 
 	pData->dir = Direction::createRight();
-	pData->body = RectF(-32.0f, -32.0f, 32.0f, 32.0f);
-	pData->HP = 1;
-	pData->pState = new EnermyCannonAppearingState(pData);
+	pData->body = RectF(-16.0f, -32.0f, 32.0f, 32.0f);
+	pData->HP = 8;
+	pData->pState = new EnermyCannonPreaparingState(pData);
 	
 }
 

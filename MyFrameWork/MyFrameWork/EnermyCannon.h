@@ -3,6 +3,9 @@
 #include "EnermyCannonData.h"
 #include "Camera.h"
 #include "PlayerSprite.h"
+#include "EnermyCannonPreaparingState.h"
+#include "EnermyCannonAppearingState.h"
+#include "EnermyCannonTurningState.h"
 
 class EnermyCannon : public EnermySprite
 {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="119">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="124">
  <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
@@ -76,5 +76,10 @@
   <object id="106" name="gunrotating" type="enemy" x="1824" y="112" width="32" height="32"/>
   <object id="107" name="gunrotating" type="enemy" x="2976" y="176" width="32" height="32"/>
   <object id="108" name="gunrotating" type="enemy" x="3104" y="176" width="32" height="32"/>
+  <object id="119" name="capsuleweaponr" type="object" x="224" y="48" width="24" height="15"/>
+  <object id="120" name="cannon" type="enemy" x="2048" y="144" width="32" height="32"/>
+  <object id="121" name="capsuleweaponr" type="object" x="2327" y="64" width="24" height="15"/>
+  <object id="122" name="capsuleweaponl" type="object" x="2327" y="128" width="24" height="15"/>
+  <object id="123" name="cannon" type="enemy" x="2176" y="48" width="32" height="32"/>
  </objectgroup>
 </map>

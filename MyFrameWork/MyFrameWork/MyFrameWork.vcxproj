@@ -88,7 +88,9 @@
     <ClCompile Include="EnermyCannonData.cpp" />
     <ClCompile Include="EnermyCannonDeadState.cpp" />
     <ClCompile Include="EnermyCannonFiringState.cpp" />
+    <ClCompile Include="EnermyCannonPreaparingState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
+    <ClCompile Include="EnermyCreator.cpp" />
     <ClCompile Include="EnermyGunRotating.cpp" />
     <ClCompile Include="EnermyGunRotatingClosingState.cpp" />
     <ClCompile Include="EnermyGunRotatingData.cpp" />
@@ -96,6 +98,7 @@
     <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
     <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
     <ClCompile Include="EnermySoldierFallingState.cpp" />
+    <ClCompile Include="EnermyWhiteBullet.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
     <ClCompile Include="ObjectBridgeAliveState.cpp" />
     <ClCompile Include="ObjectBridgeBody.cpp" />
@@ -103,7 +106,6 @@
     <ClCompile Include="ObjectBridgeExplosionState.cpp" />
     <ClCompile Include="ObjectBridgeHead.cpp" />
     <ClCompile Include="ObjectBridgeTail.cpp" />
-    <ClCompile Include="EnermyCreator.cpp" />
     <ClCompile Include="EnermyFinalBoss1DeadState.cpp" />
     <ClCompile Include="EnermyFinalBoss1StandingState.cpp" />
     <ClCompile Include="EnermyFinnalBoss1Sprite.cpp" />
@@ -127,6 +129,10 @@
     <ClCompile Include="GunBoss1BulletMovingState.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="ObjectCapsuleWeapon.cpp" />
+    <ClCompile Include="ObjectCapsuleWeaponData.cpp" />
+    <ClCompile Include="ObjectCapsuleWeaponDropState.cpp" />
+    <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp" />
     <ClCompile Include="ObjectStaticWeapon.cpp" />
     <ClCompile Include="ObjectStaticWeaponCloseState.cpp" />
     <ClCompile Include="ObjectStaticWeaponData.cpp" />
@@ -175,7 +181,9 @@
     <ClInclude Include="EnermyCannonData.h" />
     <ClInclude Include="EnermyCannonDeadState.h" />
     <ClInclude Include="EnermyCannonFiringState.h" />
+    <ClInclude Include="EnermyCannonPreaparingState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
+    <ClInclude Include="EnermyCreator.h" />
     <ClInclude Include="EnermyGunRotating.h" />
     <ClInclude Include="EnermyGunRotatingClosingState.h" />
     <ClInclude Include="EnermyGunRotatingData.h" />
@@ -183,6 +191,7 @@
     <ClInclude Include="EnermyGunRotatingOpeningState.h" />
     <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
     <ClInclude Include="EnermySoldierFallingState.h" />
+    <ClInclude Include="EnermyWhiteBullet.h" />
     <ClInclude Include="ObjectBridge.h" />
     <ClInclude Include="ObjectBridgeAliveState.h" />
     <ClInclude Include="ObjectBridgeBody.h" />
@@ -190,7 +199,6 @@
     <ClInclude Include="ObjectBridgeExplosionState.h" />
     <ClInclude Include="ObjectBridgeHead.h" />
     <ClInclude Include="ObjectBridgeTail.h" />
-    <ClInclude Include="EnermyCreator.h" />
     <ClInclude Include="EnermyData.h" />
     <ClInclude Include="EnermyFinalBoss1Sprite.h" />
     <ClInclude Include="EnermyFinalBoss1DeadState.h" />
@@ -220,6 +228,10 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MenuScene.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectCapsuleWeapon.h" />
+    <ClInclude Include="ObjectCapsuleWeaponData.h" />
+    <ClInclude Include="ObjectCapsuleWeaponDropState.h" />
+    <ClInclude Include="ObjectCapsuleWeaponFlyingState.h" />
     <ClInclude Include="ObjectStaticWeapon.h" />
     <ClInclude Include="ObjectStaticWeaponCloseState.h" />
     <ClInclude Include="ObjectStaticWeaponData.h" />

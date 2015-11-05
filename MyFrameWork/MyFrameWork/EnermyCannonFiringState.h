@@ -1,6 +1,10 @@
 #pragma once
 #include "EnermyState.h"
 #include "EnermyData.h"
+#include "EnermyCannonTurningState.h"
+#include "EnermyCannonDeadState.h"
+#include "EnermyCannonData.h"
+#include "EnermyWhiteBullet.h"
 
 class EnermyCannonFiringState : public EnermyState
 {
@@ -11,6 +15,8 @@ public:
 	virtual void onDead();
 private:
 	int count;
-	int nHoldFrames;
+	int nShootCycle;
 	float angle;
+	float bulletX;
+	float bulletY;
 };

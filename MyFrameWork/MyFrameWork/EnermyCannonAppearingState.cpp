@@ -1,6 +1,4 @@
 #include "EnermyCannonAppearingState.h"
-#include "EnermyCannonData.h"
-#include "EnermyCannonTurningState.h"
 
 EnermyCannonAppearingState::EnermyCannonAppearingState(EnermyData *pData)
 {
