@@ -1,9 +1,9 @@
 #pragma once
 
 #include "SpriteData.h"
-#include "PlayerMBullet.h"
-#include "PlayerFBullet.h"
-#include "PlayerLBullet.h"
+#include "MBullet.h"
+#include "FBullet.h"
+#include "LBullet.h"
 #include "CollisionRect.h"
 #include "Define.h"
 class PlayerData : public SpriteData
@@ -23,6 +23,7 @@ public:
 		STANDUP,
 		STANDUPNFIRE,
 		STANDDOWN,
+		STANDDOWNNFIRE,
 		RUN,
 		RUNNFIRE,
 		RUNUP,
@@ -41,14 +42,12 @@ public:
 		LIE,
 		COUNT
 	};
-	/*enum BulletType
+	virtual void setiCurrentArray(int index)
 	{
-		F,
-		L,
-		M,
-		R,
-		S
-	};*/
+		iCurrentArr = index;
+		body = bodyRects[index];
+	}
+	RectF* bodyRects;
 	bool isFiring;
 	std::vector<BulletSprite *> Bullets;
 	int nFiringHoldFrames;

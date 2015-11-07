@@ -64,9 +64,16 @@ public:
 	{
 		return RectF (x, y,  getWidth(), getHeight());
 	}
+	void update(float x, float y)
+	{
+		setPosition(x, y);
+
+	}
 private:
 	ViewPort* viewPort;
 	RectF mapRect;
 	float x;
 	float y;
+	float translatePointX;
+	float translatePointY;
 };

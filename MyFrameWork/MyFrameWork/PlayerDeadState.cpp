@@ -8,7 +8,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	speedX = 1.0f;
 	pData -> vy = -4.0f;
 	acceleration = 0.2f;
-	pData -> iCurrentArr  =  PlayerData :: DEAD;
+	pData ->setiCurrentArray(PlayerData::DEAD);
 	count = 0;
 	nHoldFrames = 150;
 	isMoving = false;
@@ -71,7 +71,7 @@ void PlayerDeadState:: onCollision( CollisionRectF cRect)
 					pData -> vx = 0.0f;
 					speedX = 0.0f;
 					acceleration = 0.0f;
-					pData ->iCurrentArr = PlayerData::LIE;
+					pData ->setiCurrentArray(PlayerData::LIE);
 					
 
 				}
@@ -139,7 +139,7 @@ void PlayerDeadState:: onCollision( CollisionRectF cRect)
 					pData -> vx = 0.0f;
 					speedX = 0.0f;
 					acceleration = 0.0f;
-					pData ->iCurrentArr = PlayerData::LIE;
+					pData ->setiCurrentArray(PlayerData::LIE);
 					
 				}
 				else
@@ -212,7 +212,7 @@ void PlayerDeadState ::  onCameraCollision( RectF cameraRect)
 		speedX = 0.0f;
 		pData -> vx = 0.0f;
 		acceleration = 0.0f;
-		pData ->iCurrentArr = PlayerData::LIE;
+		pData ->setiCurrentArray(PlayerData::LIE);
 	}
 }
 

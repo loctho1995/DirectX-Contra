@@ -11,13 +11,13 @@ private:
 	float radius;
 	float rotationAngle;
 public:
-	PlayerFBulletMovingState( SpriteData * data , float angle )
+	PlayerFBulletMovingState( SpriteData * data , float speed, float angle )
 	{
 		pData = data;
 
 		pData -> iCurrentArr = 0;
 
-		speed = 2.0f;
+		this -> speed = speed;
 		radius = 15.0f;
 		cx = cos(angle) * radius + pData -> x;
 		cy = sin(angle) * radius + pData -> y;
@@ -39,10 +39,6 @@ public:
 	virtual void onUpdate()
 	{
 		pData ->ppTextureArrays[pData -> iCurrentArr ] ->update();
-		
-		//pData -> x += pData -> vx;
-
-		//pData -> y += pData -> vy;
 
 		cx += pData -> vx;
 
@@ -71,10 +67,6 @@ public:
 		
 		pData -> y = y;
 
-
-	}
-	void tranform()
-	{
 
 	}
 

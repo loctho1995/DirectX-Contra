@@ -36,10 +36,7 @@
     <ClCompile Include="PlayerClimbingState.cpp" />
     <ClCompile Include="PlayerDeadState.cpp" />
     <ClCompile Include="PlayerDivingState.cpp" />
-    <ClCompile Include="PlayerFBullet.cpp" />
     <ClCompile Include="PlayerJumpingState.cpp" />
-    <ClCompile Include="PlayerLBullet.cpp" />
-    <ClCompile Include="PlayerMBullet.cpp" />
     <ClCompile Include="PlayerRunningState.cpp" />
     <ClCompile Include="PlayerSprite.cpp" />
     <ClCompile Include="PlayerStandingState.cpp" />
@@ -85,6 +82,9 @@
     <ClCompile Include="EnermyCannonTurningState.cpp" />
     <ClCompile Include="EnermyCreator.cpp" />
     <ClCompile Include="EnermyWhiteBullet.cpp" />
+    <ClCompile Include="MBullet.cpp" />
+    <ClCompile Include="FBullet.cpp" />
+    <ClCompile Include="LBullet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -136,7 +136,6 @@
     <ClInclude Include="PlayerDeadState.h" />
     <ClInclude Include="PlayerDivingState.h" />
     <ClInclude Include="PlayerJumpingState.h" />
-    <ClInclude Include="PlayerMBullet.h" />
     <ClInclude Include="PlayerRunningState.h" />
     <ClInclude Include="PlayerSprite.h" />
     <ClInclude Include="PlayerStandingState.h" />
@@ -190,5 +189,9 @@
     <ClInclude Include="EnermyCannonTurningState.h" />
     <ClInclude Include="EnermyCreator.h" />
     <ClInclude Include="EnermyWhiteBullet.h" />
+    <ClInclude Include="MBullet.h" />
+    <ClInclude Include="PlayerFBulletMovingState.h" />
+    <ClInclude Include="FBullet.h" />
+    <ClInclude Include="LBullet.h" />
   </ItemGroup>
 </Project>

@@ -475,6 +475,12 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 								sprite ->setBulletType (weapon ->getBulletType());
 								objectIt -> second ->die();
 							}
+							else
+							{
+								ObjectCapsuleWeapon * weaponAnother = dynamic_cast< ObjectCapsuleWeapon *> (objectIt -> second);
+								sprite ->setBulletType (weaponAnother ->getBulletType());
+								objectIt -> second ->die();
+							}
 						}
 					}
 				}
@@ -512,6 +518,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			{
 				tempE -> beShooted( sprite ->getDamage() );
 				tempB ->die();
+				break;
 			}
 		}
 	}
@@ -613,7 +620,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 				CollisionRectF cRect = objectCollisionReturnList[i];
 				if( objectIt -> second ->getBody().checkCollision(cRect.rect)  )
 				{
-								objectIt -> second -> onCollision( cRect );
+						objectIt -> second -> onCollision( cRect );
 				}
 			}
 		

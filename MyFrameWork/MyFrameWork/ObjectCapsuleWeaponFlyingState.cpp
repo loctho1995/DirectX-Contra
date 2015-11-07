@@ -31,7 +31,7 @@ void ObjectCapsuleWeaponFlyingState::onUpdate()
 
 void ObjectCapsuleWeaponFlyingState::onDead()
 {
-	pData->isAffectble = false;
+    pData->isAffectble = false;
 	transition(new ObjectCapsuleWeaponDropState(pData));
 }
 

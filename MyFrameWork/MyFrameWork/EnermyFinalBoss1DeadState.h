@@ -8,7 +8,5 @@ public:
 	~EnermyFinalBoss1DeadState(void);
 	virtual void onUpdate() ;
 private:
-	int count;
-	int nHoldFrames;
 	
 };

@@ -27,29 +27,33 @@ public:
 		switch (pData ->bulletType)
 		{
 		case BulletTypes::M :
-			pData ->Bullets.push_back(new PlayerMBullet( x ,   y , false, angle));
+			pData ->Bullets.push_back(new MBullet( x ,   y , 4.5f, angle));
 			break;
 		case BulletTypes::S :
 		{
+			int maxNumberBullet = 5;
+			int numberBullet = pData -> Bullets.size();
+			int numberBulletWillbeCreate = min (10 - numberBullet, 5 );
 			float offset = M_PI / 18;
-				
-			float tempAngle = -M_PI / 9 - offset;
-			for (int i = 0; i < 5; i++)
+			
+			float tempAngle = -offset* ((int)(numberBulletWillbeCreate ) / 2 + 1);
+			for (int i = 0; i < numberBulletWillbeCreate; i++)
 			{
 				tempAngle += offset ;
-				pData ->Bullets.push_back(new PlayerMBullet( x ,  y , false, tempAngle + angle));
+				pData ->Bullets.push_back(new MBullet( x ,  y , 3.5f, tempAngle + angle));
 			}
-		};
-		break;
-		case BulletTypes::F :
-		{
-			pData ->Bullets.push_back(new PlayerFBullet( x ,   y , false, angle));
 		}
 		break;
-		case BulletTypes :: L :
+		case BulletTypes::F:
 		{
-			pData ->Bullets.clear();
-			pData ->Bullets.push_back(new PlayerLBullet( x ,   y , false, angle));
+			if( pData -> Bullets.size() < 3)
+				pData ->Bullets.push_back(new FBullet( x ,   y , 2.0f, angle));
+		}
+		break;
+		case BulletTypes::L:
+		{
+			this -> pData ->Bullets.clear();
+			this -> pData ->Bullets.push_back(new LBullet( x ,   y , 3.0f, angle));
 		}
 		break;
 
@@ -68,6 +72,7 @@ public:
 			}
 		}
 	}
+	
 
 
 protected:

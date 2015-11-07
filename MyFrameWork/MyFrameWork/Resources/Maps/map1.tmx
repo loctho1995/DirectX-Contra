@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="124">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="129">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
@@ -48,6 +48,7 @@
   <object id="87" type="throughable" x="3136" y="147.5" width="31" height="10"/>
   <object id="88" type="throughable" x="3169" y="181" width="29.5" height="9"/>
   <object id="89" type="&quot;&quot;" x="3009" y="211.5" width="239.5" height="12"/>
+  <object id="128" type="water" x="32" y="219" width="256" height="13"/>
  </objectgroup>
  <objectgroup name="ObjectLayer">
   <object id="37" name="bridge" type="object" x="767.667" y="115.917" width="130" height="30.083"/>

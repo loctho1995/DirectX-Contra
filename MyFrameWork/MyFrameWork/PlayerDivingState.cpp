@@ -9,15 +9,16 @@ PlayerDivingState :: PlayerDivingState(PlayerData* data)
 		this ->pData = data;
 		if( pData -> verticalDir.isDown())
 		{
-			pData -> iCurrentArr = PlayerData :: DIVEDOWN;
+			pData ->setiCurrentArray (PlayerData :: DIVEDOWN);
+
 		}
 		
 		else if( pData -> verticalDir.isUp())
 		{
-			pData -> iCurrentArr = PlayerData :: DIVEUP;
+			pData ->setiCurrentArray (PlayerData :: DIVEUP);
 		}
 		else
-			pData ->iCurrentArr = PlayerData :: DIVE;
+			pData ->setiCurrentArray (PlayerData :: DIVE);
 		
 		pData -> vy = 0.0f;
 }
@@ -40,7 +41,17 @@ void PlayerDivingState:: onUpdate()
 		if(pData ->count == 0)
 		{
 			pData ->isFiring = false;
-			pData ->iCurrentArr = PlayerData::DIVE;
+			if( pData -> verticalDir.isDown())
+			{
+				pData ->setiCurrentArray(PlayerData :: DIVEDOWN);
+			}
+
+			else if( pData -> verticalDir.isUp())
+			{
+				pData ->setiCurrentArray(PlayerData :: DIVEUP);
+			}
+			else
+				pData ->setiCurrentArray(PlayerData :: DIVE);
 		}
 	}
 }
@@ -48,15 +59,16 @@ void PlayerDivingState:: onFirePressed()
 {
 	if( pData -> verticalDir.isDown())
 	{
-		pData -> iCurrentArr = PlayerData :: DIVEDOWN;
+		pData ->setiCurrentArray(PlayerData :: DIVEDOWN);
+
 	}
 
 	else if( pData -> verticalDir.isUp())
 	{
-		pData -> iCurrentArr = PlayerData :: DIVEUP;
+		pData ->setiCurrentArray(PlayerData :: DIVEUP);
 	}
 	else
-		pData ->iCurrentArr = PlayerData::DIVENFIRE;
+		pData ->setiCurrentArray(PlayerData :: DIVENFIRE);
 	
 	pData ->isFiring = true;
 	pData ->count = 0;
@@ -116,18 +128,18 @@ void PlayerDivingState :: onVeticalDirectionPressed(Direction d)
 	pData ->verticalDir = d;
 	if(d.isDown())
 	{
-		pData ->iCurrentArr = PlayerData ::DIVEDOWN;
+		pData ->setiCurrentArray(PlayerData ::DIVEDOWN);
 	}
 	else
 	{
-		pData ->iCurrentArr = PlayerData :: DIVEUP;
+		pData ->setiCurrentArray(PlayerData ::DIVEUP);
 	}
 }
 
 void PlayerDivingState :: onVeticalDirectionReleased()
 {
 	pData ->verticalDir = Direction::createNone();
-	pData ->iCurrentArr = pData ->DIVE;
+	pData ->setiCurrentArray(PlayerData ::DIVE);
 }
 
 

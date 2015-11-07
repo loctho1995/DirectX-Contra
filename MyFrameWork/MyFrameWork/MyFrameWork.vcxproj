@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -146,10 +146,10 @@
     <ClCompile Include="PlayerClimbingState.cpp" />
     <ClCompile Include="PlayerDeadState.cpp" />
     <ClCompile Include="PlayerDivingState.cpp" />
-    <ClCompile Include="PlayerFBullet.cpp" />
+    <ClCompile Include="FBullet.cpp" />
     <ClCompile Include="PlayerJumpingState.cpp" />
-    <ClCompile Include="PlayerLBullet.cpp" />
-    <ClCompile Include="PlayerMBullet.cpp" />
+    <ClCompile Include="LBullet.cpp" />
+    <ClCompile Include="MBullet.cpp" />
     <ClCompile Include="PlayerRunningState.cpp" />
     <ClCompile Include="PlayerSprite.cpp" />
     <ClCompile Include="PlayerStandingState.cpp" />
@@ -246,8 +246,11 @@
     <ClInclude Include="PlayerData.h" />
     <ClInclude Include="PlayerDeadState.h" />
     <ClInclude Include="PlayerDivingState.h" />
+    <ClInclude Include="FBullet.h" />
+    <ClInclude Include="PlayerFBulletMovingState.h" />
     <ClInclude Include="PlayerJumpingState.h" />
-    <ClInclude Include="PlayerMBullet.h" />
+    <ClInclude Include="MBullet.h" />
+    <ClInclude Include="LBullet.h" />
     <ClInclude Include="PlayerRunningState.h" />
     <ClInclude Include="PlayerSprite.h" />
     <ClInclude Include="PlayerStandingState.h" />

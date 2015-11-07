@@ -6,7 +6,7 @@
 PlayerClimbingState :: PlayerClimbingState(PlayerData* data, bool isMoving )
 {
 	this->pData = data;
-	pData -> iCurrentArr = PlayerData :: CLIMP;
+	pData ->setiCurrentArray( PlayerData :: CLIMP);
 	pData -> vy = 0.0f;
 	count = 0;
 	nHoldFrames = 10;
