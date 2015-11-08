@@ -8,6 +8,8 @@ EnermyCannon::EnermyCannon(int respawnX, int respawnY)
 	pData->y = respawnY;
 
 	this->initTextureArrays(EnermyCannonData::COUNT);
+	this->addTextureArray(EnermyCannonData::PREPARE, "prepare", 1, 60);
+	pData->ppTextureArrays[EnermyCannonData::PREPARE]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::APPEAR, "appear", 6, 4);
 	pData->ppTextureArrays[EnermyCannonData::APPEAR]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::TURN0, "standzero", 3, 6);
@@ -18,7 +20,7 @@ EnermyCannon::EnermyCannon(int respawnX, int respawnY)
 	pData->ppTextureArrays[EnermyCannonData::TURN60]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::FIRE, "standzero", 3, 6);
 	pData->ppTextureArrays[EnermyCannonData::FIRE]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnermyCannonData::DEAD] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 4);
+	pData->ppTextureArrays[EnermyCannonData::DEAD] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
 	pData->ppTextureArrays[EnermyCannonData::DEAD]->setAnchorPoint(0.5f, 1.0f);
 
 	pData->dir = Direction::createRight();

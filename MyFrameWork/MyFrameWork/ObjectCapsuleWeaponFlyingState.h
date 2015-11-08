@@ -9,8 +9,8 @@ class ObjectCapsuleWeaponFlyingState : public ObjectState
 public:
 	ObjectCapsuleWeaponFlyingState(ObjectData* pData);
 	~ObjectCapsuleWeaponFlyingState(); 
-	virtual void onUpdate();
-	virtual void onDead();
+	void onUpdate();
+	void onDead();
 private:
 	int count;
 	int nHoldFrames;

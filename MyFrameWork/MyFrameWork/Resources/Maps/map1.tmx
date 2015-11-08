@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="129">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="130">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
@@ -82,5 +82,6 @@
   <object id="121" name="capsuleweaponr" type="object" x="2327" y="64" width="24" height="15"/>
   <object id="122" name="capsuleweaponl" type="object" x="2327" y="128" width="24" height="15"/>
   <object id="123" name="cannon" type="enemy" x="2176" y="48" width="32" height="32"/>
+  <object id="129" name="cannon" type="enemy" x="2752" y="112" width="32" height="32"/>
  </objectgroup>
 </map>

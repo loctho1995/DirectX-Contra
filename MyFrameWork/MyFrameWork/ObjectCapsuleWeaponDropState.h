@@ -10,6 +10,7 @@ public:
 	void onUpdate();
 	void onCollision(CollisionRectF rect);
 	void onCameraCollision(RectF rect);
+	void onDead();
 private:
 	float accelemeter;
 };

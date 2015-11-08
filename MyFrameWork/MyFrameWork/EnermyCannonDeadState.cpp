@@ -6,7 +6,7 @@ EnermyCannonDeadState::EnermyCannonDeadState(EnermyData* pData)
 	this->pData = pData;
 	this->pData->iCurrentArr = EnermyCannonData::DEAD;
 	pData->isHittable = false;
-	nHoldFrames = 40;
+	nHoldFrames = 22;
 	count = 0;
 }
 
