@@ -1,7 +1,7 @@
 #include "PlayerSprite.h"
 #include "PlayerJumpingState.h"
 
-PlayerSprite::PlayerSprite()
+PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 {
 
 	// Set up PlayerData
@@ -9,9 +9,9 @@ PlayerSprite::PlayerSprite()
 
 	pData -> bodyRects = new RectF [PlayerData::COUNT];
 
-	pData->x  = 50;
+	pData->x  = respawnX;
 
-	pData->y  = 50;
+	pData->y  = respawnY;
 
 	pData -> ppTextureArrays = new TextureArray* [PlayerData::COUNT];
 
