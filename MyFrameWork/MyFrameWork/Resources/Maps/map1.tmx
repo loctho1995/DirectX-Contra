@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="141">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="153">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
@@ -85,5 +85,12 @@
   <object id="129" name="cannon" type="enemy" x="2752" y="112" width="32" height="32"/>
   <object id="137" name="cameratranslateposition" type="&quot;&quot;" x="3204" y="0" width="12" height="240"/>
   <object id="140" name="respawnposition" type="&quot;&quot;" x="50" y="29.5" width="18" height="27"/>
+  <object id="141" name="sniper" type="enemy" x="304" y="174" width="18" height="39"/>
+  <object id="144" name="sniper" type="enemy" x="624" y="174" width="18" height="39"/>
+  <object id="146" name="sniper" type="enemy" x="1276" y="75" width="18" height="39"/>
+  <object id="148" name="sniper" type="enemy" x="1335" y="86" width="19" height="18"/>
+  <object id="149" name="sniper" type="enemy" x="1552" y="52" width="20" height="20"/>
+  <object id="151" name="sniper" type="enemy" x="2352" y="109" width="18" height="39"/>
+  <object id="152" name="sniper" type="enemy" x="3228" y="48" width="18" height="39"/>
  </objectgroup>
 </map>

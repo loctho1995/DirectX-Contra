@@ -19,7 +19,7 @@ EnermyWhiteBullet::EnermyWhiteBullet(float x, float y, bool  isBoosting, float a
 
 	pData->body = RectF(-pData->ppTextureArrays[0]->getWidth() / 2, -pData->ppTextureArrays[0]->getHeight(), pData->ppTextureArrays[0]->getWidth(), pData->ppTextureArrays[0]->getHeight());
 
-	pData->pState = new BulletMovingState(pData, 2.0f, angle, 0);
+	pData->pState = new BulletMovingState(pData, 1.0f, angle, 0);
 }
 
 void EnermyWhiteBullet::draw(Camera* cam)
