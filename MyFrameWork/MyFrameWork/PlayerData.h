@@ -48,6 +48,13 @@ public:
 		iCurrentArr = index;
 		body = bodyRects[index];
 	}
+	void reset()
+	{
+		this ->x = cameraRect.x + 20;
+		this ->y = cameraRect.y + 50;
+		this ->isRespawn = true;
+		this -> bulletType = BulletTypes::F;
+	}
 	RectF* bodyRects;
 	bool isFiring;
 	std::vector<BulletSprite *> Bullets;

@@ -299,6 +299,12 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 		{
 			it ->second ->die();
 		}
+
+		for (std :: map < int , ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); )
+		{
+			it -> second -> die();
+		}
+		
 	}
 
 	std::vector<BulletSprite* >& playerBullets = sprite ->getBullets();

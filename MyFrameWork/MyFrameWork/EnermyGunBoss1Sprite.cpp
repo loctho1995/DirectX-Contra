@@ -31,16 +31,16 @@ EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY)
 
 	pData ->pState = new EnermyGunBoss1StandingState(pData);
 
-	pData -> HP = 1;
+	pData -> HP = 16;
 
 	pData ->body = RectF( -6.0f, -6.0f, 12.0f, 8.0f);
 }
 void EnermyGunBoss1Sprite :: draw( Camera* cam) 
 {
 	if( pData -> dir.isRight())
-		pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam);
-	else if( pData -> dir.isLeft())
 		pData->ppTextureArrays[ pData->iCurrentArr ] -> drawFlipX(pData -> x, pData -> y , cam);
+	else if( pData -> dir.isLeft())
+		pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam);
 
 	for (int i = 0; i < pData->Bullets.size(); i++)
 	{

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="153">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="162">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
@@ -49,7 +48,10 @@
   <object id="87" type="throughable" x="3136" y="147.5" width="31" height="10"/>
   <object id="88" type="throughable" x="3169" y="181" width="29.5" height="9"/>
   <object id="89" type="&quot;&quot;" x="3009" y="211.5" width="239.5" height="12"/>
-  <object id="128" type="water" x="32" y="219" width="256" height="13"/>
+  <object id="128" type="water" x="32" y="220" width="256" height="13"/>
+  <object id="156" type="water" x="673" y="220" width="735.5" height="13"/>
+  <object id="157" type="water" x="353.5" y="220" width="255" height="13"/>
+  <object id="158" type="water" x="1506.5" y="220" width="220" height="13"/>
  </objectgroup>
  <objectgroup name="ObjectLayer">
   <object id="37" name="bridge" type="object" x="767.667" y="115.917" width="130" height="30.083"/>
@@ -72,7 +74,7 @@
   <object id="97" name="staticweapons" type="object" x="2272" y="176" width="32" height="32"/>
   <object id="98" name="gunboss1" type="enemy" x="3219" y="127" width="12" height="8"/>
   <object id="100" name="gunboss1" type="enemy" x="3241" y="127.333" width="12" height="8"/>
-  <object id="103" name="finalboss1" type="enemy" x="3228.67" y="163" width="9.33333" height="12.6667"/>
+  <object id="103" name="finalboss1" type="enemy" x="3230" y="163" width="9.33333" height="12.6667"/>
   <object id="104" name="gunrotating" type="enemy" x="1248" y="144" width="32" height="32"/>
   <object id="105" name="gunrotating" type="enemy" x="1632" y="112" width="32" height="32"/>
   <object id="106" name="gunrotating" type="enemy" x="1824" y="112" width="32" height="32"/>
@@ -85,7 +87,6 @@
   <object id="123" name="cannon" type="enemy" x="2176" y="48" width="32" height="32"/>
   <object id="129" name="cannon" type="enemy" x="2752" y="112" width="32" height="32"/>
   <object id="137" name="cameratranslateposition" type="&quot;&quot;" x="3204" y="0" width="12" height="240"/>
-  <object id="140" name="respawnposition" type="&quot;&quot;" x="50" y="29.5" width="18" height="27"/>
   <object id="141" name="sniper" type="enemy" x="304" y="174" width="18" height="39"/>
   <object id="144" name="sniper" type="enemy" x="624" y="174" width="18" height="39"/>
   <object id="146" name="sniper" type="enemy" x="1276" y="75" width="18" height="39"/>
@@ -93,5 +94,6 @@
   <object id="149" name="sniper" type="enemy" x="1552" y="52" width="20" height="20"/>
   <object id="151" name="sniper" type="enemy" x="2352" y="109" width="18" height="39"/>
   <object id="152" name="sniper" type="enemy" x="3228" y="48" width="18" height="39"/>
+  <object id="161" name="respawnposition" type="&quot;&quot;" x="55" y="32.5" width="18" height="27"/>
  </objectgroup>
 </map>

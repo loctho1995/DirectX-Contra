@@ -18,7 +18,7 @@ public:
 		pData -> iCurrentArr = 0;
 
 		this -> speed = speed;
-		radius = 15.0f;
+		radius = 13.0f;
 		cx = cos(angle) * radius + pData -> x;
 		cy = sin(angle) * radius + pData -> y;
 		
@@ -27,11 +27,11 @@ public:
 
 		if( pData -> vx >=0 ) 
 		{
-			rotationAngle = M_PI / 12;
+			rotationAngle = M_PI / 8;
 		}
 		else
 		{
-			rotationAngle = -M_PI / 12;
+			rotationAngle = -M_PI / 8;
 		}
 
 		
