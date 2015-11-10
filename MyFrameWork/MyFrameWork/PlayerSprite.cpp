@@ -56,7 +56,7 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 	pData->ppTextureArrays[PlayerData:: RUN ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: RUN] = RectF(-12.0f / 2 , -32.0f, 12.0f, 32.0f);
 
-	pData->ppTextureArrays[PlayerData::RUNNFIRE] = new TextureArray("Resources\\Sprites", "player", "runnfire", 6, 8, D3DCOLOR_XRGB(255, 255, 255));
+	pData->ppTextureArrays[PlayerData::RUNNFIRE] = new TextureArray("Resources\\Sprites", "player", "runnfire", 6, 8);
 	pData->ppTextureArrays[PlayerData:: RUNNFIRE ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: RUNNFIRE] = RectF(-12.0f / 2 , -32.0f, 12.0f, 32.0f);
 
