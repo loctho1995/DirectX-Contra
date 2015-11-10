@@ -53,18 +53,7 @@ void EnermyGunBoss1Sprite :: update()
 
 	for (int i = 0; i < pData->Bullets.size(); i++)
 	{
-		Sprite* temp = pData ->Bullets[i];
-		if( temp -> isDesTroyed	() )
-		{
-			pData ->Bullets.erase( pData ->Bullets.begin() + i);
-			delete temp;
-		}
-		else
-		{
-			temp -> update();
-		}
-		
-		
+			pData->Bullets[i] -> update();
 	}
 
 

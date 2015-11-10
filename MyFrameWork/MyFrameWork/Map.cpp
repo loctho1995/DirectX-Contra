@@ -300,7 +300,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 			it ->second ->die();
 		}
 
-		for (std :: map < int , ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); )
+		for (std :: map < int , ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); it++)
 		{
 			it -> second -> die();
 		}
