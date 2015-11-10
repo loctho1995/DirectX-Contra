@@ -85,6 +85,11 @@
     <ClCompile Include="ObjectCapsuleWeaponData.cpp" />
     <ClCompile Include="ObjectCapsuleWeaponDropState.cpp" />
     <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp" />
+    <ClCompile Include="EnemySniper.cpp" />
+    <ClCompile Include="EnemySniperData.cpp" />
+    <ClCompile Include="EnemySniperDeadState.cpp" />
+    <ClCompile Include="EnemySniperStandingState.cpp" />
+    <ClCompile Include="EnemySniperTurningState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -193,5 +198,10 @@
     <ClInclude Include="ObjectCapsuleWeaponData.h" />
     <ClInclude Include="ObjectCapsuleWeaponDropState.h" />
     <ClInclude Include="ObjectCapsuleWeaponFlyingState.h" />
+    <ClInclude Include="EnemySniperTurningState.h" />
+    <ClInclude Include="EnemySniper.h" />
+    <ClInclude Include="EnemySniperData.h" />
+    <ClInclude Include="EnemySniperDeadState.h" />
+    <ClInclude Include="EnemySniperStandingState.h" />
   </ItemGroup>
 </Project>
