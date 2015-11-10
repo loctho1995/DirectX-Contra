@@ -71,7 +71,7 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 
 	pData->ppTextureArrays[PlayerData:: JUMP ] = new TextureArray("Resources\\Sprites", "player", "jump", 4, 4); 
 	pData->ppTextureArrays[PlayerData:: JUMP ] -> setAnchorPoint(0.5f, 1.0f );
-	pData -> bodyRects[PlayerData:: JUMP] = RectF(-18.0f / 2 , -16.0f, 18.0f, 16.0f);
+	pData -> bodyRects[PlayerData:: JUMP] = RectF(-12.0f / 2 , -32.0f, 12.0f, 32.0f);
 
 
 	pData->ppTextureArrays[PlayerData:: FALL ] = new TextureArray("Resources\\Sprites", "player", "fall", 1, 60); 
@@ -110,8 +110,8 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 	pData ->dir = Direction::createRight();
 
 	pData ->verticalDir = Direction ::createNone();
-
-	pData ->bulletType = BulletTypes::F;
+	
+	pData ->bulletType = BulletTypes::S;
 
 	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);	
 

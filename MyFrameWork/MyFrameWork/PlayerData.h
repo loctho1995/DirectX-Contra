@@ -12,9 +12,9 @@ public:
 	PlayerData() 
 	{
 		hittableCounter = 0;
-		nonHittableFrames = 300;
+		nonHittableFrames = 150;
 		nFiringHoldFrames = 15;
-		
+		isRapid = false;
 	}
 	enum SpriteArrayIndex
 	{
@@ -56,4 +56,5 @@ public:
 	BulletTypes bulletType;
 	int hittableCounter;
 	int nonHittableFrames;
+	bool isRapid;
 };

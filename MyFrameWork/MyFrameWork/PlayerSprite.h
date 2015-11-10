@@ -45,8 +45,16 @@ public:
 	void setCameraRect(RectF r);
 	void setBulletType (BulletTypes type)
 	{
-		if( type != BulletTypes::R )
+		if( type != BulletTypes::R && type != BulletTypes::B)
 			pData -> bulletType = type;
+		else if (type == BulletTypes::R)
+		{
+			pData -> isRapid = true;
+		}
+		else		
+		{
+
+		}
 	}
 	
 	

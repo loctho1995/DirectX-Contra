@@ -119,11 +119,11 @@ void PlayerRunningState:: onFirePressed()
 
 	if(pData -> dir.isRight())
 	{
-		bulletX = pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x;
+		bulletX = pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x + 7;
 	}
 	else
 	{
-		bulletX = -pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x;
+		bulletX = -pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x - 7;
 	}
 
 	if( pData -> verticalDir.isDown() )
@@ -136,7 +136,7 @@ void PlayerRunningState:: onFirePressed()
 	}
 	else
 	{
-		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 + 3;
+		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 - 5;
 	}
 
 
