@@ -15,6 +15,7 @@ public:
 		nonHittableFrames = 150;
 		nFiringHoldFrames = 15;
 		isRapid = false;
+		isRespawn = true;
 	}
 	enum SpriteArrayIndex
 	{
@@ -57,4 +58,5 @@ public:
 	int hittableCounter;
 	int nonHittableFrames;
 	bool isRapid;
+	bool isRespawn;
 };

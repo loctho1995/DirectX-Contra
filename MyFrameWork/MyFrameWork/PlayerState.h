@@ -72,12 +72,13 @@ public:
 	}
 	virtual void hittableCalculation() 
 	{
-		if(!pData -> isHittable )
+		if(pData -> isRespawn )
 		{
 			pData -> hittableCounter++;
-			if((pData -> hittableCounter %= pData ->nonHittableFrames) ==0)
+			if((pData -> hittableCounter %= pData ->nonHittableFrames) == 0)
 			{
 				pData -> isHittable = true;
+				pData -> isRespawn = false;
 			}
 		}
 	}

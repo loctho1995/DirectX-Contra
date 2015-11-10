@@ -13,7 +13,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	nHoldFrames = 150;
 	isMoving = false;
 	pData -> vx = -pData->transform(speedX);
-	//pData ->isHittable = false;
+	pData ->isHittable = false;
 	pData -> hittableCounter = 0;
 	pData -> isRapid = false;
 	
@@ -34,7 +34,8 @@ void PlayerDeadState :: onUpdate()
 	{
 		pData -> x = pData -> cameraRect.x + 20;
 		pData -> y = pData -> cameraRect.y + 50;
-		pData ->isHittable = false;
+		pData ->isRespawn = true;
+		pData -> bulletType = BulletTypes::L;
 		transition(new PlayerJumpingState(pData, isMoving, 0.0f) );
 	}
 

@@ -26,6 +26,7 @@ PlayerDivingState :: PlayerDivingState(PlayerData* data)
 void PlayerDivingState::onMovePressed(Direction d)
 {
 	pData -> dir = d;
+	if(!pData ->verticalDir.isDown())
 	transition(new PlayerSwimmingState(pData));
 }
 
@@ -54,13 +55,21 @@ void PlayerDivingState:: onUpdate()
 				pData ->setiCurrentArray(PlayerData :: DIVE);
 		}
 	}
+
+	if( pData -> verticalDir.isDown())
+	{
+		pData -> isHittable = false;
+	}
+	else
+	{
+		pData -> isHittable = true;
+	}
 }
 void PlayerDivingState:: onFirePressed()
 {
 	if( pData -> verticalDir.isDown())
 	{
 		pData ->setiCurrentArray(PlayerData :: DIVEDOWN);
-
 	}
 
 	else if( pData -> verticalDir.isUp())
@@ -84,7 +93,6 @@ void PlayerDivingState:: onFirePressed()
 	else
 	{
 		bulletX = -pData -> ppTextureArrays[ pData ->iCurrentArr] ->getWidth() / 2 + pData -> x;
-		
 	}
 
 	if( pData -> verticalDir.isNone())
@@ -104,7 +112,7 @@ void PlayerDivingState:: onFirePressed()
 			angle = 0.0f;
 		}
 		else if( pData -> verticalDir.isUp())
-			angle = M_PI_2;
+			angle = -M_PI_2;
 	}
 	else
 	{
@@ -112,10 +120,8 @@ void PlayerDivingState:: onFirePressed()
 		{
 			angle = M_PI;
 		}
-		else
-		{
-			angle = M_PI_2;
-		}
+		else if( pData -> verticalDir.isUp())
+				angle = -M_PI_2;
 
 	}
 
@@ -139,6 +145,7 @@ void PlayerDivingState :: onVeticalDirectionPressed(Direction d)
 void PlayerDivingState :: onVeticalDirectionReleased()
 {
 	pData ->verticalDir = Direction::createNone();
+	pData -> isHittable = true;
 	pData ->setiCurrentArray(PlayerData ::DIVE);
 }
 
