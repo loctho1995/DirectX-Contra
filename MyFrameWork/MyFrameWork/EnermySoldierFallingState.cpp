@@ -32,3 +32,11 @@ void EnermySoldierFallingState::onCollision(CollisionRectF rect)
 {
 
 }
+
+void EnermySoldierFallingState::onCameraCollision(RectF camera)
+{
+    if (this->pData->y >= (camera.y + camera.height))
+    {
+        this->pData->isDesTroyed = true;
+    }
+}

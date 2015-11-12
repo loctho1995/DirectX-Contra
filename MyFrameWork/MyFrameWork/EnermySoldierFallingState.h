@@ -11,6 +11,7 @@ public:
 
     void onUpdate();
     void onCollision(CollisionRectF rect);
+    void onCameraCollision(RectF camera);
 
 private:
     float acceleration;
