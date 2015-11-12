@@ -319,9 +319,10 @@ void Graphics :: drawText(std::string text, RectI rect)
 
 TextureHolder* Graphics :: getTexture(std::string name)
 {
-	if(textureMap.find(name) != textureMap.end())
+	std::map<std::string , TextureHolder* > :: iterator it = textureMap.find(name);
+	if(it != textureMap.end())
 	{
-		return textureMap.find(name) ->second;
+		return it ->second;
 	}
 	else
 	{

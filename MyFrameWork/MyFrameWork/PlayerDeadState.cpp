@@ -15,6 +15,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	pData -> vx = -pData->transform(speedX);
 	pData ->isHittable = false;
 	pData -> hittableCounter = 0;
+	pData -> isRapid = false;
 	
 }
 
@@ -31,8 +32,8 @@ void PlayerDeadState :: onUpdate()
 	count++;
 	if(count == nHoldFrames)
 	{
-		pData -> x = pData -> cameraRect.x + 20;
-		pData -> y = pData -> cameraRect.y + 50;
+		pData -> reset();
+		pData -> dir = tempDir;
 		transition(new PlayerJumpingState(pData, isMoving, 0.0f) );
 	}
 
@@ -193,12 +194,12 @@ void PlayerDeadState:: onCollision( CollisionRectF cRect)
 
 void PlayerDeadState :: onMovePressed(Direction dir)
 {
-	pData ->dir = dir;
+	tempDir = dir;
 	isMoving = true;
 }
 void PlayerDeadState :: onMoveReleased( Direction dir)
 {
-	pData ->dir = dir;
+	tempDir = dir;
 	isMoving = false;
 }
 

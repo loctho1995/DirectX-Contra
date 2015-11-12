@@ -15,7 +15,7 @@ GunBoss1BulletMovingState :: GunBoss1BulletMovingState( SpriteData * data  )
 	float minRange = 16.0f;
 	
 	collisionLineY = 215;
-	float range = std::rand()% (int)maxRange + minRange;
+	float range = std::rand()% (int)(maxRange - minRange) + minRange;
 	float high = std::rand()% (int)maxHigh + minHigh;
 	float speedX = (float) range / nFallingFrames;
 	float speedY = ( -  0.5 * acceleration * nFallingFrames * nFallingFrames ) / nFallingFrames;

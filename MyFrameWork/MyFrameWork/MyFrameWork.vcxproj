@@ -25,7 +25,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -83,11 +83,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="base64.cpp" />
+    <ClCompile Include="EnemySniper.cpp" />
+    <ClCompile Include="EnemySniperData.cpp" />
+    <ClCompile Include="EnemySniperDeadState.cpp" />
+    <ClCompile Include="EnemySniperStandingState.cpp" />
+    <ClCompile Include="EnemySniperTurningState.cpp" />
     <ClCompile Include="EnermyCannon.cpp" />
     <ClCompile Include="EnermyCannonAppearingState.cpp" />
     <ClCompile Include="EnermyCannonData.cpp" />
     <ClCompile Include="EnermyCannonDeadState.cpp" />
-    <ClCompile Include="EnermyCannonFiringState.cpp" />
     <ClCompile Include="EnermyCannonPreaparingState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
     <ClCompile Include="EnermyCreator.cpp" />
@@ -176,11 +180,15 @@
     <ClInclude Include="CollisionRect.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Direction.h" />
+    <ClInclude Include="EnemySniper.h" />
+    <ClInclude Include="EnemySniperData.h" />
+    <ClInclude Include="EnemySniperDeadState.h" />
+    <ClInclude Include="EnemySniperStandingState.h" />
+    <ClInclude Include="EnemySniperTurningState.h" />
     <ClInclude Include="EnermyCannon.h" />
     <ClInclude Include="EnermyCannonAppearingState.h" />
     <ClInclude Include="EnermyCannonData.h" />
     <ClInclude Include="EnermyCannonDeadState.h" />
-    <ClInclude Include="EnermyCannonFiringState.h" />
     <ClInclude Include="EnermyCannonPreaparingState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
     <ClInclude Include="EnermyCreator.h" />

@@ -14,7 +14,7 @@ PlayerSwimmingState :: PlayerSwimmingState(PlayerData* data)
 		
 		else if( pData -> verticalDir.isUp())
 		{
-			pData ->setiCurrentArray (PlayerData :: DIVEUP);
+			pData ->setiCurrentArray (PlayerData :: SWIMUP);
 		}
 		else
 			pData ->setiCurrentArray (PlayerData :: DIVE);
@@ -53,7 +53,7 @@ void PlayerSwimmingState :: onUpdate()
 
 				else if( pData -> verticalDir.isUp())
 				{
-					pData ->setiCurrentArray (PlayerData :: DIVEUP);
+					pData ->setiCurrentArray (PlayerData :: SWIMUP);
 				}
 				else
 					pData ->setiCurrentArray (PlayerData :: DIVE);
@@ -110,7 +110,7 @@ void PlayerSwimmingState:: onFirePressed()
 
 	else if( pData -> verticalDir.isUp())
 	{
-		pData ->setiCurrentArray (PlayerData :: DIVEUP);
+		pData ->setiCurrentArray (PlayerData :: SWIMUP);
 	}
 	else
 		pData ->setiCurrentArray (PlayerData :: DIVENFIRE);
@@ -185,8 +185,7 @@ void PlayerSwimmingState :: onVeticalDirectionPressed( Direction d)
 	}
 	else
 	{
-		
-		pData ->setiCurrentArray (PlayerData :: DIVEUP) ;
+		pData ->setiCurrentArray (PlayerData :: SWIMUP) ;
 	}
 }
 void PlayerSwimmingState :: onVeticalDirectionReleased()

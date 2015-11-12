@@ -56,7 +56,7 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 	pData->ppTextureArrays[PlayerData:: RUN ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: RUN] = RectF(-12.0f / 2 , -32.0f, 12.0f, 32.0f);
 
-	pData->ppTextureArrays[PlayerData::RUNNFIRE] = new TextureArray("Resources\\Sprites", "player", "runnfire", 6, 8, D3DCOLOR_XRGB(255, 255, 255));
+	pData->ppTextureArrays[PlayerData::RUNNFIRE] = new TextureArray("Resources\\Sprites", "player", "runnfire", 6, 8);
 	pData->ppTextureArrays[PlayerData:: RUNNFIRE ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: RUNNFIRE] = RectF(-12.0f / 2 , -32.0f, 12.0f, 32.0f);
 
@@ -71,29 +71,33 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 
 	pData->ppTextureArrays[PlayerData:: JUMP ] = new TextureArray("Resources\\Sprites", "player", "jump", 4, 4); 
 	pData->ppTextureArrays[PlayerData:: JUMP ] -> setAnchorPoint(0.5f, 1.0f );
-	pData -> bodyRects[PlayerData:: JUMP] = RectF(-18.0f / 2 , -16.0f, 18.0f, 16.0f);
+	pData -> bodyRects[PlayerData:: JUMP] = RectF(-12.0f / 2 , -32.0f, 12.0f, 32.0f);
 
 
 	pData->ppTextureArrays[PlayerData:: FALL ] = new TextureArray("Resources\\Sprites", "player", "fall", 1, 60); 
 	pData->ppTextureArrays[PlayerData:: FALL ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: FALL] = RectF(-12.0f / 2 , -32.0f, 12.0f, 32.0f);
 
-	pData->ppTextureArrays[PlayerData:: DIVE ] = new TextureArray("Resources\\Sprites", "player", "dive", 2, 12  ); 
+	pData->ppTextureArrays[PlayerData:: DIVE ] = new TextureArray("Resources\\Sprites", "player", "dive", 2, 14  ); 
 	pData->ppTextureArrays[PlayerData:: DIVE ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: DIVE] = RectF(-12.0f / 2 , -15.0f, 12.0f, 15.0f);
 
 
-	pData->ppTextureArrays[PlayerData:: DIVEUP ] = new TextureArray("Resources\\Sprites", "player", "diveup", 1, 60  ); 
+	pData->ppTextureArrays[PlayerData:: DIVEUP ] = new TextureArray("Resources\\Sprites", "player", "diveup", 2, 14  ); 
 	pData->ppTextureArrays[PlayerData:: DIVEUP ] -> setAnchorPoint(0.5f, 1.0f );
-	pData -> bodyRects[PlayerData:: DIVEUP] = RectF(-12.0f / 2 , -15.0f, 12.0f, 15.0f);
+	pData -> bodyRects[PlayerData:: DIVEUP] = RectF(-13.0f / 2 , -17.0f, 13.0f, 17.0f);
 
 	pData->ppTextureArrays[PlayerData:: DIVEDOWN ] = new TextureArray("Resources\\Sprites", "player", "divedown", 1, 60  ); 
 	pData->ppTextureArrays[PlayerData:: DIVEDOWN ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: DIVEDOWN] = RectF(-16.0f / 2 , -7.0f, 16.0f, 7.0f);
 
-	pData->ppTextureArrays[PlayerData:: DIVENFIRE ] = new TextureArray("Resources\\Sprites", "player", "divenfire", 1, 60  ); 
+	pData->ppTextureArrays[PlayerData:: DIVENFIRE ] = new TextureArray("Resources\\Sprites", "player", "divenfire", 2, 14  ); 
 	pData->ppTextureArrays[PlayerData:: DIVENFIRE ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: DIVENFIRE] = RectF(-19.0f / 2 , -15.0f, 19.0f, 15.0f);
+
+	pData->ppTextureArrays[PlayerData:: SWIMUP ] = new TextureArray("Resources\\Sprites", "player", "swimup", 2, 14 );
+	pData->ppTextureArrays[PlayerData:: SWIMUP ] -> setAnchorPoint(0.5f, 1.0f );
+	pData -> bodyRects[PlayerData:: SWIMUP] = RectF(-15.0f / 2 , -16.0f - 2.0f, 15.0f, 16.0f);
 
 	pData->ppTextureArrays[PlayerData:: CLIMP ] = new TextureArray("Resources\\Sprites", "player", "climb", 1, 60  ); 
 	pData->ppTextureArrays[PlayerData:: CLIMP ] -> setAnchorPoint(0.5f, 1.0f );
@@ -107,10 +111,12 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 	pData->ppTextureArrays[PlayerData:: LIE ] -> setAnchorPoint(0.5f, 1.0f );
 	pData -> bodyRects[PlayerData:: LIE] = RectF(-30.0f / 2 , -10.0f, 30.0f, 10.0f);
 
+
+
 	pData ->dir = Direction::createRight();
 
 	pData ->verticalDir = Direction ::createNone();
-
+	
 	pData ->bulletType = BulletTypes::F;
 
 	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);	
@@ -131,7 +137,7 @@ PlayerSprite:: ~PlayerSprite()
 void PlayerSprite::draw(Camera* cam)
 {
 	int isDraw  = 0;
-	if( !pData ->isHittable)
+	if( pData ->isRespawn)
 	{
 		isDraw = rand()% 2;
 	}

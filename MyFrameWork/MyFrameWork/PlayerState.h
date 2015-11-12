@@ -24,13 +24,18 @@ public:
 	}
 	virtual void createBullet(float x, float y, float angle) 
 	{
+		float speed = 0.0f;
 		switch (pData ->bulletType)
 		{
 		case BulletTypes::M :
-			pData ->Bullets.push_back(new MBullet( x ,   y , 4.5f, angle));
+			speed = 4.0f;
+			speed *= (pData -> isRapid )? 1.25 : 1; 
+			pData ->Bullets.push_back(new MBullet( x ,   y , speed, angle));
 			break;
 		case BulletTypes::S :
 		{
+			speed = 3.0f;
+			speed *= (pData -> isRapid == true)? 1.25 : 1;
 			int maxNumberBullet = 5;
 			int numberBullet = pData -> Bullets.size();
 			int numberBulletWillbeCreate = min (10 - numberBullet, 5 );
@@ -40,20 +45,24 @@ public:
 			for (int i = 0; i < numberBulletWillbeCreate; i++)
 			{
 				tempAngle += offset ;
-				pData ->Bullets.push_back(new MBullet( x ,  y , 3.5f, tempAngle + angle));
+				pData ->Bullets.push_back(new MBullet( x ,  y , speed, tempAngle + angle));
 			}
 		}
 		break;
 		case BulletTypes::F:
 		{
+			speed = 1.75f;
+			speed *= (pData -> isRapid )? 1.25 : 1;
 			if( pData -> Bullets.size() < 3)
-				pData ->Bullets.push_back(new FBullet( x ,   y , 2.0f, angle));
+				pData ->Bullets.push_back(new FBullet( x ,   y , speed, angle));
 		}
 		break;
 		case BulletTypes::L:
 		{
+			speed = 2.0f;
+			speed *= (pData -> isRapid )? 1.25 : 1;
 			this -> pData ->Bullets.clear();
-			this -> pData ->Bullets.push_back(new LBullet( x ,   y , 3.0f, angle));
+			this -> pData ->Bullets.push_back(new LBullet( x ,   y , speed, angle));
 		}
 		break;
 
@@ -63,12 +72,13 @@ public:
 	}
 	virtual void hittableCalculation() 
 	{
-		if(!pData -> isHittable )
+		if(pData -> isRespawn )
 		{
 			pData -> hittableCounter++;
-			if((pData -> hittableCounter %= pData ->nonHittableFrames) ==0)
+			if((pData -> hittableCounter %= pData ->nonHittableFrames) == 0)
 			{
 				pData -> isHittable = true;
+				pData -> isRespawn = false;
 			}
 		}
 	}

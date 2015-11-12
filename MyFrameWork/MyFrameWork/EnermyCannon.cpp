@@ -18,8 +18,6 @@ EnermyCannon::EnermyCannon(int respawnX, int respawnY)
 	pData->ppTextureArrays[EnermyCannonData::TURN30]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::TURN60, "standsixty", 3, 6);
 	pData->ppTextureArrays[EnermyCannonData::TURN60]->setAnchorPoint(0.5f, 1.0f);
-	this->addTextureArray(EnermyCannonData::FIRE, "standzero", 3, 6);
-	pData->ppTextureArrays[EnermyCannonData::FIRE]->setAnchorPoint(0.5f, 1.0f);
 	pData->ppTextureArrays[EnermyCannonData::DEAD] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
 	pData->ppTextureArrays[EnermyCannonData::DEAD]->setAnchorPoint(0.5f, 1.0f);
 
@@ -47,6 +45,7 @@ void EnermyCannon::draw(Camera* cam)
 		pData->Bullets[i]->draw(cam);
 	}
 }
+
 void EnermyCannon::update()
 {
 	pData->pState->onUpdate();

@@ -100,9 +100,13 @@ void PlayerStandingState:: onFirePressed()
 		
 	}
 
-	if( pData -> verticalDir.isDown() || pData -> verticalDir.isNone())
+	if( pData -> verticalDir.isDown() )
 	{
-		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 - 3;
+		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2;
+	}
+	else if ( pData -> verticalDir.isNone())
+	{
+		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 - 5;
 	}
 	else if ( pData -> verticalDir.isUp())
 	{

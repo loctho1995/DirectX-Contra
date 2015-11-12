@@ -8,8 +8,6 @@ GunBoss1BulletExploringState::GunBoss1BulletExploringState(SpriteData * data)
 
 	pData -> vx = 0.0f;
 	pData -> vy =  0.0f;
-	nHoldFrames = 48;
-	count = 0;
 }
 
 
@@ -21,9 +19,8 @@ void GunBoss1BulletExploringState::onUpdate()
 {
 
 	pData -> ppTextureArrays[pData -> iCurrentArr ] ->update();
-	count++;
-	if(count == nHoldFrames)
+	if(pData -> ppTextureArrays[pData -> iCurrentArr ] -> isLastTexture())
 	{
-		pData ->isDesTroyed = true;
+		pData -> isDesTroyed = true;
 	}
 }

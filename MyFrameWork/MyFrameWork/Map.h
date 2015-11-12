@@ -40,7 +40,6 @@ public:
 private:
 	std:: vector< TileSet* > tileSets; // vector of TileSet Pointer
 	std:: vector< Layer* > layers; // vector of Layer pointer
-	//std :: vector < RectI > collisionRects; // contains rect to collision with in map
 	std :: vector < CollisionRectF > collisionRectFs;
 	std::vector < Object*> Objects;
 	std :: map < int , EnermySprite* > enermyMap;

@@ -21,4 +21,5 @@ private:
 	int count;
 	float speedX;
 	float acceleration;
+	Direction tempDir;
 };

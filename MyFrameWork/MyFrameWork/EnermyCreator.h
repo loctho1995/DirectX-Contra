@@ -1,8 +1,8 @@
 #pragma once
 
-
 #include "EnermyInkSprite.h"
 #include "EnermySoldier.h"
+#include "EnemySniper.h"
 #include "ObjectBridgeHead.h"
 #include "ObjectBridgeBody.h"
 #include "ObjectBridgeTail.h"
@@ -11,6 +11,8 @@
 #include "ObjectStaticWeapon.h"
 #include "ObjectCapsuleWeapon.h"
 #include <map>
+
+
 class EnermyCreator
 {
 private:
@@ -23,6 +25,4 @@ public:
 	ObjectSprite* createObjectSprite(std::string name, int respawnX, int respawnY);
 	Direction getAppearDir(std::string name);
 	std::map < std::string, Direction > appearDirections;
-
-
 };
