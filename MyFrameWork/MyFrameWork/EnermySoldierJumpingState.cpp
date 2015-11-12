@@ -41,11 +41,22 @@ void EnermySoldierJumpingState::onCollision(RectF rect)
 
 void EnermySoldierJumpingState::onCollision(CollisionRectF rect)
 {
+    if (rect.type == "water")
+        return;
+
     if (pData->vy > 0)
     {
         if (this->pData->y - rect.rect.y <= 10)
         {
             pData->pState = new EnermySoldierRunningState(pData);
         }        
+    }
+}
+
+void EnermySoldierJumpingState::onCameraCollision(RectF camera)
+{
+    if (this->pData->y >= (camera.y + camera.height))
+    {
+        this->pData->isDesTroyed = true;
     }
 }

@@ -19,7 +19,6 @@ EnermySoldierRunningState::~EnermySoldierRunningState()
 
 void EnermySoldierRunningState::onUpdate()
 {
-    std::cout << "Running";
     if (!isFallDown)
         EnermyState::onUpdate();
     else
