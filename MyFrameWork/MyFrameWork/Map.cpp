@@ -206,16 +206,29 @@ void Map :: loadObject(TiXmlElement* pElement)
 		e -> Attribute("width",&width);
 		e -> Attribute("height",&height);
 
-		x = rectX;
-		y = rectY;
-
-		if(type != "object")
+		if( name == "cameratranslateposition")
 		{
-			x = rectX + width / 2;
-			y = rectY + height;
+			cameraTranslatePosition = RectF(rectX , rectY , width, height);
 		}
-		Object* object = new Object(name, type, x , y , id , width, height, RectF(rectX , rectY , width, height));
-		Objects.push_back(object);
+		else if ( name == "respawnposition" )
+		{
+			respawnX = rectX + width / 2;
+			respawnY = rectY + height;
+		}
+		else
+		{
+			x = rectX;
+			y = rectY;
+
+			if(type != "object")
+			{
+				x = rectX + width / 2;
+				y = rectY + height;
+			}
+			Object* object = new Object(name, type, x , y , id , width, height, RectF(rectX , rectY , width, height));
+			Objects.push_back(object);
+		}
+		
 	}
 }
 
@@ -475,6 +488,12 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 								sprite ->setBulletType (weapon ->getBulletType());
 								objectIt -> second ->die();
 							}
+							else
+							{
+								ObjectCapsuleWeapon * weaponAnother = dynamic_cast< ObjectCapsuleWeapon *> (objectIt -> second);
+								sprite ->setBulletType (weaponAnother ->getBulletType());
+								objectIt -> second ->die();
+							}
 						}
 					}
 				}
@@ -512,6 +531,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			{
 				tempE -> beShooted( sprite ->getDamage() );
 				tempB ->die();
+				break;
 			}
 		}
 	}
@@ -613,7 +633,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 				CollisionRectF cRect = objectCollisionReturnList[i];
 				if( objectIt -> second ->getBody().checkCollision(cRect.rect)  )
 				{
-								objectIt -> second -> onCollision( cRect );
+						objectIt -> second -> onCollision( cRect );
 				}
 			}
 		
@@ -631,7 +651,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 				RectF iBody = iobjectIt ->second ->getBody();
 				RectF jBody = jobjectIt ->second ->getBody();
 
-				if(iobjectIt ->second ->isAffectble())
+				if(!iobjectIt ->second ->isAffectble())
 				{
 					if( iBody.checkCollision(jBody) && iobjectIt != jobjectIt)
 					{
@@ -829,6 +849,20 @@ void Map :: onUpdate(PlayerSprite* sprite, Camera* cam)
 	}
 
 
+}
+
+float Map :: getResX()
+{
+	return respawnX;
+}
+float Map :: getResY()
+{
+	return respawnY;
+}
+
+RectF Map :: getCameraTranslatePoint()
+{
+	return cameraTranslatePosition;
 }
 #pragma endregion publicFunction
 

@@ -36,10 +36,7 @@
     <ClCompile Include="PlayerClimbingState.cpp" />
     <ClCompile Include="PlayerDeadState.cpp" />
     <ClCompile Include="PlayerDivingState.cpp" />
-    <ClCompile Include="PlayerFBullet.cpp" />
     <ClCompile Include="PlayerJumpingState.cpp" />
-    <ClCompile Include="PlayerLBullet.cpp" />
-    <ClCompile Include="PlayerMBullet.cpp" />
     <ClCompile Include="PlayerRunningState.cpp" />
     <ClCompile Include="PlayerSprite.cpp" />
     <ClCompile Include="PlayerStandingState.cpp" />
@@ -72,10 +69,11 @@
     <ClCompile Include="EnermyGunRotatingDieState.cpp" />
     <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
     <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
-    <ClCompile Include="ObjectCapsuleWeapon.cpp" />
-    <ClCompile Include="ObjectCapsuleWeaponData.cpp" />
-    <ClCompile Include="ObjectCapsuleWeaponDropState.cpp" />
-    <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp" />
+    <ClCompile Include="EnermyCreator.cpp" />
+    <ClCompile Include="EnermyWhiteBullet.cpp" />
+    <ClCompile Include="MBullet.cpp" />
+    <ClCompile Include="FBullet.cpp" />
+    <ClCompile Include="LBullet.cpp" />
     <ClCompile Include="EnermyCannon.cpp" />
     <ClCompile Include="EnermyCannonAppearingState.cpp" />
     <ClCompile Include="EnermyCannonData.cpp" />
@@ -83,8 +81,10 @@
     <ClCompile Include="EnermyCannonFiringState.cpp" />
     <ClCompile Include="EnermyCannonPreaparingState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
-    <ClCompile Include="EnermyCreator.cpp" />
-    <ClCompile Include="EnermyWhiteBullet.cpp" />
+    <ClCompile Include="ObjectCapsuleWeapon.cpp" />
+    <ClCompile Include="ObjectCapsuleWeaponData.cpp" />
+    <ClCompile Include="ObjectCapsuleWeaponDropState.cpp" />
+    <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -136,7 +136,6 @@
     <ClInclude Include="PlayerDeadState.h" />
     <ClInclude Include="PlayerDivingState.h" />
     <ClInclude Include="PlayerJumpingState.h" />
-    <ClInclude Include="PlayerMBullet.h" />
     <ClInclude Include="PlayerRunningState.h" />
     <ClInclude Include="PlayerSprite.h" />
     <ClInclude Include="PlayerStandingState.h" />
@@ -177,10 +176,12 @@
     <ClInclude Include="EnermyGunRotatingOpeningState.h" />
     <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
     <ClInclude Include="Define.h" />
-    <ClInclude Include="ObjectCapsuleWeapon.h" />
-    <ClInclude Include="ObjectCapsuleWeaponData.h" />
-    <ClInclude Include="ObjectCapsuleWeaponDropState.h" />
-    <ClInclude Include="ObjectCapsuleWeaponFlyingState.h" />
+    <ClInclude Include="EnermyCreator.h" />
+    <ClInclude Include="EnermyWhiteBullet.h" />
+    <ClInclude Include="MBullet.h" />
+    <ClInclude Include="PlayerFBulletMovingState.h" />
+    <ClInclude Include="FBullet.h" />
+    <ClInclude Include="LBullet.h" />
     <ClInclude Include="EnermyCannon.h" />
     <ClInclude Include="EnermyCannonAppearingState.h" />
     <ClInclude Include="EnermyCannonData.h" />
@@ -188,7 +189,9 @@
     <ClInclude Include="EnermyCannonFiringState.h" />
     <ClInclude Include="EnermyCannonPreaparingState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
-    <ClInclude Include="EnermyCreator.h" />
-    <ClInclude Include="EnermyWhiteBullet.h" />
+    <ClInclude Include="ObjectCapsuleWeapon.h" />
+    <ClInclude Include="ObjectCapsuleWeaponData.h" />
+    <ClInclude Include="ObjectCapsuleWeaponDropState.h" />
+    <ClInclude Include="ObjectCapsuleWeaponFlyingState.h" />
   </ItemGroup>
 </Project>

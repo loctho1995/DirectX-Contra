@@ -6,17 +6,18 @@
 PlayerStandingState::PlayerStandingState(PlayerData* data)
 {
     this->pData = data;
+
     if (pData->verticalDir.isDown())
     {
-        pData->iCurrentArr = PlayerData::STANDDOWN;
+		pData->setiCurrentArray(PlayerData::STANDDOWN);
     }
 
     else if (pData->verticalDir.isUp())
     {
-        pData->iCurrentArr = PlayerData::STANDUP;
+		pData->setiCurrentArray(PlayerData::STANDUP);
     }
     else
-        pData->iCurrentArr = PlayerData::STAND;
+		pData->setiCurrentArray(PlayerData::STAND);
     pData->vy = 0.0f;
 }
 
@@ -37,7 +38,7 @@ void PlayerStandingState:: onJumpPressed()
 		pData ->cThroughRect.push_back( pData ->cSupportRect );
 		pData -> y += 1;
 		//pData -> ly += 1;
-		transition( new PlayerJumpingState(pData, false, 0.0f));
+		transition( new PlayerJumpingState(pData, false, -0.21f));
 	}
 	
 }
@@ -53,7 +54,18 @@ void PlayerStandingState:: onUpdate()
 		if(pData ->count == 0)
 		{
 			pData ->isFiring = false;
-			pData ->iCurrentArr = PlayerData::STAND;
+
+			if( pData -> verticalDir.isDown())
+			{
+				pData ->setiCurrentArray(PlayerData::STANDDOWN);
+			}
+
+			else if( pData -> verticalDir.isUp())
+			{
+				pData ->setiCurrentArray(PlayerData::STANDUP);
+			}
+			else
+				pData ->setiCurrentArray(PlayerData::STAND);
 		}
 	}
 }
@@ -61,15 +73,15 @@ void PlayerStandingState:: onFirePressed()
 {
 	if( pData -> verticalDir.isDown())
 	{
-		pData -> iCurrentArr = PlayerData :: STANDDOWN;
+		pData ->setiCurrentArray(PlayerData::STANDDOWNNFIRE);
 	}
 
 	else if( pData -> verticalDir.isUp())
 	{
-		pData -> iCurrentArr = PlayerData :: STANDUPNFIRE;
+		pData ->setiCurrentArray(PlayerData::STANDUPNFIRE);
 	}
 	else
-		pData ->iCurrentArr = PlayerData::STANDNFIRE;
+		pData ->setiCurrentArray(PlayerData::STANDNFIRE);
 	
 	pData ->isFiring = true;
 	pData ->count = 0;
@@ -90,7 +102,7 @@ void PlayerStandingState:: onFirePressed()
 
 	if( pData -> verticalDir.isDown() || pData -> verticalDir.isNone())
 	{
-		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2;
+		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 - 3;
 	}
 	else if ( pData -> verticalDir.isUp())
 	{
@@ -129,18 +141,18 @@ void PlayerStandingState :: onVeticalDirectionPressed(Direction d)
 	pData ->verticalDir = d;
 	if(d.isDown())
 	{
-		pData ->iCurrentArr = PlayerData ::STANDDOWN;
+		pData ->setiCurrentArray (PlayerData ::STANDDOWN);
 	}
 	else
 	{
-		pData ->iCurrentArr = PlayerData :: STANDUP;
+		pData ->setiCurrentArray (PlayerData ::STANDUP);
 	}
 }
 
 void PlayerStandingState :: onVeticalDirectionReleased()
 {
 	pData ->verticalDir = Direction::createNone();
-	pData ->iCurrentArr = pData ->STAND;
+	pData ->setiCurrentArray (PlayerData ::STAND);
 }
 void PlayerStandingState :: onDead()
 {

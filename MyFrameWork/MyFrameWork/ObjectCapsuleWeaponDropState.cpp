@@ -6,12 +6,12 @@ ObjectCapsuleWeaponDropState::ObjectCapsuleWeaponDropState(ObjectData *pData)
 	this->pData = pData;
 	this->pData->iCurrentArr = ObjectCapsuleWeaponData::DROP;
 	this->pData->isPlayerCollisionable = true;
-	this->pData->isAffectble = true;
+	this->pData->isAffectble = false;
 	this->pData->isHittable = false;
 	this->pData->vx = 0.8f;
 	this->pData->vy = -3.8f;
 
-	this->pData->body = RectF(0, 0, 24, 15);
+	this->pData->body = RectF(0.0f, 0.0f, 24.0f, 15.0f);
 	accelemeter = 0.1f;
 }
 
@@ -45,3 +45,9 @@ void ObjectCapsuleWeaponDropState::onCameraCollision(RectF rect)
 		this->pData->vx = -this->pData->vx;
 	}
 }
+
+void ObjectCapsuleWeaponDropState::onDead()
+{
+	this->pData->isDesTroyed = true;
+}
+

@@ -4,7 +4,7 @@
 class PlayerSprite : public Sprite
 {
 public:
-	PlayerSprite();
+	PlayerSprite(float respawnX, float respawnY);
 	~PlayerSprite();
 	virtual void update( );
 	virtual void draw(Camera* cam);

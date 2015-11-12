@@ -8,15 +8,15 @@ PlayerRunningState :: PlayerRunningState(PlayerData* data)
 		this ->pData = data;
 		if( pData -> verticalDir.isDown())
 		{
-			pData -> iCurrentArr = PlayerData :: RUNDOWN;
+			pData ->setiCurrentArray( PlayerData :: RUNDOWN);
 		}
 		
 		else if( pData -> verticalDir.isUp())
 		{
-			pData -> iCurrentArr = PlayerData :: RUNUP;
+			pData ->setiCurrentArray( PlayerData :: RUNUP);
 		}
 		else
-			pData ->iCurrentArr = PlayerData :: RUN;
+			pData ->setiCurrentArray( PlayerData :: RUN);
 		
 		pData -> vy = 0.0f;
 		speed = 1;
@@ -45,7 +45,8 @@ void PlayerRunningState :: onUpdate()
 			if(pData ->count == 0)
 			{
 				pData ->isFiring = false;
-				pData ->iCurrentArr = PlayerData::RUN;
+
+				pData ->setiCurrentArray(PlayerData::RUN);
 			}
 		}
 }
@@ -98,15 +99,15 @@ void PlayerRunningState:: onFirePressed()
 {
 	if( pData -> verticalDir.isDown())
 	{
-		pData -> iCurrentArr = PlayerData :: RUNDOWN;
+		pData ->setiCurrentArray( PlayerData :: RUNDOWN);
 	}
 
 	else if( pData -> verticalDir.isUp())
 	{
-		pData -> iCurrentArr = PlayerData :: RUNUP;
+		pData ->setiCurrentArray( PlayerData :: RUNUP);
 	}
 	else
-		pData ->iCurrentArr = PlayerData::RUNNFIRE;
+		pData ->setiCurrentArray( PlayerData :: RUNNFIRE);
 	
 	pData ->isFiring = true;
 
@@ -135,7 +136,7 @@ void PlayerRunningState:: onFirePressed()
 	}
 	else
 	{
-		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2;
+		bulletY = pData -> y - pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2 + 3;
 	}
 
 
@@ -179,17 +180,17 @@ void PlayerRunningState :: onVeticalDirectionPressed( Direction d)
 	pData ->verticalDir = d;
 	if(d.isDown())
 	{
-		pData ->iCurrentArr = PlayerData :: RUNDOWN;
+		pData ->setiCurrentArray( PlayerData :: RUNDOWN);
 	}
 	else
 	{
-		pData ->iCurrentArr = PlayerData :: RUNUP;
+		pData ->setiCurrentArray( PlayerData :: RUNUP);
 	}
 }
 void PlayerRunningState :: onVeticalDirectionReleased()
 {
 	pData -> verticalDir = Direction :: createNone();
-	pData -> iCurrentArr = PlayerData :: RUN;
+	pData ->setiCurrentArray( PlayerData :: RUN);
 }
 
 void PlayerRunningState :: onDead()

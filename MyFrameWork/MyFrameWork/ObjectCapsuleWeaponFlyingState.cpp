@@ -5,6 +5,8 @@ ObjectCapsuleWeaponFlyingState::ObjectCapsuleWeaponFlyingState(ObjectData* pData
 	this->pData = pData;
 	this->pData->iCurrentArr = ObjectCapsuleWeaponData::FLY;
 	this->pData->vx = 2.0f;
+	this->pData->isPlayerCollisionable = false;
+	this->pData->isAffectble = false;
 	nHoldFrames = 1;
 	count = 0;
 	crow = 0.0f;
@@ -31,7 +33,6 @@ void ObjectCapsuleWeaponFlyingState::onUpdate()
 
 void ObjectCapsuleWeaponFlyingState::onDead()
 {
-	pData->isAffectble = false;
 	transition(new ObjectCapsuleWeaponDropState(pData));
 }
 

@@ -1,15 +1,27 @@
 #pragma once
 #include "ViewPort.h"
 #include "iostream"
+#include "Direction.h"
 class Camera
 {
 public:
 	//void draw(Texture* pTexture,
-	Camera( ViewPort* viewPort, RectF rect)
+	Camera( ViewPort* viewPort, float x, float y, RectF rect, RectF cameraTranslatePoint)
 	{
 		this ->viewPort = viewPort;
+		this ->cameraTranslatePoint = cameraTranslatePoint;
 		mapRect = rect;
-		setPosition(0.0f, 0.0f);
+		setPosition(x, y);
+		if( this -> y == cameraTranslatePoint.y )
+		{
+			moveDir = Direction::createRight();
+		}
+		else if( this -> x == cameraTranslatePoint.x )
+		{
+			moveDir = Direction::createUp();
+		}
+		vx = vy = 0;
+		
 	}
 	void setPosition(float x, float y)
 	{ 
@@ -64,9 +76,41 @@ public:
 	{
 		return RectF (x, y,  getWidth(), getHeight());
 	}
+	void update(float x, float y)
+	{
+		
+		if(moveDir.isRight())
+		{
+			if( this -> x + getWidth() >= cameraTranslatePoint.x)
+			{
+				vx = 1.0f;
+				setPosition(this -> x + getWidth()/ 2 + vx, y);
+			}
+			else
+			{
+				setPosition(x, y);
+			}
+		}
+		else 
+		{
+			if( this -> y <= cameraTranslatePoint.y + cameraTranslatePoint.height)
+			{
+				vy = 1.0f;
+				setPosition(this -> x , this -> y + getHeight() + vy);
+			}
+			else
+			{
+				setPosition(x, y);
+			}
+		}
+	}
 private:
 	ViewPort* viewPort;
 	RectF mapRect;
 	float x;
 	float y;
+	float vx;
+	float vy;
+	RectF cameraTranslatePoint;
+	Direction moveDir;
 };

@@ -4,7 +4,7 @@ EnermyCannonFiringState::EnermyCannonFiringState(EnermyData* pData)
 {
 	this->pData = pData;
 	this->pData->iCurrentArr = pData->iCurrentArr;
-	nShootCycle = 72;
+	nShootCycle = 80;
 	count = 0;
 	switch (this->pData->iCurrentArr)
 	{
@@ -33,7 +33,7 @@ EnermyCannonFiringState::~EnermyCannonFiringState()
 
 void EnermyCannonFiringState::onUpdate()
 {
-	if (count == 0 || count == 12 || count == 24)
+	if (count == 0 || count == 15 || count == 30)
 	{
 		pData->Bullets.push_back(new EnermyWhiteBullet(bulletX, bulletY, true, angle));
 	}

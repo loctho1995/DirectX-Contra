@@ -34,6 +34,9 @@ public:
 	void onCollision(PlayerSprite* sprite, Camera* cam);
 	void onSupportSprite( PlayerSprite* sprite);
 	void onUpdate(PlayerSprite* sprite, Camera* cam);
+	float getResX();
+	float getResY();
+	RectF getCameraTranslatePoint();
 private:
 	std:: vector< TileSet* > tileSets; // vector of TileSet Pointer
 	std:: vector< Layer* > layers; // vector of Layer pointer
@@ -55,4 +58,7 @@ private:
 	void cleanMap(Camera* cam, PlayerSprite* sprite);
 	void addEToMap( Camera* cam );
 	std:: string mapName;
+	float respawnX;
+	float respawnY;
+	RectF cameraTranslatePosition;
 };

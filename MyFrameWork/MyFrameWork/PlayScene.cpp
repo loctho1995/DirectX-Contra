@@ -4,15 +4,16 @@
 PlayScene ::PlayScene(int mapID)
 {
 
-    pPlayer = new PlayerSprite();
+    
     //bridge->destroy();
 
     //std:: string mapName = "stage" + std::to_string(mapID);;
     std::string mapName = "map" + std::to_string(1);;
     pMap = new Map(mapName);
+	pPlayer = new PlayerSprite(pMap ->getResX(), pMap ->getResY());
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;
     viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize / 2, SCHEIGHT / 2 - viewPortSize / 2, viewPortSize, viewPortSize));
-    cam = new Camera(viewPort, pMap->getMapRect());
+	cam = new Camera(viewPort,pMap ->getResX(), pMap ->getResY(), pMap->getMapRect(), pMap ->getCameraTranslatePoint());
 
 }
 
@@ -94,7 +95,7 @@ void PlayScene::onUpdate()
     pMap->onUpdate(pPlayer, cam);
     pMap->onSupportSprite(pPlayer);
     pPlayer->update();
-	cam ->setPosition( pPlayer->getX(), pPlayer->getY() );
+	cam ->update( pPlayer->getX(), pPlayer->getY() );
 	pPlayer -> setCameraRect (cam ->getRect());
 }
 void PlayScene::render()

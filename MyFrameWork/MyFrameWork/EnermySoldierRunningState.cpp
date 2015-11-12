@@ -57,7 +57,7 @@ void EnermySoldierRunningState::onCollision(CollisionRectF rect)
 
     if (distanceLeft <= SOLDIER_RANGE_TO_JUMP)
     {
-        if (rand() % 2 == 0)
+        if (rand() % 3 != 0)
             this->pData->pState = new EnermySoldierJumpingState(this->pData);
         else
         {

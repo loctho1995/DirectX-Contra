@@ -14,15 +14,16 @@ PlayerJumpingState:: PlayerJumpingState(PlayerData* data, bool isMoving, float v
 	acceleration = 0.2f;
 
 	this-> isMoving = isMoving;
-	if(vy != 0.0f )
+	if(vy != -0.21f && vy != 0.0f)
 	{
-		pData -> iCurrentArr  =  PlayerData :: JUMP;
+		
+		pData ->setiCurrentArray(PlayerData::JUMP);
 		isJumpingPress = true;
 	}
 		
 	else
 	{
-		pData -> iCurrentArr  =  PlayerData :: FALL;
+		pData ->setiCurrentArray(PlayerData::FALL);
 		isJumpingPress = false;
 	}
 	pData ->isFiring = false;
@@ -55,9 +56,6 @@ void PlayerJumpingState :: onUpdate()
 	{
 		pData -> vx = 0.0f;
 	}
-	/*if(!isJumpingPress)
-		if(pData -> vy < 0)
-			pData -> vy = 0;*/
 		pData -> vy  += acceleration;
 
 		pData -> x += pData -> vx;
@@ -70,7 +68,6 @@ void PlayerJumpingState :: onUpdate()
 		if(pData ->count == 0)
 		{
 			pData ->isFiring = false;
-			pData ->iCurrentArr = PlayerData::JUMP;
 		}
 	}
 
@@ -392,7 +389,6 @@ void PlayerJumpingState:: onJumpRelease()
 
 void PlayerJumpingState:: onFirePressed()
 {
-	//pData ->iCurrentArr = PlayerData::JUMPNFIRE;
 	pData ->isFiring = true;
 	pData ->count = 0;
 	float bulletX;
@@ -420,7 +416,7 @@ void PlayerJumpingState:: onFirePressed()
 
 		if( pData -> verticalDir.isDown() )
 		{
-			bulletY = pData -> y ;//;- pData -> ppTextureArrays[ pData ->iCurrentArr] ->getHeight() / 2;
+			bulletY = pData -> y ;
 		}
 		else if ( pData -> verticalDir.isUp())
 		{

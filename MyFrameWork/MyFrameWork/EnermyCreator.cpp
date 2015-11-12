@@ -43,10 +43,15 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	{
 		return new EnermyCannon(respawnX, respawnY);
 	}
-	if (enermyName == "soldier")
+	if (enermyName == "soldierl")
 	{
-		return new EnermySoldier(respawnX, respawnY);
+		return new EnermySoldier(respawnX, respawnY, Direction::createLeft());
 	}
+
+    if (enermyName == "soldierl")
+    {
+        return new EnermySoldier(respawnX, respawnY, Direction::createRight());
+    }
 
 	if (enermyName == "gunboss1")
 	{
@@ -204,10 +209,14 @@ Direction EnermyCreator::getAppearDir(std::string name)
 	{
 		return (new EnermyCannon(-100, -100))->getAppearDir();
 	}
-	if (name == "soldier")
+	if (name == "soldierl")
 	{
-		return (new EnermySoldier(-100, -100))->getAppearDir();
+        return Direction::createRight();
 	}
+    if (name == "soldierr")
+    {
+        return Direction::createLeft();
+    }
 	if (name == "gunboss1")
 	{
 		return (new EnermyGunBoss1Sprite(-100, -100))->getAppearDir();

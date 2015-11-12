@@ -9,15 +9,15 @@ PlayerSwimmingState :: PlayerSwimmingState(PlayerData* data)
 		this ->pData = data;
 		if( pData -> verticalDir.isDown())
 		{
-			pData -> iCurrentArr = PlayerData :: DIVEDOWN;
+			pData ->setiCurrentArray (PlayerData :: DIVEDOWN);
 		}
 		
 		else if( pData -> verticalDir.isUp())
 		{
-			pData -> iCurrentArr = PlayerData :: DIVEUP;
+			pData ->setiCurrentArray (PlayerData :: DIVEUP);
 		}
 		else
-			pData ->iCurrentArr = PlayerData :: DIVE;
+			pData ->setiCurrentArray (PlayerData :: DIVE);
 		
 		pData -> vy = 0.0f;
 		speed = 1;
@@ -46,7 +46,17 @@ void PlayerSwimmingState :: onUpdate()
 			if(pData ->count == 0)
 			{
 				pData ->isFiring = false;
-				pData ->iCurrentArr = PlayerData::DIVE;
+				if( pData -> verticalDir.isDown())
+				{
+					pData ->setiCurrentArray (PlayerData :: DIVEDOWN);
+				}
+
+				else if( pData -> verticalDir.isUp())
+				{
+					pData ->setiCurrentArray (PlayerData :: DIVEUP);
+				}
+				else
+					pData ->setiCurrentArray (PlayerData :: DIVE);
 			}
 		}
 }
@@ -95,16 +105,16 @@ void PlayerSwimmingState:: onFirePressed()
 {
 	if( pData -> verticalDir.isDown())
 	{
-		pData -> iCurrentArr = PlayerData :: DIVEDOWN;
+		pData ->setiCurrentArray (PlayerData :: DIVEDOWN);
 	}
 
 	else if( pData -> verticalDir.isUp())
 	{
-		pData -> iCurrentArr = PlayerData :: DIVEUP;
+		pData ->setiCurrentArray (PlayerData :: DIVEUP);
 	}
 	else
-		pData ->iCurrentArr = PlayerData::DIVENFIRE;
-	
+		pData ->setiCurrentArray (PlayerData :: DIVENFIRE);
+
 	pData ->isFiring = true;
 	pData ->count = 0;
 	
@@ -175,13 +185,14 @@ void PlayerSwimmingState :: onVeticalDirectionPressed( Direction d)
 	}
 	else
 	{
-		pData ->iCurrentArr = PlayerData :: DIVEUP;
+		
+		pData ->setiCurrentArray (PlayerData :: DIVEUP) ;
 	}
 }
 void PlayerSwimmingState :: onVeticalDirectionReleased()
 {
 	pData -> verticalDir = Direction :: createNone();
-	pData -> iCurrentArr = PlayerData :: DIVE;
+	pData ->setiCurrentArray (PlayerData :: DIVE) ;
 }
 
 void PlayerSwimmingState :: onDead()

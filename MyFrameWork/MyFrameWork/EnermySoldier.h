@@ -11,7 +11,7 @@
 class EnermySoldier : public EnermySprite
 {
 public:
-    EnermySoldier(float x, float y);
+    EnermySoldier(float x, float y, Direction dir);
     ~EnermySoldier();
 
     void setSupportCollisionRect(CollisionRectF rect);
