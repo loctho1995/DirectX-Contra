@@ -6,6 +6,7 @@
 #include "EnermyCannon.h"
 #include "EnermyGunRotating.h"
 
+
 EnermyCreator* EnermyCreator::instance = nullptr;
 
 EnermyCreator::EnermyCreator()
@@ -32,8 +33,8 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	if (enermyName == "ink")
 	{
 		return new EnermyInkSprite(respawnX, respawnY);
-
 	}
+
 	if (enermyName == "gunrotating")
 	{
 		return new EnermyGunRotating(respawnX, respawnY);
@@ -43,20 +44,27 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	{
 		return new EnermyCannon(respawnX, respawnY);
 	}
+
 	if (enermyName == "soldierl")
 	{
 		return new EnermySoldier(respawnX, respawnY, Direction::createLeft());
 	}
 
-    if (enermyName == "soldierl")
+    if (enermyName == "soldierr")
     {
         return new EnermySoldier(respawnX, respawnY, Direction::createRight());
     }
+
+	if (enermyName == "sniper")
+	{
+		return new EnemySniper(respawnX, respawnY);
+	}
 
 	if (enermyName == "gunboss1")
 	{
 		return new EnermyGunBoss1Sprite(respawnX, respawnY);
 	}
+
 	if (enermyName == "finalboss1")
 	{
 		return new EnermyFinalBoss1Sprite(respawnX, respawnY);
@@ -101,6 +109,7 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 	{
 		return new ObjectStaticWeapon(respawnX, respawnY, BulletTypes::L);
 	}
+
 	//capsule weapon
 	if (name == "capsuleweapons")
 	{
@@ -131,6 +140,7 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 	{
 		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::L);
 	}
+
 	return nullptr;
 }
 
@@ -141,6 +151,7 @@ Direction EnermyCreator::getAppearDir(std::string name)
 	{
 		return (new ObjectBridge(-100, -100, 2))->getAppearDir();
 	}
+
 	//static weapon
 	if (name == "staticweapons")
 	{
@@ -171,6 +182,7 @@ Direction EnermyCreator::getAppearDir(std::string name)
 	{
 		return (new ObjectStaticWeapon(-100, -100, BulletTypes::L))->getAppearDir();
 	}
+
 	//capsule weapon
 	if (name == "capsuleweapons")
 	{
@@ -201,29 +213,40 @@ Direction EnermyCreator::getAppearDir(std::string name)
 	{
 		return (new ObjectCapsuleWeapon(-100, -100, BulletTypes::L))->getAppearDir();
 	}
+
 	if (name == "gunrotating")
 	{
 		return (new EnermyGunRotating(-100, -100))->getAppearDir();
 	}
+
 	if (name == "cannon")
 	{
 		return (new EnermyCannon(-100, -100))->getAppearDir();
 	}
-	if (name == "soldierl")
+
+    if (name == "soldierl")
 	{
         return Direction::createRight();
 	}
+
     if (name == "soldierr")
     {
         return Direction::createLeft();
     }
+
 	if (name == "gunboss1")
 	{
 		return (new EnermyGunBoss1Sprite(-100, -100))->getAppearDir();
 	}
+
 	if (name == "finalboss1")
 	{
 		return (new EnermyFinalBoss1Sprite(-100, -100))->getAppearDir();
+	}
+
+	if (name == "sniper")
+	{
+		return (new EnemySniper(-100, -100))->getAppearDir();
 	}
 
 	return Direction::createNone();
