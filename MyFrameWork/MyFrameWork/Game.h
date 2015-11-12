@@ -9,6 +9,7 @@ public :
 	Game();
 	~Game()
 	{}
-	void go();
-
+	//void go();
+	void update();
+	void render();
 };

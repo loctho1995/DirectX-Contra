@@ -9,7 +9,7 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 
 	pData -> bodyRects = new RectF [PlayerData::COUNT];
 
-	pData->x  = 50;
+	pData->x  = respawnX;
 
 	pData->y  = respawnY;
 

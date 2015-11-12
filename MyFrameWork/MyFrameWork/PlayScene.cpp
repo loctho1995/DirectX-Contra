@@ -92,11 +92,9 @@ void PlayScene::handleInput()
 }
 void PlayScene::onUpdate()
 {
-    pMap->onUpdate(pPlayer, cam);
-    pMap->onSupportSprite(pPlayer);
-    pPlayer->update();
-	cam ->update( pPlayer->getX(), pPlayer->getY() );
-	pPlayer -> setCameraRect (cam ->getRect());
+    handleInput();
+	update();
+	onCollision();
 }
 void PlayScene::render()
 {
@@ -109,4 +107,13 @@ void PlayScene::render()
 
 
     Graphics::getInstance()->endRender();
+}
+
+void PlayScene::  update()
+{
+	pMap->onUpdate(pPlayer, cam);
+    pMap->onSupportSprite(pPlayer);
+    pPlayer->update();
+	cam ->update( pPlayer->getX(), pPlayer->getY() );
+	pPlayer -> setCameraRect (cam ->getRect());
 }

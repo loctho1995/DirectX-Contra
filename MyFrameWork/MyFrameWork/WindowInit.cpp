@@ -132,6 +132,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 			
 			// Game Loop here
 
+			bool render = false;
+
 			QueryPerformanceCounter((LARGE_INTEGER*)&currTimeStamp);
 			
 			double deltaTimeInMiliSecond = (double)(currTimeStamp - prevTimeStamp) * secsPerCnt * 1000.0f;
@@ -147,12 +149,17 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 
 			}
 			
-			if(delta >= MSPF)
+			while(delta >= MSPF)
 			{
-				delta = 0.0f;
+				render = true;
+				delta -= MSPF;
+				game.update();
+			}
+
+			if(render )
+			{
 				nFrameCount++;
-				game.go();
-				
+				game.render();
 			}
 
 		}

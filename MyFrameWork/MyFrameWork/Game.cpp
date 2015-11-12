@@ -8,9 +8,18 @@ Game:: Game()
 	SceneManager::getInstance() ->createScene(new PlayScene(2));
 }
 
-void Game :: go()
+//void Game :: go()
+//{
+//	SceneManager::getInstance() ->getCurrentScene()->go();
+//}
+
+void Game :: update()
 {
-	SceneManager::getInstance() ->getCurrentScene()->go();
+	SceneManager::getInstance() ->getCurrentScene() ->onUpdate();
 }
 
+void Game :: render()
+{
+	SceneManager::getInstance() ->getCurrentScene() ->render();
+}
 

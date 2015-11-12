@@ -28,6 +28,7 @@ public:
 	virtual void handleInput();
 	virtual void render();
 	virtual void onUpdate();
+	virtual void update();
 
 private:
 	PlayerSprite* pPlayer;
