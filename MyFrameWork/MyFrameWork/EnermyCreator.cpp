@@ -12,6 +12,8 @@ EnermyCreator* EnermyCreator::instance = nullptr;
 EnermyCreator::EnermyCreator()
 {
 	// set up the map direction by function addAppearDirection(std::string name , Direction dir )
+	addAppearDirection("gunboss1",Direction::createRight());
+	addAppearDirection("finalboss1",Direction::createRight());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -28,7 +30,7 @@ EnermyCreator* EnermyCreator::getInstance()
 	return instance;
 }
 
-EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int respawnX, int respawnY)
+EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int respawnX, int respawnY, std :: vector < BulletSprite* >& bulletSprites)
 {
 	if (enermyName == "ink")
 	{
@@ -62,7 +64,7 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 
 	if (enermyName == "gunboss1")
 	{
-		return new EnermyGunBoss1Sprite(respawnX, respawnY);
+		return new EnermyGunBoss1Sprite(respawnX, respawnY, bulletSprites);
 	}
 
 	if (enermyName == "finalboss1")
@@ -145,7 +147,7 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 }
 
 
-Direction EnermyCreator::getAppearDir(std::string name)
+Direction EnermyCreator::getAppearDir(std::string name, std :: vector < BulletSprite* >& bulletSprites)
 {
 	if (name == "bridge")
 	{
@@ -236,7 +238,7 @@ Direction EnermyCreator::getAppearDir(std::string name)
 
 	if (name == "gunboss1")
 	{
-		return (new EnermyGunBoss1Sprite(-100, -100))->getAppearDir();
+		return (new EnermyGunBoss1Sprite(-100, -100, bulletSprites))->getAppearDir();
 	}
 
 	if (name == "finalboss1")

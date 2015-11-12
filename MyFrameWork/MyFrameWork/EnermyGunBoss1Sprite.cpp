@@ -1,9 +1,10 @@
 #include "EnermyGunBoss1Sprite.h"
 #include "EnermyGunBoss1StandingState.h"
 
-EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY)
+EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector)
+	:
+	EnermySprite(bulletSpriteVector)
 {
-	pData = new EnermyData();
 
 	pData -> botName = "gunboss1";
 
@@ -41,20 +42,8 @@ void EnermyGunBoss1Sprite :: draw( Camera* cam)
 		pData->ppTextureArrays[ pData->iCurrentArr ] -> drawFlipX(pData -> x, pData -> y , cam);
 	else if( pData -> dir.isLeft())
 		pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam);
-
-	for (int i = 0; i < pData->Bullets.size(); i++)
-	{
-		pData-> Bullets[i] ->draw(cam);
-	}
 }
 void EnermyGunBoss1Sprite :: update() 
 {
 	pData ->pState ->onUpdate();
-
-	for (int i = 0; i < pData->Bullets.size(); i++)
-	{
-			pData->Bullets[i] -> update();
-	}
-
-
 }

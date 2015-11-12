@@ -15,7 +15,7 @@ void EnermyGunBoss1FiringState :: onUpdate()
 {
 	if( count == 0)
 	{
-		pData -> Bullets.push_back( new GunBoss1Bullet(pData -> x - pData ->ppTextureArrays[ pData ->iCurrentArr ] -> getWidth() / 2, pData -> y ));
+		pData -> bulletsVector.push_back( new GunBoss1Bullet(pData -> x - pData ->ppTextureArrays[ pData ->iCurrentArr ] -> getWidth() / 2, pData -> y ));
 	}
 	pData ->ppTextureArrays[ pData ->iCurrentArr ] ->update();
 	count ++;

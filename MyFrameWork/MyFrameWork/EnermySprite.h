@@ -8,6 +8,11 @@ public:
 	{
 		pData = new EnermyData();
 	}
+	EnermySprite( std:: vector < BulletSprite* >& bulletsVector )
+	{
+		pData = new EnermyData(bulletsVector);
+	}
+
 	//EnermySprite(std::string mapName){}
 	virtual ~EnermySprite() {}
 	virtual RectF getBody() { return pData ->getBody(); }

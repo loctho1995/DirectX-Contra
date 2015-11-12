@@ -5,7 +5,7 @@
 class EnermyGunBoss1Sprite : public EnermySprite
 {
 public:
-	EnermyGunBoss1Sprite(int respawnX, int respawnY);
+	EnermyGunBoss1Sprite(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector);
 	virtual void draw( Camera* cam) ;
 	virtual void update();
 };

@@ -41,6 +41,7 @@ private:
 	std:: vector< TileSet* > tileSets; // vector of TileSet Pointer
 	std:: vector< Layer* > layers; // vector of Layer pointer
 	std :: vector < CollisionRectF > collisionRectFs;
+	std :: vector < BulletSprite* > bulletSprites;
 	std::vector < Object*> Objects;
 	std :: map < int , EnermySprite* > enermyMap;
 	std :: map < int , ObjectSprite* > objectMap;

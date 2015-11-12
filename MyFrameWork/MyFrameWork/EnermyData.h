@@ -5,7 +5,9 @@
 class EnermyData : public SpriteData
 {
 public :
-	EnermyData() 
+	EnermyData(std:: vector < BulletSprite* >& bulletsVector = std :: vector <BulletSprite* >())
+		:
+		bulletsVector(bulletsVector)
 	{
 		isDesTroyed = false;
 		isHittable  = true;
@@ -14,9 +16,10 @@ public :
 	float playerX;
 	float playerY;
     std::string botName; //add by Tho
-    bool isHittable; //co hiep dc con enermy nay khong ?
 	int HP;
 	bool isThrougable;
 	std:: vector < BulletSprite* > Bullets;
+	std:: vector < BulletSprite* >& bulletsVector;
+
 	Direction appearDir;
 };

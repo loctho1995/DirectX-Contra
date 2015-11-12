@@ -259,20 +259,16 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 		it++;
 	}
 
-	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it ++)
+	for (int i = 0; i < bulletSprites.size(); i++)
 	{
-		std::vector < BulletSprite* > & enermyBullets = it ->second ->getBullets();
-		for (int i = 0; i < enermyBullets.size(); i++)
+		Sprite* temp = bulletSprites[i];
+		if(!camRect.checkCollision(temp  ->getBody()) || temp ->isDesTroyed())
 		{
-			Sprite* temp = enermyBullets[i];
-			if(!camRect.checkCollision(temp  ->getBody()) || temp ->isDesTroyed())
-			{
-				
-				delete temp;
-				enermyBullets.erase(enermyBullets.begin() + i);
-			}
+			delete temp;
+			bulletSprites.erase(bulletSprites.begin() + i );
 		}
 	}
+
 
 	// clean ObjectSprite
 
@@ -344,14 +340,14 @@ void Map ::addEToMap ( Camera* cam )
 		std::string type  = returnList[i] -> type;
 		if(camRect.checkCollision( body ))
 		{
-			Direction appearDir = EnermyCreator :: getInstance() ->getAppearDir( returnList[i] -> name );
+			Direction appearDir = EnermyCreator :: getInstance() ->getAppearDir( returnList[i] -> name , bulletSprites);
 			if( appearDir.isRight())
 			{
 				if( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - 10) )
 				{
 					if(type == "enemy")
 					{
-						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y , bulletSprites);
 						if(enermySprite != nullptr )
 						enermyMap[returnList[i] ->id] = enermySprite;
 					}	
@@ -372,7 +368,7 @@ void Map ::addEToMap ( Camera* cam )
 				{
 					if(type == "enemy")
 					{
-						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y , bulletSprites);
 						if(enermySprite != nullptr )
 						enermyMap[returnList[i] ->id] = enermySprite;
 					}	
@@ -391,7 +387,7 @@ void Map ::addEToMap ( Camera* cam )
 				{
 					if(type == "enemy")
 					{
-						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y , bulletSprites);
 						if(enermySprite != nullptr )
 						enermyMap[returnList[i] ->id] = enermySprite;
 					}	
@@ -432,6 +428,11 @@ void Map :: draw(Camera* cam)
 	for (std::map < int, ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); ++it)
 	{
 		it ->second ->draw(cam);
+	}
+
+	for (int i = 0; i < bulletSprites.size(); i++)
+	{
+		bulletSprites[i] ->draw(cam);
 	}
 
 
@@ -587,19 +588,15 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 #pragma endregion EnermyvsMap
 
 #pragma region
-	for (std::map < int, EnermySprite* > ::iterator enermyIt = enermyMap.begin(); enermyIt != enermyMap.end(); enermyIt++)
+	for (int i = 0; i < bulletSprites.size(); i++)
 	{
-		std :: vector < BulletSprite* >& bullets = enermyIt ->second ->getBullets();
-		for (int i = 0; i < bullets.size(); i++)
+		Sprite* bulletE = bulletSprites[i];
+		if( sprite -> isHittable() && bulletE ->getBody().checkCollision(sprite ->getBody()) )
 		{
-			Sprite* bulletE = bullets[i];
-			if( sprite -> isHittable() && bulletE ->getBody().checkCollision(sprite ->getBody()) )
-			{
-				sprite -> die();
-				bulletE -> die();
-				break;
-			}
-		}		
+			sprite -> die();
+			bulletE -> die();
+			break;
+		}
 	}
 #pragma endregion EnermyBulletvsPlayer
 
@@ -854,7 +851,10 @@ void Map :: onUpdate(PlayerSprite* sprite, Camera* cam)
 		it ->second ->update();
 	}
 
-
+	for (std::vector < BulletSprite* > ::iterator it = bulletSprites.begin(); it != bulletSprites.end(); it++)
+	{
+		(*it) ->update();
+	}
 }
 
 float Map :: getResX()
