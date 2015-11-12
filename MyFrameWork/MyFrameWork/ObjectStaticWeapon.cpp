@@ -28,7 +28,7 @@ ObjectStaticWeapon::ObjectStaticWeapon(float x, float y, BulletTypes bulletType)
         break;
 
     case S:
-        this->pData->ppTextureArrays[ObjectStaticWeaponData::OUTX] = new TextureArray("Resources\\Sprites", "bulletimages", "f", 1, 10);
+        this->pData->ppTextureArrays[ObjectStaticWeaponData::OUTX] = new TextureArray("Resources\\Sprites", "bulletimages", "s", 1, 10);
         break;
 
     case B:
