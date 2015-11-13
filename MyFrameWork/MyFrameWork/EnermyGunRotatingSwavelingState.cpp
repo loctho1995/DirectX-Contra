@@ -17,6 +17,8 @@ EnermyGunRotatingSwavelingState::~EnermyGunRotatingSwavelingState()
 
 }
 
+bool flag;
+
 void EnermyGunRotatingSwavelingState::onUpdate()
 {
 	if (isTheFirst == true)
@@ -32,6 +34,11 @@ void EnermyGunRotatingSwavelingState::onUpdate()
 	}
 
 		index = getIndex() + 1;
+
+		if (iCurentIndex == index)// co shoot hay khong
+			flag = true;
+		else
+			flag = false;
 
 		if(iFrame == 50)
 		{
@@ -103,21 +110,21 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling, int
 	}
 	if (iFrame >iFrameShoot)
 	{
-
+		if (flag== true)
 		switch (iCurentIndex)
 		{
-		case 1: pData->Bullets.push_back(new EnermyWhiteBullet(pData->x, pData->y - pData->body.height, true, fAngle)); break;
-		case 2: pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 4, pData->y - pData->body.height, true, fAngle)); break;
-		case 3:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 2, pData->y - pData->body.height * 3 / 4, true, fAngle)); break;
-		case 4: pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width, pData->y - pData->body.height / 2, true, fAngle)); break;
-		case 5:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2, pData->y - pData->body.height * 1 / 4, true, fAngle)); break;
-		case 6:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 4, pData->y, true, fAngle)); break;
-		case 7:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x, pData->y, true, fAngle)); break;
-		case 8:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 4, pData->y, true, fAngle)); break;
-		case 9:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 2, pData->y - pData->body.height * 1 / 4, true, fAngle)); break;
-		case 10:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 2, pData->y - pData->body.height * 1 / 2, true, fAngle)); break;
-		case 11:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 2, pData->y - pData->body.height * 3 / 4, true, fAngle)); break;
-		case 12:pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 4, pData->y - pData->body.height, true, fAngle)); break;
+		case 1: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x, pData->y - pData->body.height/2, true, fAngle)); break;
+		case 2: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 4, pData->y - pData->body.height/2, true, fAngle)); break;
+		case 3:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 2, pData->y - pData->body.height * 1 / 4, true, fAngle)); break;
+		case 4: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width/2, pData->y, true, fAngle)); break;
+		case 5:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2, pData->y + pData->body.height * 1 / 4, true, fAngle)); break;
+		case 6:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 4, pData->y+pData->body.height/2, true, fAngle)); break;
+		case 7:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x, pData->y + pData->body.height / 2, true, fAngle)); break;
+		case 8:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 4, pData->y + pData->body.height / 2, true, fAngle)); break;
+		case 9:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 2, pData->y + pData->body.height * 1 / 4, true, fAngle)); break;
+		case 10:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 2, pData->y , true, fAngle)); break;
+		case 11:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width/2 , pData->y - pData->body.height * 1 / 4, true, fAngle)); break;
+		case 12:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 4, pData->y - pData->body.height/2, true, fAngle)); break;
 		default:
 			break;
 		}
@@ -133,8 +140,10 @@ float EnermyGunRotatingSwavelingState::getDistance()
 {
 	float distance;
 	int x1, y1, x2, y2;
-	x1 = pData->playerX + 9;
-	y1 = pData->playerY + 17;
+	//x1 = pData->playerX + 9;
+	//y1 = pData->playerY + 17;
+	x1 = pData->playerX ;
+	y1 = pData->playerY;
 	x2 = pData->x;
 	y2 = pData->y + pData->body.width / 2;
 	distance = sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2));
@@ -146,7 +155,8 @@ float EnermyGunRotatingSwavelingState::getAngle()
 	float angle;
 	if (getDistance() == 0.0)
 		return PI;
-	int x1 = pData->playerX + 9;
+	//int x1 = pData->playerX + 9;
+	int x1 = pData->playerX ;
 	int x2 = pData->x;
 	angle = (float)acos((x1 - x2) / getDistance());
 

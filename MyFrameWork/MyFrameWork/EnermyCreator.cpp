@@ -39,7 +39,7 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 
 	if (enermyName == "gunrotating")
 	{
-		return new EnermyGunRotating(respawnX, respawnY);
+		return new EnermyGunRotating(respawnX, respawnY, bulletSprites);
 	}
 
 	if (enermyName == "cannon")
@@ -218,7 +218,7 @@ Direction EnermyCreator::getAppearDir(std::string name, std :: vector < BulletSp
 
 	if (name == "gunrotating")
 	{
-		return (new EnermyGunRotating(-100, -100))->getAppearDir();
+		return (new EnermyGunRotating(-100, -100, bulletSprites))->getAppearDir();
 	}
 
 	if (name == "cannon")

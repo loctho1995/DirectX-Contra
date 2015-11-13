@@ -7,7 +7,7 @@
 class EnermyGunRotating :public EnermySprite
 {
 public:
-	EnermyGunRotating(float x, float y);
+	EnermyGunRotating(float x, float y, std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnermyGunRotating();
 	void update();
 	void draw(Camera *cam);

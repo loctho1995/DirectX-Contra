@@ -1,6 +1,8 @@
 #include"EnermyGunRotatingData.h"
 
-EnermyGunRotatingData::EnermyGunRotatingData()
+EnermyGunRotatingData::EnermyGunRotatingData(std::vector < BulletSprite* >& bulletsVector)
+	:
+	EnermyData(bulletsVector)
 {
 	this->botName = "gunrotating";
 	this->isHittable = false;
