@@ -20,7 +20,7 @@ void EnermyCannonTurningState::onUpdate()
 	this->getIndex();
 	if ((count == 0 || count == 25 || count == 50) && pData->playerX<pData->x && pData->playerY<pData->y)
 	{
-		pData->Bullets.push_back(new EnermyWhiteBullet(bulletX, bulletY, true, angle));
+		pData->bulletsVector.push_back(new EnermyWhiteBullet(bulletX, bulletY, true, angle));
 	}
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
 	count++;

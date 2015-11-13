@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="168">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="169">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
@@ -48,7 +48,7 @@
   <object id="87" type="throughable" x="3136" y="147.5" width="31" height="10"/>
   <object id="88" type="throughable" x="3169" y="181" width="29.5" height="9"/>
   <object id="89" type="&quot;&quot;" x="3009" y="211.5" width="239.5" height="12"/>
-  <object id="128" type="water" x="32" y="220" width="256" height="13"/>
+  <object id="128" type="water" x="16" y="218" width="272" height="13"/>
   <object id="156" type="water" x="673" y="220" width="735.5" height="13"/>
   <object id="157" type="water" x="353.5" y="220" width="255" height="13"/>
   <object id="158" type="water" x="1506.5" y="220" width="220" height="13"/>
@@ -80,10 +80,10 @@
   <object id="106" name="gunrotating" type="enemy" x="1824" y="112" width="32" height="32"/>
   <object id="107" name="gunrotating" type="enemy" x="2976" y="176" width="32" height="32"/>
   <object id="108" name="gunrotating" type="enemy" x="3104" y="176" width="32" height="32"/>
-  <object id="119" name="capsuleweaponr" type="object" x="224" y="48" width="24" height="15"/>
+  <object id="119" name="capsuleweaponr" type="object" x="231" y="51" width="24" height="15"/>
   <object id="120" name="cannon" type="enemy" x="2048" y="144" width="32" height="32"/>
-  <object id="121" name="capsuleweaponr" type="object" x="2327" y="64" width="24" height="15"/>
-  <object id="122" name="capsuleweaponl" type="object" x="2327" y="128" width="24" height="15"/>
+  <object id="121" name="capsuleweaponr" type="object" x="2322" y="64" width="24" height="15"/>
+  <object id="122" name="capsuleweaponl" type="object" x="2322" y="128" width="24" height="15"/>
   <object id="123" name="cannon" type="enemy" x="2176" y="48" width="32" height="32"/>
   <object id="129" name="cannon" type="enemy" x="2752" y="112" width="32" height="32"/>
   <object id="137" name="cameratranslateposition" type="&quot;&quot;" x="3204" y="0" width="12" height="240"/>
@@ -99,5 +99,6 @@
   <object id="149" name="sniper" type="enemy" x="1552" y="52" width="20" height="20"/>
   <object id="151" name="sniper" type="enemy" x="2352" y="109" width="18" height="39"/>
   <object id="152" name="sniper" type="enemy" x="3228" y="48" width="18" height="39"/>
+  <object id="168" name="capsuleweapons" type="object" x="1123" y="59" width="24" height="15"/>
  </objectgroup>
 </map>

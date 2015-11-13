@@ -1,6 +1,8 @@
 #include "EnermyCannonData.h"
 
-EnermyCannonData::EnermyCannonData()
+EnermyCannonData::EnermyCannonData(std::vector < BulletSprite* >& bulletsVector )
+	:
+	EnermyData(bulletsVector)
 {
 	this->botName = "cannon";
 	this->isHittable = true;

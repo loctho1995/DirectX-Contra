@@ -1,9 +1,10 @@
 #include "EnermyCannon.h"
 
-EnermyCannon::EnermyCannon(int respawnX, int respawnY)
+EnermyCannon::EnermyCannon(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector) 
+	: 
+	EnermySprite(bulletSpriteVector)
 {
-	pData = new EnermyCannonData();
-
+	pData = new EnermyCannonData(bulletSpriteVector);
 	pData->x = respawnX;
 	pData->y = respawnY;
 
@@ -39,18 +40,9 @@ void EnermyCannon::draw(Camera* cam)
 		pData->ppTextureArrays[pData->iCurrentArr]->draw(pData->x, pData->y, cam);
 	else if (pData->dir.isLeft())
 		pData->ppTextureArrays[pData->iCurrentArr]->drawFlipX(pData->x, pData->y, cam);
-
-	for (int i = 0; i < pData->Bullets.size(); i++)
-	{
-		pData->Bullets[i]->draw(cam);
-	}
 }
 
 void EnermyCannon::update()
 {
 	pData->pState->onUpdate();
-	for (int i = 0; i < pData->Bullets.size(); i++)
-	{
-		pData->Bullets[i]->update();
-	}
 }

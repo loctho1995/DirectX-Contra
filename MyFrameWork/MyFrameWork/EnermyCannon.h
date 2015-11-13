@@ -11,7 +11,7 @@ class EnermyCannon : public EnermySprite
 {
 private:
 public:
-	EnermyCannon(int respawnX, int respawnY);
+	EnermyCannon(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnermyCannon();
 
 	virtual void update();

@@ -4,7 +4,7 @@
 class EnermyCannonData : public EnermyData
 {
 public:
-	EnermyCannonData();
+	EnermyCannonData(std::vector < BulletSprite* >& bulletsVector = std::vector <BulletSprite* >());
 	~EnermyCannonData();
 
 	enum EnermyCannonArrayIndex

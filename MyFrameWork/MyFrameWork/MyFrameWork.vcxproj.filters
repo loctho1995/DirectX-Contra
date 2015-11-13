@@ -69,12 +69,10 @@
     <ClCompile Include="EnermyGunRotatingDieState.cpp" />
     <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
     <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
-    <ClCompile Include="EnermyCreator.cpp" />
     <ClCompile Include="EnermyWhiteBullet.cpp" />
     <ClCompile Include="MBullet.cpp" />
     <ClCompile Include="FBullet.cpp" />
     <ClCompile Include="LBullet.cpp" />
-    <ClCompile Include="ObjectCapsuleWeapon.cpp" />
     <ClCompile Include="ObjectCapsuleWeaponData.cpp" />
     <ClCompile Include="ObjectCapsuleWeaponDropState.cpp" />
     <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp" />
@@ -83,14 +81,16 @@
     <ClCompile Include="EnemySniperDeadState.cpp" />
     <ClCompile Include="EnemySniperStandingState.cpp" />
     <ClCompile Include="EnemySniperTurningState.cpp" />
+    <ClCompile Include="BitMapFont.cpp" />
+    <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="EnermyCannon.cpp" />
     <ClCompile Include="EnermyCannonAppearingState.cpp" />
     <ClCompile Include="EnermyCannonData.cpp" />
     <ClCompile Include="EnermyCannonDeadState.cpp" />
     <ClCompile Include="EnermyCannonPreaparingState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
-    <ClCompile Include="BitMapFont.cpp" />
-    <ClCompile Include="TestScene.cpp" />
+    <ClCompile Include="EnermyCreator.cpp" />
+    <ClCompile Include="ObjectCapsuleWeapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -182,7 +182,6 @@
     <ClInclude Include="EnermyGunRotatingOpeningState.h" />
     <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
     <ClInclude Include="Define.h" />
-    <ClInclude Include="EnermyCreator.h" />
     <ClInclude Include="EnermyWhiteBullet.h" />
     <ClInclude Include="MBullet.h" />
     <ClInclude Include="PlayerFBulletMovingState.h" />
@@ -197,13 +196,14 @@
     <ClInclude Include="EnemySniperData.h" />
     <ClInclude Include="EnemySniperDeadState.h" />
     <ClInclude Include="EnemySniperStandingState.h" />
+    <ClInclude Include="BitMapFont.h" />
+    <ClInclude Include="TestScene.h" />
     <ClInclude Include="EnermyCannon.h" />
     <ClInclude Include="EnermyCannonAppearingState.h" />
     <ClInclude Include="EnermyCannonData.h" />
     <ClInclude Include="EnermyCannonDeadState.h" />
     <ClInclude Include="EnermyCannonPreaparingState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
-    <ClInclude Include="BitMapFont.h" />
-    <ClInclude Include="TestScene.h" />
+    <ClInclude Include="EnermyCreator.h" />
   </ItemGroup>
 </Project>

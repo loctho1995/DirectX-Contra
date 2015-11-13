@@ -28,7 +28,7 @@ ObjectCapsuleWeapon::ObjectCapsuleWeapon(int respawnX, int respawnY, BulletTypes
 		break;
 
 	case S:
-		this->pData->ppTextureArrays[ObjectCapsuleWeaponData::DROP] = new TextureArray("Resources\\Sprites", "bulletimages", "f", 1, 10);
+		this->pData->ppTextureArrays[ObjectCapsuleWeaponData::DROP] = new TextureArray("Resources\\Sprites", "bulletimages", "s", 1, 10);
 		break;
 
 	case B:
