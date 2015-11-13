@@ -287,36 +287,6 @@ void Graphics :: drawTileTmx(LPDIRECT3DTEXTURE9 texture ,int width, int height, 
 	
 }
 
-void Graphics :: drawText(std::string text, RectI rect)
-{
-	ID3DXFont *font;
-	std::wstring tempSourceFile(text.begin(), text.end());
-	
-	// 
-	D3DXCreateFont(  
-    pDevice,
-    20,	// Font size
-    0,  // Default width
-    FW_NORMAL, // Font weight
-    0, // MipMap
-     false, // Italic
-    DEFAULT_CHARSET, // Charset
-    OUT_DEFAULT_PRECIS, // Output precision
-    DEFAULT_QUALITY, // Quality
-    FF_DONTCARE, // Default pitch & family
-    L"Arial", // Font name
-    &font );// Font object
-
-	RECT r;
-	r.top = rect.y;
-	r.left = rect.x;
-	r.bottom = rect.y + rect.height;
-	r.right = rect.x + rect.width;
-	
-	font ->DrawText(pSpriteHandler, tempSourceFile.c_str(), text.length(),&r, DT_CENTER,D3DCOLOR_ARGB(255, 0, 0, 255));
-	//DrawText(NULL, tempSourceFile.c_str(), text.length(),&r, DT_CENTER);
-}
-
 TextureHolder* Graphics :: getTexture(std::string name)
 {
 	std::map<std::string , TextureHolder* > :: iterator it = textureMap.find(name);
@@ -327,6 +297,72 @@ TextureHolder* Graphics :: getTexture(std::string name)
 	else
 	{
 		return nullptr;
+	}
+}
+
+void Graphics :: setFont(BitMapFont* bitmapFont)
+{
+		
+		font = bitmapFont;
+		loadTexture(font -> sourceFile, font -> name );
+		TextureHolder* textureHolder = getTexture(font -> name);
+		font -> rectWidth = textureHolder ->width / font ->nCharCol;
+		font -> rectHeight = textureHolder ->height / font ->nCharRow;
+		//setSingleColor(textureHolder ->pTexture, textureHolder ->width, textureHolder ->height);
+}
+
+void Graphics :: drawChar(LPDIRECT3DTEXTURE9 pTexture, int width, int height, char c, int size, int x, int y, D3DCOLOR color)
+{
+	
+	RECT sourceRect;
+	std::size_t charPos = font -> characterSet.find(c);
+	if(charPos == std::string::npos)
+	{
+		return;
+	}
+	
+	int col = charPos % font ->nCharCol;
+	int row = charPos / font ->nCharCol;
+
+	int dx = col * font -> rectWidth + font ->arrangeRect.x;
+	int dy = row * font -> rectHeight + font -> arrangeRect.y;
+	/*int dx = col * font -> rectWidth ;
+	int dy = row * font -> rectHeight ;*/
+	sourceRect.top = dy;
+	sourceRect.left = dx;
+	sourceRect.right = dx + font -> rectWidth;
+	sourceRect.bottom = dy + font -> rectHeight;
+
+	
+
+	D3DXVECTOR3 position(x , y , 1.0f);
+	D3DXMATRIX matrix;
+
+	D3DXMatrixTransformation2D(
+								&matrix,
+								NULL,
+								0.0f,
+								&D3DXVECTOR2((float)size / font ->size, (float)size / font ->size),
+								&D3DXVECTOR2(x + height / 2, y + height / 2),
+								0.0f,
+								NULL);
+
+	pSpriteHandler->SetTransform( &matrix);
+	pSpriteHandler ->Draw(pTexture, &sourceRect, NULL, &position, color);
+}
+
+void Graphics :: drawText(std::string text, int size, int x, int y, D3DCOLOR color)
+{
+	TextureHolder* textureHolder = getTexture(font -> name);
+	LPDIRECT3DTEXTURE9 pTexture = textureHolder ->pTexture;
+	int width = textureHolder -> width;
+	int height = textureHolder -> height;
+
+	for (int i = 0; i < text.length(); i++)
+	{
+		int xPos = i * ( (float)font ->arrangeRect.width) + x;
+		int yPos = y;
+		drawChar(textureHolder ->pTexture,width, height, text[i], size, xPos, yPos, color);
 	}
 }
 

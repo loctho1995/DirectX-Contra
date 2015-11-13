@@ -89,6 +89,8 @@
     <ClCompile Include="EnermyCannonDeadState.cpp" />
     <ClCompile Include="EnermyCannonPreaparingState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
+    <ClCompile Include="BitMapFont.cpp" />
+    <ClCompile Include="TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -201,5 +203,7 @@
     <ClInclude Include="EnermyCannonDeadState.h" />
     <ClInclude Include="EnermyCannonPreaparingState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
+    <ClInclude Include="BitMapFont.h" />
+    <ClInclude Include="TestScene.h" />
   </ItemGroup>
 </Project>

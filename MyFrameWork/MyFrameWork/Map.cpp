@@ -383,7 +383,7 @@ void Map ::addEToMap ( Camera* cam )
 			
 			if( appearDir.isUp())
 			{
-				if( (body.y + body.height  >= camRect.y ) && ( body.y + body.height  <= camRect.y - 20) )
+				if( (body.y + body.height  >= camRect.y ) && ( body.y + body.height  <= camRect.y + 20) )
 				{
 					if(type == "enemy")
 					{
@@ -401,7 +401,24 @@ void Map ::addEToMap ( Camera* cam )
 			}
 
 			
-				
+			if( appearDir.isDown())
+			{
+				if( (body.y  <= camRect.y + camRect.height) && ( body.y  >= camRect.y + camRect.height - 20) )
+				{
+					if(type == "enemy")
+					{
+						EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y , bulletSprites);
+						if(enermySprite != nullptr )
+						enermyMap[returnList[i] ->id] = enermySprite;
+					}	
+					else
+					{
+						ObjectSprite* objectSprite = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+						if( objectSprite != nullptr )
+						objectMap[returnList[i] ->id] =  objectSprite;
+					}
+				}
+			}	
 			
 		}
 	}

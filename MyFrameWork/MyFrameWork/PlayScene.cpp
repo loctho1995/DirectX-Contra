@@ -3,12 +3,7 @@
 
 PlayScene ::PlayScene(int mapID)
 {
-
-    
-    //bridge->destroy();
-
-    //std:: string mapName = "stage" + std::to_string(mapID);;
-    std::string mapName = "map" + std::to_string(1);;
+    std:: string mapName = "stage" + std::to_string(mapID);;
     pMap = new Map(mapName);
 	pPlayer = new PlayerSprite(pMap ->getResX(), pMap ->getResY());
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;

@@ -5,7 +5,7 @@
 
 Game:: Game()
 {
-	SceneManager::getInstance() ->createScene(new PlayScene(2));
+	SceneManager::getInstance() ->createScene(new PlayScene(1));
 }
 
 //void Game :: go()

@@ -5,6 +5,7 @@
 #include "Rect.h"
 #include "D3dx9core.h"
 #include <map>
+#include "BitMapFont.h"
 
 
 class TextureHolder;
@@ -25,6 +26,8 @@ private:
 	LPDIRECT3DSURFACE9 pBackBuffer; // pointer to back buffer
 	LPD3DXSPRITE pSpriteHandler;
 	IDirect3DVertexBuffer9* vBuffer;
+	BitMapFont* font;
+
 public:
 
 	//void loadSurface(std::basic_string<TCHAR> filePath ); // just test
@@ -50,11 +53,15 @@ public:
 
 	void drawTileTmx(LPDIRECT3DTEXTURE9 texture, int width, int height, int dx, int dy, RectI port, int x, int y, D3DCOLOR color = D3DCOLOR_XRGB (255,255,255) ) const;
 
-	void drawText(std::string text, RectI rect);
+	void drawText(std:: string text, int size, int x, int y, D3DCOLOR color = 0xFFFFFFFF);
+
+	void setFont(BitMapFont* bitmapFont);
 
 	void beginRender();
 
 	void endRender();
+private:
+	void drawChar( LPDIRECT3DTEXTURE9 pTexture, int width, int height, char c, int size, int x, int y, D3DCOLOR color = 0xFFFFFFFF );
 	
 };
 class TextureHolder

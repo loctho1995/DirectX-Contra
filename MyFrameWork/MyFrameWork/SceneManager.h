@@ -3,7 +3,7 @@
 
 #include "MenuScene.h" // just abstract class 
 #include "PlayScene.h"
-
+#include "TestScene.h"
 class SceneManager
 {
 public:
