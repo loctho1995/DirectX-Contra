@@ -8,6 +8,7 @@
 #include "EnermySoldier.h"
 #include "ObjectBridge.h"
 #include "ObjectStaticWeapon.h"
+#include "SceneManager.h"
 
 class PlayScene : public Scene
 {
@@ -29,6 +30,7 @@ private:
 	Map* pMap;
 	int nTransitionFrames;
 	int count;
+	int stageIndex;
 	bool isGameOver;
 	bool isFinish;
 	bool isPause;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="169">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
   <image source="tileset.png" width="176" height="192"/>
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
@@ -47,7 +47,7 @@
   <object id="85" type="throughable" x="3040.5" y="163" width="94.5" height="10.5"/>
   <object id="87" type="throughable" x="3136" y="147.5" width="31" height="10"/>
   <object id="88" type="throughable" x="3169" y="181" width="29.5" height="9"/>
-  <object id="89" type="&quot;&quot;" x="3009" y="211.5" width="239.5" height="12"/>
+  <object id="89" type="&quot;&quot;" x="3009" y="211.5" width="338" height="12"/>
   <object id="128" type="water" x="16" y="218" width="272" height="13"/>
   <object id="156" type="water" x="673" y="220" width="735.5" height="13"/>
   <object id="157" type="water" x="353.5" y="220" width="255" height="13"/>

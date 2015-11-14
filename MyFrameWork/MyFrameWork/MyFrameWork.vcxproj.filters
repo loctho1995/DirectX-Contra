@@ -94,6 +94,7 @@
     <ClCompile Include="StartingScene.cpp" />
     <ClCompile Include="LoadingScene.cpp" />
     <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="GameOverScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -211,5 +212,6 @@
     <ClInclude Include="StartingScene.h" />
     <ClInclude Include="LoadingScene.h" />
     <ClInclude Include="Loader.h" />
+    <ClInclude Include="GameOverScene.h" />
   </ItemGroup>
 </Project>

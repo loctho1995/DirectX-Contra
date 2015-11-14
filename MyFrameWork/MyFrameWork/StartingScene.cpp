@@ -51,4 +51,5 @@ void StartingScene:: handleInput()
 			break;
 		}
 	}
+		
 }

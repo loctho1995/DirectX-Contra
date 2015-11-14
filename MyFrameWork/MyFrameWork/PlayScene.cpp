@@ -26,66 +26,82 @@ void PlayScene::handleInput()
     while (!KeyBoard::getInstace()->isEmpty())
     {
         KeyEvent e = KeyBoard::getInstace()->readKey();
-        switch (e.getCode())
-        {
-        case VK_RIGHT:
-            if (e.isPress())
-            {
-                pPlayer->getState()->onMovePressed(Direction::createRight());
-            }
-            else
-            {
-                pPlayer->getState()->onMoveReleased(Direction::createRight());
-            }
-            break;
-        case VK_LEFT:
-            if (e.isPress())
-            {
-                pPlayer->getState()->onMovePressed(Direction::createLeft());
-            }
-            else
-            {
-                pPlayer->getState()->onMoveReleased(Direction::createLeft());
-            }
-            break;
-        case VK_UP:
-            if (e.isPress())
-            {
-                pPlayer->getState()->onVeticalDirectionPressed(Direction::createUp());
-            }
-            else
-            {
-                pPlayer->getState()->onVeticalDirectionReleased();
-            }
-            break;
-        case VK_DOWN:
-            if (e.isPress())
-            {
-                pPlayer->getState()->onVeticalDirectionPressed(Direction::createDown());
-            }
-            else
-            {
-                pPlayer->getState()->onVeticalDirectionReleased();
-            }
-            break;
-        case VK_SPACE:
-            if (e.isPress())
-            {
-                pPlayer->getState()->onJumpPressed();
-            }
-            else
-            {
-                pPlayer->getState()->onJumpRelease();
-            }
-            break;
-        case 0x46:
-            if (e.isPress())
-            {
-                pPlayer->getState()->onFirePressed();
-            }
-            break;
+		if( e.getCode() == VK_RETURN)
+		{
+			if (e.isRelease())
+			{
+				isPause = !isPause;
+			}
+			break;
+		}
+		else if( !isPause)
+		{
+			switch (e.getCode())
+			{
+
+
+			case VK_RIGHT:
+				if (e.isPress())
+				{
+					pPlayer->getState()->onMovePressed(Direction::createRight());
+				}
+				else
+				{
+					pPlayer->getState()->onMoveReleased(Direction::createRight());
+				}
+				break;
+			case VK_LEFT:
+				if (e.isPress())
+				{
+					pPlayer->getState()->onMovePressed(Direction::createLeft());
+				}
+				else
+				{
+					pPlayer->getState()->onMoveReleased(Direction::createLeft());
+				}
+				break;
+			case VK_UP:
+				if (e.isPress())
+				{
+					pPlayer->getState()->onVeticalDirectionPressed(Direction::createUp());
+				}
+				else
+				{
+					pPlayer->getState()->onVeticalDirectionReleased();
+				}
+				break;
+			case VK_DOWN:
+				if (e.isPress())
+				{
+					pPlayer->getState()->onVeticalDirectionPressed(Direction::createDown());
+				}
+				else
+				{
+					pPlayer->getState()->onVeticalDirectionReleased();
+				}
+				break;
+			case VK_SPACE:
+				if (e.isPress())
+				{
+					pPlayer->getState()->onJumpPressed();
+				}
+				else
+				{
+					pPlayer->getState()->onJumpRelease();
+				}
+				break;
+			case 0x46: // F key
+				if (e.isPress())
+				{
+					pPlayer->getState()->onFirePressed();
+				}
+				break;
+			}
         }
     }
+
+	KeyBoard::getInstace() ->flush();
+
 }
 void PlayScene::onUpdate()
 {
@@ -94,7 +110,7 @@ void PlayScene::onUpdate()
 		count++;
 		if( count == nTransitionFrames)
 		{
-			// changeScene to what GameOver Scene
+			SceneManager::getInstance()->createScene(new GameOverScene(stageIndex));
 		}
 	}
 	else if( isFinish )
@@ -105,9 +121,11 @@ void PlayScene::onUpdate()
 			// changeScene to LoadingScene
 		}
 	}
+
+	handleInput();
+
 	if( !isPause )
 	{
-		handleInput();
 		update();
 		onCollision();
 		isFinish = pMap -> isFinish();

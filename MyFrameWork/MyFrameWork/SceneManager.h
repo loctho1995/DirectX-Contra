@@ -5,6 +5,7 @@
 #include "PlayScene.h"
 #include "LoadingScene.h"
 #include "StartingScene.h"
+#include "GameOverScene.h"
 class SceneManager
 {
 public:
