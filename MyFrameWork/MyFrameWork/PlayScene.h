@@ -16,14 +16,6 @@ public:
 	PlayScene() {}
 	virtual ~PlayScene() {}
 
-	virtual void go()
-	{
-		handleInput();
-		onUpdate();
-		onCollision();
-		render();
-	}
-
 	virtual void onCollision();
 	virtual void handleInput();
 	virtual void render();

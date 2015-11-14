@@ -3,7 +3,8 @@
 
 #include "MenuScene.h" // just abstract class 
 #include "PlayScene.h"
-#include "TestScene.h"
+#include "LoadingScene.h"
+#include "StartingScene.h"
 class SceneManager
 {
 public:
@@ -17,12 +18,20 @@ public:
 	}
 	void createScene(Scene* scene )
 	{
+		
 		if(scene)
+		{
+			if(pCurrentScene)
+			 delete pCurrentScene;
 			pCurrentScene = scene;
+		}
 	}
 	Scene* getCurrentScene() { return pCurrentScene ;}
 private:
-	SceneManager() {}
+	SceneManager() 
+	{
+		pCurrentScene = NULL;
+	}
 	static SceneManager* pInstance;
 	Scene* pCurrentScene;
 };

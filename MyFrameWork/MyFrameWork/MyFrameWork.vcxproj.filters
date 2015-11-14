@@ -82,7 +82,6 @@
     <ClCompile Include="EnemySniperStandingState.cpp" />
     <ClCompile Include="EnemySniperTurningState.cpp" />
     <ClCompile Include="BitMapFont.cpp" />
-    <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="EnermyCannon.cpp" />
     <ClCompile Include="EnermyCannonAppearingState.cpp" />
     <ClCompile Include="EnermyCannonData.cpp" />
@@ -91,6 +90,9 @@
     <ClCompile Include="EnermyCannonTurningState.cpp" />
     <ClCompile Include="EnermyCreator.cpp" />
     <ClCompile Include="ObjectCapsuleWeapon.cpp" />
+    <ClCompile Include="EnermySoldierDrowningState.cpp" />
+    <ClCompile Include="StartingScene.cpp" />
+    <ClCompile Include="LoadingScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -197,7 +199,6 @@
     <ClInclude Include="EnemySniperDeadState.h" />
     <ClInclude Include="EnemySniperStandingState.h" />
     <ClInclude Include="BitMapFont.h" />
-    <ClInclude Include="TestScene.h" />
     <ClInclude Include="EnermyCannon.h" />
     <ClInclude Include="EnermyCannonAppearingState.h" />
     <ClInclude Include="EnermyCannonData.h" />
@@ -205,5 +206,8 @@
     <ClInclude Include="EnermyCannonPreaparingState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
     <ClInclude Include="EnermyCreator.h" />
+    <ClInclude Include="EnermySoldierDrowningState.h" />
+    <ClInclude Include="StartingScene.h" />
+    <ClInclude Include="LoadingScene.h" />
   </ItemGroup>
 </Project>

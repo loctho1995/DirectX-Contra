@@ -9,7 +9,7 @@
 class EnemySniper : public EnermySprite
 {
 public:
-	EnemySniper(int respawnX, int respawnY);
+	EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnemySniper();
 
 	virtual void update();

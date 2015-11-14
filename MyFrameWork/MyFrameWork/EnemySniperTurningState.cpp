@@ -52,22 +52,22 @@ void EnemySniperTurningState::onUpdate()
 		switch (getIndex())
 		{
 		case 0:
-			pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2 + 6, pData->y - pData->body.height * 28 / 32, true, getAngle()));
+			pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2 + 6, pData->y - pData->body.height * 28 / 32, true, getAngle()));
 			break;
 		case 1:
-			pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2 + 5, pData->y - pData->body.height * 13 / 32 + 1, true, getAngle()));
+			pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2 + 5, pData->y - pData->body.height * 13 / 32 + 1, true, getAngle()));
 			break;
 		case 2:
-			pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width / 2 - 5, pData->y - pData->body.height * 13 / 32 + 1, true, getAngle()));
+			pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width / 2 - 5, pData->y - pData->body.height * 13 / 32 + 1, true, getAngle()));
 			break;
 		case 3:
-			pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width / 2 - 5, pData->y - pData->body.height * 28 / 32, true, getAngle()));
+			pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width / 2 - 5, pData->y - pData->body.height * 28 / 32, true, getAngle()));
 			break;
 		case 4:
-			pData->Bullets.push_back(new EnermyWhiteBullet(pData->x - pData->body.width / 2 - 3, pData->y - pData->body.height - 8, true, getAngle()));
+			pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width / 2 - 3, pData->y - pData->body.height - 8, true, getAngle()));
 			break;
 		case 5:
-			pData->Bullets.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2 + 4, pData->y - pData->body.height - 8, true, getAngle()));
+			pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width / 2 + 4, pData->y - pData->body.height - 8, true, getAngle()));
 			break;
 		}
 

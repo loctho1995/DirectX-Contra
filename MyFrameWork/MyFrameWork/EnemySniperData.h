@@ -5,7 +5,7 @@
 class EnemySniperData : public EnermyData
 {
 public:
-	EnemySniperData();
+	EnemySniperData(std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnemySniperData();
 
 	enum EnemySniperArrayIndex

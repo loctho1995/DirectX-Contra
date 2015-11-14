@@ -3,6 +3,7 @@
 #include "EnemySniperTurningState.h"
 
 
+
 EnemySniperStandingState::EnemySniperStandingState(EnermyData* data)
 {
 	this->pData = data;
@@ -25,4 +26,9 @@ void EnemySniperStandingState::onUpdate()
 	{
 		transition(new EnemySniperTurningState(pData));
 	}
+}
+
+void EnemySniperStandingState:: onDead()
+{
+	transition(new EnemySniperDeadState(pData));
 }

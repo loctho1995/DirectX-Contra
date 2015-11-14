@@ -102,6 +102,7 @@
     <ClCompile Include="EnermyGunRotatingDieState.cpp" />
     <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
     <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
+    <ClCompile Include="EnermySoldierDrowningState.cpp" />
     <ClCompile Include="EnermySoldierFallingState.cpp" />
     <ClCompile Include="EnermyWhiteBullet.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
@@ -161,7 +162,8 @@
     <ClCompile Include="PlayerSwimmingState.cpp" />
     <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="TestScene.cpp" />
+    <ClCompile Include="StartingScene.cpp" />
+    <ClCompile Include="LoadingScene.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureArray.cpp" />
     <ClCompile Include="TileLayer.cpp" />
@@ -201,6 +203,7 @@
     <ClInclude Include="EnermyGunRotatingDieState.h" />
     <ClInclude Include="EnermyGunRotatingOpeningState.h" />
     <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
+    <ClInclude Include="EnermySoldierDrowningState.h" />
     <ClInclude Include="EnermySoldierFallingState.h" />
     <ClInclude Include="EnermyWhiteBullet.h" />
     <ClInclude Include="ObjectBridge.h" />
@@ -275,7 +278,8 @@
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteData.h" />
     <ClInclude Include="SpriteState.h" />
-    <ClInclude Include="TestScene.h" />
+    <ClInclude Include="StartingScene.h" />
+    <ClInclude Include="LoadingScene.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureArray.h" />
     <ClInclude Include="TileLayer.h" />

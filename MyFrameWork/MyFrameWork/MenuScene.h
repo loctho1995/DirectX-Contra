@@ -7,11 +7,7 @@ class MenuScene : public Scene
 public:
 	MenuScene() {}
 	virtual ~MenuScene() {}
-	virtual void go()
-	{
-		handleInput();
-		onUpdate();
-		render();
-	}
-	virtual void handleInput() = 0;
+	virtual void onUpdate() = 0;
+	virtual void render() = 0;
+	virtual void handleInput() {};
 };

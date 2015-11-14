@@ -1,7 +1,9 @@
 #include "EnemySniperData.h"
 
 
-EnemySniperData::EnemySniperData()
+EnemySniperData::EnemySniperData(std::vector < BulletSprite*>& bulletSpriteVector)
+	:
+	EnermyData(bulletSpriteVector)
 {
 	this->botName = "sniper";
 	this->isHittable = true;

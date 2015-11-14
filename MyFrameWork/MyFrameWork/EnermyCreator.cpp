@@ -88,7 +88,7 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 
 	if (enermyName == "sniper")
 	{
-		return new EnemySniper(respawnX, respawnY);
+		return new EnemySniper(respawnX, respawnY, bulletSprites);
 	}
 
 	if (enermyName == "gunboss1")

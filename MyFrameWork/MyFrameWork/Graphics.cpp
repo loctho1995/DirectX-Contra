@@ -68,7 +68,7 @@ Graphics :: ~Graphics()
 
 void Graphics:: beginRender()
 {
-	pDevice -> Clear (0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(60,60,60), 0.0f, 0 );
+	pDevice -> Clear (0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0 ,0 , 0), 0.0f, 0 );
 	pDevice->BeginScene();
 	pSpriteHandler -> Begin(D3DXSPRITE_ALPHABLEND);
 	//pSpriteHandler -> Begin(D3DXSPRITE_SORT_TEXTURE);
