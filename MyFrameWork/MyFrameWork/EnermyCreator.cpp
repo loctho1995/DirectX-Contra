@@ -13,7 +13,36 @@ EnermyCreator::EnermyCreator()
 {
 	// set up the map direction by function addAppearDirection(std::string name , Direction dir )
 	addAppearDirection("gunboss1",Direction::createRight());
+
 	addAppearDirection("finalboss1",Direction::createRight());
+
+	addAppearDirection("bridge",Direction::createRight());
+
+	addAppearDirection("staticweapons",Direction::createRight());
+	addAppearDirection("staticweaponm",Direction::createRight());
+	addAppearDirection("staticweaponf",Direction::createRight());
+	addAppearDirection("staticweaponb",Direction::createRight());
+	addAppearDirection("staticweaponr",Direction::createRight());
+	addAppearDirection("staticweaponl",Direction::createRight());
+
+	addAppearDirection("gunrotating",Direction::createRight());
+
+	addAppearDirection("cannon",Direction::createRight());
+
+	addAppearDirection("soldierl",Direction::createRight());
+
+	addAppearDirection("sniper",Direction::createRight());
+	
+	addAppearDirection("capsuleweapons",Direction::createLeft());
+	addAppearDirection("capsuleweaponm",Direction::createLeft());
+	addAppearDirection("capsuleweaponf",Direction::createLeft());
+	addAppearDirection("capsuleweaponb",Direction::createLeft());
+	addAppearDirection("capsuleweaponr",Direction::createLeft());
+	addAppearDirection("capsuleweaponl",Direction::createLeft());
+
+	addAppearDirection("soldierr",Direction::createLeft());
+
+
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -147,109 +176,12 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 }
 
 
-Direction EnermyCreator::getAppearDir(std::string name, std :: vector < BulletSprite* >& bulletSprites)
+Direction EnermyCreator::getAppearDir(std::string name)
 {
-	if (name == "bridge")
-	{
-		return (new ObjectBridge(-100, -100, 2))->getAppearDir();
-	}
-
-	//static weapon
-	if (name == "staticweapons")
-	{
-		return (new ObjectStaticWeapon(-100, -100, BulletTypes::S))->getAppearDir();
-	}
-
-	if (name == "staticweaponm")
-	{
-		return (new ObjectStaticWeapon(-100, -100, BulletTypes::M))->getAppearDir();
-	}
-
-	if (name == "staticweaponf")
-	{
-		return (new ObjectStaticWeapon(-100, -100, BulletTypes::F))->getAppearDir();
-	}
-
-	if (name == "staticweaponb")
-	{
-		return (new ObjectStaticWeapon(-100, -100, BulletTypes::B))->getAppearDir();
-	}
-
-	if (name == "staticweaponr")
-	{
-		return (new ObjectStaticWeapon(-100, -100, BulletTypes::R))->getAppearDir();
-	}
-
-	if (name == "staticweaponl")
-	{
-		return (new ObjectStaticWeapon(-100, -100, BulletTypes::L))->getAppearDir();
-	}
-
-	//capsule weapon
-	if (name == "capsuleweapons")
-	{
-		return (new ObjectCapsuleWeapon(-100, -100, BulletTypes::S))->getAppearDir();
-	}
-
-	if (name == "capsuleweaponm")
-	{
-		return (new ObjectCapsuleWeapon(-100, -100, BulletTypes::M))->getAppearDir();
-	}
-
-	if (name == "capsuleweaponf")
-	{
-		return (new ObjectCapsuleWeapon(-100, -100, BulletTypes::F))->getAppearDir();
-	}
-
-	if (name == "capsuleweaponb")
-	{
-		return (new ObjectCapsuleWeapon(-100, -100, BulletTypes::B))->getAppearDir();
-	}
-
-	if (name == "capsuleweaponr")
-	{
-		return (new ObjectCapsuleWeapon(-100, -100, BulletTypes::R))->getAppearDir();
-	}
-
-	if (name == "capsuleweaponl")
-	{
-		return (new ObjectCapsuleWeapon(-100, -100, BulletTypes::L))->getAppearDir();
-	}
-
-	if (name == "gunrotating")
-	{
-		return (new EnermyGunRotating(-100, -100, bulletSprites))->getAppearDir();
-	}
-
-	if (name == "cannon")
-	{
-		return (new EnermyCannon(-100, -100, bulletSprites))->getAppearDir();
-	}
-
-    if (name == "soldierl")
-	{
-        return Direction::createRight();
-	}
-
-    if (name == "soldierr")
-    {
-        return Direction::createLeft();
-    }
-
-	if (name == "gunboss1")
-	{
-		return (new EnermyGunBoss1Sprite(-100, -100, bulletSprites))->getAppearDir();
-	}
-
-	if (name == "finalboss1")
-	{
-		return (new EnermyFinalBoss1Sprite(-100, -100))->getAppearDir();
-	}
-
-	if (name == "sniper")
-	{
-		return (new EnemySniper(-100, -100))->getAppearDir();
-	}
-
+	 std::map < std::string, Direction >::iterator it = appearDirections.find(name);
+	 if( it != appearDirections.end())
+	 {
+		 return it -> second;
+	 }
 	return Direction::createNone();
 }

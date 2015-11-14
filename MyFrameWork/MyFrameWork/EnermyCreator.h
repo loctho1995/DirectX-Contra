@@ -23,6 +23,6 @@ public:
 	static EnermyCreator* getInstance();
 	EnermySprite * createEnermySprite(std::string enermyName, int respawnX, int respawnY, std :: vector < BulletSprite* >& bulletSprites);
 	ObjectSprite* createObjectSprite(std::string name, int respawnX, int respawnY);
-	Direction getAppearDir(std::string name, std :: vector < BulletSprite* >& bulletSprites);
+	Direction getAppearDir(std::string name);
 	std::map < std::string, Direction > appearDirections;
 };

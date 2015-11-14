@@ -340,7 +340,7 @@ void Map ::addEToMap ( Camera* cam )
 		std::string type  = returnList[i] -> type;
 		if(camRect.checkCollision( body ))
 		{
-			Direction appearDir = EnermyCreator :: getInstance() ->getAppearDir( returnList[i] -> name , bulletSprites);
+			Direction appearDir = EnermyCreator :: getInstance() ->getAppearDir( returnList[i] -> name );
 			if( appearDir.isRight())
 			{
 				if( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - 10) )
