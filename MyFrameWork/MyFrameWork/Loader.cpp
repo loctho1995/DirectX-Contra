@@ -36,6 +36,12 @@ void Loader::loadResources(std::string name)
 			return;
 		}
 
+		if (name == "cannon")
+		{
+			EnermyCannon::loadResources();
+			return;
+		}
+
 		if (name == "finalboss1")
 		{
 			EnermyFinalBoss1Sprite::loadResources();
