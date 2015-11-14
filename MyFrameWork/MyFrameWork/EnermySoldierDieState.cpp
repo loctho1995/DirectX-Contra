@@ -29,16 +29,6 @@ void EnermySoldierDieState::onUpdate()
     if (this->pData->vy >= 0)
     {
         //destroy: run animation destroy
-        this->pData->pState = new EnermySoldierDestroyState(this->pData);
+        transition(new EnermySoldierDestroyState(this->pData));
     }
-}
-
-void EnermySoldierDieState::onCollision(RectF rect)
-{
-
-}
-
-void EnermySoldierDieState::onCollision(CollisionRectF rect)
-{
-
 }

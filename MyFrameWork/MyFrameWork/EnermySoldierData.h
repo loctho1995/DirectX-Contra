@@ -18,6 +18,7 @@ public:
         DIE,
         DESTROY,
         FALL,
+        DROWNING,
         COUNT
     };
 

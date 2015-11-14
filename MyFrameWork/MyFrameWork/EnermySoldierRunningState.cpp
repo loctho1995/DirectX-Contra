@@ -36,12 +36,12 @@ void EnermySoldierRunningState::onUpdate()
         pData->x += pData->vx;
     }
 
+    pData->y += pData->vy;
+
     if (pData->cSupportRect == CollisionRectF())
     {
-        this->pData->pState = new EnermySoldierFallingState(this->pData);
+        transition(new EnermySoldierFallingState(this->pData));
     }
-
-    pData->y += pData->vy;
 }
 
 //void EnermySoldierRunningState::onCollision(RectF rect)
@@ -57,7 +57,10 @@ void EnermySoldierRunningState::onCollision(CollisionRectF rect)
     if (distanceLeft <= SOLDIER_RANGE_TO_JUMP)
     {
         if (rand() % 3 != 0)
-            this->pData->pState = new EnermySoldierJumpingState(this->pData);
+        {
+            transition(new EnermySoldierJumpingState(pData));
+            return;
+        }            
         else
         {
             this->pData->dir = Direction::createRight();

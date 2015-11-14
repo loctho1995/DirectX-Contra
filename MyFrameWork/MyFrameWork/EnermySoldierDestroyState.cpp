@@ -20,19 +20,8 @@ void EnermySoldierDestroyState::onUpdate()
     if (this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->isLastTexture())
     {
         this->pData->isDesTroyed = true;
-        this->pData->pState->onDead();
     }
         
 
     EnermyState::onUpdate();
-}
-
-void EnermySoldierDestroyState::onCollision(RectF rect)
-{
-
-}
-
-void EnermySoldierDestroyState::onCollision(CollisionRectF rect)
-{
-
 }

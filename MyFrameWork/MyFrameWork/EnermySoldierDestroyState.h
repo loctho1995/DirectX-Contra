@@ -10,7 +10,5 @@ public:
     ~EnermySoldierDestroyState();
 
     void onUpdate();
-    void onCollision(RectF rect);
-    void onCollision(CollisionRectF rect);
 };
 

@@ -10,8 +10,6 @@ public:
     ~EnermySoldierDieState();
 
     void onUpdate();
-    void onCollision(RectF rect);
-    void onCollision(CollisionRectF rect);
 
 private:
     float acceleration;

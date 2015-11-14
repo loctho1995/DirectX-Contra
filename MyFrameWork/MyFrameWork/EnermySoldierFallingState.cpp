@@ -24,19 +24,14 @@ void EnermySoldierFallingState::onUpdate()
 
     if (!(this->pData->cSupportRect == CollisionRectF()))
     {
-        this->pData->pState = new EnermySoldierRunningState(this->pData);
+        transition(new EnermySoldierRunningState(this->pData));
     }
 }
 
 void EnermySoldierFallingState::onCollision(CollisionRectF rect)
 {
-
-}
-
-void EnermySoldierFallingState::onCameraCollision(RectF camera)
-{
-    if (this->pData->y >= (camera.y + camera.height))
+    if (rect.type == "water")
     {
-        this->pData->isDesTroyed = true;
+        transition(new EnemySoldierDrowningState(this->pData));
     }
 }
