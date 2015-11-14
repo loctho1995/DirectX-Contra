@@ -64,6 +64,8 @@ Map :: Map(std::string mapName)
 	// create quadtree
 
 	createMapCollsionTree();
+	bIsFinish = false;
+	bIsGameOver = false;
 
 }
 
@@ -240,7 +242,6 @@ void Map :: createMapCollsionTree()
 void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 {
 	// clean Enermy
-	bool isOver = false;
 	RectF camRect(cam ->getX(), cam ->getY(), cam -> getWidth(), cam -> getHeight());
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); )
 	{
@@ -250,7 +251,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 		{
 			if(it -> second ->getName().find("final") != std::string::npos)
 			{
-				isOver = true;
+				bIsFinish = true;
 			}
 			delete temp;
 			it = enermyMap.erase(it);
@@ -289,7 +290,7 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 	
 
 
-	if(isOver )
+	if(bIsFinish )
 	{
 		for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it ++)
 		{
@@ -891,6 +892,15 @@ RectF Map :: getCameraTranslatePoint()
 std::vector < std::string>&  Map :: getSpriteNames()
 {
 	return spriteNames;
+}
+
+bool Map :: isGameOver()
+{
+	return bIsGameOver;
+}
+bool Map :: isFinish()
+{
+	return bIsFinish;
 }
 #pragma endregion publicFunction
 

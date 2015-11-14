@@ -16,6 +16,7 @@ public:
 	virtual void onCameraCollision(RectF cameraRect)
 	{
 		pData -> x = max(pData -> x, cameraRect.x + 20);
+		pData -> x = min ( pData -> x, cameraRect.x + cameraRect.width- 20 );
 		if( pData -> y >= cameraRect.y + cameraRect.height)
 		{
 			pData -> y = cameraRect.y + cameraRect.height;

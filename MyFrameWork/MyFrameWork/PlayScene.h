@@ -27,5 +27,10 @@ private:
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
+	int nTransitionFrames;
+	int count;
+	bool isGameOver;
+	bool isFinish;
+	bool isPause;
 };
 

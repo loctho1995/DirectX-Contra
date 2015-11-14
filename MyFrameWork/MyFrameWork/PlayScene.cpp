@@ -9,7 +9,11 @@ PlayScene ::PlayScene(int mapID)
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;
     viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize / 2, SCHEIGHT / 2 - viewPortSize / 2, viewPortSize, viewPortSize));
 	cam = new Camera(viewPort,pMap ->getResX(), pMap ->getResY(), pMap->getMapRect(), pMap ->getCameraTranslatePoint());
-
+	isPause = false;
+	isFinish = false;
+	isGameOver = false;
+	nTransitionFrames = 5 * 60;
+	count = 0;
 }
 
 void PlayScene::onCollision()
@@ -80,16 +84,35 @@ void PlayScene::handleInput()
                 pPlayer->getState()->onFirePressed();
             }
             break;
-
-            //break;
         }
     }
 }
 void PlayScene::onUpdate()
 {
-    handleInput();
-	update();
-	onCollision();
+	if( isGameOver )
+	{
+		count++;
+		if( count == nTransitionFrames)
+		{
+			// changeScene to what GameOver Scene
+		}
+	}
+	else if( isFinish )
+	{
+		count++;
+		if( count == nTransitionFrames)
+		{
+			// changeScene to LoadingScene
+		}
+	}
+	if( !isPause )
+	{
+		handleInput();
+		update();
+		onCollision();
+		isFinish = pMap -> isFinish();
+		isGameOver = pMap -> isGameOver();
+	}	
 }
 void PlayScene::render()
 {
@@ -97,9 +120,6 @@ void PlayScene::render()
     
     pMap->draw(cam);
     pPlayer->draw(cam);
-    //Graphics::getInstance() ->drawText("TEST", RectI(200,220,50,50));
-
-
 
     Graphics::getInstance()->endRender();
 }

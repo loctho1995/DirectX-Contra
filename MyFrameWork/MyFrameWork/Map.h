@@ -38,6 +38,8 @@ public:
 	float getResY();
 	RectF getCameraTranslatePoint();
 	std::vector < std::string>& getSpriteNames();
+	bool isGameOver();
+	bool isFinish();
 private:
 	std:: vector< TileSet* > tileSets; // vector of TileSet Pointer
 	std:: vector< Layer* > layers; // vector of Layer pointer
@@ -63,4 +65,6 @@ private:
 	float respawnX;
 	float respawnY;
 	RectF cameraTranslatePosition;
+	bool bIsGameOver;
+	bool bIsFinish;
 };
