@@ -11,7 +11,16 @@ public:
 		this ->viewPort = viewPort;
 		this ->cameraTranslatePoint = cameraTranslatePoint;
 		mapRect = rect;
-		setPosition(x, y);
+
+		this -> x =   x - (float)viewPort ->getWidth() / 2.0f;
+		this -> y  = y - (float)viewPort -> getHeight() / 2.0f;
+
+		this -> x = max ( this -> x, mapRect.x );
+		this -> y = max ( this -> y, mapRect.y );
+
+		this -> x = min ( this -> x, mapRect.width + mapRect.x - viewPort -> getWidth());
+		this -> y = min ( this -> y, mapRect.height + mapRect.y - viewPort -> getHeight());
+
 		if( this -> y == cameraTranslatePoint.y )
 		{
 			moveDir = Direction::createRight();

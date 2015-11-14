@@ -1,6 +1,6 @@
 #include "PlayerSprite.h"
 #include "PlayerJumpingState.h"
-
+#include "Loader.h"
 PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 {
 
@@ -221,4 +221,121 @@ int PlayerSprite ::  getDamage()
 	default:
 		return 1;
 	}
+}
+
+
+void PlayerSprite :: loadResources()
+{
+
+
+	TextureArray* temp = new TextureArray("Resources\\Sprites", "player", "stand", 1, 60  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "standup", 1, 60  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "standupnfire", 1, 60  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "standdown", 1, 60  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "standdownnfire", 1, 60  ); 
+
+	delete temp;
+
+
+	temp = new TextureArray("Resources\\Sprites", "player", "standnfire", 1, 60  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "run", 6, 8  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "runnfire", 6, 8);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "rundown", 3, 8);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "runup", 3, 8);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "jump", 4, 4); 
+
+	delete temp;
+
+
+	temp = new TextureArray("Resources\\Sprites", "player", "fall", 1, 60); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "dive", 2, 14  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "diveup", 2, 14  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "divedown", 1, 60  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "divenfire", 2, 14  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "swimup", 2, 14 );
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "climb", 1, 60  ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "dead", 4, 10 ); 
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "player", "lie", 1, 60 );
+
+	delete temp;
+
+
+	// bullet
+
+
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "mbullet","", 1, 60);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "lbullet","horizontal", 1, 60);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "lbullet","vertical", 1, 60);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "lbullet","-45oblique", 1, 60);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "lbullet","45oblique", 1, 60);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "fbullet","", 1, 4);
+
+	delete temp;
+	
 }

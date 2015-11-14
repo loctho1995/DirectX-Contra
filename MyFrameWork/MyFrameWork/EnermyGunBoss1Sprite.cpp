@@ -47,3 +47,20 @@ void EnermyGunBoss1Sprite :: update()
 {
 	pData ->pState ->onUpdate();
 }
+
+void EnermyGunBoss1Sprite :: loadResources()
+{
+	// loadSprite
+	TextureArray* temp = new TextureArray("Resources\\Sprites\\Enermy" ,"gunboss1","stand", 1, 60);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy","gunboss1","fire", 1, 60);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 6, 8);
+	delete temp;
+
+	// loadBullet
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "gunboss1bullet","", 1, 60, D3DCOLOR_XRGB(255,255,255));
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 6, 8);
+	delete temp;
+}

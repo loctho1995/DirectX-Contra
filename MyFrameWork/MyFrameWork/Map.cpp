@@ -65,8 +65,6 @@ Map :: Map(std::string mapName)
 
 	createMapCollsionTree();
 
-
-
 }
 
 #pragma region 
@@ -217,6 +215,8 @@ void Map :: loadObject(TiXmlElement* pElement)
 		}
 		else
 		{
+			if(std::find ( spriteNames.begin(),spriteNames.end(), name) == spriteNames.end())
+				spriteNames.push_back(name);
 			x = rectX;
 			y = rectY;
 
@@ -886,6 +886,11 @@ float Map :: getResY()
 RectF Map :: getCameraTranslatePoint()
 {
 	return cameraTranslatePosition;
+}
+
+std::vector < std::string>&  Map :: getSpriteNames()
+{
+	return spriteNames;
 }
 #pragma endregion publicFunction
 

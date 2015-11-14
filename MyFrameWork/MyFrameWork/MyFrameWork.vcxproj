@@ -105,6 +105,7 @@
     <ClCompile Include="EnermySoldierDrowningState.cpp" />
     <ClCompile Include="EnermySoldierFallingState.cpp" />
     <ClCompile Include="EnermyWhiteBullet.cpp" />
+    <ClCompile Include="Loader.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
     <ClCompile Include="ObjectBridgeAliveState.cpp" />
     <ClCompile Include="ObjectBridgeBody.cpp" />
@@ -206,6 +207,7 @@
     <ClInclude Include="EnermySoldierDrowningState.h" />
     <ClInclude Include="EnermySoldierFallingState.h" />
     <ClInclude Include="EnermyWhiteBullet.h" />
+    <ClInclude Include="Loader.h" />
     <ClInclude Include="ObjectBridge.h" />
     <ClInclude Include="ObjectBridgeAliveState.h" />
     <ClInclude Include="ObjectBridgeBody.h" />

@@ -156,6 +156,34 @@ void Graphics :: drawTexture ( LPDIRECT3DTEXTURE9 pTexture, int width, int heigh
 	//pSpriteHandler -> End();
 }
 
+void Graphics :: drawTexture ( LPDIRECT3DTEXTURE9 pTexture, int width, int height, RectF sourceRect, int x, int y, float xRatio , float yRatio , D3DCOLOR color  ) const
+{
+	
+
+	RECT r;
+
+	r.left = sourceRect.x;
+	r.top = sourceRect. y;
+	r.bottom = r.top + sourceRect.height;
+	r.right = r.left + sourceRect.width;
+
+	D3DXVECTOR3 position(x , y , 1.0f);
+	D3DXMATRIX matrix;
+	D3DXVECTOR2 centerPoint(x + width / 2, y + height / 2 );
+
+	D3DXMatrixTransformation2D(
+								&matrix,
+								NULL,
+								0.0f,
+								&D3DXVECTOR2(xRatio,yRatio),
+								&D3DXVECTOR2(x + height / 2, y + height / 2),
+								0.0f,
+								NULL);
+
+	pSpriteHandler->SetTransform( &matrix);
+	pSpriteHandler ->Draw(pTexture, &r, NULL, &position, color);
+
+}
 void Graphics :: drawTextureFlipX ( LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, RectI port, int x, int y, float xRatio , float yRatio , D3DCOLOR color)  const
 {
 	RectF rect((float)x - (float)anchorPoint.x * width, (float)y - (float)anchorPoint .y * height, (float)width, (float)height);

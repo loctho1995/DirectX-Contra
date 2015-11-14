@@ -58,8 +58,8 @@ void PlayerJumpingState :: onUpdate()
 	}
 		pData -> vy  += acceleration;
 
-		pData -> x += pData -> vx;
-		pData -> y += pData -> vy;
+		pData -> x += (pData -> vx + pData -> cSupportRect.vx);
+		pData -> y += (pData -> vy + pData -> cSupportRect.vy);
 	
 	if( pData ->isFiring )
 	{

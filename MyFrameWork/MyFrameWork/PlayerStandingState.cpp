@@ -47,6 +47,8 @@ void PlayerStandingState:: onUpdate()
 {
 	hittableCalculation();
 	pData -> ppTextureArrays[ pData ->iCurrentArr ] -> update();
+	pData -> x += pData -> cSupportRect.vx;
+	pData -> y += pData -> cSupportRect.vy;
 	if( pData ->isFiring )
 	{
 		pData ->count ++;

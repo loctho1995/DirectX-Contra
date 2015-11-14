@@ -41,3 +41,13 @@ EnermyFinalBoss1Sprite::~EnermyFinalBoss1Sprite()
 {
 	
 }
+void EnermyFinalBoss1Sprite :: loadResources()
+{
+	TextureArray* temp = new TextureArray("Resources\\Sprites\\Enermy" ,"finalboss1","", 3, 8);
+
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 6, 8);
+
+	delete temp;
+}

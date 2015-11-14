@@ -37,7 +37,9 @@ void PlayerRunningState :: onUpdate()
 		hittableCalculation();
 		pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 		pData -> vx = pData->transform(speed);
-		pData -> x += pData -> vx;
+		pData -> x += (pData -> vx + pData -> cSupportRect.vx);
+		pData -> y += pData -> cSupportRect.vy;
+
 		if( pData ->isFiring )
 		{
 			pData ->count ++;

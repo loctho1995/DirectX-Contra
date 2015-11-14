@@ -37,7 +37,7 @@ void Texture:: drawFlipX(int x, int y, Camera* cam, float xRatio, float yRatio, 
 
 Texture::~Texture()
 {
-	if(!pTextureHolder ->pTexture )
+	/*if(!pTextureHolder ->pTexture )
 	{
 		pTextureHolder ->pTexture->Release();
 		pTextureHolder ->pTexture = NULL;
@@ -46,7 +46,7 @@ Texture::~Texture()
 	{
 		delete pTextureHolder;
 		pTextureHolder = NULL;
-	}
+	}*/
 }
 
 void Texture:: setAnchorPoint(float xRatio, float yRatio)

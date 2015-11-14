@@ -8,4 +8,5 @@ public:
 	EnermyGunBoss1Sprite(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector);
 	virtual void draw( Camera* cam) ;
 	virtual void update();
+	static void loadResources();
 };

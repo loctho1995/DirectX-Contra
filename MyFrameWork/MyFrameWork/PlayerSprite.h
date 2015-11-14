@@ -57,6 +57,8 @@ public:
 		}
 	}
 	
+	static void loadResources();
+
 	
 private:
 	PlayerData* pData;

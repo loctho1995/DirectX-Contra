@@ -93,6 +93,7 @@
     <ClCompile Include="EnermySoldierDrowningState.cpp" />
     <ClCompile Include="StartingScene.cpp" />
     <ClCompile Include="LoadingScene.cpp" />
+    <ClCompile Include="Loader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -209,5 +210,6 @@
     <ClInclude Include="EnermySoldierDrowningState.h" />
     <ClInclude Include="StartingScene.h" />
     <ClInclude Include="LoadingScene.h" />
+    <ClInclude Include="Loader.h" />
   </ItemGroup>
 </Project>
