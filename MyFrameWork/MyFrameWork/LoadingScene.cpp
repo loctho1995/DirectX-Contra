@@ -1,5 +1,5 @@
 #include "LoadingScene.h"
-
+#include "Sound.h"
 LoadingScene::LoadingScene(int stageIndex)
 	:
 	stageIndex(stageIndex)
@@ -27,8 +27,14 @@ LoadingScene::LoadingScene(int stageIndex)
 	std::thread LoadingThread ((Loader()),spriteNames,  std::ref(loadedSprite));
 	LoadingThread.detach();
 
+
+
+
 	nTransitionTime = 5 * 60;
 	count = 0;
+
+	Sound::getInstance()->loadSound("Resources\\Sounds\\background2.wav", "background2.wav");
+	Sound::getInstance()->play("background2.wav", true , 1);
 }
 
 

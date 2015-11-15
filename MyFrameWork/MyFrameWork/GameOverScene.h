@@ -1,5 +1,6 @@
 #pragma once
 #include "MenuScene.h"
+
 class GameOverScene : public MenuScene
 {
 public:

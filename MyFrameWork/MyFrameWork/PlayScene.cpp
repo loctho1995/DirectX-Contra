@@ -34,6 +34,20 @@ void PlayScene::handleInput()
 			}
 			break;
 		}
+		else if ( e.getCode() == 0x53 ) 
+		{
+			if (e.isRelease())
+			{
+				Sound::getInstance() ->stop();
+			}
+		}
+		else if ( e.getCode() == 0x50)
+		{
+			if (e.isRelease())
+			{
+				Sound::getInstance() ->play("background2.wav", true, 1);
+			}
+		}
 		else if( !isPause)
 		{
 			switch (e.getCode())

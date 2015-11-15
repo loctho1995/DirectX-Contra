@@ -2,6 +2,7 @@
 #include "Game.h"
 #include <fcntl.h>
 #include <io.h>
+#include "Sound.h"
 
 //#include "KeyBoard.h"
 /*
@@ -95,6 +96,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 	MSG msg; // create the Message ( MSG) object the handle event
 	ZeroMemory(&msg, sizeof(MSG));
 	Graphics::create(hWnd);
+	Sound::create(hWnd);
 	Game game;
 	
 

@@ -9,6 +9,7 @@
 #include "ObjectBridge.h"
 #include "ObjectStaticWeapon.h"
 #include "SceneManager.h"
+#include "Sound.h"
 
 class PlayScene : public Scene
 {
