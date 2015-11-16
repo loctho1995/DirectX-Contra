@@ -4,11 +4,12 @@
 #include "SceneManager.h"
 #include "Loader.h"
 #include <thread>
+#include "UIComponents.h"
 class LoadingScene : public MenuScene
 {
 public:
 	
-	LoadingScene(int stageIndex);
+	LoadingScene();
 	void onUpdate();
 	void render();
 	~LoadingScene(void);
@@ -16,7 +17,6 @@ public:
 private:
 	int nTransitionTime;
 	int count;
-	int stageIndex;
 	int nSprites;
 	int loadedSprite;
 };

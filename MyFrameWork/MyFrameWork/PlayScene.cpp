@@ -1,11 +1,12 @@
 #include "PlayScene.h"
 
 
-PlayScene ::PlayScene(int mapID)
+PlayScene ::PlayScene()
 {
-    std:: string mapName = "stage" + std::to_string(mapID);;
+    std:: string mapName = "stage" + std::to_string(UIComponents::getInstance() ->getCurrentStage());;
     pMap = new Map(mapName);
 	pPlayer = new PlayerSprite(pMap ->getResX(), pMap ->getResY());
+	lifeTexture = new Texture("Resources\\Sprites\\player\\life00.png", "life00.png");
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;
     viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize / 2, SCHEIGHT / 2 - viewPortSize / 2, viewPortSize, viewPortSize));
 	cam = new Camera(viewPort,pMap ->getResX(), pMap ->getResY(), pMap->getMapRect(), pMap ->getCameraTranslatePoint());
@@ -124,7 +125,8 @@ void PlayScene::onUpdate()
 		count++;
 		if( count == nTransitionFrames)
 		{
-			SceneManager::getInstance()->createScene(new GameOverScene(stageIndex));
+			SceneManager::getInstance()->createScene(new GameOverScene());
+			return;
 		}
 	}
 	else if( isFinish )
@@ -132,7 +134,8 @@ void PlayScene::onUpdate()
 		count++;
 		if( count == nTransitionFrames)
 		{
-			// changeScene to LoadingScene
+			SceneManager::getInstance()->createScene(new LoadingScene());
+			return;
 		}
 	}
 
@@ -143,7 +146,10 @@ void PlayScene::onUpdate()
 		update();
 		onCollision();
 		isFinish = pMap -> isFinish();
-		isGameOver = pMap -> isGameOver();
+		if(UIComponents::getInstance() ->getLifes() <= 0)
+		{
+			isGameOver = true;
+		}
 	}	
 }
 void PlayScene::render()
@@ -152,7 +158,15 @@ void PlayScene::render()
     
     pMap->draw(cam);
     pPlayer->draw(cam);
-
+	int lifes = UIComponents::getInstance() ->getLifes();
+	int x = 0;
+	int y = 0;
+	for (int i = 0; i < lifes - 1 ; i++)
+	{
+		int offset = 16;
+		lifeTexture ->draw(x, y);
+		x += offset;
+	}
     Graphics::getInstance()->endRender();
 }
 

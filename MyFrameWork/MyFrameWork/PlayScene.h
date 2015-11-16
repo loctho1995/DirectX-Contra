@@ -14,8 +14,8 @@
 class PlayScene : public Scene
 {
 public:
-	PlayScene(int mapID);
-	PlayScene() {}
+
+	PlayScene();
 	virtual ~PlayScene() {}
 
 	virtual void onCollision();
@@ -29,6 +29,7 @@ private:
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
+	Texture* lifeTexture;
 	int nTransitionFrames;
 	int count;
 	int stageIndex;

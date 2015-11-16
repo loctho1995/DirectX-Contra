@@ -175,6 +175,7 @@
     <ClCompile Include="tinyxml.cpp" />
     <ClCompile Include="tinyxmlerror.cpp" />
     <ClCompile Include="tinyxmlparser.cpp" />
+    <ClCompile Include="UIComponents.cpp" />
     <ClCompile Include="ViewPort.cpp" />
     <ClCompile Include="WindowInit.cpp" />
   </ItemGroup>
@@ -293,6 +294,7 @@
     <ClInclude Include="TileTmx.h" />
     <ClInclude Include="tinystr.h" />
     <ClInclude Include="tinyxml.h" />
+    <ClInclude Include="UIComponents.h" />
     <ClInclude Include="ViewPort.h" />
     <ClInclude Include="zconf.h" />
     <ClInclude Include="zlib.h" />

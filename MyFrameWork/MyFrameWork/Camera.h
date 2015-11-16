@@ -29,7 +29,7 @@ public:
 		{
 			moveDir = Direction::createUp();
 		}
-		vx = vy = 0;
+		vx = vy = 1.0f;
 		
 	}
 	void setPosition(float x, float y)
@@ -93,7 +93,6 @@ public:
 		{
 			if( this -> x + getWidth() >= cameraTranslatePoint.x)
 			{
-				vx = 1.0f;
 				setPosition(this -> x + getWidth()/ 2 + vx, y);
 			}
 			else
@@ -105,8 +104,8 @@ public:
 		{
 			if( this -> y <= cameraTranslatePoint.y + cameraTranslatePoint.height)
 			{
-				vy = 1.0f;
-				setPosition(this -> x , this -> y + getHeight() + vy);
+				
+				setPosition(x , this -> y + getHeight() / 2 - vy);
 			}
 			else
 			{

@@ -54,6 +54,10 @@ public:
 		if( !pData -> getBody ().checkCollision(cameraRect) )
 			pData -> isDesTroyed = true;
 	}
+	virtual bool isDead()
+	{
+		return pData -> isDead;
+	}
 protected:
 	SpriteData* pData;
 };

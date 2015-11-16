@@ -52,8 +52,7 @@ public:
     }
 	
 	virtual void onUpdate() {}
-	virtual std::vector< BulletSprite* >& getBullets() { return pData -> Bullets;}
-	virtual void die() { pData ->pState -> onDead();}
+	virtual void die() { pData ->pState -> onDead(); }
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
 	virtual std::string getName() {return pData ->botName;} 
@@ -80,6 +79,7 @@ public:
 		pData -> HP -= damage;
 		if( pData -> HP <= 0 )
 		{
+			pData -> isDead = true;
 			die();
 		}
 	}
@@ -92,7 +92,14 @@ public:
 		if( !pData -> getBody().checkCollision(cameraRect) )
 			pData -> isDesTroyed = true;
 	}
-
+	virtual int getScore()
+	{
+		return pData -> score;
+	}
+	virtual bool isDead()
+	{
+		return pData -> isDead;
+	}
 	virtual Direction getAppearDir() 
 	{
 		return pData -> appearDir;

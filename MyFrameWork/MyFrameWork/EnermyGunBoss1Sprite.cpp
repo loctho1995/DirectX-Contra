@@ -34,6 +34,8 @@ EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY, std::v
 
 	pData -> HP = 16;
 
+	pData -> score	= 3000;
+
 	pData ->body = RectF( -6.0f, -6.0f, 12.0f, 8.0f);
 }
 void EnermyGunBoss1Sprite :: draw( Camera* cam) 

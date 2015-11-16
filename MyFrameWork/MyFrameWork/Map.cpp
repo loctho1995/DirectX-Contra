@@ -65,7 +65,6 @@ Map :: Map(std::string mapName)
 
 	createMapCollsionTree();
 	bIsFinish = false;
-	bIsGameOver = false;
 
 }
 
@@ -247,11 +246,16 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 	{
 		EnermySprite* temp = it -> second;
 		RectF SpriteRect(temp ->getBody());
-		if (it ->second ->isDesTroyed())
+		if (temp ->isDesTroyed())
 		{
-			if(it -> second ->getName().find("final") != std::string::npos)
+			if(temp -> isDead())
+			{
+				UIComponents::getInstance() ->addScore(temp ->getScore());
+			}
+			if(temp ->getName().find("final") != std::string::npos)
 			{
 				bIsFinish = true;
+				UIComponents::getInstance() ->setStage( UIComponents::getInstance() ->getCurrentStage() + 2 );
 			}
 			delete temp;
 			it = enermyMap.erase(it);
@@ -612,6 +616,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		if( sprite -> isHittable() && bulletE ->getBody().checkCollision(sprite ->getBody()) )
 		{
 			sprite -> die();
+
 			bulletE -> die();
 			break;
 		}
@@ -692,9 +697,11 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		RectF cameraRect = cam ->getRect();
 
 #pragma region
-		sprite ->getBody();
+	sprite ->getBody();
 	sprite -> onCameraCollision(cameraRect);
 #pragma endregion playervsCamera
+
+
 
 
 #pragma region
@@ -724,7 +731,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		it -> second -> updateThroughRect();
 	}
 
-
+	
 
 }
 
@@ -894,10 +901,6 @@ std::vector < std::string>&  Map :: getSpriteNames()
 	return spriteNames;
 }
 
-bool Map :: isGameOver()
-{
-	return bIsGameOver;
-}
 bool Map :: isFinish()
 {
 	return bIsFinish;

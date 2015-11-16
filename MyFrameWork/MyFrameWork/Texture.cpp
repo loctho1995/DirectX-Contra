@@ -71,3 +71,10 @@ D3DXVECTOR2 Texture :: getAnchorPoint()
 {
 	return anchorPoint;
 }
+void Texture :: draw(int x, int y, float xRatio, float yRatio, D3DCOLOR color ) const
+{
+	Graphics::getInstance() -> drawTexture(pTextureHolder ->pTexture, pTextureHolder -> width,
+		pTextureHolder -> height, RectF(0,0,pTextureHolder -> width, pTextureHolder -> height),x , y,  xRatio, yRatio,
+		 color);
+	
+}

@@ -96,6 +96,7 @@
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="GameOverScene.cpp" />
     <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="UIComponents.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -215,5 +216,6 @@
     <ClInclude Include="Loader.h" />
     <ClInclude Include="GameOverScene.h" />
     <ClInclude Include="Sound.h" />
+    <ClInclude Include="UIComponents.h" />
   </ItemGroup>
 </Project>

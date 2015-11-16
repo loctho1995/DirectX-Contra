@@ -59,6 +59,10 @@ public:
 	
 	static void loadResources();
 
+	virtual bool isDead()
+	{
+		return pData -> isDead;
+	}
 	
 private:
 	PlayerData* pData;

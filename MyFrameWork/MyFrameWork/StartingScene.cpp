@@ -46,7 +46,7 @@ void StartingScene:: handleInput()
 		case VK_RETURN:
 			if (e.isRelease())
 			{
-				SceneManager::getInstance() ->createScene( new LoadingScene(1));
+				SceneManager::getInstance() ->createScene( new LoadingScene());
 			}
 			break;
 		}

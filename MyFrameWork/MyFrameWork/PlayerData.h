@@ -16,6 +16,7 @@ public:
 		nFiringHoldFrames = 15;
 		isRapid = false;
 		isRespawn = true;
+		isDead = false;
 	}
 	enum SpriteArrayIndex
 	{
@@ -51,9 +52,10 @@ public:
 	void reset()
 	{
 		this ->x = cameraRect.x + 20;
-		this ->y = cameraRect.y + 50;
+		this ->y = cameraRect.y + 20;
 		this ->isRespawn = true;
 		this -> bulletType = BulletTypes::F;
+		this -> isDead = false;
 	}
 	RectF* bodyRects;
 	bool isFiring;

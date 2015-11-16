@@ -64,4 +64,5 @@ public:
 	class SpriteState* pState;
 	bool isDesTroyed;
 	bool isHittable;
+	bool isDead;
 };

@@ -4,8 +4,8 @@
 
 
 Graphics*  Graphics :: instance = nullptr;
-const unsigned int SCWIDTH = 240;
-const unsigned int SCHEIGHT = 240;
+const unsigned int SCWIDTH = 256;
+const unsigned int SCHEIGHT = 256;
 Graphics :: Graphics(HWND hWnd)
 {
 	pD3D9 = Direct3DCreate9( D3D_SDK_VERSION );

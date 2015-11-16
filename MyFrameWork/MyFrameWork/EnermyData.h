@@ -12,14 +12,15 @@ public :
 		isDesTroyed = false;
 		isHittable  = true;
 		appearDir = Direction::createRight();
+		isDead = false;
+		score = 0;
 	}
 	float playerX;
 	float playerY;
     std::string botName; //add by Tho
 	int HP;
 	bool isThrougable;
-	std:: vector < BulletSprite* > Bullets;
 	std:: vector < BulletSprite* >& bulletsVector;
-
+	int score;
 	Direction appearDir;
 };
