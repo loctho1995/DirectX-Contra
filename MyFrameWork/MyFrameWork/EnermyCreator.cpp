@@ -3,8 +3,10 @@
 #include "EnermyGunBoss1Sprite.h"
 #include "EnermyFinalBoss1Sprite.h"
 #include "ObjectBridge.h"
+#include "ObjectDynamicBridgeSprite.h"
 #include "EnermyCannon.h"
 #include "EnermyGunRotating.h"
+#include "EnemyBlazerSprite.h"
 
 
 EnermyCreator* EnermyCreator::instance = nullptr;
@@ -42,7 +44,8 @@ EnermyCreator::EnermyCreator()
 
 	addAppearDirection("soldierr",Direction::createLeft());
 
-
+	addAppearDirection("blazer", Direction::createUp());
+	addAppearDirection("dynamicbridge", Direction::createUp());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -99,6 +102,11 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	if (enermyName == "finalboss1")
 	{
 		return new EnermyFinalBoss1Sprite(respawnX, respawnY);
+	}
+
+	if (enermyName == "blazer")
+	{
+		return new EnemyBlazerSprite(respawnX, respawnY);
 	}
 
 	return nullptr;
@@ -170,6 +178,11 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 	if (name == "capsuleweaponl")
 	{
 		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::L);
+	}
+
+	if (name == "dynamicbridge")
+	{
+		return new ObjectDynamicBridgeSprite(respawnX, respawnY);
 	}
 
 	return nullptr;

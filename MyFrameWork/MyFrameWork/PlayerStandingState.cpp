@@ -33,11 +33,16 @@ void PlayerStandingState:: onJumpPressed()
 	{
 		transition(new PlayerJumpingState(pData));
 	}
-	else if (  pData -> verticalDir.isDown() && pData ->cSupportRect.type == "throughable" )
+	else if (  pData -> verticalDir.isDown() &&  pData ->cSupportRect.type == "throughable" )
 	{
 		pData ->cThroughRect.push_back( pData ->cSupportRect );
 		pData -> y += 1;
-		//pData -> ly += 1;
+		transition( new PlayerJumpingState(pData, false, -0.21f));
+	}
+	else if (  pData -> verticalDir.isDown() &&  (pData ->cDynamicSupportRect) &&  (pData ->cDynamicSupportRect ->type == "throughable") ) 
+	{
+		pData -> dynamicThroughRect.push_back(pData ->cDynamicSupportRect);
+		pData -> y += 1;
 		transition( new PlayerJumpingState(pData, false, -0.21f));
 	}
 	
@@ -47,8 +52,8 @@ void PlayerStandingState:: onUpdate()
 {
 	hittableCalculation();
 	pData -> ppTextureArrays[ pData ->iCurrentArr ] -> update();
-	pData -> x += pData -> cSupportRect.vx;
-	pData -> y += pData -> cSupportRect.vy;
+	pData -> x += (pData -> cDynamicSupportRect)? pData -> cDynamicSupportRect -> vx : 0.0f;
+	pData -> y += (pData -> cDynamicSupportRect)? pData -> cDynamicSupportRect -> vy : 0.0f;
 	if( pData ->isFiring )
 	{
 		pData ->count ++;

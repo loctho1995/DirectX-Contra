@@ -12,6 +12,7 @@ public:
 	bool isEnemyCollisionable;
 	bool isAffectble;
 	int HP;
+	CollisionRectF collisionRect;
 	Direction appearDir;
 };
 

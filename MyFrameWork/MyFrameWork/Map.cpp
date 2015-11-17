@@ -231,6 +231,7 @@ void Map :: loadObject(TiXmlElement* pElement)
 		}
 		
 	}
+
 }
 
 void Map :: createMapCollsionTree()
@@ -494,7 +495,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	// player vs ObjectSprite
 
 
-	for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
+	/*for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
 	{
 		if(objectIt ->second ->isPlayerCollisionable())
 		{
@@ -529,7 +530,55 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			}
 		}	
 		
+	}*/
+
+
+
+
+	for (std:: map < int ,ObjectSprite* > :: iterator objectIt = objectMap.begin() ; objectIt != objectMap.end(); objectIt++)
+	{
+		if(objectIt ->second ->isPlayerCollisionable())
+		{
+			CollisionRectF* r = objectIt ->second ->getRefCollisionRect();
+			std:: vector < CollisionRectF* > throughRectVector = sprite ->getDynamicThroughRect();
+			int size = 0;
+			size = throughRectVector.size();
+			if(std::find(throughRectVector.begin(), throughRectVector.end(), r ) == throughRectVector.end())
+			{
+				if( sprite ->getBody().checkCollision(r ->rect)  )
+				{
+
+					if( objectIt ->second ->isAffectble() )
+						sprite -> onDynamicObjectCollision( r );
+					else
+					{
+						if ( objectIt -> second ->getName().find("weapon") != std::string::npos )
+						{	
+							ObjectStaticWeapon * weapon = dynamic_cast< ObjectStaticWeapon *> (objectIt -> second);
+							if(weapon)
+							{
+								sprite ->setBulletType (weapon ->getBulletType());
+								objectIt -> second ->die();
+							}
+							else
+							{
+								ObjectCapsuleWeapon * weaponAnother = dynamic_cast< ObjectCapsuleWeapon *> (objectIt -> second);
+								sprite ->setBulletType (weaponAnother ->getBulletType());
+								objectIt -> second ->die();
+							}
+						}
+					}
+				}
+			}
+			else
+			{
+				std :: cout <<" through";
+			}
+		}	
+		
 	}
+
+
 
 #pragma endregion mapvsPlayer
 
@@ -697,7 +746,6 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		RectF cameraRect = cam ->getRect();
 
 #pragma region
-	sprite ->getBody();
 	sprite -> onCameraCollision(cameraRect);
 #pragma endregion playervsCamera
 
@@ -709,7 +757,6 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	{
 		it -> second -> onCameraCollision(cameraRect);
 	}
-	// update through rect list of object
 	for (std::map < int, ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); it++)
 	{
 		it -> second -> onCameraCollision(cameraRect);
@@ -771,8 +818,8 @@ void Map :: onSupportSprite( PlayerSprite* sprite)
 		{
 			if(objectIt ->second ->isPlayerCollisionable())
 			{
-				CollisionRectF collisionRect = objectIt ->second ->getCollisionRect();
-				if( r.checkCollision(collisionRect.rect)  )
+				CollisionRectF* collisionRect = objectIt ->second ->getRefCollisionRect();
+				if( r.checkCollision(collisionRect -> rect)  )
 				{
 				
 					if( objectIt ->second ->isAffectble() )
@@ -790,6 +837,7 @@ void Map :: onSupportSprite( PlayerSprite* sprite)
 	{
 		sprite -> onUnsupported();
 		sprite -> setSupportCollisionRect(CollisionRectF());
+		sprite -> setSupportCollisionRect(NULL);
 	}
 	
 #pragma endregion mapvsPlayer
@@ -864,8 +912,7 @@ void Map :: onUpdate(PlayerSprite* sprite, Camera* cam)
 	// update enermy
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)
 	{
-		it ->second ->setPlayerX(sprite -> getCenterX());
-		it ->second ->setPlayerY(sprite -> getCenterY());
+		it ->second ->setPlayerProperties(sprite -> getCenterX(), sprite ->getCenterY(), sprite -> isDead());
 		it ->second ->update();
 	}
 

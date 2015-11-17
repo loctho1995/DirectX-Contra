@@ -189,8 +189,8 @@ void PlayerJumpingState:: onCollision( CollisionRectF cRect)
 {
 	
 	// devide into 4 case
-	float vx = pData -> vx;
-	float vy = pData -> vy;
+	float vx = pData -> vx - cRect.vx;
+	float vy = pData -> vy - cRect.vy;
 	float top = pData ->getBody().y;
 	float left = pData -> getBody().x;
 	float right =  left + pData-> getBody().width;
@@ -379,6 +379,197 @@ void PlayerJumpingState:: onCollision( CollisionRectF cRect)
 
 	
 		
+}
+
+void PlayerJumpingState:: onDynamicObjectCollision(CollisionRectF* cRect)
+{
+	// devide into 4 case
+	float vx = pData -> vx - cRect -> vx;
+	float vy = pData -> vy - cRect -> vy;
+	float top = pData ->getBody().y;
+	float left = pData -> getBody().x;
+	float right =  left + pData-> getBody().width;
+	float bottom = top + pData ->getBody().height;
+
+
+	float topR = cRect -> rect.y;
+	float leftR = cRect -> rect.x;
+	float rightR =  leftR + cRect -> rect.width;
+	float bottomR = topR + cRect -> rect.height;
+	
+
+	
+		if( vx > 0.0f)
+		{
+			if(vy > 0.0f)
+			{
+				float px = right - leftR;
+				float py = bottom - topR;
+				if( vy * px > vx * py )
+				{
+					// top collision
+					pData -> vy = 0.0f;
+					pData -> y -= py;
+
+					if(cRect->type != "water")
+					{
+						if(isMoving)
+						{
+							transition(new PlayerRunningState( pData));
+						}
+						else
+						{
+							transition( new PlayerStandingState( pData));
+						}
+					}
+					else
+					{
+						if(isMoving)
+						{
+							transition( new PlayerSwimmingState( pData));
+							
+						}
+						else
+						{
+							transition( new PlayerDivingState( pData));
+						}
+					}
+				}
+				else
+				{
+					// side collision
+					if(cRect->type != "throughable")
+					{
+						pData -> x -= px;
+						pData -> vx = 0.0f;
+					}
+					else
+					{
+						pData ->dynamicThroughRect.push_back(cRect);
+					}
+					
+				}
+			}
+			else // vy <= 0.0f
+			{
+				float px = right - leftR;
+				float py = bottomR - top;
+				if( (- vy * px ) > vx * py)
+				{
+					// top collision
+				
+					if(cRect->type != "throughable")
+					{
+						pData -> y += py;
+						pData -> vy = 0.0f;
+					}
+					else
+					{
+						pData -> dynamicThroughRect.push_back(cRect);
+					}
+
+				}
+				else
+				{
+					// side collision
+					if(cRect->type != "throughable")
+					{
+						pData -> x -= px;
+						pData -> vx = 0.0f;
+					}
+					else
+					{
+						pData -> dynamicThroughRect.push_back(cRect);
+					}
+				}
+			}
+		}
+		else // vx <= 0.0f
+		{
+			if(vy > 0.0f)
+			{
+				float px = rightR - left;
+				float py = bottom - topR;
+				if( vy * px > (-vx * py) )
+				{
+					// top collision
+					pData -> y -= py;
+					pData -> vy = 0.0f;
+					if(cRect->type != "water")
+					{
+						if(isMoving)
+						{
+							
+							transition( new PlayerRunningState( pData));
+						}
+						else
+						{
+							transition(new PlayerStandingState( pData));
+						}
+					}
+					else
+					{
+						if(isMoving)
+						{
+							transition( new PlayerSwimmingState( pData));
+							
+						}
+						else
+						{
+							transition( new PlayerDivingState( pData));
+						}
+						
+					}
+					
+				}
+				else
+				{
+					// side collision
+					if(cRect->type != "throughable")
+					{
+						pData -> x += px;
+						pData -> vx = 0.0f;
+					}
+					else
+					{
+						pData -> dynamicThroughRect.push_back(cRect);
+					}
+				}
+			}
+			else // vy <= 0.0f
+			{
+				float px = rightR - left;
+				float py = bottomR - top;
+				if( (- vy * px ) > (-vx * py))
+				{
+					// top collision
+					if(cRect->type != "throughable")
+					{
+						pData -> y += py;
+						pData -> vy = 0.0f;
+					}
+					else
+					{
+						pData -> dynamicThroughRect.push_back(cRect);
+					}
+				}
+				else
+				{
+					// side collision
+					if(cRect->type != "throughable")
+					{
+						pData -> x += px;
+						pData -> vx = 0.0f;
+					}
+					else
+					{
+						pData -> dynamicThroughRect.push_back(cRect);
+					}
+				}
+			}
+		}
+	
+
 }
 
 

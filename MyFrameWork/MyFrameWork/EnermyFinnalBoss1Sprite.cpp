@@ -32,6 +32,8 @@ EnermyFinalBoss1Sprite:: EnermyFinalBoss1Sprite(int respawnX, int respawnY)
 
 	pData -> isThrougable = true;
 
+	pData -> score = 10000;
+
 	pData -> HP = 32;
 
 	pData ->body = RectF( -6.5f, -6.5f, 13.0f, 13.0f);

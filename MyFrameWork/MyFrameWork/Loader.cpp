@@ -48,6 +48,18 @@ void Loader::loadResources(std::string name)
 			return;
 		}
 
+		if (name == "blazer")
+		{
+			EnemyBlazerSprite::loadResources();
+			return;
+		}
+
+
+		if (name == "dynamicbridge")
+		{
+			ObjectDynamicBridgeSprite::loadResources();
+			return;
+		}
 		
 	}
 }

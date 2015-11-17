@@ -113,6 +113,7 @@ public:
 			}
 		}
 	}
+	Direction getMoveDir() {return moveDir;}
 private:
 	ViewPort* viewPort;
 	RectF mapRect;

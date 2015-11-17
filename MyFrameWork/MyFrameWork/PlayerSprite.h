@@ -4,7 +4,7 @@
 class PlayerSprite : public Sprite
 {
 public:
-	PlayerSprite(float respawnX, float respawnY);
+	PlayerSprite(float respawnX, float respawnY, Direction movedir);
 	~PlayerSprite();
 	virtual void update( );
 	virtual void draw(Camera* cam);
@@ -30,11 +30,18 @@ public:
 	}*/
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
 	virtual void onCollision(CollisionRectF r)	{ pData ->pState ->onCollision(r); }
+	virtual void onDynamicObjectCollision(CollisionRectF* r)	{ pData ->pState ->onDynamicObjectCollision(r); }
 	virtual void setSupportCollisionRect(CollisionRectF rect)
 	{
 		pData ->cSupportRect = rect;
 	}
+	virtual void setSupportCollisionRect(CollisionRectF* rect)
+	{
+		pData ->cDynamicSupportRect = rect;
+	}
+
 	virtual std::vector< CollisionRectF>& getThroughRect();
+	virtual std::vector< CollisionRectF* >&  getDynamicThroughRect();
 	virtual void updateThroughRect();
 	std::vector<BulletSprite* >& getBullets();
 	virtual void die();

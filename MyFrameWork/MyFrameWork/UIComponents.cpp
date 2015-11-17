@@ -12,11 +12,13 @@ UIComponents* UIComponents:: getInstance()
 }
 
 UIComponents::UIComponents()
+	:
+	POINT_PER_LIFE( 25000)
 {
 	score = 0;
 	highScore = 0 ;//highScore; load through file
-	currentStage = 1;
-	lifes = 3;
+	currentStage = 3;
+	lifes = 5;
 }
 
 
@@ -53,7 +55,11 @@ void UIComponents:: descreaseLifes()
 void UIComponents:: addScore( int val )
 {
 	if ( val != 0)
-	Sound::getInstance() ->play("beep.wav", false, 1);
+		Sound::getInstance() ->play("beep.wav", false, 1);
+	if( (( score + val ) / POINT_PER_LIFE ) > ( score / POINT_PER_LIFE ) )
+	{
+		inscreaseLifes();
+	}
 	score += val;
 }
 void UIComponents:: setStage(int val)

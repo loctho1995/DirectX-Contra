@@ -1,7 +1,7 @@
 #include "PlayerSprite.h"
 #include "PlayerJumpingState.h"
 #include "Loader.h"
-PlayerSprite::PlayerSprite(float respawnX, float respawnY)
+PlayerSprite::PlayerSprite(float respawnX, float respawnY, Direction movedir)
 {
 
 	// Set up PlayerData
@@ -12,6 +12,8 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY)
 	pData->x  = respawnX;
 
 	pData->y  = respawnY;
+
+	pData ->movedir = movedir;
 
 	pData -> ppTextureArrays = new TextureArray* [PlayerData::COUNT];
 
@@ -180,15 +182,27 @@ std::vector< CollisionRectF>& PlayerSprite :: getThroughRect()
 {
 	return pData ->cThroughRect;
 }
+std::vector< CollisionRectF* >&  PlayerSprite :: getDynamicThroughRect()
+{
+	return pData ->dynamicThroughRect;
+}
 void PlayerSprite :: updateThroughRect()
 {
 	for (int i = 0; i < pData->cThroughRect.size(); i++)
-	{
-		if(!pData ->getBody().checkCollision( pData ->cThroughRect[i].rect))
 		{
-			pData->cThroughRect.erase( pData->cThroughRect.begin() + i );
+			if(!pData ->getBody().checkCollision( pData ->cThroughRect[i].rect))
+			{
+				pData->cThroughRect.erase( pData->cThroughRect.begin() + i );
+			}
 		}
-	}
+
+		for (int i = 0; i < pData -> dynamicThroughRect.size(); i++)
+		{
+			if(!pData -> dynamicThroughRect[i] || !pData ->getBody().checkCollision( pData ->dynamicThroughRect[i] ->rect))
+			{
+				pData -> dynamicThroughRect.erase( pData->dynamicThroughRect.begin() + i );
+			}
+		}
 }
 
 void  PlayerSprite :: die()

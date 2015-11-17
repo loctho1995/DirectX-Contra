@@ -14,6 +14,7 @@ public:
 	virtual void onUpdate() {}
 	virtual void onCollision(RectF rect) {}
 	virtual void onCollision(CollisionRectF rect) {}
+	virtual void onDynamicObjectCollision(CollisionRectF* rect) {}
 	virtual void onFall() {}
 	virtual void onMoveVerticalPressed( Direction dir) {}
 	virtual void onMoveVerticalReleased( Direction dir) {}

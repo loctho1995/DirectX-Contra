@@ -97,6 +97,10 @@
     <ClCompile Include="GameOverScene.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="UIComponents.cpp" />
+    <ClCompile Include="EnemyBlazerSprite.cpp" />
+    <ClCompile Include="BlazerMovingState.cpp" />
+    <ClCompile Include="DynamicBridgeMovingState.cpp" />
+    <ClCompile Include="ObjectDynamicBridgeSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -217,5 +221,12 @@
     <ClInclude Include="GameOverScene.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="UIComponents.h" />
+    <ClInclude Include="EnemyBlazerSprite.h" />
+    <ClInclude Include="BlazerMovingState.h" />
+    <ClInclude Include="DynamicBridgeMovingState.h" />
+    <ClInclude Include="ObjectDynamicBridgeSprite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

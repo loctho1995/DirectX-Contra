@@ -28,13 +28,24 @@ public:
 		pData -> ly = pData -> y;
 	}*/
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
+	virtual void onCollision(CollisionRectF r)	{ pData ->pState ->onCollision(r); }
 	virtual void setSupportCollisionRect(CollisionRectF rect)
 	{
 		pData ->cSupportRect = rect;
 	}
+
+	virtual void setSupportCollisionRect(CollisionRectF* rect)
+	{
+		pData ->cDynamicSupportRect = rect;
+	}
+
 	virtual std::vector< CollisionRectF >&  getThroughRect()
 	{
 		return pData ->cThroughRect;
+	}
+	virtual std::vector< CollisionRectF* >&  getDynamicThroughRect()
+	{
+		return pData ->dynamicThroughRect;
 	}
 	virtual void updateThroughRect()
 	{
@@ -43,6 +54,14 @@ public:
 			if(!pData ->getBody().checkCollision( pData ->cThroughRect[i].rect))
 			{
 				pData->cThroughRect.erase( pData->cThroughRect.begin() + i );
+			}
+		}
+
+		for (int i = 0; i < pData -> dynamicThroughRect.size(); i++)
+		{
+			if(pData -> dynamicThroughRect[i] || !pData ->getBody().checkCollision( pData ->dynamicThroughRect[i] ->rect))
+			{
+				pData -> dynamicThroughRect.erase( pData->dynamicThroughRect.begin() + i );
 			}
 		}
 	}

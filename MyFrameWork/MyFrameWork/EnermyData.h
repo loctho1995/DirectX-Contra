@@ -17,6 +17,7 @@ public :
 	}
 	float playerX;
 	float playerY;
+	bool isPlayerDead;
     std::string botName; //add by Tho
 	int HP;
 	bool isThrougable;

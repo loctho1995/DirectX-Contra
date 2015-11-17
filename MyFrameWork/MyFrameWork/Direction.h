@@ -30,7 +30,8 @@ public:
 	{
 		if(dir == Right)
 			dir = Left;
-		else dir = Right;
+		else if( dir == Left)
+			dir = Right;
 	}
 	
 	Direction& operator = (const Direction& d2)

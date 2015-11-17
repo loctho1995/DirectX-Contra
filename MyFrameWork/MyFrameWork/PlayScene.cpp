@@ -5,11 +5,12 @@ PlayScene ::PlayScene()
 {
     std:: string mapName = "stage" + std::to_string(UIComponents::getInstance() ->getCurrentStage());;
     pMap = new Map(mapName);
-	pPlayer = new PlayerSprite(pMap ->getResX(), pMap ->getResY());
+	
 	lifeTexture = new Texture("Resources\\Sprites\\player\\life00.png", "life00.png");
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;
     viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize / 2, SCHEIGHT / 2 - viewPortSize / 2, viewPortSize, viewPortSize));
 	cam = new Camera(viewPort,pMap ->getResX(), pMap ->getResY(), pMap->getMapRect(), pMap ->getCameraTranslatePoint());
+	pPlayer = new PlayerSprite(pMap ->getResX(), pMap ->getResY(), cam ->getMoveDir());
 	isPause = false;
 	isFinish = false;
 	isGameOver = false;
@@ -158,12 +159,12 @@ void PlayScene::render()
     
     pMap->draw(cam);
     pPlayer->draw(cam);
-	int lifes = UIComponents::getInstance() ->getLifes();
+	int lifes = min (UIComponents::getInstance() ->getLifes() , 5);
 	int x = 0;
 	int y = 0;
+	int offset = 16;
 	for (int i = 0; i < lifes - 1 ; i++)
 	{
-		int offset = 16;
 		lifeTexture ->draw(x, y);
 		x += offset;
 	}

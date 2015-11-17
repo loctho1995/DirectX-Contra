@@ -11,8 +11,6 @@ EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY, std::v
 	pData->x  = respawnX;
 
 	pData->y  = respawnY;
-	
-	pData -> isThrougable = false;
 
 	pData->ppTextureArrays = new TextureArray* [ 3 ];
 
@@ -32,9 +30,11 @@ EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY, std::v
 
 	pData ->pState = new EnermyGunBoss1StandingState(pData);
 
+	pData -> isThrougable = false;
+
 	pData -> HP = 16;
 
-	pData -> score	= 3000;
+	pData -> score	= 1000;
 
 	pData ->body = RectF( -6.0f, -6.0f, 12.0f, 8.0f);
 }

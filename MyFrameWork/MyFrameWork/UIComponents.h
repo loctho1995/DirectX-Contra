@@ -22,5 +22,6 @@ private:
 	int highScore;
 	int currentStage;
 	int lifes;
+	const int POINT_PER_LIFE;
 };
 

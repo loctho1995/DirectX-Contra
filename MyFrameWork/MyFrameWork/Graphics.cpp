@@ -78,7 +78,7 @@ void Graphics :: endRender()
 {
 	pSpriteHandler -> End();
 	pDevice->EndScene();
-	pDevice -> Present(NULL, NULL, NULL, NULL );
+ 	pDevice -> Present(NULL, NULL, NULL, NULL );
 }
 
 void Graphics :: loadTexture(std:: string sourceFile, std::string name, D3DCOLOR colorkey)
@@ -218,7 +218,7 @@ void Graphics :: drawTextureFlipX ( LPDIRECT3DTEXTURE9 pTexture, int width, int 
 
 	D3DXMatrixTransformation2D(
 								&matrix,
-								&D3DXVECTOR2(x ,y),
+								&D3DXVECTOR2(x + rect.width * (0.5f - anchorPoint.x ), y),
 								0.0f,
 								&D3DXVECTOR2(-xRatio,yRatio),
 								&D3DXVECTOR2(x + height / 2, y + height / 2),

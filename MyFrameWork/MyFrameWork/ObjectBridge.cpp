@@ -39,7 +39,7 @@ ObjectBridge::~ObjectBridge()
 
 void ObjectBridge::update()
 {
-    //std::cout << "playerX: " << playerX;
+	pData -> collisionRect  = CollisionRectF(pData ->getBody(), "throughable", pData -> vx, pData -> vy);
     if (!isDestroy)
     {
         if (this->pData->playerX > bridgeHead->getBody().x)

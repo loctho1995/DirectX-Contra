@@ -52,7 +52,12 @@ public:
 	void reset()
 	{
 		this ->x = cameraRect.x + 20;
-		this ->y = cameraRect.y + 20;
+		if(movedir.isRight())
+		{
+			this -> y = cameraRect.y + 20;
+		}
+		else
+			this ->y = cameraRect.y + cameraRect.height / 2;
 		this ->isRespawn = true;
 		this -> bulletType = BulletTypes::F;
 		this -> isDead = false;
@@ -68,4 +73,5 @@ public:
 	int nonHittableFrames;
 	bool isRapid;
 	bool isRespawn;
+	Direction movedir;
 };

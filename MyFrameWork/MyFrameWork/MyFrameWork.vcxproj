@@ -84,6 +84,9 @@
   <ItemGroup>
     <ClCompile Include="base64.cpp" />
     <ClCompile Include="BitMapFont.cpp" />
+    <ClCompile Include="BlazerMovingState.cpp" />
+    <ClCompile Include="DynamicBridgeMovingState.cpp" />
+    <ClCompile Include="EnemyBlazerSprite.cpp" />
     <ClCompile Include="EnemySniper.cpp" />
     <ClCompile Include="EnemySniperData.cpp" />
     <ClCompile Include="EnemySniperDeadState.cpp" />
@@ -141,6 +144,7 @@
     <ClCompile Include="ObjectCapsuleWeaponData.cpp" />
     <ClCompile Include="ObjectCapsuleWeaponDropState.cpp" />
     <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp" />
+    <ClCompile Include="ObjectDynamicBridgeSprite.cpp" />
     <ClCompile Include="ObjectStaticWeapon.cpp" />
     <ClCompile Include="ObjectStaticWeaponCloseState.cpp" />
     <ClCompile Include="ObjectStaticWeaponData.cpp" />
@@ -182,6 +186,9 @@
   <ItemGroup>
     <ClInclude Include="base64.h" />
     <ClInclude Include="BitMapFont.h" />
+    <ClInclude Include="BlazerMovingState.h" />
+    <ClInclude Include="DynamicBridgeMovingState.h" />
+    <ClInclude Include="EnemyBlazerSprite.h" />
     <ClInclude Include="BulletMovingState.h" />
     <ClInclude Include="BulletSprite.h" />
     <ClInclude Include="BulletState.h" />
@@ -252,6 +259,7 @@
     <ClInclude Include="ObjectCapsuleWeaponData.h" />
     <ClInclude Include="ObjectCapsuleWeaponDropState.h" />
     <ClInclude Include="ObjectCapsuleWeaponFlyingState.h" />
+    <ClInclude Include="ObjectDynamicBridgeSprite.h" />
     <ClInclude Include="ObjectStaticWeapon.h" />
     <ClInclude Include="ObjectStaticWeaponCloseState.h" />
     <ClInclude Include="ObjectStaticWeaponData.h" />
@@ -298,6 +306,9 @@
     <ClInclude Include="ViewPort.h" />
     <ClInclude Include="zconf.h" />
     <ClInclude Include="zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

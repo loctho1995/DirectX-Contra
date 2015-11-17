@@ -6,6 +6,8 @@
 #include "EnermyFinalBoss1Sprite.h"
 #include "EnermyCannon.h"
 #include "PlayerSprite.h"
+#include "EnemyBlazerSprite.h"
+#include "ObjectDynamicBridgeSprite.h"
 #include "Map.h"
 
 class Loader
