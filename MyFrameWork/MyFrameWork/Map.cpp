@@ -664,12 +664,11 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	for (int i = 0; i < bulletSprites.size(); i++)
 	{
 		Sprite* bulletE = bulletSprites[i];
-		if( sprite -> isHittable() && bulletE ->getBody().checkCollision(sprite ->getBody()) )
+		if( sprite -> isHittable() &&  bulletE ->getBody().checkCollision(sprite ->getBody())  )
 		{
-			sprite -> die();
-
-			bulletE -> die();
-			break;
+			if(sprite -> isUndying())
+					bulletE -> die();
+					break;
 		}
 	}
 #pragma endregion EnermyBulletvsPlayer
