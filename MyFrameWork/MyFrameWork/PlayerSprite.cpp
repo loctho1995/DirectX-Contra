@@ -145,16 +145,26 @@ void PlayerSprite::draw(Camera* cam)
 	}
 	if (isDraw == 0)
 	{
-		if( pData -> dir.isRight())
-		pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam);
-		else if( pData -> dir.isLeft())
+		if(pData -> isUndying)
+		{
+			if( pData -> dir.isRight())
+			pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam , 1.0f,1.0f, D3DCOLOR_ARGB(255 ,255 , 0 , 60));
+			else if( pData -> dir.isLeft())
+			pData->ppTextureArrays[ pData->iCurrentArr ] -> drawFlipX(pData -> x, pData -> y , cam, 1.0f, 1.0f,D3DCOLOR_ARGB(255 , 255 , 0 ,60));
+		}
+		else
+		{
+			if( pData -> dir.isRight())
+			pData->ppTextureArrays[ pData->iCurrentArr ] -> draw(pData -> x, pData -> y , cam);
+			else if( pData -> dir.isLeft())
 			pData->ppTextureArrays[ pData->iCurrentArr ] -> drawFlipX(pData -> x, pData -> y , cam);
-
-		for (int i = 0; i < pData ->Bullets.size(); i++)
+		}
+		
+	}
+	for (int i = 0; i < pData ->Bullets.size(); i++)
 		{
 			pData ->Bullets[i] ->draw(cam);
 		}
-	}
 	
 }
 

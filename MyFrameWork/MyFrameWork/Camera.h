@@ -49,11 +49,11 @@ public:
 			
 		
 	}
-	void drawTexture(LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_XRGB (255,255,255) ) const
+	void drawTexture(LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_ARGB (255,255,255,255) ) const
 	{
 		viewPort -> drawTexture( pTexture,width, height, anchorPoint, (int)(x - this -> x), (int)(y - this -> y), xRatio, yRatio, color);
 	}
-	void drawTextureFlipX( LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_XRGB (255,255,255 )) const
+	void drawTextureFlipX( LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_ARGB (255,255,255,255)) const
 	{
 		viewPort -> drawTextureFlipX(pTexture,width, height, anchorPoint, (int)(x - this -> x), (int)(y - this -> y), xRatio, yRatio, color);
 	}

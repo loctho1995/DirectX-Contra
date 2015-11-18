@@ -51,6 +51,7 @@ void PlayerStandingState:: onJumpPressed()
 void PlayerStandingState:: onUpdate()
 {
 	hittableCalculation();
+	undyingCalculation();
 	pData -> ppTextureArrays[ pData ->iCurrentArr ] -> update();
 	pData -> x += (pData -> cDynamicSupportRect)? pData -> cDynamicSupportRect -> vx : 0.0f;
 	pData -> y += (pData -> cDynamicSupportRect)? pData -> cDynamicSupportRect -> vy : 0.0f;

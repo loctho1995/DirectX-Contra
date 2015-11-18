@@ -570,10 +570,6 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 					}
 				}
 			}
-			else
-			{
-				std :: cout <<" through";
-			}
 		}	
 		
 	}
@@ -588,6 +584,12 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		RectF r = it ->second ->getBody();
 		if(sprite ->isHittable() && r.checkCollision(sprite ->getBody()) && !it -> second ->isThroughable())
 		{
+			if(sprite -> isUndying() )
+			{
+				if(it -> second -> isHittable())
+					it -> second -> die();
+			}
+			else
 			sprite ->die();
 		}
 			

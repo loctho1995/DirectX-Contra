@@ -14,9 +14,12 @@ public:
 		hittableCounter = 0;
 		nonHittableFrames = 150;
 		nFiringHoldFrames = 15;
+		nUndyingFrames = 600;
+		undyingCounter = 0;
 		isRapid = false;
 		isRespawn = true;
 		isDead = false;
+		isUndying = false;
 	}
 	enum SpriteArrayIndex
 	{
@@ -59,6 +62,7 @@ public:
 		else
 			this ->y = cameraRect.y + cameraRect.height / 2;
 		this ->isRespawn = true;
+		this -> isUndying = false;
 		this -> bulletType = BulletTypes::F;
 		this -> isDead = false;
 	}
@@ -71,7 +75,10 @@ public:
 	BulletTypes bulletType;
 	int hittableCounter;
 	int nonHittableFrames;
+	int nUndyingFrames;
+	int undyingCounter;
 	bool isRapid;
 	bool isRespawn;
+	bool isUndying;
 	Direction movedir;
 };

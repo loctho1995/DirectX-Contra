@@ -34,6 +34,7 @@ void PlayerDivingState::onMovePressed(Direction d)
 void PlayerDivingState:: onUpdate()
 {
 	hittableCalculation();
+	undyingCalculation();
 	pData -> ppTextureArrays[ pData ->iCurrentArr ] -> update();
 	if( pData ->isFiring )
 	{

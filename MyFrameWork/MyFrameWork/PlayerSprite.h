@@ -60,15 +60,19 @@ public:
 		}
 		else		
 		{
-
+			pData -> isUndying = true;
 		}
 	}
 	
 	static void loadResources();
 
-	virtual bool isDead()
+	bool isDead()
 	{
 		return pData -> isDead;
+	}
+	bool isUndying()
+	{
+		return pData -> isUndying;
 	}
 	
 private:

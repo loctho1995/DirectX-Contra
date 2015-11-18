@@ -45,6 +45,7 @@ void PlayerJumpingState :: onUpdate()
 {
 
 	hittableCalculation();
+	undyingCalculation();
 	pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 
 

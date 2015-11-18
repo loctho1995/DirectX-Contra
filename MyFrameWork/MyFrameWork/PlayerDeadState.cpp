@@ -23,6 +23,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 void PlayerDeadState :: onUpdate()
 {
 	hittableCalculation();
+	undyingCalculation();
 	pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 
 	pData -> vy  += acceleration;

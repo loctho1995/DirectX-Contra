@@ -36,6 +36,7 @@ void PlayerSwimmingState :: onMoveReleased ( Direction d)
 void PlayerSwimmingState :: onUpdate()
 {
 		hittableCalculation();
+		undyingCalculation();
 		pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 		pData -> vx = pData->transform(speed);
 		pData -> x += pData -> vx;

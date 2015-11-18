@@ -76,14 +76,28 @@ public:
 		if(pData -> isRespawn )
 		{
 			pData -> hittableCounter++;
-			if((pData -> hittableCounter %= pData ->nonHittableFrames) == 0)
+			if((pData -> hittableCounter == pData ->nonHittableFrames))
 			{
 				pData -> isHittable = true;
 				pData -> isRespawn = false;
 			}
 		}
 	}
+
+	virtual void undyingCalculation() 
+	{
+		if(pData -> isUndying )
+		{
+			pData -> undyingCounter++;
+			if((pData -> undyingCounter == pData ->nUndyingFrames))
+			{
+				pData -> isUndying = false;
+				
+			}
+		}
+	}
 	
+
 
 
 protected:

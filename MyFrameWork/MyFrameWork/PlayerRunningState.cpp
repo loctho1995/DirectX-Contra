@@ -35,6 +35,7 @@ void PlayerRunningState :: onMoveReleased ( Direction d)
 void PlayerRunningState :: onUpdate()
 {
 		hittableCalculation();
+		undyingCalculation();
 		pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 		pData -> vx = pData->transform(speed);
 		pData -> x += (pData -> vx );
@@ -199,4 +200,23 @@ void PlayerRunningState :: onVeticalDirectionReleased()
 void PlayerRunningState :: onDead()
 {
 	transition(new PlayerDeadState(pData));
+}
+
+void PlayerRunningState :: onDynamicObjectCollision(CollisionRectF* cRect)
+{
+	if( cRect -> type != "throughable")
+	{
+		if( pData -> vx > 0 )
+		{
+			pData -> x -= pData -> getBody().x + pData -> getBody().width - cRect->rect.x;
+			pData -> vx = 0;
+		}
+		else
+		{
+			pData -> x += cRect->rect.x + cRect->rect.width - pData->getBody().x;
+			pData -> vx = 0;
+		}
+	}
+	else
+		pData -> dynamicThroughRect.push_back(cRect);
 }
