@@ -40,6 +40,13 @@ public:
 					return *this;
 	}
 
+	Direction& operator | (const Direction& d2)
+	{
+			Direction res;
+			res.dir = (DIR)(this -> dir | d2.dir);
+			return res;
+	}
+
 	static Direction createLeft()
 	{
 		Direction d;
