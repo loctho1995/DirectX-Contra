@@ -63,7 +63,7 @@ private:
 	{
 		TileFrame tileFrame;
 		tileFrame.id = id;
-		tileFrame.duration = duration;
+		tileFrame.duration = (duration * 60 / 1000);
 		tileFrames.push_back(tileFrame);
 	}
 
