@@ -47,7 +47,14 @@ void TileLayer:: draw(Camera* cam)
 			if( ppTileTmx[ index ] ->getID() == 0)
 				continue;
 			TileSet* tileSet = tileSets[getTileSet(ppTileTmx[ index ] ->getID())];
-			int tileIDinSet = ppTileTmx[ index ] ->getID () - tileSet ->firstGridID; // ex : 128th represent by 127 in the 1D array
+			int tileID = ppTileTmx[ index ] ->getID () - tileSet ->firstGridID; // ex : 128th represent by 127 in the 1D array
+			int tileIDinSet = tileID;
+
+			tileID = tileSet -> getCurrentID(tileID);
+			if(tileID != -1 )
+			{
+				tileIDinSet = tileID;
+			}
 			int colInSet = tileIDinSet % tileSet -> nColumns;
 			int rowInSet = tileIDinSet / tileSet -> nColumns;
 			int dx =  tileSet -> margin + (colInSet) * ( tileSet ->spacing + tileSet -> tileWidth ) ;

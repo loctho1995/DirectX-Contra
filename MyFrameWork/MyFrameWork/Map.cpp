@@ -108,7 +108,19 @@ void Map :: loadTileSet(TiXmlElement* e)
 		tileSet -> nColumns = nCol;
 		tileSet ->nRows = nRow;
 		tileSet -> lastGridID = nCol * nRow + tileSet ->firstGridID -1;
+
+		for (TiXmlElement* ele = e ->FirstChildElement(); ele != NULL; ele = ele-> NextSiblingElement())
+		{
+			if( ele -> Value() == std :: string("tile") )
+			{
+				tileSet -> loadAnimationTiled(ele);
+			}
+		}
+
+
 		tileSets.push_back(tileSet);
+
+		
 	}
 
 void Map :: loadLayer(TiXmlElement* pTileElement)
@@ -666,8 +678,10 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		Sprite* bulletE = bulletSprites[i];
 		if( sprite -> isHittable() &&  bulletE ->getBody().checkCollision(sprite ->getBody())  )
 		{
-			if(sprite -> isUndying())
-					bulletE -> die();
+			bulletE -> die();
+			if(!sprite -> isUndying())
+					sprite -> die();
+				
 					break;
 		}
 	}
@@ -907,8 +921,20 @@ void Map :: onSupportSprite( PlayerSprite* sprite)
 
 void Map :: onUpdate(PlayerSprite* sprite, Camera* cam)
 {
+
+	for (int i = 0; i < tileSets.size(); i++)
+	{
+		tileSets[i] -> update();
+	}
+
+
 	cleanMap( cam , sprite);
 	addEToMap( cam );
+
+
+
+
+
 
 	// update enermy
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)

@@ -2,6 +2,18 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="95">
  <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16">
   <image source="Tileset Contra 3.png" width="176" height="176"/>
+  <tile id="106">
+   <animation>
+    <frame tileid="103" duration="100"/>
+    <frame tileid="102" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="112">
+   <animation>
+    <frame tileid="120" duration="100"/>
+    <frame tileid="109" duration="100"/>
+   </animation>
+  </tile>
  </tileset>
  <layer name="BackGroundLayer" width="16" height="135">
   <data encoding="base64" compression="zlib">

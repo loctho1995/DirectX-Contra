@@ -3,7 +3,7 @@
 
 PlayScene ::PlayScene()
 {
-    std:: string mapName = "stage" + std::to_string(UIComponents::getInstance() ->getCurrentStage());;
+    std:: string mapName = "stage" + std::to_string(UIComponents::getInstance() ->getCurrentStage());
     pMap = new Map(mapName);
 	
 	lifeTexture = new Texture("Resources\\Sprites\\player\\life00.png", "life00.png");

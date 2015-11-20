@@ -3,6 +3,71 @@
 #include <string>
 #include <vector>
 #include "tinyxml.h"
+#include <map>
+class AnimationTiled
+{
+	
+public:
+	struct TileFrame
+	{
+		int id;
+		int duration;
+	};
+	AnimationTiled()
+	{
+		counter = 0;
+		currentID = 0;
+		nFrames = 0;
+	}
+	
+	void loadTileFrame( TiXmlElement* e )
+	{
+		
+		for (TiXmlElement* ele = e ->FirstChildElement(); ele != NULL; ele = ele-> NextSiblingElement())
+		{
+			if( ele -> Value() == std :: string("frame") )
+			{
+				nFrames++;
+				int id = 0;
+				int duration = 0;
+				ele -> Attribute("tileid", &id);
+				ele -> Attribute("duration", &duration);
+				addTileFrames(id, duration);
+				
+			}
+		}
+	}
+
+	void update()
+	{
+		counter++;
+		counter %= tileFrames[currentID].duration;
+		if(counter == 0)
+		{
+			currentID ++;
+			currentID %= nFrames;
+		}
+	}
+	int getCurrentID()
+	{
+		return tileFrames[currentID].id;
+	}
+private:
+
+	std::vector<TileFrame> tileFrames;
+	int counter;
+	int nFrames;
+	int currentID;
+	
+	void addTileFrames(int id, int duration)
+	{
+		TileFrame tileFrame;
+		tileFrame.id = id;
+		tileFrame.duration = duration;
+		tileFrames.push_back(tileFrame);
+	}
+
+};
 class TileSet
 {
 public:
@@ -31,4 +96,39 @@ public:
 	int nRows; // number of row in tile set
 	std:: string name;
 	LPDIRECT3DTEXTURE9 pTexture;
+	std::map<int , AnimationTiled> animationTiles;
+	void update()
+	{
+		for (std::map<int , AnimationTiled>::iterator it = animationTiles.begin(); it != animationTiles.end(); it++)
+		{
+			it -> second.update();
+		}
+	}
+	int getCurrentID( int id)
+	{
+		std::map<int , AnimationTiled>::iterator it = animationTiles.find(id);
+		if(it == animationTiles.end())
+		{
+			return -1;
+		}
+		else
+		{
+			return it -> second.getCurrentID();
+		}
+	}
+	void loadAnimationTiled( TiXmlElement* e )
+	{
+		AnimationTiled animationTiled;
+		int id = 0;
+		e -> Attribute("id", &id);
+		for (TiXmlElement* ele = e ->FirstChildElement(); ele != NULL; ele = ele-> NextSiblingElement())
+		{
+			if( ele -> Value() == std :: string("animation") )
+			{
+				animationTiled.loadTileFrame(ele);
+			}
+		}
+
+		animationTiles[ id ] = animationTiled;
+	}
 };
