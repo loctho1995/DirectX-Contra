@@ -673,6 +673,23 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 #pragma endregion EnermyvsMap
 
 #pragma region
+
+	
+	for (int i = 0; i < bulletSprites.size(); i++)
+	{
+		std:: vector < CollisionRectF > returnLists;
+		mapCollisionTree->getObjectlist(returnLists, bulletSprites[i] ->getBody());
+		for (int j = 0; j < returnList.size(); j++)
+		{
+				if( bulletSprites[i] ->getBody().checkCollision( returnList[j].rect) )
+				{
+					bulletSprites[i] -> onCollision( returnList[j] );
+				}
+		}
+	}
+#pragma endregion EnermyBulletvsMap
+
+#pragma region
 	for (int i = 0; i < bulletSprites.size(); i++)
 	{
 		Sprite* bulletE = bulletSprites[i];
