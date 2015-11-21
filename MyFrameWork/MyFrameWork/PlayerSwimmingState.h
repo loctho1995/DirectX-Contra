@@ -21,4 +21,5 @@ public:
 
 private:
 	float speed;
+	Direction tempDir;
 };

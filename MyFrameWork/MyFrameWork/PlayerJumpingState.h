@@ -24,5 +24,6 @@ private:
 	bool isJumpingPress;
 	float speedX;
 	float acceleration;
+	Direction tempDir;
 
 };

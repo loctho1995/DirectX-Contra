@@ -20,15 +20,23 @@ PlayerRunningState :: PlayerRunningState(PlayerData* data)
 		
 		pData -> vy = 0.0f;
 		speed = 1;
+		tempDir = pData -> dir;
 }
 
 void PlayerRunningState:: onMovePressed( Direction d )
 {
 		pData -> dir = d;
+		tempDir = (tempDir | d);
 }
 
 void PlayerRunningState :: onMoveReleased ( Direction d)
 {
+	tempDir = tempDir ^ d;
+	if(!tempDir.isNone())
+	{
+		pData -> dir = tempDir;
+	}
+	else
 	transition(new PlayerStandingState(pData));
 }
 

@@ -5,6 +5,10 @@
 class Direction
 {
 public:
+	Direction()
+	{
+		dir = (DIR)0;
+	}
 	bool isRight()
 	{
 		return dir & Right;
@@ -23,7 +27,7 @@ public:
 	}
 	bool isNone()
 	{
-		return dir & None;
+		return (dir == None || dir == 0);
 	}
 
 	void reverse()
@@ -40,10 +44,17 @@ public:
 					return *this;
 	}
 
-	Direction& operator | (const Direction& d2)
+	Direction operator | (const Direction& d2)
 	{
 			Direction res;
 			res.dir = (DIR)(this -> dir | d2.dir);
+			return res;
+	}
+
+	Direction operator ^ (const Direction& d2)
+	{
+			Direction res;
+			res.dir = (DIR)(this -> dir ^ d2.dir);
 			return res;
 	}
 

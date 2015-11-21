@@ -21,16 +21,25 @@ PlayerSwimmingState :: PlayerSwimmingState(PlayerData* data)
 		
 		pData -> vy = 0.0f;
 		speed = 1;
+		tempDir = pData -> dir;
 }
 
 void PlayerSwimmingState:: onMovePressed( Direction d )
 {
 		pData -> dir = d;
+		tempDir = (tempDir | d);
 }
 
 void PlayerSwimmingState :: onMoveReleased ( Direction d)
 {
+	tempDir = tempDir ^ d;
+	if(!tempDir.isNone())
+	{
+		pData -> dir = tempDir;
+	}
+	else
 	transition(new PlayerDivingState(pData));
+
 }
 
 void PlayerSwimmingState :: onUpdate()

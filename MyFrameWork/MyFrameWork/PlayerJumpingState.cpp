@@ -27,18 +27,27 @@ PlayerJumpingState:: PlayerJumpingState(PlayerData* data, bool isMoving, float v
 		isJumpingPress = false;
 	}
 	pData ->isFiring = false;
+	tempDir = pData -> dir;
 		
 	
 }
 void PlayerJumpingState:: onMovePressed(Direction dir )
 {
 	pData ->dir = dir ;
+	tempDir = (tempDir | dir );
 	isMoving = true;
 }
 
 void PlayerJumpingState :: onMoveReleased(Direction dir )
 {
-	isMoving = false;
+	
+	tempDir = tempDir ^ dir;
+	if(!tempDir.isNone())
+	{
+		pData -> dir = tempDir;
+	}
+	else 
+		isMoving = false;
 }
 
 void PlayerJumpingState :: onUpdate()
