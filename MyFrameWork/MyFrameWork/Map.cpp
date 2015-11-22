@@ -681,10 +681,15 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		mapCollisionTree->getObjectlist(returnLists, bulletSprites[i] ->getBody());
 		for (int j = 0; j < returnList.size(); j++)
 		{
-				if( bulletSprites[i] ->getBody().checkCollision( returnList[j].rect) )
+				std:: vector < CollisionRectF > throughRectVector = bulletSprites[i] -> getThroughRect();
+				if(std::find(throughRectVector.begin(), throughRectVector.end(), returnList[j]) == throughRectVector.end())
 				{
-					bulletSprites[i] -> onCollision( returnList[j] );
+					if( bulletSprites[i] ->getBody().checkCollision( returnList[j].rect) )
+					{
+						bulletSprites[i] -> onCollision( returnList[j] );
+					}
 				}
+				
 		}
 	}
 #pragma endregion EnermyBulletvsMap
