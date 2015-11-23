@@ -359,6 +359,22 @@ void Map ::addEToMap ( Camera* cam )
 		if(camRect.checkCollision( body ))
 		{
 			Direction appearDir = EnermyCreator :: getInstance() ->getAppearDir( returnList[i] -> name );
+			if(appearDir.isNone())
+			{
+				if(type == "enemy")
+				{
+					EnermySprite* enermySprite = EnermyCreator::getInstance() ->createEnermySprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y , bulletSprites);
+					if(enermySprite != nullptr )
+					enermyMap[returnList[i] ->id] = enermySprite;
+				}	
+				else
+				{
+					ObjectSprite* objectSprite = EnermyCreator::getInstance() ->createObjectSprite(returnList[i] ->name, returnList[i]->x, returnList[i] -> y );
+					if( objectSprite != nullptr )
+					objectMap[returnList[i] ->id] =  objectSprite;
+				}
+				return;
+			}
 			if( appearDir.isRight())
 			{
 				if( (body.x  <= camRect.x +camRect.width ) && ( body.x  >= camRect.x +camRect.width - 10) )

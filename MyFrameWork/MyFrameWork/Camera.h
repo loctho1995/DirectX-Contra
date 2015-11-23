@@ -41,11 +41,11 @@ public:
 			this -> x = min ( this -> x, mapRect.width + mapRect.x - viewPort -> getWidth());
 		}
 		else if(this -> y  > y - (float)viewPort -> getHeight() / 2.0f && moveDir.isUp())
-			{
-				this -> y  = y - (float)viewPort -> getHeight() / 2.0f;
-				this -> y = max ( this -> y, mapRect.y );
-				this -> y = min ( this -> y, mapRect.height + mapRect.y - viewPort -> getHeight());
-			}
+		{
+			this -> y  = y - (float)viewPort -> getHeight() / 2.0f;
+			this -> y = max ( this -> y, mapRect.y );
+			this -> y = min ( this -> y, mapRect.height + mapRect.y - viewPort -> getHeight());
+		}
 			
 		
 	}
