@@ -7,45 +7,46 @@
 #include "EnermyCannon.h"
 #include "EnermyGunRotating.h"
 #include "EnemyBlazerSprite.h"
-
+#include "EnermyFailingStone.h"
 
 EnermyCreator* EnermyCreator::instance = nullptr;
 
 EnermyCreator::EnermyCreator()
 {
 	// set up the map direction by function addAppearDirection(std::string name , Direction dir )
-	addAppearDirection("gunboss1",Direction::createRight());
+	addAppearDirection("gunboss1", Direction::createRight());
 
-	addAppearDirection("finalboss1",Direction::createRight());
+	addAppearDirection("finalboss1", Direction::createRight());
 
-	addAppearDirection("bridge",Direction::createRight());
+	addAppearDirection("bridge", Direction::createRight());
 
-	addAppearDirection("staticweapons",Direction::createRight());
-	addAppearDirection("staticweaponm",Direction::createRight());
-	addAppearDirection("staticweaponf",Direction::createRight());
-	addAppearDirection("staticweaponb",Direction::createRight());
-	addAppearDirection("staticweaponr",Direction::createRight());
-	addAppearDirection("staticweaponl",Direction::createRight());
+	addAppearDirection("staticweapons", Direction::createRight());
+	addAppearDirection("staticweaponm", Direction::createRight());
+	addAppearDirection("staticweaponf", Direction::createRight());
+	addAppearDirection("staticweaponb", Direction::createRight());
+	addAppearDirection("staticweaponr", Direction::createRight());
+	addAppearDirection("staticweaponl", Direction::createRight());
 
-	addAppearDirection("gunrotating",Direction::createRight());
+	addAppearDirection("gunrotating", Direction::createRight());
 
-	addAppearDirection("cannon",Direction::createRight());
+	addAppearDirection("cannon", Direction::createUp());
 
-	addAppearDirection("soldierl",Direction::createRight());
+	addAppearDirection("soldierl", Direction::createRight());
 
-	addAppearDirection("sniper",Direction::createRight());
-	
-	addAppearDirection("capsuleweapons",Direction::createLeft());
-	addAppearDirection("capsuleweaponm",Direction::createLeft());
-	addAppearDirection("capsuleweaponf",Direction::createLeft());
-	addAppearDirection("capsuleweaponb",Direction::createLeft());
-	addAppearDirection("capsuleweaponr",Direction::createLeft());
-	addAppearDirection("capsuleweaponl",Direction::createLeft());
+	addAppearDirection("sniper", Direction::createRight());
 
-	addAppearDirection("soldierr",Direction::createLeft());
+	addAppearDirection("capsuleweapons", Direction::createLeft());
+	addAppearDirection("capsuleweaponm", Direction::createLeft());
+	addAppearDirection("capsuleweaponf", Direction::createLeft());
+	addAppearDirection("capsuleweaponb", Direction::createLeft());
+	addAppearDirection("capsuleweaponr", Direction::createLeft());
+	addAppearDirection("capsuleweaponl", Direction::createLeft());
+
+	addAppearDirection("soldierr", Direction::createLeft());
 
 	addAppearDirection("blazer", Direction::createUp());
 	addAppearDirection("dynamicbridge", Direction::createUp());
+	addAppearDirection("failingstone", Direction::createNone());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -62,7 +63,7 @@ EnermyCreator* EnermyCreator::getInstance()
 	return instance;
 }
 
-EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int respawnX, int respawnY, std :: vector < BulletSprite* >& bulletSprites)
+EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int respawnX, int respawnY, std::vector < BulletSprite* >& bulletSprites)
 {
 	if (enermyName == "ink")
 	{
@@ -84,10 +85,10 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 		return new EnermySoldier(respawnX, respawnY, Direction::createLeft());
 	}
 
-    if (enermyName == "soldierr")
-    {
-        return new EnermySoldier(respawnX, respawnY, Direction::createRight());
-    }
+	if (enermyName == "soldierr")
+	{
+		return new EnermySoldier(respawnX, respawnY, Direction::createRight());
+	}
 
 	if (enermyName == "sniper")
 	{
@@ -107,6 +108,11 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	if (enermyName == "blazer")
 	{
 		return new EnemyBlazerSprite(respawnX, respawnY);
+	}
+
+	if (enermyName == "failingstone")
+	{
+		return new EnermyFailingStone(respawnX, respawnY);
 	}
 
 	return nullptr;
@@ -191,10 +197,10 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 
 Direction EnermyCreator::getAppearDir(std::string name)
 {
-	 std::map < std::string, Direction >::iterator it = appearDirections.find(name);
-	 if( it != appearDirections.end())
-	 {
-		 return it -> second;
-	 }
+	std::map < std::string, Direction >::iterator it = appearDirections.find(name);
+	if (it != appearDirections.end())
+	{
+		return it->second;
+	}
 	return Direction::createNone();
 }

@@ -101,6 +101,11 @@
     <ClCompile Include="BlazerMovingState.cpp" />
     <ClCompile Include="DynamicBridgeMovingState.cpp" />
     <ClCompile Include="ObjectDynamicBridgeSprite.cpp" />
+    <ClCompile Include="EnermyFailingStone.cpp" />
+    <ClCompile Include="EnermyFailingStoneAppearingState.cpp" />
+    <ClCompile Include="EnermyFailingStoneData.cpp" />
+    <ClCompile Include="EnermyFailingStoneDeadState.cpp" />
+    <ClCompile Include="EnermyFailingStoneDroppingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -225,6 +230,11 @@
     <ClInclude Include="BlazerMovingState.h" />
     <ClInclude Include="DynamicBridgeMovingState.h" />
     <ClInclude Include="ObjectDynamicBridgeSprite.h" />
+    <ClInclude Include="EnermyFailingStone.h" />
+    <ClInclude Include="EnermyFailingStoneAppearingState.h" />
+    <ClInclude Include="EnermyFailingStoneData.h" />
+    <ClInclude Include="EnermyFailingStoneDeadState.h" />
+    <ClInclude Include="EnermyFailingStoneDroppingState.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

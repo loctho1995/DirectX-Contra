@@ -8,6 +8,7 @@
 #include "PlayerSprite.h"
 #include "EnemyBlazerSprite.h"
 #include "ObjectDynamicBridgeSprite.h"
+#include "EnermyFailingStone.h"
 #include "Map.h"
 
 class Loader

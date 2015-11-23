@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -99,6 +99,11 @@
     <ClCompile Include="EnermyCannonPreaparingState.cpp" />
     <ClCompile Include="EnermyCannonTurningState.cpp" />
     <ClCompile Include="EnermyCreator.cpp" />
+    <ClCompile Include="EnermyFailingStone.cpp" />
+    <ClCompile Include="EnermyFailingStoneAppearingState.cpp" />
+    <ClCompile Include="EnermyFailingStoneData.cpp" />
+    <ClCompile Include="EnermyFailingStoneDeadState.cpp" />
+    <ClCompile Include="EnermyFailingStoneDroppingState.cpp" />
     <ClCompile Include="EnermyGunRotating.cpp" />
     <ClCompile Include="EnermyGunRotatingClosingState.cpp" />
     <ClCompile Include="EnermyGunRotatingData.cpp" />
@@ -208,6 +213,11 @@
     <ClInclude Include="EnermyCannonPreaparingState.h" />
     <ClInclude Include="EnermyCannonTurningState.h" />
     <ClInclude Include="EnermyCreator.h" />
+    <ClInclude Include="EnermyFailingStone.h" />
+    <ClInclude Include="EnermyFailingStoneAppearingState.h" />
+    <ClInclude Include="EnermyFailingStoneData.h" />
+    <ClInclude Include="EnermyFailingStoneDeadState.h" />
+    <ClInclude Include="EnermyFailingStoneDroppingState.h" />
     <ClInclude Include="EnermyGunRotating.h" />
     <ClInclude Include="EnermyGunRotatingClosingState.h" />
     <ClInclude Include="EnermyGunRotatingData.h" />
