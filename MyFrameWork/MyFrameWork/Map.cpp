@@ -644,6 +644,24 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 		}
 	}
 
+	for (int bulletIt  = 0; bulletIt < bullets.size();  bulletIt++)
+	{
+		for (int enemyBullet = 0; enemyBullet < bulletSprites.size(); enemyBullet++)
+		{
+			BulletSprite* tempB = bullets[bulletIt];
+			BulletSprite* tempE = bulletSprites[enemyBullet];
+			RectF rB = tempB ->getBody();
+			RectF rE = tempE ->getBody();
+			if( rE.checkCollision(rB ) && bulletSprites[enemyBullet] ->isHittable() )
+			{
+				tempE -> die();
+				tempB -> die();
+				break;
+			}
+		}
+		
+	}
+
 #pragma endregion playerBulletvsEnermy
 
 #pragma region
@@ -803,8 +821,6 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 #pragma endregion playervsCamera
 
 
-
-
 #pragma region
 	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); it++)
 	{
@@ -816,6 +832,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 	}
 
 #pragma endregion EnemyObjectvsCamera
+
 
 
 	// update through rect list of player

@@ -5,6 +5,8 @@ EnermyWhiteBullet::EnermyWhiteBullet(float x, float y, bool  isBoosting, float a
 {
 	pData = new SpriteData();
 
+	pData -> isHittable = false;
+
 	pData->isDesTroyed = false;
 
 	pData->ppTextureArrays = new TextureArray*[1];
