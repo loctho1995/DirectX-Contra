@@ -106,6 +106,13 @@
     <ClCompile Include="EnermyFailingStoneData.cpp" />
     <ClCompile Include="EnermyFailingStoneDeadState.cpp" />
     <ClCompile Include="EnermyFailingStoneDroppingState.cpp" />
+    <ClCompile Include="BulletScubarSoliderExploringState.cpp" />
+    <ClCompile Include="BulletScubarSoliderMovingState.cpp" />
+    <ClCompile Include="BulletScubarSoliderSprite.cpp" />
+    <ClCompile Include="EnermyScubarSoliderData.cpp" />
+    <ClCompile Include="EnermyScubarSoliderHidingState.cpp" />
+    <ClCompile Include="EnermyScubarSoliderShootState.cpp" />
+    <ClCompile Include="EnermyScubarSoliderSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -235,6 +242,13 @@
     <ClInclude Include="EnermyFailingStoneData.h" />
     <ClInclude Include="EnermyFailingStoneDeadState.h" />
     <ClInclude Include="EnermyFailingStoneDroppingState.h" />
+    <ClInclude Include="BulletScubarSoliderExPloringState.h" />
+    <ClInclude Include="BulletScubarSoliderMovingState.h" />
+    <ClInclude Include="BulletScubarSoliderSprite.h" />
+    <ClInclude Include="EnermyScubarSoliderData.h" />
+    <ClInclude Include="EnermyScubarSoliderHidingState.h" />
+    <ClInclude Include="EnermyScubarSoliderShootState.h" />
+    <ClInclude Include="EnermyScubarSoliderSprite.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

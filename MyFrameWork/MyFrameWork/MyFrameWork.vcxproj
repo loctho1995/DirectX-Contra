@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -85,6 +85,9 @@
     <ClCompile Include="base64.cpp" />
     <ClCompile Include="BitMapFont.cpp" />
     <ClCompile Include="BlazerMovingState.cpp" />
+    <ClCompile Include="BulletScubarSoliderExploringState.cpp" />
+    <ClCompile Include="BulletScubarSoliderMovingState.cpp" />
+    <ClCompile Include="BulletScubarSoliderSprite.cpp" />
     <ClCompile Include="DynamicBridgeMovingState.cpp" />
     <ClCompile Include="EnemyBlazerSprite.cpp" />
     <ClCompile Include="EnemySniper.cpp" />
@@ -110,6 +113,10 @@
     <ClCompile Include="EnermyGunRotatingDieState.cpp" />
     <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
     <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
+    <ClCompile Include="EnermyScubarSoliderData.cpp" />
+    <ClCompile Include="EnermyScubarSoliderHidingState.cpp" />
+    <ClCompile Include="EnermyScubarSoliderShootState.cpp" />
+    <ClCompile Include="EnermyScubarSoliderSprite.cpp" />
     <ClCompile Include="EnermySoldierDrowningState.cpp" />
     <ClCompile Include="EnermySoldierFallingState.cpp" />
     <ClCompile Include="EnermyWhiteBullet.cpp" />
@@ -192,6 +199,9 @@
     <ClInclude Include="base64.h" />
     <ClInclude Include="BitMapFont.h" />
     <ClInclude Include="BlazerMovingState.h" />
+    <ClInclude Include="BulletScubarSoliderExPloringState.h" />
+    <ClInclude Include="BulletScubarSoliderMovingState.h" />
+    <ClInclude Include="BulletScubarSoliderSprite.h" />
     <ClInclude Include="DynamicBridgeMovingState.h" />
     <ClInclude Include="EnemyBlazerSprite.h" />
     <ClInclude Include="BulletMovingState.h" />
@@ -224,6 +234,10 @@
     <ClInclude Include="EnermyGunRotatingDieState.h" />
     <ClInclude Include="EnermyGunRotatingOpeningState.h" />
     <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
+    <ClInclude Include="EnermyScubarSoliderData.h" />
+    <ClInclude Include="EnermyScubarSoliderHidingState.h" />
+    <ClInclude Include="EnermyScubarSoliderShootState.h" />
+    <ClInclude Include="EnermyScubarSoliderSprite.h" />
     <ClInclude Include="EnermySoldierDrowningState.h" />
     <ClInclude Include="EnermySoldierFallingState.h" />
     <ClInclude Include="EnermyWhiteBullet.h" />
