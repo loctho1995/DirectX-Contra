@@ -75,7 +75,7 @@ void Loader::loadResources(std::string name)
 
 		if (name == "scubarsolider")
 		{
-			BulletScubarSoliderSprite::loadResources();
+			EnermyScubarSoliderSprite::loadResources();
 			return;
 		}
 

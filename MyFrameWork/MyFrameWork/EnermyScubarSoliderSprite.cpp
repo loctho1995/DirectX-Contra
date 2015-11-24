@@ -39,6 +39,15 @@ void EnermyScubarSoliderSprite::loadResources()
 
 	temp = new TextureArray("Resources\\Sprites", "scubarsolider", "shoot", 1, 6);
 	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "gunboss1bullet", "", 1, 60);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 6, 8);
+	delete temp;
 }
 void EnermyScubarSoliderSprite::draw(Camera* cam)
 {

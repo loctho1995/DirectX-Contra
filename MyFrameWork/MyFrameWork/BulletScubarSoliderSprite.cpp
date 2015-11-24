@@ -51,15 +51,3 @@ void BulletScubarSoliderSprite::die()
 {
 	pData->pState->onDead();
 }
-
-void BulletScubarSoliderSprite::loadResources()
-{
-	TextureArray *temp = new TextureArray("Resources\\Sprites\\Bullets", "gunboss1bullet", "", 1, 60);
-	delete temp;
-
-	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 8);
-	delete temp;
-
-	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 6, 8);
-	delete temp;
-}

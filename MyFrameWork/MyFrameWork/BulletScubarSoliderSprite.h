@@ -10,7 +10,6 @@ public:
 	virtual void draw(Camera *cam);
 	virtual void update();
 	virtual void die();
-	static void loadResources();
 
 private:
 	int iFrame;

@@ -10,7 +10,7 @@
 #include "ObjectDynamicBridgeSprite.h"
 #include "EnermyFailingStone.h"
 #include"EnermyGunRotating.h"
-#include"BulletScubarSoliderSprite.h"
+#include"EnermyScubarSoliderSprite.h"
 #include "Map.h"
 
 class Loader
