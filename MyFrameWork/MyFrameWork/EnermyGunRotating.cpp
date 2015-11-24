@@ -1,11 +1,15 @@
 #include"EnermyGunRotating.h"
 #include"EnermyGunRotatingData.h"
+#include<sstream>
+#include <iomanip>
 
-EnermyGunRotating::EnermyGunRotating(float respawnX, float respawnY, std::vector < BulletSprite*>& bulletSpriteVector) :EnermySprite(bulletSpriteVector)
+EnermyGunRotating::EnermyGunRotating(float respawnX, float respawnY, int isStage, std::vector < BulletSprite*>& bulletSpriteVector) :EnermySprite(bulletSpriteVector)
 {
 	pData = new EnermyGunRotatingData(bulletSpriteVector);
 	pData->x = respawnX;
 	pData->y = respawnY;
+
+	pData->stage = isStage;
 
 	this->initTextureArrays(EnermyGunRotatingData::COUNT);
 	this->addTextureArray(EnermyGunRotatingData::CLOSE, "close",1,6);
@@ -63,3 +67,30 @@ void EnermyGunRotating::update()
 	pData->pState->onUpdate();
 }
 
+void EnermyGunRotating::loadResources()
+{
+	TextureArray* temp;
+	
+	// load sprite
+	temp = new TextureArray("Resources\\Sprites", "gunrotating", "close", 1, 6);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites", "gunrotating", "open", 1, 6);
+	delete temp;
+
+	std::stringstream s;
+	for (int i = 1; i < 13; i++)
+	{
+		s << std::setw(1)<< i;
+		temp = new TextureArray("Resources\\Sprites", "gunrotating",std::string("swavel") + s.str(), 1, 6);
+		delete temp;
+	}
+
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 16);
+	delete temp;
+
+	// load bullet
+	temp = new TextureArray("Resources\\Sprites\\Bullets", "wbullet", "", 1, 10);
+	delete temp;
+	
+}

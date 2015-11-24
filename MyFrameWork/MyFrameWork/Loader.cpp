@@ -67,5 +67,17 @@ void Loader::loadResources(std::string name)
 			return;
 		}
 
+		if (name == "gunrotating")
+		{
+			EnermyGunRotating::loadResources();
+			return;
+		}
+
+		if (name == "scubarsolider")
+		{
+			BulletScubarSoliderSprite::loadResources();
+			return;
+		}
+
 	}
 }

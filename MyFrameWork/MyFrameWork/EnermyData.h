@@ -24,4 +24,5 @@ public :
 	std:: vector < BulletSprite* >& bulletsVector;
 	int score;
 	Direction appearDir;
+	int stage; // add by Hang
 };

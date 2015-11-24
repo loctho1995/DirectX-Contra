@@ -9,7 +9,8 @@ EnermyGunRotatingData::EnermyGunRotatingData(std::vector < BulletSprite* >& bull
 	this->isThrougable = true;
 	this->isDesTroyed = false;
 	this->HP = 10;
-	this->appearDir = Direction::createRight();
+	this->isGun = true; // gun stage1
+	this->score = 10;
 }
 EnermyGunRotatingData::~EnermyGunRotatingData()
 {

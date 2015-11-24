@@ -8,6 +8,7 @@
 #include "EnermyGunRotating.h"
 #include "EnemyBlazerSprite.h"
 #include "EnermyFailingStone.h"
+#include"EnermyScubarSoliderSprite.h"
 
 EnermyCreator* EnermyCreator::instance = nullptr;
 
@@ -27,7 +28,8 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("staticweaponr", Direction::createRight());
 	addAppearDirection("staticweaponl", Direction::createRight());
 
-	addAppearDirection("gunrotating", Direction::createRight());
+	addAppearDirection("gunrotating1", Direction::createRight());
+	addAppearDirection("gunrotating3", Direction::createUp());
 
 	addAppearDirection("cannon", Direction::createUp());
 
@@ -47,6 +49,8 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("blazer", Direction::createUp());
 	addAppearDirection("dynamicbridge", Direction::createUp());
 	addAppearDirection("failingstone", Direction::createNone());
+
+	addAppearDirection("scubarsolider", Direction::createUp());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -70,9 +74,14 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 		return new EnermyInkSprite(respawnX, respawnY);
 	}
 
-	if (enermyName == "gunrotating")
+	if (enermyName == "gunrotating1")
 	{
-		return new EnermyGunRotating(respawnX, respawnY, bulletSprites);
+		return new EnermyGunRotating(respawnX, respawnY,1, bulletSprites);
+	}
+
+	if (enermyName == "gunrotating3")
+	{
+		return new EnermyGunRotating(respawnX, respawnY, 3, bulletSprites);
 	}
 
 	if (enermyName == "cannon")
@@ -113,6 +122,11 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	if (enermyName == "failingstone")
 	{
 		return new EnermyFailingStone(respawnX, respawnY);
+	}
+
+	if (enermyName == "scubarsolider")
+	{
+		return new EnermyScubarSoliderSprite(respawnX, respawnY, bulletSprites);
 	}
 
 	return nullptr;

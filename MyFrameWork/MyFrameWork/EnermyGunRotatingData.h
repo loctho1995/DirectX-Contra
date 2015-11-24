@@ -26,4 +26,5 @@ public:
 		DIE,
 		COUNT
 	};
+	bool isGun;
 };
