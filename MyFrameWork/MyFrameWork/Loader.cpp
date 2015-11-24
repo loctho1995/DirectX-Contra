@@ -48,6 +48,12 @@ void Loader::loadResources(std::string name)
 			return;
 		}
 
+		if (name == "finalboss5")
+		{
+			EnermyFinalBoss5Sprite::loadResources();
+			return;
+		}
+
 		if (name == "blazer")
 		{
 			EnemyBlazerSprite::loadResources();

@@ -2,6 +2,7 @@
 #include "EnermyInkSprite.h"
 #include "EnermyGunBoss1Sprite.h"
 #include "EnermyFinalBoss1Sprite.h"
+#include "EnermyFinalBoss5Sprite.h"
 #include "ObjectBridge.h"
 #include "ObjectDynamicBridgeSprite.h"
 #include "EnermyCannon.h"
@@ -51,6 +52,8 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("failingstone", Direction::createNone());
 
 	addAppearDirection("scubarsolider", Direction::createUp());
+
+	addAppearDirection("finalboss5", Direction::createRight());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -112,6 +115,11 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	if (enermyName == "finalboss1")
 	{
 		return new EnermyFinalBoss1Sprite(respawnX, respawnY);
+	}
+
+	if (enermyName == "finalboss5")
+	{
+		return new EnermyFinalBoss5Sprite(respawnX, respawnY, bulletSprites);
 	}
 
 	if (enermyName == "blazer")

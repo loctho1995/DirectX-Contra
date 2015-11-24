@@ -113,6 +113,18 @@
     <ClCompile Include="EnermyScubarSoliderHidingState.cpp" />
     <ClCompile Include="EnermyScubarSoliderShootState.cpp" />
     <ClCompile Include="EnermyScubarSoliderSprite.cpp" />
+    <ClCompile Include="EnermyFinalBoss5AppearingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5DeadState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5DisappearingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5PreparingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5Sprite.cpp" />
+    <ClCompile Include="EnermyFinalBoss5WaitingState.cpp" />
+    <ClCompile Include="GunBoss5Bullet.cpp" />
+    <ClCompile Include="GunBoss5BulletExploringState.cpp" />
+    <ClCompile Include="GunBoss5BulletMovingState.cpp" />
+    <ClCompile Include="ShipBoss5.cpp" />
+    <ClCompile Include="ShipBoss5ExploringState.cpp" />
+    <ClCompile Include="ShipBoss5MovingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -249,6 +261,18 @@
     <ClInclude Include="EnermyScubarSoliderHidingState.h" />
     <ClInclude Include="EnermyScubarSoliderShootState.h" />
     <ClInclude Include="EnermyScubarSoliderSprite.h" />
+    <ClInclude Include="EnermyFinalBoss5AppearingState.h" />
+    <ClInclude Include="EnermyFinalBoss5DeadState.h" />
+    <ClInclude Include="EnermyFinalBoss5DisappearingState.h" />
+    <ClInclude Include="EnermyFinalBoss5PreparingState.h" />
+    <ClInclude Include="EnermyFinalBoss5Sprite.h" />
+    <ClInclude Include="EnermyFinalBoss5WaitingState.h" />
+    <ClInclude Include="GunBoss5Bullet.h" />
+    <ClInclude Include="GunBoss5BulletExploringState.h" />
+    <ClInclude Include="GunBoss5BulletMovingState.h" />
+    <ClInclude Include="ShipBoss5.h" />
+    <ClInclude Include="ShipBoss5ExploringState.h" />
+    <ClInclude Include="ShipBoss5MovingState.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

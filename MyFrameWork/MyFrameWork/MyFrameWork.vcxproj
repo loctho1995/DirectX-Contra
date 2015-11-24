@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -107,6 +107,12 @@
     <ClCompile Include="EnermyFailingStoneData.cpp" />
     <ClCompile Include="EnermyFailingStoneDeadState.cpp" />
     <ClCompile Include="EnermyFailingStoneDroppingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5AppearingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5DeadState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5DisappearingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5PreparingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5Sprite.cpp" />
+    <ClCompile Include="EnermyFinalBoss5WaitingState.cpp" />
     <ClCompile Include="EnermyGunRotating.cpp" />
     <ClCompile Include="EnermyGunRotatingClosingState.cpp" />
     <ClCompile Include="EnermyGunRotatingData.cpp" />
@@ -121,6 +127,9 @@
     <ClCompile Include="EnermySoldierFallingState.cpp" />
     <ClCompile Include="EnermyWhiteBullet.cpp" />
     <ClCompile Include="GameOverScene.cpp" />
+    <ClCompile Include="GunBoss5Bullet.cpp" />
+    <ClCompile Include="GunBoss5BulletExploringState.cpp" />
+    <ClCompile Include="GunBoss5BulletMovingState.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
     <ClCompile Include="ObjectBridgeAliveState.cpp" />
@@ -180,6 +189,9 @@
     <ClCompile Include="PlayerSwimmingState.cpp" />
     <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="ShipBoss5.cpp" />
+    <ClCompile Include="ShipBoss5ExploringState.cpp" />
+    <ClCompile Include="ShipBoss5MovingState.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="StartingScene.cpp" />
     <ClCompile Include="LoadingScene.cpp" />
@@ -228,6 +240,12 @@
     <ClInclude Include="EnermyFailingStoneData.h" />
     <ClInclude Include="EnermyFailingStoneDeadState.h" />
     <ClInclude Include="EnermyFailingStoneDroppingState.h" />
+    <ClInclude Include="EnermyFinalBoss5AppearingState.h" />
+    <ClInclude Include="EnermyFinalBoss5DeadState.h" />
+    <ClInclude Include="EnermyFinalBoss5DisappearingState.h" />
+    <ClInclude Include="EnermyFinalBoss5PreparingState.h" />
+    <ClInclude Include="EnermyFinalBoss5Sprite.h" />
+    <ClInclude Include="EnermyFinalBoss5WaitingState.h" />
     <ClInclude Include="EnermyGunRotating.h" />
     <ClInclude Include="EnermyGunRotatingClosingState.h" />
     <ClInclude Include="EnermyGunRotatingData.h" />
@@ -242,6 +260,9 @@
     <ClInclude Include="EnermySoldierFallingState.h" />
     <ClInclude Include="EnermyWhiteBullet.h" />
     <ClInclude Include="GameOverScene.h" />
+    <ClInclude Include="GunBoss5Bullet.h" />
+    <ClInclude Include="GunBoss5BulletExploringState.h" />
+    <ClInclude Include="GunBoss5BulletMovingState.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="ObjectBridge.h" />
     <ClInclude Include="ObjectBridgeAliveState.h" />
@@ -313,6 +334,9 @@
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ShipBoss5.h" />
+    <ClInclude Include="ShipBoss5ExploringState.h" />
+    <ClInclude Include="ShipBoss5MovingState.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteData.h" />

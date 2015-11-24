@@ -4,6 +4,7 @@
 #include <map>
 #include "EnermyGunBoss1Sprite.h"
 #include "EnermyFinalBoss1Sprite.h"
+#include "EnermyFinalBoss5Sprite.h"
 #include "EnermyCannon.h"
 #include "PlayerSprite.h"
 #include "EnemyBlazerSprite.h"
