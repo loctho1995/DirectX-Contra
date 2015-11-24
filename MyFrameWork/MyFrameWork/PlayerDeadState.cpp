@@ -16,6 +16,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	pData ->isHittable = false;
 	pData -> hittableCounter = 0;
 	pData -> isRapid = false;
+	tempDir = pData -> dir;
 	UIComponents::getInstance() ->descreaseLifes();
 	
 }
