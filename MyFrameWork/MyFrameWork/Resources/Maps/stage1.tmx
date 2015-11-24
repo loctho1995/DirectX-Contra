@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="173">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
   <tile id="121">
    <animation>
@@ -87,11 +87,11 @@
   <object id="98" name="gunboss1" type="enemy" x="3219" y="127" width="12" height="8"/>
   <object id="100" name="gunboss1" type="enemy" x="3241" y="127.333" width="12" height="8"/>
   <object id="103" name="finalboss1" type="enemy" x="3230" y="163" width="9.33333" height="12.6667"/>
-  <object id="104" name="gunrotating" type="enemy" x="1248" y="144" width="32" height="32"/>
-  <object id="105" name="gunrotating" type="enemy" x="1632" y="112" width="32" height="32"/>
-  <object id="106" name="gunrotating" type="enemy" x="1824" y="112" width="32" height="32"/>
-  <object id="107" name="gunrotating" type="enemy" x="2976" y="176" width="32" height="32"/>
-  <object id="108" name="gunrotating" type="enemy" x="3104" y="176" width="32" height="32"/>
+  <object id="104" name="gunrotating1" type="enemy" x="1248" y="144" width="32" height="32"/>
+  <object id="105" name="gunrotating1" type="enemy" x="1632" y="112" width="32" height="32"/>
+  <object id="106" name="gunrotating1" type="enemy" x="1824" y="112" width="32" height="32"/>
+  <object id="107" name="gunrotating1" type="enemy" x="2976" y="176" width="32" height="32"/>
+  <object id="108" name="gunrotating1" type="enemy" x="3104" y="176" width="32" height="32"/>
   <object id="119" name="capsuleweaponr" type="object" x="231" y="51" width="24" height="15"/>
   <object id="120" name="cannon" type="enemy" x="2048" y="144" width="32" height="32"/>
   <object id="121" name="capsuleweaponr" type="object" x="2322" y="64" width="24" height="15"/>
