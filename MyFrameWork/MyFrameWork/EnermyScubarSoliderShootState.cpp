@@ -25,8 +25,8 @@ void EnermyScubarSoliderShootState::onUpdate()
 	{
 		
 		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x+pData->body.width/3 , pData->y - pData->body.height*3/4 , 0, 0));
-		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x + pData->body.width / 3, pData->y - pData->body.height *3/ 4, 1, 0.06));
-		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x + pData->body.width / 3, pData->y - pData->body.height *3/ 4, 2, -0.06));
+		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x + pData->body.width / 3, pData->y - pData->body.height *3/ 4, 1, 0.08));
+		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x + pData->body.width / 3, pData->y - pData->body.height *3/ 4, 2, -0.08));
 		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x + pData->body.width / 3, pData->y - pData->body.height*3 / 4, 1, 0));
 		iFrames = 0;
 	}

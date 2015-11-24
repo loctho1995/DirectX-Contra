@@ -9,7 +9,6 @@ BulletScubarSoliderMovingState::BulletScubarSoliderMovingState(SpriteData *data,
 	
 	pData->vy = BULLETVYJUMP;
 	this->index = index;
-	collisionLineY = 1584;
 }
 
 void BulletScubarSoliderMovingState:: Jumping(bool kind)
@@ -20,7 +19,7 @@ void BulletScubarSoliderMovingState:: Jumping(bool kind)
 
 		if (kind == true)
 		{
-			if (pData->vy + 0.5 > 0)
+			if (pData->vy + 0.3 > 0)
 			{
 				// tao no
 				pData->x += pData->vx*GAMETIME;

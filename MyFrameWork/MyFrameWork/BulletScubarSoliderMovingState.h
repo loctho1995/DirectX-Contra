@@ -5,7 +5,7 @@
 
 #define BULLETGRAVITY 0.001
 #define GAMETIME 5
-#define BULLETVYJUMP -0.57
+#define BULLETVYJUMP -0.58
 
 // index: index of bullet way: bullet bump :0, bullet traight, bullet right: 1, bullet left: 2
 
