@@ -394,6 +394,11 @@ void Graphics :: drawText(std::string text, int size, int x, int y, D3DCOLOR col
 	}
 }
 
+
+void Graphics :: drawText(Label label)
+{
+	drawText(label.text, label.size, label.xPos, label.yPos, label.color);
+}
 //void Graphics::loadSurface(std::basic_string<TCHAR> filePath)
 //{
 //	HRESULT result;

@@ -57,6 +57,8 @@ public:
 
 	void drawText(std:: string text, int size, int x, int y, D3DCOLOR color = 0xFFFFFFFF);
 
+	void drawText(Label label);
+
 	void setFont(BitMapFont* bitmapFont);
 
 	void beginRender();
