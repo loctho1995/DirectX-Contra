@@ -6,7 +6,7 @@
 class SpriteData
 {
 public:
-	SpriteData() 
+	SpriteData()
 	{
 		isDesTroyed = false;
 		isHittable = true;
@@ -60,8 +60,11 @@ public:
 	Direction verticalDir;
 	RectF body;
 	CollisionRectF cSupportRect;
+	CollisionRectF* cDynamicSupportRect;
 	std::vector< CollisionRectF > cThroughRect;
+	std::vector< CollisionRectF* > dynamicThroughRect;
 	class SpriteState* pState;
 	bool isDesTroyed;
 	bool isHittable;
+	bool isDead;
 };

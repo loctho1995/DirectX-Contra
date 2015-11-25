@@ -15,6 +15,7 @@ public:
 	void onJumpPressed();
 	void onCollision(RectF rect );
 	void onCollision(CollisionRectF rect );
+	void onDynamicObjectCollision(CollisionRectF* rect);
 	void onFall();
 	void onFirePressed();
 	void onVeticalDirectionPressed( Direction d);
@@ -23,4 +24,5 @@ public:
 
 private:
 	float speed;
+	Direction tempDir;
 };

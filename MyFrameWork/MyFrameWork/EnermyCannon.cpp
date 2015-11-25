@@ -46,3 +46,17 @@ void EnermyCannon::update()
 {
 	pData->pState->onUpdate();
 }
+
+void EnermyCannon::loadResources()
+{
+	TextureArray* temp = new TextureArray("Resources\\Sprites\\cannon", "appear", "", 6, 4);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\cannon", "standzero", "", 3, 6);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\cannon", "standthirty", "", 3, 6);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\cannon", "standsixty", "", 3, 6);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
+	delete temp;
+}

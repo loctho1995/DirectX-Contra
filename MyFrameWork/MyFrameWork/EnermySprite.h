@@ -23,6 +23,12 @@ public:
 	virtual void onUnsupported() { pData -> pState -> onFall();}
 	virtual void setPlayerX(int x) {pData ->playerX = x;}
 	virtual void setPlayerY( int y ) {pData ->playerY = y;}
+	virtual void setPlayerProperties (float x, float y, bool isDead) 
+	{
+		pData -> playerX = x;
+		pData -> playerY = y;
+		pData -> isPlayerDead = isDead;
+	}
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
 	virtual void onCollision(CollisionRectF r)	{ pData ->pState ->onCollision(r); }
     virtual SpriteState* getState(){ return this->pData->pState; } //phai them doan doan nay de goi pData cua EnermySprite chu ko phai thang cha
@@ -52,8 +58,7 @@ public:
     }
 	
 	virtual void onUpdate() {}
-	virtual std::vector< BulletSprite* >& getBullets() { return pData -> Bullets;}
-	virtual void die() { pData ->pState -> onDead();}
+	virtual void die() { pData ->pState -> onDead(); }
 	virtual bool isDesTroyed() { return pData ->isDesTroyed;}
 	virtual bool isHittable() {return pData -> isHittable;}
 	virtual std::string getName() {return pData ->botName;} 
@@ -80,6 +85,7 @@ public:
 		pData -> HP -= damage;
 		if( pData -> HP <= 0 )
 		{
+			pData -> isDead = true;
 			die();
 		}
 	}
@@ -92,7 +98,14 @@ public:
 		if( !pData -> getBody().checkCollision(cameraRect) )
 			pData -> isDesTroyed = true;
 	}
-
+	virtual int getScore()
+	{
+		return pData -> score;
+	}
+	virtual bool isDead()
+	{
+		return pData -> isDead;
+	}
 	virtual Direction getAppearDir() 
 	{
 		return pData -> appearDir;

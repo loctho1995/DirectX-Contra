@@ -29,30 +29,31 @@ public:
 		{
 			moveDir = Direction::createUp();
 		}
-		vx = vy = 0;
+		vx = vy = 1.0f;
 		
 	}
 	void setPosition(float x, float y)
 	{ 
-		if( this -> x < x - (float)viewPort ->getWidth() / 2.0f)
+		if( this -> x < x - (float)viewPort ->getWidth() / 2.0f && moveDir.isRight())
 		{
 			this -> x =   x - (float)viewPort ->getWidth() / 2.0f;
-			this -> y  = y - (float)viewPort -> getHeight() / 2.0f;
-
 			this -> x = max ( this -> x, mapRect.x );
-			this -> y = max ( this -> y, mapRect.y );
-
 			this -> x = min ( this -> x, mapRect.width + mapRect.x - viewPort -> getWidth());
-			this -> y = min ( this -> y, mapRect.height + mapRect.y - viewPort -> getHeight());
-
 		}
+		else if(this -> y  > y - (float)viewPort -> getHeight() / 2.0f && moveDir.isUp())
+		{
+			this -> y  = y - (float)viewPort -> getHeight() / 2.0f;
+			this -> y = max ( this -> y, mapRect.y );
+			this -> y = min ( this -> y, mapRect.height + mapRect.y - viewPort -> getHeight());
+		}
+			
 		
 	}
-	void drawTexture(LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_XRGB (255,255,255) ) const
+	void drawTexture(LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_ARGB (255,255,255,255) ) const
 	{
 		viewPort -> drawTexture( pTexture,width, height, anchorPoint, (int)(x - this -> x), (int)(y - this -> y), xRatio, yRatio, color);
 	}
-	void drawTextureFlipX( LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_XRGB (255,255,255 )) const
+	void drawTextureFlipX( LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_ARGB (255,255,255,255)) const
 	{
 		viewPort -> drawTextureFlipX(pTexture,width, height, anchorPoint, (int)(x - this -> x), (int)(y - this -> y), xRatio, yRatio, color);
 	}
@@ -92,7 +93,6 @@ public:
 		{
 			if( this -> x + getWidth() >= cameraTranslatePoint.x)
 			{
-				vx = 1.0f;
 				setPosition(this -> x + getWidth()/ 2 + vx, y);
 			}
 			else
@@ -104,8 +104,8 @@ public:
 		{
 			if( this -> y <= cameraTranslatePoint.y + cameraTranslatePoint.height)
 			{
-				vy = 1.0f;
-				setPosition(this -> x , this -> y + getHeight() + vy);
+				
+				setPosition(x , this -> y + getHeight() / 2 - vy);
 			}
 			else
 			{
@@ -113,6 +113,7 @@ public:
 			}
 		}
 	}
+	Direction getMoveDir() {return moveDir;}
 private:
 	ViewPort* viewPort;
 	RectF mapRect;

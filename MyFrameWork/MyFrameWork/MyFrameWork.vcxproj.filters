@@ -94,6 +94,37 @@
     <ClCompile Include="StartingScene.cpp" />
     <ClCompile Include="LoadingScene.cpp" />
     <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="GameOverScene.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="UIComponents.cpp" />
+    <ClCompile Include="EnemyBlazerSprite.cpp" />
+    <ClCompile Include="BlazerMovingState.cpp" />
+    <ClCompile Include="DynamicBridgeMovingState.cpp" />
+    <ClCompile Include="ObjectDynamicBridgeSprite.cpp" />
+    <ClCompile Include="EnermyFailingStone.cpp" />
+    <ClCompile Include="EnermyFailingStoneAppearingState.cpp" />
+    <ClCompile Include="EnermyFailingStoneData.cpp" />
+    <ClCompile Include="EnermyFailingStoneDeadState.cpp" />
+    <ClCompile Include="EnermyFailingStoneDroppingState.cpp" />
+    <ClCompile Include="BulletScubarSoliderExploringState.cpp" />
+    <ClCompile Include="BulletScubarSoliderMovingState.cpp" />
+    <ClCompile Include="BulletScubarSoliderSprite.cpp" />
+    <ClCompile Include="EnermyScubarSoliderData.cpp" />
+    <ClCompile Include="EnermyScubarSoliderHidingState.cpp" />
+    <ClCompile Include="EnermyScubarSoliderShootState.cpp" />
+    <ClCompile Include="EnermyScubarSoliderSprite.cpp" />
+    <ClCompile Include="EnermyFinalBoss5AppearingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5DeadState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5DisappearingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5PreparingState.cpp" />
+    <ClCompile Include="EnermyFinalBoss5Sprite.cpp" />
+    <ClCompile Include="EnermyFinalBoss5WaitingState.cpp" />
+    <ClCompile Include="GunBoss5Bullet.cpp" />
+    <ClCompile Include="GunBoss5BulletExploringState.cpp" />
+    <ClCompile Include="GunBoss5BulletMovingState.cpp" />
+    <ClCompile Include="ShipBoss5.cpp" />
+    <ClCompile Include="ShipBoss5ExploringState.cpp" />
+    <ClCompile Include="ShipBoss5MovingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -211,5 +242,39 @@
     <ClInclude Include="StartingScene.h" />
     <ClInclude Include="LoadingScene.h" />
     <ClInclude Include="Loader.h" />
+    <ClInclude Include="GameOverScene.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="UIComponents.h" />
+    <ClInclude Include="EnemyBlazerSprite.h" />
+    <ClInclude Include="BlazerMovingState.h" />
+    <ClInclude Include="DynamicBridgeMovingState.h" />
+    <ClInclude Include="ObjectDynamicBridgeSprite.h" />
+    <ClInclude Include="EnermyFailingStone.h" />
+    <ClInclude Include="EnermyFailingStoneAppearingState.h" />
+    <ClInclude Include="EnermyFailingStoneData.h" />
+    <ClInclude Include="EnermyFailingStoneDeadState.h" />
+    <ClInclude Include="EnermyFailingStoneDroppingState.h" />
+    <ClInclude Include="BulletScubarSoliderExPloringState.h" />
+    <ClInclude Include="BulletScubarSoliderMovingState.h" />
+    <ClInclude Include="BulletScubarSoliderSprite.h" />
+    <ClInclude Include="EnermyScubarSoliderData.h" />
+    <ClInclude Include="EnermyScubarSoliderHidingState.h" />
+    <ClInclude Include="EnermyScubarSoliderShootState.h" />
+    <ClInclude Include="EnermyScubarSoliderSprite.h" />
+    <ClInclude Include="EnermyFinalBoss5AppearingState.h" />
+    <ClInclude Include="EnermyFinalBoss5DeadState.h" />
+    <ClInclude Include="EnermyFinalBoss5DisappearingState.h" />
+    <ClInclude Include="EnermyFinalBoss5PreparingState.h" />
+    <ClInclude Include="EnermyFinalBoss5Sprite.h" />
+    <ClInclude Include="EnermyFinalBoss5WaitingState.h" />
+    <ClInclude Include="GunBoss5Bullet.h" />
+    <ClInclude Include="GunBoss5BulletExploringState.h" />
+    <ClInclude Include="GunBoss5BulletMovingState.h" />
+    <ClInclude Include="ShipBoss5.h" />
+    <ClInclude Include="ShipBoss5ExploringState.h" />
+    <ClInclude Include="ShipBoss5MovingState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

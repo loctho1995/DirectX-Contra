@@ -8,12 +8,14 @@
 #include "EnermySoldier.h"
 #include "ObjectBridge.h"
 #include "ObjectStaticWeapon.h"
+#include "SceneManager.h"
+#include "Sound.h"
 
 class PlayScene : public Scene
 {
 public:
-	PlayScene(int mapID);
-	PlayScene() {}
+
+	PlayScene();
 	virtual ~PlayScene() {}
 
 	virtual void onCollision();
@@ -27,5 +29,12 @@ private:
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
+	Texture* lifeTexture;
+	int nTransitionFrames;
+	int count;
+	int stageIndex;
+	bool isGameOver;
+	bool isFinish;
+	bool isPause;
 };
 

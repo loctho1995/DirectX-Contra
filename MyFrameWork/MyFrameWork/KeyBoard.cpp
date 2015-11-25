@@ -22,7 +22,7 @@ bool KeyEvent :: isPress()
 
 bool KeyEvent :: isRelease()
 {
-	return type = Release;
+	return type == Release;
 }
 
 

@@ -20,25 +20,35 @@ PlayerRunningState :: PlayerRunningState(PlayerData* data)
 		
 		pData -> vy = 0.0f;
 		speed = 1;
+		tempDir = pData -> dir;
 }
 
 void PlayerRunningState:: onMovePressed( Direction d )
 {
 		pData -> dir = d;
+		tempDir = (tempDir | d);
 }
 
 void PlayerRunningState :: onMoveReleased ( Direction d)
 {
+	tempDir = tempDir ^ d;
+	if(!tempDir.isNone())
+	{
+		pData -> dir = tempDir;
+	}
+	else
 	transition(new PlayerStandingState(pData));
 }
 
 void PlayerRunningState :: onUpdate()
 {
 		hittableCalculation();
+		undyingCalculation();
 		pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 		pData -> vx = pData->transform(speed);
-		pData -> x += (pData -> vx + pData -> cSupportRect.vx);
-		pData -> y += pData -> cSupportRect.vy;
+		pData -> x += (pData -> vx );
+		pData -> x += (pData -> cDynamicSupportRect)? pData -> cDynamicSupportRect -> vx : 0.0f ;
+		pData -> y += (pData -> cDynamicSupportRect)? pData -> cDynamicSupportRect -> vy : 0.0f ;
 
 		if( pData ->isFiring )
 		{
@@ -198,4 +208,23 @@ void PlayerRunningState :: onVeticalDirectionReleased()
 void PlayerRunningState :: onDead()
 {
 	transition(new PlayerDeadState(pData));
+}
+
+void PlayerRunningState :: onDynamicObjectCollision(CollisionRectF* cRect)
+{
+	if( cRect -> type != "throughable")
+	{
+		if( pData -> vx > 0 )
+		{
+			pData -> x -= pData -> getBody().x + pData -> getBody().width - cRect->rect.x;
+			pData -> vx = 0;
+		}
+		else
+		{
+			pData -> x += cRect->rect.x + cRect->rect.width - pData->getBody().x;
+			pData -> vx = 0;
+		}
+	}
+	else
+		pData -> dynamicThroughRect.push_back(cRect);
 }

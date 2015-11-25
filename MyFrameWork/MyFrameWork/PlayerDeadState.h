@@ -1,7 +1,7 @@
 #pragma once
 
 #include "PlayerState.h"
-
+#include "UIComponents.h"
 class PlayerDeadState : public PlayerState
 {
 public:

@@ -12,6 +12,7 @@
 #include "PlayerSprite.h"
 #include "EnermyCreator.h"
 #include "ObjectSprite.h"
+#include "UIComponents.h"
 
 class Map
 {
@@ -38,6 +39,7 @@ public:
 	float getResY();
 	RectF getCameraTranslatePoint();
 	std::vector < std::string>& getSpriteNames();
+	bool isFinish();
 private:
 	std:: vector< TileSet* > tileSets; // vector of TileSet Pointer
 	std:: vector< Layer* > layers; // vector of Layer pointer
@@ -63,4 +65,5 @@ private:
 	float respawnX;
 	float respawnY;
 	RectF cameraTranslatePosition;
+	bool bIsFinish;
 };

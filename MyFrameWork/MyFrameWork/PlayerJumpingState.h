@@ -12,6 +12,7 @@ public:
 	void onJumpRelease();
 	void onCollision(RectF rect);
 	void onCollision(CollisionRectF rect);
+	void onDynamicObjectCollision(CollisionRectF* cRect);
 	void onUpdate();
 	void onFirePressed();
 	void onVeticalDirectionPressed( Direction d);
@@ -23,5 +24,6 @@ private:
 	bool isJumpingPress;
 	float speedX;
 	float acceleration;
+	Direction tempDir;
 
 };

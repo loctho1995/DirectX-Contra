@@ -16,7 +16,8 @@ public:
 	virtual void onCameraCollision(RectF cameraRect)
 	{
 		pData -> x = max(pData -> x, cameraRect.x + 20);
-		if( pData -> y >= cameraRect.y + cameraRect.height)
+		pData -> x = min ( pData -> x, cameraRect.x + cameraRect.width- 20 );
+		if( pData -> y > cameraRect.y + cameraRect.height)
 		{
 			pData -> y = cameraRect.y + cameraRect.height;
 			onDead();
@@ -75,14 +76,28 @@ public:
 		if(pData -> isRespawn )
 		{
 			pData -> hittableCounter++;
-			if((pData -> hittableCounter %= pData ->nonHittableFrames) == 0)
+			if((pData -> hittableCounter == pData ->nonHittableFrames))
 			{
 				pData -> isHittable = true;
 				pData -> isRespawn = false;
 			}
 		}
 	}
+
+	virtual void undyingCalculation() 
+	{
+		if(pData -> isUndying )
+		{
+			pData -> undyingCounter++;
+			if((pData -> undyingCounter == pData ->nUndyingFrames))
+			{
+				pData -> isUndying = false;
+				
+			}
+		}
+	}
 	
+
 
 
 protected:

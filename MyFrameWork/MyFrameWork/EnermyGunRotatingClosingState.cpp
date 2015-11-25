@@ -14,13 +14,28 @@ EnermyGunRotatingClosingState::~EnermyGunRotatingClosingState()
 void EnermyGunRotatingClosingState::onUpdate()
 {
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
-	
-	
-	if (pData->x - pData->playerX < 95)
-	{
-		iFrame++;
-		if (iFrame == 2)
-		transition(new EnermyGunRotatingOpeningState(pData));
-	}
 
+	if (pData->stage == 1)
+	{
+		if (pData->x - pData->playerX < 95)
+		{
+			iFrame++;
+			if (iFrame == 2)
+				transition(new EnermyGunRotatingOpeningState(pData));
+		}
+	}
+	
+
+	else
+
+	{
+		if (pData->playerY - pData->y < 20)
+		{
+			iFrame++;
+			if (iFrame == 2)
+				transition(new EnermyGunRotatingOpeningState(pData));
+		}
+
+	}
+	
 }

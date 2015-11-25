@@ -14,6 +14,7 @@ public:
 	EnermyCannon(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnermyCannon();
 
+	static void loadResources();
 	virtual void update();
 	virtual void draw(Camera *cam);
 };

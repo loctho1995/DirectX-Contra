@@ -12,6 +12,7 @@ public:
 
 	virtual RectF getBody() { return pData ->getBody(); }
 	virtual CollisionRectF getCollisionRect() { return CollisionRectF(getBody(),"throughable", this -> pData ->vx, this -> pData -> vy); }
+	virtual CollisionRectF* getRefCollisionRect() {return &pData ->collisionRect;}
 	virtual void setBody(RectF r ) { pData ->body =  r;} 
 	/*virtual RectF getLastFrameBody() {return pData ->getLastFrameBody();}*/
 	virtual float getVx() {return pData -> vx;} 
@@ -37,6 +38,7 @@ public:
 	virtual void update() 
     {
         pData->pState->onUpdate();
+		pData -> collisionRect  = CollisionRectF(pData ->getBody(), "throughable", pData -> vx, pData -> vy);
     }
 
     virtual void draw(Camera *cam)

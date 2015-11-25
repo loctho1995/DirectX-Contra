@@ -4,7 +4,7 @@
 PlayerDeadState:: PlayerDeadState(PlayerData* data)
 {
 	this -> pData = data;
-	
+	pData -> isDead = true;
 	speedX = 1.0f;
 	pData -> vy = -4.0f;
 	acceleration = 0.2f;
@@ -16,12 +16,15 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	pData ->isHittable = false;
 	pData -> hittableCounter = 0;
 	pData -> isRapid = false;
+	tempDir = pData -> dir;
+	UIComponents::getInstance() ->descreaseLifes();
 	
 }
 
 void PlayerDeadState :: onUpdate()
 {
 	hittableCalculation();
+	undyingCalculation();
 	pData -> ppTextureArrays [ pData ->iCurrentArr] ->update();
 
 	pData -> vy  += acceleration;
@@ -30,7 +33,7 @@ void PlayerDeadState :: onUpdate()
 	pData -> y += pData -> vy;
 
 	count++;
-	if(count == nHoldFrames)
+	if(count == nHoldFrames && UIComponents::getInstance()->getLifes() >= 1)
 	{
 		pData -> reset();
 		pData -> dir = tempDir;
@@ -206,14 +209,15 @@ void PlayerDeadState :: onMoveReleased( Direction dir)
 void PlayerDeadState ::  onCameraCollision( RectF cameraRect)
 {
 	pData -> x = max(pData -> x, cameraRect.x + 20);
-	if( pData -> y >= cameraRect.y + cameraRect.height)
+	if( pData -> y > cameraRect.y + cameraRect.height)
 	{
+		pData ->setiCurrentArray(PlayerData::LIE);
 		pData -> y = cameraRect.y + cameraRect.height;
 		pData -> vy = 0.0f;
 		speedX = 0.0f;
 		pData -> vx = 0.0f;
 		acceleration = 0.0f;
-		pData ->setiCurrentArray(PlayerData::LIE);
+		
 	}
 }
 

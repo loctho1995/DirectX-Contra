@@ -66,7 +66,7 @@ void ObjectCapsuleWeapon::draw(Camera* cam)
 }
 void ObjectCapsuleWeapon::update()
 {
-	this->pData->pState->onUpdate();
+	ObjectSprite::update();
 }
 
 bool ObjectCapsuleWeapon::isDesTroyed()

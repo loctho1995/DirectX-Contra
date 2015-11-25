@@ -7,9 +7,10 @@
 class EnermyGunRotating :public EnermySprite
 {
 public:
-	EnermyGunRotating(float x, float y, std::vector < BulletSprite*>& bulletSpriteVector);
+	EnermyGunRotating(float x, float y, int isStage, std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnermyGunRotating();
 	void update();
 	void draw(Camera *cam);
+	static void loadResources();
 
 };
