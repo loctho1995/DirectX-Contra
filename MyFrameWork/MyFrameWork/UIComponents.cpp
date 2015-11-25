@@ -17,7 +17,7 @@ UIComponents::UIComponents()
 {
 	score = 0;
 	highScore = 0 ;//highScore; load through file
-	currentStage = 3;
+	currentStage = 1;
 	lifes = 5;
 }
 

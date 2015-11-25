@@ -6,6 +6,8 @@ GunBoss1Bullet :: GunBoss1Bullet(float x, float y)
 {
 	pData = new SpriteData();
 	
+	pData -> isHittable = false;
+
 	pData ->ppTextureArrays = new TextureArray*[2];
 
 	pData ->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\Bullets", "gunboss1bullet","", 1, 60, D3DCOLOR_XRGB(255,255,255));
