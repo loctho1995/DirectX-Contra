@@ -15,7 +15,8 @@ public:
     bool isDestroying();
     bool isDesTroyed();
     ~ObjectBridge();
-	virtual void onUnsupported() {}
+
+    static void loadResources();
 
 private:
     ObjectBridgeHead *bridgeHead;

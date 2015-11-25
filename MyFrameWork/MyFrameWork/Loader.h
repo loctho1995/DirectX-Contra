@@ -6,6 +6,8 @@
 #include "EnermyFinalBoss1Sprite.h"
 #include "PlayerSprite.h"
 #include "Map.h"
+#include "ObjectBridge.h"
+#include "Boss2Final.h"
 
 class Loader
 {

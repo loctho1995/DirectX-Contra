@@ -42,6 +42,22 @@ void Loader::loadResources(std::string name)
 			return;
 		}
 
-		
+        if (name == "soldierl" || name == "solderr")
+        {
+            EnermySoldier::loadResources();
+            return;
+        }
+
+        if (name == "bridge")
+        {
+            ObjectBridge::loadResources();
+            return;
+        }
+
+        if (name == "boss2finalarmleft" || name == "boss2finalarmright" || name == "boss2finalhead")
+        {
+            Boss2Final::loadResources();
+            return;
+        }
 	}
 }

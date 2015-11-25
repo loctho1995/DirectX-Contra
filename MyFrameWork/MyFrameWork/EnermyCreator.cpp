@@ -5,6 +5,8 @@
 #include "ObjectBridge.h"
 #include "EnermyCannon.h"
 #include "EnermyGunRotating.h"
+#include "Boss2FinalArm.h"
+#include "Boss2FinalHead.h"
 
 
 EnermyCreator* EnermyCreator::instance = nullptr;
@@ -41,8 +43,9 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("capsuleweaponl",Direction::createLeft());
 
 	addAppearDirection("soldierr",Direction::createLeft());
-
-
+    addAppearDirection("boss2finalarmleft", Direction::createRight());
+    addAppearDirection("boss2finalarmright", Direction::createRight());
+    addAppearDirection("boss2finalhead", Direction::createRight());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -100,6 +103,21 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	{
 		return new EnermyFinalBoss1Sprite(respawnX, respawnY);
 	}
+
+    if (enermyName == "boss2finalarmleft")
+    {
+        return new Boss2FinalArm(respawnX, respawnY, bulletSprites, Boss2FinalData::ArmSide::LEFT);
+    }
+
+    if (enermyName == "boss2finalarmright")
+    {
+        return new Boss2FinalArm(respawnX, respawnY, bulletSprites, Boss2FinalData::ArmSide::RIGHT);
+    }
+
+    if (enermyName == "boss2finalhead")
+    {
+        return new Boss2FinalHead(respawnX, respawnY, bulletSprites);
+    }
 
 	return nullptr;
 }

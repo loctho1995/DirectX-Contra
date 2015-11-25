@@ -56,3 +56,18 @@ void EnermySoldier::onCameraCollision(RectF cameraRect)
         this->pData->isDesTroyed = true;
     }
 }
+
+void EnermySoldier::loadResources()
+{
+    TextureArray* temp = new TextureArray("Resources\\Sprites", "soldier", "run", 3, 6);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "soldier", "jump", 1, 60);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "soldier", "drowning", 1, 60);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 3, 10);
+    delete temp;
+}

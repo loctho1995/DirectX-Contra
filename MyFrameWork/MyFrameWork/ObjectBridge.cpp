@@ -128,3 +128,18 @@ bool ObjectBridge::isDesTroyed()
 {
     return this->pData->isDesTroyed;
 }
+
+void ObjectBridge::loadResources()
+{
+    TextureArray* temp = new TextureArray("Resources\\Sprites", "bridge", "body", 3, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bridge", "head", 3, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bridge", "tail", 3, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bridge", "explosion", 3, 10);
+    delete temp;
+}

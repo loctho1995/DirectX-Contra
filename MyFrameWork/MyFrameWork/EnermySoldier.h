@@ -17,6 +17,7 @@ public:
     void setSupportCollisionRect(CollisionRectF rect);
     void onCameraCollision(RectF cameraRect);
     void die();
+    static void loadResources();
     //void update();
     //void draw(Camera *cam);
 
