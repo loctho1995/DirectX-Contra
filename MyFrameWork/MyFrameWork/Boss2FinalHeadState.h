@@ -11,7 +11,7 @@ public:
     void onUpdate();
 
 private:
-    const int FRAME_COUNT_SHUT = 165; //65frame
+    const int FRAME_COUNT_SHUT; //65frame
     int frameCountShut;
 };
 

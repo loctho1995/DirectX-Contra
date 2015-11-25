@@ -125,6 +125,19 @@
     <ClCompile Include="ShipBoss5.cpp" />
     <ClCompile Include="ShipBoss5ExploringState.cpp" />
     <ClCompile Include="ShipBoss5MovingState.cpp" />
+    <ClCompile Include="Boss2Final.cpp" />
+    <ClCompile Include="Boss2FinalArm.cpp" />
+    <ClCompile Include="Boss2FinalArmAttackState.cpp" />
+    <ClCompile Include="Boss2FinalArmDirectPlayerState.cpp" />
+    <ClCompile Include="Boss2FinalArmSpinningState.cpp" />
+    <ClCompile Include="Boss2FinalArmStartState.cpp" />
+    <ClCompile Include="Boss2FinalArmWaveState.cpp" />
+    <ClCompile Include="Boss2FinalBullet.cpp" />
+    <ClCompile Include="Boss2FinalData.cpp" />
+    <ClCompile Include="Boss2FinalHand.cpp" />
+    <ClCompile Include="Boss2FinalHead.cpp" />
+    <ClCompile Include="Boss2FinalHeadState.cpp" />
+    <ClCompile Include="Boss2FinalJoint.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -273,6 +286,19 @@
     <ClInclude Include="ShipBoss5.h" />
     <ClInclude Include="ShipBoss5ExploringState.h" />
     <ClInclude Include="ShipBoss5MovingState.h" />
+    <ClInclude Include="Boss2FinalJoint.h" />
+    <ClInclude Include="Boss2Final.h" />
+    <ClInclude Include="Boss2FinalArm.h" />
+    <ClInclude Include="Boss2FinalArmAttackState.h" />
+    <ClInclude Include="Boss2FinalArmDirectPlayerState.h" />
+    <ClInclude Include="Boss2FinalArmSpinningState.h" />
+    <ClInclude Include="Boss2FinalArmStartState.h" />
+    <ClInclude Include="Boss2FinalArmWaveState.h" />
+    <ClInclude Include="Boss2FinalBullet.h" />
+    <ClInclude Include="Boss2FinalData.h" />
+    <ClInclude Include="Boss2FinalHand.h" />
+    <ClInclude Include="Boss2FinalHead.h" />
+    <ClInclude Include="Boss2FinalHeadState.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -2,9 +2,10 @@
 
 
 Boss2FinalHeadState::Boss2FinalHeadState(EnermyData *pData)
+	:
+	FRAME_COUNT_SHUT(165)
 {
     this->pData = pData;
-    FRAME_COUNT_SHUT = 165;
     frameCountShut = FRAME_COUNT_SHUT;
 }
 
