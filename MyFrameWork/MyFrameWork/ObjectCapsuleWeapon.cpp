@@ -2,12 +2,13 @@
 #include "ObjectCapsuleWeaponFlyingState.h"
 
 
-ObjectCapsuleWeapon::ObjectCapsuleWeapon(int respawnX, int respawnY, BulletTypes bulletType)
+ObjectCapsuleWeapon::ObjectCapsuleWeapon(int respawnX, int respawnY, int isStage, BulletTypes bulletType)
 {
 	this->pData = new ObjectCapsuleWeaponData();
 
 	this->pData->x = respawnX;
 	this->pData->y = respawnY;
+
 	((ObjectCapsuleWeaponData*)(this->pData))->bulletType = bulletType;
 	this->initTextureArrays(ObjectCapsuleWeaponData::COUNT);
 	this->addTextureArray(ObjectCapsuleWeaponData::FLY, "", 1, 5);
@@ -15,7 +16,7 @@ ObjectCapsuleWeapon::ObjectCapsuleWeapon(int respawnX, int respawnY, BulletTypes
 	this->pData->appearDir = Direction::createLeft();
 	this->pData->body = RectF(0.0f, 0.0f, 24.0f, 15.0f);
 	this->pData->HP = 1;
-	this->pData->pState = new ObjectCapsuleWeaponFlyingState(this->pData);
+	this->pData->pState = new ObjectCapsuleWeaponFlyingState(this->pData, isStage);
 
 	switch (bulletType)
 	{

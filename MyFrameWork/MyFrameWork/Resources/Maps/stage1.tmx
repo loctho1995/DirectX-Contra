@@ -93,11 +93,11 @@
   <object id="107" name="gunrotating1" type="enemy" x="2976" y="176" width="32" height="32"/>
   <object id="108" name="gunrotating1" type="enemy" x="3104" y="176" width="32" height="32"/>
   <object id="119" name="capsuleweaponr" type="object" x="231" y="51" width="24" height="15"/>
-  <object id="120" name="cannon" type="enemy" x="2048" y="144" width="32" height="32"/>
+  <object id="120" name="cannon1" type="enemy" x="2048" y="144" width="32" height="32"/>
   <object id="121" name="capsuleweaponr" type="object" x="2322" y="64" width="24" height="15"/>
   <object id="122" name="capsuleweaponl" type="object" x="2322" y="128" width="24" height="15"/>
-  <object id="123" name="cannon" type="enemy" x="2176" y="48" width="32" height="32"/>
-  <object id="129" name="cannon" type="enemy" x="2752" y="112" width="32" height="32"/>
+  <object id="123" name="cannon1" type="enemy" x="2176" y="48" width="32" height="32"/>
+  <object id="129" name="cannon1" type="enemy" x="2752" y="112" width="32" height="32"/>
   <object id="137" name="cameratranslateposition" type="&quot;&quot;" x="3204" y="0" width="12" height="240"/>
   <object id="141" name="soldierl" type="enemy" x="851.5" y="81.5" width="23.5" height="33"/>
   <object id="142" name="soldierl" type="enemy" x="805.333" y="83" width="16.333" height="33"/>
