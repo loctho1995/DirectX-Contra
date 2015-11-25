@@ -2,9 +2,9 @@
 
 Loader* Loader::sInstance = nullptr;
 
-Loader* Loader:: getInstance()
+Loader* Loader::getInstance()
 {
-	if(sInstance == nullptr)
+	if (sInstance == nullptr)
 	{
 		sInstance = new Loader();
 	}
@@ -20,11 +20,11 @@ Loader::~Loader(void)
 }
 void Loader::loadResources(std::string name)
 {
-	if(std::find(spriteNamesLoaded.begin(), spriteNamesLoaded.end(), name) == spriteNamesLoaded.end())
+	if (std::find(spriteNamesLoaded.begin(), spriteNamesLoaded.end(), name) == spriteNamesLoaded.end())
 	{
 		spriteNamesLoaded.push_back(name);
 
-		if( name == "player")
+		if (name == "player")
 		{
 			PlayerSprite::loadResources();
 			return;
@@ -33,6 +33,12 @@ void Loader::loadResources(std::string name)
 		if (name == "gunboss1")
 		{
 			EnermyGunBoss1Sprite::loadResources();
+			return;
+		}
+
+		if (name == "cannon")
+		{
+			EnermyCannon::loadResources();
 			return;
 		}
 
@@ -59,5 +65,43 @@ void Loader::loadResources(std::string name)
             Boss2Final::loadResources();
             return;
         }
+
+		if (name == "finalboss5")
+		{
+			EnermyFinalBoss5Sprite::loadResources();
+			return;
+		}
+
+		if (name == "blazer")
+		{
+			EnemyBlazerSprite::loadResources();
+			return;
+		}
+
+
+		if (name == "dynamicbridge")
+		{
+			ObjectDynamicBridgeSprite::loadResources();
+			return;
+		}
+
+		if (name == "failingstone")
+		{
+			EnermyFailingStone::loadResources();
+			return;
+		}
+
+		if (name == "gunrotating")
+		{
+			EnermyGunRotating::loadResources();
+			return;
+		}
+
+		if (name == "scubarsolider")
+		{
+			EnermyScubarSoliderSprite::loadResources();
+			return;
+		}
+
 	}
 }
