@@ -15,6 +15,7 @@
 #include "Map.h"
 #include "ObjectBridge.h"
 #include "Boss2Final.h"
+#include "EnemyMineSprite.h"
 
 class Loader
 {

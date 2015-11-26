@@ -5,6 +5,9 @@ MBullet :: MBullet(float x, float y, float speed, float angle)
 {
 	pData = new SpriteData();
 
+	pData -> isHittable = false;
+
+
 	pData ->isDesTroyed = false;
 	
 	pData ->ppTextureArrays = new TextureArray*[1];

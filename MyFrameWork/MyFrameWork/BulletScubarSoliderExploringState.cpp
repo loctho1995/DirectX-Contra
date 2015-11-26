@@ -20,3 +20,7 @@ void BulletScubarSoliderExploringState::onUpdate()
 		pData->isDesTroyed = true;
 	}
 }
+void BulletScubarSoliderExploringState::onCollision(CollisionRectF cRect)
+{
+	
+}

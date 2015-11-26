@@ -8,6 +8,7 @@ public:
 	BulletScubarSoliderExploringState(SpriteData * data, int index);
 	~BulletScubarSoliderExploringState();
 	virtual void onUpdate();
+	void onCollision(CollisionRectF cRect);
 private:
 	int nHoldFrames;
 	int count;

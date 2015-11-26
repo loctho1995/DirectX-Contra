@@ -1,12 +1,14 @@
 #include "EnermyCannon.h"
 
-EnermyCannon::EnermyCannon(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector) 
+EnermyCannon::EnermyCannon(int respawnX, int respawnY, int isStage, std::vector < BulletSprite*>& bulletSpriteVector)
 	: 
 	EnermySprite(bulletSpriteVector)
 {
 	pData = new EnermyCannonData(bulletSpriteVector);
 	pData->x = respawnX;
 	pData->y = respawnY;
+
+	pData->stage = isStage;
 
 	this->initTextureArrays(EnermyCannonData::COUNT);
 	this->addTextureArray(EnermyCannonData::PREPARE, "prepare", 1, 60);

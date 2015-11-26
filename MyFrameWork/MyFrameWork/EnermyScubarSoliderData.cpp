@@ -10,6 +10,7 @@ EnermyScubarSoliderData::EnermyScubarSoliderData(std::vector < BulletSprite* >& 
 	this->isDesTroyed = false;
 	this->HP = 1;
 	this->botName = "scubarsolider";
+	this->score = 10;
 }
 
 EnermyScubarSoliderData::~EnermyScubarSoliderData()

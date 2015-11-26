@@ -7,7 +7,7 @@
 class ObjectCapsuleWeaponFlyingState : public ObjectState
 {
 public:
-	ObjectCapsuleWeaponFlyingState(ObjectData* pData);
+	ObjectCapsuleWeaponFlyingState(ObjectData* pData, int isStage);
 	~ObjectCapsuleWeaponFlyingState(); 
 	void onUpdate();
 	void onDead();
@@ -15,5 +15,6 @@ private:
 	int count;
 	int nHoldFrames;
 	float crow;
+	int stage;
 };
 

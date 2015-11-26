@@ -103,5 +103,11 @@ void Loader::loadResources(std::string name)
 			return;
 		}
 
+		if( name == "mine")
+		{
+			EnemyMineSprite::loadResources();
+			return;
+		}
+
 	}
 }

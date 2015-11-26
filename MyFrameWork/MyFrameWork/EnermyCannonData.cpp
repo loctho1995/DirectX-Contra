@@ -8,6 +8,8 @@ EnermyCannonData::EnermyCannonData(std::vector < BulletSprite* >& bulletsVector 
 	this->isHittable = true;
 	this->isThrougable = true;
 	this->isDesTroyed = false;
+	this->HP = 8;
+	this->score = 500;
 }
 
 EnermyCannonData::~EnermyCannonData()

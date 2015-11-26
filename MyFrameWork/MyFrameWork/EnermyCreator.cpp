@@ -12,6 +12,7 @@
 #include "EnemyBlazerSprite.h"
 #include "EnermyFailingStone.h"
 #include"EnermyScubarSoliderSprite.h"
+#include "EnemyMineSprite.h"
 
 EnermyCreator* EnermyCreator::instance = nullptr;
 
@@ -34,7 +35,8 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("gunrotating1", Direction::createRight());
 	addAppearDirection("gunrotating3", Direction::createUp());
 
-	addAppearDirection("cannon", Direction::createUp());
+	addAppearDirection("cannon1", Direction::createRight());
+	addAppearDirection("cannon3", Direction::createUp());
 
 	addAppearDirection("soldierl", Direction::createRight());
 
@@ -47,6 +49,13 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("capsuleweaponr", Direction::createLeft());
 	addAppearDirection("capsuleweaponl", Direction::createLeft());
 
+	addAppearDirection("capsuleweapon3s", Direction::createDown());
+	addAppearDirection("capsuleweapon3m", Direction::createDown());
+	addAppearDirection("capsuleweapon3f", Direction::createDown());
+	addAppearDirection("capsuleweapon3b", Direction::createDown());
+	addAppearDirection("capsuleweapon3r", Direction::createDown());
+	addAppearDirection("capsuleweapon3l", Direction::createDown());
+
 	addAppearDirection("soldierr",Direction::createLeft());
     addAppearDirection("boss2finalarmleft", Direction::createUp());
     addAppearDirection("boss2finalarmright", Direction::createUp());
@@ -57,9 +66,13 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("dynamicbridge", Direction::createUp());
 	addAppearDirection("failingstone", Direction::createNone());
 
-	addAppearDirection("scubarsolider", Direction::createUp());
+	addAppearDirection("scubarsolider1", Direction::createUp());
+	addAppearDirection("scubarsolider2", Direction::createUp());
+	addAppearDirection("scubarsolider3", Direction::createUp());
 
 	addAppearDirection("finalboss5", Direction::createRight());
+	addAppearDirection("mine", Direction::createNone());
+	addAppearDirection("bazoka", Direction::createRight());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -93,9 +106,14 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 		return new EnermyGunRotating(respawnX, respawnY, 3, bulletSprites);
 	}
 
-	if (enermyName == "cannon")
+	if (enermyName == "cannon1")
 	{
-		return new EnermyCannon(respawnX, respawnY, bulletSprites);
+		return new EnermyCannon(respawnX, respawnY, 1, bulletSprites);
+	}
+
+	if (enermyName == "cannon3")
+	{
+		return new EnermyCannon(respawnX, respawnY, 3, bulletSprites);
 	}
 
 	if (enermyName == "soldierl")
@@ -153,12 +171,41 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	{
 		return new EnermyFailingStone(respawnX, respawnY);
 	}
-
-	if (enermyName == "scubarsolider")
+	if (enermyName == "scubarsolider1")
+	
 	{
-		return new EnermyScubarSoliderSprite(respawnX, respawnY, bulletSprites);
+		
+		return new EnermyScubarSoliderSprite(respawnX, respawnY,1, bulletSprites);
+
 	}
 
+	
+	if (enermyName == "scubarsolider2")
+	
+	{
+		
+		return new EnermyScubarSoliderSprite(respawnX, respawnY, 2, bulletSprites);
+
+	}
+
+	
+	if (enermyName == "scubarsolider3")
+	
+	{
+
+		return new EnermyScubarSoliderSprite(respawnX, respawnY, 3, bulletSprites);
+
+	}
+
+	if (enermyName == "mine")
+	{
+		return new EnemyMineSprite(respawnX, respawnY);
+	}
+
+	if (enermyName == "bazoka")
+	{
+		return new EnemyBazokaSprite(respawnX, respawnY, bulletSprites);
+	}
 
 	return nullptr;
 }
@@ -203,32 +250,62 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 	//capsule weapon
 	if (name == "capsuleweapons")
 	{
-		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::S);
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::S);
 	}
 
 	if (name == "capsuleweaponm")
 	{
-		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::M);
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::M);
 	}
 
 	if (name == "capsuleweaponf")
 	{
-		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::F);
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::F);
 	}
 
 	if (name == "capsuleweaponb")
 	{
-		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::B);
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::B);
 	}
 
 	if (name == "capsuleweaponr")
 	{
-		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::R);
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::R);
 	}
 
 	if (name == "capsuleweaponl")
 	{
-		return new ObjectCapsuleWeapon(respawnX, respawnY, BulletTypes::L);
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::L);
+	}
+	//capsuleweapon stage 3
+	if (name == "capsuleweapon3s")
+	{
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 3, BulletTypes::S);
+	}
+
+	if (name == "capsuleweapon3m")
+	{
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 3, BulletTypes::M);
+	}
+
+	if (name == "capsuleweapon3f")
+	{
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 3, BulletTypes::F);
+	}
+
+	if (name == "capsuleweapon3b")
+	{
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 3, BulletTypes::B);
+	}
+
+	if (name == "capsuleweapon3r")
+	{
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 3, BulletTypes::R);
+	}
+
+	if (name == "capsuleweapon3l")
+	{
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 3, BulletTypes::L);
 	}
 
 	if (name == "dynamicbridge")

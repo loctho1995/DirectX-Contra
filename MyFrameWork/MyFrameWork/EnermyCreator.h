@@ -10,6 +10,7 @@
 #include "ObjectSprite.h"
 #include "ObjectStaticWeapon.h"
 #include "ObjectCapsuleWeapon.h"
+#include "EnemyBazokaSprite.h"
 #include <map>
 
 

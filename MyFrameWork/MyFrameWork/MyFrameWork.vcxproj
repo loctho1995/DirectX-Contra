@@ -102,7 +102,14 @@
     <ClCompile Include="BulletScubarSoliderMovingState.cpp" />
     <ClCompile Include="BulletScubarSoliderSprite.cpp" />
     <ClCompile Include="DynamicBridgeMovingState.cpp" />
+    <ClCompile Include="EnemyBazokaExploringState.cpp" />
+    <ClCompile Include="EnemyBazokaFiringState.cpp" />
+    <ClCompile Include="EnemyBazokaSprite.cpp" />
+    <ClCompile Include="EnemyBazokaStandingState.cpp" />
     <ClCompile Include="EnemyBlazerSprite.cpp" />
+    <ClCompile Include="EnemyMineExploringState.cpp" />
+    <ClCompile Include="EnemyMineFallingState.cpp" />
+    <ClCompile Include="EnemyMineSprite.cpp" />
     <ClCompile Include="EnemySniper.cpp" />
     <ClCompile Include="EnemySniperData.cpp" />
     <ClCompile Include="EnemySniperDeadState.cpp" />
@@ -241,6 +248,10 @@
     <ClInclude Include="BulletScubarSoliderMovingState.h" />
     <ClInclude Include="BulletScubarSoliderSprite.h" />
     <ClInclude Include="DynamicBridgeMovingState.h" />
+    <ClInclude Include="EnemyBazokaExploringState.h" />
+    <ClInclude Include="EnemyBazokaFiringState.h" />
+    <ClInclude Include="EnemyBazokaSprite.h" />
+    <ClInclude Include="EnemyBazokaStandingState.h" />
     <ClInclude Include="EnemyBlazerSprite.h" />
     <ClInclude Include="BulletMovingState.h" />
     <ClInclude Include="BulletSprite.h" />
@@ -249,6 +260,9 @@
     <ClInclude Include="CollisionRect.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Direction.h" />
+    <ClInclude Include="EnemyMineExploringState.h" />
+    <ClInclude Include="EnemyMineFallingState.h" />
+    <ClInclude Include="EnemyMineSprite.h" />
     <ClInclude Include="EnemySniper.h" />
     <ClInclude Include="EnemySniperData.h" />
     <ClInclude Include="EnemySniperDeadState.h" />
