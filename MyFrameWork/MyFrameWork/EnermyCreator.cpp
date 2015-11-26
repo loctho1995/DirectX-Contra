@@ -66,7 +66,9 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("dynamicbridge", Direction::createUp());
 	addAppearDirection("failingstone", Direction::createNone());
 
-	addAppearDirection("scubarsolider", Direction::createUp());
+	addAppearDirection("scubarsolider1", Direction::createUp());
+	addAppearDirection("scubarsolider2", Direction::createUp());
+	addAppearDirection("scubarsolider3", Direction::createUp());
 
 	addAppearDirection("finalboss5", Direction::createRight());
 	addAppearDirection("mine", Direction::createNone());
@@ -169,10 +171,30 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	{
 		return new EnermyFailingStone(respawnX, respawnY);
 	}
-
-	if (enermyName == "scubarsolider")
+	if (enermyName == "scubarsolider1")
+	
 	{
-		return new EnermyScubarSoliderSprite(respawnX, respawnY, bulletSprites);
+		
+		return new EnermyScubarSoliderSprite(respawnX, respawnY,1, bulletSprites);
+
+	}
+
+	
+	if (enermyName == "scubarsolider2")
+	
+	{
+		
+		return new EnermyScubarSoliderSprite(respawnX, respawnY, 2, bulletSprites);
+
+	}
+
+	
+	if (enermyName == "scubarsolider3")
+	
+	{
+
+		return new EnermyScubarSoliderSprite(respawnX, respawnY, 3, bulletSprites);
+
 	}
 
 	if (enermyName == "mine")

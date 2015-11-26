@@ -1,7 +1,7 @@
 #include"BulletScubarSoliderSprite.h"
 #include"BulletScubarSoliderMovingState.h"
 
-BulletScubarSoliderSprite::BulletScubarSoliderSprite(float x, float y, int index1, float vx)
+BulletScubarSoliderSprite::BulletScubarSoliderSprite(float x, float y, int index1, float vx, int kindEnemy)
  {
 	 pData = new SpriteData();
 
@@ -11,11 +11,11 @@ BulletScubarSoliderSprite::BulletScubarSoliderSprite(float x, float y, int index
 
 	 pData->ppTextureArrays[0]->setAnchorPoint(0.5f, 0.5f);
 
-	 pData->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 8);
+	 pData->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
 
 	 pData->ppTextureArrays[1]->setAnchorPoint(0.5f, 0.5f);
 
-	 pData->ppTextureArrays[2] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 6, 8);
+	 pData->ppTextureArrays[2] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
 
 	 pData->ppTextureArrays[2]->setAnchorPoint(0.5f, 0.5f);
 
@@ -30,7 +30,7 @@ BulletScubarSoliderSprite::BulletScubarSoliderSprite(float x, float y, int index
 
 	 pData->dir = Direction::createLeft();
 
-	 pData->pState = new BulletScubarSoliderMovingState(pData, vx, index1);
+	 pData->pState = new BulletScubarSoliderMovingState(pData, vx, index1, kindEnemy);
 }
 
 BulletScubarSoliderSprite::~BulletScubarSoliderSprite()

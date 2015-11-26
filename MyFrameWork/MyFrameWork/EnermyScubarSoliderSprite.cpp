@@ -6,12 +6,16 @@
 
 
 
-EnermyScubarSoliderSprite::EnermyScubarSoliderSprite(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector)
+EnermyScubarSoliderSprite::EnermyScubarSoliderSprite(int respawnX, int respawnY,int kind, std::vector < BulletSprite*>& bulletSpriteVector)
 	:EnermySprite(bulletSpriteVector)
 {
 	pData = new EnermyScubarSoliderData(bulletSpriteVector);
+
 	pData->x = respawnX;
 	pData->y = respawnY;
+
+	pData->stage = kind; // kind == 1, scubar vi tri 1, 3, kind == 2 scubar vi tri 2
+
 	pData->ppTextureArrays = new TextureArray*[2];
 
 	pData->ppTextureArrays[0] = new TextureArray("Resources\\Sprites", "scubarsolider", "hide", 1, 6);
@@ -23,6 +27,7 @@ EnermyScubarSoliderSprite::EnermyScubarSoliderSprite(int respawnX, int respawnY,
 	pData->dir = Direction::createRight();
 
 	pData->body = RectF(-20.0f / 2, -18.0f, 20.0f, 18.0f);
+
 	pData->pState = new EnermyScubarSoliderHidingState(pData);
 }
 
