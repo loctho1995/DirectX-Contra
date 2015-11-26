@@ -7,7 +7,10 @@ Boss2FinalArmAttackState::Boss2FinalArmAttackState(EnermyData *pData)
 
     float speed = 5.0f;
     float limitFrame = 100 / speed;
-    delayChangeState = 10;
+    frameAttack = 15;
+    delayChangeState = 40;
+
+    joints = ((Boss2FinalData*)pData)->joints;
 
     if (((Boss2FinalData*)pData)->armSide == Boss2FinalData::ArmSide::LEFT)
     {
@@ -48,6 +51,17 @@ Boss2FinalArmAttackState::~Boss2FinalArmAttackState()
 
 void Boss2FinalArmAttackState::onUpdate()
 {
+    if (frameAttack > 0)
+    {
+        frameAttack--;
+
+        if (frameAttack == 0)
+        {
+            float angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY), joints[4]->getPosition());
+            pData->bulletsVector.push_back(new Boss2FinalBullet(joints[4]->getPosition().x, joints[4]->getPosition().y, 1.5f, angle));
+        }
+    }
+
     if (((Boss2FinalData*)pData)->joints[1]->isMoveAround == false)
     {
         ((Boss2FinalData*)pData)->joints[2]->moveAroundSpeed *= 0.99;
@@ -78,4 +92,14 @@ void Boss2FinalArmAttackState::onUpdate()
 
     //this->pData->pState = new Boss2FinalArmWaveState(this->pData);
     //return;
+}
+
+float Boss2FinalArmAttackState::getAngle(D3DXVECTOR2 pos1, D3DXVECTOR2 pos2)
+{
+    D3DXVECTOR2 vec(pos1 - pos2);
+    D3DXVec2Normalize(&vec, &vec);
+
+    float angle = acos(vec.x) * (abs(vec.y) / vec.y);
+
+    return angle;
 }

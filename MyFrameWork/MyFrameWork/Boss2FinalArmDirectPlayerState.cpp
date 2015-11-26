@@ -6,6 +6,8 @@ Boss2FinalArmDirectPlayerState::Boss2FinalArmDirectPlayerState(EnermyData *pData
     this->pData = pData;
     isFirstTime = true;
 
+    timeAttack = 60;
+
     joints = ((Boss2FinalData*)pData)->joints;
     speed = 5.0f;
     frameDelayChangeState = 280;
@@ -29,6 +31,17 @@ Boss2FinalArmDirectPlayerState::~Boss2FinalArmDirectPlayerState()
 
 void Boss2FinalArmDirectPlayerState::onUpdate()
 {  
+    if (timeAttack > 0)
+    {
+        timeAttack--;
+
+        if (timeAttack == 0)
+        {
+            float angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY), joints[4]->getPosition());
+            pData->bulletsVector.push_back(new Boss2FinalBullet(joints[4]->getPosition().x, joints[4]->getPosition().y, 1.0f, angle));
+        }
+    }
+
     frameDelayChangeState--;
 
     if (frameDelayChangeState <= 0)
@@ -124,4 +137,14 @@ void Boss2FinalArmDirectPlayerState::moveAroundDirect(Boss2FinalJoint* joint0, B
             joint->moveAround(joint0->getPosition().x, joint0->getPosition().y, radius, frameMove, speed, Boss2FinalJoint::MoveAroundDirection::Positive);
         }
     }
+}
+
+float Boss2FinalArmDirectPlayerState::getAngle(D3DXVECTOR2 pos1, D3DXVECTOR2 pos2)
+{
+    D3DXVECTOR2 vec(pos1 - pos2);
+    D3DXVec2Normalize(&vec, &vec);
+
+    float angle = acos(vec.x) * (abs(vec.y) / vec.y);
+
+    return angle;
 }

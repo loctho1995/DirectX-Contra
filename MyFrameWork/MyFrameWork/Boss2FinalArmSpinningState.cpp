@@ -1,9 +1,10 @@
 #include "Boss2FinalArmSpinningState.h"
 
 
-Boss2FinalArmSpinningState::Boss2FinalArmSpinningState(EnermyData *pData)
+Boss2FinalArmSpinningState::Boss2FinalArmSpinningState(EnermyData *pData) : FRAME_ATTACK(70)
 {
     this->pData = pData;
+    frameAttack = FRAME_ATTACK;
 
     float x = ((Boss2FinalData*)pData)->joints[0]->getBody().x + ((Boss2FinalData*)pData)->joints[0]->getBody().width / 2;
     float y = ((Boss2FinalData*)pData)->joints[0]->getBody().y + ((Boss2FinalData*)pData)->joints[0]->getBody().height / 2;
@@ -23,7 +24,7 @@ Boss2FinalArmSpinningState::Boss2FinalArmSpinningState(EnermyData *pData)
             totalFrame, Boss2FinalJoint::MoveAroundDirection::Negative);
     }
    
-    
+    joints = ((Boss2FinalData*)pData)->joints;
     //((Boss2FinalData*)pData)->joints[2]->moveFollow(((Boss2FinalData*)pData)->joints[1]);
     //((Boss2FinalData*)pData)->joints[3]->moveFollow(((Boss2FinalData*)pData)->joints[2]);
     //((Boss2FinalData*)pData)->joints[4]->moveFollow(((Boss2FinalData*)pData)->joints[3]);
@@ -52,6 +53,17 @@ Boss2FinalArmSpinningState::~Boss2FinalArmSpinningState()
 
 void Boss2FinalArmSpinningState::onUpdate()
 {
+    if (frameAttack >= 0)
+    {
+        frameAttack--;
+    }
+    else
+    {
+        float angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY) ,joints[4]->getPosition());
+        pData->bulletsVector.push_back(new Boss2FinalBullet(joints[4]->getPosition().x, joints[4]->getPosition().y, 1.0f, angle));
+        frameAttack = FRAME_ATTACK;
+    }
+
     if (!((Boss2FinalData*)pData)->joints[1]->isMoveAround)
     {
         ((Boss2FinalData*)pData)->joints[4]->setMoveAroundSpeed(((Boss2FinalData*)pData)->joints[4]->moveAroundSpeed * 0.99f);

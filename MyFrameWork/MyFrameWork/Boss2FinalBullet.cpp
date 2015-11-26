@@ -1,17 +1,20 @@
 #include "Boss2FinalBullet.h"
 
 
-Boss2FinalBullet::Boss2FinalBullet(float x, float y, float vx, float vy, float speed)
+Boss2FinalBullet::Boss2FinalBullet(float x, float y, float speed, float angle)
 {
-    pData = new SpriteData();
-    pData->isHittable = false;
+    pData = new EnermyData();
+    pData->isHittable = false;    
     pData->isDesTroyed = false;
+    pData->x = x;
+    pData->y = y;
     pData->ppTextureArrays = new TextureArray *[1];
     pData->iCurrentArr = 0;
     pData->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\Bullets", "boss2finalbullet", "", 4, 8);
     pData->ppTextureArrays[0]->setAnchorPoint(0.5f, 0.5f);
-    pData->vx = vx;
-    pData->vy = vy;
+    pData->body = RectF(-8, -8, 16, 16);
+
+    pData->pState = new BulletMovingState(pData, speed, angle, 0);
 }
 
 Boss2FinalBullet::~Boss2FinalBullet()
@@ -20,8 +23,7 @@ Boss2FinalBullet::~Boss2FinalBullet()
 
 void Boss2FinalBullet::update()
 {
-    pData->x += pData->vx;
-    pData->y += pData->vy;
+    this->pData->pState->onUpdate();
 }
 
 void Boss2FinalBullet::draw(Camera *cam)

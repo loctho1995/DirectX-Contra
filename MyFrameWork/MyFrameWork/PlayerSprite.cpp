@@ -11,7 +11,7 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY, Direction movedir)
 
 	pData->x  = respawnX;
 
-	pData->y  = respawnY;
+	pData->y  = 300;
 
 	pData ->movedir = movedir;
 

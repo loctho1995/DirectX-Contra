@@ -48,9 +48,9 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("capsuleweaponl", Direction::createLeft());
 
 	addAppearDirection("soldierr",Direction::createLeft());
-    addAppearDirection("boss2finalarmleft", Direction::createRight());
-    addAppearDirection("boss2finalarmright", Direction::createRight());
-    addAppearDirection("boss2finalhead", Direction::createRight());
+    addAppearDirection("boss2finalarmleft", Direction::createUp());
+    addAppearDirection("boss2finalarmright", Direction::createUp());
+    addAppearDirection("boss2finalhead", Direction::createUp());
 	addAppearDirection("soldierr", Direction::createLeft());
 
 	addAppearDirection("blazer", Direction::createUp());

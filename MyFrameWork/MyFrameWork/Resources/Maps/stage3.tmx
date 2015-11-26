@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="112">
- <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16" tilecount="121">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="122">
+ <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16">
   <image source="Tileset Contra 3.png" width="176" height="176"/>
   <tile id="106">
    <animation>
@@ -41,6 +41,9 @@
   <object id="109" name="gunrotating3" type="enemy" x="36" y="642" width="32" height="32"/>
   <object id="110" name="scubarsolider" type="enemy" x="153" y="1568" width="20" height="18"/>
   <object id="111" name="scubarsolider" type="enemy" x="76" y="984" width="20" height="18"/>
+  <object id="117" name="boss2finalarmright" type="enemy" x="176.833" y="69.3333" width="8.33333" height="7.33333"/>
+  <object id="120" name="boss2finalarmleft" type="enemy" x="70.3333" y="69.5833" width="8.33333" height="7.33333"/>
+  <object id="121" name="boss2finalhead" type="enemy" x="124.083" y="-1.66666" width="8.33333" height="7.33333"/>
  </objectgroup>
  <objectgroup name="CollisionRect">
   <object id="2" type="nonthroughable" x="1.33333" y="2116.67" width="254.667" height="8.66667"/>

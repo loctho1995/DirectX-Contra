@@ -1,9 +1,8 @@
 #include "Boss2FinalData.h"
 
-Boss2FinalData::Boss2FinalData(std::vector < BulletSprite* >& bulletsVector)
+Boss2FinalData::Boss2FinalData(std::vector < BulletSprite* >& bulletsVector) : EnermyData(bulletsVector)
 {
-    this->bulletsVector = bulletsVector;
-    this->botName = "boss2final";
+    botName = "boss2final";
     armLength = 16.0f * 5;
     isDesTroyed = false;
     isHittable = true;
