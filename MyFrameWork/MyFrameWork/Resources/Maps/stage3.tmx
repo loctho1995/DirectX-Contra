@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="122">
  <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16">
-  <image source="Tileset Contra 3.png" width="176" height="176"/>
+  <image source="Tileset Contra 3.png" width="176" height="192"/>
   <tile id="106">
    <animation>
     <frame tileid="103" duration="100"/>
@@ -17,7 +17,7 @@
  </tileset>
  <layer name="BackGroundLayer" width="16" height="135">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <objectgroup name="ObjectLayer">
@@ -26,24 +26,28 @@
   <object id="85" name="blazer" type="enemy" x="178" y="1321" width="14" height="14"/>
   <object id="90" name="dynamicbridge" type="object" x="72" y="1047.33" width="32" height="12"/>
   <object id="91" name="dynamicbridge" type="object" x="84" y="1174" width="32" height="12"/>
-  <object id="92" name="respawnposition" type="&quot;&quot;" x="64" y="2064" width="18" height="27"/>
+  <object id="92" name="respawnposition" type="&quot;&quot;" x="64" y="1600" width="18" height="27"/>
   <object id="94" name="dynamicbridge" type="object" x="92" y="584.667" width="32" height="12"/>
   <object id="98" name="failingstone" type="enemy" x="34" y="1875" width="27" height="27"/>
   <object id="99" name="failingstone" type="enemy" x="166" y="1780" width="27" height="27"/>
   <object id="100" name="failingstone" type="enemy" x="194" y="1810" width="27" height="27"/>
   <object id="101" name="failingstone" type="enemy" x="65" y="1745" width="27" height="27"/>
   <object id="102" name="failingstone" type="enemy" x="129" y="1681" width="27" height="27"/>
-  <object id="104" name="gunrotating3" type="enemy" x="221" y="1361" width="32" height="32"/>
-  <object id="105" name="gunrotating3" type="enemy" x="3" y="1104" width="32" height="32"/>
+  <object id="104" name="gunrotating3" type="enemy" x="223" y="1361" width="32" height="32"/>
+  <object id="105" name="gunrotating3" type="enemy" x="0" y="1104" width="32" height="32"/>
   <object id="106" name="gunrotating3" type="enemy" x="1" y="993" width="32" height="32"/>
   <object id="107" name="gunrotating3" type="enemy" x="222" y="787" width="32" height="32"/>
-  <object id="108" name="gunrotating3" type="enemy" x="1" y="733" width="32" height="32"/>
+  <object id="108" name="gunrotating3" type="enemy" x="0" y="733" width="32" height="32"/>
   <object id="109" name="gunrotating3" type="enemy" x="36" y="642" width="32" height="32"/>
-  <object id="110" name="scubarsolider" type="enemy" x="153" y="1568" width="20" height="18"/>
-  <object id="111" name="scubarsolider" type="enemy" x="76" y="984" width="20" height="18"/>
   <object id="117" name="boss2finalarmright" type="enemy" x="176.833" y="69.3333" width="8.33333" height="7.33333"/>
   <object id="120" name="boss2finalarmleft" type="enemy" x="70.3333" y="69.5833" width="8.33333" height="7.33333"/>
   <object id="121" name="boss2finalhead" type="enemy" x="124.083" y="-1.66666" width="8.33333" height="7.33333"/>
+  <object id="110" name="scubarsolider1" type="enemy" x="150" y="1557" width="20" height="18"/>
+  <object id="111" name="scubarsolider2" type="enemy" x="69" y="972" width="20" height="18"/>
+  <object id="112" name="cannon3" type="enemy" x="208" y="656" width="32" height="32"/>
+  <object id="114" name="capsuleweapon3b" type="object" x="64" y="1451" width="24" height="15"/>
+  <object id="115" name="capsuleweapon3r" type="object" x="176" y="1451" width="24" height="15"/>
+  <object id="116" name="scubarsolider3" type="enemy" x="214" y="856"/>
  </objectgroup>
  <objectgroup name="CollisionRect">
   <object id="2" type="nonthroughable" x="1.33333" y="2116.67" width="254.667" height="8.66667"/>
