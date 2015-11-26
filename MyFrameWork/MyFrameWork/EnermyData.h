@@ -25,4 +25,6 @@ public :
 	int score;
 	Direction appearDir;
 	int stage; // add by Hang
+	float respawnX;
+	float respawnY;
 };

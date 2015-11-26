@@ -22,7 +22,7 @@ EnermyGunBoss1Sprite :: EnermyGunBoss1Sprite( int respawnX, int respawnY, std::v
 
 	pData->ppTextureArrays[ 1 ] -> setAnchorPoint(0.5f, 1.0f );
 
-	pData ->ppTextureArrays[2] = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 6, 8);
+	pData ->ppTextureArrays[2] = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 3, 8);
 
 	pData->ppTextureArrays[ 2 ] -> setAnchorPoint(0.5f, 1.0f );
 

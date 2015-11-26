@@ -18,7 +18,7 @@ EnermyFinalBoss1Sprite:: EnermyFinalBoss1Sprite(int respawnX, int respawnY)
 
 	pData->ppTextureArrays[ 0 ] -> setAnchorPoint(0.5f, 0.5f );
 
-	pData ->ppTextureArrays[ 1 ] = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 6, 8);
+	pData ->ppTextureArrays[ 1 ] = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 3, 8);
 
 	pData->ppTextureArrays[ 1 ] -> setAnchorPoint(0.5f, 0.5f );
 

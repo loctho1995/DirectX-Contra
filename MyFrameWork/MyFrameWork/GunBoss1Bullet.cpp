@@ -14,7 +14,7 @@ GunBoss1Bullet :: GunBoss1Bullet(float x, float y)
 
 	pData -> ppTextureArrays[0] ->setAnchorPoint( 0.5f,0.5f );
 
-	pData ->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 6, 8);
+	pData ->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 3, 8);
 
 	pData -> ppTextureArrays[1] ->setAnchorPoint( 0.5f,0.5f );
 

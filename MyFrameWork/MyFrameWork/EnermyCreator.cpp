@@ -12,6 +12,7 @@
 #include "EnemyBlazerSprite.h"
 #include "EnermyFailingStone.h"
 #include"EnermyScubarSoliderSprite.h"
+#include "EnemyMineSprite.h"
 
 EnermyCreator* EnermyCreator::instance = nullptr;
 
@@ -68,6 +69,8 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("scubarsolider", Direction::createUp());
 
 	addAppearDirection("finalboss5", Direction::createRight());
+	addAppearDirection("mine", Direction::createNone());
+	addAppearDirection("bazoka", Direction::createRight());
 }
 
 void EnermyCreator::addAppearDirection(std::string name, Direction dir)
@@ -172,6 +175,15 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 		return new EnermyScubarSoliderSprite(respawnX, respawnY, bulletSprites);
 	}
 
+	if (enermyName == "mine")
+	{
+		return new EnemyMineSprite(respawnX, respawnY);
+	}
+
+	if (enermyName == "bazoka")
+	{
+		return new EnemyBazokaSprite(respawnX, respawnY, bulletSprites);
+	}
 
 	return nullptr;
 }
