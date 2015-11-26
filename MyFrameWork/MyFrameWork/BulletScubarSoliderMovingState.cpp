@@ -199,7 +199,7 @@ void BulletScubarSoliderMovingState::onCollision(CollisionRectF cRect)
 void BulletScubarSoliderMovingState::onDead(int index)
 {
 
-	//pData->body.width *= 4; // thay doi body
-	//pData->body.height *= 4;
+	pData->body.width *= 4; // thay doi body de khoang no Player cham cung chet
+	pData->body.height *= 4;
 	transition(new BulletScubarSoliderExploringState(pData, index));
 }

@@ -15,7 +15,7 @@ BulletScubarSoliderSprite::BulletScubarSoliderSprite(float x, float y, int index
 
 	 pData->ppTextureArrays[1]->setAnchorPoint(0.5f, 0.5f);
 
-	 pData->ppTextureArrays[2] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
+	 pData->ppTextureArrays[2] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 3, 8);
 
 	 pData->ppTextureArrays[2]->setAnchorPoint(0.5f, 0.5f);
 
