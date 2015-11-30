@@ -373,7 +373,7 @@ void Map ::addEToMap ( Camera* cam )
 					if( objectSprite != nullptr )
 					objectMap[returnList[i] ->id] =  objectSprite;
 				}
-				return;
+				continue;
 			}
 			if( appearDir.isRight())
 			{

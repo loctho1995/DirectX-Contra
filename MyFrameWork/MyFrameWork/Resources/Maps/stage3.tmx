@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="116">
- <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16" tilecount="154">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="118">
+ <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16">
   <image source="Tileset Contra 3.png" width="176" height="224"/>
   <tile id="95">
    <animation>
@@ -141,13 +141,12 @@
    eJzVmGdvFDEQhjeg0CQQIJBA9N67AhJVwFGOkNAJEMoSAiR0ctR/z7vCI0Yjj2fsvRPw4ZHv9jye8TR7b6SqqpF/iCPs81KwjH0/6pBfB4bD5zVgbfi8AKx36D4NFoKtYBvYDnaAReCMYQPpXgkOgIPgEDgMVhs27ATzwCqwGGwAG8EmsBksCWsMgV2K7PIgewLsBnvAXrAPbAlrrADz2RoPwGUxXgDH2PrHwX4wEZn/AkyJsZE/C84F+fNBXs6bCutMiLGR74JrYBRcF/r5qOnvBrkuk4/pv9mSW+B2i/ExeNJi/N/tt9a37O+X/lK/DHr/Xj+U+mdQ8ffa01Z/27z42/nfNq6DsP8kOFX97t2XDDvlenfA3erP2fEUPDP0c30WUr/UZyHtKb2nkF9K5cmOty3R4jIHPjuYBi/F2MmQ/wg+sfEVeO2U5fpL9yH1y7GR7yXW1/b/BXwLOhr5i5F5fKT5X5kcp3n+PaKX22n5qhfZH9lLv6f8GPudxyu2vvSjfF4L+yYTfuR+oP3T85z4czus+Gh+lXGaCbZ7+29s3dmEHZ76SvnfU18xP0i7nyuy0g+pPODzrfzi+R7bt5Vf1r5lnCm/LD/MKfLeeqf5ml+0fJLzU3laK3ZwP1r9YyasofnR0+9nKz1/PP2ex1XqqQ1ZrV77Rdvz01snGhTf3L5NyPh6+zbvn7JvdYS/e+FZrA5kfLV88PbXVH+qE3ZMhz1Yfqd90Uh2l8Y/1d+t8ziWfznnMc8f0lsz23gfS+XPpCNuqfypq3Qd1wk7vHWq2SHXuwLGwH1wj43Ns6uR+XK9N5V+134XmZ9zb/acz1beST+U3Nt5PDQ/WvaQHal7Tur+RXZY8la/sO5L1qjlpeyD2qjlZc57EI+HtV+tfqw61UZrffKD7DMyf6x7G51T8rv23kX+rYWf5PfSvh3r343+9+BDBnK/P8DPDHLj3e/8t+rPW4ca4+BGYl3LvofgUeL3VP3GzmWZx9664Xkrz0t+P5b79dQvP+et/cbOX8/7ihYHbz6RXR4/e+3osPW9+UR2kP9z9ZNeumeW1pe8f1l5rp3T1Ac1/0o7YueK938HTz7m+rMf50tp/Xr0a+dQW/us/Mi9f5TGqfTcT73/eeygeFjvKZ7/czz9S7OD339KfODtO4OKf0n/4uMvGRYPRg==
   </data>
  </layer>
- <objectgroup name="ObjectLayer" visible="0">
+ <objectgroup name="ObjectLayer">
   <object id="82" name="cameratranslateposition" type="&quot;&quot;" x="0" y="125" width="257" height="15"/>
   <object id="84" name="blazer" type="enemy" x="64" y="1321" width="14" height="14"/>
   <object id="85" name="blazer" type="enemy" x="178" y="1321" width="14" height="14"/>
   <object id="90" name="dynamicbridge" type="object" x="72" y="1047.33" width="32" height="12"/>
   <object id="91" name="dynamicbridge" type="object" x="84" y="1174" width="32" height="12"/>
-  <object id="92" name="respawnposition" type="&quot;&quot;" x="64" y="1600" width="18" height="27"/>
   <object id="94" name="dynamicbridge" type="object" x="92" y="584.667" width="32" height="12"/>
   <object id="98" name="failingstone" type="enemy" x="34" y="1875" width="27" height="27"/>
   <object id="99" name="failingstone" type="enemy" x="166" y="1780" width="27" height="27"/>
@@ -165,6 +164,7 @@
   <object id="112" name="cannon3" type="enemy" x="208" y="656" width="32" height="32"/>
   <object id="114" name="capsuleweapon3b" type="object" x="64" y="1451" width="24" height="15"/>
   <object id="115" name="capsuleweapon3r" type="object" x="176" y="1451" width="24" height="15"/>
+  <object id="116" name="respawnposition" type="&quot;&quot;" x="55" y="2065.5" width="18" height="27"/>
  </objectgroup>
  <objectgroup name="CollisionRect">
   <object id="2" type="nonthroughable" x="1.33333" y="2116.67" width="254.667" height="8.66667"/>
