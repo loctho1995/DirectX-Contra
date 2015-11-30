@@ -19,6 +19,13 @@ UIComponents::UIComponents()
 	highScore = 0 ;//highScore; load through file
 	currentStage = 3;
 	lifes = 5;
+	configKeyBoard[LEFT] = defaultKeyBoard[LEFT] = VK_LEFT;
+	configKeyBoard[RIGHT] = defaultKeyBoard[RIGHT] = VK_RIGHT;
+	configKeyBoard[UP] = defaultKeyBoard[RIGHT] = VK_UP;
+	configKeyBoard[DOWN] = defaultKeyBoard[DOWN] = VK_DOWN;
+	configKeyBoard[FIRE] = defaultKeyBoard[FIRE] = 0x46;
+	configKeyBoard[JUMP] = defaultKeyBoard[JUMP] = VK_SPACE;
+	configKeyBoard[SELECT] = defaultKeyBoard[SELECT] = VK_RETURN;
 }
 
 
@@ -72,3 +79,19 @@ void UIComponents:: gameOverReset()
 	highScore = 0 ;//highScore; load through file
 	lifes = 3;
 }
+
+char UIComponents :: getKey(int index)
+{
+	return configKeyBoard[index];
+}
+
+void UIComponents :: setKey(int index, char keyCode)
+{
+	configKeyBoard[index] = keyCode;
+}
+
+void UIComponents :: setDefaultKeyBoard()
+{
+	memccpy(configKeyBoard, defaultKeyBoard, NULL, sizeof(configKeyBoard));
+}
+

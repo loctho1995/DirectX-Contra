@@ -720,7 +720,7 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 			{
 				if( bulletSprites[i] ->getBody().checkCollision( returnLists[j].rect) )
 				{
-					bulletSprites[i] -> onCollision( returnList[j] );
+					bulletSprites[i] -> onCollision( returnLists[j] );
 				}
 			}
 		}

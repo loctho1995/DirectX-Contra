@@ -28,7 +28,7 @@ void PlayScene::handleInput()
     while (!KeyBoard::getInstace()->isEmpty())
     {
         KeyEvent e = KeyBoard::getInstace()->readKey();
-		if( e.getCode() == VK_RETURN)
+		if( e.getCode() == UIComponents::getInstance() ->getKey(UIComponents::SELECT) )
 		{
 			if (e.isRelease())
 			{
@@ -52,11 +52,9 @@ void PlayScene::handleInput()
 		}
 		else if( !isPause)
 		{
-			switch (e.getCode())
+			char keyCode = e.getCode();
+			if( keyCode == UIComponents::getInstance() ->getKey(UIComponents::RIGHT) )
 			{
-
-
-			case VK_RIGHT:
 				if (e.isPress())
 				{
 					pPlayer->getState()->onMovePressed(Direction::createRight());
@@ -65,8 +63,9 @@ void PlayScene::handleInput()
 				{
 					pPlayer->getState()->onMoveReleased(Direction::createRight());
 				}
-				break;
-			case VK_LEFT:
+			}
+			else if ( keyCode == UIComponents::getInstance() -> getKey(UIComponents::LEFT))
+			{
 				if (e.isPress())
 				{
 					pPlayer->getState()->onMovePressed(Direction::createLeft());
@@ -75,8 +74,9 @@ void PlayScene::handleInput()
 				{
 					pPlayer->getState()->onMoveReleased(Direction::createLeft());
 				}
-				break;
-			case VK_UP:
+			}
+			else if ( keyCode == UIComponents::getInstance() -> getKey(UIComponents::UP ))
+			{
 				if (e.isPress())
 				{
 					pPlayer->getState()->onVeticalDirectionPressed(Direction::createUp());
@@ -85,8 +85,9 @@ void PlayScene::handleInput()
 				{
 					pPlayer->getState()->onVeticalDirectionReleased();
 				}
-				break;
-			case VK_DOWN:
+			}
+			else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::DOWN ))
+			{
 				if (e.isPress())
 				{
 					pPlayer->getState()->onVeticalDirectionPressed(Direction::createDown());
@@ -95,8 +96,9 @@ void PlayScene::handleInput()
 				{
 					pPlayer->getState()->onVeticalDirectionReleased();
 				}
-				break;
-			case VK_SPACE:
+			}
+			else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::JUMP ))
+			{
 				if (e.isPress())
 				{
 					pPlayer->getState()->onJumpPressed();
@@ -105,14 +107,14 @@ void PlayScene::handleInput()
 				{
 					pPlayer->getState()->onJumpRelease();
 				}
-				break;
-			case 0x46: // F key
+			}
+			else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::FIRE ))
+			{
 				if (e.isPress())
 				{
 					pPlayer->getState()->onFirePressed();
 				}
-				break;
-			}
+			}		
         }
     }
 
