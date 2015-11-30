@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="116">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="135" tilewidth="16" tileheight="16" nextobjectid="118">
  <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16">
   <image source="Tileset Contra 3.png" width="176" height="224"/>
   <tile id="95">
@@ -147,7 +147,6 @@
   <object id="85" name="blazer" type="enemy" x="178" y="1321" width="14" height="14"/>
   <object id="90" name="dynamicbridge" type="object" x="72" y="1047.33" width="32" height="12"/>
   <object id="91" name="dynamicbridge" type="object" x="84" y="1174" width="32" height="12"/>
-  <object id="92" name="respawnposition" type="&quot;&quot;" x="64" y="1600" width="18" height="27"/>
   <object id="94" name="dynamicbridge" type="object" x="92" y="584.667" width="32" height="12"/>
   <object id="98" name="failingstone" type="enemy" x="34" y="1875" width="27" height="27"/>
   <object id="99" name="failingstone" type="enemy" x="166" y="1780" width="27" height="27"/>
