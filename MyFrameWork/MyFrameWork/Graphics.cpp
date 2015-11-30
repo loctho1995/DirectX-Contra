@@ -117,24 +117,14 @@ void Graphics :: drawTexture ( LPDIRECT3DTEXTURE9 pTexture, int width, int heigh
 {
 	RectF rect((float)x - (float)anchorPoint.x * width, (float)y - (float)anchorPoint .y * height, (float)width, (float)height);
 	rect.clip(port);
-
+	if(rect.width <= 0 || rect.height <= 0)
+		return;
 	RECT r;
-	if( rect.height == 0|| rect.width == 0 )
-	{
-		r.left = 0;
-		r.bottom = 0;
-		r.right = 0;
-		r.top = 0;
-	}
-	else
-	{
-		r.left = rect.x - (x - (float)anchorPoint.x * width );
-		r.top = rect. y - (y - (float)anchorPoint .y * height);
-		r.bottom = r.top + rect.height;
-		r.right = r.left + rect.width;
-	}
-	
 
+	r.left = rect.x - (x - (float)anchorPoint.x * width );
+	r.top = rect. y - (y - (float)anchorPoint .y * height);
+	r.bottom = r.top + rect.height;
+	r.right = r.left + rect.width;
 
 	D3DXVECTOR3 position(x - anchorPoint.x * width + r.left, y  - anchorPoint.y * height  + r.top, 1.0f);
 	D3DXMATRIX matrix;
@@ -158,8 +148,6 @@ void Graphics :: drawTexture ( LPDIRECT3DTEXTURE9 pTexture, int width, int heigh
 
 void Graphics :: drawTexture ( LPDIRECT3DTEXTURE9 pTexture, int width, int height, RectF sourceRect, int x, int y, float xRatio , float yRatio , D3DCOLOR color  ) const
 {
-	
-
 	RECT r;
 
 	r.left = sourceRect.x;
@@ -188,25 +176,30 @@ void Graphics :: drawTextureFlipX ( LPDIRECT3DTEXTURE9 pTexture, int width, int 
 {
 	RectF rect((float)x - (float)anchorPoint.x * width, (float)y - (float)anchorPoint .y * height, (float)width, (float)height);
 	rect.clip(port);
-
+	if(rect.width <= 0 || rect.height <= 0)
+		return;
 	RECT r;
 	RECT temp;
-	if( rect.height == 0|| rect.width == 0 )
+	/*if( rect.height == 0|| rect.width == 0 )
 	{
 		r.left = 0;
 		r.bottom = 0;
 		r.right = 0;
 		r.top = 0;
 	}
-	else
+	else*/
 	{
-		r.left = (rect.x - (x - (float)anchorPoint.x * width ) );
+		r.left =  (rect.x - (x - (float)anchorPoint.x * width ) );
 		r.top =  (rect. y - (y - (float)anchorPoint .y * height) );
 		
 		temp = r;
 		if( r. left != 0 )
 		{
 			r.left = 0;
+		}
+		else
+		{
+			r.left = width - rect.width;
 		}
 		r.bottom = r.top + rect.height;
 		r.right = r.left + rect.width;
