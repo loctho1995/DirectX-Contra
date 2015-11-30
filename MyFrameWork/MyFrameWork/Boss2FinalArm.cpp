@@ -4,6 +4,7 @@
 Boss2FinalArm::Boss2FinalArm(float x, float y, std::vector<BulletSprite*>& bulletSprites, Boss2FinalData::ArmSide armSide)
 {
     this->pData = new Boss2FinalData(bulletSprites);
+    this->pData->botName = "boss2finaldata";
     this->pData->x = x;
     this->pData->y = y;
     this->pData->body = RectF(-8, -8, 16, 16);    

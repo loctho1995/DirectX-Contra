@@ -4,7 +4,7 @@
 Boss2FinalHead::Boss2FinalHead(float x, float y, std::vector<BulletSprite*>& bulletSprite)
 {
     this->pData = new Boss2FinalData(bulletSprite);
-    this->pData->botName = "boss2finalhead";
+    this->pData->botName = "finalboss2head";
     this->pData->x = x;
     this->pData->y = y;
     this->pData->isDesTroyed = false;
@@ -31,6 +31,5 @@ void Boss2FinalHead::update()
 
 void Boss2FinalHead::draw(Camera *cam)
 {
-    std::cout << "x: " << pData->x << "y: " << pData->y;
     pData->ppTextureArrays[pData->iCurrentArr]->draw(pData->x, pData->y, cam);
 }

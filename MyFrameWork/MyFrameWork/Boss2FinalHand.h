@@ -1,6 +1,7 @@
 #pragma once
 #include "Sprite.h"
 #include "Boss2FinalJoint.h"
+#include "Boss2FinalData.h"
 
 class Boss2FinalHand : public Boss2FinalJoint
 {
