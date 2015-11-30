@@ -17,6 +17,7 @@ public:
     {
         SHUT,
         OPEN,
+        DIE,
         COUNT
     };
 

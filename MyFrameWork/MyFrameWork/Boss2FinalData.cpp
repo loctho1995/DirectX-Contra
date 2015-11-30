@@ -6,8 +6,7 @@ Boss2FinalData::Boss2FinalData(std::vector < BulletSprite* >& bulletsVector) : E
     armLength = 16.0f * 5;
     isDesTroyed = false;
     isHittable = true;
-    HP = 1000;
-    isHittable = true;
+    HP = 10;
     isThrougable = true;
     dir = Direction::createRight();
     //appearDir = Direction::createRight();

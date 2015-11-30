@@ -1,8 +1,10 @@
 #pragma once
 #include "Boss2FinalData.h"
 #include "EnermySprite.h"
-#include "Boss2FinalHeadState.h"
+#include "Boss2FinalHeadShuttingState.h"
 #include "BulletSprite.h"
+#include "Boss2Final.h"
+#include "Boss2FinalExplosionSprite.h"
 
 class Boss2FinalHead : public EnermySprite
 {
@@ -12,5 +14,9 @@ public:
 
     void update();
     void draw(Camera *cam);
+    void die();
+
+private:
+    Boss2FinalExplosionSprite *explosion;
 };
 

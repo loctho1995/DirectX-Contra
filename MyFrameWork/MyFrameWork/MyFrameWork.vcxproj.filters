@@ -136,7 +136,6 @@
     <ClCompile Include="Boss2FinalData.cpp" />
     <ClCompile Include="Boss2FinalHand.cpp" />
     <ClCompile Include="Boss2FinalHead.cpp" />
-    <ClCompile Include="Boss2FinalHeadState.cpp" />
     <ClCompile Include="Boss2FinalJoint.cpp" />
     <ClCompile Include="EnemyMineSprite.cpp" />
     <ClCompile Include="EnemyMineFallingState.cpp" />
@@ -145,6 +144,10 @@
     <ClCompile Include="EnemyBazokaFiringState.cpp" />
     <ClCompile Include="EnemyBazokaStandingState.cpp" />
     <ClCompile Include="EnemyBazokaExploringState.cpp" />
+    <ClCompile Include="Boss2FinalHeadOpeningState.cpp" />
+    <ClCompile Include="Boss2FinalHeadShuttingState.cpp" />
+    <ClCompile Include="Boss2FinalHeadAttackingState.cpp" />
+    <ClCompile Include="Boss2FinalExplosionSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -305,7 +308,6 @@
     <ClInclude Include="Boss2FinalData.h" />
     <ClInclude Include="Boss2FinalHand.h" />
     <ClInclude Include="Boss2FinalHead.h" />
-    <ClInclude Include="Boss2FinalHeadState.h" />
     <ClInclude Include="EnemyMineSprite.h" />
     <ClInclude Include="EnemyMineFallingState.h" />
     <ClInclude Include="EnemyMineExploringState.h" />
@@ -313,6 +315,10 @@
     <ClInclude Include="EnemyBazokaFiringState.h" />
     <ClInclude Include="EnemyBazokaStandingState.h" />
     <ClInclude Include="EnemyBazokaExploringState.h" />
+    <ClInclude Include="Boss2FinalHeadOpeningState.h" />
+    <ClInclude Include="Boss2FinalHeadShuttingState.h" />
+    <ClInclude Include="Boss2FinalHeadAttackingState.h" />
+    <ClInclude Include="Boss2FinalExplosionSprite.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

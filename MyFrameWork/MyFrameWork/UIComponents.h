@@ -1,9 +1,20 @@
 #pragma once
 #include "Sound.h"
-
+#include "Windows.h"
 class UIComponents
 {
 public:
+	enum
+	{
+		LEFT,
+		RIGHT,
+		UP,
+		DOWN,
+		FIRE,
+		JUMP,
+		SELECT,
+		COUNT
+	} KEY;
 	~UIComponents();
 	static UIComponents* getInstance();
 	int getLifes();
@@ -15,13 +26,18 @@ public:
 	void addScore( int val );
 	void setStage(int val);
 	void gameOverReset();
+	char getKey(int index);
+	void setKey(int index, char keyCode);
+	void setDefaultKeyBoard();
 private:
 	static UIComponents* instance;
 	UIComponents();
+	const int POINT_PER_LIFE;
 	int score;
 	int highScore;
 	int currentStage;
 	int lifes;
-	const int POINT_PER_LIFE;
+	char configKeyBoard[COUNT];
+	char defaultKeyBoard[COUNT];
 };
 

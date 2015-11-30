@@ -7,7 +7,7 @@ Boss2FinalArmAttackState::Boss2FinalArmAttackState(EnermyData *pData)
 
     float speed = 5.0f;
     float limitFrame = 100 / speed;
-    frameAttack = 15;
+    frameAttack = 10;
     delayChangeState = 40;
 
     joints = ((Boss2FinalData*)pData)->joints;

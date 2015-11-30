@@ -4,11 +4,15 @@
 Boss2FinalArm::Boss2FinalArm(float x, float y, std::vector<BulletSprite*>& bulletSprites, Boss2FinalData::ArmSide armSide)
 {
     this->pData = new Boss2FinalData(bulletSprites);
-    this->pData->botName = "boss2finaldata";
+    this->pData->botName = "boss2arm";
+    this->pData->HP = 10;
+    this->pData->score = 2000;
     this->pData->x = x;
     this->pData->y = y;
     this->pData->body = RectF(-8, -8, 16, 16);    
     this->pData->isDesTroyed = false;
+
+    explosion = new Boss2FinalExplosionSprite(0, 0);
 
     ((Boss2FinalData*)this->pData)->armSide = armSide;
     
@@ -22,36 +26,59 @@ Boss2FinalArm::Boss2FinalArm(float x, float y, std::vector<BulletSprite*>& bulle
     this->pData->pState = new Boss2FinalArmStartState(this->pData);
 }
 
-
 Boss2FinalArm::~Boss2FinalArm()
 {
-
+    delete explosion;
 }
-
-//void Boss2FinalArm::setPlayerX(float x)
-//{
-//    ((Boss2FinalData*)pData)->playerX = x;
-//}
-//
-//void Boss2FinalArm::setPlayerY(float y)
-//{
-//    ((Boss2FinalData*)pData)->playerY = y;
-//}
 
 RectF Boss2FinalArm::getBody()
 {
     return ((Boss2FinalData*)pData)->joints[4]->getBody();
 }
 
+void Boss2FinalArm::die()
+{
+    explosion->setPosition(((Boss2FinalData*)pData)->joints[4]->getPosition());
+}
+
 void Boss2FinalArm::update()
 {
-    this->pData->pState->onUpdate();
+    if (pData->isDead)
+    {
+        explosion->update();
+
+        if (explosion->isFinishAnimation())
+        {
+            if (((Boss2FinalData*)pData)->armSide == Boss2FinalData::ArmSide::LEFT)
+            {
+                Boss2Final::getInstance()->setLeftArmState(true);
+            }
+            else
+            {
+                Boss2Final::getInstance()->setRightArmState(true);
+            }
+            
+            this->pData->isDesTroyed = true;
+            return;
+        }
+    }
+    else
+    {
+        this->pData->pState->onUpdate();
+    }
 }
 
 void Boss2FinalArm::draw(Camera *cam)
 {
-    for (size_t i = 0; i < 5; i++)
+    if (pData->isDead)
     {
-        ((Boss2FinalData*)pData)->joints[i]->draw(cam);
+        explosion->draw(cam);
+    }
+    else
+    {
+        for (size_t i = 0; i < 5; i++)
+        {
+            ((Boss2FinalData*)pData)->joints[i]->draw(cam);
+        }
     }
 }

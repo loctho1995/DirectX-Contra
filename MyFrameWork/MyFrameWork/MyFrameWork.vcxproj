@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -94,9 +94,12 @@
     <ClCompile Include="Boss2FinalArmWaveState.cpp" />
     <ClCompile Include="Boss2FinalBullet.cpp" />
     <ClCompile Include="Boss2FinalData.cpp" />
+    <ClCompile Include="Boss2FinalExplosionSprite.cpp" />
     <ClCompile Include="Boss2FinalHand.cpp" />
     <ClCompile Include="Boss2FinalHead.cpp" />
-    <ClCompile Include="Boss2FinalHeadState.cpp" />
+    <ClCompile Include="Boss2FinalHeadAttackingState.cpp" />
+    <ClCompile Include="Boss2FinalHeadOpeningState.cpp" />
+    <ClCompile Include="Boss2FinalHeadShuttingState.cpp" />
     <ClCompile Include="Boss2FinalJoint.cpp" />
     <ClCompile Include="BulletScubarSoliderExploringState.cpp" />
     <ClCompile Include="BulletScubarSoliderMovingState.cpp" />
@@ -240,9 +243,12 @@
     <ClInclude Include="Boss2FinalArmWaveState.h" />
     <ClInclude Include="Boss2FinalBullet.h" />
     <ClInclude Include="Boss2FinalData.h" />
+    <ClInclude Include="Boss2FinalExplosionSprite.h" />
     <ClInclude Include="Boss2FinalHand.h" />
     <ClInclude Include="Boss2FinalHead.h" />
-    <ClInclude Include="Boss2FinalHeadState.h" />
+    <ClInclude Include="Boss2FinalHeadAttackingState.h" />
+    <ClInclude Include="Boss2FinalHeadOpeningState.h" />
+    <ClInclude Include="Boss2FinalHeadShuttingState.h" />
     <ClInclude Include="Boss2FinalJoint.h" />
     <ClInclude Include="BulletScubarSoliderExPloringState.h" />
     <ClInclude Include="BulletScubarSoliderMovingState.h" />
