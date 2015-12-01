@@ -7,11 +7,12 @@
 #include "EnermySoldierDieState.h"
 #include "Camera.h"
 #include "PlayerSprite.h"
+#include "EnermyWhiteBullet.h"
 
 class EnermySoldier : public EnermySprite
 {
 public:
-    EnermySoldier(float x, float y, Direction dir);
+    EnermySoldier(float x, float y, Direction dir, bool isShoter = false, std::vector<BulletSprite*>& bullet = std::vector<BulletSprite*>());
     ~EnermySoldier();
 
     void setSupportCollisionRect(CollisionRectF rect);

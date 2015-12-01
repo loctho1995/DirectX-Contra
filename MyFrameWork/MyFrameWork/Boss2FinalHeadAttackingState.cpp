@@ -28,6 +28,7 @@ void Boss2FinalHeadAttackingState::onUpdate()
     }
     else
     {
+        this->pData->ppTextureArrays[pData->iCurrentArr]->resetIndex();
         transition(new Boss2FinalHeadShuttingState(this->pData));
         return;
     }

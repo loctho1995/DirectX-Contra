@@ -109,5 +109,10 @@ void Loader::loadResources(std::string name)
 			return;
 		}
 
+        if (name.find("staticweapon"))
+        {
+            ObjectStaticWeapon::loadResources();
+            return;
+        }
 	}
 }

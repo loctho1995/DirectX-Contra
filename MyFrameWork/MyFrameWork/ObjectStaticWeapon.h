@@ -19,5 +19,6 @@ public:
 	void die();
 
     void onCameraCollision(RectF rect);
+    static void loadResources();
 };
 

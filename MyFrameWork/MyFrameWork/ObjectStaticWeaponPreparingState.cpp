@@ -28,11 +28,13 @@ void ObjectStaticWeaponPreparingState::onUpdate()
         {
             if (this->isNextOpen)
             {
-                this->pData->pState = new ObjectStaticWeaponOpenState(this->pData);
+                transition(new ObjectStaticWeaponOpenState(this->pData));
+                return;
             }
             else
             {
-                this->pData->pState = new ObjectStaticWeaponCloseState(this->pData);
+                transition(new ObjectStaticWeaponCloseState(this->pData));
+                return;
             }
         }
     }

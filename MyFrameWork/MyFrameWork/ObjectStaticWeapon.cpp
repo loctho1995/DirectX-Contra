@@ -89,3 +89,39 @@ void ObjectStaticWeapon::die()
 {
 	pData ->isDesTroyed = true;
 }
+
+void ObjectStaticWeapon::loadResources()
+{
+    TextureArray *temp = new TextureArray("Resources\\Sprites", "bulletimages", "m", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bulletimages", "f", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bulletimages", "s", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bulletimages", "r", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bulletimages", "b", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bulletimages", "l", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "bulletimages", "n", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "staticweapon", "open", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "staticweapon", "open", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "staticweapon", "preparing", 1, 10);
+    delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "staticweapon", "close", 1, 10);
+    delete temp;
+}

@@ -25,20 +25,18 @@ EnermyCreator::EnermyCreator()
 
 	addAppearDirection("bridge", Direction::createRight());
 
-	addAppearDirection("staticweapons", Direction::createRight());
-	addAppearDirection("staticweaponm", Direction::createRight());
-	addAppearDirection("staticweaponf", Direction::createRight());
-	addAppearDirection("staticweaponb", Direction::createRight());
-	addAppearDirection("staticweaponr", Direction::createRight());
-	addAppearDirection("staticweaponl", Direction::createRight());
+	addAppearDirection("staticweapons", Direction::createRight() | Direction::createUp());
+    addAppearDirection("staticweaponm", Direction::createRight() | Direction::createUp());
+    addAppearDirection("staticweaponf", Direction::createRight() | Direction::createUp());
+    addAppearDirection("staticweaponb", Direction::createRight() | Direction::createUp());
+    addAppearDirection("staticweaponr", Direction::createRight() | Direction::createUp());
+    addAppearDirection("staticweaponl", Direction::createRight() | Direction::createUp());
 
 	addAppearDirection("gunrotating1", Direction::createRight());
 	addAppearDirection("gunrotating3", Direction::createUp());
 
 	addAppearDirection("cannon1", Direction::createRight());
 	addAppearDirection("cannon3", Direction::createUp());
-
-	addAppearDirection("soldierl", Direction::createRight());
 
 	addAppearDirection("sniper", Direction::createRight());
 
@@ -56,11 +54,13 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("capsuleweapon3r", Direction::createDown());
 	addAppearDirection("capsuleweapon3l", Direction::createDown());
 
-	addAppearDirection("soldierr",Direction::createLeft());
     addAppearDirection("boss2finalarmleft", Direction::createUp());
     addAppearDirection("boss2finalarmright", Direction::createUp());
     addAppearDirection("boss2finalhead", Direction::createUp());
-	addAppearDirection("soldierr", Direction::createLeft());
+	addAppearDirection("soldierl", Direction::createRight());
+    addAppearDirection("soldierr", Direction::createLeft());
+    addAppearDirection("soldiershotl", Direction::createUp());
+    addAppearDirection("soldiershotr", Direction::createUp());
 
 	addAppearDirection("blazer", Direction::createUp());
 	addAppearDirection("dynamicbridge", Direction::createUp());
@@ -125,6 +125,17 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 	{
 		return new EnermySoldier(respawnX, respawnY, Direction::createRight());
 	}
+
+    if (enermyName == "soldiershotl")
+    {
+        //from left
+        return new EnermySoldier(respawnX, respawnY, Direction::createLeft(), true, bulletSprites);
+    }
+
+    if (enermyName == "soldiershotr")
+    {
+        return new EnermySoldier(respawnX, respawnY, Direction::createRight(), true, bulletSprites);
+    }
 
 	if (enermyName == "sniper")
 	{

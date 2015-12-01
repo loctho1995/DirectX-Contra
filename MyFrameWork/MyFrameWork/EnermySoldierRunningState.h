@@ -3,6 +3,7 @@
 #include "EnermyData.h"
 #include "EnermySoldierJumpingState.h"
 #include "EnermySoldierFallingState.h"
+#include "EnermySoldierShootingState.h"
 
 class EnermySoldierRunningState : public EnermyState
 {
@@ -16,5 +17,6 @@ public:
 private:
     float acceleration;
     bool isFallDown;
+    float frameShot;
 };
 

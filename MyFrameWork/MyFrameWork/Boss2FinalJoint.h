@@ -25,7 +25,7 @@ public:
 
     virtual D3DXVECTOR2 getPosition();
     //di chuyen toi vi tri x,y sau [frames] Frame - chuyen dong deu
-    virtual void moveTo(float x, float y, int frames, int delayFrame = 0);
+    //virtual void moveTo(float x, float y, int frames, int delayFrame = 0);
 
     //di chuyen theo van toc vx, vy trong vong frames Frame
     virtual void moveBy(float x, float y, int frames, int delayFrame = 0);

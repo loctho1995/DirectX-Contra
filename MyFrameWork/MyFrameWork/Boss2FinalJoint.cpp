@@ -252,24 +252,24 @@ void Boss2FinalJoint::updateMoveFollow()
     alignDistance(jointFollow);
 }
 
-void Boss2FinalJoint::moveTo(float x, float y, int frames, int delay)
-{
-    distanceMoved = 0;
-
-    D3DXVECTOR2 vecd = D3DXVECTOR2(x - pData->x, y - pData->y);
-
-    pData->vx = vecd.x / frames;
-    pData->vy = vecd.y / frames;
-
-    moveToX = x;
-    moveToY = y;
-
-    moveToCurrFrame = 0;
-    moveToFrame = frames;
-    moveToDelay = delay;
-
-    isMoveTo = true;
-}
+//void Boss2FinalJoint::moveTo(float x, float y, int frames, int delay)
+//{
+//    distanceMoved = 0;
+//
+//    D3DXVECTOR2 vecd = D3DXVECTOR2(x - pData->x, y - pData->y);
+//
+//    pData->vx = vecd.x / frames;
+//    pData->vy = vecd.y / frames;
+//
+//    moveToX = x;
+//    moveToY = y;
+//
+//    moveToCurrFrame = 0;
+//    moveToFrame = frames;
+//    moveToDelay = delay;
+//
+//    isMoveTo = true;
+//}
 
 void Boss2FinalJoint::moveBy(float x, float y, int frames, int delay)
 {

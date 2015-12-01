@@ -9,6 +9,7 @@ EnermySoldierRunningState::EnermySoldierRunningState(EnermyData *pData)
     this->pData->vy = 1.0f;
     acceleration = 1.5f;
     isFallDown = false;
+    frameShot = rand() % 10 + 15;
 }
 
 
@@ -19,6 +20,23 @@ EnermySoldierRunningState::~EnermySoldierRunningState()
 
 void EnermySoldierRunningState::onUpdate()
 {
+    if (((EnermySoldierData*)pData)->isShooter)
+    {
+        if (frameShot >= 0)
+        {
+            frameShot--;
+        }
+        else
+        {
+            if (!((EnermySoldierData*)pData)->isShooted)
+            {
+                ((EnermySoldierData*)pData)->isShooted = true;
+                transition(new EnermySoldierShootingState(this->pData));
+                return;
+            }
+        }
+    }
+
     if (!isFallDown)
         EnermyState::onUpdate();
     else

@@ -65,6 +65,12 @@ bool TextureArray::isLastTexture()
     return (iCurrentTexture == nTextures - 1) && (count == nFrames - 1);
 }
 
+void TextureArray::resetIndex()
+{
+    iCurrentTexture = 0;
+    count = 0;
+}
+
 int TextureArray :: getWidth()
 {
 	return ppTextures [iCurrentTexture] ->getWidth();

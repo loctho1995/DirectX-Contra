@@ -23,7 +23,7 @@ void ObjectStaticWeaponOpenState::onUpdate()
 
     if (frameCurrentCount >= frameDelay)
     {
-        this->pData->pState = new ObjectStaticWeaponPreparingState(this->pData, false);
+        transition(new ObjectStaticWeaponPreparingState(this->pData, false));
     }
     else
     {

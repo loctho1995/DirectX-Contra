@@ -7,7 +7,7 @@ const float SOLDIER_RANGE_TO_TURN = 15.0f;
 class EnermySoldierData : public EnermyData
 {
 public:
-    EnermySoldierData();
+    EnermySoldierData(std::vector<BulletSprite*>& bullet = std::vector<BulletSprite*>());
     ~EnermySoldierData();
 
     enum SoldierArrayIndex
@@ -22,5 +22,7 @@ public:
         COUNT
     };
 
+    bool isShooter;
+    bool isShooted;
 };
 

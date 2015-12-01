@@ -15,6 +15,7 @@ public:
 	int getWidth();
 	int getHeight();
     bool isLastTexture();
+    void resetIndex();
 
 private:
 	const unsigned int nTextures;

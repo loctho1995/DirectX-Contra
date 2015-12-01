@@ -22,10 +22,31 @@ void ObjectStaticWeaponCloseState::onUpdate()
 
     if (currentFramecount >= frameDelay)
     {
-        if (this->pData->playerX - this->pData->x >= -OBJECT_STATIC_WEAPON_RANGE_OPEN)
+        D3DXVECTOR2 playerPos(pData->playerX, pData->playerY);
+        D3DXVECTOR2 selfPos(pData->x + 16, pData->y + 16);
+        D3DXVECTOR2 directVector = playerPos - selfPos;
+        float length = D3DXVec2Length(&directVector);
+
+        if (length <= OBJECT_STATIC_WEAPON_RANGE_OPEN)
         {
-            this->pData->pState = new ObjectStaticWeaponPreparingState(this->pData, true);
-        }        
+            transition(new ObjectStaticWeaponPreparingState(this->pData, true));
+            return;
+        }
+
+        /*if (((ObjectStaticWeaponData*)pData)->isUp)
+        {
+            if (this->pData->playerX - this->pData->x >= -OBJECT_STATIC_WEAPON_RANGE_OPEN)
+            {
+                this->pData->pState = new ObjectStaticWeaponPreparingState(this->pData, true);
+            }
+        }
+        else
+        {
+            if (this->pData->playerX - this->pData->x >= -OBJECT_STATIC_WEAPON_RANGE_OPEN)
+            {
+                this->pData->pState = new ObjectStaticWeaponPreparingState(this->pData, true);
+            }
+        }*/
     }
     else
     {

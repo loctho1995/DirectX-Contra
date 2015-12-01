@@ -1,9 +1,20 @@
 #include "EnermySoldier.h"
 
 
-EnermySoldier::EnermySoldier(float x, float y, Direction dir)
+EnermySoldier::EnermySoldier(float x, float y, Direction dir, bool isShooter, std::vector<BulletSprite*>& bullet) // : EnermySprite(bullet)
 {
-    pData = new EnermySoldierData();
+    if (isShooter)
+    {
+        pData = new EnermySoldierData(bullet);
+    }
+    else
+    {
+        pData = new EnermySoldierData();
+    }
+
+    ((EnermySoldierData*)pData)->isShooter = isShooter;
+    
+
 
     pData->x = x;
     pData->y = y;
@@ -15,6 +26,7 @@ EnermySoldier::EnermySoldier(float x, float y, Direction dir)
     this->addTextureArray(EnermySoldierData::DIE, "jump", 1, 60);
     this->addTextureArray(EnermySoldierData::FALL, "jump", 1, 60);
     this->addTextureArray(EnermySoldierData::DROWNING, "drowning", 2, 8);
+    this->addTextureArray(EnermySoldierData::SHOT, "shot", 3, 8);
     this->pData->ppTextureArrays[EnermySoldierData::DESTROY] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 3, 10);
     this->pData->ppTextureArrays[EnermySoldierData::DESTROY]->setAnchorPoint(0.5f, 0.5f);
 
