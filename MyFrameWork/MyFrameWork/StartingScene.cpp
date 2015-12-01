@@ -6,10 +6,10 @@
 StartingScene::StartingScene(void)
 {
 	BitMapFont* font = new BitMapFont("Resources\\Fonts\\fontByLinh.png", 
-									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,""'?!_-:;",
+									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ ",
 									"fontByLinh",
 									6,
-									8,
+									9,
 									8,
 									RectI(0, 0, 8, 8));
 	Graphics::getInstance() ->setFont(font);
@@ -31,7 +31,7 @@ void StartingScene:: render()
 
 	Graphics::getInstance() ->drawText("STARTING SCENE", 10 , 0 , 100);
 
-	Graphics::getInstance() ->drawText("PRESS ENTER GUYS", 10 , 10 , 160, D3DCOLOR_ARGB(255, 255, 0, 0));
+	Graphics::getInstance() ->drawText("PRESS ENTER GUYS", 10 , 10 , 160, false, D3DCOLOR_ARGB(255, 255, 0, 0));
 
 	Graphics::getInstance()->endRender();
 }

@@ -273,20 +273,11 @@ void Graphics :: drawTileTmx(LPDIRECT3DTEXTURE9 texture ,int width, int height, 
 	rect.clip(port);
 
 	RECT r;
-	/*if( rect.height == 0|| rect.width == 0 )
-	{
-		r.left = 0;
-		r.bottom = 0;
-		r.right = 0;
-		r.top = 0;
-	}*/
-	//else
-	{
-		r.left = rect.x - x  + dx;
-		r.top = rect. y - y  + dy;
-		r.bottom = r.top + rect.height;
-		r.right = r.left + rect.width;
-	}
+	
+	r.left = rect.x - x  + dx;
+	r.top = rect. y - y  + dy;
+	r.bottom = r.top + rect.height;
+	r.right = r.left + rect.width;
 	
 	D3DXMATRIX matrix;
 	D3DXVECTOR2 centerPoint(x + width / 2, y + height / 2 );
@@ -332,9 +323,13 @@ void Graphics :: setFont(BitMapFont* bitmapFont)
 		//setSingleColor(textureHolder ->pTexture, textureHolder ->width, textureHolder ->height);
 }
 
-void Graphics :: drawChar(LPDIRECT3DTEXTURE9 pTexture, int width, int height, char c, int size, int x, int y, D3DCOLOR color)
+void Graphics :: drawChar(LPDIRECT3DTEXTURE9 pTexture, int width, int height, char c, int size, int x, int y, bool space, D3DCOLOR color)
 {
-	
+	if( c == ' ' && space == false )
+	{
+		return;
+	}
+	int lenght = font -> characterSet.length();
 	RECT sourceRect;
 	std::size_t charPos = font -> characterSet.find(c);
 	if(charPos == std::string::npos)
@@ -372,7 +367,7 @@ void Graphics :: drawChar(LPDIRECT3DTEXTURE9 pTexture, int width, int height, ch
 	pSpriteHandler ->Draw(pTexture, &sourceRect, NULL, &position, color);
 }
 
-void Graphics :: drawText(std::string text, int size, int x, int y, D3DCOLOR color)
+void Graphics :: drawText(std::string text, int size, int x, int y, bool space, D3DCOLOR color )
 {
 	TextureHolder* textureHolder = getTexture(font -> name);
 	LPDIRECT3DTEXTURE9 pTexture = textureHolder ->pTexture;
@@ -383,14 +378,14 @@ void Graphics :: drawText(std::string text, int size, int x, int y, D3DCOLOR col
 	{
 		int xPos = i * ( (float)font ->arrangeRect.width) + x;
 		int yPos = y;
-		drawChar(textureHolder ->pTexture,width, height, text[i], size, xPos, yPos, color);
+		drawChar(textureHolder ->pTexture,width, height, text[i], size, xPos, yPos, space, color);
 	}
 }
 
 
 void Graphics :: drawText(Label label)
 {
-	drawText(label.text, label.size, label.xPos, label.yPos, label.color);
+	drawText(label.text, label.size, label.xPos, label.yPos, label.space, label.color);
 }
 //void Graphics::loadSurface(std::basic_string<TCHAR> filePath)
 //{

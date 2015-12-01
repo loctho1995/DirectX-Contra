@@ -28,12 +28,14 @@ public:
 		color = D3DCOLOR_XRGB(255, 255 ,255 );
 		size  = 1;
 		xPos = yPos = 0.0f;
+		space = false;
 	}
 	Label(std :: string text,
 		int size,
 		float xPos,
 		float yPos,
-		D3DCOLOR color
+		D3DCOLOR color,
+		bool space
 		)
 	{
 		this ->  text = text;
@@ -41,6 +43,7 @@ public:
 		this -> color = color;
 		this -> xPos = xPos;
 		this -> yPos = yPos;
+		this -> space = space;
 	}
 
 	std :: string text;
@@ -48,5 +51,6 @@ public:
 	D3DCOLOR color;
 	float xPos;
 	float yPos;
+	bool space;
 };
 
