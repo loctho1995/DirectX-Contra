@@ -28,6 +28,7 @@ public:
 	void gameOverReset();
 	char getKey(int index);
 	void setKey(int index, char keyCode);
+	char getDefaultKey(int index);
 	void setDefaultKeyBoard();
 private:
 	static UIComponents* instance;

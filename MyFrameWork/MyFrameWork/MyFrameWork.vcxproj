@@ -201,6 +201,7 @@
     <ClCompile Include="ObjectSpriteCreator.cpp" />
     <ClCompile Include="ObjectState.cpp" />
     <ClCompile Include="ObjectStaticWeaponPreparingState.cpp" />
+    <ClCompile Include="OptionScene.cpp" />
     <ClCompile Include="PlayerClimbingState.cpp" />
     <ClCompile Include="PlayerDeadState.cpp" />
     <ClCompile Include="PlayerDivingState.cpp" />
@@ -365,6 +366,7 @@
     <ClInclude Include="ObjectSpriteCreator.h" />
     <ClInclude Include="ObjectState.h" />
     <ClInclude Include="ObjectStaticWeaponPreparingState.h" />
+    <ClInclude Include="OptionScene.h" />
     <ClInclude Include="PlayerClimbingState.h" />
     <ClInclude Include="PlayerData.h" />
     <ClInclude Include="PlayerDeadState.h" />

@@ -21,7 +21,7 @@ UIComponents::UIComponents()
 	lifes = 5;
 	configKeyBoard[LEFT] = defaultKeyBoard[LEFT] = VK_LEFT;
 	configKeyBoard[RIGHT] = defaultKeyBoard[RIGHT] = VK_RIGHT;
-	configKeyBoard[UP] = defaultKeyBoard[RIGHT] = VK_UP;
+	configKeyBoard[UP] = defaultKeyBoard[UP] = VK_UP;
 	configKeyBoard[DOWN] = defaultKeyBoard[DOWN] = VK_DOWN;
 	configKeyBoard[FIRE] = defaultKeyBoard[FIRE] = 0x46;
 	configKeyBoard[JUMP] = defaultKeyBoard[JUMP] = VK_SPACE;
@@ -85,8 +85,22 @@ char UIComponents :: getKey(int index)
 	return configKeyBoard[index];
 }
 
+char UIComponents :: getDefaultKey(int index)
+{
+	return defaultKeyBoard[index];
+}
+
 void UIComponents :: setKey(int index, char keyCode)
 {
+	for (int i = 0; i < COUNT; i++)
+	{
+		if(configKeyBoard[i] == keyCode && i != index)
+		{
+			configKeyBoard[i] = configKeyBoard[index];
+			configKeyBoard[index] = keyCode;
+			return;
+		}
+	}
 	configKeyBoard[index] = keyCode;
 }
 

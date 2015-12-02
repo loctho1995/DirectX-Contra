@@ -1,4 +1,5 @@
 #pragma once
+#include "KeyBoard.h"
 
 class Scene
 {

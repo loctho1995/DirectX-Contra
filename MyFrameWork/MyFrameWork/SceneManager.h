@@ -7,6 +7,7 @@
 #include "StartingScene.h"
 #include "GameOverScene.h"
 #include "EndingScene.h"
+#include "OptionScene.h"
 class SceneManager
 {
 public:

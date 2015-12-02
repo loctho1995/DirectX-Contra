@@ -323,13 +323,17 @@ void Graphics :: setFont(BitMapFont* bitmapFont)
 		//setSingleColor(textureHolder ->pTexture, textureHolder ->width, textureHolder ->height);
 }
 
+BitMapFont* Graphics :: getFont()
+{
+	return font;
+}
+
 void Graphics :: drawChar(LPDIRECT3DTEXTURE9 pTexture, int width, int height, char c, int size, int x, int y, bool space, D3DCOLOR color)
 {
 	if( c == ' ' && space == false )
 	{
 		return;
 	}
-	int lenght = font -> characterSet.length();
 	RECT sourceRect;
 	std::size_t charPos = font -> characterSet.find(c);
 	if(charPos == std::string::npos)
@@ -342,8 +346,6 @@ void Graphics :: drawChar(LPDIRECT3DTEXTURE9 pTexture, int width, int height, ch
 
 	int dx = col * font -> rectWidth + font ->arrangeRect.x;
 	int dy = row * font -> rectHeight + font -> arrangeRect.y;
-	/*int dx = col * font -> rectWidth ;
-	int dy = row * font -> rectHeight ;*/
 	sourceRect.top = dy;
 	sourceRect.left = dx;
 	sourceRect.right = dx + font -> rectWidth;
@@ -356,7 +358,7 @@ void Graphics :: drawChar(LPDIRECT3DTEXTURE9 pTexture, int width, int height, ch
 
 	D3DXMatrixTransformation2D(
 								&matrix,
-								NULL,
+								&D3DXVECTOR2(x, y),
 								0.0f,
 								&D3DXVECTOR2((float)size / font ->size, (float)size / font ->size),
 								&D3DXVECTOR2(x + height / 2, y + height / 2),
@@ -373,10 +375,10 @@ void Graphics :: drawText(std::string text, int size, int x, int y, bool space, 
 	LPDIRECT3DTEXTURE9 pTexture = textureHolder ->pTexture;
 	int width = textureHolder -> width;
 	int height = textureHolder -> height;
-
+	
 	for (int i = 0; i < text.length(); i++)
 	{
-		int xPos = i * ( (float)font ->arrangeRect.width) + x;
+		int xPos = i * ( (float)font ->arrangeRect.width * ( (float)size / font -> size)) + x;
 		int yPos = y;
 		drawChar(textureHolder ->pTexture,width, height, text[i], size, xPos, yPos, space, color);
 	}

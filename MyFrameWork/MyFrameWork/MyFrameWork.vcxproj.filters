@@ -150,6 +150,7 @@
     <ClCompile Include="Boss2FinalExplosionSprite.cpp" />
     <ClCompile Include="EnermySoldierShootingState.cpp" />
     <ClCompile Include="EndingScene.cpp" />
+    <ClCompile Include="OptionScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -323,6 +324,7 @@
     <ClInclude Include="Boss2FinalExplosionSprite.h" />
     <ClInclude Include="EnermySoldierShootingState.h" />
     <ClInclude Include="EndingScene.h" />
+    <ClInclude Include="OptionScene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

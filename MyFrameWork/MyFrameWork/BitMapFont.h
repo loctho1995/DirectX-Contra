@@ -30,6 +30,7 @@ public:
 		xPos = yPos = 0.0f;
 		space = false;
 	}
+
 	Label(std :: string text,
 		int size,
 		float xPos,
@@ -44,6 +45,14 @@ public:
 		this -> xPos = xPos;
 		this -> yPos = yPos;
 		this -> space = space;
+	}
+	~Label()
+	{
+		text = "";
+		color = D3DCOLOR_XRGB(255, 255 ,255 );
+		size  = 0;
+		xPos = yPos = 0.0f;
+		space = false;
 	}
 
 	std :: string text;

@@ -5,13 +5,8 @@
 
 Game:: Game()
 {
-	SceneManager::getInstance() ->createScene(new StartingScene());
+	SceneManager::getInstance() ->createScene(new OptionScene());
 }
-
-//void Game :: go()
-//{
-//	SceneManager::getInstance() ->getCurrentScene()->go();
-//}
 
 void Game :: update()
 {

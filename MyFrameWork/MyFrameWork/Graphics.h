@@ -61,6 +61,8 @@ public:
 
 	void setFont(BitMapFont* bitmapFont);
 
+	BitMapFont* getFont();
+
 	void beginRender();
 
 	void endRender();
