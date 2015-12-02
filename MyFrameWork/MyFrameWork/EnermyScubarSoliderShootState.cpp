@@ -31,6 +31,6 @@ void EnermyScubarSoliderShootState::onUpdate()
 		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x + pData->body.width / 3, pData->y - pData->body.height * 3 / 4, 1,  -0.08, pData->stage));
 		pData->bulletsVector.push_back(new BulletScubarSoliderSprite(pData->x + pData->body.width / 3, pData->y - pData->body.height * 3 / 4, 2, 0, pData->stage));
 		
-		transition(new EnermyScubarSoliderHidingState(pData));
+		transition(new EnermyScubarSoliderHidingState(pData, true));
 	}
 }

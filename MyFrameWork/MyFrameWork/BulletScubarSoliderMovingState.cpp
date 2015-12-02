@@ -7,12 +7,11 @@ BulletScubarSoliderMovingState::BulletScubarSoliderMovingState(SpriteData *data,
 	pData->iCurrentArr = 0;
 	pData->vx = vx;
 	
-	if (kindScubar ==1)
-	pData->vy = BULLETVYJUMP1;
 	if (kindScubar == 2)
 		pData->vy = BULLETVYJUMP2;
-	if (kindScubar == 3)
-		pData->vy = BULLETVYJUMP3;
+	else
+		pData->vy = BULLETVYJUMP13;
+
 	this->index = index;
 	
 	this->kindScubar = kindScubar;
@@ -198,7 +197,6 @@ void BulletScubarSoliderMovingState::onCollision(CollisionRectF cRect)
 
 void BulletScubarSoliderMovingState::onDead(int index)
 {
-
 	pData->body.width *= 4; // thay doi body de khoang no Player cham cung chet
 	pData->body.height *= 4;
 	transition(new BulletScubarSoliderExploringState(pData, index));
