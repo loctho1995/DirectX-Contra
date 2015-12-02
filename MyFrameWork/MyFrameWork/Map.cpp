@@ -268,7 +268,6 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 			if(temp ->getName().find("final") != std::string::npos)
 			{
 				bIsFinish = true;
-				UIComponents::getInstance() ->setStage( UIComponents::getInstance() ->getCurrentStage() + 2 );
 			}
 			delete temp;
 			it = enermyMap.erase(it);

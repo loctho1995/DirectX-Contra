@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -105,6 +105,7 @@
     <ClCompile Include="BulletScubarSoliderMovingState.cpp" />
     <ClCompile Include="BulletScubarSoliderSprite.cpp" />
     <ClCompile Include="DynamicBridgeMovingState.cpp" />
+    <ClCompile Include="EndingScene.cpp" />
     <ClCompile Include="EnemyBazokaExploringState.cpp" />
     <ClCompile Include="EnemyBazokaFiringState.cpp" />
     <ClCompile Include="EnemyBazokaSprite.cpp" />
@@ -255,6 +256,7 @@
     <ClInclude Include="BulletScubarSoliderMovingState.h" />
     <ClInclude Include="BulletScubarSoliderSprite.h" />
     <ClInclude Include="DynamicBridgeMovingState.h" />
+    <ClInclude Include="EndingScene.h" />
     <ClInclude Include="EnemyBazokaExploringState.h" />
     <ClInclude Include="EnemyBazokaFiringState.h" />
     <ClInclude Include="EnemyBazokaSprite.h" />

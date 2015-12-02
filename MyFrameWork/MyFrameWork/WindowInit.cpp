@@ -75,9 +75,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 
 	RECT rect;	// the rect represents for client area of the window
 	rect.left = 100;
-	rect.right = 100 + SCWIDTH;
+	rect.right = 100 + SCWIDTH * 2;
 	rect.top = 100;
-	rect.bottom = 100 + SCHEIGHT;
+	rect.bottom = 100 + SCHEIGHT * 2;
 
 	AdjustWindowRect (&rect, WS_OVERLAPPEDWINDOW, false); // automaticlly adjust the window depend on what its size
 

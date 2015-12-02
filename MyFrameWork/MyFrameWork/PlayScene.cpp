@@ -137,7 +137,15 @@ void PlayScene::onUpdate()
 		count++;
 		if( count == nTransitionFrames)
 		{
-			SceneManager::getInstance()->createScene(new LoadingScene());
+			if( UIComponents::getInstance() ->getCurrentStage() < 5 )
+			{
+				UIComponents::getInstance() ->setStage( UIComponents::getInstance() ->getCurrentStage() + 2 );
+				SceneManager::getInstance()->createScene(new LoadingScene());
+			}
+			else
+			{
+				SceneManager::getInstance()->createScene(new EndingScene());
+			}
 			return;
 		}
 	}
