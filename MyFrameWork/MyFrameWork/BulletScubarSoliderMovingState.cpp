@@ -199,5 +199,8 @@ void BulletScubarSoliderMovingState::onDead(int index)
 {
 	pData->body.width *= 4; // thay doi body de khoang no Player cham cung chet
 	pData->body.height *= 4;
+	pData->body.x = -pData->body.width / 2;
+	pData->body.y = -pData->body.height / 2;
+	
 	transition(new BulletScubarSoliderExploringState(pData, index));
 }
