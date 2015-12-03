@@ -5,7 +5,7 @@
 
 Game:: Game()
 {
-	SceneManager::getInstance() ->createScene(new OptionScene());
+	SceneManager::getInstance() ->createScene(new HelpScene());
 }
 
 void Game :: update()

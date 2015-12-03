@@ -55,7 +55,7 @@
  </objectgroup>
  <objectgroup name="ObjectLayer">
   <object id="37" name="bridge" type="object" x="767.667" y="115.917" width="130" height="30.083"/>
-  <object id="38" name="soldierl" type="enemy" x="278.5" y="83" width="17" height="32"/>
+  <object id="38" name="soldierl" type="enemy" x="741.5" y="77" width="17" height="32"/>
   <object id="42" name="bridge" type="object" x="1057" y="115.708" width="130" height="28.5833"/>
   <object id="46" name="soldierl" type="enemy" x="828.667" y="83.6667" width="16.333" height="33"/>
   <object id="47" name="soldierl" type="enemy" x="948.5" y="80" width="16.333" height="33"/>
@@ -77,7 +77,7 @@
   <object id="106" name="gunrotating" type="enemy" x="1824" y="112" width="32" height="32"/>
   <object id="107" name="gunrotating" type="enemy" x="2976" y="176" width="32" height="32"/>
   <object id="108" name="gunrotating" type="enemy" x="3104" y="176" width="32" height="32"/>
-  <object id="119" name="capsuleweaponr" type="object" x="231" y="51" width="24" height="15"/>
+  <object id="119" name="capsuleweaponr" type="object" x="186" y="49" width="24" height="15"/>
   <object id="120" name="cannon" type="enemy" x="2048" y="144" width="32" height="32"/>
   <object id="121" name="capsuleweaponr" type="object" x="2322" y="64" width="24" height="15"/>
   <object id="122" name="capsuleweaponl" type="object" x="2322" y="128" width="24" height="15"/>
@@ -94,7 +94,6 @@
   <object id="151" name="sniper" type="enemy" x="2352" y="109" width="18" height="39"/>
   <object id="152" name="sniper" type="enemy" x="3228" y="48" width="18" height="39"/>
   <object id="168" name="capsuleweapons" type="object" x="1123" y="59" width="24" height="15"/>
-  <object id="172" name="respawnposition" type="&quot;&quot;" x="47" y="18.5" width="18" height="27"/>
-  <object id="173" name="cannon" type="enemy" x="426" y="81" width="32" height="32"/>
+  <object id="172" name="respawnposition" type="&quot;&quot;" x="47" y="47.5" width="18" height="27"/>
  </objectgroup>
 </map>

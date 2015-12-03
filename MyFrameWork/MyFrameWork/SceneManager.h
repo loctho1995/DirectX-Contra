@@ -8,6 +8,8 @@
 #include "GameOverScene.h"
 #include "EndingScene.h"
 #include "OptionScene.h"
+#include "HelpScene.h"
+
 class SceneManager
 {
 public:

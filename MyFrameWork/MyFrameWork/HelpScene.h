@@ -25,6 +25,7 @@ public:
     void onCollision();
 
 private:
+    std::string getKeyName(int index);
     PlayerSprite* pPlayer;
     ViewPort* viewPort;
     Camera* cam;
@@ -32,9 +33,10 @@ private:
     Texture* lifeTexture;
     int count;
     int stageIndex;
-    bool isGameOver;
-    bool isFinish;
     bool isPause;
-    Label label;
+    bool isHelpRight, isHelpLeft, isHelpDown, isHelpUp, isHelpFire, isHelpJump, isMoreInfo, isBulletHelp, isPlayerRead;
+    Label label, labelConversation;
+    
+    int frameChangeConversation, conversationFrame, conversationNum;
 };
 
