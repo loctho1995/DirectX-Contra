@@ -37,6 +37,7 @@ Sound::Sound(HWND hWnd)
 	{
 		std:: cout << "Can not create primaryBuffer";
 	}
+	volume = 100.0f;
 	
 }
 Sound::~Sound()
@@ -56,6 +57,10 @@ void Sound :: create(HWND hWnd)
 	}
 }
 
+float Sound :: getVolume()
+{
+	return volume;
+}
 
 void Sound :: loadSound(char* fileName, std:: string name)
 {
@@ -151,10 +156,11 @@ void Sound :: loadSound(char* fileName, std:: string name)
 	if(wavData != NULL)
 	delete wavData;
 	wavData = 0;
-
-	(*pSecondaryBuffer) -> SetVolume(DSBVOLUME_MAX);
+	long tempVolume = (volume) / 100 *(- DSBVOLUME_MIN) + DSBVOLUME_MIN;
+	(*pSecondaryBuffer) -> SetVolume(tempVolume);
 
 	soundBufferMap[name] = secondaryBuffer;
+
 
 }
 
@@ -171,6 +177,8 @@ void Sound :: play(std:: string name, bool infiniteLoop, int times)
 	}
 	else
 	{
+		it -> second -> Stop();
+		it -> second -> SetCurrentPosition(0);
 		it -> second -> Play(0, 0, times - 1);
 	}
 
@@ -197,6 +205,7 @@ void Sound :: stop(std::string name)
 
 void Sound :: setVolume(float percentage, std:: string name)
 {
+	volume = percentage;
 	if(name == "")
 	{
 		long volumne = (percentage) / 100 *(- DSBVOLUME_MIN) + DSBVOLUME_MIN;
@@ -214,6 +223,5 @@ void Sound :: setVolume(float percentage, std:: string name)
 		long volumne = (percentage) / 100 *(- DSBVOLUME_MIN) + DSBVOLUME_MIN;
 		it -> second ->SetVolume(volumne);
 	}
-	
 }
 

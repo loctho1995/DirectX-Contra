@@ -1,6 +1,8 @@
 #pragma once
 #include "MenuScene.h"
 #include "SceneManager.h"
+#include "Sound.h"
+#include "Texture.h"
 class OptionScene : public MenuScene
 {
 public:
@@ -19,8 +21,8 @@ private:
 		DOWN,
 		FIRE,
 		JUMP,
+		VOLUME,
 		DEFAULT,
-		VOLUMNE,
 		BACK,
 		COUNT
 	} LableIndex;
@@ -30,5 +32,13 @@ private:
 	int cursorIndex;
 	bool isChoosing;
 	bool isBack;
+	float volume;
+	float volumeStep;
+	Texture* pBackGround;
+	Texture* pCursor;
+	float startPosY;
+	float startPosX; 
+	float offsetY;
+	float offsetX;
 };
 
