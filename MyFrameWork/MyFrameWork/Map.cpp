@@ -470,11 +470,11 @@ void Map :: draw(Camera* cam)
 			layers[i] ->draw(cam);
 	}
 	
-	for (std::map < int, EnermySprite* > ::iterator it = enermyMap.begin(); it != enermyMap.end(); ++it)
+	for (std::map < int, EnermySprite* > ::reverse_iterator it = enermyMap.rbegin(); it != enermyMap.rend(); ++it)
 	{
 		it ->second ->draw(cam);
 	}
-
+	
 	for (std::map < int, ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); ++it)
 	{
 		it ->second ->draw(cam);

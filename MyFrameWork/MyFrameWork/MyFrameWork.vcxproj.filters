@@ -151,6 +151,8 @@
     <ClCompile Include="EnermySoldierShootingState.cpp" />
     <ClCompile Include="EndingScene.cpp" />
     <ClCompile Include="OptionScene.cpp" />
+    <ClCompile Include="Boss2FinalBody.cpp" />
+    <ClCompile Include="HelpScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -325,6 +327,8 @@
     <ClInclude Include="EnermySoldierShootingState.h" />
     <ClInclude Include="EndingScene.h" />
     <ClInclude Include="OptionScene.h" />
+    <ClInclude Include="Boss2FinalBody.h" />
+    <ClInclude Include="HelpScene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

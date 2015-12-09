@@ -92,6 +92,7 @@
     <ClCompile Include="Boss2FinalArmSpinningState.cpp" />
     <ClCompile Include="Boss2FinalArmStartState.cpp" />
     <ClCompile Include="Boss2FinalArmWaveState.cpp" />
+    <ClCompile Include="Boss2FinalBody.cpp" />
     <ClCompile Include="Boss2FinalBullet.cpp" />
     <ClCompile Include="Boss2FinalData.cpp" />
     <ClCompile Include="Boss2FinalExplosionSprite.cpp" />
@@ -155,6 +156,7 @@
     <ClCompile Include="GunBoss5Bullet.cpp" />
     <ClCompile Include="GunBoss5BulletExploringState.cpp" />
     <ClCompile Include="GunBoss5BulletMovingState.cpp" />
+    <ClCompile Include="HelpScene.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
     <ClCompile Include="ObjectBridgeAliveState.cpp" />
@@ -244,6 +246,7 @@
     <ClInclude Include="Boss2FinalArmSpinningState.h" />
     <ClInclude Include="Boss2FinalArmStartState.h" />
     <ClInclude Include="Boss2FinalArmWaveState.h" />
+    <ClInclude Include="Boss2FinalBody.h" />
     <ClInclude Include="Boss2FinalBullet.h" />
     <ClInclude Include="Boss2FinalData.h" />
     <ClInclude Include="Boss2FinalExplosionSprite.h" />
@@ -314,6 +317,7 @@
     <ClInclude Include="GunBoss5Bullet.h" />
     <ClInclude Include="GunBoss5BulletExploringState.h" />
     <ClInclude Include="GunBoss5BulletMovingState.h" />
+    <ClInclude Include="HelpScene.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="ObjectBridge.h" />
     <ClInclude Include="ObjectBridgeAliveState.h" />
