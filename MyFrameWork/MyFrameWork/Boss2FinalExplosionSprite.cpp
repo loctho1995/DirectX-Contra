@@ -44,3 +44,8 @@ void Boss2FinalExplosionSprite::draw(Camera *cam)
 {
     pData->ppTextureArrays[pData->iCurrentArr]->draw(pData->x, pData->y, cam);
 }
+
+void Boss2FinalExplosionSprite::drawAtPosition(float x, float y,Camera *cam)
+{
+    pData->ppTextureArrays[pData->iCurrentArr]->draw(x, y, cam);
+}

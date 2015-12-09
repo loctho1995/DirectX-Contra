@@ -5,6 +5,7 @@
 #include "BulletSprite.h"
 #include "Boss2Final.h"
 #include "Boss2FinalExplosionSprite.h"
+#include "Boss2FinalBody.h"
 
 class Boss2FinalHead : public EnermySprite
 {
@@ -18,5 +19,6 @@ public:
 
 private:
     Boss2FinalExplosionSprite *explosion;
+    Boss2FinalBody *bodySprite;
 };
 

@@ -20,6 +20,7 @@ Boss2FinalHead::Boss2FinalHead(float x, float y, std::vector<BulletSprite*>& bul
     this->pData->pState = new Boss2FinalHeadShuttingState(this->pData);
 
     explosion = new Boss2FinalExplosionSprite(0, 0);
+    bodySprite = new Boss2FinalBody(128, 98);
 }
 
 
@@ -60,10 +61,12 @@ void Boss2FinalHead::draw(Camera *cam)
 {
     if (pData->isDead)
     {
-        explosion->draw(cam);
+        explosion->draw(cam);    
+        explosion->drawAtPosition(bodySprite->getBody().x, bodySprite->getBody().y + 20, cam);
     }
     else
     {
         pData->ppTextureArrays[pData->iCurrentArr]->draw(pData->x, pData->y, cam);
+        bodySprite->draw(cam);
     }
 }
