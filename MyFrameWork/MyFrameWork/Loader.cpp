@@ -114,5 +114,10 @@ void Loader::loadResources(std::string name)
             ObjectStaticWeapon::loadResources();
             return;
         }
+		if (name == "tank")
+		{
+			EnermyTankSprite::loadResources();
+			return;
+		}
 	}
 }

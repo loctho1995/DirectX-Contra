@@ -153,6 +153,13 @@
     <ClCompile Include="OptionScene.cpp" />
     <ClCompile Include="Boss2FinalBody.cpp" />
     <ClCompile Include="HelpScene.cpp" />
+    <ClCompile Include="EnermyTankExploring.cpp" />
+    <ClCompile Include="TankExploringSprite.cpp" />
+    <ClCompile Include="TankExploringState.cpp" />
+    <ClCompile Include="EnermyTankData.cpp" />
+    <ClCompile Include="EnermyTankShootingState.cpp" />
+    <ClCompile Include="EnermyTankSprite.cpp" />
+    <ClCompile Include="EnermyTankStartingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -329,6 +336,13 @@
     <ClInclude Include="OptionScene.h" />
     <ClInclude Include="Boss2FinalBody.h" />
     <ClInclude Include="HelpScene.h" />
+    <ClInclude Include="EnermyTankExploring.h" />
+    <ClInclude Include="TankExploringSprite.h" />
+    <ClInclude Include="TankExploringState.h" />
+    <ClInclude Include="EnermyTankShootingState.h" />
+    <ClInclude Include="EnermyTankStartingState.h" />
+    <ClInclude Include="EnermyTankSprite.h" />
+    <ClInclude Include="EnermyTankData.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

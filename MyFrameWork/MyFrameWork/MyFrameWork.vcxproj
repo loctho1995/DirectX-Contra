@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -151,6 +151,11 @@
     <ClCompile Include="EnermySoldierDrowningState.cpp" />
     <ClCompile Include="EnermySoldierFallingState.cpp" />
     <ClCompile Include="EnermySoldierShootingState.cpp" />
+    <ClCompile Include="EnermyTankData.cpp" />
+    <ClCompile Include="EnermyTankExploring.cpp" />
+    <ClCompile Include="EnermyTankShootingState.cpp" />
+    <ClCompile Include="EnermyTankSprite.cpp" />
+    <ClCompile Include="EnermyTankStartingState.cpp" />
     <ClCompile Include="EnermyWhiteBullet.cpp" />
     <ClCompile Include="GameOverScene.cpp" />
     <ClCompile Include="GunBoss5Bullet.cpp" />
@@ -223,6 +228,8 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="StartingScene.cpp" />
     <ClCompile Include="LoadingScene.cpp" />
+    <ClCompile Include="TankExploringSprite.cpp" />
+    <ClCompile Include="TankExploringState.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureArray.cpp" />
     <ClCompile Include="TileLayer.cpp" />
@@ -312,6 +319,11 @@
     <ClInclude Include="EnermySoldierDrowningState.h" />
     <ClInclude Include="EnermySoldierFallingState.h" />
     <ClInclude Include="EnermySoldierShootingState.h" />
+    <ClInclude Include="EnermyTankData.h" />
+    <ClInclude Include="EnermyTankExploring.h" />
+    <ClInclude Include="EnermyTankShootingState.h" />
+    <ClInclude Include="EnermyTankSprite.h" />
+    <ClInclude Include="EnermyTankStartingState.h" />
     <ClInclude Include="EnermyWhiteBullet.h" />
     <ClInclude Include="GameOverScene.h" />
     <ClInclude Include="GunBoss5Bullet.h" />
@@ -399,6 +411,8 @@
     <ClInclude Include="SpriteState.h" />
     <ClInclude Include="StartingScene.h" />
     <ClInclude Include="LoadingScene.h" />
+    <ClInclude Include="TankExploringSprite.h" />
+    <ClInclude Include="TankExploringState.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureArray.h" />
     <ClInclude Include="TileLayer.h" />

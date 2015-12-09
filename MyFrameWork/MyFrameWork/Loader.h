@@ -16,6 +16,7 @@
 #include "ObjectBridge.h"
 #include "Boss2Final.h"
 #include "EnemyMineSprite.h"
+#include"EnermyTankSprite.h"
 
 class Loader
 {
