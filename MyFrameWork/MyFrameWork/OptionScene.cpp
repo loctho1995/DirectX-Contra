@@ -137,6 +137,7 @@ void OptionScene :: update()
 void OptionScene:: render()
 {
 	Graphics::getInstance()->beginRender();
+	Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
 	pBackGround -> draw(0, 0);
 	Graphics::getInstance() ->drawText(tittle);
 	for (int i = 0; i < COUNT; i++)
@@ -147,6 +148,7 @@ void OptionScene:: render()
 	}
 
 	pCursor -> draw(10, startPosY + offsetY * cursorIndex - 5);
+	Graphics::getInstance() ->getSpriteHandler() -> End();
 	Graphics::getInstance()->endRender();
 }
 void OptionScene:: handleInput()

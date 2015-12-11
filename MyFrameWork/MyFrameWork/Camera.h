@@ -114,6 +114,7 @@ public:
 		}
 	}
 	Direction getMoveDir() {return moveDir;}
+	ViewPort* getViewport() { return viewPort;} 
 private:
 	ViewPort* viewPort;
 	RectF mapRect;

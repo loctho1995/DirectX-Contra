@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -162,6 +162,7 @@
     <ClCompile Include="GunBoss5BulletExploringState.cpp" />
     <ClCompile Include="GunBoss5BulletMovingState.cpp" />
     <ClCompile Include="HelpScene.cpp" />
+    <ClCompile Include="Lighting.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
     <ClCompile Include="ObjectBridgeAliveState.cpp" />
@@ -222,6 +223,7 @@
     <ClCompile Include="PlayerSwimmingState.cpp" />
     <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShipBoss5.cpp" />
     <ClCompile Include="ShipBoss5ExploringState.cpp" />
     <ClCompile Include="ShipBoss5MovingState.cpp" />
@@ -330,6 +332,7 @@
     <ClInclude Include="GunBoss5BulletExploringState.h" />
     <ClInclude Include="GunBoss5BulletMovingState.h" />
     <ClInclude Include="HelpScene.h" />
+    <ClInclude Include="Lighting.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="ObjectBridge.h" />
     <ClInclude Include="ObjectBridgeAliveState.h" />
@@ -402,6 +405,7 @@
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="ShipBoss5.h" />
     <ClInclude Include="ShipBoss5ExploringState.h" />
     <ClInclude Include="ShipBoss5MovingState.h" />

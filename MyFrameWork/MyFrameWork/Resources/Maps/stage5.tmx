@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="319" height="15" tilewidth="16" tileheight="16" nextobjectid="63">
- <tileset firstgid="1" name="map5_tileset" tilewidth="16" tileheight="16" tilecount="140">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="319" height="15" tilewidth="16" tileheight="16" nextobjectid="64">
+ <tileset firstgid="1" name="map5_tileset" tilewidth="16" tileheight="16">
   <image source="map5_tileset.png" width="224" height="160"/>
  </tileset>
  <layer name="BackGroundLayer" width="319" height="15">
@@ -43,7 +43,6 @@
   <object id="2" name="cameratranslateposition" type="&quot;&quot;" x="4996" y="0" width="12" height="240"/>
   <object id="4" name="finalboss5" type="enemy" x="5008" y="16" width="62" height="67"/>
   <object id="35" name="mine" type="enemy" x="264" y="81" width="14" height="14"/>
-  <object id="36" name="respawnposition" type="&quot;&quot;" x="2038" y="87.5" width="18" height="27"/>
   <object id="37" name="mine" type="enemy" x="315" y="81" width="14" height="14"/>
   <object id="38" name="mine" type="enemy" x="488" y="83" width="14" height="14"/>
   <object id="39" name="mine" type="enemy" x="447" y="84" width="14" height="14"/>
@@ -66,5 +65,6 @@
   <object id="59" name="bazoka" type="enemy" x="1012" y="73" width="26" height="30"/>
   <object id="60" name="tank" type="enemy" x="2560" y="112" width="12" height="65"/>
   <object id="62" name="tank" type="enemy" x="3489" y="112" width="12" height="65"/>
+  <object id="63" name="respawnposition" type="&quot;&quot;" x="19" y="109.5" width="18" height="27"/>
  </objectgroup>
 </map>

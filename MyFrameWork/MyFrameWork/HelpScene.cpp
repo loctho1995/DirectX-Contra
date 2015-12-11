@@ -281,10 +281,13 @@ void HelpScene::handleInput()
 
 void HelpScene::render()
 {
+
     Graphics::getInstance()->beginRender();
+	Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
     pMap->draw(cam);
     pPlayer->draw(cam);
     Graphics::getInstance()->drawText(label);
     Graphics::getInstance()->drawText(labelConversation);
+	Graphics::getInstance() ->getSpriteHandler() -> End();
     Graphics::getInstance()->endRender();
 }

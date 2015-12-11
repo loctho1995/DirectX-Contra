@@ -42,6 +42,8 @@ void EndingScene:: handleInput()
 void EndingScene:: render()
 {
 	Graphics::getInstance()->beginRender();
+	Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
 	Graphics::getInstance() ->drawText(label);
+	Graphics::getInstance() ->getSpriteHandler() -> End();
 	Graphics::getInstance()->endRender();
 }

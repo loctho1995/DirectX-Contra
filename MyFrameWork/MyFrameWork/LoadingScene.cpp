@@ -55,7 +55,7 @@ void LoadingScene::onUpdate()
 void LoadingScene:: render()
 {
 		Graphics::getInstance()->beginRender();
-
+		Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
 		if(UIComponents::getInstance() -> getCurrentStage() == 1)
 		{
 			Graphics::getInstance() ->drawText("STAGE ONE", 8 , 10 , 160, false,  D3DCOLOR_ARGB(255, 255, 0, 0));
@@ -66,6 +66,6 @@ void LoadingScene:: render()
 		}
 
 		Graphics::getInstance() ->drawText("READY TO GO ", 8 , 10 , 240, false, D3DCOLOR_ARGB(255, 255, 0, 0));
-
+		Graphics::getInstance() ->getSpriteHandler() -> End();
 		Graphics::getInstance()->endRender();
 }

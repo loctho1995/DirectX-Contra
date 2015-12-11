@@ -10,6 +10,8 @@
 #include "ObjectStaticWeapon.h"
 #include "SceneManager.h"
 #include "Sound.h"
+#include "Shader.h"
+#include "Lighting.h"
 
 class PlayScene : public Scene
 {
@@ -36,5 +38,9 @@ private:
 	bool isGameOver;
 	bool isFinish;
 	bool isPause;
+private:
+	Shader* shader;
+	Lighting* light;
+	bool isEffectOn;
 };
 

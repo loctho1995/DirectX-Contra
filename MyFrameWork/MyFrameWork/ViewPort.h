@@ -13,6 +13,7 @@ public:
 	void drawTileTmx( LPDIRECT3DTEXTURE9 pTexture, int width, int height,int dx, int dy,  int x, int y, D3DCOLOR color = D3DCOLOR_XRGB (255,255,255 )) const;
 	int getWidth();
 	int getHeight();
+	RectI getPort()	 {return port;} 
 private:
 	RectI port;
 	Graphics* pGraphics;

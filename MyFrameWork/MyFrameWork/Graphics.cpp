@@ -37,6 +37,16 @@ Graphics* Graphics :: getInstance()
 	return instance;
 }
 
+
+LPDIRECT3DDEVICE9 Graphics :: getDevice()
+{
+	return pDevice;
+}
+LPD3DXSPRITE Graphics :: getSpriteHandler()
+{
+	return pSpriteHandler;
+}
+
 Graphics :: ~Graphics()
 {
 	if( !pD3D9 )
@@ -70,13 +80,13 @@ void Graphics:: beginRender()
 {
 	pDevice -> Clear (0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0 ,0 , 0), 0.0f, 0 );
 	pDevice->BeginScene();
-	pSpriteHandler -> Begin(D3DXSPRITE_ALPHABLEND);
+	//pSpriteHandler -> Begin(D3DXSPRITE_ALPHABLEND);
 	//pSpriteHandler -> Begin(D3DXSPRITE_SORT_TEXTURE);
 }
 
 void Graphics :: endRender()
 {
-	pSpriteHandler -> End();
+	//pSpriteHandler -> End();
 	pDevice->EndScene();
  	pDevice -> Present(NULL, NULL, NULL, NULL );
 }

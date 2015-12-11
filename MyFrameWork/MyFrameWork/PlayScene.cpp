@@ -16,6 +16,21 @@ PlayScene ::PlayScene()
 	isGameOver = false;
 	nTransitionFrames = 5 * 60;
 	count = 0;
+	if(UIComponents:: getInstance() -> getCurrentStage() == 5)
+	{
+		isEffectOn = true;
+	}
+	else
+	{
+		isEffectOn = false;
+	}
+	if(isEffectOn)
+	{
+		shader = new Shader("Resources\\Shader\\lightShader.fx");
+
+		light = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, 0.0f, D3DXVECTOR4(0.0, 0.0, 0, 0));
+	}
+	
 }
 
 void PlayScene::onCollision()
@@ -161,24 +176,93 @@ void PlayScene::onUpdate()
 		{
 			isGameOver = true;
 		}
-	}	
+	}
+
+	
 }
 void PlayScene::render()
 {
-    Graphics::getInstance()->beginRender();
-    
-    pMap->draw(cam);
-    pPlayer->draw(cam);
-	int lifes = min (UIComponents::getInstance() ->getLifes() , 5);
-	int x = 0;
-	int y = 0;
-	int offset = 16;
-	for (int i = 0; i < lifes - 1 ; i++)
+	if(isEffectOn)
 	{
-		lifeTexture ->draw(x, y);
-		x += offset;
+		 Graphics::getInstance()->beginRender();
+    
+		 D3DXHANDLE m_hWorldViewProj  = shader -> getEffect() ->GetParameterByName(NULL, "WVPMatrix"); 
+		 D3DXHANDLE lightingPosition = shader -> getEffect() ->GetParameterByName(NULL, "lightingPosition"); 
+		 D3DXHANDLE lightingColor = shader -> getEffect() ->GetParameterByName(NULL, "lightingColor"); 
+		 D3DXHANDLE lightingCutoff = shader -> getEffect() ->GetParameterByName(NULL, "lightingCutoff");  
+		 D3DXHANDLE lightingDirection = shader -> getEffect() ->GetParameterByName(NULL, "lightingDirection");
+		 D3DXHANDLE AmbientlightIntensity = shader -> getEffect() ->GetParameterByName(NULL, "AmbientlightIntensity");
+
+		 D3DXHANDLE technique;
+
+		 unsigned int Passes  = 0;
+
+		 technique = shader -> getEffect() -> GetTechniqueByName("technique0");
+		 shader -> getEffect() -> SetTechnique(technique);
+		 shader -> getEffect() -> Begin(&Passes, 0 );
+
+		 for(int i=0; i < Passes; ++i)
+		 {
+			 Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
+			 shader -> getEffect() -> BeginPass(i);
+			 D3DXMATRIX mtxViewProj;
+			 D3DXMatrixOrthoOffCenterLH(&mtxViewProj, 0.5f, 256 + 0.5f,
+				 256 + 0.5f, 0.5f, 0.0f, 1.0f);
+			 shader -> getEffect() -> SetMatrix(m_hWorldViewProj, &(mtxViewProj));
+			 shader -> getEffect() -> SetVector(lightingPosition, &light->getPosition());
+			 shader -> getEffect() -> SetVector(lightingColor,&light -> getColor());
+			 shader -> getEffect() -> SetFloat(lightingCutoff, light->getCutOff());
+			 shader -> getEffect() -> SetFloat(AmbientlightIntensity, light -> getAmbientLightIntensity());
+			 shader -> getEffect() -> SetVector(lightingDirection,&light -> getDirection());
+			 shader -> getEffect() -> CommitChanges();
+
+
+			 pMap->draw(cam);
+			 pPlayer->draw(cam);
+
+			 Graphics::getInstance() ->getSpriteHandler() -> End();
+			 shader -> getEffect() -> EndPass();
+		 }
+
+		 shader -> getEffect() -> End();
+
+		 Graphics::getInstance() ->getSpriteHandler() -> End();
+
+		 Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
+		 int lifes = min (UIComponents::getInstance() ->getLifes() , 5);
+		 int x = 0;
+		 int y = 0;
+		 int offset = 16;
+		 for (int i = 0; i < lifes - 1 ; i++)
+		 {
+			 lifeTexture ->draw(x, y);
+			 x += offset;
+		 }
+		 Graphics::getInstance() ->getSpriteHandler() -> End();
+
+		 Graphics::getInstance()->endRender();
 	}
-    Graphics::getInstance()->endRender();
+	else
+	{
+		Graphics::getInstance()->beginRender();
+		Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
+
+		pMap->draw(cam);
+		pPlayer->draw(cam);
+		int lifes = min (UIComponents::getInstance() ->getLifes() , 5);
+			int x = 0;
+			int y = 0;
+			int offset = 16;
+			for (int i = 0; i < lifes - 1 ; i++)
+			{
+				lifeTexture ->draw(x, y);
+				x += offset;
+			}
+
+		Graphics::getInstance() ->getSpriteHandler() -> End();
+		Graphics::getInstance()->endRender();
+	}
+   
 }
 
 void PlayScene::  update()
@@ -188,4 +272,16 @@ void PlayScene::  update()
     pPlayer->update();
 	cam ->update( pPlayer->getX(), pPlayer->getY() );
 	pPlayer -> setCameraRect (cam ->getRect());
+	if(isEffectOn)
+	{
+		light -> update();
+		// Lighting update
+
+		float resultX = pPlayer -> getCenterX() - cam -> getX() + cam -> getViewport() -> getPort().x;
+		float resultY = pPlayer -> getCenterY() - cam -> getY() + cam -> getViewport() -> getPort().y;
+		resultX = ( resultX - 128 ) / 128;
+		resultY = ( 128 - resultY ) / 128;
+		light -> setPosition(resultX, resultY);
+	}
+	
 }

@@ -29,9 +29,13 @@ void StartingScene:: render()
 {
 	Graphics::getInstance()->beginRender();
 
+	Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
+
 	Graphics::getInstance() ->drawText("STARTING SCENE", 10 , 0 , 100);
 
 	Graphics::getInstance() ->drawText("PRESS ENTER GUYS", 10 , 10 , 160, false, D3DCOLOR_ARGB(255, 255, 0, 0));
+
+	Graphics::getInstance() ->getSpriteHandler() -> End();
 
 	Graphics::getInstance()->endRender();
 }

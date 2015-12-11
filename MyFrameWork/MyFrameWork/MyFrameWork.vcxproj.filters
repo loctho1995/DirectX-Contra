@@ -160,6 +160,8 @@
     <ClCompile Include="EnermyTankShootingState.cpp" />
     <ClCompile Include="EnermyTankSprite.cpp" />
     <ClCompile Include="EnermyTankStartingState.cpp" />
+    <ClCompile Include="Lighting.cpp" />
+    <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -343,6 +345,8 @@
     <ClInclude Include="EnermyTankStartingState.h" />
     <ClInclude Include="EnermyTankSprite.h" />
     <ClInclude Include="EnermyTankData.h" />
+    <ClInclude Include="Lighting.h" />
+    <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

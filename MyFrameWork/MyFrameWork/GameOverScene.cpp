@@ -20,6 +20,8 @@ void GameOverScene:: render()
 {
 	Graphics::getInstance()->beginRender();
 
+	Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
+	
 	Graphics::getInstance() ->drawText("GAME OVER", 5 , 0 , 50);
 
 	Graphics::getInstance() ->drawText("PRESS ENTER TO", 6 , 10 , 100, D3DCOLOR_ARGB(255, 255, 0, 0));
@@ -29,6 +31,8 @@ void GameOverScene:: render()
 	Graphics::getInstance() ->drawText("OR END TO", 6 , 10 , 220, D3DCOLOR_ARGB(255, 255, 0, 0));
 
 	Graphics::getInstance() ->drawText("ESCAPE", 6 , 10 , 270, D3DCOLOR_ARGB(255, 255, 0, 0));
+
+	Graphics::getInstance() ->getSpriteHandler() -> End();
 
 	Graphics::getInstance()->endRender();
 }
