@@ -32,6 +32,8 @@ Boss2FinalHead::~Boss2FinalHead()
 void Boss2FinalHead::die()
 {
     explosion->setPosition(pData->x, pData->y);
+
+    Sound::getInstance()->play("boss2finaldestroy.wav", false, 1);
 }
 
 void Boss2FinalHead::update()

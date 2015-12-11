@@ -15,6 +15,7 @@ Boss2FinalBullet::Boss2FinalBullet(float x, float y, float speed, float angle)
     pData->body = RectF(-8, -8, 16, 16);
 
     pData->pState = new BulletMovingState(pData, speed, angle, 0);
+    Sound::getInstance()->play("boss2bulletsound.wav", false, 1);
 }
 
 Boss2FinalBullet::~Boss2FinalBullet()

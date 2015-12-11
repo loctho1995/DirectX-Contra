@@ -40,6 +40,8 @@ RectF Boss2FinalArm::getBody()
 void Boss2FinalArm::die()
 {
     explosion->setPosition(((Boss2FinalData*)pData)->joints[4]->getPosition());
+
+    Sound::getInstance()->play("boss2finalhanddisappear.wav", false, 1);
 }
 
 void Boss2FinalArm::update()

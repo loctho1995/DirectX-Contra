@@ -2,6 +2,7 @@
 #include "ObjectState.h"
 #include "EnermyData.h"
 #include "ObjectBridgeData.h"
+#include "Sound.h"
 
 class ObjectBridgeExplosionState : public ObjectState
 {

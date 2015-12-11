@@ -6,6 +6,8 @@ ObjectBridgeExplosionState::ObjectBridgeExplosionState(ObjectData *pData)
     this->pData = pData;
     this->pData->iCurrentArr = ObjectBridgeData::EXPLOSION;
     ((ObjectBridgeData*)this->pData)->isDestroying = true;
+
+    Sound::getInstance()->play("bridgeexplosion.wav", false, 1);
 }
 
 void ObjectBridgeExplosionState::onUpdate()

@@ -2,6 +2,7 @@
 #include "BulletSprite.h"
 #include "EnermyData.h"
 #include "BulletMovingState.h"
+#include "Sound.h"
 
 class Boss2FinalBullet : public BulletSprite
 {

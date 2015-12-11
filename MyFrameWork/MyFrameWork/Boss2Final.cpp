@@ -57,4 +57,7 @@ void Boss2Final::loadResources()
 
     temp = new TextureArray("Resources\\Sprites", "boss2final", "head", 5, 15);
     delete temp;
+
+    temp = new TextureArray("Resources\\Sprites", "boss2final", "body", 1, 15);
+    delete temp;
 }

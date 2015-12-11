@@ -2,6 +2,7 @@
 #include "EnermyState.h"
 #include "EnermyData.h"
 #include "EnermySoldierData.h"
+#include "Sound.h"
 
 class EnermySoldierDestroyState : public EnermyState
 {

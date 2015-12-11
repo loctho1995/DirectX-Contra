@@ -31,6 +31,11 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\background2.wav", "background2.wav");
 	Sound::getInstance()->play("background2.wav", true , 1);
 	Sound::getInstance()->loadSound("Resources\\Sounds\\beep.wav", "beep.wav");
+    Sound::getInstance()->loadSound("Resources\\Sounds\\boss2bulletsound.wav", "boss2bulletsound.wav");
+    Sound::getInstance()->loadSound("Resources\\Sounds\\boss2finaldestroy.wav", "boss2finaldestroy.wav");
+    Sound::getInstance()->loadSound("Resources\\Sounds\\boss2finalhanddisappear.wav", "boss2finalhanddisappear.wav");
+    Sound::getInstance()->loadSound("Resources\\Sounds\\bridgeexplosion.wav", "bridgeexplosion.wav");
+    Sound::getInstance()->loadSound("Resources\\Sounds\\enemydead.wav", "enemydead.wav");
 }
 
 
