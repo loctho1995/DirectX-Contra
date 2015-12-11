@@ -51,6 +51,7 @@ ObjectCapsuleWeapon::ObjectCapsuleWeapon(int respawnX, int respawnY, int isStage
 	default:
 		break;
 	}
+	this->pData->ppTextureArrays[ObjectCapsuleWeaponData::DROP]->setAnchorPoint(0.5f, 0.5f);
 }
 
 

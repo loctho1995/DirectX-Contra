@@ -8,11 +8,12 @@ ObjectCapsuleWeaponDropState::ObjectCapsuleWeaponDropState(ObjectData *pData)
 	this->pData->isPlayerCollisionable = true;
 	this->pData->isAffectble = false;
 	this->pData->isHittable = false;
+	this->pData->body = RectF(-8.0f, -6.5f, 16.0f, 13.0f);
 	this->pData->vx = 0.8f;
 	this->pData->vy = -3.8f;
-
-	this->pData->body = RectF(0.0f, 0.0f, 24.0f, 15.0f);
 	accelemeter = 0.1f;
+
+	Sound::getInstance()->play("beep.wav", false, 1);
 }
 
 

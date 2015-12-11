@@ -19,7 +19,7 @@ EnermyFailingStone::EnermyFailingStone(float respawnX, float respawnY)
 	pData->ppTextureArrays[EnermyFailingStoneData::DEAD]->setAnchorPoint(0.5f, 1.0f);
 
 	pData->dir = Direction::createRight();
-	pData->body = RectF(-13.5f, -27.0f, 27.0f, 27.0f);
+	pData->body = RectF(-8.0f, -16.0f, 16.0f, 16.0f);
 	pData->HP = 1;
 	pData->pState = new EnermyFailingStoneAppearingState(pData);
 }
