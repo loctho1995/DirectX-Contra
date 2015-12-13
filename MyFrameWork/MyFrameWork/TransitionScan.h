@@ -5,13 +5,18 @@
 #define D3DFVF_CUSTOMVERTEX ( D3DFVF_XYZ | D3DFVF_TEX1 )
 
 
-class TransitionScanDown : public TransitionEffect
+class TransitionScan : public TransitionEffect
 {
 public:
+    enum TransitionFrom
+    {
+        LEFT, RIGHT, TOP, BOTTOM
+    };
+
     //speed: percent / frame
     //width: 1.0f - height: 1.0f
 
-    TransitionScanDown(float speed);
+    TransitionScan(float speed, TransitionFrom from = TransitionFrom::TOP);
     void doAfterSetScene();
     void update();
     bool isFinish();
@@ -19,4 +24,5 @@ public:
 private:
     float speed, currentPos;
     IDirect3DTexture9 *texture0, *texture1;
+    TransitionFrom from;
 };

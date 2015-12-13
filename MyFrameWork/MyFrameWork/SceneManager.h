@@ -33,12 +33,12 @@ public:
 	}
 
     //chuyen Scene tu Scene source => Scene dest
-    void createSceneWithTransition(Scene* source, Scene* dest, TransitionEffect* transition) 
+    void createSceneWithTransition(Scene* dest, TransitionEffect* transition) 
     { 
         destScene = dest;
         isTransitioning = true;
 
-        SceneTransition::getInstance()->setTransition(source, dest, transition);
+        SceneTransition::getInstance()->setTransition(pInstance->pCurrentScene, dest, transition);
     }
 
     //kiem tra xem transition finish chua

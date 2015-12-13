@@ -50,7 +50,7 @@ void LoadingScene::onUpdate()
 	if( loadedSprite == nSprites && count == nTransitionTime)
 	{
 		//SceneManager::getInstance() -> createScene( new PlayScene());
-        SceneManager::getInstance()->createSceneWithTransition(this, new PlayScene(), new TransitionScanDown(0.005f));
+        SceneManager::getInstance()->createSceneWithTransition(new PlayScene(), new TransitionCircleOpen(0.005f));
 	}
 }
 void LoadingScene:: render()

@@ -1,34 +1,39 @@
-#include "TransitionScanDown.h"
-#include <iostream>
-using namespace std;
+#include "TransitionCircleOpen.h"
 
-TransitionScanDown::TransitionScanDown(float speed)
+
+TransitionCircleOpen::TransitionCircleOpen(float speed)
 {
-    currentPos = 0;
     this->speed = speed;
-    shader = new Shader("Resources\\Shader\\transitionscandown.fx");
+    this->radius = 0;
+
+    shader = new Shader("Resources\\Shader\\transitioncircleopen.fx");
 }
 
-void TransitionScanDown::update()
-{
-    Graphics::getInstance()->beginRender();
 
-    currentPos += speed;
+TransitionCircleOpen::~TransitionCircleOpen()
+{
+}
+
+void TransitionCircleOpen::update()
+{
+    radius += speed;
+
+    Graphics::getInstance()->beginRender();
 
     unsigned int Passes = 0;
     shader->getEffect()->Begin(&Passes, 0);
-    
+
     D3DXMATRIX mtxViewProj;
     D3DXMatrixIdentity(&mtxViewProj);
     mtxViewProj._11 = 2.0;
-    mtxViewProj._22 = -2.0;
+    mtxViewProj._22 = -2.0; //toa do loz texel no nguoc voi toa do hlsl nen phai cover
     mtxViewProj._41 = 1.0;
     mtxViewProj._42 = 1.0;
 
     shader->getEffect()->SetMatrix("WorldViewProj", &(mtxViewProj));
     shader->getEffect()->SetTexture("texture0", texture0);
     shader->getEffect()->SetTexture("texture1", texture1);
-    shader->getEffect()->SetFloat("posMove", currentPos);
+    shader->getEffect()->SetFloat("radius", radius);
 
     for (int i = 0; i < Passes; ++i)
     {
@@ -45,12 +50,12 @@ void TransitionScanDown::update()
     Graphics::getInstance()->endRender();
 }
 
-bool TransitionScanDown::isFinish()
+bool TransitionCircleOpen::isFinish()
 {
-    return currentPos >= 1.0;
+    return radius >= 0.8;
 }
 
-void TransitionScanDown::doAfterSetScene()
+void TransitionCircleOpen::doAfterSetScene()
 {
     D3DXCreateTexture(Graphics::getInstance()->getDevice(), SCWIDTH, SCHEIGHT, D3DX_DEFAULT,
         D3DUSAGE_RENDERTARGET, D3DFMT_A8B8G8R8, D3DPOOL_DEFAULT, &texture0);
