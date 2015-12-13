@@ -25,11 +25,14 @@ Graphics :: Graphics(HWND hWnd)
 		D3DCREATE_HARDWARE_VERTEXPROCESSING | D3DCREATE_PUREDEVICE,&d3dpp,&pDevice );
 	D3DXCreateSprite(pDevice,&pSpriteHandler);
 
+    this->isAllowPresent = true;
 }
 void Graphics :: create (HWND hWnd)
 {
-	if( instance == nullptr )
-		instance = new Graphics(hWnd);
+    if (instance == nullptr)
+    {
+        instance = new Graphics(hWnd);
+    }
 }
 
 Graphics* Graphics :: getInstance()
@@ -88,7 +91,8 @@ void Graphics :: endRender()
 {
 	//pSpriteHandler -> End();
 	pDevice->EndScene();
- 	pDevice -> Present(NULL, NULL, NULL, NULL );
+    if (isAllowPresent)
+        pDevice->Present(NULL, NULL, NULL, NULL);
 }
 
 void Graphics :: loadTexture(std:: string sourceFile, std::string name, D3DCOLOR colorkey)

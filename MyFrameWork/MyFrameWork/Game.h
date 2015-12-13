@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SceneManager.h"
+#include "SceneTransition.h"
 
 class Game
 {

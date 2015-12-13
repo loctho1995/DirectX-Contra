@@ -7,7 +7,6 @@
 #include <map>
 #include "BitMapFont.h"
 
-
 class TextureHolder;
 extern const unsigned int SCWIDTH;
 extern const unsigned int SCHEIGHT;
@@ -29,7 +28,7 @@ private:
 	BitMapFont* font;
 
 public:
-
+    bool isAllowPresent;
 	//void loadSurface(std::basic_string<TCHAR> filePath ); // just test
 
 	//void showSurface(float x , float y  , float width  , float height ); // just test

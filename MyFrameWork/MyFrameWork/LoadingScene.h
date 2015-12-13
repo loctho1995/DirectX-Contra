@@ -5,6 +5,8 @@
 #include "Loader.h"
 #include <thread>
 #include "UIComponents.h"
+#include "TransitionScanDown.h"
+
 class LoadingScene : public MenuScene
 {
 public:

@@ -10,11 +10,22 @@ Game:: Game()
 
 void Game :: update()
 {
-	SceneManager::getInstance() ->getCurrentScene() ->onUpdate();
+    if (!SceneManager::getInstance()->isSceneTransitioning())
+    {
+        SceneManager::getInstance()->getCurrentScene()->onUpdate();
+    }
+    else
+    {
+        SceneTransition::getInstance()->update();
+        SceneManager::getInstance()->updateWithEffect();
+    }
 }
 
 void Game :: render()
 {
-	SceneManager::getInstance() ->getCurrentScene() ->render();
+    if (!SceneManager::getInstance()->isSceneTransitioning())
+    {
+        SceneManager::getInstance()->getCurrentScene()->render();
+    }
 }
 
