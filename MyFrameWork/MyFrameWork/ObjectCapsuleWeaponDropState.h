@@ -1,6 +1,8 @@
 #pragma once
 #include "ObjectState.h"
 #include "ObjectCapsuleWeaponData.h"
+#include "Sound.h"
+
 class ObjectCapsuleWeaponDropState :
 	public ObjectState
 {
