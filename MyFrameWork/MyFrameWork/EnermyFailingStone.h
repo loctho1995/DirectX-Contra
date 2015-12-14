@@ -4,6 +4,7 @@
 #include "EnermyFailingStoneAppearingState.h"
 #include "EnermyFailingStoneDroppingState.h"
 #include "EnermyFailingStoneDeadState.h"
+#include "Sound.h"
 
 class EnermyFailingStone :
 	public EnermySprite
@@ -15,5 +16,6 @@ public:
 	static void loadResources();
 	virtual void update();
 	virtual void draw(Camera *cam);
+	virtual void playBeShootedEffect();
 };
 

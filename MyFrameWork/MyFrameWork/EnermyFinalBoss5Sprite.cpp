@@ -55,3 +55,8 @@ void EnermyFinalBoss5Sprite::loadResources()
 	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 8);
 	delete temp;
 }
+
+void EnermyFinalBoss5Sprite::playBeShootedEffect()
+{
+	Sound::getInstance()->play("beShooted", false, 1);
+}

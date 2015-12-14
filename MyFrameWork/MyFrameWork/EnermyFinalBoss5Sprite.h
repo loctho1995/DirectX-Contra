@@ -15,5 +15,6 @@ public:
 	EnermyFinalBoss5Sprite(float respawnX, float respawnY, std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnermyFinalBoss5Sprite();
 	static void loadResources();
+	virtual void playBeShootedEffect();
 };
 

@@ -14,6 +14,7 @@ public:
 	EnermyCannon(int respawnX, int respawnY, int isStage, std::vector < BulletSprite*>& bulletSpriteVector);
 	~EnermyCannon();
 
+	virtual void playBeShootedEffect();
 	static void loadResources();
 	virtual void update();
 	virtual void draw(Camera *cam);

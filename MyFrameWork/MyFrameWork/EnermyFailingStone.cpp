@@ -20,7 +20,7 @@ EnermyFailingStone::EnermyFailingStone(float respawnX, float respawnY)
 
 	pData->dir = Direction::createRight();
 	pData->body = RectF(-8.0f, -16.0f, 16.0f, 16.0f);
-	pData->HP = 1;
+	pData->HP = 8;
 	pData->pState = new EnermyFailingStoneAppearingState(pData);
 }
 
@@ -48,4 +48,9 @@ void EnermyFailingStone::loadResources()
 	delete temp;
 	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
 	delete temp;
+}
+
+void EnermyFailingStone::playBeShootedEffect()
+{
+	Sound::getInstance()->play("beShooted", false, 1);
 }
