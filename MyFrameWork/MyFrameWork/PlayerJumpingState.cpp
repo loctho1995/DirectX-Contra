@@ -114,6 +114,7 @@ void PlayerJumpingState:: onCollision( RectF rect)
 				pData -> vy = 0.0f;
 				pData -> y -= py;
 				
+
 				if(isMoving)
 				{
 					transition(new PlayerRunningState( pData));
@@ -157,6 +158,7 @@ void PlayerJumpingState:: onCollision( RectF rect)
 			if( vy * px > (-vx * py) )
 			{
 				// top collision
+				
 				pData -> y -= py;
 				pData -> vy = 0.0f;
 				if(isMoving)
@@ -229,6 +231,7 @@ void PlayerJumpingState:: onCollision( CollisionRectF cRect)
 
 					if(cRect.type != "water")
 					{
+						Sound::getInstance() -> play("landing", false, 1);
 						if(isMoving)
 						{
 							transition(new PlayerRunningState( pData));
@@ -309,10 +312,12 @@ void PlayerJumpingState:: onCollision( CollisionRectF cRect)
 				if( vy * px > (-vx * py) )
 				{
 					// top collision
+					
 					pData -> y -= py;
 					pData -> vy = 0.0f;
 					if(cRect.type != "water")
 					{
+						Sound::getInstance() -> play("landing", false, 1);
 						if(isMoving)
 						{
 							
@@ -418,12 +423,14 @@ void PlayerJumpingState:: onDynamicObjectCollision(CollisionRectF* cRect)
 				float py = bottom - topR;
 				if( vy * px > vx * py )
 				{
+
 					// top collision
 					pData -> vy = 0.0f;
 					pData -> y -= py;
 
 					if(cRect->type != "water")
 					{
+						Sound::getInstance() -> play("landing", false, 1);
 						if(isMoving)
 						{
 							transition(new PlayerRunningState( pData));
@@ -508,6 +515,7 @@ void PlayerJumpingState:: onDynamicObjectCollision(CollisionRectF* cRect)
 					pData -> vy = 0.0f;
 					if(cRect->type != "water")
 					{
+						Sound::getInstance() -> play("landing", false, 1);
 						if(isMoving)
 						{
 							

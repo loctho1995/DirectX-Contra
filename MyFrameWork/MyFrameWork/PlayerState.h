@@ -2,7 +2,7 @@
 
 #include "SpriteState.h"
 #include "PlayerData.h"
-
+#include "Sound.h"
 
 class PlayerState : public SpriteState
 {
@@ -32,6 +32,7 @@ public:
 			speed = 4.0f;
 			speed *= (pData -> isRapid )? 1.25 : 1; 
 			pData ->Bullets.push_back(new MBullet( x ,   y , speed, angle));
+			Sound::getInstance() -> play("shootM", false, 1);
 			break;
 		case BulletTypes::S :
 		{
@@ -48,6 +49,10 @@ public:
 				tempAngle += offset ;
 				pData ->Bullets.push_back(new MBullet( x ,  y , speed, tempAngle + angle));
 			}
+			if(numberBulletWillbeCreate > 0 )
+			{
+				Sound::getInstance() -> play("shootS", false, 1);
+			}
 		}
 		break;
 		case BulletTypes::F:
@@ -55,7 +60,11 @@ public:
 			speed = 1.75f;
 			speed *= (pData -> isRapid )? 1.25 : 1;
 			if( pData -> Bullets.size() < 3)
+			{
 				pData ->Bullets.push_back(new FBullet( x ,   y , speed, angle));
+				Sound::getInstance() -> play("shootF", false, 1);
+			}
+				
 		}
 		break;
 		case BulletTypes::L:
@@ -64,6 +73,7 @@ public:
 			speed *= (pData -> isRapid )? 1.25 : 1;
 			this -> pData ->Bullets.clear();
 			this -> pData ->Bullets.push_back(new LBullet( x ,   y , speed, angle));
+			Sound::getInstance() -> play("shootL", false, 1);
 		}
 		break;
 
@@ -76,7 +86,7 @@ public:
 		if(pData -> isRespawn )
 		{
 			pData -> hittableCounter++;
-			if((pData -> hittableCounter == pData ->nonHittableFrames))
+			if((pData -> hittableCounter >= pData ->nonHittableFrames))
 			{
 				pData -> isHittable = true;
 				pData -> isRespawn = false;
@@ -89,7 +99,7 @@ public:
 		if(pData -> isUndying )
 		{
 			pData -> undyingCounter++;
-			if((pData -> undyingCounter == pData ->nUndyingFrames))
+			if((pData -> undyingCounter >= pData ->nUndyingFrames))
 			{
 				pData -> isUndying = false;
 				

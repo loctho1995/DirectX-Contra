@@ -1,6 +1,6 @@
 #include "EnemyBazokaSprite.h"
 #include "EnemyBazokaStandingState.h"
-
+#include "Sound.h"
 EnemyBazokaSprite::EnemyBazokaSprite(float respawnX, float respawnY, std::vector<BulletSprite*>& bulletVector)
 	:
 	EnermySprite(bulletVector)
@@ -42,6 +42,11 @@ void EnemyBazokaSprite:: loadResources()
 	temp = new TextureArray("Resources\\Sprites\\Explosions" ,"explosiontype1","", 3 , 8);
 
 	delete temp;
+}
+
+void EnemyBazokaSprite:: playBeShootedEffect()
+{
+	Sound::getInstance() -> play("beShooted", false , 1);
 }
 
 EnemyBazokaSprite::~EnemyBazokaSprite(void)

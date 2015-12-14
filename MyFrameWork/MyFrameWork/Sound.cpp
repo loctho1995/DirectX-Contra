@@ -191,6 +191,7 @@ void Sound :: stop(std::string name)
 		for ( std::map< std::string, IDirectSoundBuffer8*> ::iterator it = soundBufferMap.begin(); it != soundBufferMap.end(); it++)
 		{
 			it -> second ->Stop();
+			it -> second ->SetCurrentPosition(0);
 		}
 	}
 	else

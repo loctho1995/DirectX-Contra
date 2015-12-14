@@ -52,15 +52,37 @@ public:
 	void setCameraRect(RectF r);
 	void setBulletType (BulletTypes type)
 	{
-		if( type != BulletTypes::R && type != BulletTypes::B)
+
+		switch (type)
+		{
+		case M:
+			Sound::getInstance() -> play("weaponM", false, 1 );
 			pData -> bulletType = type;
-		else if (type == BulletTypes::R)
-		{
-			pData -> isRapid = true;
-		}
-		else		
-		{
+			break;
+		case F:
+			Sound::getInstance() -> play("weaponF", false, 1 );
+			pData -> bulletType = type;
+			break;
+		case S:
+			Sound::getInstance() -> play("weaponS", false, 1 );
+			pData -> bulletType = type;
+			break;
+		case B:
+			Sound::getInstance() -> play("weaponB", false, 1 );
 			pData -> isUndying = true;
+			break;
+		case L:
+			Sound::getInstance() -> play("weaponL", false, 1 );
+			pData -> bulletType = type;
+			break;
+		case R:
+			Sound::getInstance() -> play("weaponR", false, 1 );
+			pData -> isRapid = true;
+			break;
+		case N:
+			break;
+		default:
+			break;
 		}
 	}
 	

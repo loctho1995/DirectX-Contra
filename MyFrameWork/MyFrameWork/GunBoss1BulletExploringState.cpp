@@ -1,5 +1,5 @@
 #include "GunBoss1BulletExploringState.h"
-
+#include "Sound.h"
 
 GunBoss1BulletExploringState::GunBoss1BulletExploringState(SpriteData * data)
 {
@@ -8,6 +8,8 @@ GunBoss1BulletExploringState::GunBoss1BulletExploringState(SpriteData * data)
 
 	pData -> vx = 0.0f;
 	pData -> vy =  0.0f;
+
+	Sound::getInstance()->play("enemydead.wav", false, 1);
 }
 
 

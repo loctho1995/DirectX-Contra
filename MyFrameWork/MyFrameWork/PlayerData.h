@@ -63,7 +63,7 @@ public:
 			this ->y = cameraRect.y + cameraRect.height / 2;
 		this ->isRespawn = true;
 		this -> isUndying = false;
-		this -> bulletType = BulletTypes::F;
+		this -> bulletType = BulletTypes::S;
 		this -> isDead = false;
 	}
 	RectF* bodyRects;

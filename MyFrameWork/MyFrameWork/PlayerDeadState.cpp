@@ -18,6 +18,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	pData -> isRapid = false;
 	tempDir = pData -> dir;
 	UIComponents::getInstance() ->descreaseLifes();
+	Sound::getInstance() -> play("playerdie", false, 1);
 	
 }
 

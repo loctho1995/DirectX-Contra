@@ -16,7 +16,7 @@ PlayScene ::PlayScene()
 	isGameOver = false;
 	nTransitionFrames = 5 * 60;
 	count = 0;
-	if(UIComponents:: getInstance() -> getCurrentStage() == 1)
+	if(UIComponents:: getInstance() -> getCurrentStage() == 5)
 	{
 		isEffectOn = true;
 	}
@@ -30,6 +30,8 @@ PlayScene ::PlayScene()
 
 		light = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, 1.0f, D3DXVECTOR4(0.0, 0.0, 0, 0));
 	}
+
+	Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
 	
 }
 

@@ -1,12 +1,12 @@
 #include "EnemyBazokaExploringState.h"
-
+#include "Sound.h"
 
 EnemyBazokaExploringState::EnemyBazokaExploringState(EnermyData* data)
 {
 	pData = data;
 	pData -> iCurrentArr = 2;
 	pData -> isHittable = false;
-
+	Sound :: getInstance() -> play( "enemydead.wav", false , 1);
 }
 
 
