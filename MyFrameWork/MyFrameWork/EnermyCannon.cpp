@@ -62,3 +62,8 @@ void EnermyCannon::loadResources()
 	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
 	delete temp;
 }
+
+void EnermyCannon::playBeShootedEffect()
+{
+	Sound::getInstance()->play("beShooted", false, 1);
+}
