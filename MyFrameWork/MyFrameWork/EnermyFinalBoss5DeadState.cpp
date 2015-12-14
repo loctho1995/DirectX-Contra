@@ -6,6 +6,7 @@ EnermyFinalBoss5DeadState::EnermyFinalBoss5DeadState(EnermyData* data)
 	pData = data;
 	pData->iCurrentArr = 4;
 	pData->isHittable = false;
+	Sound::getInstance()->play("boss2finaldestroy.wav", false, 1);
 }
 
 

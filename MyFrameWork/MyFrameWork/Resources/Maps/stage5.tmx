@@ -65,7 +65,7 @@
   <object id="59" name="bazoka" type="enemy" x="1012" y="73" width="26" height="30"/>
   <object id="60" name="tank" type="enemy" x="2560" y="112" width="12" height="65"/>
   <object id="62" name="tank" type="enemy" x="3489" y="112" width="12" height="65"/>
-  <object id="63" name="respawnposition" type="&quot;&quot;" x="16" y="96" width="18" height="27"/>
+  <object id="63" name="respawnposition" type="&quot;&quot;" x="4650" y="96" width="18" height="27"/>
   <object id="64" name="capsuleweaponr" type="object" x="868" y="75" width="24" height="15"/>
   <object id="65" name="capsuleweaponr" type="object" x="1600" y="68" width="24" height="15"/>
   <object id="66" name="staticweaponm" type="object" x="768" y="160" width="32" height="32"/>

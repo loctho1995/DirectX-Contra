@@ -23,7 +23,7 @@ void GunBoss5BulletMovingState::onUpdate()
 
 void GunBoss5BulletMovingState::onCollision(CollisionRectF rect)
 {
-	if (rect.type == "throughable" || rect.type=="")
+	if (rect.type == "nonthroughable")
 	{
 		transition(new GunBoss5BulletExploringState(pData));
 	}

@@ -36,6 +36,7 @@ LoadingScene::LoadingScene()
     Sound::getInstance()->loadSound("Resources\\Sounds\\boss2finalhanddisappear.wav", "boss2finalhanddisappear.wav");
     Sound::getInstance()->loadSound("Resources\\Sounds\\bridgeexplosion.wav", "bridgeexplosion.wav");
     Sound::getInstance()->loadSound("Resources\\Sounds\\enemydead.wav", "enemydead.wav");
+	Sound::getInstance()->loadSound("Resources\\Sounds\\explode.wav", "explode.wav");
 }
 
 

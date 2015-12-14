@@ -223,6 +223,7 @@
     <ClCompile Include="PlayerSwimmingState.cpp" />
     <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SceneTransition.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShipBoss5.cpp" />
     <ClCompile Include="ShipBoss5ExploringState.cpp" />
@@ -240,6 +241,7 @@
     <ClCompile Include="tinyxml.cpp" />
     <ClCompile Include="tinyxmlerror.cpp" />
     <ClCompile Include="tinyxmlparser.cpp" />
+    <ClCompile Include="TransitionCircleOpen.cpp" />
     <ClCompile Include="UIComponents.cpp" />
     <ClCompile Include="ViewPort.cpp" />
     <ClCompile Include="WindowInit.cpp" />

@@ -162,6 +162,8 @@
     <ClCompile Include="EnermyTankStartingState.cpp" />
     <ClCompile Include="Lighting.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SceneTransition.cpp" />
+    <ClCompile Include="TransitionCircleOpen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />

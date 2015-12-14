@@ -1,10 +1,10 @@
 #include "ShipBoss5ExploringState.h"
 
-
 ShipBoss5ExploringState::ShipBoss5ExploringState(SpriteData * data)
 {
 	this->pData = data;
 	this->pData->iCurrentArr = 1;
+	Sound::getInstance()->play("explode.wav", false, 1);
 }
 
 
