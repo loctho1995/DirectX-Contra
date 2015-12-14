@@ -82,12 +82,17 @@ public:
 	}
 	virtual void beShooted( int damage) 
 	{
+		playBeShootedEffect();
 		pData -> HP -= damage;
 		if( pData -> HP <= 0 )
 		{
 			pData -> isDead = true;
 			die();
 		}
+	}
+	virtual void playBeShootedEffect()
+	{
+
 	}
 	virtual bool isThroughable()
 	{

@@ -28,7 +28,7 @@ PlayScene ::PlayScene()
 	{
 		shader = new Shader("Resources\\Shader\\lightShader.fx");
 
-		light = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, 0.0f, D3DXVECTOR4(0.0, 0.0, 0, 0));
+		light = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, 1.0f, D3DXVECTOR4(0.0, 0.0, 0, 0));
 	}
 	
 }
