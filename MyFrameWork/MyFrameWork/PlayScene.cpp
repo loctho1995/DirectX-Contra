@@ -16,7 +16,7 @@ PlayScene ::PlayScene()
 	isGameOver = false;
 	nTransitionFrames = 5 * 60;
 	count = 0;
-	if(UIComponents:: getInstance() -> getCurrentStage() == 5)
+	if(UIComponents:: getInstance() -> getCurrentStage() == 1)
 	{
 		isEffectOn = true;
 	}

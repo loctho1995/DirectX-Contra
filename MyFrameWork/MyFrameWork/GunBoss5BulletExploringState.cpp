@@ -5,6 +5,7 @@ GunBoss5BulletExploringState::GunBoss5BulletExploringState(SpriteData * data)
 {
 	pData = data;
 	this->pData->iCurrentArr = 1;
+	Sound::getInstance()->play("explode.wav", false, 1);
 }
 
 
