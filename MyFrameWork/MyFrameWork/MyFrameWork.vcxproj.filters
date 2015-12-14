@@ -162,6 +162,9 @@
     <ClCompile Include="EnermyTankStartingState.cpp" />
     <ClCompile Include="Lighting.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SceneTransition.cpp" />
+    <ClCompile Include="TransitionCircleOpen.cpp" />
+    <ClCompile Include="TransitionScan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -347,6 +350,10 @@
     <ClInclude Include="EnermyTankData.h" />
     <ClInclude Include="Lighting.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="SceneTransition.h" />
+    <ClInclude Include="TransitionScan.h" />
+    <ClInclude Include="TransitionCircleOpen.h" />
+    <ClInclude Include="TransitionEffect.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

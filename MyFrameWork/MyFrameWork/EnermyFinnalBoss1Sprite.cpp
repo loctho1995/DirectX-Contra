@@ -1,6 +1,6 @@
 #include "EnermyFinalBoss1Sprite.h"
 #include "EnermyFinalBoss1StandingState.h"
-
+#include "Sound.h"
 EnermyFinalBoss1Sprite:: EnermyFinalBoss1Sprite(int respawnX, int respawnY)
 {
 	
@@ -37,11 +37,18 @@ EnermyFinalBoss1Sprite:: EnermyFinalBoss1Sprite(int respawnX, int respawnY)
 	pData -> HP = 32;
 
 	pData ->body = RectF( -6.5f, -6.5f, 13.0f, 13.0f);
+
+	Sound :: getInstance() -> play("warning", false , 1);
 }
  
 EnermyFinalBoss1Sprite::~EnermyFinalBoss1Sprite()
 {
 	
+}
+
+void EnermyFinalBoss1Sprite:: playBeShootedEffect()
+{
+	Sound :: getInstance() -> play("beShooted", false , 1);
 }
 void EnermyFinalBoss1Sprite :: loadResources()
 {
@@ -53,3 +60,5 @@ void EnermyFinalBoss1Sprite :: loadResources()
 
 	delete temp;
 }
+
+

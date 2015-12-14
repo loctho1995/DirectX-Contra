@@ -8,8 +8,8 @@ Lighting::Lighting(void)
 	color = D3DXVECTOR4(0.0f, 0.0f, 0.0f, 0.0f);
 	cutOff  = 1;
 	ambientLightIntensity = 1;
-	isFadeIn = false;
-	isFadeOut  = true;
+	isFadeIn = true;
+	isFadeOut  = false;
 	nWaitingFrames  = 300;
 	fadingFrames  = 120;
 	isFading = false;
@@ -30,8 +30,8 @@ Lighting:: Lighting(D3DXVECTOR4 position,
  ambientLightIntensity(ambientLightIntensity),
  color(color)
 {
-	isFadeIn = false;
-	isFadeOut  = true;
+	isFadeIn = true;
+	isFadeOut  = false;
 	nWaitingFrames  = 300;
 	fadingFrames  = 120;
 	isFading = false;

@@ -119,7 +119,7 @@ PlayerSprite::PlayerSprite(float respawnX, float respawnY, Direction movedir)
 
 	pData ->verticalDir = Direction ::createNone();
 	
-	pData ->bulletType = BulletTypes::S;
+	pData ->bulletType = BulletTypes::F;
 
 	pData ->pState = new PlayerJumpingState(pData, false, 0.0f);	
 

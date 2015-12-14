@@ -66,3 +66,8 @@ void EnermyGunBoss1Sprite :: loadResources()
 	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion","", 6, 8);
 	delete temp;
 }
+
+void EnermyGunBoss1Sprite :: playBeShootedEffect()
+{
+	Sound::getInstance() -> play("beShooted", false, 1);
+}

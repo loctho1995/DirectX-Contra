@@ -1,5 +1,5 @@
 #include "UIComponents.h"
-
+#include "Sound.h"
 UIComponents* UIComponents::instance = nullptr;
 
 UIComponents* UIComponents:: getInstance()
@@ -55,11 +55,16 @@ int UIComponents:: getCurrentStage()
 }
 void UIComponents:: inscreaseLifes()
 {
+	Sound::getInstance() -> play("addlife", false, 1);
 	lifes++;
 }
 void UIComponents:: descreaseLifes()
 {
 	lifes--;
+	if(lifes <= 0)	
+	{
+		Sound::getInstance() -> play("gameOver", false , 1);
+	}
 }
 void UIComponents:: addScore( int val )
 {

@@ -267,6 +267,9 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 			}
 			if(temp ->getName().find("final") != std::string::npos)
 			{
+				Sound :: getInstance() -> stop();
+				Sound :: getInstance() -> play("explode.wav", false, 1 );
+
 				bIsFinish = true;
 			}
 			delete temp;
@@ -316,6 +319,11 @@ void Map :: cleanMap(Camera* cam, PlayerSprite* sprite)
 		for (std :: map < int , ObjectSprite* > ::iterator it = objectMap.begin(); it != objectMap.end(); it++)
 		{
 			it -> second -> die();
+		}
+
+		for (int i = 0; i < bulletSprites.size(); i++)
+		{
+			bulletSprites[i] ->die();
 		}
 		
 	}

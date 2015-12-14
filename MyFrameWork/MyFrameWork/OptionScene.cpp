@@ -85,7 +85,7 @@ void OptionScene :: update()
 {
 	if( isBack )
 	{
-		SceneManager::getInstance() ->createScene(new StartingScene());
+		SceneManager::getInstance() ->createSceneWithTransition(new StartingScene(), new TransitionCircleOpen());
 		return;
 	}
 	for (int i = 0; i <= VOLUME; i++)
