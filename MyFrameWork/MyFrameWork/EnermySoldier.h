@@ -21,7 +21,6 @@ public:
     static void loadResources();
     //void update();
     //void draw(Camera *cam);
-
 };
 
 

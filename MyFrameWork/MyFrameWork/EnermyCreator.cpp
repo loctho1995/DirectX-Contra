@@ -61,8 +61,8 @@ EnermyCreator::EnermyCreator()
     addAppearDirection("boss2finalhead", Direction::createUp());
 	addAppearDirection("soldierl", Direction::createRight());
     addAppearDirection("soldierr", Direction::createLeft());
-    addAppearDirection("soldiershotl", Direction::createUp());
-    addAppearDirection("soldiershotr", Direction::createUp());
+    addAppearDirection("soldiershotl", Direction::createNone() | Direction::createRight());
+    addAppearDirection("soldiershotr", Direction::createUp() | Direction::createLeft());
 
 	addAppearDirection("blazer", Direction::createUp());
 	addAppearDirection("dynamicbridge", Direction::createUp());

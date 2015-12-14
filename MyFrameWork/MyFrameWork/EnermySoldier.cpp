@@ -12,9 +12,7 @@ EnermySoldier::EnermySoldier(float x, float y, Direction dir, bool isShooter, st
         pData = new EnermySoldierData();
     }
 
-    ((EnermySoldierData*)pData)->isShooter = isShooter;
-    
-
+    ((EnermySoldierData*)pData)->isShooter = isShooter;    
 
     pData->x = x;
     pData->y = y;
@@ -63,9 +61,12 @@ void EnermySoldier::onCameraCollision(RectF cameraRect)
             this->pData->dir = Direction::createLeft();
     }
 
-    if (this->pData->x <= cameraRect.x)
+    if (this->pData->dir.isLeft())
     {
-        this->pData->isDesTroyed = true;
+        if (this->pData->x <= cameraRect.x)
+        {
+            this->pData->isDesTroyed = true;
+        }
     }
 }
 

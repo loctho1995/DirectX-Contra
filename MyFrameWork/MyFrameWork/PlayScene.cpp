@@ -18,7 +18,7 @@ PlayScene ::PlayScene()
 	count = 0;
 	if(UIComponents:: getInstance() -> getCurrentStage() == 5)
 	{
-		isEffectOn = true;
+		isEffectOn = false;
 	}
 	else
 	{
