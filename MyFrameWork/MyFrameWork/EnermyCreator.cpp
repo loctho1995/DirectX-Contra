@@ -70,7 +70,7 @@ EnermyCreator::EnermyCreator()
 
 	addAppearDirection("scubarsolider1", Direction::createUp());
 	addAppearDirection("scubarsolider2", Direction::createUp());
-	addAppearDirection("scubarsolider3", Direction::createUp());
+	addAppearDirection("scubarsolider3", Direction::createUp()| Direction::createRight());
 
 	addAppearDirection("finalboss5", Direction::createRight());
 	addAppearDirection("mine", Direction::createNone());

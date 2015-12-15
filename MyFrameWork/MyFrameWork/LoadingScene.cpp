@@ -57,6 +57,9 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\weaponB.wav", "weaponB");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\weaponR.wav", "weaponR");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\landing.wav", "landing");
+
+	Sound::getInstance()->loadSound("Resources\\Sounds\\tank.wav", "tank");
+	Sound::getInstance()->loadSound("Resources\\Sounds\\exbullet.wav", "exbullet");
 }
 
 

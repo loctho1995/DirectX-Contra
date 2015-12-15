@@ -3,6 +3,7 @@
 #include"EnermyScubarSoliderShootState.h"
 #include"EnermyScubarSoliderData.h"
 #include"EnermyScubarSoliderHidingState.h"
+#include"Sound.h"
 
 
 
@@ -66,4 +67,9 @@ void EnermyScubarSoliderSprite::draw(Camera* cam)
 void EnermyScubarSoliderSprite::update()
 {
 	pData->pState->onUpdate();
+}
+
+void EnermyScubarSoliderSprite::playBeShootedEffect()
+{
+	Sound::getInstance()->play("beShooted", false, 1);
 }

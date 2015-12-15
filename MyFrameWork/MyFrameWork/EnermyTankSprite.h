@@ -8,4 +8,5 @@ public:
 	static void loadResources();
 	void update();
 	void draw(Camera*);
+	virtual void playBeShootedEffect();
 };

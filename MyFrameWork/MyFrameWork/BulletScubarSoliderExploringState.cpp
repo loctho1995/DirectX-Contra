@@ -1,4 +1,5 @@
 #include"BulletScubarSoliderExploringState.h"
+#include"Sound.h"
 
 BulletScubarSoliderExploringState::BulletScubarSoliderExploringState(SpriteData * data, int index)
 {
@@ -14,6 +15,7 @@ BulletScubarSoliderExploringState::~BulletScubarSoliderExploringState()
 }
 void BulletScubarSoliderExploringState::onUpdate()
 {
+	Sound::getInstance()->play("exbullet", false, 1);
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
 	if (pData->ppTextureArrays[pData->iCurrentArr]->isLastTexture())
 	{

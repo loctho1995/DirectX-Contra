@@ -13,4 +13,6 @@ private:
 	int index;
 	int count;
 	int iLastIndex;
+	void Shoot();
+	void getSprite();
 };

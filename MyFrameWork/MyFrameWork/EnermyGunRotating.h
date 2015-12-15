@@ -12,5 +12,6 @@ public:
 	void update();
 	void draw(Camera *cam);
 	static void loadResources();
+	virtual void playBeShootedEffect();
 
 };

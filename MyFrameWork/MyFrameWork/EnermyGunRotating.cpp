@@ -94,3 +94,8 @@ void EnermyGunRotating::loadResources()
 	delete temp;
 	
 }
+
+void EnermyGunRotating::playBeShootedEffect()
+{
+	Sound::getInstance()->play("beShooted", false, 1);
+}

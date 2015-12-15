@@ -1,6 +1,7 @@
 #include"EnermyGunRotatingSwavelingState.h"
 #include"EnermyWhiteBullet.h"
 #include"EnermyGunRotatingDieState.h"
+#include"Sound.h"
 
 EnermyGunRotatingSwavelingState::EnermyGunRotatingSwavelingState(EnermyData *pData)
 {
@@ -81,7 +82,7 @@ void EnermyGunRotatingSwavelingState::onUpdate()
 	iFrame++;
 
 	if (isTheFirst == false)
-		SwavelingAndShoot(50,105,115);
+		SwavelingAndShoot(50,85,95);
 
 	/*if (isTheFirst == false && pData->stage == 3)
 		SwavelingAndShoot(60, 75);*/
@@ -116,9 +117,12 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 		}
 		if (iFrame >iFrameShoot)
 		{
+			
 			if (flag == true)
-				switch (iCurentIndex)
 			{
+				Sound::getInstance()->play("shootM", false, 1);
+				switch (iCurentIndex)
+				{
 				case 1: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x, pData->y - pData->body.height / 2, true, fAngle)); break;
 				case 2: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 4, pData->y - pData->body.height / 2, true, fAngle)); break;
 				case 3:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 2, pData->y - pData->body.height * 1 / 4, true, fAngle)); break;
@@ -133,7 +137,9 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 				case 12:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 4, pData->y - pData->body.height / 2, true, fAngle)); break;
 				default:
 					break;
+				}
 			}
+				
 			pData->ppTextureArrays[pData->iCurrentArr]->update();
 			if (isTheFirst == true)
 				isTheFirst = false;
@@ -170,9 +176,12 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 
 		if (iFrame ==iFramebet)
 		{
+			
 			if (flag == true)
-				switch (iCurentIndex)
 			{
+				
+				switch (iCurentIndex)
+				{
 				case 1: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x, pData->y - pData->body.height / 2, true, fAngle)); break;
 				case 2: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 4, pData->y - pData->body.height / 2, true, fAngle)); break;
 				case 3:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 2, pData->y - pData->body.height * 1 / 4, true, fAngle)); break;
@@ -187,16 +196,19 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 				case 12:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 4, pData->y - pData->body.height / 2, true, fAngle)); break;
 				default:
 					break;
+				}
 			}
-
+				
 			pData->ppTextureArrays[pData->iCurrentArr]->update();
 		}
 
 		if (iFrame >iFrameShoot)
 		{
-			if (flag == true )
-				switch (iCurentIndex)
+			if (flag == true)
 			{
+				Sound::getInstance()->play("shootM", false, 1);
+				switch (iCurentIndex)
+				{
 				case 1: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x, pData->y - pData->body.height / 2, true, fAngle)); break;
 				case 2: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 4, pData->y - pData->body.height / 2, true, fAngle)); break;
 				case 3:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x + pData->body.width * 1 / 2, pData->y - pData->body.height * 1 / 4, true, fAngle)); break;
@@ -211,7 +223,9 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 				case 12:pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x - pData->body.width * 1 / 4, pData->y - pData->body.height / 2, true, fAngle)); break;
 				default:
 					break;
+				}
 			}
+				
 
 				pData->ppTextureArrays[pData->iCurrentArr]->update();
 
