@@ -12,6 +12,6 @@ public:
 	virtual void handleInput();
 	~EndingScene(void);
 private:
-	Label label;
+	Label label[6];
 };
 
