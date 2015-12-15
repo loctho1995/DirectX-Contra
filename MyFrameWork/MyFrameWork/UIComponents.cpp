@@ -18,9 +18,10 @@ UIComponents::UIComponents()
 	score = 0;
 	highScore = 0 ;//highScore; load through file
 
-	currentStage = 1;
+	currentStage = 5;
 
 	lifes = 5;
+
 	configKeyBoard[LEFT] = defaultKeyBoard[LEFT] = VK_LEFT;
 	configKeyBoard[RIGHT] = defaultKeyBoard[RIGHT] = VK_RIGHT;
 	configKeyBoard[UP] = defaultKeyBoard[UP] = VK_UP;
