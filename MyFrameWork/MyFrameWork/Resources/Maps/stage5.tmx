@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="319" height="15" tilewidth="16" tileheight="16" nextobjectid="96">
- <tileset firstgid="1" name="map5_tileset" tilewidth="16" tileheight="16" tilecount="140">
-  <image source="map5_tileset.png" width="224" height="160"/>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="319" height="15" tilewidth="16" tileheight="16" nextobjectid="94">
+ <tileset firstgid="1" name="map5_tileset" tilewidth="16" tileheight="16" tilecount="154">
+  <image source="map5_tileset.png" width="224" height="176"/>
+  <tile id="79">
+   <animation>
+    <frame tileid="79" duration="100"/>
+    <frame tileid="149" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="80">
+   <animation>
+    <frame tileid="80" duration="100"/>
+    <frame tileid="150" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="82">
+   <animation>
+    <frame tileid="82" duration="100"/>
+    <frame tileid="152" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="83">
+   <animation>
+    <frame tileid="83" duration="100"/>
+    <frame tileid="153" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="84">
+   <animation>
+    <frame tileid="84" duration="100"/>
+    <frame tileid="140" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="85">
+   <animation>
+    <frame tileid="85" duration="100"/>
+    <frame tileid="141" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="86">
+   <animation>
+    <frame tileid="86" duration="100"/>
+    <frame tileid="142" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="87">
+   <animation>
+    <frame tileid="87" duration="100"/>
+    <frame tileid="143" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="88">
+   <animation>
+    <frame tileid="88" duration="100"/>
+    <frame tileid="144" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="89">
+   <animation>
+    <frame tileid="89" duration="100"/>
+    <frame tileid="145" duration="100"/>
+   </animation>
+  </tile>
  </tileset>
  <layer name="BackGroundLayer" width="319" height="15">
   <data encoding="base64" compression="zlib">
@@ -65,7 +125,7 @@
   <object id="59" name="bazoka" type="enemy" x="1012" y="73" width="26" height="30"/>
   <object id="60" name="tank" type="enemy" x="2560" y="112" width="12" height="65"/>
   <object id="62" name="tank" type="enemy" x="3489" y="112" width="12" height="65"/>
-  <object id="63" name="respawnposition" type="&quot;&quot;" x="4650" y="122" width="18" height="27"/>
+  <object id="63" name="respawnposition" type="&quot;&quot;" x="651" y="88" width="18" height="27"/>
   <object id="64" name="capsuleweaponr" type="object" x="868" y="75" width="24" height="15"/>
   <object id="65" name="capsuleweaponr" type="object" x="1600" y="68" width="24" height="15"/>
   <object id="66" name="staticweaponm" type="object" x="768" y="160" width="32" height="32"/>
@@ -96,7 +156,5 @@
   <object id="91" name="soldiershotr" type="enemy" x="3953" y="116.5" width="20" height="31"/>
   <object id="92" name="soldiershotr" type="enemy" x="4056" y="163.5" width="20" height="31"/>
   <object id="93" name="soldiershotl" type="enemy" x="4430" y="120.5" width="20" height="31"/>
-  <object id="94" name="scubarsolider3" type="enemy" x="1826" y="195" width="20" height="18"/>
-  <object id="95" name="scubarsolider3" type="enemy" x="2037" y="196" width="20" height="18"/>
  </objectgroup>
 </map>
