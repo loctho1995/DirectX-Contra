@@ -81,6 +81,9 @@ public:
 			break;
 		case N:
 			break;
+		case D:
+			Sound::getInstance() -> play("weaponD", false, 1);
+			break;
 		default:
 			break;
 		}

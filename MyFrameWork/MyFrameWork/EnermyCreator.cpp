@@ -48,6 +48,7 @@ EnermyCreator::EnermyCreator()
 	addAppearDirection("capsuleweaponb", Direction::createLeft());
 	addAppearDirection("capsuleweaponr", Direction::createLeft());
 	addAppearDirection("capsuleweaponl", Direction::createLeft());
+	addAppearDirection("capsuleweapond", Direction::createLeft());
 
 	addAppearDirection("capsuleweapon3s", Direction::createDown());
 	addAppearDirection("capsuleweapon3m", Direction::createDown());
@@ -295,6 +296,11 @@ ObjectSprite* EnermyCreator::createObjectSprite(std::string name, int respawnX, 
 	if (name == "capsuleweaponl")
 	{
 		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::L);
+	}
+
+	if (name == "capsuleweapond")
+	{
+		return new ObjectCapsuleWeapon(respawnX, respawnY, 1, BulletTypes::D);
 	}
 	//capsuleweapon stage 3
 	if (name == "capsuleweapon3s")

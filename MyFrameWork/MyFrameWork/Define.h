@@ -8,5 +8,6 @@ enum BulletTypes
     B, 
     L, 
     R, 
-    N //dan normal
+    N, //dan normal
+	D
 };
