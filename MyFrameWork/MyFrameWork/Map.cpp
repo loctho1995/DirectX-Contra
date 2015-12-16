@@ -644,7 +644,29 @@ void Map :: onCollision(PlayerSprite* sprite, Camera* cam)
 							else
 							{
 								ObjectCapsuleWeapon * weaponAnother = dynamic_cast< ObjectCapsuleWeapon *> (objectIt -> second);
-								sprite ->setBulletType (weaponAnother ->getBulletType());
+								if(weaponAnother -> getBulletType() == BulletTypes::D)
+								{
+									Sound::getInstance() -> play("weaponD", false, 1);
+									for (int i = 0; i < bulletSprites.size(); i++)
+									{
+										bulletSprites[i] -> die();	
+									}
+
+									for (auto it = enermyMap.begin(); it != enermyMap.end(); it++)
+									{
+										it -> second -> die();
+									}
+
+									for (auto it = objectMap.begin(); it != objectMap.end(); it++)
+									{
+										it -> second -> die();
+									}
+								}
+								else
+								{
+									sprite ->setBulletType (weaponAnother ->getBulletType());
+								}
+								
 								objectIt -> second ->die();
 							}
 						}
