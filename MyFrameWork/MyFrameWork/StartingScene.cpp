@@ -13,6 +13,7 @@ StartingScene::StartingScene(void)
 									8,
 									RectI(0, 0, 8, 8));
 	Graphics::getInstance() ->setFont(font);
+	UIComponents::getInstance() -> resetStage();
 }
 
 

@@ -17,6 +17,18 @@ public:
 			subNodes[i] = NULL;
 		}
 	}
+	~QuadTree()
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			if(subNodes[i] != NULL)
+			{
+				delete subNodes[i];
+				subNodes[i] = NULL;
+			}
+		}
+		delete []subNodes;
+	}
 	QuadTree()
 	{}
 	//
@@ -74,6 +86,7 @@ public:
 				if(subNodes[i] != NULL)
 				{
 					subNodes[i] ->clear();
+					delete subNodes[i];
 					subNodes[i] = NULL;
 				}
 			}

@@ -1,6 +1,6 @@
 #include "EnemyMineFallingState.h"
 #include "EnemyMineExploringState.h"
-
+#include "Sound.h"
 EnemyMineFallingState::EnemyMineFallingState(EnermyData* data)
 {
 	this -> pData = data;
@@ -12,6 +12,7 @@ EnemyMineFallingState::EnemyMineFallingState(EnermyData* data)
 	acceleration = 0.12f;
 	pData -> vx = pData -> transform(speedX);
 	pData -> vy = -speedY;
+	Sound::getInstance() -> play("fallingmine", false , 1);	
 }
 
 

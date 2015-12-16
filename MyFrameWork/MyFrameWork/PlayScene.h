@@ -18,7 +18,7 @@ class PlayScene : public Scene
 public:
 
 	PlayScene();
-	virtual ~PlayScene() {}
+	virtual ~PlayScene();
 
 	virtual void onCollision();
 	virtual void handleInput();

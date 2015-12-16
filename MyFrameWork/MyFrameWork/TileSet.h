@@ -84,19 +84,9 @@ public:
 		nColumns = 0;
 		nRows = 0;
 	}
-	int firstGridID;
-	int lastGridID;
-	int tileWidth;
-	int tileHeight;
-	int spacing;
-	int margin;
-	int width; // width in pixel
-	int height; // height in pixel 
-	int nColumns; // number of col in tileset
-	int nRows; // number of row in tile set
-	std:: string name;
-	LPDIRECT3DTEXTURE9 pTexture;
-	std::map<int , AnimationTiled> animationTiles;
+	~TileSet()
+	{
+	}
 	void update()
 	{
 		for (std::map<int , AnimationTiled>::iterator it = animationTiles.begin(); it != animationTiles.end(); it++)
@@ -131,4 +121,19 @@ public:
 
 		animationTiles[ id ] = animationTiled;
 	}
+
+	int firstGridID;
+	int lastGridID;
+	int tileWidth;
+	int tileHeight;
+	int spacing;
+	int margin;
+	int width; // width in pixel
+	int height; // height in pixel 
+	int nColumns; // number of col in tileset
+	int nRows; // number of row in tile set
+	std:: string name;
+	LPDIRECT3DTEXTURE9 pTexture;
+	std::map<int , AnimationTiled> animationTiles;
+	
 };

@@ -1,6 +1,6 @@
 #include "EnemyMineSprite.h"
 #include "EnemyMineFallingState.h"
-
+#include "Sound.h"
 EnemyMineSprite::EnemyMineSprite(int respawnX, int respawnY)
 {
 	pData = new EnermyData();
@@ -19,6 +19,7 @@ EnemyMineSprite::EnemyMineSprite(int respawnX, int respawnY)
 	pData->ppTextureArrays[1 ] -> setAnchorPoint(0.5f, 1.0f);
 	pData ->body = RectF( -14.0f / 2, -14.0f, 14.0f, 14.0f);
 	pData -> pState = new EnemyMineFallingState(pData);
+	
 }
 
 

@@ -68,6 +68,52 @@ Map :: Map(std::string mapName)
 
 }
 
+
+Map::~Map()
+{
+	for (int i = 0; i < tileSets.size(); i++)
+	{
+		if(tileSets[i])
+			delete tileSets[i];
+	}
+	tileSets.clear();
+
+	for (int i = 0; i < layers.size(); i++)
+	{
+		if(layers[i])
+			delete layers[i];
+	}
+	layers.clear();
+
+	collisionRectFs.clear();
+
+	for (int i = 0; i < bulletSprites.size(); i++)
+	{
+		if(bulletSprites[i])
+			delete bulletSprites[i];
+	}
+	bulletSprites.clear();
+	for (int i = 0; i < Objects.size(); i++)
+	{
+		if(Objects[i])
+			delete Objects[i];
+	}
+	Objects.clear();
+
+	for (auto it = enermyMap.begin(); it != enermyMap.end(); it++)
+	{
+		delete it -> second;
+	}
+
+	for (auto it = objectMap.begin(); it != objectMap.end(); it++)
+	{
+		delete it -> second;
+	}
+
+	delete mapCollisionTree;
+	
+
+}
 #pragma region 
 
 

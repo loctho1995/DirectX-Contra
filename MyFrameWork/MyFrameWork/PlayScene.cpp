@@ -18,7 +18,7 @@ PlayScene ::PlayScene()
 	count = 0;
 	if(UIComponents:: getInstance() -> getCurrentStage() == 5)
 	{
-		isEffectOn = false;
+		isEffectOn = true;
 	}
 	else
 	{
@@ -30,9 +30,37 @@ PlayScene ::PlayScene()
 
 		light = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, 1.0f, D3DXVECTOR4(0.0, 0.0, 0, 0));
 	}
+	else
+	{
+		shader = NULL;
+		light = NULL;
+	}
 
 	Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
 	
+}
+
+PlayScene ::~PlayScene()
+{
+	delete pPlayer;
+	pPlayer = NULL;
+	delete viewPort;
+	viewPort = NULL;
+
+	delete cam;
+	cam = NULL;
+	delete pMap;
+	pMap = NULL;
+	delete lifeTexture;
+	lifeTexture = NULL;
+	if( shader)
+	{
+		delete shader;
+	}
+	if( light )
+	{
+		delete light;
+	}
 }
 
 void PlayScene::onCollision()

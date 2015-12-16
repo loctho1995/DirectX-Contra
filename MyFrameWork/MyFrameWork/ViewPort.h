@@ -16,5 +16,4 @@ public:
 	RectI getPort()	 {return port;} 
 private:
 	RectI port;
-	Graphics* pGraphics;
 };

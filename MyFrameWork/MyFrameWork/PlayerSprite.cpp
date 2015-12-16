@@ -129,7 +129,7 @@ PlayerSprite:: ~PlayerSprite()
 {
 	for (int i = 0; i < PlayerData::COUNT; i++)
 	{
-		if(pData -> ppTextureArrays[i] != NULL )
+		if(pData -> ppTextureArrays[i] )
 			delete pData -> ppTextureArrays[i];
 	}
 	delete[] pData->ppTextureArrays;

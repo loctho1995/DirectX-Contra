@@ -4,6 +4,7 @@
 GameOverScene::GameOverScene()
 {
 	UIComponents::getInstance() -> gameOverReset();
+	Sound::getInstance() -> play("gameOver", false , 1);
 }
 
 

@@ -41,6 +41,9 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\explode.wav", "explode.wav");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\beShooted.wav", "beShooted");
 
+	Sound::getInstance()->loadSound("Resources\\Sounds\\fallingmine.wav", "fallingmine");
+
+
 	Sound::getInstance()->loadSound("Resources\\Sounds\\playerdie.wav", "playerdie");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\addlife.wav", "addlife");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\gameOver.wav", "gameOver");
@@ -74,7 +77,6 @@ void LoadingScene::onUpdate()
 	std :: cout << loadedSprite << "/" << nSprites << "\n";
 	if( loadedSprite == nSprites && count == nTransitionTime)
 	{
-		//SceneManager::getInstance() -> createScene( new PlayScene());
         SceneManager::getInstance()->createSceneWithTransition(new PlayScene(), new TransitionCircleOpen(0.005f));
 	}
 }

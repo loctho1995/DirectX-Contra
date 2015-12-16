@@ -30,6 +30,7 @@ public:
 	void setKey(int index, char keyCode);
 	char getDefaultKey(int index);
 	void setDefaultKeyBoard();
+	void resetStage();
 private:
 	static UIComponents* instance;
 	UIComponents();

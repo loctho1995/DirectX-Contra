@@ -22,4 +22,9 @@ Shader::Shader(std::string sourceFile)
 
 Shader::~Shader(void)
 {
+	if(pShader)
+	{
+		pShader ->Release();
+		pShader = NULL;
+	}
 }

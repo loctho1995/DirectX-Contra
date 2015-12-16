@@ -64,7 +64,8 @@ void UIComponents:: descreaseLifes()
 	lifes--;
 	if(lifes <= 0)	
 	{
-		Sound::getInstance() -> play("gameOver", false , 1);
+		Sound::getInstance() -> stop();
+		
 	}
 }
 void UIComponents:: addScore( int val )
@@ -80,6 +81,10 @@ void UIComponents:: addScore( int val )
 void UIComponents:: setStage(int val)
 {
 	currentStage = val;
+}
+void UIComponents:: resetStage()
+{
+	currentStage = 1;
 }
 void UIComponents:: gameOverReset()
 {

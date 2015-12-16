@@ -19,6 +19,7 @@ class Map
 
 public:
 	Map(std::string mapName);
+	~Map();
 	void draw(Camera* cam);
 	std:: vector< TileSet* >* getTileSets() // return the address of this vector
 	{
