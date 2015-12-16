@@ -154,7 +154,7 @@
   <object id="65" name="capsuleweaponr" type="object" x="1600" y="68" width="24" height="15"/>
   <object id="66" name="staticweaponm" type="object" x="768" y="160" width="32" height="32"/>
   <object id="67" name="staticweaponf" type="object" x="1600" y="112" width="32" height="32"/>
-  <object id="68" name="capsuleweaponr" type="object" x="1600" y="144" width="24" height="15"/>
+  <object id="68" name="capsuleweapond" type="object" x="1600" y="144" width="24" height="15"/>
   <object id="69" name="capsuleweapons" type="object" x="1600" y="192" width="24" height="15"/>
   <object id="70" name="staticweaponl" type="object" x="4144" y="144" width="32" height="32"/>
   <object id="71" name="soldierr" type="enemy" x="236" y="118" width="20" height="31"/>
