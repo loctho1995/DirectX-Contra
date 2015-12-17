@@ -31,6 +31,7 @@ EnermySoldier::EnermySoldier(float x, float y, Direction dir, bool isShooter, st
     pData->dir = dir;
     pData->body = RectF(-9.0f, -33.0f, 18.0f, 33.0f);
     pData->vx = pData->vy = 0;
+    pData->score = 100;
 
     pData->pState = new EnermySoldierRunningState(pData);
     //pData->pState = new EnermySoldierJumpingState(pData);
