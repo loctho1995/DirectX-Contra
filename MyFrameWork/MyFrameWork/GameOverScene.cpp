@@ -48,12 +48,14 @@ void GameOverScene:: handleInput()
 		case VK_RETURN:
 			if (e.isRelease())
 			{
+				Sound::getInstance() -> stop();
 				SceneManager::getInstance() ->createScene( new PlayScene());
 			}
 			break;
 		case VK_END:
 			if (e.isRelease())
 			{
+				Sound::getInstance() -> stop();
 				SceneManager::getInstance() ->createScene( new StartingScene());
 			}
 			break;

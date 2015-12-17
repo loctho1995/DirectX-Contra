@@ -37,12 +37,15 @@ public:
 	float getVolume();
 	~Sound();
 	static Sound* getInstance();
-	
+	void mute();
+	void unMute();
 private:
 	Sound(HWND hWnd);
 	static Sound * instance;
 	IDirectSound8* pDevice;
 	IDirectSoundBuffer* primaryBuffer;
 	std::map<std::string, IDirectSoundBuffer8*> soundBufferMap;
+	bool isMute;
+	
 };
 

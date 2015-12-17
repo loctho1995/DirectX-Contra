@@ -85,14 +85,15 @@ void PlayScene::handleInput()
 		{
 			if (e.isRelease())
 			{
-				Sound::getInstance() ->stop();
+				Sound::getInstance() ->mute();
 			}
 		}
 		else if ( e.getCode() == 0x50)
 		{
 			if (e.isRelease())
 			{
-				Sound::getInstance() ->play("background2.wav", true, 1);
+				Sound::getInstance() ->unMute();
+				Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
 			}
 		}
 		else if( !isPause)

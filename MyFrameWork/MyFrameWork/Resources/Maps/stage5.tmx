@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="319" height="15" tilewidth="16" tileheight="16" nextobjectid="95">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="319" height="15" tilewidth="16" tileheight="16" nextobjectid="96">
  <tileset firstgid="1" name="map5_tileset" tilewidth="16" tileheight="16">
   <image source="map5_tileset.png" width="224" height="176"/>
   <tile id="13">
@@ -179,6 +179,6 @@
   <object id="91" name="soldiershotr" type="enemy" x="3953" y="116.5" width="20" height="31"/>
   <object id="92" name="soldiershotr" type="enemy" x="4056" y="163.5" width="20" height="31"/>
   <object id="93" name="soldiershotl" type="enemy" x="4430" y="120.5" width="20" height="31"/>
-  <object id="94" name="respawnposition" type="&quot;&quot;" x="1464" y="69.5" width="18" height="27"/>
+  <object id="95" name="respawnposition" type="&quot;&quot;" x="26" y="60.5" width="18" height="27"/>
  </objectgroup>
 </map>

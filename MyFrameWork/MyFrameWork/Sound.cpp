@@ -38,7 +38,7 @@ Sound::Sound(HWND hWnd)
 		std:: cout << "Can not create primaryBuffer";
 	}
 	volume = 100.0f;
-	
+	isMute = false;
 }
 Sound::~Sound()
 {
@@ -167,6 +167,10 @@ void Sound :: loadSound(char* fileName, std:: string name)
 
 void Sound :: play(std:: string name, bool infiniteLoop, int times)
 {
+	if(isMute)
+	{
+		return;
+	}
 	std::map< std::string, IDirectSoundBuffer8*> ::iterator it;
 	it = soundBufferMap.find(name);
 	if(it == soundBufferMap.end())
@@ -224,5 +228,15 @@ void Sound :: setVolume(float percentage, std:: string name)
 		long volumne = (percentage) / 100 *(- DSBVOLUME_MIN) + DSBVOLUME_MIN;
 		it -> second ->SetVolume(volumne);
 	}
+}
+
+void Sound :: mute()
+{
+	isMute = true;
+	Sound::getInstance() -> stop();
+}
+void Sound :: unMute()
+{
+	isMute = false;
 }
 
