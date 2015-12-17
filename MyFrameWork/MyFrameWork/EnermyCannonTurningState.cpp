@@ -4,6 +4,7 @@
 EnermyCannonTurningState::EnermyCannonTurningState(EnermyData* pData)
 {
 	this->pData = pData;
+	this->pData->isHittable = true;
 	this->getIndex();
 	count = 0; 
 	nShootCycle = 150;

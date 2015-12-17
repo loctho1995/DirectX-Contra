@@ -6,8 +6,5 @@ public:
 	EnermyCannonDeadState(EnermyData* pData);
 	~EnermyCannonDeadState();
 	virtual void onUpdate();
-private:
-	int count;
-	int nHoldFrames;
 };
 

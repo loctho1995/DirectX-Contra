@@ -5,7 +5,7 @@ EnermyCannonData::EnermyCannonData(std::vector < BulletSprite* >& bulletsVector 
 	EnermyData(bulletsVector)
 {
 	this->botName = "cannon";
-	this->isHittable = true;
+	this->isHittable = false;
 	this->isThrougable = true;
 	this->isDesTroyed = false;
 	this->HP = 8;

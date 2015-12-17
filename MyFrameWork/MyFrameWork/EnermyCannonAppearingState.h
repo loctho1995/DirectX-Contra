@@ -10,7 +10,4 @@ public:
 	EnermyCannonAppearingState(EnermyData* pData);
 	~EnermyCannonAppearingState();
 	virtual void onUpdate();
-private:
-	int count;
-	int nHoldFrames;
 };

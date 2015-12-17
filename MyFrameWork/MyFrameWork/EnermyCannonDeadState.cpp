@@ -6,8 +6,6 @@ EnermyCannonDeadState::EnermyCannonDeadState(EnermyData* pData)
 	this->pData = pData;
 	this->pData->iCurrentArr = EnermyCannonData::DEAD;
 	pData->isHittable = false;
-	nHoldFrames = 22;
-	count = 0;
 }
 
 
@@ -18,9 +16,7 @@ EnermyCannonDeadState::~EnermyCannonDeadState()
 void EnermyCannonDeadState::onUpdate()
 {
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
-	count++;
-	count %= nHoldFrames;
-	if (count == 0)
+	if (pData->ppTextureArrays[pData->iCurrentArr]->isLastTexture())
 	{
 		pData->isDesTroyed = true;
 	}

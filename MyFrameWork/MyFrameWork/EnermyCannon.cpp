@@ -13,7 +13,7 @@ EnermyCannon::EnermyCannon(int respawnX, int respawnY, int isStage, std::vector 
 	this->initTextureArrays(EnermyCannonData::COUNT);
 	this->addTextureArray(EnermyCannonData::PREPARE, "prepare", 1, 60);
 	pData->ppTextureArrays[EnermyCannonData::PREPARE]->setAnchorPoint(0.5f, 1.0f);
-	this->addTextureArray(EnermyCannonData::APPEAR, "appear", 6, 4);
+	this->addTextureArray(EnermyCannonData::APPEAR, "appear", 6, 5);
 	pData->ppTextureArrays[EnermyCannonData::APPEAR]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::TURN0, "standzero", 3, 6);
 	pData->ppTextureArrays[EnermyCannonData::TURN0]->setAnchorPoint(0.5f, 1.0f);
@@ -21,7 +21,7 @@ EnermyCannon::EnermyCannon(int respawnX, int respawnY, int isStage, std::vector 
 	pData->ppTextureArrays[EnermyCannonData::TURN30]->setAnchorPoint(0.5f, 1.0f);
 	this->addTextureArray(EnermyCannonData::TURN60, "standsixty", 3, 6);
 	pData->ppTextureArrays[EnermyCannonData::TURN60]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnermyCannonData::DEAD] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
+	pData->ppTextureArrays[EnermyCannonData::DEAD] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 10);
 	pData->ppTextureArrays[EnermyCannonData::DEAD]->setAnchorPoint(0.5f, 1.0f);
 
 	pData->dir = Direction::createRight();
@@ -51,7 +51,7 @@ void EnermyCannon::update()
 
 void EnermyCannon::loadResources()
 {
-	TextureArray* temp = new TextureArray("Resources\\Sprites\\cannon", "appear", "", 6, 4);
+	TextureArray* temp = new TextureArray("Resources\\Sprites\\cannon", "appear", "", 6, 5);
 	delete temp;
 	temp = new TextureArray("Resources\\Sprites\\cannon", "standzero", "", 3, 6);
 	delete temp;
@@ -59,7 +59,7 @@ void EnermyCannon::loadResources()
 	delete temp;
 	temp = new TextureArray("Resources\\Sprites\\cannon", "standsixty", "", 3, 6);
 	delete temp;
-	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 10);
 	delete temp;
 }
 

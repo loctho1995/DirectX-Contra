@@ -4,8 +4,6 @@ EnermyCannonAppearingState::EnermyCannonAppearingState(EnermyData *pData)
 {
 	this->pData = pData;
 	this->pData->iCurrentArr = EnermyCannonData::APPEAR;
-	nHoldFrames = 24;
-	count = 0;
 }
 
 EnermyCannonAppearingState::~EnermyCannonAppearingState()
@@ -16,9 +14,7 @@ EnermyCannonAppearingState::~EnermyCannonAppearingState()
 void EnermyCannonAppearingState::onUpdate()
 {
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
-	count++;
-	count %= nHoldFrames;
-	if (count == 0)
+	if (pData->ppTextureArrays[pData->iCurrentArr]->isLastTexture())
 	{
 		transition(new EnermyCannonTurningState(pData));
 	}
