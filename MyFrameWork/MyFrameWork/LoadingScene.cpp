@@ -78,7 +78,7 @@ void LoadingScene::onUpdate()
 	std :: cout << loadedSprite << "/" << nSprites << "\n";
 	if( loadedSprite == nSprites && count == nTransitionTime)
 	{
-        SceneManager::getInstance()->createSceneWithTransition(new PlayScene(), new TransitionCircleOpen(0.005f));
+        SceneManager::getInstance()->createSceneWithTransition(new PlayScene(), new TransitionCircleScan());
 	}
 }
 void LoadingScene:: render()

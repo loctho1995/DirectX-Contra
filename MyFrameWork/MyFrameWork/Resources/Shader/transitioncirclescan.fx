@@ -25,7 +25,7 @@ struct VS_OUT
 float4x4 WorldViewProj : WorldViewProjection;
 Texture2D texture0;
 Texture2D texture1;
-float radius;
+float angle;
 
 SamplerState textureSampler0
 {
@@ -66,16 +66,18 @@ float4 doPX(VS_OUT input) : COLOR
 	float4 color0 = tex2D(textureSampler0, pos);
 	float4 color1 = tex2D(textureSampler1, pos);
 
+	float2 orivec = float2(-0.5, 0.0);
 	float2 center = float2(-0.5, 0.5);
-	float2 curr = float2(pos.x - center.x, pos.y - center.y);
-	float veclength = length(curr);
+	orivec = orivec - center;
+	float2 currvec = float2(pos.x - center.x, pos.y - center.y);
+	float anl = acos(dot(normalize(orivec), normalize(currvec)));
 	
-	if(veclength <= radius)
+	if(anl <= angle)
 	{	
-		return color0;
+		return color1;
 	}
 	
-	return color1;
+	return color0;
 }
 
 technique technique0 {
