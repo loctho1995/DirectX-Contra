@@ -2,15 +2,14 @@
 #include "Sound.h"
 LoadingScene::LoadingScene()
 {
-	BitMapFont* font = new BitMapFont("Resources\\Fonts\\fontAA.png", 
-									"ABCDEFGHIKLMNOPQRSTUVXWZY",
-									"fontAA",
-									10,
-									3,
-									13,
-									RectI(0, 0, 28, 30));
+	BitMapFont* font = new BitMapFont("Resources\\Fonts\\fontByLinh.png", 
+									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ ",
+									"fontByLinh",
+									6,
+									9,
+									8,
+									RectI(0, 0, 8, 8));
 	Graphics::getInstance() ->setFont(font);
-
 	int stageIndex = UIComponents::getInstance()->getCurrentStage();
 	std:: string mapName = "stage" + std::to_string(stageIndex);;
     Map* map = new Map(mapName);
@@ -68,6 +67,8 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\tank.wav", "tank");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\exbullet.wav", "exbullet");
 
+	Sound::getInstance() -> loadSound("Resources\\Sounds\\cursor.wav", "cursor");
+	Sound::getInstance() -> loadSound("Resources\\Sounds\\select.wav", "select");
 
 	Sound::getInstance() -> play("clearStage", false , 1);
 }

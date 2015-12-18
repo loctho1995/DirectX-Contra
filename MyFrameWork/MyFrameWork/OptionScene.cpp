@@ -64,8 +64,7 @@ OptionScene::OptionScene(void)
 
 	pBackGround = new Texture("Resources\\BackGround\\OSBackGround.png","OSBackGround");
 	pCursor = new Texture("Resources\\BackGround\\OScursor.png","OScursor");
-	Sound::getInstance() -> loadSound("Resources\\Sounds\\cursor.wav", "cursor");
-	Sound::getInstance() -> loadSound("Resources\\Sounds\\select.wav", "select");
+	
 
 	
 }

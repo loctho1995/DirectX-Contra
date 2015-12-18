@@ -13,6 +13,18 @@ public:
 	virtual void handleInput();
 	~GameOverScene(void);
 private:
-
+	enum
+	{
+		CONTINUE,
+		END,
+		TITLE,
+		SCORE,
+		HISCORE,
+		COUNT
+	} LableIndex;
+	Texture* pBackGround;
+	Texture* pCursor;
+	Label **label;
+	int cursorIndex;
 };
 

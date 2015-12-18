@@ -20,7 +20,7 @@ UIComponents::UIComponents()
 
 	currentStage = 3;
 
-	lifes = 5;
+	lifes = 1;
 
 	configKeyBoard[LEFT] = defaultKeyBoard[LEFT] = VK_LEFT;
 	configKeyBoard[RIGHT] = defaultKeyBoard[RIGHT] = VK_RIGHT;
@@ -89,7 +89,7 @@ void UIComponents:: resetStage()
 void UIComponents:: gameOverReset()
 {
 	score = 0;
-	highScore = 0 ;//highScore; load through file
+	//highScore = 0 ;//highScore; load through file
 	lifes = 3;
 }
 
