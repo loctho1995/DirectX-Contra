@@ -1,363 +1,1146 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="base64.cpp" />
-    <ClCompile Include="EnermyFinalBoss1DeadState.cpp" />
-    <ClCompile Include="EnermyFinalBoss1StandingState.cpp" />
-    <ClCompile Include="EnermyFinnalBoss1Sprite.cpp" />
-    <ClCompile Include="EnermyGunBoss1DeadState.cpp" />
-    <ClCompile Include="EnermyGunBoss1FiringState.cpp" />
-    <ClCompile Include="EnermyGunBoss1Sprite.cpp" />
-    <ClCompile Include="EnermyGunBoss1StandingState.cpp" />
-    <ClCompile Include="EnermyInkJumpingState.cpp" />
-    <ClCompile Include="EnermyInkSprite.cpp" />
-    <ClCompile Include="EnermyInkStandingState.cpp" />
-    <ClCompile Include="EnermySoldier.cpp" />
-    <ClCompile Include="EnermySoldierData.cpp" />
-    <ClCompile Include="EnermySoldierDestroyState.cpp" />
-    <ClCompile Include="EnermySoldierDieState.cpp" />
-    <ClCompile Include="EnermySoldierJumpingState.cpp" />
-    <ClCompile Include="EnermySoldierRunningState.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Graphics.cpp" />
-    <ClCompile Include="GunBoss1Bullet.cpp" />
-    <ClCompile Include="GunBoss1BulletExploringState.cpp" />
-    <ClCompile Include="GunBoss1BulletMovingState.cpp" />
-    <ClCompile Include="KeyBoard.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="ObjectStaticWeapon.cpp" />
-    <ClCompile Include="ObjectStaticWeaponCloseState.cpp" />
-    <ClCompile Include="ObjectStaticWeaponOpenState.cpp" />
-    <ClCompile Include="ObjectStaticWeaponOutState.cpp" />
-    <ClCompile Include="ObjectData.cpp" />
-    <ClCompile Include="ObjectSprite.cpp" />
     <ClCompile Include="ObjectSpriteCreator.cpp" />
-    <ClCompile Include="ObjectState.cpp" />
-    <ClCompile Include="PlayerClimbingState.cpp" />
-    <ClCompile Include="PlayerDeadState.cpp" />
-    <ClCompile Include="PlayerDivingState.cpp" />
-    <ClCompile Include="PlayerJumpingState.cpp" />
-    <ClCompile Include="PlayerRunningState.cpp" />
-    <ClCompile Include="PlayerSprite.cpp" />
-    <ClCompile Include="PlayerStandingState.cpp" />
-    <ClCompile Include="PlayerSwimmingState.cpp" />
-    <ClCompile Include="PlayScene.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="TextureArray.cpp" />
-    <ClCompile Include="TileLayer.cpp" />
-    <ClCompile Include="TileTmx.cpp" />
-    <ClCompile Include="tinystr.cpp" />
-    <ClCompile Include="tinyxml.cpp" />
-    <ClCompile Include="tinyxmlerror.cpp" />
-    <ClCompile Include="tinyxmlparser.cpp" />
-    <ClCompile Include="ViewPort.cpp" />
     <ClCompile Include="WindowInit.cpp" />
-    <ClCompile Include="ObjectBridge.cpp" />
-    <ClCompile Include="ObjectBridgeAliveState.cpp" />
-    <ClCompile Include="ObjectBridgeBody.cpp" />
-    <ClCompile Include="ObjectBridgeData.cpp" />
-    <ClCompile Include="ObjectBridgeExplosionState.cpp" />
-    <ClCompile Include="ObjectBridgeHead.cpp" />
-    <ClCompile Include="ObjectBridgeTail.cpp" />
-    <ClCompile Include="ObjectStaticWeaponData.cpp" />
-    <ClCompile Include="ObjectStaticWeaponPreparingState.cpp" />
-    <ClCompile Include="EnermySoldierFallingState.cpp" />
-    <ClCompile Include="EnermyGunRotating.cpp" />
-    <ClCompile Include="EnermyGunRotatingClosingState.cpp" />
-    <ClCompile Include="EnermyGunRotatingData.cpp" />
-    <ClCompile Include="EnermyGunRotatingDieState.cpp" />
-    <ClCompile Include="EnermyGunRotatingOpeningState.cpp" />
-    <ClCompile Include="EnermyGunRotatingSwavelingState.cpp" />
-    <ClCompile Include="EnermyWhiteBullet.cpp" />
-    <ClCompile Include="MBullet.cpp" />
-    <ClCompile Include="FBullet.cpp" />
-    <ClCompile Include="LBullet.cpp" />
-    <ClCompile Include="ObjectCapsuleWeaponData.cpp" />
-    <ClCompile Include="ObjectCapsuleWeaponDropState.cpp" />
-    <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp" />
-    <ClCompile Include="EnemySniper.cpp" />
-    <ClCompile Include="EnemySniperData.cpp" />
-    <ClCompile Include="EnemySniperDeadState.cpp" />
-    <ClCompile Include="EnemySniperStandingState.cpp" />
-    <ClCompile Include="EnemySniperTurningState.cpp" />
-    <ClCompile Include="BitMapFont.cpp" />
-    <ClCompile Include="EnermyCannon.cpp" />
-    <ClCompile Include="EnermyCannonAppearingState.cpp" />
-    <ClCompile Include="EnermyCannonData.cpp" />
-    <ClCompile Include="EnermyCannonDeadState.cpp" />
-    <ClCompile Include="EnermyCannonPreaparingState.cpp" />
-    <ClCompile Include="EnermyCannonTurningState.cpp" />
-    <ClCompile Include="EnermyCreator.cpp" />
-    <ClCompile Include="ObjectCapsuleWeapon.cpp" />
-    <ClCompile Include="EnermySoldierDrowningState.cpp" />
-    <ClCompile Include="StartingScene.cpp" />
-    <ClCompile Include="LoadingScene.cpp" />
-    <ClCompile Include="Loader.cpp" />
-    <ClCompile Include="GameOverScene.cpp" />
-    <ClCompile Include="Sound.cpp" />
-    <ClCompile Include="UIComponents.cpp" />
-    <ClCompile Include="EnemyBlazerSprite.cpp" />
-    <ClCompile Include="BlazerMovingState.cpp" />
-    <ClCompile Include="DynamicBridgeMovingState.cpp" />
-    <ClCompile Include="ObjectDynamicBridgeSprite.cpp" />
-    <ClCompile Include="EnermyFailingStone.cpp" />
-    <ClCompile Include="EnermyFailingStoneAppearingState.cpp" />
-    <ClCompile Include="EnermyFailingStoneData.cpp" />
-    <ClCompile Include="EnermyFailingStoneDeadState.cpp" />
-    <ClCompile Include="EnermyFailingStoneDroppingState.cpp" />
-    <ClCompile Include="BulletScubarSoliderExploringState.cpp" />
-    <ClCompile Include="BulletScubarSoliderMovingState.cpp" />
-    <ClCompile Include="BulletScubarSoliderSprite.cpp" />
-    <ClCompile Include="EnermyScubarSoliderData.cpp" />
-    <ClCompile Include="EnermyScubarSoliderHidingState.cpp" />
-    <ClCompile Include="EnermyScubarSoliderShootState.cpp" />
-    <ClCompile Include="EnermyScubarSoliderSprite.cpp" />
-    <ClCompile Include="EnermyFinalBoss5AppearingState.cpp" />
-    <ClCompile Include="EnermyFinalBoss5DeadState.cpp" />
-    <ClCompile Include="EnermyFinalBoss5DisappearingState.cpp" />
-    <ClCompile Include="EnermyFinalBoss5PreparingState.cpp" />
-    <ClCompile Include="EnermyFinalBoss5Sprite.cpp" />
-    <ClCompile Include="EnermyFinalBoss5WaitingState.cpp" />
-    <ClCompile Include="GunBoss5Bullet.cpp" />
-    <ClCompile Include="GunBoss5BulletExploringState.cpp" />
-    <ClCompile Include="GunBoss5BulletMovingState.cpp" />
-    <ClCompile Include="ShipBoss5.cpp" />
-    <ClCompile Include="ShipBoss5ExploringState.cpp" />
-    <ClCompile Include="ShipBoss5MovingState.cpp" />
-    <ClCompile Include="Boss2Final.cpp" />
-    <ClCompile Include="Boss2FinalArm.cpp" />
-    <ClCompile Include="Boss2FinalArmAttackState.cpp" />
-    <ClCompile Include="Boss2FinalArmDirectPlayerState.cpp" />
-    <ClCompile Include="Boss2FinalArmSpinningState.cpp" />
-    <ClCompile Include="Boss2FinalArmStartState.cpp" />
-    <ClCompile Include="Boss2FinalArmWaveState.cpp" />
-    <ClCompile Include="Boss2FinalBullet.cpp" />
-    <ClCompile Include="Boss2FinalData.cpp" />
-    <ClCompile Include="Boss2FinalHand.cpp" />
-    <ClCompile Include="Boss2FinalHead.cpp" />
-    <ClCompile Include="Boss2FinalJoint.cpp" />
-    <ClCompile Include="EnemyMineSprite.cpp" />
-    <ClCompile Include="EnemyMineFallingState.cpp" />
-    <ClCompile Include="EnemyMineExploringState.cpp" />
-    <ClCompile Include="EnemyBazokaSprite.cpp" />
-    <ClCompile Include="EnemyBazokaFiringState.cpp" />
-    <ClCompile Include="EnemyBazokaStandingState.cpp" />
-    <ClCompile Include="EnemyBazokaExploringState.cpp" />
-    <ClCompile Include="Boss2FinalHeadOpeningState.cpp" />
-    <ClCompile Include="Boss2FinalHeadShuttingState.cpp" />
-    <ClCompile Include="Boss2FinalHeadAttackingState.cpp" />
-    <ClCompile Include="Boss2FinalExplosionSprite.cpp" />
-    <ClCompile Include="EnermySoldierShootingState.cpp" />
-    <ClCompile Include="EndingScene.cpp" />
-    <ClCompile Include="OptionScene.cpp" />
-    <ClCompile Include="Boss2FinalBody.cpp" />
-    <ClCompile Include="HelpScene.cpp" />
-    <ClCompile Include="EnermyTankExploring.cpp" />
-    <ClCompile Include="TankExploringSprite.cpp" />
-    <ClCompile Include="TankExploringState.cpp" />
-    <ClCompile Include="EnermyTankData.cpp" />
-    <ClCompile Include="EnermyTankShootingState.cpp" />
-    <ClCompile Include="EnermyTankSprite.cpp" />
-    <ClCompile Include="EnermyTankStartingState.cpp" />
-    <ClCompile Include="Lighting.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="SceneTransition.cpp" />
-    <ClCompile Include="TransitionCircleOpen.cpp" />
-    <ClCompile Include="TransitionScan.cpp" />
-    <ClCompile Include="TransitionCircleScan.cpp" />
+    <ClCompile Include="base64.cpp">
+      <Filter>ThirdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>ThirdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>ThirdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldier.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierData.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierDestroyState.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierDieState.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierDrowningState.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierFallingState.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierJumpingState.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierRunningState.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermySoldierShootingState.cpp">
+      <Filter>Enemies\Soldier</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2Final.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalArm.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalArmAttackState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalArmDirectPlayerState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalArmSpinningState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalArmStartState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalArmWaveState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalBody.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalBullet.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalData.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalExplosionSprite.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalHand.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalHead.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalHeadAttackingState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalHeadOpeningState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalHeadShuttingState.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss2FinalJoint.cpp">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBridge.cpp">
+      <Filter>Objects\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBridgeAliveState.cpp">
+      <Filter>Objects\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBridgeBody.cpp">
+      <Filter>Objects\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBridgeData.cpp">
+      <Filter>Objects\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBridgeExplosionState.cpp">
+      <Filter>Objects\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBridgeHead.cpp">
+      <Filter>Objects\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBridgeTail.cpp">
+      <Filter>Objects\Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStaticWeapon.cpp">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStaticWeaponCloseState.cpp">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStaticWeaponData.cpp">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStaticWeaponOpenState.cpp">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStaticWeaponOutState.cpp">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStaticWeaponPreparingState.cpp">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyCannon.cpp">
+      <Filter>Enemies\Canon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyCannonAppearingState.cpp">
+      <Filter>Enemies\Canon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyCannonData.cpp">
+      <Filter>Enemies\Canon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyCannonDeadState.cpp">
+      <Filter>Enemies\Canon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyCannonPreaparingState.cpp">
+      <Filter>Enemies\Canon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyCannonTurningState.cpp">
+      <Filter>Enemies\Canon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBazokaExploringState.cpp">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBazokaFiringState.cpp">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBazokaSprite.cpp">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBazokaStandingState.cpp">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBlazerSprite.cpp">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyMineExploringState.cpp">
+      <Filter>Enemies\Mine</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyMineFallingState.cpp">
+      <Filter>Enemies\Mine</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyMineSprite.cpp">
+      <Filter>Enemies\Mine</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySniperData.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySniperDeadState.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySniperStandingState.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySniperTurningState.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySniper.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFailingStone.cpp">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFailingStoneAppearingState.cpp">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFailingStoneData.cpp">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFailingStoneDeadState.cpp">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFailingStoneDroppingState.cpp">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss1DeadState.cpp">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss1StandingState.cpp">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss5AppearingState.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss5DeadState.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss5DisappearingState.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss5PreparingState.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss5Sprite.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinalBoss5WaitingState.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyFinnalBoss1Sprite.cpp">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunBoss1DeadState.cpp">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunBoss1FiringState.cpp">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunBoss1Sprite.cpp">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunBoss1StandingState.cpp">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunRotating.cpp">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunRotatingClosingState.cpp">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunRotatingData.cpp">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunRotatingDieState.cpp">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunRotatingOpeningState.cpp">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyGunRotatingSwavelingState.cpp">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyScubarSoliderData.cpp">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyScubarSoliderHidingState.cpp">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyScubarSoliderShootState.cpp">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyScubarSoliderSprite.cpp">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyTankData.cpp">
+      <Filter>Enemies\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyTankExploring.cpp">
+      <Filter>Enemies\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyTankShootingState.cpp">
+      <Filter>Enemies\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyTankSprite.cpp">
+      <Filter>Enemies\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyTankStartingState.cpp">
+      <Filter>Enemies\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectCapsuleWeapon.cpp">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectCapsuleWeaponData.cpp">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectCapsuleWeaponDropState.cpp">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectCapsuleWeaponFlyingState.cpp">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipBoss5.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipBoss5ExploringState.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipBoss5MovingState.cpp">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClCompile>
+    <ClCompile Include="BlazerMovingState.cpp">
+      <Filter>Enemies\Blazer</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletScubarSoliderExploringState.cpp">
+      <Filter>Bullets\Scubar</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletScubarSoliderMovingState.cpp">
+      <Filter>Bullets\Scubar</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletScubarSoliderSprite.cpp">
+      <Filter>Bullets\Scubar</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="BitMapFont.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicBridgeMovingState.cpp">
+      <Filter>Objects\DynamicBridge</Filter>
+    </ClCompile>
+    <ClCompile Include="EndingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyCreator.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyInkJumpingState.cpp">
+      <Filter>Enemies\Ink</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyInkSprite.cpp">
+      <Filter>Enemies\Ink</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyInkStandingState.cpp">
+      <Filter>Enemies\Ink</Filter>
+    </ClCompile>
+    <ClCompile Include="GunBoss1Bullet.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="GunBoss1BulletExploringState.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="GunBoss1BulletMovingState.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="GunBoss5Bullet.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="GunBoss5BulletExploringState.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="GunBoss5BulletMovingState.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="FBullet.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="Lighting.cpp">
+      <Filter>TransitionAndEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>TransitionAndEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectDynamicBridgeSprite.cpp">
+      <Filter>Objects\DynamicBridge</Filter>
+    </ClCompile>
+    <ClCompile Include="LBullet.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="MBullet.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyBoard.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerClimbingState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerDeadState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerDivingState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerJumpingState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerRunningState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSprite.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStandingState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSwimmingState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewPort.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="UIComponents.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="TileTmx.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayer.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureArray.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectState.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectData.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectSprite.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="StartingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyWhiteBullet.cpp">
+      <Filter>Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="TankExploringSprite.cpp">
+      <Filter>Enemies\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="TankExploringState.cpp">
+      <Filter>Enemies\Tank</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>ThirdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>ThirdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitionCircleOpen.cpp">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitionCircleScan.cpp">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitionScan.cpp">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTransition.cpp">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="base64.h" />
-    <ClInclude Include="BulletMovingState.h" />
-    <ClInclude Include="BulletSprite.h" />
-    <ClInclude Include="BulletState.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="CollisionRect.h" />
-    <ClInclude Include="Direction.h" />
-    <ClInclude Include="EnermyData.h" />
-    <ClInclude Include="EnermyFinalBoss1Sprite.h" />
-    <ClInclude Include="EnermyFinalBoss1DeadState.h" />
-    <ClInclude Include="EnermyFinalBoss1StandingState.h" />
-    <ClInclude Include="EnermyGunBoss1DeadState.h" />
-    <ClInclude Include="EnermyGunBoss1FiringState.h" />
-    <ClInclude Include="EnermyGunBoss1Sprite.h" />
-    <ClInclude Include="EnermyGunBoss1StandingState.h" />
-    <ClInclude Include="EnermyInkJumpingState.h" />
-    <ClInclude Include="EnermyInkStandingState.h" />
-    <ClInclude Include="EnermySoldier.h" />
-    <ClInclude Include="EnermySoldierData.h" />
-    <ClInclude Include="EnermySoldierDestroyState.h" />
-    <ClInclude Include="EnermySoldierDieState.h" />
-    <ClInclude Include="EnermySoldierJumpingState.h" />
-    <ClInclude Include="EnermySoldierRunningState.h" />
-    <ClInclude Include="EnermySprite.h" />
-    <ClInclude Include="EnermyState.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Graphics.h" />
-    <ClInclude Include="EnermyInkSprite.h" />
-    <ClInclude Include="GunBoss1Bullet.h" />
-    <ClInclude Include="GunBoss1BulletExploringState.h" />
-    <ClInclude Include="GunBoss1BulletMovingState.h" />
-    <ClInclude Include="KeyBoard.h" />
-    <ClInclude Include="Layer.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="MenuScene.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="ObjectStaticWeapon.h" />
-    <ClInclude Include="ObjectStaticWeaponCloseState.h" />
-    <ClInclude Include="ObjectStaticWeaponOpenState.h" />
-    <ClInclude Include="ObjectStaticWeaponOutState.h" />
-    <ClInclude Include="ObjectData.h" />
-    <ClInclude Include="ObjectSprite.h" />
     <ClInclude Include="ObjectSpriteCreator.h" />
-    <ClInclude Include="ObjectState.h" />
-    <ClInclude Include="PlayerClimbingState.h" />
-    <ClInclude Include="PlayerData.h" />
-    <ClInclude Include="PlayerDeadState.h" />
-    <ClInclude Include="PlayerDivingState.h" />
-    <ClInclude Include="PlayerJumpingState.h" />
-    <ClInclude Include="PlayerRunningState.h" />
-    <ClInclude Include="PlayerSprite.h" />
-    <ClInclude Include="PlayerStandingState.h" />
-    <ClInclude Include="PlayerState.h" />
-    <ClInclude Include="PlayerSwimmingState.h" />
-    <ClInclude Include="PlayScene.h" />
-    <ClInclude Include="QuadTree.h" />
-    <ClInclude Include="Rect.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="SpriteData.h" />
-    <ClInclude Include="SpriteState.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="TextureArray.h" />
-    <ClInclude Include="TileLayer.h" />
-    <ClInclude Include="TileSet.h" />
-    <ClInclude Include="TileTmx.h" />
-    <ClInclude Include="tinystr.h" />
-    <ClInclude Include="tinyxml.h" />
-    <ClInclude Include="ViewPort.h" />
-    <ClInclude Include="zconf.h" />
-    <ClInclude Include="zlib.h" />
-    <ClInclude Include="ObjectBridge.h" />
-    <ClInclude Include="ObjectBridgeAliveState.h" />
-    <ClInclude Include="ObjectBridgeBody.h" />
-    <ClInclude Include="ObjectBridgeData.h" />
-    <ClInclude Include="ObjectBridgeExplosionState.h" />
-    <ClInclude Include="ObjectBridgeHead.h" />
-    <ClInclude Include="ObjectBridgeTail.h" />
-    <ClInclude Include="ObjectStaticWeaponData.h" />
-    <ClInclude Include="ObjectStaticWeaponPreparingState.h" />
-    <ClInclude Include="EnermySoldierFallingState.h" />
-    <ClInclude Include="EnermyGunRotating.h" />
-    <ClInclude Include="EnermyGunRotatingClosingState.h" />
-    <ClInclude Include="EnermyGunRotatingData.h" />
-    <ClInclude Include="EnermyGunRotatingDieState.h" />
-    <ClInclude Include="EnermyGunRotatingOpeningState.h" />
-    <ClInclude Include="EnermyGunRotatingSwavelingState.h" />
-    <ClInclude Include="Define.h" />
-    <ClInclude Include="EnermyWhiteBullet.h" />
-    <ClInclude Include="MBullet.h" />
-    <ClInclude Include="PlayerFBulletMovingState.h" />
-    <ClInclude Include="FBullet.h" />
-    <ClInclude Include="LBullet.h" />
-    <ClInclude Include="ObjectCapsuleWeapon.h" />
-    <ClInclude Include="ObjectCapsuleWeaponData.h" />
-    <ClInclude Include="ObjectCapsuleWeaponDropState.h" />
-    <ClInclude Include="ObjectCapsuleWeaponFlyingState.h" />
-    <ClInclude Include="EnemySniperTurningState.h" />
-    <ClInclude Include="EnemySniper.h" />
-    <ClInclude Include="EnemySniperData.h" />
-    <ClInclude Include="EnemySniperDeadState.h" />
-    <ClInclude Include="EnemySniperStandingState.h" />
-    <ClInclude Include="BitMapFont.h" />
-    <ClInclude Include="EnermyCannon.h" />
-    <ClInclude Include="EnermyCannonAppearingState.h" />
-    <ClInclude Include="EnermyCannonData.h" />
-    <ClInclude Include="EnermyCannonDeadState.h" />
-    <ClInclude Include="EnermyCannonPreaparingState.h" />
-    <ClInclude Include="EnermyCannonTurningState.h" />
-    <ClInclude Include="EnermyCreator.h" />
-    <ClInclude Include="EnermySoldierDrowningState.h" />
-    <ClInclude Include="StartingScene.h" />
-    <ClInclude Include="LoadingScene.h" />
-    <ClInclude Include="Loader.h" />
-    <ClInclude Include="GameOverScene.h" />
-    <ClInclude Include="Sound.h" />
-    <ClInclude Include="UIComponents.h" />
-    <ClInclude Include="EnemyBlazerSprite.h" />
-    <ClInclude Include="BlazerMovingState.h" />
-    <ClInclude Include="DynamicBridgeMovingState.h" />
-    <ClInclude Include="ObjectDynamicBridgeSprite.h" />
-    <ClInclude Include="EnermyFailingStone.h" />
-    <ClInclude Include="EnermyFailingStoneAppearingState.h" />
-    <ClInclude Include="EnermyFailingStoneData.h" />
-    <ClInclude Include="EnermyFailingStoneDeadState.h" />
-    <ClInclude Include="EnermyFailingStoneDroppingState.h" />
-    <ClInclude Include="BulletScubarSoliderExPloringState.h" />
-    <ClInclude Include="BulletScubarSoliderMovingState.h" />
-    <ClInclude Include="BulletScubarSoliderSprite.h" />
-    <ClInclude Include="EnermyScubarSoliderData.h" />
-    <ClInclude Include="EnermyScubarSoliderHidingState.h" />
-    <ClInclude Include="EnermyScubarSoliderShootState.h" />
-    <ClInclude Include="EnermyScubarSoliderSprite.h" />
-    <ClInclude Include="EnermyFinalBoss5AppearingState.h" />
-    <ClInclude Include="EnermyFinalBoss5DeadState.h" />
-    <ClInclude Include="EnermyFinalBoss5DisappearingState.h" />
-    <ClInclude Include="EnermyFinalBoss5PreparingState.h" />
-    <ClInclude Include="EnermyFinalBoss5Sprite.h" />
-    <ClInclude Include="EnermyFinalBoss5WaitingState.h" />
-    <ClInclude Include="GunBoss5Bullet.h" />
-    <ClInclude Include="GunBoss5BulletExploringState.h" />
-    <ClInclude Include="GunBoss5BulletMovingState.h" />
-    <ClInclude Include="ShipBoss5.h" />
-    <ClInclude Include="ShipBoss5ExploringState.h" />
-    <ClInclude Include="ShipBoss5MovingState.h" />
-    <ClInclude Include="Boss2FinalJoint.h" />
-    <ClInclude Include="Boss2Final.h" />
-    <ClInclude Include="Boss2FinalArm.h" />
-    <ClInclude Include="Boss2FinalArmAttackState.h" />
-    <ClInclude Include="Boss2FinalArmDirectPlayerState.h" />
-    <ClInclude Include="Boss2FinalArmSpinningState.h" />
-    <ClInclude Include="Boss2FinalArmStartState.h" />
-    <ClInclude Include="Boss2FinalArmWaveState.h" />
-    <ClInclude Include="Boss2FinalBullet.h" />
-    <ClInclude Include="Boss2FinalData.h" />
-    <ClInclude Include="Boss2FinalHand.h" />
-    <ClInclude Include="Boss2FinalHead.h" />
-    <ClInclude Include="EnemyMineSprite.h" />
-    <ClInclude Include="EnemyMineFallingState.h" />
-    <ClInclude Include="EnemyMineExploringState.h" />
-    <ClInclude Include="EnemyBazokaSprite.h" />
-    <ClInclude Include="EnemyBazokaFiringState.h" />
-    <ClInclude Include="EnemyBazokaStandingState.h" />
-    <ClInclude Include="EnemyBazokaExploringState.h" />
-    <ClInclude Include="Boss2FinalHeadOpeningState.h" />
-    <ClInclude Include="Boss2FinalHeadShuttingState.h" />
-    <ClInclude Include="Boss2FinalHeadAttackingState.h" />
-    <ClInclude Include="Boss2FinalExplosionSprite.h" />
-    <ClInclude Include="EnermySoldierShootingState.h" />
-    <ClInclude Include="EndingScene.h" />
-    <ClInclude Include="OptionScene.h" />
-    <ClInclude Include="Boss2FinalBody.h" />
-    <ClInclude Include="HelpScene.h" />
-    <ClInclude Include="EnermyTankExploring.h" />
-    <ClInclude Include="TankExploringSprite.h" />
-    <ClInclude Include="TankExploringState.h" />
-    <ClInclude Include="EnermyTankShootingState.h" />
-    <ClInclude Include="EnermyTankStartingState.h" />
-    <ClInclude Include="EnermyTankSprite.h" />
-    <ClInclude Include="EnermyTankData.h" />
-    <ClInclude Include="Lighting.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="SceneTransition.h" />
-    <ClInclude Include="TransitionScan.h" />
-    <ClInclude Include="TransitionCircleOpen.h" />
-    <ClInclude Include="TransitionEffect.h" />
-    <ClInclude Include="TransitionCircleScan.h" />
+    <ClInclude Include="base64.h">
+      <Filter>ThirdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib.h">
+      <Filter>ThirdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="zconf.h">
+      <Filter>ThirdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>ThirdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>ThirdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldier.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierData.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierDestroyState.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierDieState.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierDrowningState.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierFallingState.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierJumpingState.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierRunningState.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySoldierShootingState.h">
+      <Filter>Enemies\Soldier</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2Final.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalArm.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalArmAttackState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalArmDirectPlayerState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalArmSpinningState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalArmStartState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalArmWaveState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalBody.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalBullet.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalData.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalExplosionSprite.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalHand.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalHead.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalHeadAttackingState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalHeadOpeningState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalHeadShuttingState.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss2FinalJoint.h">
+      <Filter>Enemies\Boss2final</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBridge.h">
+      <Filter>Objects\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBridgeAliveState.h">
+      <Filter>Objects\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBridgeBody.h">
+      <Filter>Objects\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBridgeData.h">
+      <Filter>Objects\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBridgeExplosionState.h">
+      <Filter>Objects\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBridgeHead.h">
+      <Filter>Objects\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBridgeTail.h">
+      <Filter>Objects\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStaticWeapon.h">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStaticWeaponCloseState.h">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStaticWeaponData.h">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStaticWeaponOpenState.h">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStaticWeaponOutState.h">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStaticWeaponPreparingState.h">
+      <Filter>Objects\StaticWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyCannon.h">
+      <Filter>Enemies\Canon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyCannonAppearingState.h">
+      <Filter>Enemies\Canon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyCannonData.h">
+      <Filter>Enemies\Canon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyCannonDeadState.h">
+      <Filter>Enemies\Canon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyCannonPreaparingState.h">
+      <Filter>Enemies\Canon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyCannonTurningState.h">
+      <Filter>Enemies\Canon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBazokaExploringState.h">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBazokaFiringState.h">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBazokaSprite.h">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBazokaStandingState.h">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBlazerSprite.h">
+      <Filter>Enemies\Bazoka</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyMineExploringState.h">
+      <Filter>Enemies\Mine</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyMineFallingState.h">
+      <Filter>Enemies\Mine</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyMineSprite.h">
+      <Filter>Enemies\Mine</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniperTurningState.h">
+      <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniperData.h">
+      <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniperDeadState.h">
+      <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniperStandingState.h">
+      <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniper.h">
+      <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFailingStone.h">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFailingStoneAppearingState.h">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFailingStoneData.h">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFailingStoneDeadState.h">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFailingStoneDroppingState.h">
+      <Filter>Enemies\FallingStone</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss1DeadState.h">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss1Sprite.h">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss1StandingState.h">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss5AppearingState.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss5DeadState.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss5DisappearingState.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss5PreparingState.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss5Sprite.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyFinalBoss5WaitingState.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunBoss1DeadState.h">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunBoss1FiringState.h">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunBoss1Sprite.h">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunBoss1StandingState.h">
+      <Filter>Enemies\Boss1Final</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunRotating.h">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunRotatingClosingState.h">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunRotatingData.h">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunRotatingDieState.h">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunRotatingOpeningState.h">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyGunRotatingSwavelingState.h">
+      <Filter>Enemies\GunRotating</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyScubarSoliderData.h">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyScubarSoliderHidingState.h">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyScubarSoliderShootState.h">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyScubarSoliderSprite.h">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyTankData.h">
+      <Filter>Enemies\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyTankExploring.h">
+      <Filter>Enemies\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyTankShootingState.h">
+      <Filter>Enemies\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyTankSprite.h">
+      <Filter>Enemies\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyTankStartingState.h">
+      <Filter>Enemies\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCapsuleWeapon.h">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCapsuleWeaponData.h">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCapsuleWeaponDropState.h">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCapsuleWeaponFlyingState.h">
+      <Filter>Objects\CapsuleWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipBoss5MovingState.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipBoss5.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipBoss5ExploringState.h">
+      <Filter>Enemies\Boss5Final</Filter>
+    </ClInclude>
+    <ClInclude Include="BlazerMovingState.h">
+      <Filter>Enemies\Blazer</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletMovingState.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletScubarSoliderExPloringState.h">
+      <Filter>Bullets\Scubar</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletScubarSoliderMovingState.h">
+      <Filter>Bullets\Scubar</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletScubarSoliderSprite.h">
+      <Filter>Bullets\Scubar</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletSprite.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletState.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="BitMapFont.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionRect.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Direction.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicBridgeMovingState.h">
+      <Filter>Objects\DynamicBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyCreator.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyInkJumpingState.h">
+      <Filter>Enemies\Ink</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyInkSprite.h">
+      <Filter>Enemies\Ink</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyInkStandingState.h">
+      <Filter>Enemies\Ink</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss1Bullet.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss1BulletExploringState.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss1BulletMovingState.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss5Bullet.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss5BulletExploringState.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="GunBoss5BulletMovingState.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="FBullet.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyWhiteBullet.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="Lighting.h">
+      <Filter>TransitionAndEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>TransitionAndEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectDynamicBridgeSprite.h">
+      <Filter>Objects\DynamicBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="LBullet.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="MBullet.h">
+      <Filter>Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBoard.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerClimbingState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerDeadState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerDivingState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerFBulletMovingState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerJumpingState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerRunningState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSprite.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStandingState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSwimmingState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewPort.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="UIComponents.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="TileTmx.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="TileSet.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayer.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureArray.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteState.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteData.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTree.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectState.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectSprite.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectData.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyState.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermySprite.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyData.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="StartingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="TankExploringState.h">
+      <Filter>Enemies\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="TankExploringSprite.h">
+      <Filter>Enemies\Tank</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitionCircleOpen.h">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitionCircleScan.h">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitionEffect.h">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitionScan.h">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTransition.h">
+      <Filter>TransitionAndEffects\SceneTransition</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{afa58e11-f329-4902-8821-8062810a08a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies">
+      <UniqueIdentifier>{f8ce720e-134d-41e7-a9cf-254bdec1928b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{53e1eb9d-ec6d-4756-b9cf-a6a25067ef63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameComponents">
+      <UniqueIdentifier>{4cb66111-d14d-4801-8f6f-ef4758655b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Soldier">
+      <UniqueIdentifier>{c031c6c6-d578-4fa6-bb93-1be6d91ac6d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Boss2final">
+      <UniqueIdentifier>{b5efdacd-3de9-4dfe-9a80-285074411ca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bullets">
+      <UniqueIdentifier>{f3d1b48c-9892-4bc7-ac3f-7859d3ee794b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Bridge">
+      <UniqueIdentifier>{02364ec2-c1af-4572-a012-b00fa2058700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\StaticWeapon">
+      <UniqueIdentifier>{928ffa4b-342f-4479-a914-98a0ce338089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Bazoka">
+      <UniqueIdentifier>{1822c49f-89d2-4077-b098-392db83ef04f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Mine">
+      <UniqueIdentifier>{94a17f10-87a2-4906-8519-d6507aad3205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Sniper">
+      <UniqueIdentifier>{dcbcdeb9-46e1-411d-89bd-1180db342b32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\FallingStone">
+      <UniqueIdentifier>{a30cc1e0-96c1-41f8-8aed-5aaa4f3d3010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Boss1Final">
+      <UniqueIdentifier>{0551ae10-ff15-4862-9f1f-2609c415ca2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Canon">
+      <UniqueIdentifier>{9af778e0-0b1e-403f-a8f6-87975142088c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Boss5Final">
+      <UniqueIdentifier>{2a1dc2a2-1b5e-4108-aaa3-3707a7b0fa0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\GunRotating">
+      <UniqueIdentifier>{1ee40822-0520-4937-8d24-1ed1bf2f59e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\ScubarSoldier">
+      <UniqueIdentifier>{3edffcc2-bf4a-4eb7-896e-6076c3f2b921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Tank">
+      <UniqueIdentifier>{36d5ab93-b4c7-4adf-89a3-7b2f77303103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\CapsuleWeapon">
+      <UniqueIdentifier>{dc9db6f6-e626-487d-9718-e5e8eae5ca65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Blazer">
+      <UniqueIdentifier>{c9b2c6ca-6fa5-48db-90d8-f33cffdcfc93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bullets\Scubar">
+      <UniqueIdentifier>{08c61db5-3135-43b7-808c-b6a0d60e8ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{2d36f7fd-23b7-4117-9467-be3f59cd3dd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\DynamicBridge">
+      <UniqueIdentifier>{ab862d74-3291-4303-99ec-73c0ea0feabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Ink">
+      <UniqueIdentifier>{56ca274f-d4b7-45c9-b3c0-11fe685e671e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TransitionAndEffects">
+      <UniqueIdentifier>{1bf69d49-fd2f-4ec0-96a5-4ca91f7c3c06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{48c8ebba-f1e6-499b-94a9-499214a436e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TransitionAndEffects\SceneTransition">
+      <UniqueIdentifier>{43973536-c45e-4556-8eaf-4035607f8ba3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

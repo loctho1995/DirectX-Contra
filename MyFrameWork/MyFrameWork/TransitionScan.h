@@ -10,13 +10,13 @@ class TransitionScan : public TransitionEffect
 public:
     enum TransitionFrom
     {
-        LEFT, RIGHT, TOP, BOTTOM
+        LEFT, RIGHT, TOP, BOTTOM, RANDOM
     };
 
     //speed: percent / frame
     //width: 1.0f - height: 1.0f
 
-    TransitionScan(float speed, TransitionFrom from = TransitionFrom::TOP);
+    TransitionScan(float speed = 0.025, TransitionFrom from = TransitionFrom::RANDOM);
     void doAfterSetScene();
     void update();
     bool isFinish();

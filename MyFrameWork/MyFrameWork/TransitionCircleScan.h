@@ -5,7 +5,7 @@ class TransitionCircleScan : public TransitionEffect
 {
 public:
     //degree/frame
-    TransitionCircleScan(float speed = 5.0);
+    TransitionCircleScan(float speed = 3.0);
     ~TransitionCircleScan();
 
     void doAfterSetScene();

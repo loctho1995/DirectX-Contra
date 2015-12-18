@@ -8,7 +8,31 @@ TransitionScan::TransitionScan(float speed, TransitionFrom from)
     this->speed = speed;
     this->from = from;
 
-    switch (from)
+    srand(NULL);
+
+    if (from == TransitionFrom::RANDOM)
+    {
+        switch (rand() % 4)
+        {
+            case 0:
+                this->from = TransitionFrom::RIGHT;
+                break;
+
+            case 1:
+                this->from = TransitionFrom::LEFT;
+                break;
+
+            case 2:
+                this->from = TransitionFrom::TOP;
+                break;
+
+            default:
+                this->from = TransitionFrom::BOTTOM;
+                break;
+        }
+    }
+
+    switch (this->from)
     {
         case TransitionFrom::TOP:
             //quet scene tu tren xuong duoi
@@ -32,8 +56,7 @@ TransitionScan::TransitionScan(float speed, TransitionFrom from)
             shader = new Shader("Resources\\Shader\\transitionscanleft.fx");
             currentPos = 0;
             break;
-    }
-   
+    }   
 }
 
 void TransitionScan::update()
@@ -47,7 +70,7 @@ void TransitionScan::update()
             break;
 
         case TransitionScan::RIGHT:
-            currentPos += speed;
+            currentPos -= speed;
             break;
 
         case TransitionScan::TOP:            

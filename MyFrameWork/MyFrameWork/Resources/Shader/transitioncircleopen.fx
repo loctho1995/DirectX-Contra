@@ -72,10 +72,10 @@ float4 doPX(VS_OUT input) : COLOR
 	
 	if(veclength <= radius)
 	{	
-		return color0;
+		return color1;
 	}
 	
-	return color1;
+	return color0;
 }
 
 technique technique0 {

@@ -7,6 +7,7 @@
 #include "UIComponents.h"
 #include "TransitionCircleOpen.h"
 #include "TransitionCircleScan.h"
+#include "TransitionScan.h"
 
 class LoadingScene : public MenuScene
 {
