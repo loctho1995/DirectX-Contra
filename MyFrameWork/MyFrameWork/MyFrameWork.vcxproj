@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -242,6 +242,7 @@
     <ClCompile Include="tinyxmlerror.cpp" />
     <ClCompile Include="tinyxmlparser.cpp" />
     <ClCompile Include="TransitionCircleOpen.cpp" />
+    <ClCompile Include="TransitionCircleScan.cpp" />
     <ClCompile Include="TransitionScan.cpp" />
     <ClCompile Include="UIComponents.cpp" />
     <ClCompile Include="ViewPort.cpp" />
@@ -429,6 +430,7 @@
     <ClInclude Include="tinystr.h" />
     <ClInclude Include="tinyxml.h" />
     <ClInclude Include="TransitionCircleOpen.h" />
+    <ClInclude Include="TransitionCircleScan.h" />
     <ClInclude Include="TransitionEffect.h" />
     <ClInclude Include="TransitionScan.h" />
     <ClInclude Include="UIComponents.h" />

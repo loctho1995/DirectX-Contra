@@ -81,14 +81,14 @@ void PlayScene::handleInput()
 			}
 			break;
 		}
-		else if ( e.getCode() == 0x53 ) 
+		else if ( e.getCode() == 0x61 ) 
 		{
 			if (e.isRelease())
 			{
 				Sound::getInstance() ->mute();
 			}
 		}
-		else if ( e.getCode() == 0x50)
+		else if ( e.getCode() == 0x62)
 		{
 			if (e.isRelease())
 			{

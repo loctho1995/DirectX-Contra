@@ -41,6 +41,8 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\explode.wav", "explode.wav");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\beShooted.wav", "beShooted");
 
+	Sound::getInstance()->loadSound("Resources\\Sounds\\clearStage.wav", "clearStage");
+
 	Sound::getInstance()->loadSound("Resources\\Sounds\\fallingmine.wav", "fallingmine");
 
 
@@ -65,6 +67,9 @@ LoadingScene::LoadingScene()
 
 	Sound::getInstance()->loadSound("Resources\\Sounds\\tank.wav", "tank");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\exbullet.wav", "exbullet");
+
+
+	Sound::getInstance() -> play("clearStage", false , 1);
 }
 
 

@@ -165,6 +165,7 @@
     <ClCompile Include="SceneTransition.cpp" />
     <ClCompile Include="TransitionCircleOpen.cpp" />
     <ClCompile Include="TransitionScan.cpp" />
+    <ClCompile Include="TransitionCircleScan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base64.h" />
@@ -354,6 +355,7 @@
     <ClInclude Include="TransitionScan.h" />
     <ClInclude Include="TransitionCircleOpen.h" />
     <ClInclude Include="TransitionEffect.h" />
+    <ClInclude Include="TransitionCircleScan.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

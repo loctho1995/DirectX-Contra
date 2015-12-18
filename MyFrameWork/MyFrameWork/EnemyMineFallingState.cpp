@@ -12,7 +12,7 @@ EnemyMineFallingState::EnemyMineFallingState(EnermyData* data)
 	acceleration = 0.12f;
 	pData -> vx = pData -> transform(speedX);
 	pData -> vy = -speedY;
-	Sound::getInstance() -> play("fallingmine", false , 1);	
+	
 }
 
 
