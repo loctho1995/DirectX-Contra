@@ -27,19 +27,19 @@ GameOverScene::GameOverScene()
 	label[HISCORE] -> text = "HISCORE " + std::to_string(UIComponents::getInstance() -> getHighScore());
 	label[HISCORE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
 	label[HISCORE] -> size = 8;
-	label[HISCORE] -> xPos = 256 / 2 - label[HISCORE] -> text.length() * label[HISCORE] -> size / 2;
-	label[HISCORE] -> yPos = 256 / 2 - label[HISCORE] -> size / 2;
+	label[HISCORE] -> xPos = label[SCORE] -> xPos;
+	label[HISCORE] -> yPos = label[SCORE] -> yPos + 20;
 	
 	label[CONTINUE] -> text = "CONTINUE";
 	label[CONTINUE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
-	label[CONTINUE] -> size = 8;
+	label[CONTINUE] -> size = 10;
 	label[CONTINUE] -> xPos = 256 / 2 - label[CONTINUE] -> text.length() * label[CONTINUE] -> size / 2;
-	label[CONTINUE] -> yPos = label[HISCORE] -> yPos + 30;
+	label[CONTINUE] -> yPos = 256 / 2 -  label[CONTINUE] -> size / 2;
 	
 
 	label[END] -> text = "END";
 	label[END] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
-	label[END] -> size = 8;
+	label[END] -> size = 10;
 	label[END] -> xPos = label[CONTINUE] -> xPos;
 	label[END] -> yPos = label[CONTINUE] -> yPos + 30;
 	
@@ -121,16 +121,18 @@ void GameOverScene:: handleInput()
 			{
 				if (e.isRelease())
 				{
+					Sound::getInstance() -> stop();
 					Sound::getInstance() -> play("select", false, 1);
 					UIComponents::getInstance() -> gameOverReset();
 					if(cursorIndex == CONTINUE)
 					{
-						SceneManager::getInstance() ->createSceneWithTransition( new StartingScene(), new TransitionCircleOpen());
+						SceneManager::getInstance() ->createSceneWithTransition( new PlayScene(), new TransitionCircleOpen());
 						return;
 					}
 					else
 					{
-						if(cursorIndex == CONTINUE)
+						Sound::getInstance() -> stop();
+						Sound::getInstance() -> play("select", false, 1);
 						SceneManager::getInstance() ->createSceneWithTransition( new StartingScene(), new TransitionScan());
 						return;
 					}

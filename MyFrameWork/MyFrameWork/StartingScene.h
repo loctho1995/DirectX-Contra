@@ -1,5 +1,6 @@
 #pragma once
 #include "MenuScene.h"
+#include "Texture.h"
 class StartingScene : public MenuScene
 {
 public:
@@ -8,5 +9,27 @@ public:
 	virtual void onUpdate();
 	virtual void render();
 	virtual void handleInput();
+	void update();
+private:
+	enum
+	{
+		PLAY,
+		HELP,
+		OPTION,
+		QUIT,
+		COUNT
+	} LableIndex;
+
+	Label **label;
+	int cursorIndex;
+	float startPosY;
+	float startPosX; 
+	float offsetY;
+	float offsetX;
+	float xPos;
+	float vxPos;
+	bool isTransitioning;
+	Texture* pBackGround;
+	Texture* pCursor;
 };
 

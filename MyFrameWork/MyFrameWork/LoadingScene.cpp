@@ -67,8 +67,7 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\tank.wav", "tank");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\exbullet.wav", "exbullet");
 
-	Sound::getInstance() -> loadSound("Resources\\Sounds\\cursor.wav", "cursor");
-	Sound::getInstance() -> loadSound("Resources\\Sounds\\select.wav", "select");
+	
 
 	Sound::getInstance() -> play("clearStage", false , 1);
 }
