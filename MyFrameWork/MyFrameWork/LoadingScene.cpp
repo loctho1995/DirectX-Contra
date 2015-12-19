@@ -27,6 +27,10 @@ LoadingScene::LoadingScene()
 	nTransitionTime = 5 * 60;
 	count = 0;
 
+	std::string sourceFileBackGround  = "Resources\\BackGround\\LSBackGroundStage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()) + ".png";
+	std:: string bgname = "LSBackGroundStage1"  + std::to_string(UIComponents::getInstance() -> getCurrentStage());
+	pBackGround = new Texture(sourceFileBackGround, bgname);
+
 	Sound::getInstance()->loadSound("Resources\\Sounds\\stage1.wav", "stage1");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\stage3.wav", "stage3");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\stage5.wav", "stage5");
@@ -70,6 +74,38 @@ LoadingScene::LoadingScene()
 	
 
 	Sound::getInstance() -> play("clearStage", false , 1);
+
+	label = new Label*[COUNT];
+	for (int i = 0; i < COUNT; i++)
+	{
+		label[i] = new Label();
+	}
+
+	label[TITLE] -> text = "LOADING";
+	label[TITLE] -> color = D3DCOLOR_XRGB(255 , 0 , 0 );
+	label[TITLE] -> size = 12;
+	label[TITLE] -> xPos = SCWIDTH / 2 - label[TITLE] -> text.length() * label[TITLE] -> size / 2;
+	label[TITLE] -> yPos = 20;
+
+	label[SCORE] -> text = "SCORE  " + std::to_string(UIComponents::getInstance() -> getScore());
+	label[SCORE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
+	label[SCORE] -> size = 8;
+	label[SCORE] -> xPos = 10;
+	label[SCORE] -> yPos = label[TITLE] -> yPos + 40;
+
+	label[LIFES] -> text = "LIFES  " + std::to_string(UIComponents::getInstance() -> getLifes());
+	label[LIFES] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
+	label[LIFES] -> size = 8;
+	label[LIFES] -> xPos = 10;
+	label[LIFES] -> yPos = label[SCORE] -> yPos + 20;
+
+	label[STAGE] -> text = "STAGE " + std::to_string(UIComponents::getInstance() -> getCurrentStage());
+	label[STAGE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
+	label[STAGE] -> size = 10;
+	label[STAGE] -> xPos = SCWIDTH / 2 - label[STAGE] -> text.length() * label[STAGE] -> size / 2;
+	label[STAGE] -> yPos = SCHEIGHT / 2- label[STAGE] -> size / 2;
+
+
 }
 
 
@@ -90,16 +126,13 @@ void LoadingScene:: render()
 {
 		Graphics::getInstance()->beginRender();
 		Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
-		if(UIComponents::getInstance() -> getCurrentStage() == 1)
+		pBackGround -> draw(0.0f, 0.0f);
+		
+		for (int i = 0; i < COUNT; i++)
 		{
-			Graphics::getInstance() ->drawText("STAGE ONE", 8 , 10 , 160, false,  D3DCOLOR_ARGB(255, 255, 0, 0));
-		}
-		else if(UIComponents::getInstance() -> getCurrentStage() == 3)
-		{
-			Graphics::getInstance() ->drawText("STAGE THREE", 8 , 10 , 160, false, D3DCOLOR_ARGB(255, 255, 0, 0));
+			Graphics::getInstance() -> drawText(*label[i]);
 		}
 
-		Graphics::getInstance() ->drawText("READY TO GO ", 8 , 10 , 240, false, D3DCOLOR_ARGB(255, 255, 0, 0));
 		Graphics::getInstance() ->getSpriteHandler() -> End();
 		Graphics::getInstance()->endRender();
 }

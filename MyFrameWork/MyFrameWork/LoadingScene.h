@@ -19,9 +19,19 @@ public:
 	~LoadingScene(void);
 
 private:
+	enum
+	{
+		TITLE,
+		SCORE,
+		LIFES,
+		STAGE,
+		COUNT
+	} LableIndex;
 	int nTransitionTime;
 	int count;
 	int nSprites;
 	int loadedSprite;
+	Texture* pBackGround;
+	Label **label;
 };
 

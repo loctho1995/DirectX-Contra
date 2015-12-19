@@ -102,7 +102,7 @@ void StartingScene:: handleInput()
 		{
 		case VK_UP:
 			{
-				if(e.isRelease())
+				if(e.isRelease() && !isTransitioning)
 				{
 					Sound::getInstance() -> play("cursor", false ,1);
 					if( cursorIndex == PLAY )
@@ -117,7 +117,7 @@ void StartingScene:: handleInput()
 			}
 			break;
 		case VK_DOWN:
-			if(e.isRelease())
+			if(e.isRelease() && !isTransitioning)
 				{
 					Sound::getInstance() -> play("cursor", false ,1);
 					if( cursorIndex == QUIT )

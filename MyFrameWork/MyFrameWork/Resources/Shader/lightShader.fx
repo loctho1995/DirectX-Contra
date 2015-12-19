@@ -46,9 +46,9 @@ PixelInputType mainVS(VertexInputType input)
 float4 mainPS(PixelInputType input) : COLOR
 {
 	float4 returnVal;
-	
+	float3 temp;
 	returnVal = tex2D(SampleType, input.tex);
-	
+	temp = returnVal.xyz;
 	float4 spotlight;
 	float4 worldPos = input.worldPos;
 	worldPos.w = 0;
@@ -58,6 +58,7 @@ float4 mainPS(PixelInputType input) : COLOR
 	float dotProduct = dot(toPixel, normallightD );
 	
 	float brightness = 0;
+
 	if(dotProduct >= lightingCutoff)
 	{
 		brightness = ( dotProduct - lightingCutoff ) / ( 1 - lightingCutoff);
@@ -65,13 +66,15 @@ float4 mainPS(PixelInputType input) : COLOR
 		{
 			brightness = AmbientlightIntensity;
 		}
-		returnVal  = returnVal * brightness + lightingColor;
+		temp = temp * brightness + lightingColor.xyz;
 	}
 	else
 	{
-		returnVal = returnVal *  AmbientlightIntensity;
+		temp = temp *  AmbientlightIntensity;
 	}
-	
+	returnVal.x = temp.x;
+	returnVal.y = temp.y;
+	returnVal.z = temp.z;
 	return returnVal ;
 }
 
