@@ -8,6 +8,9 @@
 #include "OptionScene.h"
 #include "HelpScene.h"
 #include "SceneTransition.h"
+#include "TransitionCircleOpen.h"
+#include "TransitionCircleScan.h"
+#include "TransitionScan.h"
 
 class SceneManager
 {
@@ -39,6 +42,31 @@ public:
         isTransitioning = true;
 
         SceneTransition::getInstance()->setTransition(pInstance->pCurrentScene, dest, transition);
+    }
+
+    //chuyen Scene voi hieu ung ngau nhien
+    void createSceneWithRandomTransition(Scene* dest)
+    {
+        TransitionEffect *effect;
+
+        srand(NULL);
+
+        switch (rand() % 3)
+        {
+            case 0:
+                effect = new TransitionScan();
+                break;
+
+            case 1:
+                effect = new TransitionCircleOpen();
+                break;
+
+            default:
+                effect = new TransitionCircleScan();
+                break;
+        }
+
+        createSceneWithTransition(dest, effect);
     }
 
     //kiem tra xem transition finish chua

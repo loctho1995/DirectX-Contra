@@ -156,7 +156,7 @@ void HelpScene::handleInput()
         //chuyen scene
         if (keyCode == VK_ESCAPE)
         {
-            SceneManager::getInstance()->createScene(new LoadingScene());
+            SceneManager::getInstance()->createSceneWithRandomTransition(new StartingScene());
         }
 
         if (isPause)
