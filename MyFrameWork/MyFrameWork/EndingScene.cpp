@@ -28,8 +28,10 @@ EndingScene::EndingScene(void)
 	label[2].text = "FALCON AND SAVE THE UNIVERSE.";
 	label[3].text = "CONSIDER YOURSELF A HERO!";
 	label[4].text = " ----------THE END ---------- ";
-	label[5].text = "SPACE - PLAY AGAIN, ESC - EXIT";
+	label[5].text = "SPACE - MENU GAME, ESC - EXIT";
 
+
+	Sound::getInstance()->loadSound("Resources\\Sounds\\endingscene.wav", "endingscene");
 	Sound::getInstance()->play("endingscene", false, 1);
 }
 
@@ -65,10 +67,10 @@ void EndingScene::handleInput()
 				Sound::getInstance()->stop();
 			}
 			break;
-		case VK_END:
+		case VK_ESCAPE:
 			if (e.isRelease())
 			{
-
+				PostQuitMessage(0);
 			}
 			break;
 		}

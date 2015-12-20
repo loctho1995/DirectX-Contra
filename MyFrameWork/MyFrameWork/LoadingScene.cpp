@@ -43,6 +43,8 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\warning.wav", "warning");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\explode.wav", "explode.wav");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\beShooted.wav", "beShooted");
+	Sound::getInstance()->loadSound("Resources\\Sounds\\qexplode.wav", "qexplode");
+	Sound::getInstance()->loadSound("Resources\\Sounds\\stonefailing.wav", "stonefailing");
 
 	Sound::getInstance()->loadSound("Resources\\Sounds\\clearStage.wav", "clearStage");
 
@@ -52,7 +54,6 @@ LoadingScene::LoadingScene()
 	Sound::getInstance()->loadSound("Resources\\Sounds\\playerdie.wav", "playerdie");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\addlife.wav", "addlife");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\gameOver.wav", "gameOver");
-	Sound::getInstance()->loadSound("Resources\\Sounds\\endingscene.wav", "endingscene");
 
 	Sound::getInstance()->loadSound("Resources\\Sounds\\shootL.wav", "shootL");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\shootM.wav", "shootM");
@@ -70,6 +71,7 @@ LoadingScene::LoadingScene()
 
 	Sound::getInstance()->loadSound("Resources\\Sounds\\tank.wav", "tank");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\exbullet.wav", "exbullet");
+
 
 	
 

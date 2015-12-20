@@ -1,11 +1,14 @@
 #include "EnermyCannonDeadState.h"
 #include "EnermyCannonData.h"
+#include "Sound.h"
 
 EnermyCannonDeadState::EnermyCannonDeadState(EnermyData* pData)
 {
 	this->pData = pData;
 	this->pData->iCurrentArr = EnermyCannonData::DEAD;
 	pData->isHittable = false;
+
+	Sound::getInstance()->play("qexplode", false, 1);
 }
 
 

@@ -23,6 +23,7 @@ void EnermyFailingStoneDroppingState::onUpdate()
 	if (this->pData->vy<-1.5f)
 	{
 		this->pData->vy = 0;
+		Sound::getInstance()->play("stonefailing", false, 1);
 	}
 	if (this->pData->vy<0)
 	{

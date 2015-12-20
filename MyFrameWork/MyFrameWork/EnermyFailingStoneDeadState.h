@@ -9,8 +9,5 @@ public:
 	EnermyFailingStoneDeadState(EnermyData* pData);
 	~EnermyFailingStoneDeadState();
 	virtual void onUpdate();
-private:
-	int count;
-	int nHoldFrames;
 };
 

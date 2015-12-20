@@ -13,7 +13,7 @@ ObjectCapsuleWeaponDropState::ObjectCapsuleWeaponDropState(ObjectData *pData)
 	this->pData->vy = -3.8f;
 	accelemeter = 0.1f;
 
-	Sound::getInstance()->play("enemydead.wav", false, 1);
+	Sound::getInstance()->play("qexplode", false, 1);
 }
 
 

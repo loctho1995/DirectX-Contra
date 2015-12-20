@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="319" height="15" tilewidth="16" tileheight="16" nextobjectid="97">
- <tileset firstgid="1" name="map5_tileset" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="map5_tileset" tilewidth="16" tileheight="16" tilecount="154">
   <image source="map5_tileset.png" width="224" height="176"/>
   <tile id="13">
    <animation>
