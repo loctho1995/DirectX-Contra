@@ -34,6 +34,7 @@ EnermyFinalBoss5Sprite::EnermyFinalBoss5Sprite(float respawnX, float respawnY, s
 	pData->isHittable = false;
 	pData->isThrougable = true;
 	pData->HP = 24;
+	pData->score = 15000;
 	pData->body = RectF(-31.0f, -33.5f, 62.0f, 67.0f);
 }
 
