@@ -14,6 +14,6 @@ public:
 
 private:
     D3DXVECTOR2 direction;    
-    float speedFrame, distance;
+    float speedFrame, distance, delayFrame;
 };
 

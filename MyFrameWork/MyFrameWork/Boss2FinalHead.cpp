@@ -8,7 +8,7 @@ Boss2FinalHead::Boss2FinalHead(float x, float y, std::vector<BulletSprite*>& bul
     this->pData->HP = 12;
     this->pData->score = 10000;
     this->pData->x = x;
-    this->pData->y = y;
+    this->pData->y = y - 145;
     this->pData->isHittable = false;
     this->pData->body = RectF(-22.5f, 0, 55, 55);
     this->pData->iCurrentArr = 0;
@@ -20,9 +20,13 @@ Boss2FinalHead::Boss2FinalHead(float x, float y, std::vector<BulletSprite*>& bul
     this->pData->pState = new Boss2FinalHeadShuttingState(this->pData);
 
     explosion = new Boss2FinalExplosionSprite(0, 0);
-    bodySprite = new Boss2FinalBody(128, 98);
+    bodySprite = new Boss2FinalBody(128, 146);
 }
 
+void Boss2FinalHead::onCameraCollision(RectF rect)
+{
+
+}
 
 Boss2FinalHead::~Boss2FinalHead()
 {
@@ -68,7 +72,7 @@ void Boss2FinalHead::draw(Camera *cam)
     }
     else
     {
-        pData->ppTextureArrays[pData->iCurrentArr]->draw(pData->x, pData->y, cam);
         bodySprite->draw(cam);
+        pData->ppTextureArrays[pData->iCurrentArr]->draw(pData->x, pData->y, cam);
     }
 }

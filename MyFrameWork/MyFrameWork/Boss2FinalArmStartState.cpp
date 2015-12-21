@@ -4,6 +4,7 @@
 Boss2FinalArmStartState::Boss2FinalArmStartState(EnermyData *pData)
 {
     this->pData = pData;
+    delayFrame = 80;
 
     if (((Boss2FinalData*)this->pData)->armSide == Boss2FinalData::ArmSide::LEFT)
     {
@@ -33,6 +34,12 @@ Boss2FinalArmStartState::~Boss2FinalArmStartState()
 
 void Boss2FinalArmStartState::onUpdate()
 {
+    if (delayFrame > 0)
+    {
+        delayFrame--;
+        return;
+    }
+
     for (size_t i = 0; i < 5; i++)
     {
         ((Boss2FinalData*)pData)->joints[i]->update();
