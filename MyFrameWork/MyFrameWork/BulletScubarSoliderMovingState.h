@@ -6,7 +6,7 @@
 #define BULLETGRAVITY 0.001
 #define GAMETIME 5
 #define BULLETVYJUMP2 - 0.6
-#define BULLETVYJUMP13 - 0.63 
+#define BULLETVYJUMP13 - 0.615 
 #define localY_3 692
 #define localY_2_2 800
 
