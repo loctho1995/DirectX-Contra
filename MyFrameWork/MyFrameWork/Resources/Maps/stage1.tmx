@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="173">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
   <image source="tileset.png" width="176" height="192"/>
   <tile id="119">
    <animation>
@@ -59,7 +59,7 @@
  </tileset>
  <layer name="BackGroundLayer" width="208" height="15">
   <data encoding="base64" compression="zlib">
-   eJztmNdvFEEMxieBhN47offee+9ItAda6AgE5CEUCYGAywUQ8IfzrbQjRs54bc/u3i5SHn5yZnZsj+8882Wv45wbA51E28fMcUhruOea2CnQuLE8RblTai6Ts85YVeao6/tqG52AcfL39+Az6ObjbuA7FfTneB/OL3Xcl4/pfrn9F9UVe170uYwz+WJ1+n3659PAdDBj0v6XdqbjeyMk69ex3HbIeBaYDeaAuZFxdm4GwQDxl/ys47B//f64/RfVVRSHMkjqC/24OsM888B8sGDSquxCsKhFdjFY4uTzQ+9lz1KwDCwHK8BKMh5i4kl+1rHPw+kMpT8g1A8/F1sf0yduPVfnEPFbBVZPWrVd49qhO9SuBevAerABbASbAui97NkMtoCtYFs+3h6Mub6S/KxjSWdiujGQW6qnMb9wXYfMdwvy0Dpp/h1gZ4NW27dVx7Pm8/O7wG7XvA5SuwfsBfvAfnAAHAzw3/shcDjnSG6PkvlwHFtPLfWPPZfWSf6hjk5xE/tcu09JpzVxwnjHwPEGrbafq45nzde07mnsCXDS/Ts/pwJ8f5wGZ8BZcA6cBxeCeTqm66ml67nn0jrJP9Sn2P9b2n1K50eKQ+NdBJcatFpd0caT9EOrO1XHLat/mryXwRVw1fHnp+n7MtV+Ap9dvOe/GONwZ8cSh7PXwPUe2Lr2V1Y/uHy91qUUnb0BboJbjj8/Td+XqfYH+Oniff/LGIc7P5Y4nL0N7vTA1rW/svrB5eOe1/V+p9XtMM5dcA/cdxPPz3BO6r2Wei9Wdd8OC/Q6Tlv1o+r9WPVD0jVr/WV1T6o3jPMAPASPwGPwJMD3R+q9lnovav24z88/l/pem6eqOKl11a0f1n1pv3etfnB5vL+1fu3vety+ub6K6dBT8Aw8d3H9+erK30/aeat9AV5GrH/+2/E9b6mrqjipdfVKP6R56360+sHVL+mTlFfSv7KfWxbnFXgN3rj4+RkB3wr442Rd4eZHGf9RYx7O/63j+16qK8QSx7JPSz11xOXu36r0S6sfWn+tlXQmNS6tI8vzDrwHHxz//lOEpg/9efV3QNiXMf9Yv45E4nlr6fe6sZxL7j6O1WP5nJt+L+Lef6z/r2h1QnoPknSx7PtlZrN3n4/Ofn5S+qlMf1cdr43nLKWeMF6mVW343Y/e/9p73ao/0nuQVtfK/I5KtSfjL0IQo/I=
+   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
   </data>
  </layer>
  <objectgroup name="CollisionRect">
@@ -108,12 +108,12 @@
   <object id="158" type="water" x="1506.5" y="220" width="220" height="13"/>
  </objectgroup>
  <objectgroup name="ObjectLayer">
-  <object id="37" name="bridge" type="object" x="767.667" y="115.917" width="130" height="30.083"/>
+  <object id="37" name="bridge" type="object" x="767.67" y="115.92" width="130" height="30.083"/>
   <object id="38" name="soldierl" type="enemy" x="278.5" y="83" width="17" height="32"/>
-  <object id="42" name="bridge" type="object" x="1057" y="115.708" width="130" height="28.5833"/>
+  <object id="42" name="bridge" type="object" x="1057" y="115.71" width="130" height="28.5833"/>
   <object id="43" name="soldierl" type="enemy" x="304" y="83" width="37.5" height="32"/>
   <object id="44" name="soldierl" type="enemy" x="346" y="82" width="38.333" height="33"/>
-  <object id="46" name="soldierl" type="enemy" x="828.667" y="83.6667" width="16.333" height="33"/>
+  <object id="46" name="soldierl" type="enemy" x="828.67" y="83.67" width="16.333" height="33"/>
   <object id="47" name="soldierl" type="enemy" x="948.5" y="80" width="16.333" height="33"/>
   <object id="48" name="soldierl" type="enemy" x="1350" y="82" width="16.333" height="33"/>
   <object id="49" name="soldierl" type="enemy" x="1677" y="112" width="16.333" height="33"/>
@@ -142,8 +142,8 @@
   <object id="129" name="cannon1" type="enemy" x="2752" y="112" width="32" height="32"/>
   <object id="137" name="cameratranslateposition" type="&quot;&quot;" x="3204" y="0" width="12" height="240"/>
   <object id="141" name="soldierl" type="enemy" x="851.5" y="81.5" width="23.5" height="33"/>
-  <object id="142" name="soldierl" type="enemy" x="805.333" y="83" width="16.333" height="33"/>
-  <object id="145" name="soldierl" type="enemy" x="985.833" y="82.5" width="16.333" height="33"/>
+  <object id="142" name="soldierl" type="enemy" x="805.33" y="83" width="16.333" height="33"/>
+  <object id="145" name="soldierl" type="enemy" x="985.83" y="82.5" width="16.333" height="33"/>
   <object id="146" name="soldierl" type="enemy" x="1017.83" y="81" width="16.333" height="33"/>
   <object id="141" name="sniper" type="enemy" x="304" y="174" width="18" height="39"/>
   <object id="144" name="sniper" type="enemy" x="624" y="174" width="18" height="39"/>
