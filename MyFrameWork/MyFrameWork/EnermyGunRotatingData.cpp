@@ -10,7 +10,7 @@ EnermyGunRotatingData::EnermyGunRotatingData(std::vector < BulletSprite* >& bull
 	this->isDesTroyed = false;
 	this->HP = 10;
 	this->isGun = true; // gun stage1
-	this->score = 10;
+	this->score = 300;
 }
 EnermyGunRotatingData::~EnermyGunRotatingData()
 {

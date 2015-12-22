@@ -9,7 +9,7 @@ EnermyTankData::EnermyTankData(std::vector<BulletSprite*>& bulletsVector)
 	this->isDesTroyed = false;
 	this->HP = 50;
 	this->botName = "tank";
-	this->score = 10;
+	this->score = 5000;
 }
 
 EnermyTankData::~EnermyTankData()
