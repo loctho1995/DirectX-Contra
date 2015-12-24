@@ -83,6 +83,6 @@
   <object id="141" name="sniper" type="enemy" x="304" y="174" width="18" height="39"/>
   <object id="144" name="sniper" type="enemy" x="624" y="174" width="18" height="39"/>
   <object id="172" name="respawnposition" type="&quot;&quot;" x="69" y="27.5" width="18" height="27"/>
-  <object id="174" name="cameratranslateposition" type="&quot;&quot;" x="748.5" y="24" width="17" height="32"/>
+  <object id="174" name="cameratranslateposition" type="&quot;&quot;" x="748.5" y="0" width="17" height="239"/>
  </objectgroup>
 </map>
