@@ -37,7 +37,6 @@ PlayScene ::PlayScene()
 	}
 
 	Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
-	
 }
 
 PlayScene ::~PlayScene()
@@ -174,6 +173,7 @@ void PlayScene::onUpdate()
 		count++;
 		if( count == nTransitionFrames)
 		{
+            GameSaveLoad::getInstance()->checkAndSaveScore(UIComponents::getInstance()->getScore());
 			SceneManager::getInstance()->createScene(new GameOverScene());
 			return;
 		}
