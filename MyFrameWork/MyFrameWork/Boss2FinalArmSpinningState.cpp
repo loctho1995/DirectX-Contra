@@ -59,7 +59,44 @@ void Boss2FinalArmSpinningState::onUpdate()
     }
     else
     {
-        float angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY) ,joints[4]->getPosition());
+        float angle = 0; 
+
+        if (UIComponents::getInstance()->getNumberPlayer() == 1)
+        {
+            //chi co 1 thang player
+            angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY), joints[4]->getPosition());
+        }
+        else
+        {
+            if (pData->isPlayerDead)
+            {
+                //player 1 chet
+                angle = getAngle(D3DXVECTOR2(pData->player2X, pData->player2Y), joints[4]->getPosition());
+            }
+            else if (pData->isPlayer2Dead)
+            {
+                //player 2 chet
+                angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY), joints[4]->getPosition());
+            }
+            else
+            {
+                //eu co thang nao chet
+                D3DXVECTOR2 player1 = D3DXVECTOR2(pData->playerX, pData->playerY) - joints[4]->getPosition();
+                D3DXVECTOR2 player2 = D3DXVECTOR2(pData->player2X, pData->player2Y) - joints[4]->getPosition();
+                float length1 = D3DXVec2Length(&player1);
+                float length2 = D3DXVec2Length(&player2);
+
+                if (length1 < length2)
+                {
+                    angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY), joints[4]->getPosition());
+                }
+                else
+                {
+                    angle = getAngle(D3DXVECTOR2(pData->player2X, pData->player2Y), joints[4]->getPosition());
+                }
+            }
+        }
+
         pData->bulletsVector.push_back(new Boss2FinalBullet(joints[4]->getPosition().x, joints[4]->getPosition().y, 1.0f, angle));
         frameAttack = FRAME_ATTACK;
     }

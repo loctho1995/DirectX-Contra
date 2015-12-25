@@ -1026,9 +1026,6 @@
     <ClInclude Include="EnermySprite.h">
       <Filter>GameComponents</Filter>
     </ClInclude>
-    <ClInclude Include="EnermyData.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="StartingScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
@@ -1061,6 +1058,9 @@
     </ClInclude>
     <ClInclude Include="AmbientLight.h">
       <Filter>TransitionAndEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyData.h">
+      <Filter>GameComponents</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

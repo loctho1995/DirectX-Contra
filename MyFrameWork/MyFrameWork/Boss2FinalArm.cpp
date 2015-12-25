@@ -12,6 +12,7 @@ Boss2FinalArm::Boss2FinalArm(float x, float y, std::vector<BulletSprite*>& bulle
     this->pData->body = RectF(-8, -8, 16, 16);    
     this->pData->isDesTroyed = false;
     this->pData->isThrougable = false;
+    this->pData->iCurrentArr = 0;
 
     explosion = new Boss2FinalExplosionSprite(0, 0);
 

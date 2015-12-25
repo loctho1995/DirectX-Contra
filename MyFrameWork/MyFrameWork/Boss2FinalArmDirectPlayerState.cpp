@@ -37,7 +37,8 @@ void Boss2FinalArmDirectPlayerState::onUpdate()
 
         if (timeAttack == 0)
         {
-            float angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY), joints[4]->getPosition());
+            //float angle = getAngle(D3DXVECTOR2(pData->playerX, pData->playerY), joints[4]->getPosition());
+            float angle = getAngle(getNearestPlayer(), joints[4]->getPosition());
             pData->bulletsVector.push_back(new Boss2FinalBullet(joints[4]->getPosition().x, joints[4]->getPosition().y, 1.0f, angle));
         }
     }
@@ -92,7 +93,8 @@ float Boss2FinalArmDirectPlayerState::getAngle2Vector(D3DXVECTOR2 vec1, D3DXVECT
 
 float Boss2FinalArmDirectPlayerState::getAngleBetweenPlayerAndjoint(Boss2FinalJoint* joint)
 {
-    D3DXVECTOR2 playerPos(((Boss2FinalData*)pData)->playerX, ((Boss2FinalData*)pData)->playerY);
+    D3DXVECTOR2 playerPos;// (((Boss2FinalData*)pData)->playerX, ((Boss2FinalData*)pData)->playerY);
+    playerPos = getNearestPlayer();
 
     float angle = D3DXToDegree(getAngle2Vector(joint->getPosition() - joints[0]->getPosition(),
                                 playerPos - joints[0]->getPosition()));
@@ -101,8 +103,9 @@ float Boss2FinalArmDirectPlayerState::getAngleBetweenPlayerAndjoint(Boss2FinalJo
 }
 
 void Boss2FinalArmDirectPlayerState::moveAroundDirect(Boss2FinalJoint* joint0, Boss2FinalJoint *joint,float speed, float radius)
-{
-    D3DXVECTOR2 playerPos(((Boss2FinalData*)pData)->playerX, ((Boss2FinalData*)pData)->playerY);
+{   
+    D3DXVECTOR2 playerPos;
+    playerPos = getNearestPlayer();//(((Boss2FinalData*)pData)->playerX, ((Boss2FinalData*)pData)->playerY);
 
     float angle = D3DXToDegree(getAngle2Vector(joint->getPosition() - joint0->getPosition(),
         playerPos - joint0->getPosition()));
@@ -147,4 +150,43 @@ float Boss2FinalArmDirectPlayerState::getAngle(D3DXVECTOR2 pos1, D3DXVECTOR2 pos
     float angle = acos(vec.x) * (abs(vec.y) / vec.y);
 
     return angle;
+}
+
+D3DXVECTOR2 Boss2FinalArmDirectPlayerState::getNearestPlayer()
+{
+    if (UIComponents::getInstance()->getNumberPlayer() == 1)
+    {
+        //chi co 1 thang player
+        return  D3DXVECTOR2(pData->playerX, pData->playerY);
+    }
+    else
+    {
+        if (pData->isPlayerDead)
+        {
+            //player 1 chet
+            return D3DXVECTOR2(pData->player2X, pData->player2Y);
+        }
+        else if (pData->isPlayer2Dead)
+        {
+            //player 2 chet
+            return  D3DXVECTOR2(pData->playerX, pData->playerY);
+        }
+        else
+        {
+            D3DXVECTOR2 player1 = D3DXVECTOR2(pData->playerX, pData->playerY) - joints[4]->getPosition();
+            D3DXVECTOR2 player2 = D3DXVECTOR2(pData->player2X, pData->player2Y) - joints[4]->getPosition();
+            float length1 = D3DXVec2Length(&player1);
+            float length2 = D3DXVec2Length(&player2);
+            //return player1;
+
+            if (length1 < length2)
+            {
+                return  D3DXVECTOR2(pData->playerX, pData->playerY);
+            }
+            else
+            {
+                return D3DXVECTOR2(pData->player2X, pData->player2Y);
+            }
+        }
+    }
 }
