@@ -1,0 +1,1621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TiXmlParsingData" Collapsed="true">
+    <Position X="194.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAQABAAEAAAAAAAAAAEEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tinyxmlparser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlString" Collapsed="true">
+    <Position X="0.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAIAAAAEAAAlAsICAQACAAEAAIIAiQExCAABAAA=</HashCode>
+      <FileName>tinystr.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlOutStream" Collapsed="true">
+    <Position X="0.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tinystr.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlVisitor" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAAAAAgAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlBase" Collapsed="true">
+    <Position X="7.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAgggBQAEAgEAAAQAgBhABASADAQAiAIAAAiAAAkAAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlNode" Collapsed="true">
+    <Position X="6.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAgAAAIAEAEiiBAhEAAYQAEAAqBgCECAYtgAAtAIDA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlAttribute" Collapsed="true">
+    <Position X="14.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQggAAAgAAQggAEAABAAQQAAAIEAGQAAABgQAIEEAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlAttributeSet" Collapsed="true">
+    <Position X="190.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAQAAQAAABAAAAAAJAAAAACAiQAAAAAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlElement" Collapsed="true">
+    <Position X="3.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAACACQAAJAAAAIIEAgQSAAA0BCBAgAAAEIFE=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlComment" Collapsed="true">
+    <Position X="5.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAIAAAAAAAAAAAAAAAQAAAAAAAAEIAAAgAAAEIBA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlText" Collapsed="true">
+    <Position X="7.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAgAAAABAAAAAAAAEAAAABAAAABgAEAAAAgAAAEIBQ=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlDeclaration" Collapsed="true">
+    <Position X="10" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAgACCAAAQAAAAAAAAAAAAAgAAAAIEAAAIoAAAEKBA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlUnknown" Collapsed="true">
+    <Position X="12.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAAEAAAAAAAAAAAAACAAAAAAEAAAAgAIAEIBA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlDocument" Collapsed="true">
+    <Position X="1" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAABBAQAQABAgEICAAAAAEQBAEBFAAgAEgUJBA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlHandle" Collapsed="true">
+    <Position X="192.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAEAAAIAAAEgAIAABAAAAAAAAAIEoCAEAABA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiXmlPrinter" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAEABEhAQgBAAQAAAAMAAAAAAAAABQIBQAwAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySoldierDrowningState" Collapsed="true">
+    <Position X="106" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermySoldierDrowningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldierFallingState" Collapsed="true">
+    <Position X="115" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAAAAAAAAAAAAAIAAAAAQAAAAAACAAAAA=</HashCode>
+      <FileName>EnermySoldierFallingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldierShootingState" Collapsed="true">
+    <Position X="117.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAIAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermySoldierShootingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldier" Collapsed="true">
+    <Position X="54" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAACAgAAAACAAAAAABAAAAAAAAAAIA=</HashCode>
+      <FileName>EnermySoldier.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldierData" Collapsed="true">
+    <Position X="22" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermySoldierData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldierDestroyState" Collapsed="true">
+    <Position X="133" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>EnermySoldierDestroyState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldierDieState" Collapsed="true">
+    <Position X="142" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAIAA=</HashCode>
+      <FileName>EnermySoldierDieState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldierJumpingState" Collapsed="true">
+    <Position X="153.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAABAAAAAAAAAAAAAAAAAAAAAAAQAAAACACAAAAA=</HashCode>
+      <FileName>EnermySoldierJumpingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySoldierRunningState" Collapsed="true">
+    <Position X="45.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAgEBAAAAAAAAAAAAAAQAACAAACAAAAA=</HashCode>
+      <FileName>EnermySoldierRunningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2Final" Collapsed="true">
+    <Position X="190.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAACAAAgAAAAABABAYQCAAAABAAAAA=</HashCode>
+      <FileName>Boss2Final.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalArm" Collapsed="true">
+    <Position X="29.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACBgCAQAAAAAAIAAAAAAAAABAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Boss2FinalArm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalArmAttackState" Collapsed="true">
+    <Position X="67.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAEAAAAAAAAAAEEAAACACAAAAAAAAQABAAAAAAAA=</HashCode>
+      <FileName>Boss2FinalArmAttackState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalArmDirectPlayerState" Collapsed="true">
+    <Position X="76.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAEAAAAAAAAAIAAAACIICgAAAAQAIAAAAAAEAAAA=</HashCode>
+      <FileName>Boss2FinalArmDirectPlayerState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalArmSpinningState" Collapsed="true">
+    <Position X="81.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAFAAAAAABAAAEAAAAAACAABAAAAAQABAAgAAAEA=</HashCode>
+      <FileName>Boss2FinalArmSpinningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalArmStartState" Collapsed="true">
+    <Position X="90.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAMAAAAAAAAAAAAEAEAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Boss2FinalArmStartState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalArmWaveState" Collapsed="true">
+    <Position X="99.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAEAAAgAAAAAQEAAAAEAQAAAAAQBIAAAAAAAAAgA=</HashCode>
+      <FileName>Boss2FinalArmWaveState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalBody" Collapsed="true">
+    <Position X="24.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAGAAA=</HashCode>
+      <FileName>Boss2FinalBody.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalBullet" Collapsed="true">
+    <Position X="76.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAIAAAAAAAAAAAAAAAAAAAAUAAA=</HashCode>
+      <FileName>Boss2FinalBullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalData" Collapsed="true">
+    <Position X="17.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAASAAAAAAACAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Boss2FinalData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalExplosionSprite" Collapsed="true">
+    <Position X="27" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAIAAAAAAgAAAAAIAAAACAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Boss2FinalExplosionSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalHand" Collapsed="true">
+    <Position X="4.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Boss2FinalHand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalHead" Collapsed="true">
+    <Position X="58.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAACAAIAAAAAAAAABABAAAAAAAAEBAA=</HashCode>
+      <FileName>Boss2FinalHead.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalHeadAttackingState" Collapsed="true">
+    <Position X="144.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAA=</HashCode>
+      <FileName>Boss2FinalHeadAttackingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalHeadOpeningState" Collapsed="true">
+    <Position X="155.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Boss2FinalHeadOpeningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalHeadShuttingState" Collapsed="true">
+    <Position X="47.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAABAABAAAAAAAAAAAAAAAAAIAAAAEAAAAAAA=</HashCode>
+      <FileName>Boss2FinalHeadShuttingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss2FinalJoint" Collapsed="true">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAlYACMNgAUHEJAMAIgFGAKGaAIEAKIQAJAEAAkigg=</HashCode>
+      <FileName>Boss2FinalJoint.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBazokaExploringState" Collapsed="true">
+    <Position X="58.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>EnemyBazokaExploringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBazokaFiringState" Collapsed="true">
+    <Position X="70" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACAAAQAAAAAAAAAAAEAAAAAAAQAAAA=</HashCode>
+      <FileName>EnemyBazokaFiringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBazokaSprite" Collapsed="true">
+    <Position X="33.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAACAAAAAABAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>EnemyBazokaSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBazokaStandingState" Collapsed="true">
+    <Position X="83.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACABAQAAACAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>EnemyBazokaStandingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBlazerSprite" Collapsed="true">
+    <Position X="40.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>EnemyBlazerSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMineExploringState" Collapsed="true">
+    <Position X="101.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAA=</HashCode>
+      <FileName>EnemyMineExploringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMineFallingState" Collapsed="true">
+    <Position X="108.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgAAAAAAAAAAAAAAAAAAAAAQQCAAAAACAAAAA=</HashCode>
+      <FileName>EnemyMineFallingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMineSprite" Collapsed="true">
+    <Position X="45" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAACAAAAAQAA=</HashCode>
+      <FileName>EnemyMineSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySniper" Collapsed="true">
+    <Position X="49.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAECAA=</HashCode>
+      <FileName>EnemySniper.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySniperData" Collapsed="true">
+    <Position X="19.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAE=</HashCode>
+      <FileName>EnemySniperData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySniperDeadState" Collapsed="true">
+    <Position X="126.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAQAAAAAAAAAAAAAAAAAAQAYAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnemySniperDeadState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySniperStandingState" Collapsed="true">
+    <Position X="135.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAQACABAAAAAAAAgAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>EnemySniperStandingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySniperTurningState" Collapsed="true">
+    <Position X="146.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAEBAAQAAwACABAAAEAIAEIAAAACAAAIAAAAAAAA=</HashCode>
+      <FileName>EnemySniperTurningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFailingStone" Collapsed="true">
+    <Position X="63" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAIACAIAAAAAAAAAAAAAAAAAAAIEAAA=</HashCode>
+      <FileName>EnermyFailingStone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFailingStoneAppearingState" Collapsed="true">
+    <Position X="49.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAABAAAAAAAIAAAAAAAEAIAAAACAAA=</HashCode>
+      <FileName>EnermyFailingStoneAppearingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFailingStoneData" Collapsed="true">
+    <Position X="13" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>EnermyFailingStoneData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFailingStoneDeadState" Collapsed="true">
+    <Position X="61" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyFailingStoneDeadState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFailingStoneDroppingState" Collapsed="true">
+    <Position X="72.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAABCAAAAAACAAAAAAAAAAAAAAAQAAAAAACAAAAA=</HashCode>
+      <FileName>EnermyFailingStoneDroppingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss1Sprite" Collapsed="true">
+    <Position X="36" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAQACAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>EnermyFinalBoss1Sprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss1DeadState" Collapsed="true">
+    <Position X="85.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyFinalBoss1DeadState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss1StandingState" Collapsed="true">
+    <Position X="92.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>EnermyFinalBoss1StandingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunBoss1DeadState" Collapsed="true">
+    <Position X="103.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>EnermyGunBoss1DeadState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunBoss1FiringState" Collapsed="true">
+    <Position X="110.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACABAAAAACAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>EnermyGunBoss1FiringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunBoss1Sprite" Collapsed="true">
+    <Position X="47.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>EnermyGunBoss1Sprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunBoss1StandingState" Collapsed="true">
+    <Position X="119.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAABAAAACABAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>EnermyGunBoss1StandingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyCannon" Collapsed="true">
+    <Position X="56.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQAAAAAAAAACAIAAAAAAACAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>EnermyCannon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyCannonAppearingState" Collapsed="true">
+    <Position X="128.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAIAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyCannonAppearingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyCannonData" Collapsed="true">
+    <Position X="26.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAI=</HashCode>
+      <FileName>EnermyCannonData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyCannonDeadState" Collapsed="true">
+    <Position X="148.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyCannonDeadState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyCannonPreaparingState" Collapsed="true">
+    <Position X="157.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyCannonPreaparingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyCannonTurningState" Collapsed="true">
+    <Position X="52" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAADAAAAAAAACABAAAEAAAABIAAABAIAAAAABAAAA=</HashCode>
+      <FileName>EnermyCannonTurningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss5AppearingState" Collapsed="true">
+    <Position X="54.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>EnermyFinalBoss5AppearingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss5DeadState" Collapsed="true">
+    <Position X="63.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>EnermyFinalBoss5DeadState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss5DisappearingState" Collapsed="true">
+    <Position X="74.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyFinalBoss5DisappearingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss5PreparingState" Collapsed="true">
+    <Position X="79" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GQAAAAAAAAAAABAABAAAAAAAAAAAAAAAAAIAAAAEAAA=</HashCode>
+      <FileName>EnermyFinalBoss5PreparingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss5Sprite" Collapsed="true">
+    <Position X="38.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAEAACAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyFinalBoss5Sprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyFinalBoss5WaitingState" Collapsed="true">
+    <Position X="94.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAADAAAAAECACABAAAAAAAAAAAAAAAAAIAAEAAAAE=</HashCode>
+      <FileName>EnermyFinalBoss5WaitingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShipBoss5" Collapsed="true">
+    <Position X="72" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAAIAAAAAAAAAgAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ShipBoss5.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShipBoss5ExploringState" Collapsed="true">
+    <Position X="171.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShipBoss5ExploringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShipBoss5MovingState" Collapsed="true">
+    <Position X="175.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAABAAACAAAAAAABAAAAAAQAAAEAAAAAAAAA=</HashCode>
+      <FileName>ShipBoss5MovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunRotating" Collapsed="true">
+    <Position X="51.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAACAIAAAAAAAAQAAAAAAAAAAAkAAA=</HashCode>
+      <FileName>EnermyGunRotating.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunRotatingClosingState" Collapsed="true">
+    <Position X="121.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyGunRotatingClosingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunRotatingData" Collapsed="true">
+    <Position X="24.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>EnermyGunRotatingData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunRotatingDieState" Collapsed="true">
+    <Position X="137.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIAAAAAAAAAAAAAAAgAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyGunRotatingDieState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunRotatingOpeningState" Collapsed="true">
+    <Position X="151" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAIA=</HashCode>
+      <FileName>EnermyGunRotatingOpeningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyGunRotatingSwavelingState" Collapsed="true">
+    <Position X="160" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAEQAAAAAQQCCAAAAEAIAEEAIICDAAAAAAAQBAAI=</HashCode>
+      <FileName>EnermyGunRotatingSwavelingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyScubarSoliderData" Collapsed="true">
+    <Position X="10.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyScubarSoliderData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyScubarSoliderHidingState" Collapsed="true">
+    <Position X="56.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAgIAAAAAAAAAAUAAA=</HashCode>
+      <FileName>EnermyScubarSoliderHidingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyScubarSoliderShootState" Collapsed="true">
+    <Position X="65.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>EnermyScubarSoliderShootState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyScubarSoliderSprite" Collapsed="true">
+    <Position X="31.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAAAAAAAACAIAAAAAAAAgAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>EnermyScubarSoliderSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyTankData" Collapsed="true">
+    <Position X="15.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyTankData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyTankExploring" Collapsed="true">
+    <Position X="88" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAABAAA=</HashCode>
+      <FileName>EnermyTankExploring.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyTankShootingState" Collapsed="true">
+    <Position X="97" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAAAABAAEBBAAAAEAAAAAAAAAAAAAAAABAgA=</HashCode>
+      <FileName>EnermyTankShootingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyTankSprite" Collapsed="true">
+    <Position X="42.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAgAAAAAACAIAAAAAAAAAAAAAAAgAAAAEAAA=</HashCode>
+      <FileName>EnermyTankSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyTankStartingState" Collapsed="true">
+    <Position X="112.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAkIAAAAAAAAAAABAAAAAAAIAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>EnermyTankStartingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankExploringSprite" Collapsed="true">
+    <Position X="78.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAEAAAIAAAAAAAAEAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>TankExploringSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankExploringState" Collapsed="true">
+    <Position X="180.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>TankExploringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlazerMovingState" Collapsed="true">
+    <Position X="124" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAA=</HashCode>
+      <FileName>BlazerMovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyInkJumpingState" Collapsed="true">
+    <Position X="130.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAACAAAgA=</HashCode>
+      <FileName>EnermyInkJumpingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyInkStandingState" Collapsed="true">
+    <Position X="139.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAABAEAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>EnermyInkStandingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyInkSprite" Collapsed="true">
+    <Position X="60.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABggAAIAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>EnermyInkSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBridge" Collapsed="true">
+    <Position X="22.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAABAAAAQADAYIAEAEAAAAACAAQAAAAAAEAQA=</HashCode>
+      <FileName>ObjectBridge.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBridgeAliveState" Collapsed="true">
+    <Position X="25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAQAAAAAAAAAAAAAAEAAEAAAAAAAEAAAEAAACAAAAA=</HashCode>
+      <FileName>ObjectBridgeAliveState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBridgeBody" Collapsed="true">
+    <Position X="9" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAgAAAAAAAAAAQAAAAAABAAA=</HashCode>
+      <FileName>ObjectBridgeBody.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBridgeData" Collapsed="true">
+    <Position X="1.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>ObjectBridgeData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBridgeExplosionState" Collapsed="true">
+    <Position X="29.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAgAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectBridgeExplosionState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBridgeHead" Collapsed="true">
+    <Position X="13.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAIAAAAAAAAAAAAAQACAAAAAAAA=</HashCode>
+      <FileName>ObjectBridgeHead.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBridgeTail" Collapsed="true">
+    <Position X="15.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIIAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ObjectBridgeTail.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectStaticWeapon" Collapsed="true">
+    <Position X="18" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgACAAAAAACAAAAAAAQAAAQABAAAAAAAAACAA=</HashCode>
+      <FileName>ObjectStaticWeapon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectStaticWeaponCloseState" Collapsed="true">
+    <Position X="31.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAAAAAAAAAAAAAIAEAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectStaticWeaponCloseState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectStaticWeaponData" Collapsed="true">
+    <Position X="4" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ObjectStaticWeaponData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectStaticWeaponOpenState" Collapsed="true">
+    <Position X="34" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAACAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>ObjectStaticWeaponOpenState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectStaticWeaponOutState" Collapsed="true">
+    <Position X="36.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAABAEAAAQAAABAAAAAACAAAAA=</HashCode>
+      <FileName>ObjectStaticWeaponOutState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectStaticWeaponPreparingState" Collapsed="true">
+    <Position X="38.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAABAAAEAAAABAAAEAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectStaticWeaponPreparingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectCapsuleWeapon" Collapsed="true">
+    <Position X="20.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABABAAAAAAAAIAAAAAQAAQAABAAAAAAAAEAAA=</HashCode>
+      <FileName>ObjectCapsuleWeapon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectCapsuleWeaponData" Collapsed="true">
+    <Position X="6.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ObjectCapsuleWeaponData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectCapsuleWeaponDropState" Collapsed="true">
+    <Position X="40.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAAAAAAAAAAACACAAABAAAAAAAAABAAAAAACAAAAA=</HashCode>
+      <FileName>ObjectCapsuleWeaponDropState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectCapsuleWeaponFlyingState" Collapsed="true">
+    <Position X="43" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACABEAACAAAAAAACAAAEAIAAAAAAAA=</HashCode>
+      <FileName>ObjectCapsuleWeaponFlyingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DynamicBridgeMovingState" Collapsed="true">
+    <Position X="27.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAEAAAAAAAAAQAIAAAAAAIAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>DynamicBridgeMovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectDynamicBridgeSprite" Collapsed="true">
+    <Position X="11.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQACAIAAAAgAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ObjectDynamicBridgeSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BitMapFont" Collapsed="true">
+    <Position X="189" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAEAAABIBAAAAAAAIEAoAAAAAAAACAACA=</HashCode>
+      <FileName>BitMapFont.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Label" Collapsed="true">
+    <Position X="194.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAEAAgAAAAAIAAAAAAAAAAAICIAAAAAQAAAAA=</HashCode>
+      <FileName>BitMapFont.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Camera" Collapsed="true">
+    <Position X="192.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cIACAAAAACAAYABAAgQAAACCCAAAQAAABABgAGAEAAA=</HashCode>
+      <FileName>Camera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionRect&lt;T&gt;" Collapsed="true">
+    <Position X="21.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAkABIQAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CollisionRect.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Direction" Collapsed="true">
+    <Position X="194.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAACAAAEAAACAAAAACAAAAgAIAQAEgAAABAAA=</HashCode>
+      <FileName>Direction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyCreator" Collapsed="true">
+    <Position X="196" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAEAAAAAAAAAAAAAAAABACAYEAAAAQAAAAAA=</HashCode>
+      <FileName>EnermyCreator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Loader" Collapsed="true">
+    <Position X="187.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAEAAAAAGAAAAABAAAAAAAQAAAAABAACAAA=</HashCode>
+      <FileName>Loader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermySprite" Collapsed="true">
+    <Position X="46" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UQAAgIAgADEQABgAAAsEAAIAABBAgQDEAAgEACgUAAI=</HashCode>
+      <FileName>EnermySprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyState" Collapsed="true">
+    <Position X="102.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAACAAAAA=</HashCode>
+      <FileName>EnermyState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game" Collapsed="true">
+    <Position X="187.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAUAAA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Graphics" Collapsed="true">
+    <Position X="189" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIgAAABAAAAgABAAwEAACgCCBAgAQIBABAAQAgFAE=</HashCode>
+      <FileName>Graphics.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextureHolder" Collapsed="true">
+    <Position X="196" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Graphics.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyEvent" Collapsed="true">
+    <Position X="192.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAAAAAAAAAAAAAAAAAAAEAABAAAAAAAAAACAIAA=</HashCode>
+      <FileName>KeyBoard.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyBoard" Collapsed="true">
+    <Position X="190.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABAQAIAAgAAAAAAAAAAARAEAAAAAAAAAgAgEAAQAA=</HashCode>
+      <FileName>KeyBoard.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Layer" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAQAARAAAAAAAAIAAAACABAFAAAEAAAEAAAQAAA=</HashCode>
+      <FileName>Layer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Map" Collapsed="true">
+    <Position X="189" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EYCBAEYEAZACQASAaAIABAAIAFAAEAESAAAIBCgASQA=</HashCode>
+      <FileName>Map.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object" Collapsed="true">
+    <Position X="190.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQgQAAAAAAAAQAFAAAAAABgAAAAAgA=</HashCode>
+      <FileName>Object.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectData" Collapsed="true">
+    <Position X="4" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAIAAAAAABAAAAAQAwAAAAAAEAAIAiAAQA=</HashCode>
+      <FileName>ObjectData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectSprite" Collapsed="true">
+    <Position X="15.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UQAAgAggADEQABgAAAJEAAIAAAwAiQBEAAAEQCAUAAA=</HashCode>
+      <FileName>ObjectSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectState" Collapsed="true">
+    <Position X="34" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAAAAAAAAAAAAAAAAAAEAAAAAAAQAAAAACAAAA=</HashCode>
+      <FileName>ObjectState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuadTree" Collapsed="true">
+    <Position X="194.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAIAAAABgAAAAAAAAEAJAABEAAAEEAAACAACAAAE=</HashCode>
+      <FileName>QuadTree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rect&lt;T&gt;" Collapsed="true">
+    <Position X="4.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAAAAQAQAAAAQAAAKAAAAAgAABgAAAABAA=</HashCode>
+      <FileName>Rect.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene" Collapsed="true">
+    <Position X="22.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Scene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManager" Collapsed="true">
+    <Position X="196" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIEAAAACIAAAAAAAAAAAAAAQAAAQSAAAECAQAAAAQ=</HashCode>
+      <FileName>SceneManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sound" Collapsed="true">
+    <Position X="190.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAEAAAAIAAAAAIgAAEAAACDgAAQABAhAgAACBAA=</HashCode>
+      <FileName>Sound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sprite" Collapsed="true">
+    <Position X="45" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAgAAAADEQAAAAAAoEAAIAABAAgABQAAAAACgUAAI=</HashCode>
+      <FileName>Sprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteData" Collapsed="true">
+    <Position X="14" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAAAEAADAQAQAAAgCABAKAAVAEAAAAEgBgQAAAAAA=</HashCode>
+      <FileName>SpriteData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteState" Collapsed="true">
+    <Position X="97" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgQAAAAAgAQCRIAIAAQAABAgAAABASAAFAGAAAAA=</HashCode>
+      <FileName>SpriteState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Texture" Collapsed="true">
+    <Position X="192.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgAAAgAAAAggAAAAIAEAAAAAAAQAAACAKAAAAAAAA=</HashCode>
+      <FileName>Texture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextureArray" Collapsed="true">
+    <Position X="194.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAACABAIEEACAAAAAQBAICAACAAIUAAA=</HashCode>
+      <FileName>TextureArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileLayer" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAAEAAAQAIAAAACABAAAAAAAAAAAAEAABA=</HashCode>
+      <FileName>TileLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimationTiled" Collapsed="true">
+    <Position X="187.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBAAAAAABAAAAAAAAAAAAABAAAAAAEAAAIAAIIEAAA=</HashCode>
+      <FileName>TileSet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileSet" Collapsed="true">
+    <Position X="187.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAABAABACAQQAQAAAAAACAQAkIAAIABAAAAAUAEE=</HashCode>
+      <FileName>TileSet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileTmx" Collapsed="true">
+    <Position X="189" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAASAQAIAAAAAAAAAAAAAAABgAAAAAhA=</HashCode>
+      <FileName>TileTmx.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIComponents" Collapsed="true">
+    <Position X="196" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABYAAAAAFAwAQAAAJAAKEAACIANAAASAACAAAECAQAA=</HashCode>
+      <FileName>UIComponents.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewPort" Collapsed="true">
+    <Position X="187.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAQAAACACAAEQAgAAAAAAAAAAgA=</HashCode>
+      <FileName>ViewPort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletMovingState" Collapsed="true">
+    <Position X="182.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAIAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>BulletMovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletSprite" Collapsed="true">
+    <Position X="75.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAAAAAAAAIAAAIAAAAAAAAAAAAAAAAEAAQ=</HashCode>
+      <FileName>BulletSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletState" Collapsed="true">
+    <Position X="173.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BulletState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyWhiteBullet" Collapsed="true">
+    <Position X="83.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAAEEAAA=</HashCode>
+      <FileName>EnermyWhiteBullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunBoss5Bullet" Collapsed="true">
+    <Position X="85.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgAAIAAAAAAAAAAAAAAAIAAAAEAAA=</HashCode>
+      <FileName>GunBoss5Bullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunBoss5BulletExploringState" Collapsed="true">
+    <Position X="162.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAA=</HashCode>
+      <FileName>GunBoss5BulletExploringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunBoss5BulletMovingState" Collapsed="true">
+    <Position X="164.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACAAAAAIAAAAAAAAAAAAABAACAAAAA=</HashCode>
+      <FileName>GunBoss5BulletMovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunBoss1Bullet" Collapsed="true">
+    <Position X="65.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAgA=</HashCode>
+      <FileName>GunBoss1Bullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunBoss1BulletExploringState" Collapsed="true">
+    <Position X="166.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAAAAAAAABAAAAAAAAAAAAAAAQAIAAAAAAAA=</HashCode>
+      <FileName>GunBoss1BulletExploringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunBoss1BulletMovingState" Collapsed="true">
+    <Position X="169" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAAAAAACAAIAAAAAAAAABAAQAAAAAACAAAAA=</HashCode>
+      <FileName>GunBoss1BulletMovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FBullet" Collapsed="true">
+    <Position X="67.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEBAA=</HashCode>
+      <FileName>FBullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBullet" Collapsed="true">
+    <Position X="69.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAEAAA=</HashCode>
+      <FileName>MBullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LBullet" Collapsed="true">
+    <Position X="74.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAFAAA=</HashCode>
+      <FileName>LBullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletScubarSoliderExploringState" Collapsed="true">
+    <Position X="173.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgACAAAAAABAAAAAAAAAAAAAAAAAIAACAAAAA=</HashCode>
+      <FileName>BulletScubarSoliderExPloringState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletScubarSoliderMovingState" Collapsed="true">
+    <Position X="178" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAAAAAACAAIAAgAAAAAAAAAAABAAAICABIAA=</HashCode>
+      <FileName>BulletScubarSoliderMovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletScubarSoliderSprite" Collapsed="true">
+    <Position X="81" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAAAAAIAAAAAAAAAIAAgAAAAAAAFAAA=</HashCode>
+      <FileName>BulletScubarSoliderSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndingScene" Collapsed="true">
+    <Position X="27.25" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAgAAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>EndingScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOverScene" Collapsed="true">
+    <Position X="29.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAACAAAEBAABAACAAAAAABAAAEAAAAAAAAQAAA=</HashCode>
+      <FileName>GameOverScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpScene" Collapsed="true">
+    <Position X="18.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYCABAAAgAAAEpAABGCAAAgoQAAAAhYABAAAASAUAEA=</HashCode>
+      <FileName>HelpScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnermyData" Collapsed="true">
+    <Position X="18.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAEAIAAAAAgAAAIQAAAQAAACBAAAAAABACAAQA=</HashCode>
+      <FileName>EnermyData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuScene" Collapsed="true">
+    <Position X="25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAQAAA=</HashCode>
+      <FileName>MenuScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OptionScene" Collapsed="true">
+    <Position X="20.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAECAAAFBLUBAAAAAAAAABAAAAAAAAACAAWAAI=</HashCode>
+      <FileName>OptionScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayScene" Collapsed="true">
+    <Position X="16" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AcIABAAAgAAAAIAABCAABACgCAIgAAAABAAAAGAUAEA=</HashCode>
+      <FileName>PlayScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingScene" Collapsed="true">
+    <Position X="22.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAQAAACAAAEBDABAAAAAAAQgBAAIAAAAAAAQAUAAI=</HashCode>
+      <FileName>StartingScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadingScene" Collapsed="true">
+    <Position X="25" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAACCAAEBAABAAEAAAAAAEAAAgAAAAAAAAQAAA=</HashCode>
+      <FileName>LoadingScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lighting" Collapsed="true">
+    <Position X="196" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAkQAQAAMAAAAAQEICACgACAAIiEAAAAgAAMEAA=</HashCode>
+      <FileName>Lighting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shader" Collapsed="true">
+    <Position X="189" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAA=</HashCode>
+      <FileName>Shader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneTransition" Collapsed="true">
+    <Position X="187.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAQEAAEAAAAAABAAAQAQAACAAAEAAA=</HashCode>
+      <FileName>SceneTransition.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransitionCircleOpen" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAACAAAEAAAAAAABAAgAAAAAQAAAAAAAAAEAAA=</HashCode>
+      <FileName>TransitionCircleOpen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransitionCircleScan" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAEAACAAAAJAAAAAAAAQAAAAAAAABEAAA=</HashCode>
+      <FileName>TransitionCircleScan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransitionEffect" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYAAAAAAAAEQAABAAABAAgAAAAAIAAAAAAAEAEBAA=</HashCode>
+      <FileName>TransitionEffect.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransitionScan" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgIAAAAAEAAAABAABAAAAAAAAQAAAAAQAAAEAAA=</HashCode>
+      <FileName>TransitionScan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerClimbingState" Collapsed="true">
+    <Position X="18.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAQCABAAAAAAAAAgAAAAACAIFAACAAAA=</HashCode>
+      <FileName>PlayerClimbingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerData" Collapsed="true">
+    <Position X="8.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAGAAAEBABChAwACACAAAAgAgAQAAAABAAAAAA=</HashCode>
+      <FileName>PlayerData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerDeadState" Collapsed="true">
+    <Position X="20.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAQAABAAAAAAAAACAAQRACAIFAKAgAAA=</HashCode>
+      <FileName>PlayerDeadState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerDivingState" Collapsed="true">
+    <Position X="22.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACQAAAAAAAAQAgAAQAACAAEAAAAAAA=</HashCode>
+      <FileName>PlayerDivingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerFBulletMovingState" Collapsed="true">
+    <Position X="184.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAACAAACAAAAAAAAEAAAAAAAAAAAQAAAAAAAgAAgAA=</HashCode>
+      <FileName>PlayerFBulletMovingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerJumpingState" Collapsed="true">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAQAAAAYCQAAIAAAAAAAgAAQQACAAFIOAAAAA=</HashCode>
+      <FileName>PlayerJumpingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerRunningState" Collapsed="true">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAgAYCQAAAAAgAABAgAAQAACAAEAOAAAAA=</HashCode>
+      <FileName>PlayerRunningState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSprite" Collapsed="true">
+    <Position X="6.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAiAAAATEQIAAACAocEAIAABAAhgBAAIAAAGwUAAI=</HashCode>
+      <FileName>PlayerSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerStandingState" Collapsed="true">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAIAAAAAAAgAAGQAAAAAAAABAgAAAAACAAEAAAAAAA=</HashCode>
+      <FileName>PlayerStandingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerState" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBgAAAAAAAABAQAAAAAAAAAAAABAQAAAAAAAAAA=</HashCode>
+      <FileName>PlayerState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSwimmingState" Collapsed="true">
+    <Position X="16" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAQCQAAAAAAAAAAgAAQAACAAEIKAAAQA=</HashCode>
+      <FileName>PlayerSwimmingState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectSpriteCreator" Collapsed="true">
+    <Position X="192.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ObjectSpriteCreator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TiXmlCursor" Collapsed="true">
+    <Position X="189" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAABABAAAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="z_stream_s" Collapsed="true">
+    <Position X="17.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAEAAAIAAAACQAAAIICAAEEAAQAAAEAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="gz_header_s" Collapsed="true">
+    <Position X="14.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBACAAQAAEAAAABAABAAAAAAAEAAAIAAkQAAAAAQA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="gzFile_s" Collapsed="true">
+    <Position X="1.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="internal_state" Collapsed="true">
+    <Position X="187.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="Byte" Collapsed="true">
+    <Position X="25.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uInt" Collapsed="true">
+    <Position X="9.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uLong" Collapsed="true">
+    <Position X="5.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Bytef" Collapsed="true">
+    <Position X="25.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="charf" Collapsed="true">
+    <Position X="187.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="intf" Collapsed="true">
+    <Position X="189" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uIntf" Collapsed="true">
+    <Position X="9.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uLongf" Collapsed="true">
+    <Position X="5.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidpc" Collapsed="true">
+    <Position X="194.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidpf" Collapsed="true">
+    <Position X="196" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidp" Collapsed="true">
+    <Position X="192.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_crc_t" Collapsed="true">
+    <Position X="187.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_stream" Collapsed="true">
+    <Position X="15.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_streamp" Collapsed="true">
+    <Position X="15.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gz_header" Collapsed="true">
+    <Position X="11.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gz_headerp" Collapsed="true">
+    <Position X="11.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gzFile" Collapsed="true">
+    <Position X="1.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="CollisionRectF" Collapsed="true">
+    <Position X="21.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CollisionRect.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RectF" Collapsed="true">
+    <Position X="7.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rect.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RectFList" Collapsed="true">
+    <Position X="190.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rect.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RectI" Collapsed="true">
+    <Position X="4.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rect.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="__unnamed_enum_0151_1" Collapsed="true">
+    <Position X="187.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TiXmlEncoding" Collapsed="true">
+    <Position X="190.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAABAAAAAAAABAAAA=</HashCode>
+      <FileName>tinyxml.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BulletTypes" Collapsed="true">
+    <Position X="189" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFBeAAQA=</HashCode>
+      <FileName>Define.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -13,6 +13,7 @@
 #include "Shader.h"
 #include "Lighting.h"
 #include "AmbientLight.h"
+#include "GameSaveLoad.h"
 
 class PlayScene : public Scene
 {
@@ -29,7 +30,6 @@ public:
 
 private:
 	PlayerSprite** pPlayer;
-	//PlayerSprite* pPlayer2;
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;

@@ -15,8 +15,6 @@ PlayScene ::PlayScene()
 
 	cam = new Camera(viewPort,pMap ->getResX(), pMap ->getResY(), pMap->getMapRect(), pMap ->getCameraTranslatePoint());
 
-	//pPlayer = new PlayerSprite(1, pMap ->getResX(), pMap ->getResY(), cam ->getMoveDir());
-
 	pPlayer = new PlayerSprite*[2];
 
 	pPlayer[0] = new PlayerSprite(0, pMap ->getResX(), pMap ->getResY(), cam ->getMoveDir());
@@ -71,7 +69,6 @@ PlayScene ::PlayScene()
 	}
 
 	Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
-	
 }
 
 PlayScene ::~PlayScene()
@@ -221,7 +218,8 @@ void PlayScene::onUpdate()
 		count++;
 		if( count == nTransitionFrames)
 		{
-			SceneManager::getInstance()->createScene(new GameOverScene());
+            //GameSaveLoad::getInstance()->checkAndSaveScore(UIComponents::getInstance()->getScore());
+			SceneManager::getInstance()->createSceneWithRandomTransition(new GameOverScene());
 			return;
 		}
 	}
