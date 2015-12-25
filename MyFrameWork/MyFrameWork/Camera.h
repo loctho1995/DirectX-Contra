@@ -5,7 +5,7 @@
 class Camera
 {
 public:
-	//void draw(Texture* pTexture,
+
 	Camera( ViewPort* viewPort, float x, float y, RectF rect, RectF cameraTranslatePoint)
 	{
 		this ->viewPort = viewPort;
@@ -46,26 +46,30 @@ public:
 			this -> y = max ( this -> y, mapRect.y );
 			this -> y = min ( this -> y, mapRect.height + mapRect.y - viewPort -> getHeight());
 		}
-			
-		
-	}
-	void drawTexture(LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_ARGB (255,255,255,255) ) const
-	{
-		viewPort -> drawTexture( pTexture,width, height, anchorPoint, (int)(x - this -> x), (int)(y - this -> y), xRatio, yRatio, color);
-	}
-	void drawTextureFlipX( LPDIRECT3DTEXTURE9 pTexture, int width, int height, D3DXVECTOR2 anchorPoint, float x, float y, float xRatio = 1.0f, float yRatio = 1.0f, D3DCOLOR color = D3DCOLOR_ARGB (255,255,255,255)) const
-	{
-		viewPort -> drawTextureFlipX(pTexture,width, height, anchorPoint, (int)(x - this -> x), (int)(y - this -> y), xRatio, yRatio, color);
 	}
 
-	void drawTileTmx(std::string tiletSetName, int width, int height, int dx, int dy, float x, float y , D3DCOLOR color = D3DCOLOR_XRGB (255,255,255)) const
-	{
-		viewPort -> drawTileTmx(tiletSetName, width, height, dx, dy, (int)(x - this ->x ),(int) (y - this -> y), color);
+
+	void setPosition(float player1X, float player1Y, float player2X, float player2Y)
+	{ 
+		float x = (player1X + player2X ) / 2 - 10;
+		//float y = (player1Y + player2Y ) / 2;
+		float y = (player1Y > player2Y ) ? player2Y : player1Y;
+		if( this -> x < x - (float)viewPort ->getWidth()  / 2.0f && moveDir.isRight())
+		{
+			this -> x =   x - (float)viewPort ->getWidth() / 2.0f;
+			this -> x = max ( this -> x, mapRect.x );
+			this -> x = min ( this -> x, mapRect.width + mapRect.x - viewPort -> getWidth());
+		}
+		else if(this -> y  > y - (float)viewPort -> getHeight()  / 2.0f && moveDir.isUp())
+		{
+			this -> y  = y - (float)viewPort -> getHeight() / 2.0f;
+			this -> y = max ( this -> y, mapRect.y );
+			this -> y = min ( this -> y, mapRect.height + mapRect.y - viewPort -> getHeight());
+		}
 	}
-	void drawTileTmx(LPDIRECT3DTEXTURE9 pTexture, int width, int height, int dx, int dy, float x, float y , D3DCOLOR color = D3DCOLOR_XRGB (255,255,255)) const
-	{
-		viewPort -> drawTileTmx(pTexture, width, height, dx, dy, (int)(x - this ->x ),(int) (y - this -> y), color);
-	}
+
+
+
 	int getWidth()
 	{
 		return viewPort -> getWidth();
@@ -93,7 +97,7 @@ public:
 		{
 			if( this -> x + getWidth() >= cameraTranslatePoint.x)
 			{
-				setPosition(this -> x + getWidth()/ 2 + vx, y);
+				setPosition(this -> x + getWidth() / 2 + vx, y);
 			}
 			else
 			{
@@ -113,6 +117,35 @@ public:
 			}
 		}
 	}
+
+	void update(float player1X, float player1Y, float player2X, float player2Y)
+	{
+		
+		if(moveDir.isRight())
+		{
+			if( this -> x + getWidth() >= cameraTranslatePoint.x)
+			{
+				setPosition(this -> x + getWidth() / 2 + vx, y);
+			}
+			else
+			{
+				setPosition(player1X, player1Y, player2X, player2Y);
+			}
+		}
+		else 
+		{
+			if( this -> y <= cameraTranslatePoint.y + cameraTranslatePoint.height)
+			{
+				
+				setPosition(x , this -> y + getHeight() / 2 - vy);
+			}
+			else
+			{
+				setPosition(player1X, player1Y, player2X, player2Y);
+			}
+		}
+	}
+
 	Direction getMoveDir() {return moveDir;}
 	ViewPort* getViewport() { return viewPort;} 
 private:

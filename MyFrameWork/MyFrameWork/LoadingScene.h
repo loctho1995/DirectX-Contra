@@ -24,6 +24,8 @@ private:
 		TITLE,
 		SCORE,
 		LIFES,
+		SCORE2,
+		LIFES2,
 		STAGE,
 		COUNT
 	} LableIndex;

@@ -1,7 +1,6 @@
 #pragma once
 #define _USE_MATH_DEFINES
 #include "Texture.h"
-
 Texture:: Texture(std::string sourceFile, std::string name, D3DCOLOR colorKey)
 {
 	/*pTextureHolder = Graphics::getInstance() ->getTexture(name);
@@ -24,14 +23,16 @@ Texture:: Texture(std::string name, D3DCOLOR colorKey )
 }
 
 
-void Texture::draw(int x, int y,Camera* cam, float xRatio, float yRatio , D3DCOLOR color) const
+void Texture::draw(int x, int y, Camera* cam, float xRatio, float yRatio , D3DCOLOR color) const
 {
-	cam-> drawTexture( pTextureHolder ->pTexture, pTextureHolder ->width, pTextureHolder ->height, anchorPoint, x, y, xRatio,yRatio,color);
+	//cam-> drawTexture( pTextureHolder ->pTexture, pTextureHolder ->width, pTextureHolder ->height, anchorPoint, x, y, xRatio,yRatio,color);
+	Graphics::getInstance() -> drawTexture(pTextureHolder ->pTexture, pTextureHolder ->width, pTextureHolder ->height, anchorPoint, (cam -> getViewport()) ->getPort(), x - cam -> getX() + cam -> getViewport() -> getPort().x , y - cam -> getY() + cam -> getViewport() -> getPort().y ,xRatio, yRatio, color);
 }
 
 void Texture:: drawFlipX(int x, int y, Camera* cam, float xRatio, float yRatio, D3DCOLOR color) const
 {
-	cam-> drawTextureFlipX( pTextureHolder ->pTexture, pTextureHolder ->width,pTextureHolder -> height, anchorPoint, x, y, xRatio,yRatio,color);
+	//cam-> drawTextureFlipX( pTextureHolder ->pTexture, pTextureHolder ->width,pTextureHolder -> height, anchorPoint, x, y, xRatio,yRatio,color);
+	Graphics::getInstance() -> drawTextureFlipX(pTextureHolder ->pTexture, pTextureHolder ->width, pTextureHolder ->height, anchorPoint, (cam -> getViewport()) ->getPort(), x - cam -> getX() + cam -> getViewport() -> getPort().x , y - cam -> getY() + cam -> getViewport() -> getPort().y ,xRatio, yRatio, color);
 }
 
 

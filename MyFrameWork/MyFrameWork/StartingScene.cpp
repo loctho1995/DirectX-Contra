@@ -34,11 +34,12 @@ StartingScene::StartingScene(void)
 		label[i] -> yPos = startPosY + offsetY * i;
 	}
 
-	label[PLAY] -> text = "PLAY";
+	label[PLAYER] -> text = "1 PLAYER";
+	label[PLAYER2] -> text = "2 PLAYERS";
 	label[HELP] -> text = "HELP";
 	label[OPTION] -> text = "OPTION";
 	label[QUIT] -> text = "QUIT";
-	cursorIndex = PLAY;
+	cursorIndex = PLAYER;
 
 	
 
@@ -105,7 +106,7 @@ void StartingScene:: handleInput()
 				if(e.isRelease() && !isTransitioning)
 				{
 					Sound::getInstance() -> play("cursor", false ,1);
-					if( cursorIndex == PLAY )
+					if( cursorIndex == PLAYER )
 					{
 						cursorIndex = QUIT;
 					}
@@ -122,7 +123,7 @@ void StartingScene:: handleInput()
 					Sound::getInstance() -> play("cursor", false ,1);
 					if( cursorIndex == QUIT )
 					{
-						cursorIndex = PLAY;
+						cursorIndex = PLAYER;
 					}
 					else
 					{
@@ -139,22 +140,31 @@ void StartingScene:: handleInput()
 				}
 				else
 				{
-					if(cursorIndex == PLAY)
+					if(cursorIndex == PLAYER)
 					{
 						Sound::getInstance() -> stop();
 						Sound::getInstance() -> play("select", false, 1);
-						SceneManager::getInstance() ->createSceneWithTransition( new LoadingScene(), new TransitionScan());
+						UIComponents :: getInstance() -> setNumberPlayer(1);
+						SceneManager::getInstance() ->createSceneWithRandomTransition( new LoadingScene());
+					}
+					else if (cursorIndex == PLAYER2)
+					{
+						Sound::getInstance() -> stop();
+						Sound::getInstance() -> play("select", false, 1);
+						UIComponents :: getInstance() -> setNumberPlayer(2);
+						SceneManager::getInstance() ->createSceneWithRandomTransition( new LoadingScene());
+					
 					}
 					else if ( cursorIndex == HELP)
 					{
 						Sound::getInstance() -> stop();
 						Sound::getInstance() -> play("select", false, 1);
-						SceneManager::getInstance() ->createSceneWithTransition( new HelpScene(), new TransitionScan());
+						SceneManager::getInstance() ->createSceneWithRandomTransition( new HelpScene());
 					}
 					else if ( cursorIndex == OPTION)	
 					{
 						Sound::getInstance() -> play("select", false, 1);
-						SceneManager::getInstance() ->createSceneWithTransition( new OptionScene(), new TransitionScan());
+						SceneManager::getInstance() ->createSceneWithRandomTransition( new OptionScene());
 					}
 					
 					else if ( cursorIndex == QUIT)

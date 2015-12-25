@@ -17,7 +17,7 @@ PlayerDeadState:: PlayerDeadState(PlayerData* data)
 	pData -> hittableCounter = 0;
 	pData -> isRapid = false;
 	tempDir = pData -> dir;
-	UIComponents::getInstance() ->descreaseLifes();
+	UIComponents::getInstance() ->descreaseLifes(pData -> index);
 	Sound::getInstance() -> play("playerdie", false, 1);
 	
 }
@@ -34,11 +34,19 @@ void PlayerDeadState :: onUpdate()
 	pData -> y += pData -> vy;
 
 	count++;
-	if(count == nHoldFrames && UIComponents::getInstance()->getLifes() >= 1)
+	if(count == nHoldFrames )
 	{
-		pData -> reset();
-		pData -> dir = tempDir;
-		transition(new PlayerJumpingState(pData, isMoving, 0.0f) );
+		if( UIComponents::getInstance()->getLifes(pData -> index) >= 1 )
+		{
+			pData -> reset();
+			pData -> dir = tempDir;
+			transition(new PlayerJumpingState(pData, isMoving, 0.0f) );
+		}
+		else 
+		{
+			pData -> isOver = true;
+		}
+		
 	}
 
 }

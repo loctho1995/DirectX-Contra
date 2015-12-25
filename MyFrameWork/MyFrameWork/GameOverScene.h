@@ -19,6 +19,7 @@ private:
 		END,
 		TITLE,
 		SCORE,
+		SCORE2,
 		HISCORE,
 		COUNT
 	} LableIndex;

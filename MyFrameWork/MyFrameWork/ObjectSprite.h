@@ -18,8 +18,19 @@ public:
 	virtual float getVx() {return pData -> vx;} 
 	virtual float getVy() {return pData -> vy;}
 	virtual void onUnsupported() { pData -> pState -> onFall();}
-	virtual void setPlayerX(int x) {pData ->playerX = x;}
-	virtual void setPlayerY( int y ) {pData ->playerY = y;}
+	virtual void setPlayerProperties (float x, float y) 
+	{
+		pData -> playerX = x;
+		pData -> playerY = y;
+	}
+
+	virtual void setPlayerProperties (float player1X, float player1Y, float player2X, float player2Y ) 
+	{
+		pData -> playerX = player1X;
+		pData -> playerY = player1Y;
+		pData -> player2X = player2X;
+		pData -> player2Y = player2Y;
+	} 
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
 	virtual void onCollision(CollisionRectF r)	{ pData ->pState ->onCollision(r); }
     virtual SpriteState* getState(){ return this->pData->pState; } //phai them doan doan nay de goi pData cua EnermySprite chu ko phai thang cha

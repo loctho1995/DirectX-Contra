@@ -89,17 +89,33 @@ LoadingScene::LoadingScene()
 	label[TITLE] -> xPos = SCWIDTH / 2 - label[TITLE] -> text.length() * label[TITLE] -> size / 2;
 	label[TITLE] -> yPos = 20;
 
-	label[SCORE] -> text = "SCORE  " + std::to_string(UIComponents::getInstance() -> getScore());
+	label[SCORE] -> text = "SCORE  " + std::to_string(UIComponents::getInstance() -> getScore(0));
 	label[SCORE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
 	label[SCORE] -> size = 8;
 	label[SCORE] -> xPos = 10;
 	label[SCORE] -> yPos = label[TITLE] -> yPos + 40;
 
-	label[LIFES] -> text = "LIFES  " + std::to_string(UIComponents::getInstance() -> getLifes());
+	
+	label[LIFES] -> text = "LIFES  " + std::to_string(UIComponents::getInstance() -> getLifes(0));
 	label[LIFES] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
 	label[LIFES] -> size = 8;
 	label[LIFES] -> xPos = 10;
 	label[LIFES] -> yPos = label[SCORE] -> yPos + 20;
+
+	if(UIComponents::getInstance() -> getNumberPlayer() == 2)
+	{
+		label[SCORE2] -> text = "SCORE  " + std::to_string(UIComponents::getInstance() -> getScore(1));
+		label[SCORE2] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
+		label[SCORE2] -> size = 8;
+		label[SCORE2] -> xPos = SCWIDTH - label[SCORE] -> xPos - label[SCORE2] -> text.length() * label[SCORE2] -> size;
+		label[SCORE2] -> yPos = label[SCORE] -> yPos;
+
+		label[LIFES2] -> text = "LIFES  " + std::to_string(UIComponents::getInstance() -> getLifes(1));
+		label[LIFES2] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
+		label[LIFES2] -> size = 8;
+		label[LIFES2] -> xPos = SCWIDTH - label[LIFES] -> xPos - label[LIFES2] -> text.length() * label[LIFES2] -> size;
+		label[LIFES2] -> yPos = label[LIFES] -> yPos;
+	}
 
 	label[STAGE] -> text = "STAGE " + std::to_string(UIComponents::getInstance() -> getCurrentStage());
 	label[STAGE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
@@ -107,6 +123,7 @@ LoadingScene::LoadingScene()
 	label[STAGE] -> xPos = SCWIDTH / 2 - label[STAGE] -> text.length() * label[STAGE] -> size / 2;
 	label[STAGE] -> yPos = SCHEIGHT / 2- label[STAGE] -> size / 2;
 
+	
 
 }
 
@@ -121,6 +138,7 @@ void LoadingScene::onUpdate()
 	std :: cout << loadedSprite << "/" << nSprites << "\n";
 	if( loadedSprite == nSprites && count == nTransitionTime)
 	{
+		UIComponents::getInstance() -> newStage();
         SceneManager::getInstance()->createSceneWithTransition(new PlayScene(), new TransitionScan());
 	}
 }

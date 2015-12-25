@@ -33,9 +33,13 @@ public:
 	{
 		return RectF(0.0f,0.0f, width * tileSize, height * tileSize);
 	}
-	void onCollision(PlayerSprite* sprite, Camera* cam);
-	void onSupportSprite( PlayerSprite* sprite);
-	void onUpdate(PlayerSprite* sprite, Camera* cam);
+	void onCollision(Camera* cam);
+	void onCollisionvsPlayer(PlayerSprite* sprite, Camera* cam);
+	void onSupportPlayer( PlayerSprite* sprite);
+	void onSupportSprite();
+	void onUpdatePlayerProperties(PlayerSprite* sprite, PlayerSprite* sprite2,Camera* cam);
+	void onUpdatePlayerProperties(PlayerSprite* sprite,Camera* cam);
+	void onUpdate(Camera* cam);
 	float getResX();
 	float getResY();
 	RectF getCameraTranslatePoint();
@@ -60,7 +64,8 @@ private:
 	void loadCollisionRect(TiXmlElement* pElement);
 	void createMapCollsionTree();
 	void loadObject(TiXmlElement* pElement);
-	void cleanMap(Camera* cam, PlayerSprite* sprite);
+	void cleanPlayerBullet(Camera* cam, PlayerSprite* sprite);
+	void cleanMap(Camera* cam);
 	void addEToMap( Camera* cam );
 	std:: string mapName;
 	float respawnX;

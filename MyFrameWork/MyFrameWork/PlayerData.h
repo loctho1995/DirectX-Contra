@@ -16,6 +16,7 @@ public:
 		nFiringHoldFrames = 15;
 		nUndyingFrames = 600;
 		undyingCounter = 0;
+		isOver = false;
 		isRapid = false;
 		isRespawn = true;
 		isDead = false;
@@ -75,6 +76,8 @@ public:
 	int nonHittableFrames;
 	int nUndyingFrames;
 	int undyingCounter;
+	int index;
+	bool isOver;
 	bool isRapid;
 	bool isRespawn;
 	bool isUndying;

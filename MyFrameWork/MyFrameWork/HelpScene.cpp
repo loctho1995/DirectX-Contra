@@ -19,11 +19,11 @@ HelpScene::HelpScene()
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;
     viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize / 2, SCHEIGHT / 2 - viewPortSize / 2, viewPortSize, viewPortSize));
     cam = new Camera(viewPort, pMap->getResX(), pMap->getResY(), pMap->getMapRect(), pMap->getCameraTranslatePoint());
-    pPlayer = new PlayerSprite(pMap->getResX(), pMap->getResY(), cam->getMoveDir());
+    pPlayer = new PlayerSprite(1, pMap->getResX(), pMap->getResY(), cam->getMoveDir());
     //label("Press B to back", 15, SCWIDTH / 2, SCHEIGHT / 2, NULL, true);
 
     labelConversation.color = D3DCOLOR_ARGB(255, 255, 255, 0);
-    labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::RIGHT)) + " TO MOVE FORWARD";
+    labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::RIGHT, 1)) + " TO MOVE FORWARD";
     labelConversation.size = 5;
     labelConversation.space = false;
     labelConversation.xPos = 20;
@@ -103,9 +103,10 @@ HelpScene::~HelpScene()
 
 void HelpScene::onUpdate()
 {
+	handleInput();
     update();
     onCollision();
-    handleInput();
+   
 }
 
 void HelpScene::update()
@@ -133,9 +134,10 @@ void HelpScene::update()
     {
         return;
     }
-
-    pMap->onUpdate(pPlayer, cam);
-    pMap->onSupportSprite(pPlayer);
+	pMap->onUpdatePlayerProperties(pPlayer, NULL, cam);
+    pMap->onUpdate(cam);
+	pMap-> onSupportSprite();
+	pMap -> onSupportPlayer(pPlayer);
     pPlayer->update();
     cam->update(pPlayer->getX(), pPlayer->getY());
     pPlayer->setCameraRect(cam->getRect());    
@@ -143,7 +145,8 @@ void HelpScene::update()
 
 void HelpScene::onCollision()
 {
-    pMap->onCollision(pPlayer, cam);
+    pMap->onCollision(cam);
+	pMap->onCollisionvsPlayer(pPlayer, cam);
 }
 
 void HelpScene::handleInput()
@@ -176,12 +179,12 @@ void HelpScene::handleInput()
             return;
         }
 
-        if (keyCode == UIComponents::getInstance()->getKey(UIComponents::RIGHT))
+        if (keyCode == UIComponents::getInstance()->getKey(UIComponents::RIGHT, 1))
         {
             if (!isHelpLeft && !isPlayerRead)
             {
                 isHelpLeft = true;
-                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::LEFT)) + " TO MOVE BACKWARD";
+                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::LEFT, 1)) + " TO MOVE BACKWARD";
             }
 
             if (e.isPress())
@@ -193,12 +196,12 @@ void HelpScene::handleInput()
                 pPlayer->getState()->onMoveReleased(Direction::createRight());
             }
         }
-        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::LEFT))
+        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::LEFT, 1))
         {
             if (!isHelpDown && isHelpLeft && !isPlayerRead)
             {
                 isHelpDown = true;
-                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::DOWN)) + " TO LIE DOWN";
+                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::DOWN, 1)) + " TO LIE DOWN";
             }
 
             if (e.isPress())
@@ -210,12 +213,12 @@ void HelpScene::handleInput()
                 pPlayer->getState()->onMoveReleased(Direction::createLeft());
             }
         }
-        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::UP))
+        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::UP, 1))
         {
             if (!isHelpJump && isHelpUp && !isPlayerRead)
             {
                 isHelpJump = true;
-                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::JUMP)) + " TO JUMP";
+                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::JUMP,1)) + " TO JUMP";
             }
 
             if (e.isPress())
@@ -227,12 +230,12 @@ void HelpScene::handleInput()
                 pPlayer->getState()->onVeticalDirectionReleased();
             }
         }
-        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::DOWN))
+        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::DOWN , 1))
         {
             if (!isHelpUp && isHelpDown && !isPlayerRead)
             {
                 isHelpUp = true;
-                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::UP)) + " TO LOOK ABOVE";
+                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::UP , 1)) + " TO LOOK ABOVE";
             }
 
             if (e.isPress())
@@ -244,12 +247,12 @@ void HelpScene::handleInput()
                 pPlayer->getState()->onVeticalDirectionReleased();
             }
         }
-        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::JUMP))
+        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::JUMP, 1))
         {
             if (!isHelpFire && isHelpJump && !isPlayerRead)
             {
                 isHelpFire = true;
-                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::FIRE)) + " TO FIRE";
+                labelConversation.text = "PRESS " + getKeyName(UIComponents::getInstance()->getDefaultKey(UIComponents::FIRE, 1)) + " TO FIRE";
             }
 
             if (e.isPress())
@@ -261,7 +264,7 @@ void HelpScene::handleInput()
                 pPlayer->getState()->onJumpRelease();
             }
         }
-        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::FIRE))
+        else if (keyCode == UIComponents::getInstance()->getKey(UIComponents::FIRE , 1))
         {
             if (!isMoreInfo && !isPlayerRead)
             {

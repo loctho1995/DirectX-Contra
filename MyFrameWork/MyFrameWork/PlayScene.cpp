@@ -4,18 +4,40 @@
 PlayScene ::PlayScene()
 {
     std:: string mapName = "stage" + std::to_string(UIComponents::getInstance() ->getCurrentStage());
+
     pMap = new Map(mapName);
 	
 	lifeTexture = new Texture("Resources\\Sprites\\player\\life00.png", "life00.png");
+
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;
+
     viewPort = new ViewPort(RectI(SCWIDTH / 2 - viewPortSize / 2, SCHEIGHT / 2 - viewPortSize / 2, viewPortSize, viewPortSize));
+
 	cam = new Camera(viewPort,pMap ->getResX(), pMap ->getResY(), pMap->getMapRect(), pMap ->getCameraTranslatePoint());
-	pPlayer = new PlayerSprite(pMap ->getResX(), pMap ->getResY(), cam ->getMoveDir());
+
+	//pPlayer = new PlayerSprite(1, pMap ->getResX(), pMap ->getResY(), cam ->getMoveDir());
+
+	pPlayer = new PlayerSprite*[2];
+
+	pPlayer[0] = new PlayerSprite(0, pMap ->getResX(), pMap ->getResY(), cam ->getMoveDir());
+
+	nPlayers = UIComponents:: getInstance() -> getNumberPlayer();
+
+	if( nPlayers == 2)
+	{
+		pPlayer[1] = new PlayerSprite(1, pMap ->getResX(), pMap ->getResY(), cam ->getMoveDir());
+	}
+	else
+	{
+		pPlayer[1] = NULL;
+	}
 	isPause = false;
 	isFinish = false;
 	isGameOver = false;
 	nTransitionFrames = 5 * 60;
 	count = 0;
+
+
 	if(UIComponents:: getInstance() -> getCurrentStage() == 5)
 	{
 		isEffectOn = true;
@@ -28,12 +50,24 @@ PlayScene ::PlayScene()
 	{
 		shader = new Shader("Resources\\Shader\\lightShader.fx");
 
-		light = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, 1.0f, D3DXVECTOR4(0.0, 0.0, 0, 0));
+		light = new Lighting*[2];
+
+		light[0] = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, D3DXVECTOR4(0.0, 0.0, 0.2, 0));
+
+		if(nPlayers == 2 )
+		{
+			light[1] = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, D3DXVECTOR4(0.2, 0.0, 0, 0)); 
+		}
+
+		ambientLight = new AmbientLight();
+		
+		ambientLight -> setAmbientLightIntensity(1.0f);
 	}
 	else
 	{
 		shader = NULL;
 		light = NULL;
+		ambientLight = NULL;
 	}
 
 	Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
@@ -59,13 +93,22 @@ PlayScene ::~PlayScene()
 	}
 	if( light )
 	{
-		delete light;
+		for (int i = 0; i < 2; i++)
+		{
+			if(light[i])
+				delete light[i];
+		}
+		delete []light;
 	}
 }
 
 void PlayScene::onCollision()
 {
-    pMap->onCollision(pPlayer, cam);
+	for (int i = 0; i < nPlayers; i++)
+	{
+		pMap -> onCollisionvsPlayer(pPlayer[i], cam);
+	}
+    pMap->onCollision(cam);
 }
 
 void PlayScene::handleInput()
@@ -73,95 +116,99 @@ void PlayScene::handleInput()
     while (!KeyBoard::getInstace()->isEmpty())
     {
         KeyEvent e = KeyBoard::getInstace()->readKey();
-		if( e.getCode() == UIComponents::getInstance() ->getKey(UIComponents::SELECT) )
+		for (int i = 0; i < nPlayers; i++)
 		{
-			if (e.isRelease())
+			if( e.getCode() == UIComponents::getInstance() ->getKey(UIComponents::SELECT, i) )
 			{
-				isPause = !isPause;
+				if (e.isRelease())
+				{
+					isPause = !isPause;
+				}
+				break;
 			}
-			break;
+			else if ( e.getCode() == VK_F1 ) 
+			{
+				if (e.isRelease())
+				{
+					Sound::getInstance() ->mute();
+				}
+			}
+			else if ( e.getCode() == VK_F2)
+			{
+				if (e.isRelease())
+				{
+					Sound::getInstance() ->unMute();
+					Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
+				}
+			}
+			else if( !isPause)
+			{
+				char keyCode = e.getCode();
+				if( keyCode == UIComponents::getInstance() ->getKey(UIComponents::RIGHT,i) )
+				{
+					if (e.isPress())
+					{
+						pPlayer[i]->getState()->onMovePressed(Direction::createRight());
+					}
+					else
+					{
+						pPlayer[i]->getState()->onMoveReleased(Direction::createRight());
+					}
+				}
+				else if ( keyCode == UIComponents::getInstance() -> getKey(UIComponents::LEFT, i))
+				{
+					if (e.isPress())
+					{
+						pPlayer[i]->getState()->onMovePressed(Direction::createLeft());
+					}
+					else
+					{
+						pPlayer[i]->getState()->onMoveReleased(Direction::createLeft());
+					}
+				}
+				else if ( keyCode == UIComponents::getInstance() -> getKey(UIComponents::UP ,i))
+				{
+					if (e.isPress())
+					{
+						pPlayer[i]->getState()->onVeticalDirectionPressed(Direction::createUp());
+					}
+					else
+					{
+						pPlayer[i]->getState()->onVeticalDirectionReleased();
+					}
+				}
+				else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::DOWN ,i))
+				{
+					if (e.isPress())
+					{
+						pPlayer[i]->getState()->onVeticalDirectionPressed(Direction::createDown());
+					}
+					else
+					{
+						pPlayer[i]->getState()->onVeticalDirectionReleased();
+					}
+				}
+				else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::JUMP ,i ))
+				{
+					if (e.isPress())
+					{
+						pPlayer[i]->getState()->onJumpPressed();
+					}
+					else
+					{
+						pPlayer[i]->getState()->onJumpRelease();
+					}
+				}
+				else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::FIRE ,i ))
+				{
+					if (e.isPress())
+					{
+						pPlayer[i]->getState()->onFirePressed();
+					}
+				}		
+			}
+
 		}
-		else if ( e.getCode() == 0x61 ) 
-		{
-			if (e.isRelease())
-			{
-				Sound::getInstance() ->mute();
-			}
-		}
-		else if ( e.getCode() == 0x62)
-		{
-			if (e.isRelease())
-			{
-				Sound::getInstance() ->unMute();
-				Sound::getInstance()->play("stage" + std::to_string(UIComponents::getInstance() -> getCurrentStage()), true , 1);
-			}
-		}
-		else if( !isPause)
-		{
-			char keyCode = e.getCode();
-			if( keyCode == UIComponents::getInstance() ->getKey(UIComponents::RIGHT) )
-			{
-				if (e.isPress())
-				{
-					pPlayer->getState()->onMovePressed(Direction::createRight());
-				}
-				else
-				{
-					pPlayer->getState()->onMoveReleased(Direction::createRight());
-				}
-			}
-			else if ( keyCode == UIComponents::getInstance() -> getKey(UIComponents::LEFT))
-			{
-				if (e.isPress())
-				{
-					pPlayer->getState()->onMovePressed(Direction::createLeft());
-				}
-				else
-				{
-					pPlayer->getState()->onMoveReleased(Direction::createLeft());
-				}
-			}
-			else if ( keyCode == UIComponents::getInstance() -> getKey(UIComponents::UP ))
-			{
-				if (e.isPress())
-				{
-					pPlayer->getState()->onVeticalDirectionPressed(Direction::createUp());
-				}
-				else
-				{
-					pPlayer->getState()->onVeticalDirectionReleased();
-				}
-			}
-			else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::DOWN ))
-			{
-				if (e.isPress())
-				{
-					pPlayer->getState()->onVeticalDirectionPressed(Direction::createDown());
-				}
-				else
-				{
-					pPlayer->getState()->onVeticalDirectionReleased();
-				}
-			}
-			else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::JUMP ))
-			{
-				if (e.isPress())
-				{
-					pPlayer->getState()->onJumpPressed();
-				}
-				else
-				{
-					pPlayer->getState()->onJumpRelease();
-				}
-			}
-			else if( keyCode == UIComponents::getInstance() -> getKey(UIComponents::FIRE ))
-			{
-				if (e.isPress())
-				{
-					pPlayer->getState()->onFirePressed();
-				}
-			}		
-        }
     }
 
 	KeyBoard::getInstace() ->flush();
@@ -203,7 +250,12 @@ void PlayScene::onUpdate()
 		update();
 		onCollision();
 		isFinish = pMap -> isFinish();
-		if(UIComponents::getInstance() ->getLifes() <= 0)
+		int lifes = 0;
+		for (int i = 0; i < nPlayers; i++)
+		{
+			lifes += UIComponents::getInstance() ->getLifes(i);
+		}
+		if(lifes <= 0)
 		{
 			isGameOver = true;
 		}
@@ -222,6 +274,12 @@ void PlayScene::render()
 		 D3DXHANDLE lightingColor = shader -> getEffect() ->GetParameterByName(NULL, "lightingColor"); 
 		 D3DXHANDLE lightingCutoff = shader -> getEffect() ->GetParameterByName(NULL, "lightingCutoff");  
 		 D3DXHANDLE lightingDirection = shader -> getEffect() ->GetParameterByName(NULL, "lightingDirection");
+
+		 D3DXHANDLE lightingPosition2 = shader -> getEffect() ->GetParameterByName(NULL, "lightingPosition2"); 
+		 D3DXHANDLE lightingColor2 = shader -> getEffect() ->GetParameterByName(NULL, "lightingColor2"); 
+		 D3DXHANDLE lightingCutoff2 = shader -> getEffect() ->GetParameterByName(NULL, "lightingCutoff2");  
+		 D3DXHANDLE lightingDirection2 = shader -> getEffect() ->GetParameterByName(NULL, "lightingDirection2");
+
 		 D3DXHANDLE AmbientlightIntensity = shader -> getEffect() ->GetParameterByName(NULL, "AmbientlightIntensity");
 
 		 D3DXHANDLE technique;
@@ -240,16 +298,52 @@ void PlayScene::render()
 			 D3DXMatrixOrthoOffCenterLH(&mtxViewProj, 0.5f, 256 + 0.5f,
 				 256 + 0.5f, 0.5f, 0.0f, 1.0f);
 			 shader -> getEffect() -> SetMatrix(m_hWorldViewProj, &(mtxViewProj));
-			 shader -> getEffect() -> SetVector(lightingPosition, &light->getPosition());
-			 shader -> getEffect() -> SetVector(lightingColor,&light -> getColor());
-			 shader -> getEffect() -> SetFloat(lightingCutoff, light->getCutOff());
-			 shader -> getEffect() -> SetFloat(AmbientlightIntensity, light -> getAmbientLightIntensity());
-			 shader -> getEffect() -> SetVector(lightingDirection,&light -> getDirection());
+			 if(!pPlayer[0] -> isPlayerOver())
+			 {
+				 shader -> getEffect() -> SetVector(lightingPosition, &light[0]->getPosition());
+				 shader -> getEffect() -> SetVector(lightingColor,&light[0] -> getColor());
+				 shader -> getEffect() -> SetFloat(lightingCutoff, light[0]->getCutOff());
+				 shader -> getEffect() -> SetVector(lightingDirection,&light[0] -> getDirection());
+			 }
+			 else
+			 {
+				 shader -> getEffect() -> SetVector(lightingPosition,&D3DXVECTOR4());
+				 shader -> getEffect() -> SetVector(lightingColor, &D3DXVECTOR4());
+				 shader -> getEffect() -> SetFloat(lightingCutoff, 2.0f);
+				 shader -> getEffect() -> SetVector(lightingDirection,&D3DXVECTOR4());
+			 }
+			 
+
+			 if( !pPlayer[1] || (pPlayer[1] && pPlayer[1] -> isPlayerOver() ))
+			 {
+				 shader -> getEffect() -> SetVector(lightingPosition2, &D3DXVECTOR4());
+				 shader -> getEffect() -> SetVector(lightingColor2,&D3DXVECTOR4());
+				 shader -> getEffect() -> SetFloat(lightingCutoff2, 2.0f);
+				 shader -> getEffect() -> SetVector(lightingDirection2,&D3DXVECTOR4());
+			 }
+			 else
+			 {
+				 shader -> getEffect() -> SetVector(lightingPosition2, &light[1]->getPosition());
+				 shader -> getEffect() -> SetVector(lightingColor2,&light[1] -> getColor());
+				 shader -> getEffect() -> SetFloat(lightingCutoff2, light[1]->getCutOff());
+				 shader -> getEffect() -> SetVector(lightingDirection2,&light[1] -> getDirection());
+			 }
+
+			 
+
+			 shader -> getEffect() -> SetFloat(AmbientlightIntensity, ambientLight -> getAmbientLightIntensity());
+			 
 			 shader -> getEffect() -> CommitChanges();
 
-
 			 pMap->draw(cam);
-			 pPlayer->draw(cam);
+			 
+			 for (int i = 0; i < nPlayers; i++)
+			 {
+				 if(!pPlayer [i] -> isPlayerOver())
+				 {
+					 pPlayer [i] -> draw(cam);
+				 }
+			 }
 
 			 Graphics::getInstance() ->getSpriteHandler() -> End();
 			 shader -> getEffect() -> EndPass();
@@ -260,7 +354,7 @@ void PlayScene::render()
 		 Graphics::getInstance() ->getSpriteHandler() -> End();
 
 		 Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
-		 int lifes = min (UIComponents::getInstance() ->getLifes() , 5);
+		 int lifes = min (UIComponents::getInstance() ->getLifes(0) , 5);
 		 int x = 0;
 		 int y = 0;
 		 int offset = 16;
@@ -269,6 +363,20 @@ void PlayScene::render()
 			 lifeTexture ->draw(x, y);
 			 x += offset;
 		 }
+
+		 x = offset * 5;
+
+		 if(nPlayers == 2 )
+		 {
+			 lifes = min (UIComponents::getInstance() ->getLifes(1) , 5);
+		 
+			 for (int i = 0; i < lifes - 1; i++)
+			 {
+				 lifeTexture ->draw(x, y);
+				 x += offset;
+			 }
+		 }
+		 
 		 Graphics::getInstance() ->getSpriteHandler() -> End();
 
 		 Graphics::getInstance()->endRender();
@@ -279,16 +387,37 @@ void PlayScene::render()
 		Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
 
 		pMap->draw(cam);
-		pPlayer->draw(cam);
-		int lifes = min (UIComponents::getInstance() ->getLifes() , 5);
-			int x = 0;
-			int y = 0;
-			int offset = 16;
-			for (int i = 0; i < lifes - 1 ; i++)
+		for (int i = 0; i < nPlayers; i++)
+		{
+			if(!pPlayer [i] -> isPlayerOver())
+			{
+				pPlayer [i] -> draw(cam);
+			}
+		}
+		int lifes = min (UIComponents::getInstance() ->getLifes(0) , 5);
+		int x = 0;
+		int y = 0;
+		int offset = 16;
+		for (int i = 0; i < lifes - 1 ; i++)
+		{
+			lifeTexture ->draw(x, y);
+			x += offset;
+		}
+
+		lifes = min (UIComponents::getInstance() ->getLifes(1) , 5);
+		
+		x = offset * 5;
+
+		if(nPlayers == 2 )
+		{
+			lifes = min (UIComponents::getInstance() ->getLifes(1) , 5);
+		 
+			for (int i = 0; i < lifes - 1; i++)
 			{
 				lifeTexture ->draw(x, y);
 				x += offset;
 			}
+		}
 
 		Graphics::getInstance() ->getSpriteHandler() -> End();
 		Graphics::getInstance()->endRender();
@@ -296,23 +425,80 @@ void PlayScene::render()
    
 }
 
-void PlayScene::  update()
+void PlayScene :: update()
 {
-	pMap->onUpdate(pPlayer, cam);
-    pMap->onSupportSprite(pPlayer);
-    pPlayer->update();
-	cam ->update( pPlayer->getX(), pPlayer->getY() );
-	pPlayer -> setCameraRect (cam ->getRect());
+	
+		pMap -> onUpdatePlayerProperties(pPlayer[0], pPlayer[1], cam );
+		pMap->onUpdate(cam);
+		int nplayernotOver = 0;
+		for (int i = 0; i < nPlayers; i++)
+		{
+			if(!pPlayer[i] -> isPlayerOver())
+			{
+				pMap->onSupportPlayer(pPlayer[i]);
+				nplayernotOver++;
+			}
+		}
+		pMap -> onSupportSprite();
+		for (int i = 0; i < nPlayers; i++)
+		{
+			if(!pPlayer[i] -> isPlayerOver())
+			{
+				pPlayer[i] -> update();
+			}
+		}
+		int iplayer = 0;
+		if(nplayernotOver == 1)
+		{
+			for (int i = 0; i < nPlayers; i++)
+			{
+				if(!pPlayer[i] -> isPlayerOver())
+				{
+					iplayer = i;
+				}
+			}
+		}
+		
+		if(nplayernotOver == 2 )
+		{
+			cam ->update( pPlayer[0]->getX(), pPlayer[0]->getY() ,pPlayer[1]->getX(), pPlayer[1]->getY());
+		}
+		else if( nplayernotOver == 1)
+		{
+			cam ->update( pPlayer[iplayer]->getX(), pPlayer[iplayer]->getY());
+		}
+		
+
+		for (int i = 0; i < nPlayers; i++)
+		{
+			if(!pPlayer[i] -> isPlayerOver())
+			{
+				pPlayer[i] -> setCameraRect (cam ->getRect());
+			}
+		}
+	
+	
+	
 	if(isEffectOn)
 	{
-		light -> update();
+		ambientLight -> update();
 		// Lighting update
 
-		float resultX = pPlayer -> getCenterX() - cam -> getX() + cam -> getViewport() -> getPort().x;
-		float resultY = pPlayer -> getCenterY() - cam -> getY() + cam -> getViewport() -> getPort().y;
-		resultX = ( resultX - 128 ) / 128;
-		resultY = ( 128 - resultY ) / 128;
-		light -> setPosition(resultX, resultY);
+
+		for (int i = 0; i < nPlayers; i++)
+		{
+			if(!pPlayer [i] -> isPlayerOver())
+			{
+				float resultX = pPlayer[i] -> getCenterX() - cam -> getX() + cam -> getViewport() -> getPort().x;
+				float resultY = pPlayer[i] -> getCenterY() - cam -> getY() + cam -> getViewport() -> getPort().y;
+				resultX = ( resultX - SCWIDTH / 2 ) / (SCWIDTH / 2);
+				resultY = ( SCHEIGHT / 2 - resultY ) / (SCHEIGHT / 2);
+				light[i] -> setPosition(resultX, resultY);
+			}
+		}
+
+		
+		
 	}
 	
 }

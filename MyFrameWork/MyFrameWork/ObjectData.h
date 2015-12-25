@@ -7,6 +7,8 @@ public:
 	virtual ~ObjectData();
 	float playerX;
 	float playerY;
+	float player2X;
+	float player2Y;
 	std :: string objectName;
 	bool isPlayerCollisionable;
 	bool isEnemyCollisionable;

@@ -29,6 +29,17 @@ public:
 		pData -> playerY = y;
 		pData -> isPlayerDead = isDead;
 	}
+
+	virtual void setPlayerProperties (float player1X, float player1Y, bool isplayer1Dead, float player2X, float player2Y , bool isplayer2Dead) 
+	{
+		pData -> playerX = player1X;
+		pData -> playerY = player1Y;
+		pData -> isPlayerDead = isplayer1Dead;
+
+		pData -> player2X = player2X;
+		pData -> player2Y = player2Y;
+		pData -> isPlayer2Dead = isplayer2Dead;
+	} 
 	virtual void onCollision(RectF r)	{ pData ->pState ->onCollision(r); }
 	virtual void onCollision(CollisionRectF r)	{ pData ->pState ->onCollision(r); }
     virtual SpriteState* getState(){ return this->pData->pState; } //phai them doan doan nay de goi pData cua EnermySprite chu ko phai thang cha
@@ -80,13 +91,14 @@ public:
 			}
 		}
 	}
-	virtual void beShooted( int damage) 
+	virtual void beShooted( int damage, int playerIndex) 
 	{
 		playBeShootedEffect();
 		pData -> HP -= damage;
 		if( pData -> HP <= 0 )
 		{
 			pData -> isDead = true;
+			pData -> killBy = playerIndex;
 			die();
 		}
 	}
@@ -116,6 +128,10 @@ public:
 		return pData -> appearDir;
 	}
 
+	virtual int getKillByIndex()
+	{
+		return pData -> killBy;
+	}
 protected:
 	EnermyData* pData;
 };

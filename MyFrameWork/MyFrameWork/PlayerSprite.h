@@ -4,7 +4,7 @@
 class PlayerSprite : public Sprite
 {
 public:
-	PlayerSprite(float respawnX, float respawnY, Direction movedir);
+	PlayerSprite(int index, float respawnX, float respawnY, Direction movedir);
 	~PlayerSprite();
 	virtual void update( );
 	virtual void draw(Camera* cam);
@@ -88,7 +88,14 @@ public:
 			break;
 		}
 	}
-	
+	int getIndex() 
+	{
+		return pData -> index;
+	}
+	bool isPlayerOver()
+	{
+		return pData -> isOver;
+	}
 	static void loadResources();
 
 	bool isDead()

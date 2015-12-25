@@ -29,12 +29,12 @@ OptionScene::OptionScene(void)
 	tittle.yPos = 10;
 
 	
-	label[LEFT] -> text = "LEFT";
-	label[RIGHT]->text = "RIGHT";
-	label[UP]->text = "UP";
-	label[DOWN]->text = "DOWN";
-	label[FIRE]->text = "FIRE";
-	label[JUMP]->text = "JUMP";
+	label[LEFT] -> text = label[LEFT2] -> text = "LEFT";
+	label[RIGHT]->text = label[RIGHT2] -> text = "RIGHT";
+	label[UP]->text = label[UP2] -> text = "UP";
+	label[DOWN]->text = label[DOWN2] -> text = "DOWN";
+	label[FIRE]->text = label[FIRE2] -> text = "FIRE";
+	label[JUMP]->text = label[JUMP2] -> text = "JUMP";
 	label[DEFAULT]->text = "DEFAULT";
 	label[VOLUME]->text = "VOLUME";
 	label[BACK]->text = "BACK";
@@ -42,21 +42,51 @@ OptionScene::OptionScene(void)
 	startPosY  = 40;
 	startPosX  = 40;
 	offsetY = 20;
-	offsetX = 90;
+	offsetX = 60;
 	for (int i = 0; i < COUNT; i++)
 	{
 		label[i]->size = 8;
-		label[i]->yPos = startPosY + i * offsetY;
-		label[i]->xPos = startPosX;
+		
+		if(i < LEFT2)
+		{
+			label[i]->yPos = startPosY + i * offsetY;
+			label[i]->xPos = startPosX;
+		}
+		else if( i >= LEFT2 && i <= JUMP2)
+		{
+			label[i]->yPos = startPosY + (i - LEFT2) * offsetY;
+			label[i]->xPos = SCWIDTH / 2 + startPosX;
+		}
+		else if( i > JUMP2 )
+		{
+			label[i]->yPos = startPosY + (i - LEFT2) * offsetY;
+			label[i]->xPos = SCWIDTH / 2 - label[i] -> text.length() * label[i] -> size / 2;
+		}
+		
 		if(i <= VOLUME)
 		{
 			editText[i]->size = 8;
 			editText[i]->space = true;
-			editText[i]->yPos = startPosY + i * offsetY;
-			editText[i]->xPos = startPosX + offsetX;
+			if(i < LEFT2)
+			{
+				
+				editText[i]->yPos = startPosY + i * offsetY;
+				editText[i]->xPos = startPosX + offsetX;
+			}
+			else if ( i >= LEFT2 && i < VOLUME)
+			{
+				editText[i]->yPos = startPosY + (i - LEFT2) * offsetY;
+				editText[i]->xPos = SCWIDTH / 2 + startPosX + offsetX;
+			}
+			else 
+			{
+				editText[i]->yPos = startPosY + (i - LEFT2) * offsetY;
+				editText[i]->xPos = label[i] -> xPos + offsetX;
+			}
+			
 		}
 	}
-	cursorIndex = 0;
+	cursorIndex = LEFT;
 	isChoosing = false;
 	isBack = false;
 	volumeStep = 0;
@@ -89,7 +119,15 @@ void OptionScene :: update()
 	}
 	for (int i = 0; i <= VOLUME; i++)
 	{
-		editText[i]->text = std::string(1,UIComponents::getInstance() -> getKey(i));
+		if(i < LEFT2)
+		{
+			editText[i]->text = std::string(1,UIComponents::getInstance() -> getKey(i, 0));
+		}
+		else
+		{
+			editText[i]->text = std::string(1,UIComponents::getInstance() -> getKey(i - LEFT2, 1));
+		}
+		
 	}
 
 	for (int i = 0; i < COUNT; i++)
@@ -146,7 +184,7 @@ void OptionScene:: render()
 		Graphics::getInstance() ->drawText(*editText[i]);
 	}
 
-	pCursor -> draw(10, startPosY + offsetY * cursorIndex - 5);
+	pCursor -> draw(label[cursorIndex] -> xPos - 20, label[cursorIndex] -> yPos - 5);
 	Graphics::getInstance() ->getSpriteHandler() -> End();
 	Graphics::getInstance()->endRender();
 }
@@ -155,7 +193,7 @@ void OptionScene:: handleInput()
 	while (!KeyBoard::getInstace()->isEmpty())
 	{
 		KeyEvent e = KeyBoard::getInstace()->readKey();
-		unsigned char const selectKey = UIComponents::getInstance() -> getKey(UIComponents::SELECT);
+		unsigned char const selectKey = UIComponents::getInstance() -> getKey(UIComponents::SELECT, 0);
 		if(e.getCode() == selectKey)
 		{
 			if (e.isRelease())
@@ -177,6 +215,7 @@ void OptionScene:: handleInput()
 				}
 				
 			}
+			continue;
 		}
 		if(!isChoosing)
 		{
@@ -206,19 +245,22 @@ void OptionScene:: handleInput()
 		else
 		{
 			
-				if(
-					cursorIndex <= JUMP && e.isRelease() &&
-				( ( e.getCode() >= 65 && e.getCode() <= 90 ) 
-				|| e.getCode() == UIComponents::getInstance() ->getDefaultKey(UIComponents::UP)
-				|| e.getCode() == UIComponents::getInstance() ->getDefaultKey(UIComponents::DOWN)
-				|| e.getCode() == UIComponents::getInstance() ->getDefaultKey(UIComponents::LEFT)
-				|| e.getCode() == UIComponents::getInstance() ->getDefaultKey(UIComponents::RIGHT)
-				|| e.getCode() == UIComponents::getInstance() ->getDefaultKey(UIComponents::JUMP) )
 
-				)
+				 if( e.isRelease() && 
+					 UIComponents::getInstance() -> isAllowedKey( e.getCode())
+				   )
 				{
 						Sound::getInstance() -> play("cursor", false, 1);
-						UIComponents::getInstance() -> setKey( cursorIndex, e.getCode());
+						if(cursorIndex <= JUMP )
+						{
+							UIComponents::getInstance() -> setKey( cursorIndex, e.getCode(), 0);
+						}
+						else if ( cursorIndex > JUMP &&  cursorIndex <= JUMP2)
+						{
+							UIComponents::getInstance() -> setKey( cursorIndex, e.getCode(), 1);
+						}
+						
+						
 				}
 				else if( cursorIndex == VOLUME )
 				{

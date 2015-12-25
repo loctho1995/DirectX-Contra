@@ -18,23 +18,32 @@ GameOverScene::GameOverScene()
 	label[TITLE] -> yPos = 10;
 	
 
-	label[SCORE] -> text = "SCORE " + std::to_string(UIComponents::getInstance() -> getScore());
+	label[SCORE] -> text = "SCORE " + std::to_string(UIComponents::getInstance() -> getScore(0));
 	label[SCORE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
 	label[SCORE] -> size = 8;
 	label[SCORE] -> xPos = 10;
 	label[SCORE] -> yPos = label[TITLE] -> yPos + 40;
+
+	if(UIComponents::getInstance() -> getNumberPlayer() == 2)
+	{
+		label[SCORE2] -> text = "SCORE " + std::to_string(UIComponents::getInstance() -> getScore(1));
+		label[SCORE2] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
+		label[SCORE2] -> size = 8;
+		label[SCORE2] -> xPos = SCWIDTH - label[SCORE] -> xPos - label[SCORE2] -> text.length() * label[SCORE2] -> size;;
+		label[SCORE2] -> yPos = label[SCORE] -> yPos;
+	}
 	
 	label[HISCORE] -> text = "HISCORE " + std::to_string(UIComponents::getInstance() -> getHighScore());
 	label[HISCORE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
 	label[HISCORE] -> size = 8;
-	label[HISCORE] -> xPos = label[SCORE] -> xPos;
+	label[HISCORE] -> xPos = SCWIDTH / 2 - label[HISCORE] -> text.length() * label[HISCORE] -> size / 2;
 	label[HISCORE] -> yPos = label[SCORE] -> yPos + 20;
 	
 	label[CONTINUE] -> text = "CONTINUE";
 	label[CONTINUE] -> color = D3DCOLOR_XRGB(255 , 255 , 255 );
 	label[CONTINUE] -> size = 10;
-	label[CONTINUE] -> xPos = 256 / 2 - label[CONTINUE] -> text.length() * label[CONTINUE] -> size / 2;
-	label[CONTINUE] -> yPos = 256 / 2 -  label[CONTINUE] -> size / 2;
+	label[CONTINUE] -> xPos = SCWIDTH / 2 - label[CONTINUE] -> text.length() * label[CONTINUE] -> size / 2;
+	label[CONTINUE] -> yPos = SCHEIGHT / 2 -  label[CONTINUE] -> size / 2;
 	
 
 	label[END] -> text = "END";

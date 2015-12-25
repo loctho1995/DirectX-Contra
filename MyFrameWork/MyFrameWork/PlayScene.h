@@ -12,6 +12,7 @@
 #include "Sound.h"
 #include "Shader.h"
 #include "Lighting.h"
+#include "AmbientLight.h"
 
 class PlayScene : public Scene
 {
@@ -27,7 +28,8 @@ public:
 	virtual void update();
 
 private:
-	PlayerSprite* pPlayer;
+	PlayerSprite** pPlayer;
+	//PlayerSprite* pPlayer2;
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
@@ -38,9 +40,11 @@ private:
 	bool isGameOver;
 	bool isFinish;
 	bool isPause;
+	int nPlayers;
 private:
 	Shader* shader;
-	Lighting* light;
+	Lighting** light;
+	AmbientLight* ambientLight;
 	bool isEffectOn;
 };
 

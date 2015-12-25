@@ -13,7 +13,8 @@ public:
 private:
 	enum
 	{
-		PLAY,
+		PLAYER,
+		PLAYER2,
 		HELP,
 		OPTION,
 		QUIT,
