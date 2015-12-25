@@ -8,5 +8,6 @@ public:
 	EnermyCannonPreaparingState(EnermyData* pData);
 	~EnermyCannonPreaparingState();
 	virtual void onUpdate();
+	float directPlayerX;
 };
 

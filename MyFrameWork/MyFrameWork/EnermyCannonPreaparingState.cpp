@@ -14,7 +14,18 @@ EnermyCannonPreaparingState::~EnermyCannonPreaparingState()
 
 void EnermyCannonPreaparingState::onUpdate()
 {
-	if (this->pData->x - this->pData->playerX <= 100)
+	switch (this->pData->getPlayerIndexToExcute())
+	{
+	case 1:
+		directPlayerX = this->pData->playerX;
+		break;
+	case 2:
+		directPlayerX = this->pData->player2X;
+		break;
+	default:
+		break;
+	}
+	if (this->pData->x - directPlayerX <= 100)
 	{
 		transition(new EnermyCannonAppearingState(pData));
 	}

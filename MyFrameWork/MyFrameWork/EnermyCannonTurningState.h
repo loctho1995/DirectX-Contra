@@ -21,5 +21,7 @@ private:
 	float angle;
 	float bulletX;
 	float bulletY;
+	float directPlayerX;
+	float directPlayerY;
 };
 

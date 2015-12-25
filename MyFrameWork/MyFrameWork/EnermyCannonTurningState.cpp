@@ -6,7 +6,7 @@ EnermyCannonTurningState::EnermyCannonTurningState(EnermyData* pData)
 	this->pData = pData;
 	this->pData->isHittable = true;
 	this->getIndex();
-	count = 0; 
+	count = 0;
 	nShootCycle = 150;
 }
 
@@ -19,7 +19,7 @@ EnermyCannonTurningState::~EnermyCannonTurningState()
 void EnermyCannonTurningState::onUpdate()
 {
 	this->getIndex();
-	if ((count == 0 || count == 25 || count == 50) && pData->playerX<pData->x && pData->playerY<pData->y)
+	if ((count == 0 || count == 25 || count == 50) && directPlayerX < pData->x && directPlayerY < pData->y)
 	{
 		pData->bulletsVector.push_back(new EnermyWhiteBullet(bulletX, bulletY, true, angle));
 	}
@@ -39,13 +39,68 @@ void EnermyCannonTurningState::onDead()
 
 void EnermyCannonTurningState::getIndex()
 {
-	if (this->pData->x == this->pData->playerX)
+
+	if (this->pData->playerX < this->pData->x && this->pData->player2X < this->pData->x)
+	{
+		switch (this->pData->getPlayerIndexToExcute())
+		{
+		case 1:
+			directPlayerX = this->pData->playerX;
+			directPlayerY = this->pData->playerY;
+			break;
+		case 2:
+			directPlayerX = this->pData->player2X;
+			directPlayerY = this->pData->player2Y;
+			break;
+		default:
+			break;
+		}
+	}
+	else {
+		if (this->pData->playerX > this->pData->x)
+		{
+			directPlayerX = this->pData->player2X;
+			directPlayerY = this->pData->player2Y;
+		}
+		if (this->pData->player2X > this->pData->x)
+		{
+			directPlayerX = this->pData->playerX;
+			directPlayerY = this->pData->playerY;
+		}
+	}
+	/*if (this->pData->isPlayer2Dead)
+	{
+	directPlayerX = this->pData->playerX;
+	directPlayerY = this->pData->playerY;
+	}
+	else if (this->pData->isPlayerDead)
+	{
+	directPlayerX = this->pData->player2X;
+	directPlayerY = this->pData->player2Y;
+	}
+	else
+	{
+	distancePlayer1 = sqrt(pow(this->pData->playerX - (this->pData->x - this->pData->body.width / 2), 2) + pow(this->pData->playerY - (this->pData->y - this->pData->body.height / 2), 2));
+	distancePlayer2 = sqrt(pow(this->pData->player2X - (this->pData->x - this->pData->body.width / 2), 2) + pow(this->pData->player2Y - (this->pData->y - this->pData->body.height / 2), 2));
+	if (distancePlayer1 < distancePlayer2)
+	{
+	directPlayerX = this->pData->playerX;
+	directPlayerY = this->pData->playerY;
+	}
+	else
+	{
+	directPlayerX = this->pData->player2X;
+	directPlayerY = this->pData->player2Y;
+	}
+	}*/
+
+	if (this->pData->x == this->directPlayerX)
 	{
 		tanalpha = 2.0f;
 	}
 	else
 	{
-		tanalpha = (float)((this->pData->y - this->pData->body.height / 2) - this->pData->body.height / 2 - this->pData->playerY) / (this->pData->x - this->pData->playerX);
+		tanalpha = (float)((this->pData->y - this->pData->body.height / 2) - directPlayerY) / (this->pData->x - directPlayerX);
 	}
 	if (tanalpha < 0.24f)
 	{
