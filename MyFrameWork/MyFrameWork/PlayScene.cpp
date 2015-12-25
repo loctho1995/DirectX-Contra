@@ -56,6 +56,10 @@ PlayScene ::PlayScene()
 		{
 			light[1] = new Lighting(D3DXVECTOR4(0, 0, -0.25f , 0), D3DXVECTOR4(0, 0, 1, 0), 0.9f, D3DXVECTOR4(0.2, 0.0, 0, 0)); 
 		}
+		else 
+		{
+			light[1] = NULL;
+		}
 
 		ambientLight = new AmbientLight();
 		

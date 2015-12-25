@@ -102,7 +102,7 @@ void UIComponents:: setStage(int val)
 }
 void UIComponents:: resetStage()
 {
-	currentStage = 5;
+	currentStage = 1;
 }
 void UIComponents:: gameOverReset()
 {
