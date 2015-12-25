@@ -492,7 +492,9 @@
     <ClCompile Include="SceneTransition.cpp">
       <Filter>TransitionAndEffects\SceneTransition</Filter>
     </ClCompile>
-    <ClCompile Include="AmbientLight.cpp" />
+    <ClCompile Include="AmbientLight.cpp">
+      <Filter>TransitionAndEffects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ObjectSpriteCreator.h" />
@@ -1057,7 +1059,9 @@
     <ClInclude Include="SceneTransition.h">
       <Filter>TransitionAndEffects\SceneTransition</Filter>
     </ClInclude>
-    <ClInclude Include="AmbientLight.h" />
+    <ClInclude Include="AmbientLight.h">
+      <Filter>TransitionAndEffects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ThirdParty">

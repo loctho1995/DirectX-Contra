@@ -2,6 +2,7 @@
 
 #include "SpriteData.h"
 #include "BulletSprite.h"
+#include "UIComponents.h"
 class EnermyData : public SpriteData
 {
 public :
@@ -23,6 +24,18 @@ public :
 		// return 2 : player 2
 		float centerY = ( y - ppTextureArrays[iCurrentArr] -> getHeight() * ppTextureArrays[iCurrentArr] -> getAnchorPoint().y) + ppTextureArrays[iCurrentArr] -> getHeight() / 2;
 		float centerX = ( x - ppTextureArrays[iCurrentArr] -> getWidth() * ppTextureArrays[iCurrentArr] -> getAnchorPoint().x) + ppTextureArrays[iCurrentArr] -> getWidth() / 2;
+
+		if(UIComponents::getInstance() -> getNumberPlayer() == 1 )
+		{
+			if(isPlayerDead)
+			{
+				return 0;
+			}
+			else
+			{
+				return 1;
+			}
+		}
 
 		if(isPlayerDead && isPlayer2Dead)
 		{
