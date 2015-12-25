@@ -40,8 +40,8 @@ UIComponents::UIComponents()
 	configKeyBoard[1][RIGHT] = defaultKeyBoard[1][RIGHT] = VK_RIGHT;
 	configKeyBoard[1][UP] = defaultKeyBoard[1][UP] = VK_UP;
 	configKeyBoard[1][DOWN] = defaultKeyBoard[1][DOWN] = VK_DOWN;
-	configKeyBoard[1][FIRE] = defaultKeyBoard[1][FIRE] = VK_NUMPAD2;
-	configKeyBoard[1][JUMP] = defaultKeyBoard[1][JUMP] = VK_NUMPAD1;
+	configKeyBoard[1][FIRE] = defaultKeyBoard[1][FIRE] = VK_NUMPAD1;
+	configKeyBoard[1][JUMP] = defaultKeyBoard[1][JUMP] = VK_NUMPAD2;
 	configKeyBoard[1][SELECT] = defaultKeyBoard[1][SELECT] = VK_RETURN;
 }
 
@@ -169,7 +169,7 @@ void UIComponents :: newStage()
 
 bool UIComponents :: isAllowedKey(char keyCode)
 {
-	if( keyCode >= 65 && keyCode <= 90 )
+	if( keyCode >= 65 && keyCode <= 90 || ( keyCode >= VK_NUMPAD0 && keyCode <= VK_NUMPAD9))
 	{
 		return true;
 	}
@@ -181,5 +181,6 @@ bool UIComponents :: isAllowedKey(char keyCode)
 				return true;
 		}
 	}
+
 	return false;
 }

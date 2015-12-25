@@ -6,10 +6,10 @@
 StartingScene::StartingScene(void)
 {
 	BitMapFont* font = new BitMapFont("Resources\\Fonts\\fontByLinh.png", 
-									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ ",
+									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ @abcdefghi`",
 									"fontByLinh",
 									6,
-									9,
+									11,
 									8,
 									RectI(0, 0, 8, 8));
 	Graphics::getInstance() ->setFont(font);

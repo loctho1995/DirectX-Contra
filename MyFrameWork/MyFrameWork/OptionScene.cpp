@@ -4,12 +4,13 @@
 OptionScene::OptionScene(void)
 {
 	BitMapFont* font = new BitMapFont("Resources\\Fonts\\fontByLinh.png", 
-									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ ",
+									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ @abcdefghi`",
 									"fontByLinh",
 									6,
-									9,
+									11,
 									8,
 									RectI(0, 0, 8, 8));
+	Graphics::getInstance() ->setFont(font);
 
 	Graphics::getInstance() ->setFont(font);
 	label = new Label*[COUNT];
@@ -94,9 +95,7 @@ OptionScene::OptionScene(void)
 
 	pBackGround = new Texture("Resources\\BackGround\\OSBackGround.png","OSBackGround");
 	pCursor = new Texture("Resources\\BackGround\\OScursor.png","OScursor");
-	
 
-	
 }
 
 
@@ -257,7 +256,7 @@ void OptionScene:: handleInput()
 						}
 						else if ( cursorIndex > JUMP &&  cursorIndex <= JUMP2)
 						{
-							UIComponents::getInstance() -> setKey( cursorIndex, e.getCode(), 1);
+							UIComponents::getInstance() -> setKey( cursorIndex - LEFT2, e.getCode(), 1);
 						}
 						
 						
