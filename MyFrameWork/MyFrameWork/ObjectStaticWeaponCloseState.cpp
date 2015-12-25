@@ -25,7 +25,14 @@ void ObjectStaticWeaponCloseState::onUpdate()
         D3DXVECTOR2 playerPos(pData->playerX, pData->playerY);
         D3DXVECTOR2 selfPos(pData->x + 16, pData->y + 16);
         D3DXVECTOR2 directVector = playerPos - selfPos;
-        float length = D3DXVec2Length(&directVector);
+        float length1 = D3DXVec2Length(&directVector);
+
+        playerPos = D3DXVECTOR2(pData->player2X, pData->player2Y);
+        directVector = playerPos - selfPos;
+        float length2 = D3DXVec2Length(&directVector);
+
+        float length = length1 > length2 ? length1 : length2;
+
 
         if (length <= OBJECT_STATIC_WEAPON_RANGE_OPEN)
         {

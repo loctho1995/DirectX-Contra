@@ -42,7 +42,7 @@ void ObjectBridge::update()
 	pData -> collisionRect  = CollisionRectF(pData ->getBody(), "throughable", pData -> vx, pData -> vy);
     if (!isDestroy)
     {
-        if (this->pData->playerX > bridgeHead->getBody().x)
+        if (this->pData->playerX > bridgeHead->getBody().x || this->pData->player2X > bridgeHead->getBody().x)
         {
             destroy();
         }
