@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="138" tilewidth="16" tileheight="16" nextobjectid="155">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="138" tilewidth="16" tileheight="16" nextobjectid="158">
  <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16" tilecount="154">
   <image source="Tileset Contra 3.png" width="176" height="224"/>
   <tile id="95">
@@ -186,6 +186,8 @@
   <object id="86" name="soldiershotl" type="enemy" x="229.167" y="1284.33" width="17" height="31"/>
   <object id="87" name="soldiershotl" type="enemy" x="232.167" y="1187.33" width="17" height="31"/>
   <object id="88" name="respawnposition" type="&quot;&quot;" x="129.167" y="2143.33" width="15" height="15"/>
+  <object id="155" name="sniper" type="enemy" x="22" y="380.5" width="18" height="39"/>
+  <object id="157" name="sniper" type="enemy" x="211.5" y="1644" width="18" height="39"/>
  </objectgroup>
  <objectgroup name="CollisionRect">
   <object id="89" type="nonthroughable" x="0.150723" y="2163" width="254.667" height="8.66667"/>
