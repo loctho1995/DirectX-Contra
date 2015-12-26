@@ -169,7 +169,7 @@ void UIComponents :: newStage()
 
 bool UIComponents :: isAllowedKey(char keyCode)
 {
-	if( keyCode >= 65 && keyCode <= 90 || ( keyCode >= VK_NUMPAD0 && keyCode <= VK_NUMPAD9))
+	if( keyCode >= 65 && keyCode <= 90 || ( keyCode >= VK_NUMPAD0 && keyCode <= VK_NUMPAD9) || keyCode == VK_SPACE)
 	{
 		return true;
 	}

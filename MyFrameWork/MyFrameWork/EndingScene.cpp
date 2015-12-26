@@ -3,13 +3,13 @@
 
 EndingScene::EndingScene(void)
 {
-	BitMapFont* font = new BitMapFont("Resources\\Fonts\\fontByLinh.png",
-		"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ ",
-		"fontByLinh",
-		6,
-		9,
-		8,
-		RectI(0, 0, 8, 8));
+	BitMapFont* font = new BitMapFont("Resources\\Fonts\\font.png", 
+									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ `abcdefghi",
+									"fontByLinh",
+									6,
+									11,
+									8,
+									RectI(0, 0, 8, 8));
 
 	Graphics::getInstance()->setFont(font);
 

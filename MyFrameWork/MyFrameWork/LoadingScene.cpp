@@ -2,8 +2,8 @@
 #include "Sound.h"
 LoadingScene::LoadingScene()
 {
-	BitMapFont* font = new BitMapFont("Resources\\Fonts\\fontByLinh.png", 
-									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ @abcdefghi`",
+	BitMapFont* font = new BitMapFont("Resources\\Fonts\\font.png", 
+									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ `abcdefghi",
 									"fontByLinh",
 									6,
 									11,
