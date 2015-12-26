@@ -6,6 +6,8 @@ public:
 	EnermyScubarSoliderShootState(EnermyData *pData);
 	~EnermyScubarSoliderShootState();
 	void onUpdate();
+	virtual void onDead();
+
 private:
 	int iFrames;
 	bool flag;

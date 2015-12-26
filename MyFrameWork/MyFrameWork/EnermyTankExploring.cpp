@@ -7,6 +7,7 @@ EnermyTankExploring::EnermyTankExploring(EnermyData *pData, int index)
 	this->pData = pData;
 	this->index = index;
 	pData->vx = pData->vy = 0.0f;
+	Sound::getInstance()->play("exbullet", false, 1);
 }
 
 EnermyTankExploring::~EnermyTankExploring()
