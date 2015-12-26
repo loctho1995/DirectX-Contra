@@ -9,4 +9,5 @@ public:
 private:
 	int iFrame;
 	bool isFirst;
+	float directPlayerY;
 };

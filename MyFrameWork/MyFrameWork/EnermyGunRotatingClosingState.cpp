@@ -13,23 +13,37 @@ EnermyGunRotatingClosingState::~EnermyGunRotatingClosingState()
 }
 void EnermyGunRotatingClosingState::onUpdate()
 {
+	switch (this->pData->getPlayerIndexToExcute())
+	{
+	case 1:
+		directPlayerX = this->pData->playerX;
+		directPlayerY = this->pData->playerY;
+		break;
+	case 2:
+		directPlayerX = this->pData->player2X;
+		directPlayerY = this->pData->player2Y;
+		break;
+	default:
+		break;
+	}
+
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
 
 	if (pData->stage == 1)
 	{
-		if (pData->x - pData->playerX < 95)
+		if (pData->x - directPlayerX < 95)
 		{
 			iFrame++;
 			if (iFrame == 2)
 				transition(new EnermyGunRotatingOpeningState(pData));
 		}
 	}
-	
+
 
 	else
 
 	{
-		if (pData->playerY - pData->y < 20)
+		if (directPlayerY - pData->y < 20)
 		{
 			iFrame++;
 			if (iFrame == 2)
@@ -37,5 +51,5 @@ void EnermyGunRotatingClosingState::onUpdate()
 		}
 
 	}
-	
+
 }

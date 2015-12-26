@@ -26,4 +26,5 @@ private:
 	int temp;// distance de co dinh trang close
 	int index;
 	bool isTheFirst;
+	float directPlayerX, directPlayerY;
 };

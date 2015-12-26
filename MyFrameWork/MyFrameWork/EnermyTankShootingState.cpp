@@ -32,13 +32,13 @@ void EnermyTankShootingState::getSprite()
 				if (pData->HP > 0)
 					pData->iCurrentArr = 9;
 
-	if (pData->playerY <= 165 - 16)
+	if (directPlayerY <= 165 - 16)
 	{
 		pData->iCurrentArr += index;
 	}
 
 	else
-		if (pData->playerY >= 165 && (pData->playerX >2410 && pData->playerX < 3300) || (pData->playerX >3355))
+		if (directPlayerY >= 165 && (directPlayerX >2410 && directPlayerX < 3300) || (directPlayerX >3355))
 		{
 			pData->iCurrentArr += index + 2;
 		}
@@ -53,6 +53,19 @@ void EnermyTankShootingState::getSprite()
 
 void EnermyTankShootingState::Shoot()
 {
+	switch (this->pData->getPlayerIndexToExcute())
+	{
+	case 1:
+		directPlayerX = this->pData->playerX;
+		directPlayerY = this->pData->playerY;
+		break;
+	case 2:
+		directPlayerX = this->pData->player2X;
+		directPlayerY = this->pData->player2Y;
+		break;
+	default:
+		break;
+	}
 	Sound::getInstance()->play("shootM", false, 1);
 	//pData->x -= 4;
 	if (iLastIndex == 0)

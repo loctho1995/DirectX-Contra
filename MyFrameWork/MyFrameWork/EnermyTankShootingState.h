@@ -15,4 +15,5 @@ private:
 	int iLastIndex;
 	void Shoot();
 	void getSprite();
+	float directPlayerX, directPlayerY;
 };

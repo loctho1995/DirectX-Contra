@@ -10,4 +10,5 @@ public:
 	void onUpdate();
 private:
 	int iFrame;
+	float directPlayerX, directPlayerY;
 };

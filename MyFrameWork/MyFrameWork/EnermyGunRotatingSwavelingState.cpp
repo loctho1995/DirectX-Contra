@@ -25,8 +25,22 @@ void EnermyGunRotatingSwavelingState::onUpdate()
 {
 	if (isTheFirst == true)
 	{
-		SwavelingAndShoot(-1, 0,15);
+		SwavelingAndShoot(-1, 0, 15);
 	}
+	switch (this->pData->getPlayerIndexToExcute())
+	{
+	case 1:
+		directPlayerX = this->pData->playerX;
+		directPlayerY = this->pData->playerY;
+		break;
+	case 2:
+		directPlayerX = this->pData->player2X;
+		directPlayerY = this->pData->player2Y;
+		break;
+	default:
+		break;
+	}
+
 	if (getDistanceToClose() == true)
 	{
 		pData->iCurrentArr = EnermyGunRotatingData::CLOSE;
@@ -35,63 +49,63 @@ void EnermyGunRotatingSwavelingState::onUpdate()
 		return;
 	}
 
-		index = getIndex() + 1;
+	index = getIndex() + 1;
 
-		if (iCurentIndex == index)// co shoot hay khong
-			flag = true;
-		else
-			flag = false;
+	if (iCurentIndex == index)// co shoot hay khong
+		flag = true;
+	else
+		flag = false;
 
-		if(iFrame == 50)
+	if (iFrame == 50)
+	{
+		if (iCurentIndex < index)
 		{
-			if (iCurentIndex < index)
+			if (index - iCurentIndex > 6)
 			{
-				if (index - iCurentIndex > 6)
-				{
-					iCurentIndex--;
-					if (iCurentIndex<1)
-						iCurentIndex = 12;
-				}
-				else
-				{
-					iCurentIndex++;
-					if (iCurentIndex >12)
-						iCurentIndex = 1;
-				}
+				iCurentIndex--;
+				if (iCurentIndex<1)
+					iCurentIndex = 12;
 			}
-
-			if (iCurentIndex > index)
+			else
 			{
-				if (iCurentIndex - index > 6)
-				{
-					iCurentIndex++;
-					if (iCurentIndex >12)
-						iCurentIndex = 1;
-				}
-				else
-				{
-					iCurentIndex--;
-					if (iCurentIndex<1)
-						iCurentIndex = 12;
-				}
+				iCurentIndex++;
+				if (iCurentIndex >12)
+					iCurentIndex = 1;
 			}
+		}
 
-			//fAngle = listAngle[iCurentIndex - 1];
+		if (iCurentIndex > index)
+		{
+			if (iCurentIndex - index > 6)
+			{
+				iCurentIndex++;
+				if (iCurentIndex >12)
+					iCurentIndex = 1;
+			}
+			else
+			{
+				iCurentIndex--;
+				if (iCurentIndex<1)
+					iCurentIndex = 12;
+			}
+		}
+
+		//fAngle = listAngle[iCurentIndex - 1];
 	}
 
 	iFrame++;
 
 	if (isTheFirst == false)
-		SwavelingAndShoot(50,85,95);
+		SwavelingAndShoot(50, 55, 65);
 
 	/*if (isTheFirst == false && pData->stage == 3)
-		SwavelingAndShoot(60, 75);*/
+	SwavelingAndShoot(60, 75);*/
 }
 
-void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int iFramebet, int iFrameShoot)
+void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling, int iFramebet, int iFrameShoot)
 {
 
-	if (pData->stage == 1 )
+	if (pData->stage == 1)
 	{
 		if (iFrame > iFrameSwaveling)
 		{
@@ -117,7 +131,7 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 		}
 		if (iFrame >iFrameShoot)
 		{
-			
+
 			if (flag == true)
 			{
 				Sound::getInstance()->play("shootM", false, 1);
@@ -139,7 +153,7 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 					break;
 				}
 			}
-				
+
 			pData->ppTextureArrays[pData->iCurrentArr]->update();
 			if (isTheFirst == true)
 				isTheFirst = false;
@@ -169,17 +183,17 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 			case 12:this->pData->iCurrentArr = EnermyGunRotatingData::SWAVEL12; break;
 			}
 
-			if (isTheFirst ==false)
-			pData->ppTextureArrays[pData->iCurrentArr]->update();
+			if (isTheFirst == false)
+				pData->ppTextureArrays[pData->iCurrentArr]->update();
 			fAngle = listAngle[iCurentIndex - 1];
 		}
 
-		if (iFrame ==iFramebet)
+		if (iFrame == iFramebet)
 		{
-			
+
 			if (flag == true)
 			{
-				
+
 				switch (iCurentIndex)
 				{
 				case 1: pData->bulletsVector.push_back(new EnermyWhiteBullet(pData->x, pData->y - pData->body.height / 2, true, fAngle)); break;
@@ -198,7 +212,7 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 					break;
 				}
 			}
-				
+
 			pData->ppTextureArrays[pData->iCurrentArr]->update();
 		}
 
@@ -225,9 +239,9 @@ void EnermyGunRotatingSwavelingState::SwavelingAndShoot(int iFrameSwaveling,int 
 					break;
 				}
 			}
-				
 
-				pData->ppTextureArrays[pData->iCurrentArr]->update();
+
+			pData->ppTextureArrays[pData->iCurrentArr]->update();
 
 			if (isTheFirst == true)
 				isTheFirst = false;
@@ -242,10 +256,10 @@ float EnermyGunRotatingSwavelingState::getDistance()
 {
 	float distance;
 	int x1, y1, x2, y2;
-	//x1 = pData->playerX + 9;
-	//y1 = pData->playerY + 17;
-	x1 = pData->playerX ;
-	y1 = pData->playerY;
+	//x1 = directPlayerX + 9;
+	//y1 = directPlayerY + 17;
+	x1 = directPlayerX;
+	y1 = directPlayerY;
 	x2 = pData->x;
 	y2 = pData->y + pData->body.width / 2;
 	distance = sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2));
@@ -257,14 +271,14 @@ float EnermyGunRotatingSwavelingState::getAngle()
 	float angle;
 	if (getDistance() == 0.0)
 		return PI;
-	//int x1 = pData->playerX + 9;
-	int x1 = pData->playerX ;
+	//int x1 = directPlayerX + 9;
+	int x1 = directPlayerX;
 	int x2 = pData->x;
 	angle = (float)acos((x1 - x2) / getDistance());
 
-	if (pData->playerY < pData->y && pData->playerX < pData->x)
+	if (directPlayerY < pData->y && directPlayerX < pData->x)
 		angle = 2 * (PI - angle) + angle;
-	if (pData->playerY < pData->y &&  pData->playerX > pData->x)
+	if (directPlayerY < pData->y &&  directPlayerX > pData->x)
 		angle = 2 * PI - angle;
 
 	return angle;
@@ -312,13 +326,13 @@ void EnermyGunRotatingSwavelingState::onDead()
 
 bool EnermyGunRotatingSwavelingState::getDistanceToClose()
 {
-	if (pData->playerX - pData->x > distanceX && pData->stage ==1)
-		temp = pData->playerX - pData->x;
+	if (directPlayerX - pData->x > distanceX && pData->stage == 1)
+		temp = directPlayerX - pData->x;
 	if (temp>distanceX)
 		return true;
 
-	if (pData->y - pData->playerY> distanceX && pData->stage == 3)
-		temp = pData->y - pData->playerY;
+	if (pData->y - directPlayerY> distanceX && pData->stage == 3)
+		temp = pData->y - directPlayerY;
 	if (temp>distanceY)
 		return true;
 }
