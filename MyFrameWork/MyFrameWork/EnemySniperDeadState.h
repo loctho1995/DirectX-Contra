@@ -10,6 +10,5 @@ public:
 
 	virtual void onUpdate();
 private:
-	bool isExploring;
 	float acc;
 };

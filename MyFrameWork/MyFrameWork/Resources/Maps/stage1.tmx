@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="173">
- <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="132">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="208" height="15" tilewidth="16" tileheight="16" nextobjectid="175">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
   <image source="tileset.png" width="176" height="192"/>
   <tile id="119">
    <animation>
@@ -148,11 +148,11 @@
   <object id="141" name="sniper" type="enemy" x="304" y="174" width="18" height="39"/>
   <object id="144" name="sniper" type="enemy" x="624" y="174" width="18" height="39"/>
   <object id="146" name="sniper" type="enemy" x="1276" y="75" width="18" height="39"/>
-  <object id="148" name="sniper" type="enemy" x="1335" y="86" width="19" height="18"/>
-  <object id="149" name="sniper" type="enemy" x="1552" y="52" width="20" height="20"/>
+  <object id="148" name="sniperh" type="enemy" x="1335" y="86" width="19" height="18"/>
+  <object id="149" name="sniperh" type="enemy" x="1552" y="52" width="20" height="20"/>
   <object id="151" name="sniper" type="enemy" x="2352" y="109" width="18" height="39"/>
   <object id="152" name="sniper" type="enemy" x="3228" y="48" width="18" height="39"/>
   <object id="168" name="capsuleweapons" type="object" x="1123" y="59" width="24" height="15"/>
-  <object id="172" name="respawnposition" type="&quot;&quot;" x="60" y="145.5" width="18" height="27"/>
+  <object id="174" name="respawnposition" type="&quot;&quot;" x="49" y="69.5" width="18" height="27"/>
  </objectgroup>
 </map>

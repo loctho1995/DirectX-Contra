@@ -11,7 +11,6 @@ public:
 	~EnemySniperStandingState();
 
 	virtual void onUpdate();
-	virtual void onDead();
 private:
 	int count;
 	int nHoldFrames;

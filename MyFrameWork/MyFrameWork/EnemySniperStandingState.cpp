@@ -27,8 +27,3 @@ void EnemySniperStandingState::onUpdate()
 		transition(new EnemySniperTurningState(pData));
 	}
 }
-
-void EnemySniperStandingState:: onDead()
-{
-	transition(new EnemySniperDeadState(pData));
-}

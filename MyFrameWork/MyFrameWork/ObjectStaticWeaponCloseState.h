@@ -3,6 +3,7 @@
 #include "ObjectState.h"
 #include "ObjectStaticWeaponData.h"
 #include "ObjectStaticWeaponPreparingState.h"
+#include "UIComponents.h"
 
 class ObjectStaticWeaponCloseState : public ObjectState
 {

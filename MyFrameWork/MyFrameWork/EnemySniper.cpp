@@ -1,13 +1,13 @@
 #include "EnemySniper.h"
 
 
-EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector)
+EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector, bool isHiding)
 {
 	pData = new EnemySniperData(bulletSpriteVector);
-
 	pData->x = respawnX;
 	pData->y = respawnY;
 	pData->isThrougable = false;
+    ((EnemySniperData*)pData)->isHiding = isHiding;
 
 	this->initTextureArrays(EnemySniperData::COUNT);
 
@@ -38,6 +38,15 @@ EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*
 	pData->ppTextureArrays[EnemySniperData::FIRE6] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "fire6", 1, 8);
 	pData->ppTextureArrays[EnemySniperData::FIRE6]->setAnchorPoint(0.5f, 1.0f);
 
+    pData->ppTextureArrays[EnemySniperData::HIDING] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "hiding", 1, 8);
+    pData->ppTextureArrays[EnemySniperData::HIDING]->setAnchorPoint(0.5f, 1.0f);
+
+    pData->ppTextureArrays[EnemySniperData::SHOWING] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "showing", 1, 8);
+    pData->ppTextureArrays[EnemySniperData::SHOWING]->setAnchorPoint(0.5f, 1.0f);
+
+    pData->ppTextureArrays[EnemySniperData::DYING] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "dying", 1, 10);
+    pData->ppTextureArrays[EnemySniperData::DYING]->setAnchorPoint(0.5f, 1.0f);
+
 	pData->ppTextureArrays[EnemySniperData::DEAD] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 3, 10);
 	pData->ppTextureArrays[EnemySniperData::DEAD]->setAnchorPoint(0.5f, 1.0f);
 
@@ -45,7 +54,14 @@ EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*
 	pData->body = RectF(-12.0f / 2, -30.0f, 12.0f, 30.0f);
 	pData->HP = 1;
 
-	pData->pState = new EnemySniperTurningState(pData);
+    if (isHiding)
+    {
+        pData->pState = new EnemySniperHidingState(pData);
+    }
+    else
+    {
+        pData->pState = new EnemySniperTurningState(pData);
+    }	
 }
 
 EnemySniper::~EnemySniper()
@@ -63,4 +79,9 @@ void EnemySniper::draw(Camera* cam)
 void EnemySniper::update()
 {
 	pData->pState->onUpdate();
+}
+
+void EnemySniper::die()
+{
+    pData->pState = new EnemySniperDyingState(this->pData);
 }

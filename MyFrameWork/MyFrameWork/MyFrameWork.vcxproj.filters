@@ -495,6 +495,18 @@
     <ClCompile Include="AmbientLight.cpp">
       <Filter>TransitionAndEffects</Filter>
     </ClCompile>
+    <ClCompile Include="EnemySniperHidingState.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
+    <ClCompile Include="EnermyScubarSoliderDeadState.cpp">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySniperDyingState.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySniperShowingState.cpp">
+      <Filter>Enemies\Sniper</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ObjectSpriteCreator.h" />
@@ -1061,6 +1073,18 @@
     </ClInclude>
     <ClInclude Include="EnermyData.h">
       <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniperHidingState.h">
+      <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="EnermyScubarSoliderDeadState.h">
+      <Filter>Enemies\ScubarSoldier</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniperDyingState.h">
+      <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySniperShowingState.h">
+      <Filter>Enemies\Sniper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

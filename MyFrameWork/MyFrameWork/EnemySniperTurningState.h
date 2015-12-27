@@ -11,7 +11,6 @@ public:
 	EnemySniperTurningState(EnermyData* pData);
 	~EnemySniperTurningState();
 	virtual void onUpdate();
-	virtual void onDead();
 private:
 	int count;
 	int nFiringDelayTime;

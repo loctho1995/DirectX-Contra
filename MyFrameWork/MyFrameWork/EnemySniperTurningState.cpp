@@ -81,12 +81,6 @@ void EnemySniperTurningState::onUpdate()
 	}
 }
 
-void EnemySniperTurningState::onDead()
-{
-	transition(new EnemySniperDeadState(pData));
-}
-
-
 float EnemySniperTurningState::getDistance()
 {
 	return sqrt((float)((pData->playerX + 9 - pData->x) * (pData->playerX + 9 - pData->x) + (pData->playerY + 17 - pData->y + pData->body.width / 2) * (pData->playerY + 17 - pData->y + pData->body.width / 2)));

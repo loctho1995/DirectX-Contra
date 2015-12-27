@@ -5,12 +5,9 @@
 EnemySniperDeadState::EnemySniperDeadState(EnermyData* data)
 {
 	pData = data;
+    pData->iCurrentArr = EnemySniperData::DEAD;
 	pData->isHittable = false;
 	pData->isThrougable = false;
-	pData->vy = -4.0f;
-	isExploring = false;
-	bool isExplored;
-	acc = 0.2f;
 }
 
 EnemySniperDeadState::~EnemySniperDeadState(void)
@@ -19,24 +16,10 @@ EnemySniperDeadState::~EnemySniperDeadState(void)
 
 void EnemySniperDeadState::onUpdate()
 {
-	pData->ppTextureArrays[pData->iCurrentArr]->update();
+    EnermyState::onUpdate();
 
-	if (!isExploring)
-	{
-		pData->vy += acc;
-		pData->y += pData->vy;
-
-		if (pData->vy >= 0)
-		{
-			isExploring = true;
-			pData->iCurrentArr = EnemySniperData::DEAD;
-		}
-	}
-	else
-	{
-		if (pData->ppTextureArrays[pData->iCurrentArr]->isLastTexture())
-		{
-			pData->isDesTroyed = true;
-		}
-	}
+    if (pData->ppTextureArrays[pData->iCurrentArr]->isLastTexture())
+    {
+        pData->isDesTroyed = true;
+    }
 }

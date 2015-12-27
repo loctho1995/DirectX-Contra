@@ -22,7 +22,12 @@ public:
 		FIRE4,
 		FIRE5,
 		FIRE6,
+        HIDING,
+        SHOWING,
 		DEAD,
+        DYING,
 		COUNT
 	};
+
+    bool isHiding;
 };
