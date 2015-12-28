@@ -25,6 +25,9 @@ EnermyScubarSoliderSprite::EnermyScubarSoliderSprite(int respawnX, int respawnY,
 	pData->ppTextureArrays[1] = new TextureArray("Resources\\Sprites", "scubarsolider", "shoot", 1, 6);
 	pData->ppTextureArrays[1]->setAnchorPoint(0.5f, 0.5f);
 
+	pData->ppTextureArrays[2] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 16);
+	pData->ppTextureArrays[2]->setAnchorPoint(0.5f, 0.5f);
+
 	pData->dir = Direction::createRight();
 
 	pData->body = RectF(-20.0f / 2, -18.0f, 20.0f, 18.0f);
