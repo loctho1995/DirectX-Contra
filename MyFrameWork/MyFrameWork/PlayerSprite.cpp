@@ -246,7 +246,7 @@ int PlayerSprite ::  getDamage()
 	case BulletTypes::F:
 		return 1;
 	case BulletTypes::L:
-		return 1;	
+		return 4;	
 	case BulletTypes::M:
 		return 1;
 	case BulletTypes::S:
