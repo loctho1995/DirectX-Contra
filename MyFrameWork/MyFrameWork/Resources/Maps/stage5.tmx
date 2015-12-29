@@ -150,7 +150,7 @@
   <object id="62" name="tank" type="enemy" x="3489" y="112" width="12" height="65"/>
   <object id="64" name="capsuleweaponr" type="object" x="868" y="75" width="24" height="15"/>
   <object id="65" name="capsuleweaponr" type="object" x="1600" y="68" width="24" height="15"/>
-  <object id="66" name="staticweaponm" type="object" x="768" y="160" width="32" height="32"/>
+  <object id="66" name="staticweaponm" type="object" x="609" y="140" width="32" height="32"/>
   <object id="67" name="staticweaponf" type="object" x="1600" y="112" width="32" height="32"/>
   <object id="68" name="capsuleweapond" type="object" x="1600" y="144" width="24" height="15"/>
   <object id="69" name="capsuleweapons" type="object" x="1600" y="192" width="24" height="15"/>
