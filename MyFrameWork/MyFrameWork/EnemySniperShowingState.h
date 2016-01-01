@@ -9,6 +9,7 @@ class EnemySniperShowingState : public EnermyState
 public:
     EnemySniperShowingState(EnermyData* data);
     ~EnemySniperShowingState();
+	virtual void onDead();
 
     virtual void onUpdate();
 

@@ -1,6 +1,7 @@
 #include"EnermyScubarSoliderShootState.h"
 #include"EnermyScubarSoliderHidingState.h"
 #include"EnermyScubarSoliderData.h"
+#include"EnermyScubarSoliderDeadState.h"
 
 EnermyScubarSoliderHidingState::EnermyScubarSoliderHidingState(EnermyData *pData, bool isFirst)
 {
@@ -41,4 +42,9 @@ void EnermyScubarSoliderHidingState::onUpdate()
 		iFrame++;
 	if (iFrame == 200)
 		transition(new EnermyScubarSoliderShootState(pData));
+}
+
+void EnermyScubarSoliderHidingState::onDead()
+{
+	transition(new EnermyScubarSoliderDeadState(pData));
 }

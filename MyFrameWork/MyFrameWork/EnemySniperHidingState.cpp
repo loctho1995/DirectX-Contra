@@ -1,9 +1,10 @@
 #include "EnemySniperHidingState.h"
-
+#include"EnemySniperTurningState.h"
 
 EnemySniperHidingState::EnemySniperHidingState(EnermyData* pData)
 {
     this->pData = pData;
+	if (pData->stage == 2)
     this->pData->body = RectF(-15.0f / 2, -9.0f, 15.0f, 9.0f);
 
     this->pData->iCurrentArr = EnemySniperData::HIDING;
@@ -28,10 +29,15 @@ void EnemySniperHidingState::onUpdate()
 
     if (length1 <= 150 || length2 <= 150)
     {
-        if (frameChangeState <= 0)
-        {
-            this->pData->pState = new EnemySniperShowingState(this->pData);
-        }
+		if (frameChangeState <= 0)
+		{
+			if (pData->stage == 2)
+				this->pData->pState = new EnemySniperShowingState(this->pData);
+			else
+			{
+				this->pData->pState = new EnemySniperStandingState(this->pData);
+			}
+		}
         else
         {
             frameChangeState--;

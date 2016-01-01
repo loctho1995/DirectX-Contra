@@ -9,6 +9,7 @@ EnemySniperData::EnemySniperData(std::vector < BulletSprite*>& bulletSpriteVecto
 	this->isHittable = true;
 	this->isThrougable = true;
 	this->HP = 1;
+	this->score = 500;
 }
 
 EnemySniperData::~EnemySniperData()

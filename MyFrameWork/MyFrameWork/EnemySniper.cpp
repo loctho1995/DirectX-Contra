@@ -1,17 +1,18 @@
 #include "EnemySniper.h"
 
 
-EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector, bool isHiding)
+EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*>& bulletSpriteVector, int local)
 {
 	pData = new EnemySniperData(bulletSpriteVector);
 	pData->x = respawnX;
 	pData->y = respawnY;
 	pData->isThrougable = false;
-    ((EnemySniperData*)pData)->isHiding = isHiding;
+	pData->stage = local;
 
 	this->initTextureArrays(EnemySniperData::COUNT);
 
-
+	pData->ppTextureArrays[EnemySniperData::STAND0] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand0", 1, 8);
+	pData->ppTextureArrays[EnemySniperData::STAND0]->setAnchorPoint(0.5f, 1.0f);
 	pData->ppTextureArrays[EnemySniperData::STAND1] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand1", 1, 8);
 	pData->ppTextureArrays[EnemySniperData::STAND1]->setAnchorPoint(0.5f, 1.0f);
 	pData->ppTextureArrays[EnemySniperData::STAND2] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand2", 1, 8);
@@ -22,24 +23,12 @@ EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*
 	pData->ppTextureArrays[EnemySniperData::STAND4]->setAnchorPoint(0.5f, 1.0f);
 	pData->ppTextureArrays[EnemySniperData::STAND5] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand5", 1, 8);
 	pData->ppTextureArrays[EnemySniperData::STAND5]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnemySniperData::STAND6] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand6", 1, 8);
-	pData->ppTextureArrays[EnemySniperData::STAND6]->setAnchorPoint(0.5f, 1.0f);
-
-	pData->ppTextureArrays[EnemySniperData::FIRE1] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "fire1", 1, 8);
-	pData->ppTextureArrays[EnemySniperData::FIRE1]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnemySniperData::FIRE2] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "fire2", 1, 8);
-	pData->ppTextureArrays[EnemySniperData::FIRE2]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnemySniperData::FIRE3] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "fire3", 1, 8);
-	pData->ppTextureArrays[EnemySniperData::FIRE3]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnemySniperData::FIRE4] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "fire4", 1, 8);
-	pData->ppTextureArrays[EnemySniperData::FIRE4]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnemySniperData::FIRE5] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "fire5", 1, 8);
-	pData->ppTextureArrays[EnemySniperData::FIRE5]->setAnchorPoint(0.5f, 1.0f);
-	pData->ppTextureArrays[EnemySniperData::FIRE6] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "fire6", 1, 8);
-	pData->ppTextureArrays[EnemySniperData::FIRE6]->setAnchorPoint(0.5f, 1.0f);
-
+	
     pData->ppTextureArrays[EnemySniperData::HIDING] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "hiding", 1, 8);
     pData->ppTextureArrays[EnemySniperData::HIDING]->setAnchorPoint(0.5f, 1.0f);
+
+	pData->ppTextureArrays[EnemySniperData::HIDING2] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "hiding2", 1, 8);
+	pData->ppTextureArrays[EnemySniperData::HIDING2]->setAnchorPoint(0.5f, 1.0f);
 
     pData->ppTextureArrays[EnemySniperData::SHOWING] = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "showing", 1, 8);
     pData->ppTextureArrays[EnemySniperData::SHOWING]->setAnchorPoint(0.5f, 1.0f);
@@ -54,14 +43,14 @@ EnemySniper::EnemySniper(int respawnX, int respawnY, std::vector < BulletSprite*
 	pData->body = RectF(-12.0f / 2, -30.0f, 12.0f, 30.0f);
 	pData->HP = 1;
 
-    if (isHiding)
+    if (pData->stage == 1)
     {
-        pData->pState = new EnemySniperHidingState(pData);
+		pData->pState = new EnemySniperTurningState(pData);
     }
-    else
-    {
-        pData->pState = new EnemySniperTurningState(pData);
-    }	
+	else
+		{
+			pData->pState = new EnemySniperHidingState(pData);
+		}
 }
 
 EnemySniper::~EnemySniper()
@@ -83,5 +72,40 @@ void EnemySniper::update()
 
 void EnemySniper::die()
 {
-    pData->pState = new EnemySniperDyingState(this->pData);
+	pData->pState = new EnemySniperDyingState(this->pData);
+}
+
+void EnemySniper::loadResources()
+{
+	TextureArray* temp;
+
+	// load sprite
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand0", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand1", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand2", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand3", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand4", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand5", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "hiding", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "hiding2", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "showing", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "dying", 1, 10);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 3, 10);
+	delete temp;
 }

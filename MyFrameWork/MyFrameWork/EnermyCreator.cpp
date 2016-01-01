@@ -42,6 +42,7 @@ EnermyCreator::EnermyCreator()
 
 	addAppearDirection("sniper", Direction::createRight() | Direction::createUp());
     addAppearDirection("sniperh", Direction::createRight() | Direction::createUp());
+	addAppearDirection("snipere", Direction::createRight() | Direction::createUp());
 
 	addAppearDirection("capsuleweapons", Direction::createLeft());
 	addAppearDirection("capsuleweaponm", Direction::createLeft());
@@ -149,8 +150,12 @@ EnermySprite* EnermyCreator::createEnermySprite(std::string enermyName, int resp
 
     if (enermyName == "sniperh")
     {
-        return new EnemySniper(respawnX, respawnY, bulletSprites, true);
+        return new EnemySniper(respawnX, respawnY, bulletSprites,2);
     }
+	if (enermyName == "snipere")
+	{
+		return new EnemySniper(respawnX, respawnY, bulletSprites, 3);
+	}
 
 	if (enermyName == "gunboss1")
 	{

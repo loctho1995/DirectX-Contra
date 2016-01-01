@@ -11,6 +11,7 @@ EnermyTankShootingState::EnermyTankShootingState(EnermyData *pData, int index)
 	this->index = index;
 	count = 0;
 	iLastIndex = -1;
+	this->pData->isHittable = true;
 }
 
 EnermyTankShootingState::~EnermyTankShootingState()
@@ -20,16 +21,16 @@ EnermyTankShootingState::~EnermyTankShootingState()
 
 void EnermyTankShootingState::getSprite()
 {
-	if (pData->HP >30)
+	if (pData->HP >80)
 		pData->iCurrentArr = 0;
 	else
-		if (pData->HP > 20)
+		if (pData->HP > 60)
 			pData->iCurrentArr = 3;
 		else
-			if (pData->HP > 10)
+			if (pData->HP > 40)
 				pData->iCurrentArr = 6;
 			else
-				if (pData->HP > 0)
+				if (pData->HP > 20)
 					pData->iCurrentArr = 9;
 
 	if (directPlayerY <= 165 - 16)

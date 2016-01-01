@@ -10,6 +10,7 @@ EnermyTankStartingState::EnermyTankStartingState(EnermyData *pData, int s)
 	iFrames = 0;
 	this->s = s;
 	s0 = 0;
+	this->pData->isHittable = false;
 }
 
 EnermyTankStartingState::~EnermyTankStartingState()
