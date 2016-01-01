@@ -8,6 +8,7 @@ EnemySniperDeadState::EnemySniperDeadState(EnermyData* data)
     pData->iCurrentArr = EnemySniperData::DEAD;
 	pData->isHittable = false;
 	pData->isThrougable = false;
+	Sound::getInstance()->play("qexplode", false, 1);
 }
 
 EnemySniperDeadState::~EnemySniperDeadState(void)
