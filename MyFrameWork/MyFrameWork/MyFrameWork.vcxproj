@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -167,6 +167,7 @@
     <ClCompile Include="GunBoss5BulletExploringState.cpp" />
     <ClCompile Include="GunBoss5BulletMovingState.cpp" />
     <ClCompile Include="HelpScene.cpp" />
+    <ClCompile Include="HighScoreScene.cpp" />
     <ClCompile Include="Lighting.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="ObjectBridge.cpp" />
@@ -346,6 +347,7 @@
     <ClInclude Include="GunBoss5BulletExploringState.h" />
     <ClInclude Include="GunBoss5BulletMovingState.h" />
     <ClInclude Include="HelpScene.h" />
+    <ClInclude Include="HighScoreScene.h" />
     <ClInclude Include="Lighting.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="ObjectBridge.h" />

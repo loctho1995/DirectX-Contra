@@ -29,7 +29,6 @@ public:
 	};
 	float volume;
 	void static create(HWND hWnd);
-	void cleanUp();
 	void setVolume(float percentage, std::string name = "");
 	void loadSound(char* fileName, std::string name);
 	void play(std:: string name , bool infiniteLoop, int times);
@@ -39,6 +38,7 @@ public:
 	static Sound* getInstance();
 	void mute();
 	void unMute();
+	void cleanUp();
 private:
 	Sound(HWND hWnd);
 	static Sound * instance;

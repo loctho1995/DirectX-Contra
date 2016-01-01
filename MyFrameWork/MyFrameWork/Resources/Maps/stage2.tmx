@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="138" tilewidth="16" tileheight="16" nextobjectid="158">
+ <tileset firstgid="1" name="Tileset Contra 3" tilewidth="16" tileheight="16" tilecount="154">
+  <image source="Tileset Contra 3.png" width="176" height="224"/>
+  <tile id="95">
+   <animation>
+    <frame tileid="95" duration="100"/>
+    <frame tileid="123" duration="100"/>
+    <frame tileid="124" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="96">
+   <animation>
+    <frame tileid="96" duration="100"/>
+    <frame tileid="125" duration="100"/>
+    <frame tileid="126" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="102">
+   <animation>
+    <frame tileid="102" duration="100"/>
+    <frame tileid="14" duration="100"/>
+    <frame tileid="25" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="103">
+   <animation>
+    <frame tileid="103" duration="100"/>
+    <frame tileid="55" duration="100"/>
+    <frame tileid="56" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="104">
+   <animation>
+    <frame tileid="104" duration="100"/>
+    <frame tileid="121" duration="100"/>
+    <frame tileid="122" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="105">
+   <animation>
+    <frame tileid="105" duration="100"/>
+    <frame tileid="129" duration="100"/>
+    <frame tileid="130" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="106">
+   <animation>
+    <frame tileid="106" duration="100"/>
+    <frame tileid="132" duration="100"/>
+    <frame tileid="133" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="107">
+   <animation>
+    <frame tileid="107" duration="100"/>
+    <frame tileid="134" duration="100"/>
+    <frame tileid="135" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="108">
+   <animation>
+    <frame tileid="131" duration="100"/>
+    <frame tileid="142" duration="100"/>
+    <frame tileid="108" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="109">
+   <animation>
+    <frame tileid="143" duration="100"/>
+    <frame tileid="144" duration="100"/>
+    <frame tileid="109" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="112">
+   <animation>
+    <frame tileid="112" duration="100"/>
+    <frame tileid="63" duration="100"/>
+    <frame tileid="51" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="113">
+   <animation>
+    <frame tileid="113" duration="100"/>
+    <frame tileid="11" duration="100"/>
+    <frame tileid="22" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="114">
+   <animation>
+    <frame tileid="114" duration="100"/>
+    <frame tileid="10" duration="100"/>
+    <frame tileid="21" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="115">
+   <animation>
+    <frame tileid="115" duration="100"/>
+    <frame tileid="127" duration="100"/>
+    <frame tileid="128" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="116">
+   <animation>
+    <frame tileid="116" duration="100"/>
+    <frame tileid="136" duration="100"/>
+    <frame tileid="137" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="117">
+   <animation>
+    <frame tileid="117" duration="100"/>
+    <frame tileid="138" duration="100"/>
+    <frame tileid="139" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="118">
+   <animation>
+    <frame tileid="118" duration="100"/>
+    <frame tileid="140" duration="100"/>
+    <frame tileid="141" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="119">
+   <animation>
+    <frame tileid="119" duration="100"/>
+    <frame tileid="145" duration="100"/>
+    <frame tileid="146" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="120">
+   <animation>
+    <frame tileid="120" duration="100"/>
+    <frame tileid="147" duration="100"/>
+    <frame tileid="148" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="BackGroundLayer" width="16" height="138">
+  <data encoding="base64" compression="zlib">
+   eJztmGePFDEMhgcQVQIBAglE773rQKIKWMpy9HbAUYbjgDs6t9R/zzsiFpYVx05mVgiJD4+yOxvHjlsyO1JV1ch/OuMQ+7wYLGHfDzvk14C54fMqsDp8ngfWOnSfBPPBZrAFbAXbwAJwyrCBdC8H+8B+cAAcBCsNG7aD2WAFWAjWgfVgA9gIFoU1ZoEdiuzSIHsM7AS7wG6wB2wKaywDc9gaD8BFMZ4DR9j6R8FeMBaZ/wJMiLGRPw3OBPmzQV7OmwjrjImxke+DK2AUXBX6+ajp7we5PpOP6b/ZklvgdovxMXjSYvzX7bfWt+zvSn+pX4a9f68fSv0zrPh77Wmrv21e/O38bxvXYdh/HJyofvfuC4adcr074G715+x4Cp4Z+rk+C6lf6rOQ9pTeU8gvpfJkx9uWaHGZAZ8dTIKXYuxlyH8En9j4Crx2ynL9pfuQ+uXYyA8S62v7/wK+BR2N/PnIPD7S/K9MjtM8/x7Ry+20fDWI7I/spd9Tfoz9zuMVW1/6UT6vhX3jCT9yP9D+6XlO/LkdVnw0v8o4TQXbvf03tu50wg5PfaX876mvmB+k3c8VWemHVB7w+VZ+8XyP7dvKL2vfMs6UX5YfZhR5b73TfM0vWj7J+ak8rRU7uB+t/jEV1tD86On305WeP55+z+Mq9dSGrFavXdH2/PTWiQbFN7dvEzK+3r7N+6fsWz3h70F4FqsDGV8tH7z9NdWf6oQdk2EPlt9pXzSS3aXxT/V36zyO5V/Oeczzh/TWzDbex1L5M+6IWyp/6ipdx3XCDm+danbI9S6Ba+A+uMfG5tnlyHy53ptKv2u/i8zPuTd7zmcr76QfSu7tPB6aHy17yI7UPSd1/yI7LHmrX1j3JWvU8lL2QW3U8jLnPYjHw9qvVj9WnWqjtT75QfYZmT/WvY3OKflde+8i/9bCT/J7ad+O9e9G/3vwIQO53x/gZwa58e46/63689ahxnVwI7GuZd9D8Cjxe6p+Y+eyzGNv3fC8leclvx/L/Xrql5/z1n5j56/nfUWLgzefyC6Pn7129Nj63nwiO8j/ufpJL90zS+tL3r+sPNfOaeqDmn+lHbFzxfu/gycfc/3ZxflSWr8e/do51NY+Kz9y7x+lcSo991Pvfx47KB7We4rn/xxP/9Ls4PefEh94+86w4l/Sv/j4C1+TGTY=
+  </data>
+ </layer>
+ <objectgroup name="ObjectLayer">
+  <object id="45" name="cameratranslateposition" type="&quot;&quot;" x="0" y="173.827" width="257" height="15"/>
+  <object id="46" name="blazer" type="enemy" x="62.6667" y="1369.83" width="14" height="14"/>
+  <object id="47" name="blazer" type="enemy" x="176.667" y="1369.83" width="14" height="14"/>
+  <object id="48" name="dynamicbridge" type="object" x="70.6667" y="1096.16" width="32" height="12"/>
+  <object id="49" name="dynamicbridge" type="object" x="82.6667" y="1222.83" width="32" height="12"/>
+  <object id="50" name="dynamicbridge" type="object" x="90.6667" y="633.494" width="32" height="12"/>
+  <object id="51" name="failingstone" type="enemy" x="32.6667" y="1925.83" width="27" height="27"/>
+  <object id="52" name="failingstone" type="enemy" x="161.667" y="1828.83" width="27" height="27"/>
+  <object id="53" name="failingstone" type="enemy" x="193.667" y="1859.83" width="27" height="27"/>
+  <object id="54" name="failingstone" type="enemy" x="64.6667" y="1798.83" width="27" height="27"/>
+  <object id="55" name="failingstone" type="enemy" x="127.667" y="1731.83" width="27" height="27"/>
+  <object id="56" name="gunrotating3" type="enemy" x="222.667" y="1394.83" width="32" height="32"/>
+  <object id="57" name="gunrotating3" type="enemy" x="-1.33333" y="1137.83" width="32" height="32"/>
+  <object id="58" name="gunrotating3" type="enemy" x="-1.33333" y="1025.83" width="32" height="32"/>
+  <object id="59" name="gunrotating3" type="enemy" x="222.667" y="818.827" width="32" height="32"/>
+  <object id="60" name="gunrotating3" type="enemy" x="-1.33333" y="755.827" width="32" height="32"/>
+  <object id="61" name="gunrotating3" type="enemy" x="32.6667" y="677.827" width="32" height="32"/>
+  <object id="62" name="scubarsolider1" type="enemy" x="148.667" y="1605.83" width="20" height="18"/>
+  <object id="63" name="scubarsolider2" type="enemy" x="68.6667" y="1013.83" width="20" height="18"/>
+  <object id="64" name="cannon3" type="enemy" x="206.667" y="704.827" width="32" height="32"/>
+  <object id="65" name="capsuleweapon3b" type="object" x="62.6667" y="1499.83" width="24" height="15"/>
+  <object id="66" name="capsuleweapon3r" type="object" x="174.667" y="1499.83" width="24" height="15"/>
+  <object id="67" name="scubarsolider3" type="enemy" x="218.667" y="908.827"/>
+  <object id="68" name="boss2finalarmright" type="enemy" x="177.94" y="121.008" width="2.90909" height="2.54545"/>
+  <object id="69" name="boss2finalarmleft" type="enemy" x="73.3031" y="121.007" width="2.90909" height="2.54545"/>
+  <object id="70" name="boss2finalhead" type="enemy" x="121.667" y="195.327" width="11.5" height="11.5"/>
+  <object id="71" name="soldiershotl" type="enemy" x="235.167" y="307.827" width="15" height="31.5"/>
+  <object id="72" name="soldiershotr" type="enemy" x="5.16667" y="1919.33" width="17" height="31"/>
+  <object id="73" name="soldiershotr" type="enemy" x="42.1667" y="1844.33" width="17" height="31"/>
+  <object id="74" name="soldiershotl" type="enemy" x="129.167" y="1845.33" width="17" height="31"/>
+  <object id="75" name="soldiershotl" type="enemy" x="93.1667" y="933.327" width="17" height="31"/>
+  <object id="76" name="soldiershotl" type="enemy" x="157.167" y="851.327" width="17" height="31"/>
+  <object id="77" name="soldiershotl" type="enemy" x="62.1667" y="820.327" width="17" height="31"/>
+  <object id="78" name="soldiershotl" type="enemy" x="92.1667" y="691.327" width="17" height="31"/>
+  <object id="79" name="soldiershotr" type="enemy" x="7.16667" y="453.327" width="17" height="31"/>
+  <object id="80" name="soldiershotr" type="enemy" x="39.1667" y="451.327" width="17" height="31"/>
+  <object id="81" name="staticweaponf" type="object" x="127.167" y="1889.33" width="27" height="27"/>
+  <object id="82" name="staticweaponl" type="object" x="128.167" y="1763.33" width="27" height="27"/>
+  <object id="83" name="staticweapons" type="object" x="164.167" y="904.327" width="27" height="27"/>
+  <object id="84" name="soldiershotr" type="enemy" x="5.16667" y="1559.33" width="17" height="31"/>
+  <object id="85" name="soldiershotl" type="enemy" x="205.167" y="1459.33" width="17" height="31"/>
+  <object id="86" name="soldiershotl" type="enemy" x="229.167" y="1284.33" width="17" height="31"/>
+  <object id="87" name="soldiershotl" type="enemy" x="232.167" y="1187.33" width="17" height="31"/>
+  <object id="88" name="respawnposition" type="&quot;&quot;" x="129.167" y="2143.33" width="15" height="15"/>
+  <object id="155" name="sniper" type="enemy" x="22" y="380.5" width="18" height="39"/>
+  <object id="157" name="sniper" type="enemy" x="211.5" y="1644" width="18" height="39"/>
+ </objectgroup>
+ <objectgroup name="CollisionRect">
+  <object id="89" type="nonthroughable" x="0.150723" y="2163" width="254.667" height="8.66667"/>
+  <object id="90" type="throughable" x="160.15" y="2132.33" width="94" height="8"/>
+  <object id="91" type="throughable" x="127.817" y="2099.66" width="94" height="8"/>
+  <object id="92" type="throughable" x="97.1507" y="2068.33" width="125" height="8"/>
+  <object id="93" type="throughable" x="-0.849274" y="2035" width="125.667" height="8"/>
+  <object id="94" type="throughable" x="159.817" y="2036.33" width="94" height="8"/>
+  <object id="95" type="throughable" x="32.1507" y="2003" width="61.3333" height="8"/>
+  <object id="96" type="throughable" x="127.984" y="1988.33" width="125.667" height="8"/>
+  <object id="97" type="throughable" x="192.15" y="1956.33" width="61.3333" height="8"/>
+  <object id="98" type="throughable" x="0.150743" y="1971.66" width="61.3333" height="8"/>
+  <object id="99" type="throughable" x="62.4841" y="1941" width="94" height="8"/>
+  <object id="100" type="throughable" x="0.317393" y="1908.33" width="125" height="8"/>
+  <object id="101" type="throughable" x="32.6506" y="1876.33" width="156.833" height="8"/>
+  <object id="102" type="throughable" x="190.15" y="1845" width="64.3333" height="8"/>
+  <object id="103" type="throughable" x="0.150743" y="1843.66" width="61.3333" height="8"/>
+  <object id="104" type="throughable" x="127.984" y="1796.33" width="125.667" height="8"/>
+  <object id="105" type="throughable" x="32.8174" y="1796.33" width="28" height="8"/>
+  <object id="106" type="throughable" x="32.8174" y="1765" width="61.3333" height="8"/>
+  <object id="107" type="throughable" x="0.150743" y="1731.66" width="125.333" height="8"/>
+  <object id="108" type="throughable" x="159.484" y="1716.33" width="94" height="8"/>
+  <object id="109" type="throughable" x="-0.682774" y="1683.66" width="254.833" height="8"/>
+  <object id="110" type="throughable" x="-0.849274" y="1635" width="63" height="8"/>
+  <object id="111" type="throughable" x="-0.0159368" y="1587" width="125.5" height="8"/>
+  <object id="112" type="throughable" x="64.0674" y="1555.66" width="188.75" height="8"/>
+  <object id="113" type="throughable" x="32.4424" y="1524.33" width="61.0417" height="8"/>
+  <object id="114" type="throughable" x="127.629" y="1492.33" width="123.854" height="8"/>
+  <object id="115" type="throughable" x="32.2237" y="1460.33" width="95.927" height="8"/>
+  <object id="116" type="throughable" x="-0.47944" y="1428.33" width="62.6302" height="8"/>
+  <object id="117" type="throughable" x="-0.497707" y="1381.33" width="62.6302" height="8"/>
+  <object id="118" type="throughable" x="62.8174" y="1381.33" width="128" height="8"/>
+  <object id="119" type="throughable" x="190.817" y="1381.33" width="63.3151" height="8"/>
+  <object id="120" type="throughable" x="192.15" y="1347.66" width="61.6576" height="8"/>
+  <object id="121" type="throughable" x="161.322" y="1315" width="92.8288" height="2"/>
+  <object id="122" type="throughable" x="127.736" y="1283.66" width="95.7477" height="2"/>
+  <object id="123" type="throughable" x="0.276873" y="1300.33" width="62.5405" height="8"/>
+  <object id="124" type="throughable" x="32.2138" y="1267.66" width="62.5405" height="8"/>
+  <object id="125" type="throughable" x="0.213813" y="1235" width="62.5405" height="8"/>
+  <object id="126" type="throughable" x="191.547" y="1219.66" width="62.5405" height="8"/>
+  <object id="127" type="throughable" x="159.547" y="1171.66" width="93.9369" height="8"/>
+  <object id="128" type="throughable" x="31.849" y="1171.66" width="93.9369" height="8"/>
+  <object id="129" type="throughable" x="-0.151057" y="1139.66" width="93.9369" height="8"/>
+  <object id="130" type="throughable" x="-1.48439" y="964.999" width="33.6351" height="8"/>
+  <object id="131" type="throughable" x="159.333" y="1075.66" width="32.1509" height="8"/>
+  <object id="132" type="throughable" x="128.075" y="1028.33" width="62.0754" height="8"/>
+  <object id="133" type="throughable" x="161.779" y="996.33" width="62.0754" height="8"/>
+  <object id="134" type="throughable" x="64.4464" y="964.332" width="93.7044" height="8"/>
+  <object id="135" type="throughable" x="127.298" y="932.332" width="63.5189" height="8"/>
+  <object id="136" type="throughable" x="63.4841" y="883.665" width="161.093" height="8"/>
+  <object id="137" type="throughable" x="31.6042" y="852.332" width="95.2132" height="8"/>
+  <object id="138" type="throughable" x="61.8775" y="803.665" width="95.2132" height="8"/>
+  <object id="139" type="throughable" x="189.484" y="803.665" width="63.6066" height="8"/>
+  <object id="140" type="throughable" x="191.014" y="772.332" width="32.47" height="8"/>
+  <object id="141" type="throughable" x="159.249" y="738.999" width="93.5683" height="8"/>
+  <object id="142" type="throughable" x="32.1507" y="722.999" width="96.7842" height="8"/>
+  <object id="143" type="throughable" x="0.425293" y="674.999" width="93.7254" height="8"/>
+  <object id="144" type="throughable" x="192.817" y="594.999" width="59.5294" height="8"/>
+  <object id="145" type="throughable" x="161.052" y="563.665" width="91.7647" height="8"/>
+  <object id="146" type="throughable" x="0.150723" y="530.332" width="221.882" height="8"/>
+  <object id="147" type="throughable" x="-0.790274" y="484.332" width="95.6077" height="8"/>
+  <object id="148" type="throughable" x="97.0136" y="451.665" width="93.1372" height="8"/>
+  <object id="149" type="throughable" x="0.248793" y="418.999" width="125.902" height="8"/>
+  <object id="150" type="throughable" x="158.817" y="403.665" width="95.6177" height="8"/>
+  <object id="151" type="throughable" x="31.0085" y="371.665" width="63.8089" height="8"/>
+  <object id="152" type="throughable" x="126.913" y="339.665" width="126.571" height="8"/>
+  <object id="153" type="throughable" x="-0.51594" y="292.332" width="255.285" height="8"/>
+  <object id="154" type="throughable" x="-0.825107" y="243.665" width="255.285" height="8"/>
+ </objectgroup>
+</map>

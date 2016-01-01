@@ -3,8 +3,10 @@
 #include <vector>
 #include "iostream"
 
-Game:: Game()
+Game:: Game(HWND hWnd)
 {
+	Graphics::create(hWnd);
+	Sound::create(hWnd);
 	SceneManager::getInstance() ->createScene(new StartingScene());
 }
 
@@ -29,3 +31,9 @@ void Game :: render()
     }
 }
 
+void Game :: cleanUp()
+{
+	UIComponents::getInstance() -> cleanUp();
+	Sound::getInstance() -> cleanUp();
+	Graphics::getInstance() -> cleanUp();
+}

@@ -52,6 +52,17 @@ LPD3DXSPRITE Graphics :: getSpriteHandler()
 
 Graphics :: ~Graphics()
 {
+
+
+	for (auto it = textureMap.begin(); it != textureMap.begin(); it++)
+	{
+		if(it -> second)
+		{
+			delete it -> second;
+		}
+	}
+
+
 	if( !pD3D9 )
 	{
 		pD3D9 -> Release();
@@ -403,79 +414,8 @@ void Graphics :: drawText(Label label)
 {
 	drawText(label.text, label.size, label.xPos, label.yPos, label.space, label.color);
 }
-//void Graphics::loadSurface(std::basic_string<TCHAR> filePath)
-//{
-//	HRESULT result;
-//
-//	D3DXIMAGE_INFO imgInfo;
-//
-//	D3DXGetImageInfoFromFile(filePath.c_str(),&imgInfo);
-//
-//	result = pDevice -> CreateOffscreenPlainSurface(imgInfo.Width, imgInfo.Height, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &pSurface, NULL);
-//
-//	if(result != D3D_OK)
-//	return;
-//
-//	result = D3DXLoadSurfaceFromFile(pSurface,NULL,NULL,filePath.c_str(),NULL,D3DX_DEFAULT,0,&imgInfo);
-//	pDevice ->GetBackBuffer(0,0,D3DBACKBUFFER_TYPE_MONO,&pBackBuffer);
-//	
-//}
 
-//void Graphics::showSurface(float x  , float y  , float width  , float height )
-//{
-//	loadSurface(L"Rectangle.png");
-//	RECT des;
-//	des.top = y;
-//	des.bottom = height + y;
-//	des.left = x;
-//	des.right = x + width;
-//	//pDevice->BeginScene();
-//	pDevice->StretchRect( pSurface, NULL, pBackBuffer,&des, D3DTEXF_NONE);
-//	//pDevice->EndScene();
-//}
-
-//LPDIRECT3DTEXTURE9 Graphics:: loadTexture ( std::basic_string<TCHAR> filePath )
-//{
-//	LPDIRECT3DTEXTURE9 image = NULL;
-//
-//	HRESULT result;
-//	D3DXIMAGE_INFO imgInfo;
-//	result = D3DXGetImageInfoFromFile (filePath.c_str(), & imgInfo);
-//	result = D3DXCreateTextureFromFileEx(
-//										pDevice,
-//										filePath.c_str(),
-//										imgInfo.Width,
-//										imgInfo.Height,
-//										1,
-//										D3DUSAGE_DYNAMIC,
-//										D3DFMT_UNKNOWN,
-//										D3DPOOL_DEFAULT,
-//										D3DX_DEFAULT,
-//										D3DX_DEFAULT,
-//										D3DCOLOR_XRGB(0,0,0),
-//										&imgInfo,
-//										NULL,
-//										&image);
-//	return image;
-//}
-
-//void Graphics :: DrawTexture(int x, int y)
-//{
-//	LPD3DXSPRITE pSpriteHandler;
-//	LPDIRECT3DTEXTURE9 image = loadTexture(L"Rectangle.png");
-//	D3DXCreateSprite(pDevice, &pSpriteHandler);
-//	D3DXVECTOR3 position(x, y, 1.0f);
-//
-//	D3DXMATRIX matrix;
-//	D3DXVECTOR2 centerPoint(x + 64, y + 64 );
-//	D3DXMatrixAffineTransformation2D(
-//								&matrix,
-//								1.0f,
-//								&centerPoint,
-//								1.0f,
-//								NULL);
-//	pSpriteHandler->SetTransform( &matrix);
-//	pSpriteHandler -> Begin(D3DXSPRITE_ALPHABLEND);
-//	pSpriteHandler ->Draw(image, NULL, NULL, &position, D3DCOLOR_XRGB(255,255,255));
-//	pSpriteHandler -> End();
-//}
+void Graphics :: cleanUp()
+{
+	delete this;
+}

@@ -17,6 +17,7 @@ private:
 		PLAYER2,
 		HELP,
 		OPTION,
+		HISCORE,
 		QUIT,
 		COUNT
 	} LableIndex;

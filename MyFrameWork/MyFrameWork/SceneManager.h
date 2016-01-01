@@ -11,6 +11,7 @@
 #include "TransitionCircleOpen.h"
 #include "TransitionCircleScan.h"
 #include "TransitionScan.h"
+#include "HighScoreScene.h"
 
 class SceneManager
 {

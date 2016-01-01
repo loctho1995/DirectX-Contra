@@ -9,7 +9,7 @@ EnemyMineFallingState::EnemyMineFallingState(EnermyData* data)
 	pData -> iCurrentArr = 0;
 	speedX = 1.0f;
 	speedY = 2.75f;
-	acceleration = 0.12f;
+	acceleration = 0.1f;
 	pData -> vx = pData -> transform(speedX);
 	pData -> vy = -speedY;
 	

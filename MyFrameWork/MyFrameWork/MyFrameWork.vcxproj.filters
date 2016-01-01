@@ -507,6 +507,9 @@
     <ClCompile Include="EnemySniperShowingState.cpp">
       <Filter>Enemies\Sniper</Filter>
     </ClCompile>
+    <ClCompile Include="HighScoreScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ObjectSpriteCreator.h" />
@@ -1085,6 +1088,9 @@
     </ClInclude>
     <ClInclude Include="EnemySniperShowingState.h">
       <Filter>Enemies\Sniper</Filter>
+    </ClInclude>
+    <ClInclude Include="HighScoreScene.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

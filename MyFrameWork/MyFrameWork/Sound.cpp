@@ -42,12 +42,26 @@ Sound::Sound(HWND hWnd)
 }
 Sound::~Sound()
 {
+	for (auto it = soundBufferMap.begin(); it != soundBufferMap.end(); it++)
+	{
+		if(it -> second)
+		{
+			it -> second -> Release();
+			it -> second = NULL;
+		}
+		
+	}
+	if(primaryBuffer)
+		primaryBuffer ->Release();
+	if(pDevice)
+		pDevice -> Release();
+	pDevice = NULL;
+	
+	primaryBuffer = NULL;
+
+	
 }
 
-void Sound:: cleanUp()
-{
-
-}
 
 void Sound :: create(HWND hWnd)
 {
@@ -240,3 +254,7 @@ void Sound :: unMute()
 	isMute = false;
 }
 
+void Sound :: cleanUp()
+{
+	delete this;
+}

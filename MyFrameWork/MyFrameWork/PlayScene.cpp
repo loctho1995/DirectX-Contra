@@ -6,8 +6,15 @@ PlayScene ::PlayScene()
     std:: string mapName = "stage" + std::to_string(UIComponents::getInstance() ->getCurrentStage());
 
     pMap = new Map(mapName);
+
+	lifeTexture = new Texture*[2];
+
+	for (int i = 0; i < 2; i++)
+	{
+		lifeTexture[i] = NULL;
+	}
 	
-	lifeTexture = new Texture("Resources\\Sprites\\player\\life00.png", "life00.png");
+
 
     int viewPortSize = pMap->getMapRect().width < pMap->getMapRect().height ? pMap->getMapRect().width : pMap->getMapRect().height;
 
@@ -29,6 +36,11 @@ PlayScene ::PlayScene()
 	{
 		pPlayer[1] = NULL;
 	}
+	lifeTexture[0] = new Texture("Resources\\Sprites\\player\\life00.png", "life00");
+	if( nPlayers == 2)
+	{
+		lifeTexture[1] = new Texture("Resources\\Sprites\\player2\\life200.png", "life200");
+	}
 	isPause = false;
 	isFinish = false;
 	isGameOver = false;
@@ -36,7 +48,7 @@ PlayScene ::PlayScene()
 	count = 0;
 
 
-	if(UIComponents:: getInstance() -> getCurrentStage() == 5)
+	if(UIComponents:: getInstance() -> getCurrentStage() == 3)
 	{
 		isEffectOn = true;
 	}
@@ -232,9 +244,9 @@ void PlayScene::onUpdate()
 		count++;
 		if( count == nTransitionFrames)
 		{
-			if( UIComponents::getInstance() ->getCurrentStage() < 5 )
+			if( UIComponents::getInstance() ->getCurrentStage() < 3 )
 			{
-				UIComponents::getInstance() ->setStage( UIComponents::getInstance() ->getCurrentStage() + 2 );
+				UIComponents::getInstance() ->setStage( UIComponents::getInstance() ->getCurrentStage() + 1 );
 				SceneManager::getInstance()->createScene(new LoadingScene());
 			}
 			else
@@ -356,28 +368,20 @@ void PlayScene::render()
 		 Graphics::getInstance() ->getSpriteHandler() -> End();
 
 		 Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
-		 int lifes = min (UIComponents::getInstance() ->getLifes(0) , 5);
-		 int x = 0;
-		 int y = 0;
-		 int offset = 16;
-		 for (int i = 0; i < lifes - 1 ; i++)
+		 for (int i = 0; i < nPlayers; i++)
 		 {
-			 lifeTexture ->draw(x, y);
-			 x += offset;
-		 }
-
-		 x = offset * 5;
-
-		 if(nPlayers == 2 )
-		 {
-			 lifes = min (UIComponents::getInstance() ->getLifes(1) , 5);
-		 
-			 for (int i = 0; i < lifes - 1; i++)
+			 int lifes = min (UIComponents::getInstance() ->getLifes(i) , 5);
+			 int x = 0;
+			 int y = 0;
+			 int offset = 16;
+			  x = offset * 5 * i;
+			 for (int j = 0; j < lifes - 1 ; j++)
 			 {
-				 lifeTexture ->draw(x, y);
+				 lifeTexture[i] ->draw(x, y);
 				 x += offset;
 			 }
 		 }
+		 
 		 
 		 Graphics::getInstance() ->getSpriteHandler() -> End();
 
@@ -396,30 +400,19 @@ void PlayScene::render()
 				pPlayer [i] -> draw(cam);
 			}
 		}
-		int lifes = min (UIComponents::getInstance() ->getLifes(0) , 5);
-		int x = 0;
-		int y = 0;
-		int offset = 16;
-		for (int i = 0; i < lifes - 1 ; i++)
-		{
-			lifeTexture ->draw(x, y);
-			x += offset;
-		}
-
-		lifes = min (UIComponents::getInstance() ->getLifes(1) , 5);
-		
-		x = offset * 5;
-
-		if(nPlayers == 2 )
-		{
-			lifes = min (UIComponents::getInstance() ->getLifes(1) , 5);
-		 
-			for (int i = 0; i < lifes - 1; i++)
-			{
-				lifeTexture ->draw(x, y);
-				x += offset;
-			}
-		}
+		 for (int i = 0; i < nPlayers; i++)
+		 {
+			 int lifes = min (UIComponents::getInstance() ->getLifes(i) , 5);
+			 int x = 0;
+			 int y = 0;
+			 int offset = 16;
+			  x = offset * 5 * i;
+			 for (int j = 0; j < lifes - 1 ; j++)
+			 {
+				 lifeTexture[i] ->draw(x, y);
+				 x += offset;
+			 }
+		 }
 
 		Graphics::getInstance() ->getSpriteHandler() -> End();
 		Graphics::getInstance()->endRender();

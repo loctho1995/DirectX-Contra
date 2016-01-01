@@ -6,7 +6,7 @@
 StartingScene::StartingScene(void)
 {
 	BitMapFont* font = new BitMapFont("Resources\\Fonts\\font.png", 
-									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!_-:;&(%'/ `abcdefghi",
+									"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,\"\"|?!/-:;&(%'+ `abcdefghi",
 									"fontByLinh",
 									6,
 									11,
@@ -38,6 +38,7 @@ StartingScene::StartingScene(void)
 	label[PLAYER2] -> text = "2 PLAYERS";
 	label[HELP] -> text = "HELP";
 	label[OPTION] -> text = "OPTION";
+	label[HISCORE] -> text = "HISCORE";
 	label[QUIT] -> text = "QUIT";
 	cursorIndex = PLAYER;
 
@@ -169,6 +170,11 @@ void StartingScene:: handleInput()
 					
 					else if ( cursorIndex == QUIT)
 						PostQuitMessage(0);
+					else if( cursorIndex == HISCORE)
+					{
+						Sound::getInstance() -> play("select", false, 1);
+						SceneManager::getInstance() ->createSceneWithRandomTransition( new HighScoreScene());
+					}
 				}
 				
 			}

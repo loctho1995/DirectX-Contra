@@ -67,7 +67,10 @@ public:
 	void endRender();
 
 	LPDIRECT3DDEVICE9 getDevice();
+
 	LPD3DXSPRITE getSpriteHandler();
+
+	void cleanUp();
 private:
 	void drawChar( LPDIRECT3DTEXTURE9 pTexture, int width, int height, char c, int size, int x, int y, bool space ,D3DCOLOR color = 0xFFFFFFFF );
 	
@@ -75,6 +78,13 @@ private:
 class TextureHolder
 {
 public:
+	~TextureHolder()
+	{
+		if(pTexture)
+			pTexture -> Release();
+		pTexture = NULL;
+
+	}
 	LPDIRECT3DTEXTURE9 pTexture;
 	int width;
 	int height;

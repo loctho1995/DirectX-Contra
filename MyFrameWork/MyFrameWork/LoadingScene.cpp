@@ -10,7 +10,6 @@ LoadingScene::LoadingScene()
 									8,
 									RectI(0, 0, 8, 8));
 	Graphics::getInstance() ->setFont(font);
-	Graphics::getInstance() ->setFont(font);
 	int stageIndex = UIComponents::getInstance()->getCurrentStage();
 	std:: string mapName = "stage" + std::to_string(stageIndex);;
     Map* map = new Map(mapName);
@@ -33,8 +32,8 @@ LoadingScene::LoadingScene()
 	pBackGround = new Texture(sourceFileBackGround, bgname);
 
 	Sound::getInstance()->loadSound("Resources\\Sounds\\stage1.wav", "stage1");
+	Sound::getInstance()->loadSound("Resources\\Sounds\\stage2.wav", "stage2");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\stage3.wav", "stage3");
-	Sound::getInstance()->loadSound("Resources\\Sounds\\stage5.wav", "stage5");
 	Sound::getInstance()->loadSound("Resources\\Sounds\\beep.wav", "beep.wav");
     Sound::getInstance()->loadSound("Resources\\Sounds\\boss2bulletsound.wav", "boss2bulletsound.wav");
     Sound::getInstance()->loadSound("Resources\\Sounds\\boss2finaldestroy.wav", "boss2finaldestroy.wav");

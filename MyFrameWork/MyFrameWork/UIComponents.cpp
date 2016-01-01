@@ -1,5 +1,6 @@
 #include "UIComponents.h"
 #include "Sound.h"
+#include <time.h>
 UIComponents* UIComponents::instance = nullptr;
 
 UIComponents* UIComponents:: getInstance()
@@ -21,8 +22,7 @@ UIComponents::UIComponents()
 		lifes[i] = 3;
 	}
 	
-	highScore = 0 ;//highScore; load through file
-
+	loadHiScore();
 	currentStage = 1;
 	nPlayers = 0;
 
@@ -48,7 +48,7 @@ UIComponents::UIComponents()
 
 UIComponents::~UIComponents()
 {
-
+	serialize();
 }
 
 
@@ -60,9 +60,32 @@ int UIComponents:: getScore(int index)
 {
 	return score[index];
 }
-int UIComponents:: getHighScore()
+int UIComponents:: getHighScore( int index )
 {
-	return highScore;
+	return hiScore -> getScore();
+	Score* temp = hiScore;
+	int count = -1;
+	bool flag = false;
+	while (temp)
+	{
+		if(count == index)
+		{
+			flag = true;
+			return temp -> getScore();
+		}
+		else
+		{
+			count++;
+			temp = temp -> getNextScore();
+		}
+	}
+	
+	if(!flag) return -1;
+}
+
+Score* UIComponents:: getHighScoreObject()
+{
+	return hiScore;
 }
 int UIComponents:: getCurrentStage()
 {
@@ -83,13 +106,26 @@ void UIComponents:: descreaseLifes(int index)
 	}
 	if(templifes == 0)	
 	{
+		time_t currTime = time(NULL);
+		char date[255];
+		strftime(date, 100 , "%x", localtime(&currTime));
+		
+
+		for (int i = 0; i < nPlayers; i++)
+		{
+			Score* newScore = new Score(getScore(i), date );
+			if(hiScore -> add(newScore))
+			{
+				hiScore = newScore;
+			}
+		}
+
+		hiScore -> trim();
 		Sound::getInstance() -> stop();
 	}
 }
 void UIComponents:: addScore( int val , int index)
 {
-	if ( val != 0);
-		//Sound::getInstance() ->play("beep.wav", false, 1);
 	if( (( score[index] + val ) / POINT_PER_LIFE ) > ( score[index] / POINT_PER_LIFE ) )
 	{
 		inscreaseLifes(index);
@@ -109,7 +145,6 @@ void UIComponents:: gameOverReset()
 	for (int i = 0; i < 2; i++)
 	{
 		score[i ] = 0;
-		//highScore = 0 ;//highScore; load through file
 		lifes[i] = 3;
 	}
 	
@@ -183,4 +218,88 @@ bool UIComponents :: isAllowedKey(char keyCode)
 	}
 
 	return false;
+}
+
+void UIComponents :: loadHiScore()
+{
+	
+	FILE* file = fopen("Resources\\Data\\save.hc", "r");
+
+	hiScore = new Score();
+	if(file)
+	{
+		for (int i = 0; i < hiScore -> getNscores() ; i++)
+		{
+
+			if(fseek(file, 3, SEEK_CUR) )
+			{
+				break;
+			}
+
+			int intScore;
+			char date[20];
+			fscanf(file,"%d\t%s",&intScore,date);
+			Score* newScore = new Score(intScore, date);
+			if( i == 0)
+			{
+				hiScore = newScore;
+			}
+			else
+			{
+				if( hiScore -> add(newScore))
+				{
+					hiScore = newScore;
+				}
+			}
+
+			if(fgetc(file ) == EOF)
+			{
+				break;
+			}
+			
+		}
+		
+		fclose(file);
+	}
+	
+	
+	
+}
+
+void UIComponents :: serialize()
+{
+	Score* temp = hiScore;
+	FILE* file = fopen("Resources\\Data\\save.hc", "w");
+	if( file)
+	{
+		for (int i = 0; i < hiScore -> getNscores(); i++)
+		{
+			if(temp )
+			{
+				if(temp -> getScore())
+				fprintf(file,"%d.\t%d\t%s", (i+1), temp -> getScore(), temp ->getDate().c_str() );
+				if(temp -> getNextScore() && temp -> getNextScore() -> getScore())
+				{
+					fprintf(file,"\n");
+				}
+				temp = temp -> getNextScore();
+			}
+				
+			else
+			{
+				break;
+			}
+			
+		}
+		fclose(file);
+	}
+		
+		
+		
+
+}
+
+void UIComponents :: cleanUp()
+{
+	delete this;
 }

@@ -245,23 +245,28 @@ void OptionScene:: handleInput()
 		{
 			
 
-				 if( e.isRelease() && 
-					 UIComponents::getInstance() -> isAllowedKey( e.getCode())
+				 if(
+					 UIComponents::getInstance() -> isAllowedKey( e.getCode()) && ( cursorIndex <= JUMP || (cursorIndex > JUMP &&  cursorIndex <= JUMP2))
 				   )
 				{
-						Sound::getInstance() -> play("cursor", false, 1);
-						if(cursorIndex <= JUMP )
+						if(e.isRelease() )
 						{
-							UIComponents::getInstance() -> setKey( cursorIndex, e.getCode(), 0);
+							Sound::getInstance() -> play("cursor", false, 1);
+							if(cursorIndex <= JUMP )
+							{
+								UIComponents::getInstance() -> setKey( cursorIndex, e.getCode(), 0);
+							}
+							else if ( cursorIndex > JUMP &&  cursorIndex <= JUMP2)
+							{
+								UIComponents::getInstance() -> setKey( cursorIndex - LEFT2, e.getCode(), 1);
+							}
 						}
-						else if ( cursorIndex > JUMP &&  cursorIndex <= JUMP2)
-						{
-							UIComponents::getInstance() -> setKey( cursorIndex - LEFT2, e.getCode(), 1);
-						}
+						
 						
 						
 				}
-				else if( cursorIndex == VOLUME )
+				 else
+				if( cursorIndex == VOLUME )
 				{
 					switch (e.getCode())
 					{

@@ -63,8 +63,8 @@ void EndingScene::handleInput()
 		case VK_SPACE:
 			if (e.isRelease())
 			{
-				SceneManager::getInstance()->createScene(new StartingScene());
 				Sound::getInstance()->stop();
+				SceneManager::getInstance()->createScene(new StartingScene());
 			}
 			break;
 		case VK_ESCAPE:

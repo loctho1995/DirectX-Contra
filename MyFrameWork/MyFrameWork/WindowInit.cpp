@@ -95,9 +95,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 
 	MSG msg; // create the Message ( MSG) object the handle event
 	ZeroMemory(&msg, sizeof(MSG));
-	Graphics::create(hWnd);
-	Sound::create(hWnd);
-	Game game;
+	
+	Game game(hWnd);
 	
 
 	__int64 cntsPerSec = 0; 
@@ -170,6 +169,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 		
 
 	}
+
+	game.cleanUp();
 	UnregisterClass( L"Framework Window",wc.hInstance );
 
 	return 0;

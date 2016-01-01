@@ -33,7 +33,7 @@ private:
 	ViewPort* viewPort;
 	Camera* cam;
 	Map* pMap;
-	Texture* lifeTexture;
+	Texture** lifeTexture;
 	int nTransitionFrames;
 	int count;
 	int stageIndex;
