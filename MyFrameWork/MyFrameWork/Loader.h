@@ -17,6 +17,7 @@
 #include "Boss2Final.h"
 #include "EnemyMineSprite.h"
 #include"EnermyTankSprite.h"
+#include"EnemySniper.h"
 
 class Loader
 {

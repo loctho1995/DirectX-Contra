@@ -72,5 +72,40 @@ void EnemySniper::update()
 
 void EnemySniper::die()
 {
-    pData->pState = new EnemySniperDyingState(this->pData);
+	pData->pState = new EnemySniperDyingState(this->pData);
+}
+
+void EnemySniper::loadResources()
+{
+	TextureArray* temp;
+
+	// load sprite
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand0", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand1", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand2", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand3", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand4", 1, 8);
+	delete temp;
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "stand5", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "hiding", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "hiding2", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "showing", 1, 8);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Enermy", "sniper", "dying", 1, 10);
+	delete temp;
+
+	temp = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "type1", 3, 10);
+	delete temp;
 }

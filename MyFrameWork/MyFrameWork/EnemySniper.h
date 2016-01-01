@@ -15,6 +15,6 @@ public:
 
 	virtual void update();
 	virtual void draw(Camera *cam);
-
+	static void loadResources();
     void die();
 };

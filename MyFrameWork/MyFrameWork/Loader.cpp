@@ -119,5 +119,10 @@ void Loader::loadResources(std::string name)
 			EnermyTankSprite::loadResources();
 			return;
 		}
+		if (name == "sniper")
+		{
+			EnermyTankSprite::loadResources();
+			return;
+		}
 	}
 }
