@@ -82,7 +82,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, INT)
 	AdjustWindowRect (&rect, WS_OVERLAPPEDWINDOW, false); // automaticlly adjust the window depend on what its size
 
 	HWND hWnd = CreateWindow (L"My Frame Work",    // create a handle window object by createWindow function
-							L"Idiot Game", 
+							L"Contra 2016", 
 							WS_OVERLAPPEDWINDOW, 
 							rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top,
 							NULL,

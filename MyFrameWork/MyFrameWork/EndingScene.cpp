@@ -12,29 +12,43 @@ EndingScene::EndingScene(void)
 									RectI(0, 0, 8, 8));
 
 	Graphics::getInstance()->setFont(font);
+    numOfLabel = 11;
+    label = new Label[numOfLabel];
 
-	for (int i = 0; i < 6; i++)
+    for (int i = 0; i < numOfLabel; i++)
 	{
+        label[i] = Label();
 		label[i].color = D3DCOLOR_ARGB(255, 255, 0, 0);
 		label[i].size = 8;
 		label[i].space = false;
 		label[i].xPos = 10;
-		label[i].yPos = 256 + i * 30;
+
 	}
-	label[4].yPos = 600;
-	label[5].yPos = 630;
+	//label[4].yPos = 600;
+	//label[5].yPos = 630;
 	label[0].text = "CONGRATULATIONS!";
 	label[1].text = "YOU HAVE DESTROYED THE VILE";
 	label[2].text = "FALCON AND SAVE THE UNIVERSE.";
 	label[3].text = "CONSIDER YOURSELF A HERO!";
-	label[4].text = " ----------THE END ---------- ";
-	label[5].text = "SPACE - MENU GAME, ESC - EXIT";
-
+    label[4].text = "DEVELOPERS: ";
+    label[5].text = "HOANG MANH THANG";
+    label[6].text = "BUI DINH LOC THO";
+    label[7].text = "NGUYEN VAN QUANG";
+    label[8].text = "NGUYEN THI HANG";
+    label[9].text = " ----------THE END ---------- ";
+    label[10].text = "SPACE - MENU GAME, ESC - EXIT";
 
 	Sound::getInstance()->loadSound("Resources\\Sounds\\endingscene.wav", "endingscene");
 	Sound::getInstance()->play("endingscene", false, 1);
 }
 
+void EndingScene::resetPos()
+{
+    for (int i = 0; i < numOfLabel; i++)
+    {
+        label[i].yPos = 256 + i * 30;
+    }
+}
 
 EndingScene::~EndingScene(void)
 {
@@ -44,13 +58,16 @@ EndingScene::~EndingScene(void)
 void EndingScene::onUpdate()
 {
 	handleInput();
-	if (label[4].yPos>110)
-	{
-		for (int i = 0; i < 6; i++)
-		{
-			label[i].yPos -= 1;
-		}
-	}
+
+    for (int i = 0; i < numOfLabel; i++)
+    {
+        label[i].yPos -= 1;
+    }
+
+    if (label[numOfLabel - 1].yPos <= 0)
+    {
+        resetPos();
+    }
 }
 
 void EndingScene::handleInput()
@@ -80,10 +97,12 @@ void EndingScene::render()
 {
 	Graphics::getInstance()->beginRender();
 	Graphics::getInstance()->getSpriteHandler()->Begin(D3DXSPRITE_ALPHABLEND);
-	for (int i = 0; i < 6; i++)
+
+	for (int i = 0; i < numOfLabel; i++)
 	{
 		Graphics::getInstance()->drawText(label[i]);
 	}
+
 	Graphics::getInstance()->getSpriteHandler()->End();
 	Graphics::getInstance()->endRender();
 }

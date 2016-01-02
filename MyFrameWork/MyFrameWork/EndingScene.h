@@ -11,7 +11,10 @@ public:
 	virtual void render();
 	virtual void handleInput();
 	~EndingScene(void);
+
 private:
-	Label label[6];
+    void resetPos();
+	Label *label;
+    int numOfLabel;
 };
 
