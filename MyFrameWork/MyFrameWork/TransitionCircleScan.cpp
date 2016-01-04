@@ -28,7 +28,7 @@ void TransitionCircleScan::update()
     D3DXMatrixIdentity(&mtxViewProj);
     mtxViewProj._11 = 2.0;
     mtxViewProj._22 = -2.0; //toa do loz texel no nguoc voi toa do hlsl nen phai cover
-    mtxViewProj._41 = 1.0;
+    mtxViewProj._41 = -1.0;
     mtxViewProj._42 = 1.0;
 
     shader->getEffect()->SetMatrix("WorldViewProj", &(mtxViewProj));

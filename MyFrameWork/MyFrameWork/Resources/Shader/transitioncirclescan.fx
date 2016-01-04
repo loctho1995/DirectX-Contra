@@ -66,8 +66,12 @@ float4 doPX(VS_OUT input) : COLOR
 	float4 color0 = tex2D(textureSampler0, pos);
 	float4 color1 = tex2D(textureSampler1, pos);
 
-	float2 orivec = float2(-0.5, 0.0);
-	float2 center = float2(-0.5, 0.5);
+	//float2 orivec = float2(-0.5, 0.0);
+	//float2 center = float2(-0.5, 0.5);
+	
+	float2 orivec = float2(0.5, 0.0);
+	float2 center = float2(0.5, 0.5);
+	
 	orivec = orivec - center;
 	float2 currvec = float2(pos.x - center.x, pos.y - center.y);
 	float anl = acos(dot(normalize(orivec), normalize(currvec)));
