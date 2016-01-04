@@ -24,7 +24,7 @@ EnermyFinalBoss5Sprite::EnermyFinalBoss5Sprite(float respawnX, float respawnY, s
 	pData->ppTextureArrays[3] = new TextureArray("Resources\\Sprites\\finalboss5", "finalboss5", "disappear", 10, 5);
 	pData->ppTextureArrays[3]->setAnchorPoint(0.5f, 0.5f);
 	//die
-	pData->ppTextureArrays[4] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 8);
+	pData->ppTextureArrays[4] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 8);
 	pData->ppTextureArrays[4]->setAnchorPoint(0.5f, 0.5f);
 
 	pData->pState = new EnermyFinalBoss5PreparingState(pData);
@@ -33,7 +33,7 @@ EnermyFinalBoss5Sprite::EnermyFinalBoss5Sprite(float respawnX, float respawnY, s
 	pData->isDesTroyed = false;
 	pData->isHittable = false;
 	pData->isThrougable = true;
-	pData->HP = 24;
+	pData->HP = 50;
 	pData->score = 15000;
 	pData->body = RectF(-31.0f, -33.5f, 62.0f, 67.0f);
 }

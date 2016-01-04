@@ -335,6 +335,8 @@ bool EnermyGunRotatingSwavelingState::getDistanceToClose()
 		temp = pData->y - directPlayerY;
 	if (temp>distanceY)
 		return true;
+
+	return false;
 }
 
 void EnermyGunRotatingSwavelingState::onCameraCollision(RectF cameraRect)

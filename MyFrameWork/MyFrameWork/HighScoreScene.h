@@ -12,6 +12,7 @@ public:
 	~HighScoreScene(void);
 	void render();
 	void onUpdate();
+	virtual void handleInput();
 private:
 	Label tittle;
 	Label **label;

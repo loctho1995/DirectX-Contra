@@ -12,7 +12,7 @@ ShipBoss5::ShipBoss5(float x, float y, bool isLeft)
 	pData->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\finalboss5", "ship", "", 3, 6);
 	pData->ppTextureArrays[0]->setAnchorPoint(0.5f, 0.5f);
 	//die
-	pData->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 4);
+	pData->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 6);
 	pData->ppTextureArrays[1]->setAnchorPoint(0.5f, 0.5f);
 
 	pData->body = RectF(-13.5f, -10.5f, 27.0f, 21.0f);

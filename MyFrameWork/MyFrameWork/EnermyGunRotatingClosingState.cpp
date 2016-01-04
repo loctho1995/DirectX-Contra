@@ -11,7 +11,7 @@ EnermyGunRotatingClosingState::~EnermyGunRotatingClosingState()
 {
 
 }
-void EnermyGunRotatingClosingState::onUpdate()
+void EnermyGunRotatingClosingState::onUpdate()		
 {
 	switch (this->pData->getPlayerIndexToExcute())
 	{
@@ -28,7 +28,17 @@ void EnermyGunRotatingClosingState::onUpdate()
 	}
 
 	pData->ppTextureArrays[pData->iCurrentArr]->update();
+	D3DXVECTOR2 currvec = D3DXVECTOR2(directPlayerX, directPlayerY) - D3DXVECTOR2(pData->x, pData->y);
+	float distance = D3DXVec2Length(&currvec);
 
+	if (distance < 120)
+	{
+		iFrame++;
+		if (iFrame == 2)
+			transition(new EnermyGunRotatingOpeningState(pData));
+	}
+
+	/*
 	if (pData->stage == 1)
 	{
 		if (pData->x - directPlayerX < 95)
@@ -51,5 +61,5 @@ void EnermyGunRotatingClosingState::onUpdate()
 		}
 
 	}
-
+	*/
 }

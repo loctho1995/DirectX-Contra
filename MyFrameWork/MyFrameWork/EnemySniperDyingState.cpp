@@ -5,7 +5,7 @@ EnemySniperDyingState::EnemySniperDyingState(EnermyData* pData)
 {
     this->pData = pData;
     this->pData->iCurrentArr = EnemySniperData::DYING;
-
+	this->pData->isHittable = false;
     pData->vy = -2.7f;
     acc = 0.2f;
 }

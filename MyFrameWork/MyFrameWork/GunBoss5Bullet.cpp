@@ -11,7 +11,7 @@ GunBoss5Bullet::GunBoss5Bullet(float x, float y)
 	pData->ppTextureArrays[0] = new TextureArray("Resources\\Sprites\\finalboss5", "bullet", "", 1, 10);
 	pData->ppTextureArrays[0]->setAnchorPoint(0.5f, 0.5f);
 	//die
-	pData->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 6, 4);
+	pData->ppTextureArrays[1] = new TextureArray("Resources\\Sprites\\Explosions", "explosion", "", 3, 6);
 	pData->ppTextureArrays[1]->setAnchorPoint(0.5f, 0.5f);
 
 	pData->body = RectF(-5.5f,-5.5f,11.0f,11.0f);

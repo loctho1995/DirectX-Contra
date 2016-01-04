@@ -40,55 +40,55 @@
       <Filter>Enemies\Soldier</Filter>
     </ClCompile>
     <ClCompile Include="Boss2Final.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalArm.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalArmAttackState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalArmDirectPlayerState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalArmSpinningState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalArmStartState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalArmWaveState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalBody.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalBullet.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalData.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalExplosionSprite.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalHand.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalHead.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalHeadAttackingState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalHeadOpeningState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalHeadShuttingState.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="Boss2FinalJoint.cpp">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClCompile>
     <ClCompile Include="ObjectBridge.cpp">
       <Filter>Objects\Bridge</Filter>
@@ -208,22 +208,22 @@
       <Filter>Enemies\Boss1Final</Filter>
     </ClCompile>
     <ClCompile Include="EnermyFinalBoss5AppearingState.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="EnermyFinalBoss5DeadState.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="EnermyFinalBoss5DisappearingState.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="EnermyFinalBoss5PreparingState.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="EnermyFinalBoss5Sprite.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="EnermyFinalBoss5WaitingState.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="EnermyFinnalBoss1Sprite.cpp">
       <Filter>Enemies\Boss1Final</Filter>
@@ -298,13 +298,13 @@
       <Filter>Objects\CapsuleWeapon</Filter>
     </ClCompile>
     <ClCompile Include="ShipBoss5.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="ShipBoss5ExploringState.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="ShipBoss5MovingState.cpp">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClCompile>
     <ClCompile Include="BlazerMovingState.cpp">
       <Filter>Enemies\Blazer</Filter>
@@ -556,55 +556,55 @@
       <Filter>Enemies\Soldier</Filter>
     </ClInclude>
     <ClInclude Include="Boss2Final.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalArm.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalArmAttackState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalArmDirectPlayerState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalArmSpinningState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalArmStartState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalArmWaveState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalBody.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalBullet.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalData.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalExplosionSprite.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalHand.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalHead.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalHeadAttackingState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalHeadOpeningState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalHeadShuttingState.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="Boss2FinalJoint.h">
-      <Filter>Enemies\Boss2final</Filter>
+      <Filter>Enemies\Boss2Final</Filter>
     </ClInclude>
     <ClInclude Include="ObjectBridge.h">
       <Filter>Objects\Bridge</Filter>
@@ -727,22 +727,22 @@
       <Filter>Enemies\Boss1Final</Filter>
     </ClInclude>
     <ClInclude Include="EnermyFinalBoss5AppearingState.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="EnermyFinalBoss5DeadState.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="EnermyFinalBoss5DisappearingState.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="EnermyFinalBoss5PreparingState.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="EnermyFinalBoss5Sprite.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="EnermyFinalBoss5WaitingState.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="EnermyGunBoss1DeadState.h">
       <Filter>Enemies\Boss1Final</Filter>
@@ -814,13 +814,13 @@
       <Filter>Objects\CapsuleWeapon</Filter>
     </ClInclude>
     <ClInclude Include="ShipBoss5MovingState.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="ShipBoss5.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="ShipBoss5ExploringState.h">
-      <Filter>Enemies\Boss5Final</Filter>
+      <Filter>Enemies\Boss3Final</Filter>
     </ClInclude>
     <ClInclude Include="BlazerMovingState.h">
       <Filter>Enemies\Blazer</Filter>
@@ -1109,9 +1109,6 @@
     <Filter Include="Enemies\Soldier">
       <UniqueIdentifier>{c031c6c6-d578-4fa6-bb93-1be6d91ac6d9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Enemies\Boss2final">
-      <UniqueIdentifier>{b5efdacd-3de9-4dfe-9a80-285074411ca4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Bullets">
       <UniqueIdentifier>{f3d1b48c-9892-4bc7-ac3f-7859d3ee794b}</UniqueIdentifier>
     </Filter>
@@ -1138,9 +1135,6 @@
     </Filter>
     <Filter Include="Enemies\Canon">
       <UniqueIdentifier>{9af778e0-0b1e-403f-a8f6-87975142088c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Enemies\Boss5Final">
-      <UniqueIdentifier>{2a1dc2a2-1b5e-4108-aaa3-3707a7b0fa0a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Enemies\GunRotating">
       <UniqueIdentifier>{1ee40822-0520-4937-8d24-1ed1bf2f59e1}</UniqueIdentifier>
@@ -1177,6 +1171,12 @@
     </Filter>
     <Filter Include="TransitionAndEffects\SceneTransition">
       <UniqueIdentifier>{43973536-c45e-4556-8eaf-4035607f8ba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Boss3Final">
+      <UniqueIdentifier>{2a1dc2a2-1b5e-4108-aaa3-3707a7b0fa0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies\Boss2Final">
+      <UniqueIdentifier>{b5efdacd-3de9-4dfe-9a80-285074411ca4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

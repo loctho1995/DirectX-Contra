@@ -7,6 +7,7 @@ EnermyFailingStoneData::EnermyFailingStoneData()
 	this->isHittable = true;
 	this->isThrougable = true;
 	this->isDesTroyed = false;
+	this->score = 500;
 }
 
 

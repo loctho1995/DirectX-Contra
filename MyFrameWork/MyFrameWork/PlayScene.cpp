@@ -367,7 +367,7 @@ void PlayScene::render()
 
 		 Graphics::getInstance() ->getSpriteHandler() -> End();
 
-		 Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND	);
+		 Graphics::getInstance() ->getSpriteHandler() -> Begin(D3DXSPRITE_ALPHABLEND);
 		 for (int i = 0; i < nPlayers; i++)
 		 {
 			 int lifes = min (UIComponents::getInstance() ->getLifes(i) , 5);

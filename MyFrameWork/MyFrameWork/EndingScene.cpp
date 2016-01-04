@@ -81,7 +81,7 @@ void EndingScene::handleInput()
 			if (e.isRelease())
 			{
 				Sound::getInstance()->stop();
-				SceneManager::getInstance()->createScene(new StartingScene());
+				SceneManager::getInstance()->createSceneWithRandomTransition(new StartingScene());
 			}
 			break;
 		case VK_ESCAPE:

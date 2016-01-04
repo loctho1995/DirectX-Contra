@@ -19,7 +19,7 @@ UIComponents::UIComponents()
 	for (int i = 0; i < 2; i++)
 	{
 		score[i] = 0;
-		lifes[i] = 3;
+		lifes[i] = 10;
 	}
 	
 	loadHiScore();
