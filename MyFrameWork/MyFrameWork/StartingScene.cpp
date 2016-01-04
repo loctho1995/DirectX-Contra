@@ -146,6 +146,7 @@ void StartingScene:: handleInput()
 						Sound::getInstance() -> stop();
 						Sound::getInstance() -> play("select", false, 1);
 						UIComponents :: getInstance() -> setNumberPlayer(1);
+						KeyBoard::getInstace() -> flush();
 						SceneManager::getInstance() ->createSceneWithRandomTransition( new LoadingScene());
 					}
 					else if (cursorIndex == PLAYER2)
@@ -153,6 +154,7 @@ void StartingScene:: handleInput()
 						Sound::getInstance() -> stop();
 						Sound::getInstance() -> play("select", false, 1);
 						UIComponents :: getInstance() -> setNumberPlayer(2);
+						KeyBoard::getInstace() -> flush();
 						SceneManager::getInstance() ->createSceneWithRandomTransition( new LoadingScene());
 					
 					}
@@ -160,11 +162,13 @@ void StartingScene:: handleInput()
 					{
 						Sound::getInstance() -> stop();
 						Sound::getInstance() -> play("select", false, 1);
+						KeyBoard::getInstace() -> flush();
 						SceneManager::getInstance() ->createSceneWithRandomTransition( new HelpScene());
 					}
 					else if ( cursorIndex == OPTION)	
 					{
 						Sound::getInstance() -> play("select", false, 1);
+						KeyBoard::getInstace() -> flush();
 						SceneManager::getInstance() ->createSceneWithRandomTransition( new OptionScene());
 					}
 					
@@ -173,6 +177,7 @@ void StartingScene:: handleInput()
 					else if( cursorIndex == HISCORE)
 					{
 						Sound::getInstance() -> play("select", false, 1);
+						KeyBoard::getInstace() -> flush();
 						SceneManager::getInstance() ->createSceneWithRandomTransition( new HighScoreScene());
 					}
 				}

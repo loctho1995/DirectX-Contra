@@ -139,6 +139,7 @@ void LoadingScene::onUpdate()
 	if( loadedSprite == nSprites && count == nTransitionTime)
 	{
 		UIComponents::getInstance() -> newStage();
+		KeyBoard::getInstace() -> flush();
         SceneManager::getInstance()->createSceneWithTransition(new PlayScene(), new TransitionScan());
 	}
 }

@@ -30,13 +30,55 @@ void ObjectCapsuleWeaponDropState::onUpdate()
 	this->pData->vy += accelemeter;
 }
 
-void ObjectCapsuleWeaponDropState::onCollision(CollisionRectF rect)
+void ObjectCapsuleWeaponDropState::onCollision(CollisionRectF cRect)
 {
-	if (this->pData->vy > 0)
-	{
-		this->pData->vy = 0;
-		this->pData->vx = 0;
-	}
+	// devide into 4 case
+	float vx = pData -> vx - cRect.vx;
+	float vy = pData -> vy - cRect.vy;
+	float top = pData ->getBody().y;
+	float left = pData -> getBody().x;
+	float right =  left + pData-> getBody().width;
+	float bottom = top + pData ->getBody().height;
+
+
+	float topR = cRect.rect.y;
+	float leftR = cRect.rect.x;
+	float rightR =  leftR + cRect.rect.width;
+	float bottomR = topR + cRect.rect.height;
+	
+
+	
+		if( vx > 0.0f)
+		{
+			if(vy > 0.0f)
+			{
+				float px = right - leftR;
+				float py = bottom - topR;
+				if( vy * px > vx * py )
+				{
+					// top collision
+					pData -> vy = 0.0f;
+					pData -> vx = 0.0f;
+					pData -> y -= py;
+
+				}
+			}
+		}
+		else // vx <= 0.0f
+		{
+			if(vy > 0.0f)
+			{
+				float px = rightR - left;
+				float py = bottom - topR;
+				if( vy * px > (-vx * py) )
+				{
+					pData -> vy = 0.0f;
+					pData -> vx = 0.0f;
+					pData -> y -= py;
+				}
+
+			}
+		}
 }
 
 void ObjectCapsuleWeaponDropState::onCameraCollision(RectF rect)
